@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-18](papers/2026-03-18.md) - 13 papers
 - [2026-03-17](papers/2026-03-17.md) - 6 papers
 - [2026-03-16](papers/2026-03-16.md) - 1 papers
 - [2026-03-13](papers/2026-03-13.md) - 3 papers
@@ -32,6 +33,228 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-18 (13 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-03-18
+
+**Paper Count**: 13
+
+---
+
+## 1. DreamPlan: Efficient Reinforcement Fine-Tuning of Vision-Language Planners via Video World Models / DreamPlan：通过视频世界模型对视觉语言规划器进行高效强化微调
+
+**Date**: 2026-03-17 | **arXiv**: [2603.16860v1](http://arxiv.org/abs/2603.16860v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.16860v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robotic manipulation requires sophisticated commonsense reasoning, a capability naturally possessed by large-scale Vision-Language Models (VLMs). While VLMs show promise as zero-shot planners, their lack of grounded physical understanding often leads to compounding errors and low success rates when deployed in complex real-world environments, particularly for challenging tasks like deformable object manipulation. Although Reinforcement Learning (RL) can adapt these planners to specific task dynamics, directly fine-tuning VLMs via real-world interaction is prohibitively expensive, unsafe, and sample-inefficient. To overcome this bottleneck, we introduce DreamPlan, a novel framework for the reinforcement fine-tuning of VLM planners via video world models. Instead of relying on costly physical rollouts, DreamPlan first leverages the zero-shot VLM to collect exploratory interaction data. We demonstrate that this sub-optimal data is sufficient to train an action-conditioned video generation model, which implicitly captures complex real-world physics. Subsequently, the VLM planner is fine-tuned entirely within the "imagination" of this video world model using Odds Ratio Policy Optimization (ORPO). By utilizing these virtual rollouts, physical and task-specific knowledge is efficiently injected into the VLM. Our results indicate that DreamPlan bridges the gap between semantic reasoning and physical grounding, significantly improving manipulation success rates without the need for large-scale real-world data collection. Our project page is https://psi-lab.ai/DreamPlan/.
+
+机器人操作需要复杂的常识推理，这是大规模视觉语言模型（VLM）自然具备的能力。虽然 VLM 显示出作为零样本规划器的前景，但在复杂的现实环境中部署时，它们缺乏扎实的物理理解，通常会导致复合错误和低成功率，特别是对于可变形对象操纵等具有挑战性的任务。尽管强化学习 (RL) 可以使这些规划器适应特定的任务动态，但通过现实世界的交互直接微调 VLM 成本高昂、不安全且样本效率低下。为了克服这个瓶颈，我们引入了 DreamPlan，这是一种通过视频世界模型对 VLM 规划器进行强化微调的新颖框架。 DreamPlan 不依赖昂贵的物理部署，而是首先利用零样本 VLM 来收集探索性交互数据。我们证明，这种次优数据足以训练动作条件视频生成模型，该模型隐式捕获复杂的现实世界物理现象。随后，VLM 规划器使用比值比策略优化 (ORPO) 完全在该视频世界模型的“想象”范围内进行微调。通过利用这些虚拟部署，物理和特定于任务的知识被有效地注入到 VLM 中。我们的结果表明，DreamPlan 弥合了语义推理和物理基础之间的差距，显着提高了操作成功率，而无需大规模的现实世界数据收集。我们的项目页面是 https://psi-lab.ai/DreamPlan/。
+
+</details>
+
+---
+
+## 2. Grid-World Representations in Transformers Reflect Predictive Geometry / 变形金刚中的网格世界表示反映了预测几何
+
+**Date**: 2026-03-17 | **arXiv**: [2603.16689v1](http://arxiv.org/abs/2603.16689v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.16689v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Next-token predictors often appear to develop internal representations of the latent world and its rules. The probabilistic nature of these models suggests a deep connection between the structure of the world and the geometry of probability distributions. In order to understand this link more precisely, we use a minimal stochastic process as a controlled setting: constrained random walks on a two-dimensional lattice that must reach a fixed endpoint after a predetermined number of steps. Optimal prediction of this process solely depends on a sufficient vector determined by the walker's position relative to the target and the remaining time horizon; in other words, the probability distributions are parametrized by the world's geometry. We train decoder-only transformers on prefixes sampled from the exact distribution of these walks and compare their hidden activations to the analytically derived sufficient vectors. Across models and layers, the learned representations align strongly with the ground-truth predictive vectors and are often low-dimensional. This provides a concrete example in which world-model-like representations can be directly traced back to the predictive geometry of the data itself. Although demonstrated in a simplified toy system, the analysis suggests that geometric representations supporting optimal prediction may provide a useful lens for studying how neural networks internalize grammatical and other structural constraints.
+
+下一个令牌预测器通常似乎会开发潜在世界及其规则的内部表示。这些模型的概率性质表明世界结构与概率分布几何之间存在深刻的联系。为了更准确地理解这种联系，我们使用最小随机过程作为受控设置：二维晶格上的约束随机游走，必须在预定数量的步骤后到达固定端点。该过程的最佳预测仅取决于由步行者相对于目标的位置和剩余时间范围确定的足够矢量；换句话说，概率分布由世界的几何形状参数化。我们在从这些游走的精确分布中采样的前缀上训练仅解码器变压器，并将它们的隐藏激活与分析得出的足够向量进行比较。在模型和层中，学习到的表示与地面实况预测向量密切相关，并且通常是低维的。这提供了一个具体的例子，其中类似世界模型的表示可以直接追溯到数据本身的预测几何。尽管在简化的玩具系统中进行了演示，但分析表明，支持最佳预测的几何表示可能为研究神经网络如何内化语法和其他结构约束提供有用的视角。
+
+</details>
+
+---
+
+## 3. Fast-WAM: Do World Action Models Need Test-time Future Imagination? / Fast-WAM：世界行动模型需要测试时的未来想象力吗？
+
+**Date**: 2026-03-17 | **arXiv**: [2603.16666v1](http://arxiv.org/abs/2603.16666v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.16666v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) have emerged as a promising alternative to Vision-Language-Action (VLA) models for embodied control because they explicitly model how visual observations may evolve under action. Most existing WAMs follow an imagine-then-execute paradigm, incurring substantial test-time latency from iterative video denoising, yet it remains unclear whether explicit future imagination is actually necessary for strong action performance. In this paper, we ask whether WAMs need explicit future imagination at test time, or whether their benefit comes primarily from video modeling during training. We disentangle the role of video modeling during training from explicit future generation during inference by proposing \textbf{Fast-WAM}, a WAM architecture that retains video co-training during training but skips future prediction at test time. We further instantiate several Fast-WAM variants to enable a controlled comparison of these two factors. Across these variants, we find that Fast-WAM remains competitive with imagine-then-execute variants, while removing video co-training causes a much larger performance drop. Empirically, Fast-WAM achieves competitive results with state-of-the-art methods both on simulation benchmarks (LIBERO and RoboTwin) and real-world tasks, without embodied pretraining. It runs in real time with 190ms latency, over 4$\times$ faster than existing imagine-then-execute WAMs. These results suggest that the main value of video prediction in WAMs may lie in improving world representations during training rather than generating future observations at test time. Project page: https://yuantianyuan01.github.io/FastWAM/
+
+世界行动模型（WAM）已成为视觉-语言-行动（VLA）模型的有希望的替代品，用于体现控制，因为它们明确地模拟了视觉观察在行动下如何演变。大多数现有的 WAM 都遵循“想象然后执行”的范例，迭代视频去噪会导致大量的测试时间延迟，但目前尚不清楚明确的未来想象是否真的需要强大的动作性能。在本文中，我们询问 WAM 在测试时是否需要明确的未来想象，或者它们的好处是否主要来自训练期间的视频建模。我们提出 \textbf{Fast-WAM}，将训练期间视频建模的作用与推理期间显式未来生成的作用分开，这是一种 WAM 架构，它在训练期间保留视频协同训练，但在测试时跳过未来预测。我们进一步实例化了几个 Fast-WAM 变体，以实现这两个因素的受控比较。在这些变体中，我们发现 Fast-WAM 与想象然后执行变体相比仍然具有竞争力，而删除视频协同训练会导致更大的性能下降。根据经验，Fast-WAM 在模拟基准（LIBERO 和 RoboTwin）和现实世界任务上都通过最先进的方法取得了有竞争力的结果，而无需具体的预训练。它实时运行，延迟为 190 毫秒，比现有的想象然后执行 WAM 快 4 倍多。这些结果表明，WAM 中视频预测的主要价值可能在于改进训练期间的世界表征，而不是在测试时生成未来的观察结果。项目页面：https://yuantianyuan01.github.io/FastWAM/
+
+</details>
+
+---
+
+## 4. Data-driven generalized perimeter control: Zürich case study / 数据驱动的广义周界控制：苏黎世案例研究
+
+**Date**: 2026-03-17 | **arXiv**: [2603.16599v1](http://arxiv.org/abs/2603.16599v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.16599v1)
+
+**Categories**: eess.SY, cs.AI, cs.CE, cs.ET
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Urban traffic congestion is a key challenge for the development of modern cities, requiring advanced control techniques to optimize existing infrastructures usage. Despite the extensive availability of data, modeling such complex systems remains an expensive and time consuming step when designing model-based control approaches. On the other hand, machine learning approaches require simulations to bootstrap models, or are unable to deal with the sparse nature of traffic data and enforce hard constraints. We propose a novel formulation of traffic dynamics based on behavioral systems theory and apply data-enabled predictive control to steer traffic dynamics via dynamic traffic light control. A high-fidelity simulation of the city of Zürich, the largest closed-loop microscopic simulation of urban traffic in the literature to the best of our knowledge, is used to validate the performance of the proposed method in terms of total travel time and CO2 emissions.
+
+城市交通拥堵是现代城市发展的一个关键挑战，需要先进的控制技术来优化现有基础设施的使用。尽管数据广泛可用，但在设计基于模型的控制方法时，对此类复杂系统进行建模仍然是昂贵且耗时的步骤。另一方面，机器学习方法需要模拟来引导模型，或者无法处理交通数据的稀疏性并强制执行硬约束。我们提出了一种基于行为系统理论的交通动态的新颖表述，并应用数据支持的预测控制通过动态交通灯控制来引导交通动态。苏黎世市的高保真模拟是据我们所知文献中最大的城市交通闭环微观模拟，用于验证所提出的方法在总行程时间和二氧化碳排放方面的性能。
+
+</details>
+
+---
+
+## 5. Agile Interception of a Flying Target using Competitive Reinforcement Learning / 使用竞争性强化学习敏捷拦截飞行目标
+
+**Date**: 2026-03-17 | **arXiv**: [2603.16279v1](http://arxiv.org/abs/2603.16279v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.16279v1)
+
+**Categories**: cs.RO, stat.ML
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This article presents a solution to intercept an agile drone by another agile drone carrying a catching net. We formulate the interception as a Competitive Reinforcement Learning problem, where the interceptor and the target drone are controlled by separate policies trained with Proximal Policy Optimization (PPO). We introduce a high-fidelity simulation environment that integrates a realistic quadrotor dynamics model and a low-level control architecture implemented in JAX, which allows for fast parallelized execution on GPUs. We train the agents using low-level control, collective thrust and body rates, to achieve agile flights both for the interceptor and the target. We compare the performance of the trained policies in terms of catch rate, time to catch, and crash rate, against common heuristic baselines and show that our solution outperforms these baselines for interception of agile targets. Finally, we demonstrate the performance of the trained policies in a scaled real-world scenario using agile drones inside an indoor flight arena.
+
+本文提出了一种通过另一架携带捕网的敏捷无人机拦截一架敏捷无人机的解决方案。我们将拦截制定为竞争性强化学习问题，其中拦截器和目标无人机由经过近端策略优化（PPO）训练的单独策略控制。我们引入了一个高保真模拟环境，该环境集成了真实的四旋翼飞行器动力学模型和在 JAX 中实现的低级控制架构，允许在 GPU 上快速并行执行。我们使用低级控制、集体推力和机身速率来训练代理，以实现拦截器和目标的敏捷飞行。我们将经过训练的策略在捕获率、捕获时间和崩溃率方面的性能与常见的启发式基线进行比较，并表明我们的解决方案在拦截敏捷目标方面优于这些基线。最后，我们在室内飞行场地内使用灵活的无人机在规模化的现实场景中展示了经过训练的策略的性能。
+
+</details>
+
+---
+
+## 6. The Finetuner's Fallacy: When to Pretrain with Your Finetuning Data / 微调器的谬误：何时使用微调数据进行预训练
+
+**Date**: 2026-03-17 | **arXiv**: [2603.16177v1](http://arxiv.org/abs/2603.16177v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.16177v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Real-world model deployments demand strong performance on narrow domains where data is often scarce. Typically, practitioners finetune models to specialize them, but this risks overfitting to the domain and forgetting general knowledge. We study a simple strategy, specialized pretraining (SPT), where a small domain dataset, typically reserved for finetuning, is repeated starting from pretraining as a fraction of the total tokens. Across three specialized domains (ChemPile, MusicPile, and ProofPile), SPT improves domain performance and preserves general capabilities after finetuning compared to standard pretraining. In our experiments, SPT reduces the pretraining tokens needed to reach a given domain performance by up to 1.75x. These gains grow when the target domain is underrepresented in the pretraining corpus: on domains far from web text, a 1B SPT model outperforms a 3B standard pretrained model. Beyond these empirical gains, we derive overfitting scaling laws to guide practitioners in selecting the optimal domain-data repetition for a given pretraining compute budget. Our observations reveal the finetuner's fallacy: while finetuning may appear to be the cheapest path to domain adaptation, introducing specialized domain data during pretraining stretches its utility. SPT yields better specialized domain performance (via reduced overfitting across repeated exposures) and better general domain performance (via reduced forgetting during finetuning), ultimately achieving stronger results with fewer parameters and less total compute when amortized over inference. To get the most out of domain data, incorporate it as early in training as possible.
+
+现实世界的模型部署需要在数据通常稀缺的狭窄领域具有强大的性能。通常，从业者会对模型进行微调以使其专业化，但这可能会导致过度适应领域并忘记常识。我们研究了一种简单的策略，即专门的预训练（SPT），其中通常保留用于微调的小域数据集从预训练开始重复，作为总标记的一部分。在三个专业领域（ChemPile、MusicPile 和 ProofPile）中，与标准预训练相比，SPT 在微调后提高了领域性能并保留了一般功能。在我们的实验中，SPT 将达到给定域性能所需的预训练标记减少了 1.75 倍。当目标域在预训练语料库中代表性不足时，这些收益就会增加：在远离网络文本的域上，1B SPT 模型优于 3B 标准预训练模型。除了这些经验收益之外，我们还得出了过度拟合缩放定律，以指导从业者为给定的预训练计算预算选择最佳的域数据重复。我们的观察揭示了微调器的谬误：虽然微调似乎是领域适应的最便宜的途径，但在预训练期间引入专门的领域数据扩展了其效用。 SPT 产生更好的专业领域性能（通过减少重复暴露的过度拟合）和更好的一般领域性能（通过减少微调过程中的遗忘），最终在推理摊销时用更少的参数和更少的总计算获得更强的结果。为了充分利用领域数据，请尽早将其纳入训练中。
+
+</details>
+
+---
+
+## 7. Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation / 迈向视觉-声音-语言-行动范式：以声音为中心的操纵的 HEAR 框架
+
+**Date**: 2026-03-17 | **arXiv**: [2603.16086v1](http://arxiv.org/abs/2603.16086v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.16086v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV, cs.SD
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While recent Vision-Language-Action (VLA) models have begun to incorporate audio, they typically treat sound as static pre-execution prompts or focus exclusively on human speech. This leaves a significant gap in real-time, sound-centric manipulation where fleeting environmental acoustics provide critical state verification during task execution. Consequently, key sounds are easily missed due to low-frequency updates or system latency. This problem is exacerbated by action chunking with open-loop execution, which creates a Blind Execution Interval where acoustic events are lost between discrete audio observation windows. Recognizing the necessity of continuous auditory awareness, we formalize Vision-Sound-Language-Action (VSLA) as a continuous control paradigm conditioned on vision, streaming audio, language, and proprioception under delayed decision loops. As an instantiation, we introduce HEAR, a VSLA framework integrating four components: (i) a streaming Historizer to maintain a compact, causal audio context across execution gaps; (ii) an Envisioner adapted from omni foundation models to reason over multi-sensory inputs; (iii) an Advancer, formulated as an audio world model, to learn temporal dynamics by predicting near-future audio codes; and (iv) a flow-matching Realizer policy to generate smooth action chunks. To address the scarcity of pretraining data and evaluations for VSLA, we construct OpenX-Sound for pretraining, alongside HEAR-Bench, the first sound-centric manipulation benchmark with strict causal timing rules. Our results suggest that robust sound-centric manipulation necessitates causal persistence and explicit temporal learning. This framework provides a practical step toward multi-sensory foundation models for embodied agents, enabling robots to perceive and interact with dynamic environments. Code and videos are available at https://hear.irmv.top.
+
+虽然最近的视觉-语言-动作（VLA）模型已经开始整合音频，但它们通常将声音视为静态的执行前提示或仅关注人类语音。这在实时、以声音为中心的操作中留下了巨大的差距，其中短暂的环境声学在任务执行期间提供关键状态验证。因此，由于低频更新或系统延迟，很容易错过关键声音。开环执行的动作分块会加剧这个问题，这会产生盲执行间隔，其中声学事件在离散音频观察窗口之间丢失。认识到连续听觉意识的必要性，我们将视觉-声音-语言-动作（VSLA）形式化为一种连续控制范式，以延迟决策循环下的视觉、流音频、语言和本体感觉为条件。作为实例，我们引入了 HEAR，这是一个集成了四个组件的 VSLA 框架：（i）一个流式历史记录器，用于跨执行间隙维护紧凑、因果的音频上下文； (ii) 一个从全方位基础模型改编而来的 Envisioner，用于对多感官输入进行推理； (iii) Advancer，被制定为音频世界模型，通过预测近期的音频代码来学习时间动态； (iv) 流匹配实现器策略来生成平滑的动作块。为了解决 VSLA 预训练数据和评估的稀缺问题，我们构建了用于预训练的 OpenX-Sound，以及 HEAR-Bench，这是第一个具有严格因果时序规则的以声音为中心的操纵基准。我们的结果表明，稳健的以声音为中心的操纵需要因果持久性和明确的时间学习。该框架为实体代理的多感官基础模型提供了实用的一步，使机器人能够感知动态环境并与之交互。代码和视频可在 https://hear.irmv.top 获取。
+
+</details>
+
+---
+
+## 8. CorrectionPlanner: Self-Correction Planner with Reinforcement Learning in Autonomous Driving / CorrectionPlanner：自动驾驶中具有强化学习功能的自我校正规划器
+
+**Date**: 2026-03-16 | **arXiv**: [2603.15771v1](http://arxiv.org/abs/2603.15771v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.15771v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous driving requires safe planning, but most learning-based planners lack explicit self-correction ability: once an unsafe action is proposed, there is no mechanism to correct it. Thus, we propose CorrectionPlanner, an autoregressive planner with self-correction that models planning as motion-token generation within a propose, evaluate, and correct loop. At each planning step, the policy proposes an action, namely a motion token, and a learned collision critic predicts whether it will induce a collision within a short horizon. If the critic predicts a collision, we retain the sequence of historical unsafe motion tokens as a self-correction trace, generate the next motion token conditioned on it, and repeat this process until a safe motion token is proposed or the safety criterion is met. This self-correction trace, consisting of all unsafe motion tokens, represents the planner's correction process in motion-token space, analogous to a reasoning trace in language models. We train the planner with imitation learning followed by model-based reinforcement learning using rollouts from a pretrained world model that realistically models agents' reactive behaviors. Closed-loop evaluations show that CorrectionPlanner reduces collision rate by over 20% on Waymax and achieves state-of-the-art planning scores on nuPlan.
+
+自动驾驶需要安全规划，但大多数基于学习的规划器缺乏明确的自我纠正能力：一旦提出不安全的动作，就没有机制来纠正。因此，我们提出 CorrectionPlanner，一种具有自校正功能的自回归规划器，将规划建模为提议、评估和纠正循环中的运动令牌生成。在每个规划步骤中，策略都会提出一个动作，即运动令牌，并且学习到的碰撞批评家会预测它是否会在短期内引发碰撞。如果批评者预测发生碰撞，我们保留历史不安全运动令牌的序列作为自校正轨迹，生成以其为条件的下一个运动令牌，并重复此过程，直到提出安全运动令牌或满足安全标准。这种自校正轨迹由所有不安全的运动标记组成，代表了规划器在运动标记空间中的校正过程，类似于语言模型中的推理轨迹。我们通过模仿学习来训练规划器，然后使用基于模型的强化学习，使用预先训练的世界模型来真实地模拟代理的反应行为。闭环评估表明 CorrectionPlanner 在 Waymax 上将碰撞率降低了 20% 以上，并在 nuPlan 上实现了最先进的规划分数。
+
+</details>
+
+---
+
+## 9. Simulation Distillation: Pretraining World Models in Simulation for Rapid Real-World Adaptation / 模拟蒸馏：在模拟中预训练世界模型以快速适应现实世界
+
+**Date**: 2026-03-16 | **arXiv**: [2603.15759v1](http://arxiv.org/abs/2603.15759v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.15759v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Simulation-to-real transfer remains a central challenge in robotics, as mismatches between simulated and real-world dynamics often lead to failures. While reinforcement learning offers a principled mechanism for adaptation, existing sim-to-real finetuning methods struggle with exploration and long-horizon credit assignment in the low-data regimes typical of real-world robotics. We introduce Simulation Distillation (SimDist), a sim-to-real framework that distills structural priors from a simulator into a latent world model and enables rapid real-world adaptation via online planning and supervised dynamics finetuning. By transferring reward and value models directly from simulation, SimDist provides dense planning signals from raw perception without requiring value learning during deployment. As a result, real-world adaptation reduces to short-horizon system identification, avoiding long-horizon credit assignment and enabling fast, stable improvement. Across precise manipulation and quadruped locomotion tasks, SimDist substantially outperforms prior methods in data efficiency, stability, and final performance. Project website and code: https://sim-dist.github.io/
+
+模拟到现实的迁移仍然是机器人技术的一个核心挑战，因为模拟和现实世界动态之间的不匹配往往会导致失败。虽然强化学习提供了一种原则性的适应机制，但现有的从模拟到真实的微调方法在现实世界机器人技术典型的低数据机制中难以进行探索和长期信用分配。我们引入了模拟蒸馏（SimDist），这是一个从模拟到真实的框架，它将结构先验从模拟器中提炼成潜在世界模型，并通过在线规划和监督动态微调实现快速的现实世界适应。通过直接从模拟传输奖励和价值模型，SimDist 可以从原始感知中提供密集的规划信号，而无需在部署期间进行价值学习。因此，现实世界的适应减少为短期系统识别，避免长期信用分配并实现快速、稳定的改进。在精确操作和四足运动任务中，SimDist 在数据效率、稳定性和最终性能方面大大优于先前的方法。项目网址及代码：https://sim-dist.github.io/
+
+</details>
+
+---
+
+## 10. RoCo Challenge at AAAI 2026: Benchmarking Robotic Collaborative Manipulation for Assembly Towards Industrial Automation / AAAI 2026 的 RoCo 挑战赛：面向工业自动化的装配机器人协作操作基准测试
+
+**Date**: 2026-03-16 | **arXiv**: [2603.15469v1](http://arxiv.org/abs/2603.15469v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.15469v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Embodied Artificial Intelligence (EAI) is rapidly developing, gradually subverting previous autonomous systems' paradigms from isolated perception to integrated, continuous action. This transition is highly significant for industrial robotic manipulation, promising to free human workers from repetitive, dangerous daily labor. To benchmark and advance this capability, we introduce the Robotic Collaborative Assembly Assistance (RoCo) Challenge with a dataset towards simulation and real-world assembly manipulation. Set against the backdrop of human-centered manufacturing, this challenge focuses on a high-precision planetary gearbox assembly task, a demanding yet highly representative operation in modern industry. Built upon a self-developed data collection, training, and evaluation system in Isaac Sim, and utilizing a dual-arm robot for real-world deployment, the challenge operates in two phases. The Simulation Round defines fine-grained task phases for step-wise scoring to handle the long-horizon nature of the assembly. The Real-World Round mirrors this evaluation with physical gearbox components and high-quality teleoperated datasets. The core tasks require assembling an epicyclic gearbox from scratch, including mounting three planet gears, a sun gear, and a ring gear. Attracting over 60 teams and 170+ participants from more than 10 countries, the challenge yielded highly effective solutions, most notably ARC-VLA and RoboCola. Results demonstrate that a dual-model framework for long-horizon multi-task learning is highly effective, and the strategic utilization of recovery-from-failure curriculum data is a critical insight for successful deployment. This report outlines the competition setup, evaluation approach, key findings, and future directions for industrial EAI. Our dataset, CAD files, code, and evaluation results can be found at: https://rocochallenge.github.io/RoCo2026/.
+
+具身人工智能（EAI）正在迅速发展，逐渐颠覆以往自主系统的范式，从孤立的感知到集成、持续的行动。这种转变对于工业机器人操作来说非常重要，有望将人类工人从重复、危险的日常劳动中解放出来。为了对这一功能进行基准测试和推进，我们引入了机器人协作装配辅助 (RoCo) 挑战赛，其中包含用于模拟和现实世界装配操作的数据集。在以人为本的制造背景下，本次挑战的重点是高精度行星齿轮箱装配任务，这是现代工业中一项要求很高但极具代表性的操作。该挑战赛以 Isaac Sim 自主开发的数据收集、训练和评估系统为基础，并利用双臂机器人进行实际部署，分两个阶段进行。模拟回合定义了逐步评分的细粒度任务阶段，以处理装配的长期性质。真实世界回合通过物理变速箱组件和高质量的远程操作数据集反映了这一评估。核心任务需要从头开始组装行星齿轮箱，包括安装三个行星齿轮、一个太阳齿轮和一个齿圈。此次挑战赛吸引了来自 10 多个国家的 60 多个团队和 170 多名参与者，产生了高效的解决方案，其中最著名的是 ARC-VLA 和 RoboCola。结果表明，用于长期多任务学习的双模型框架非常有效，并且从失败中恢复的课程数据的战略利用是成功部署的关键见解。本报告概述了工业 EAI 的竞赛设置、评估方法、主要发现和未来方向。我们的数据集、CAD 文件、代码和评估结果可以在以下位置找到：https://rocochallenge.github.io/RoCo2026/。
+
+</details>
+
+---
+
+## 11. NavThinker: Action-Conditioned World Models for Coupled Prediction and Planning in Social Navigation / NavThinker：社交导航中耦合预测和规划的动作条件世界模型
+
+**Date**: 2026-03-16 | **arXiv**: [2603.15359v1](http://arxiv.org/abs/2603.15359v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.15359v1)
+
+**Categories**: cs.RO
+
+**Code**: https://github.com/hutslib/NavThinker.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Social navigation requires robots to act safely in dynamic human environments. Effective behavior demands thinking ahead: reasoning about how the scene and pedestrians evolve under different robot actions rather than reacting to current observations alone. This creates a coupled prediction-planning challenge, where robot actions and human motion mutually influence each other. To address this challenge, we propose NavThinker, a future-aware framework that couples an action-conditioned world model with on-policy reinforcement learning. The world model operates in the Depth Anything V2 patch feature space and performs autoregressive prediction of future scene geometry and human motion; multi-head decoders then produce future depth maps and human trajectories, yielding a future-aware state aligned with traversability and interaction risk. Crucially, we train the policy with DD-PPO while injecting world-model think-ahead signals via: (i) action-conditioned future features fused into the current observation embedding and (ii) social reward shaping from predicted human trajectories. Experiments on single- and multi-robot Social-HM3D show state-of-the-art navigation success, with zero-shot transfer to Social-MP3D and real-world deployment on a Unitree Go2, validating generalization and practical applicability. Webpage: https://github.com/hutslib/NavThinker.
+
+社交导航要求机器人在动态的人类环境中安全地行动。有效的行为需要提前思考：推理场景和行人在不同的机器人动作下如何演变，而不是仅仅对当前的观察做出反应。这就产生了耦合的预测规划挑战，其中机器人动作和人类运动相互影响。为了应对这一挑战，我们提出了 NavThinker，一个面向未来的框架，它将动作条件世界模型与策略强化学习结合起来。世界模型在Depth Anything V2 patch特征空间中运行，并对未来场景几何和人体运动进行自回归预测；然后，多头解码器生成未来的深度图和人体轨迹，从而产生与可遍历性和交互风险相一致的未来感知状态。至关重要的是，我们使用 DD-PPO 训练策略，同时通过以下方式注入世界模型提前思考信号：（i）将行动条件的未来特征融合到当前的观察嵌入中；（ii）根据预测的人类轨迹塑造社会奖励。单机器人和多机器人 Social-HM3D 的实验显示了最先进的导航成功，零镜头传输到 Social-MP3D 以及在 Unitree Go2 上的实际部署，验证了通用性和实际适用性。网页：https://github.com/hutslib/NavThinker。
+
+</details>
+
+---
+
+## 12. A Methodology for Dynamic Parameters Identification of 3-DOF Parallel Robots in Terms of Relevant Parameters / 一种基于相关参数的三自由度并联机器人动态参数辨识方法
+
+**Date**: 2026-03-16 | **arXiv**: [2603.15254v1](http://arxiv.org/abs/2603.15254v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.15254v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The identification of dynamic parameters in mechanical systems is important for improving model-based control as well as for performing realistic dynamic simulations. Generally, when identification techniques are applied only a subset of so-called base parameters can be identified. More even, some of these parameters cannot be identified properly given that they have a small contribution to the robot dynamics and hence in the presence of noise in measurements and discrepancy in modeling, their quality of being identifiable decreases. For this reason, a strategy for dynamic parameter identification of fully parallel robots in terms of a subset called relevant parameters is put forward. The objective of the proposed methodology is to start from a full dynamic model, then simplification concerning the geometry of each link and, the symmetry due to legs of fully parallel robots, are carried out. After that, the identification is done by Weighted Least Squares. Then, with statistical considerations the model is reduced until the physical feasibility conditions are met. The application of the propose strategy has been experimentally tested on two difierent configurations of actual 3-DOF parallel robots. The response of the inverse and forward dynamics of the identified models agrees with experiments. In order to evaluate the forward dynamics response, an approach for obtaining the forward dynamics in terms of the relevant parameters is also proposed.
+
+机械系统中动态参数的识别对于改进基于模型的控制以及执行真实的动态仿真非常重要。一般来说，当应用识别技术时，只能识别所谓的基本参数的子集。更甚至，其中一些参数无法正确识别，因为它们对机器人动力学的贡献很小，因此在测量中存在噪声和建模中存在差异的情况下，它们的可识别质量会降低。为此，提出了一种以相关参数子集为单位的全并联机器人动态参数识别策略。所提出方法的目标是从完整的动态模型开始，然后对每个连杆的几何形状以及完全并行机器人的腿的对称性进行简化。之后，通过加权最小二乘法进行识别。然后，考虑到统计因素，模型会被缩减，直到满足物理可行性条件。该策略的应用已经在实际三自由度并联机器人的两种不同配置上进行了实验测试。所识别模型的逆向和正向动态响应与实验一致。为了评估前向动态响应，还提出了一种根据相关参数获取前向动态的方法。
+
+</details>
+
+---
+
+## 13. CycleRL: Sim-to-Real Deep Reinforcement Learning for Robust Autonomous Bicycle Control / CycleRL：用于鲁棒自主自行车控制的模拟到真实深度强化学习
+
+**Date**: 2026-03-16 | **arXiv**: [2603.15013v1](http://arxiv.org/abs/2603.15013v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.15013v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous bicycles offer a promising agile solution for urban mobility and last-mile logistics, however, conventional control strategies often struggle with their underactuated nonlinear dynamics, suffering from sensitivity to model mismatches and limited adaptability to real-world uncertainties. To address this, this paper presents CycleRL, the first sim-to-real deep reinforcement learning framework designed for robust autonomous bicycle control. Our approach trains an end-to-end neural control policy within the high-fidelity NVIDIA Isaac Sim environment, leveraging Proximal Policy Optimization (PPO) to circumvent the need for an explicit dynamics model. The framework features a composite reward function tailored for concurrent balance maintenance, velocity tracking, and steering control. Crucially, systematic domain randomization is employed to bridge the simulation-to-reality gap and facilitate direct transfer. In simulation, CycleRL achieves considerable performance, including a 99.90% balance success rate, a low steering tracking error of 1.15°, and a velocity tracking error of 0.18 m/s. These quantitative results, coupled with successful hardware transfer, validate DRL as an effective paradigm for autonomous bicycle control, offering superior adaptability over traditional methods. Video demonstrations are available at https://anony6f05.github.io/CycleRL/.
+
+自动自行车为城市交通和最后一英里物流提供了一种有前途的敏捷解决方案，然而，传统的控制策略常常因其欠驱动的非线性动力学而苦苦挣扎，受到模型失配的敏感性和对现实世界不确定性的适应性有限的影响。为了解决这个问题，本文提出了 CycleRL，这是第一个模拟真实的深度强化学习框架，专为稳健的自主自行车控制而设计。我们的方法在高保真 NVIDIA Isaac Sim 环境中训练端到端神经控制策略，利用近端策略优化 (PPO) 来规避对显式动态模型的需求。该框架具有专为并发平衡维护、速度跟踪和转向控制而定制的复合奖励函数。至关重要的是，采用系统域随机化来弥合模拟与现实之间的差距并促进直接转移。在仿真中，CycleRL 取得了可观的性能，包括 99.90% 的平衡成功率、1.15° 的低转向跟踪误差和 0.18 m/s 的速度跟踪误差。这些定量结果加上成功的硬件传输，验证了 DRL 作为自动自行车控制的有效范例，提供了优于传统方法的适应性。视频演示可在 https://anony6f05.github.io/CycleRL/ 获取。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-17 (6 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-03-17
