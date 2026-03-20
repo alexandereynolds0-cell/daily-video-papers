@@ -42,6 +42,8 @@ function App() {
           ref={webRef}
           source={{ uri: activeTab.url }}
           style={styles.webView}
+          startInLoadingState
+          originWhitelist={['https://*']}
           onNavigationStateChange={state => {
             setCanGoBack(state.canGoBack);
             setCanGoForward(state.canGoForward);
