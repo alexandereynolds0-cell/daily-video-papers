@@ -1,5 +1,5 @@
 import React, { useMemo, useRef, useState } from 'react';
-import { Alert, Linking, NativeModules, Platform, Pressable, StatusBar, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StatusBar, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { WebView } from 'react-native-webview';
 
@@ -158,6 +158,152 @@ function getReaderModeScript(enabled: boolean) {
   `;
 }
 
+type Tab = {
+  key: 'home' | 'video' | 'world' | 'agent';
+  label: string;
+  url: string;
+  readerMode: boolean;
+};
+
+type ReaderState = {
+  currentDate: string;
+  canPrevDay: boolean;
+  canNextDay: boolean;
+};
+
+const READER_DEFAULT_STATE: ReaderState = {
+  currentDate: 'Latest',
+  canPrevDay: false,
+  canNextDay: false,
+};
+
+function getReaderModeScript(enabled: boolean) {
+  if (!enabled) {
+    return 'true;';
+  }
+
+  return `
+    (function() {
+      const postState = () => {
+        try {
+          if (!window.ReactNativeWebView || !window.files) {
+            return;
+          }
+          const currentFile = window.__paperHubCurrentFile || window.files[0];
+          const currentIdx = window.files.indexOf(currentFile);
+          window.ReactNativeWebView.postMessage(JSON.stringify({
+            type: 'readerState',
+            currentDate: currentFile ? currentFile.replace('.md', '') : 'Latest',
+            canPrevDay: currentIdx < window.files.length - 1,
+            canNextDay: currentIdx > 0,
+          }));
+        } catch (error) {
+          window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'readerError', message: String(error) }));
+        }
+      };
+
+      const applyReaderMode = () => {
+        const wrap = document.querySelector('.wrap');
+        const navTop = document.querySelector('.nav-top');
+        const title = document.querySelector('h1');
+        const subtitle = document.querySelector('p');
+        const list = document.getElementById('list');
+        const content = document.getElementById('content');
+        const layout = document.querySelector('.layout');
+        const navBottom = document.getElementById('navBottom');
+
+        if (wrap) {
+          wrap.style.maxWidth = '100%';
+          wrap.style.padding = '12px 14px 120px';
+        }
+        if (navTop) navTop.style.display = 'none';
+        if (title) {
+          title.style.fontSize = '22px';
+          title.style.marginBottom = '4px';
+        }
+        if (subtitle) subtitle.style.display = 'none';
+        if (layout) {
+          layout.style.display = 'block';
+          layout.style.marginTop = '10px';
+        }
+        if (list) list.style.display = 'none';
+        if (navBottom) navBottom.style.display = 'none';
+        if (content) {
+          content.style.padding = '0';
+          content.style.overflow = 'visible';
+          content.style.minHeight = '70vh';
+        }
+      };
+
+      const bindBridge = () => {
+        if (!window.loadFile || !window.files || window.__paperHubBridgeBound) {
+          return false;
+        }
+
+        window.__paperHubBridgeBound = true;
+        window.__paperHubCurrentFile = window.files[0];
+        const originalLoadFile = window.loadFile;
+        window.loadFile = function(name, addToHistory) {
+          window.__paperHubCurrentFile = name;
+          const result = originalLoadFile(name, addToHistory);
+          setTimeout(postState, 80);
+          return result;
+        };
+
+        window.__paperHubPrevDay = function() {
+          const currentFile = window.__paperHubCurrentFile || window.files[0];
+          const currentIdx = window.files.indexOf(currentFile);
+          if (currentIdx < window.files.length - 1) {
+            window.loadFile(window.files[currentIdx + 1]);
+            const content = document.getElementById('content');
+            if (content) content.scrollTop = 0;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        };
+
+        window.__paperHubNextDay = function() {
+          const currentFile = window.__paperHubCurrentFile || window.files[0];
+          const currentIdx = window.files.indexOf(currentFile);
+          if (currentIdx > 0) {
+            window.loadFile(window.files[currentIdx - 1]);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        };
+
+        applyReaderMode();
+        setTimeout(postState, 80);
+        return true;
+      };
+
+      const setup = () => {
+        applyReaderMode();
+        if (bindBridge()) {
+          return;
+        }
+        const interval = setInterval(() => {
+          applyReaderMode();
+          if (bindBridge()) {
+            clearInterval(interval);
+          }
+        }, 150);
+        setTimeout(() => clearInterval(interval), 6000);
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setup);
+      } else {
+        setup();
+      }
+
+      window.addEventListener('load', () => {
+        applyReaderMode();
+        setTimeout(postState, 150);
+      });
+    })();
+    true;
+  `;
+}
+
 function App() {
   const webRef = useRef<WebView>(null);
   const tabs = useMemo<Tab[]>(
@@ -173,7 +319,6 @@ function App() {
   const [canGoBack, setCanGoBack] = useState(false);
   const [canGoForward, setCanGoForward] = useState(false);
   const [readerState, setReaderState] = useState<ReaderState>(READER_DEFAULT_STATE);
-  const [isUpdating, setIsUpdating] = useState(false);
   const readerModeScript = useMemo(() => getReaderModeScript(activeTab.readerMode), [activeTab.readerMode]);
 
   const switchTab = (tab: Tab) => {
@@ -191,35 +336,57 @@ function App() {
     webRef.current?.injectJavaScript('window.__paperHubNextDay && window.__paperHubNextDay(); true;');
   };
 
-  const updateApp = async () => {
-    if (Platform.OS !== 'android') {
-      await Linking.openURL(LATEST_RELEASE_URL);
-      return;
-    }
-
-    if (!updateModule?.downloadLatestApk) {
-      await Linking.openURL(LATEST_RELEASE_URL);
-      return;
-    }
-
-    try {
-      setIsUpdating(true);
-      await updateModule.downloadLatestApk(LATEST_APK_URL);
-      Alert.alert('开始更新', '最新 APK 已开始下载，下载完成后会自动弹出安装界面。');
-    } catch {
-      Alert.alert(
-        '需要允许安装',
-        '请先允许从本应用安装未知来源 APK，然后再点一次 Update App。',
-      );
-    } finally {
-      setIsUpdating(false);
-    }
-  };
-
   return (
     <SafeAreaProvider>
-      <StatusBar barStyle="dark-content" backgroundColor="#f5f7ff" />
-      <SafeAreaView style={styles.container} edges={['top', 'left', 'right', 'bottom']}>
+      <StatusBar barStyle="light-content" backgroundColor="#0f1021" />
+      <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
+        <View style={styles.heroCard}>
+          <Text style={styles.heroEyebrow}>PaperHub</Text>
+          <Text style={styles.heroTitle}>Daily Video Papers</Text>
+          <Text style={styles.heroSubtitle}>
+            在 App 里直接阅读每日论文，不再先被一长串日期导航挡住。
+          </Text>
+        </View>
+
+        <View style={styles.navTop}>
+          {tabs.map(tab => (
+            <Pressable
+              key={tab.key}
+              onPress={() => switchTab(tab)}
+              style={[styles.navButton, activeTab.key === tab.key && styles.navButtonActive]}
+            >
+              <Text style={[styles.navButtonText, activeTab.key === tab.key && styles.navButtonTextActive]}>
+                {tab.label}
+              </Text>
+            </Pressable>
+          ))}
+        </View>
+
+        {activeTab.readerMode ? (
+          <View style={styles.readerToolbar}>
+            <View style={styles.readerMeta}>
+              <Text style={styles.readerModeLabel}>{activeTab.label}</Text>
+              <Text style={styles.readerDate}>{readerState.currentDate}</Text>
+            </View>
+            <View style={styles.readerActions}>
+              <Pressable
+                onPress={goToPreviousDay}
+                disabled={!readerState.canPrevDay}
+                style={[styles.secondaryAction, !readerState.canPrevDay && styles.navButtonDisabled]}
+              >
+                <Text style={styles.secondaryActionText}>Older</Text>
+              </Pressable>
+              <Pressable
+                onPress={goToNextDay}
+                disabled={!readerState.canNextDay}
+                style={[styles.primaryAction, !readerState.canNextDay && styles.navButtonDisabled]}
+              >
+                <Text style={styles.primaryActionText}>Newer</Text>
+              </Pressable>
+            </View>
+          </View>
+        ) : null}
+
         <WebView
           key={activeTab.key}
           ref={webRef}
@@ -227,87 +394,28 @@ function App() {
           style={styles.webView}
           startInLoadingState
           originWhitelist={['https://*']}
-          injectedJavaScript={readerModeScript}
-          onMessage={event => {
-            try {
-              const payload = JSON.parse(event.nativeEvent.data) as Partial<ReaderState> & { type?: string };
-              if (payload.type === 'readerState') {
-                setReaderState({
-                  canPrevDay: Boolean(payload.canPrevDay),
-                  canNextDay: Boolean(payload.canNextDay),
-                });
-              }
-            } catch {
-              // Ignore non-JSON messages from the web content.
-            }
-          }}
           onNavigationStateChange={state => {
             setCanGoBack(state.canGoBack);
             setCanGoForward(state.canGoForward);
           }}
         />
 
-        <View style={styles.bottomOverlay} pointerEvents="box-none">
-          <View style={styles.controlsCard}>
-            <View style={styles.tabRow}>
-              {tabs.map(tab => (
-                <Pressable
-                  key={tab.key}
-                  onPress={() => switchTab(tab)}
-                  style={[styles.tabButton, activeTab.key === tab.key && styles.tabButtonActive]}
-                >
-                  <Text style={[styles.tabButtonText, activeTab.key === tab.key && styles.tabButtonTextActive]}>
-                    {tab.label}
-                  </Text>
-                </Pressable>
-              ))}
-            </View>
-
-            <View style={styles.actionRow}>
-              {activeTab.readerMode ? (
-                <>
-                  <Pressable
-                    onPress={goToPreviousDay}
-                    disabled={!readerState.canPrevDay}
-                    style={[styles.actionButton, !readerState.canPrevDay && styles.actionButtonDisabled]}
-                  >
-                    <Text style={styles.actionButtonText}>Older</Text>
-                  </Pressable>
-                  <Pressable
-                    onPress={goToNextDay}
-                    disabled={!readerState.canNextDay}
-                    style={[styles.actionButton, !readerState.canNextDay && styles.actionButtonDisabled]}
-                  >
-                    <Text style={styles.actionButtonText}>Newer</Text>
-                  </Pressable>
-                </>
-              ) : null}
-
-              <Pressable
-                onPress={() => webRef.current?.goBack()}
-                disabled={!canGoBack}
-                style={[styles.actionButton, !canGoBack && styles.actionButtonDisabled]}
-              >
-                <Text style={styles.actionButtonText}>Back</Text>
-              </Pressable>
-              <Pressable
-                onPress={() => webRef.current?.goForward()}
-                disabled={!canGoForward}
-                style={[styles.actionButton, !canGoForward && styles.actionButtonDisabled]}
-              >
-                <Text style={styles.actionButtonText}>Forward</Text>
-              </Pressable>
-
-              <Pressable
-                onPress={updateApp}
-                disabled={isUpdating}
-                style={[styles.updateButton, isUpdating && styles.actionButtonDisabled]}
-              >
-                <Text style={styles.updateButtonText}>{isUpdating ? 'Updating…' : 'Update App'}</Text>
-              </Pressable>
-            </View>
-          </View>
-        </View>
+        <SafeAreaView style={styles.navBottom} edges={['bottom']}>
+          <Pressable
+            onPress={() => webRef.current?.goBack()}
+            disabled={!canGoBack}
+            style={[styles.navButton, !canGoBack && styles.navButtonDisabled]}
+          >
+            <Text style={styles.navButtonText}>Back</Text>
+          </Pressable>
+          <Pressable
+            onPress={() => webRef.current?.goForward()}
+            disabled={!canGoForward}
+            style={[styles.navButton, !canGoForward && styles.navButtonDisabled]}
+          >
+            <Text style={styles.navButtonText}>Forward</Text>
+          </Pressable>
+        </SafeAreaView>
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -316,58 +424,109 @@ function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f7ff',
+    backgroundColor: '#090b1a',
   },
-  webView: {
-    flex: 1,
-    backgroundColor: '#f5f7ff',
-  },
-  bottomOverlay: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    bottom: 0,
-    paddingHorizontal: 12,
-    paddingBottom: 12,
-  },
-  controlsCard: {
-    padding: 10,
-    borderRadius: 22,
-    backgroundColor: 'rgba(255,255,255,0.96)',
+  heroCard: {
+    marginHorizontal: 14,
+    marginTop: 12,
+    paddingHorizontal: 18,
+    paddingVertical: 18,
+    borderRadius: 24,
+    backgroundColor: '#16192f',
     borderWidth: 1,
-    borderColor: 'rgba(12,36,66,0.08)',
-    shadowColor: '#122033',
-    shadowOpacity: 0.16,
-    shadowRadius: 18,
-    shadowOffset: { width: 0, height: 6 },
+    borderColor: 'rgba(255,255,255,0.08)',
+    shadowColor: '#000000',
+    shadowOpacity: 0.18,
+    shadowRadius: 20,
+    shadowOffset: { width: 0, height: 10 },
   },
-  tabRow: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 8,
+  heroEyebrow: {
+    color: '#9ee7ff',
+    fontSize: 12,
+    fontWeight: '700',
+    letterSpacing: 1.4,
+    textTransform: 'uppercase',
+    marginBottom: 6,
+  },
+  heroTitle: {
+    color: '#ffffff',
+    fontSize: 28,
+    fontWeight: '800',
     marginBottom: 8,
   },
-  actionRow: {
+  heroSubtitle: {
+    color: 'rgba(255,255,255,0.72)',
+    fontSize: 14,
+    lineHeight: 20,
+  },
+  navTop: {
+    paddingHorizontal: 14,
+    paddingVertical: 12,
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: 8,
   },
-  tabButton: {
+  readerToolbar: {
+    marginHorizontal: 14,
+    marginBottom: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 14,
+    borderRadius: 20,
+    backgroundColor: '#13162a',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.08)',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 12,
+  },
+  readerMeta: {
+    flex: 1,
+  },
+  readerModeLabel: {
+    color: '#8ea4ff',
+    fontSize: 12,
+    fontWeight: '700',
+    textTransform: 'uppercase',
+    marginBottom: 4,
+  },
+  readerDate: {
+    color: '#ffffff',
+    fontSize: 18,
+    fontWeight: '700',
+  },
+  readerActions: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  navBottom: {
+    paddingHorizontal: 14,
+    paddingTop: 10,
+    paddingBottom: 14,
+    flexDirection: 'row',
+    gap: 12,
+    justifyContent: 'flex-start',
+    backgroundColor: '#090b1a',
+  },
+  navButton: {
     paddingVertical: 10,
     paddingHorizontal: 14,
     borderRadius: 999,
-    backgroundColor: '#eef2ff',
+    backgroundColor: 'rgba(255,255,255,0.92)',
+    borderColor: 'rgba(255,255,255,0.12)',
+    borderWidth: 1,
   },
-  tabButtonActive: {
-    backgroundColor: '#0f172a',
+  navButtonActive: {
+    backgroundColor: '#8a5cff',
+    borderColor: '#8a5cff',
   },
-  tabButtonText: {
-    color: '#0f172a',
+  navButtonDisabled: {
+    opacity: 0.45,
+  },
+  navButtonText: {
+    color: '#111426',
     fontSize: 12,
     fontWeight: '700',
-  },
-  tabButtonTextActive: {
-    color: '#ffffff',
   },
   actionButton: {
     paddingVertical: 10,
@@ -393,6 +552,38 @@ const styles = StyleSheet.create({
     color: '#06201d',
     fontSize: 12,
     fontWeight: '800',
+  },
+  secondaryAction: {
+    paddingVertical: 10,
+    paddingHorizontal: 14,
+    borderRadius: 999,
+    backgroundColor: 'rgba(255,255,255,0.08)',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.1)',
+  },
+  secondaryActionText: {
+    color: '#e9ecff',
+    fontSize: 12,
+    fontWeight: '700',
+  },
+  primaryAction: {
+    paddingVertical: 10,
+    paddingHorizontal: 14,
+    borderRadius: 999,
+    backgroundColor: '#2ee6b8',
+  },
+  primaryActionText: {
+    color: '#061017',
+    fontSize: 12,
+    fontWeight: '800',
+  },
+  webView: {
+    flex: 1,
+    backgroundColor: '#f5f7ff',
+    marginHorizontal: 14,
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+    overflow: 'hidden',
   },
 });
 
