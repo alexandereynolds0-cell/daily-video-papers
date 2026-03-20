@@ -72,6 +72,9 @@ def enableProguardInReleaseBuilds = false
  */
 def jscFlavor = 'io.github.react-native-community:jsc-android:2026004.+'
 
+def versionCodeOverride = (findProperty("versionCodeOverride") ?: System.getenv("VERSION_CODE") ?: "1") as String
+def versionNameOverride = (findProperty("versionNameOverride") ?: System.getenv("VERSION_NAME") ?: "1.0") as String
+
 android {
     ndkVersion rootProject.ext.ndkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
@@ -82,8 +85,8 @@ android {
         applicationId "com.openclawpapers"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode versionCodeOverride.toInteger()
+        versionName versionNameOverride
     }
     signingConfigs {
         debug {
