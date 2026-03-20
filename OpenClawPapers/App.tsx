@@ -241,21 +241,6 @@ function App() {
           style={styles.webView}
           startInLoadingState
           originWhitelist={['https://*']}
-          injectedJavaScript={readerModeScript}
-          onMessage={event => {
-            try {
-              const payload = JSON.parse(event.nativeEvent.data) as Partial<ReaderState> & { type?: string };
-              if (payload.type === 'readerState') {
-                setReaderState({
-                  currentDate: payload.currentDate ?? 'Latest',
-                  canPrevDay: Boolean(payload.canPrevDay),
-                  canNextDay: Boolean(payload.canNextDay),
-                });
-              }
-            } catch {
-              // Ignore non-JSON messages from the web content.
-            }
-          }}
           onNavigationStateChange={state => {
             setCanGoBack(state.canGoBack);
             setCanGoForward(state.canGoForward);
