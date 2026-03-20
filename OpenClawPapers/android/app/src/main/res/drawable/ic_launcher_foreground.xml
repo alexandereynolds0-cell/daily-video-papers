@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center">
+        <shape android:shape="oval">
+            <size android:width="108dp" android:height="108dp" />
+            <gradient
+                android:angle="315"
+                android:startColor="#6F2BFF"
+                android:centerColor="#FF4FD8"
+                android:endColor="#22FFD1" />
+        </shape>
+    </item>
+
+    <item android:top="14dp" android:left="12dp" android:right="42dp" android:bottom="44dp">
+        <shape android:shape="oval">
+            <gradient
+                android:angle="45"
+                android:startColor="#FFF27A"
+                android:endColor="#FF8A5B" />
+        </shape>
+    </item>
+
+    <item android:top="42dp" android:left="46dp" android:right="10dp" android:bottom="12dp">
+        <shape android:shape="oval">
+            <gradient
+                android:angle="225"
+                android:startColor="#7CFFFA"
+                android:endColor="#00A6FF" />
+        </shape>
+    </item>
+
+    <item android:top="24dp" android:left="24dp" android:right="24dp" android:bottom="24dp">
+        <shape android:shape="oval">
+            <solid android:color="#14081F" />
+        </shape>
+    </item>
+
+    <item android:top="36dp" android:left="36dp" android:right="36dp" android:bottom="36dp">
+        <shape android:shape="oval">
+            <gradient
+                android:angle="270"
+                android:startColor="#26FFE5"
+                android:endColor="#A855F7" />
+        </shape>
+    </item>
+
+    <item android:top="46dp" android:left="20dp" android:right="56dp" android:bottom="46dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+
+    <item android:top="54dp" android:left="60dp" android:right="22dp" android:bottom="28dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFF38B" />
+        </shape>
+    </item>
+</layer-list>
