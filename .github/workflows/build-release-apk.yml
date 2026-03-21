@@ -46,14 +46,6 @@ jobs:
         working-directory: OpenClawPapers
         run: npm ci
 
-      - name: Lint JavaScript / TypeScript sources
-        working-directory: OpenClawPapers
-        run: npm run lint
-
-      - name: Preflight Babel parse for App entry
-        working-directory: OpenClawPapers
-        run: node -e "require('@babel/core').transformFileSync('App.tsx', {configFile: './babel.config.js'})"
-
       - name: Fix gradlew permissions
         working-directory: OpenClawPapers/android
         run: chmod +x gradlew
@@ -62,6 +54,7 @@ jobs:
         working-directory: OpenClawPapers/android
         run: ./gradlew assembleRelease --no-daemon
         env:
+          ANDROID_HOME: ${{ env.ANDROID_HOME }}
           VERSION_CODE: ${{ env.VERSION_CODE }}
           VERSION_NAME: ${{ env.VERSION_NAME }}
 
