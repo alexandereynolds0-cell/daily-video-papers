@@ -54,6 +54,7 @@ jobs:
         working-directory: OpenClawPapers/android
         run: ./gradlew assembleRelease --no-daemon
         env:
+          ANDROID_HOME: ${{ env.ANDROID_HOME }}
           VERSION_CODE: ${{ env.VERSION_CODE }}
           VERSION_NAME: ${{ env.VERSION_NAME }}
 
