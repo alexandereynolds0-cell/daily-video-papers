@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-23](papers/2026-03-23.md) - 8 papers
 - [2026-03-20](papers/2026-03-20.md) - 39 papers
 - [2026-03-19](papers/2026-03-19.md) - 26 papers
 - [2026-03-18](papers/2026-03-18.md) - 51 papers
@@ -37,6 +38,148 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-23 (8 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-03-23
+
+**Paper Count**: 8
+
+---
+
+## 1. VideoSeek: Long-Horizon Video Agent with Tool-Guided Seeking / VideoSeek：具有工具引导搜索功能的长视野视频代理
+
+**Date**: 2026-03-20 | **arXiv**: [2603.20185v1](http://arxiv.org/abs/2603.20185v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.20185v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video agentic models have advanced challenging video-language tasks. However, most agentic approaches still heavily rely on greedy parsing over densely sampled video frames, resulting in high computational cost. We present VideoSeek, a long-horizon video agent that leverages video logic flow to actively seek answer-critical evidence instead of exhaustively parsing the full video. This insight allows the model to use far fewer frames while maintaining, or even improving, its video understanding capability. VideoSeek operates in a think-act-observe loop with a well-designed toolkit for collecting multi-granular video observations. This design enables query-aware exploration over accumulated observations and supports practical video understanding and reasoning. Experiments on four challenging video understanding and reasoning benchmarks demonstrate that VideoSeek achieves strong accuracy while using far fewer frames than prior video agents and standalone LMMs. Notably, VideoSeek achieves a 10.2 absolute points improvement on LVBench over its base model, GPT-5, while using 93% fewer frames. Further analysis highlights the significance of leveraging video logic flow, strong reasoning capability, and the complementary roles of toolkit design.
+
+视频代理模型具有高级挑战性的视频语言任务。然而，大多数代理方法仍然严重依赖于对密集采样视频帧的贪婪解析，导致计算成本很高。我们推出了 VideoSeek，这是一种长视野视频代理，它利用视频逻辑流主动寻找关键答案证据，而不是详尽地解析整个视频。这种洞察力使模型能够使用更少的帧，同时保持甚至提高其视频理解能力。 VideoSeek 在“思考-行动-观察”循环中运行，具有精心设计的工具包，用于收集多粒度视频观察结果。这种设计能够对累积的观察结果进行查询感知探索，并支持实际的视频理解和推理。对四个具有挑战性的视频理解和推理基准的实验表明，VideoSeek 实现了很高的准确性，同时使用比以前的视频代理和独立 LMM 少得多的帧。值得注意的是，VideoSeek 在 LVBench 上比其基本模型 GPT-5 绝对提高了 10.2 分，同时使用的帧数减少了 93%。进一步的分析强调了利用视频逻辑流、强大的推理能力以及工具包设计的互补作用的重要性。
+
+</details>
+
+---
+
+## 2. AI Agents Can Already Autonomously Perform Experimental High Energy Physics / 人工智能代理已经可以自主执行高能物理实验
+
+**Date**: 2026-03-20 | **arXiv**: [2603.20179v1](http://arxiv.org/abs/2603.20179v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.20179v1)
+
+**Categories**: hep-ex, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language model-based AI agents are now able to autonomously execute substantial portions of a high energy physics (HEP) analysis pipeline with minimal expert-curated input. Given access to a HEP dataset, an execution framework, and a corpus of prior experimental literature, we find that Claude Code succeeds in automating all stages of a typical analysis: event selection, background estimation, uncertainty quantification, statistical inference, and paper drafting. We argue that the experimental HEP community is underestimating the current capabilities of these systems, and that most proposed agentic workflows are too narrowly scoped or scaffolded to specific analysis structures. We present a proof-of-concept framework, Just Furnish Context (JFC), that integrates autonomous analysis agents with literature-based knowledge retrieval and multi-agent review, and show that this is sufficient to plan, execute, and document a credible high energy physics analysis. We demonstrate this by conducting analyses on open data from ALEPH, DELPHI, and CMS to perform electroweak, QCD, and Higgs boson measurements. Rather than replacing physicists, these tools promise to offload the repetitive technical burden of analysis code development, freeing researchers to focus on physics insight, truly novel method development, and rigorous validation. Given these developments, we advocate for new strategies for how the community trains students, organizes analysis efforts, and allocates human expertise.
+
+基于大型语言模型的人工智能代理现在能够以最少的专家策划输入自主执行高能物理 (HEP) 分析管道的大部分。通过访问 HEP 数据集、执行框架和先前实验文献的语料库，我们发现 Claude Code 成功地自动化了典型分析的所有阶段：事件选择、背景估计、不确定性量化、统计推断和论文起草。我们认为，实验性 HEP 社区低估了这些系统当前的功能，并且大多数提出的代理工作流程的范围过于狭窄或仅限于特定的分析结构。我们提出了一个概念验证框架 Just Furnish Context (JFC)，它将自主分析代理与基于文献的知识检索和多代理审查相结合，并表明这足以规划、执行和记录可信的高能物理分析。我们通过对来自 ALEPH、DELPHI 和 CMS 的开放数据进行分析来证明这一点，以执行电弱、QCD 和希格斯玻色子测量。这些工具不会取代物理学家，而是有望减轻分析代码开发的重复性技术负担，使研究人员能够专注于物理洞察、真正新颖的方法开发和严格的验证。鉴于这些发展，我们倡导社区如何培训学生、组织分析工作和分配人力专业知识的新策略。
+
+</details>
+
+---
+
+## 3. Revisiting Gene Ontology Knowledge Discovery with Hierarchical Feature Selection and Virtual Study Group of AI Agents / 通过分层特征选择和人工智能代理虚拟研究组重新审视基因本体知识发现
+
+**Date**: 2026-03-20 | **arXiv**: [2603.20132v1](http://arxiv.org/abs/2603.20132v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.20132v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models have achieved great success in multiple challenging tasks, and their capacity can be further boosted by the emerging agentic AI techniques. This new computing paradigm has already started revolutionising the traditional scientific discovery pipelines. In this work, we propose a novel agentic AI-based knowledge discovery-oriented virtual study group that aims to extract meaningful ageing-related biological knowledge considering highly ageing-related Gene Ontology terms that are selected by hierarchical feature selection methods. We investigate the performance of the proposed agentic AI framework by considering four different model organisms' ageing-related Gene Ontology terms and validate the biological findings by reviewing existing research articles. It is found that the majority of the AI agent-generated scientific claims can be supported by existing literatures and the proposed internal mechanisms of the virtual study group also play an important role in the designed agentic AI-based knowledge discovery framework.
+
+大型语言模型在多项具有挑战性的任务中取得了巨大成功，新兴的代理人工智能技术可以进一步提高其能力。这种新的计算范式已经开始彻底改变传统的科学发现流程。在这项工作中，我们提出了一个新颖的基于代理人工智能的知识发现导向的虚拟研究组，旨在考虑通过分层特征选择方法选择的与衰老高度相关的基因本体术语，提取有意义的与衰老相关的生物知识。我们通过考虑四种不同模型生物的衰老相关基因本体术语来研究所提出的代理人工智能框架的性能，并通过回顾现有的研究文章来验证生物学发现。研究发现，大多数人工智能主体生成的科学主张都可以得到现有文献的支持，并且所提出的虚拟研究组的内部机制也在设计的基于主体人工智能的知识发现框架中发挥着重要作用。
+
+</details>
+
+---
+
+## 4. An Agentic Multi-Agent Architecture for Cybersecurity Risk Management / 用于网络安全风险管理的代理多代理架构
+
+**Date**: 2026-03-20 | **arXiv**: [2603.20131v1](http://arxiv.org/abs/2603.20131v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.20131v1)
+
+**Categories**: eess.SY, cs.AI, cs.CR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Getting a real cybersecurity risk assessment for a small organization is expensive -- a NIST CSF-aligned engagement runs $15,000 on the low end, takes weeks, and depends on practitioners who are genuinely scarce. Most small companies skip it entirely. We built a six-agent AI system where each agent handles one analytical stage: profiling the organization, mapping assets, analyzing threats, evaluating controls, scoring risks, and generating recommendations. Agents share a persistent context that grows as the assessment proceeds, so later agents build on what earlier ones concluded -- the mechanism that distinguishes this from standard sequential agent pipelines. We tested it on a 15-person HIPAA-covered healthcare company and compared outputs to independent assessments by three CISSP practitioners -- the system agreed with them 85% of the time on severity classifications, covered 92% of identified risks, and finished in under 15 minutes. We then ran 30 repeated single-agent assessments across five synthetic but sector-realistic organizational profiles in healthcare, fintech, manufacturing, retail, and SaaS, comparing a general-purpose Mistral-7B against a domain fine-tuned model. Both completed every run. The fine-tuned model flagged threats the baseline could not see at all: PHI exposure in healthcare, OT/IIoT vulnerabilities in manufacturing, platform-specific risks in retail. The full multi-agent pipeline, however, failed every one of 30 attempts on a Tesla T4 with its 4,096-token default context window -- context capacity, not model quality, turned out to be the binding constraint.
+
+对小型组织进行真正的网络安全风险评估是昂贵的——与 NIST CSF 合作的低端费用为 15,000 美元，需要数​​周时间，并且取决于真正稀缺的从业者。大多数小公司完全跳过它。我们构建了一个六代理人工智能系统，其中每个代理处理一个分析阶段：分析组织、映射资产、分析威胁、评估控制、评分风险和生成建议。代理共享一个随着评估的进行而增长的持久上下文，因此后来的代理建立在早期结论的基础上——这是区别于标准顺序代理管道的机制。我们在一家拥有 15 名员工的 HIPAA 覆盖的医疗保健公司上进行了测试，并将输出与三名 CISSP 从业者的独立评估进行了比较——系统在严重性分类上与他们的意见一致，覆盖了 92% 的已识别风险，并在 15 分钟内完成。然后，我们对医疗保健、金融科技、制造、零售和 SaaS 领域的 5 个综合但符合行业现实的组织概况进行了 30 次重复的单代理评估，将通用 Mistral-7B 与领域微调模型进行比较。两人都完成了每次跑步。经过微调的模型标记了基线根本看不到的威胁：医疗保健中的 PHI 暴露、制造中的 OT/IIoT 漏洞、零售中的平台特定风险。然而，在具有 4,096 个令牌的默认上下文窗口的 Tesla T4 上，完整的多智能体管道在 30 次尝试中每一次都失败了——上下文容量，而不是模型质量，成为了绑定约束。
+
+</details>
+
+---
+
+## 5. Pitfalls in Evaluating Interpretability Agents / 评估可解释性代理的陷阱
+
+**Date**: 2026-03-20 | **arXiv**: [2603.20101v1](http://arxiv.org/abs/2603.20101v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.20101v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Automated interpretability systems aim to reduce the need for human labor and scale analysis to increasingly large models and diverse tasks. Recent efforts toward this goal leverage large language models (LLMs) at increasing levels of autonomy, ranging from fixed one-shot workflows to fully autonomous interpretability agents. This shift creates a corresponding need to scale evaluation approaches to keep pace with both the volume and complexity of generated explanations. We investigate this challenge in the context of automated circuit analysis -- explaining the roles of model components when performing specific tasks. To this end, we build an agentic system in which a research agent iteratively designs experiments and refines hypotheses. When evaluated against human expert explanations across six circuit analysis tasks in the literature, the system appears competitive. However, closer examination reveals several pitfalls of replication-based evaluation: human expert explanations can be subjective or incomplete, outcome-based comparisons obscure the research process, and LLM-based systems may reproduce published findings via memorization or informed guessing. To address some of these pitfalls, we propose an unsupervised intrinsic evaluation based on the functional interchangeability of model components. Our work demonstrates fundamental challenges in evaluating complex automated interpretability systems and reveals key limitations of replication-based evaluation.
+
+自动解释系统旨在减少对日益大型模型和多样化任务的人力和规模分析的需求。最近为实现这一目标所做的努力利用了大型语言模型（LLM），其自治程度不断提高，从固定的一次性工作流程到完全自主的可解释代理。这种转变相应地需要扩展评估方法，以跟上生成解释的数量和复杂性。我们在自动电路分析的背景下研究这一挑战——解释模型组件在执行特定任务时的作用。为此，我们构建了一个代理系统，其中研究代理迭代地设计实验并完善假设。当根据文献中的六个电路分析任务的人类专家解释进行评估时，该系统显得具有竞争力。然而，更仔细的检查揭示了基于复制的评估的几个缺陷：人类专家的解释可能是主观的或不完整的，基于结果的比较模糊了研究过程，基于法学硕士的系统可能通过记忆或知情猜测来重现已发表的发现。为了解决其中一些缺陷，我们提出了一种基于模型组件功能互换性的无监督内在评估。我们的工作展示了评估复杂的自动解释系统的基本挑战，并揭示了基于复制的评估的关键局限性。
+
+</details>
+
+---
+
+## 6. Agentic Harness for Real-World Compilers / 现实世界编译器的代理工具
+
+**Date**: 2026-03-20 | **arXiv**: [2603.20075v1](http://arxiv.org/abs/2603.20075v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.20075v1)
+
+**Categories**: cs.SE, cs.AI
+
+**Code**: https://github.com/dtcxzyw/llvm-autofix
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Compilers are critical to modern computing, yet fixing compiler bugs is difficult. While recent large language model (LLM) advancements enable automated bug repair, compiler bugs pose unique challenges due to their complexity, deep cross-domain expertise requirements, and sparse, non-descriptive bug reports, necessitating compiler-specific tools. To bridge the gap, we introduce llvm-autofix, the first agentic harness designed to assist LLM agents in understanding and fixing compiler bugs. Our focus is on LLVM, one of the most widely used compiler infrastructures. Central to llvm-autofix are agent-friendly LLVM tools, a benchmark llvm-bench of reproducible LLVM bugs, and a tailored minimal agent llvm-autofix-mini for fixing LLVM bugs. Our evaluation demonstrates a performance decline of 60% in frontier models when tackling compiler bugs compared with common software bugs. Our minimal agent llvm-autofix-mini also outperforms the state-of-the-art by approximately 22%. This emphasizes the necessity for specialized harnesses like ours to close the loop between LLMs and compiler engineering. We believe this work establishes a foundation for advancing LLM capabilities in complex systems like compilers. GitHub: https://github.com/dtcxzyw/llvm-autofix
+
+编译器对于现代计算至关重要，但修复编译器错误却很困难。虽然最近的大型语言模型 (LLM) 进步实现了自动错误修复，但编译器错误由于其复杂性、深入的跨领域专业知识要求以及稀疏、非描述性错误报告而带来了独特的挑战，需要特定于编译器的工具。为了弥补这一差距，我们引入了 llvm-autofix，这是第一个旨在帮助 LLM 代理理解和修复编译器错误的代理工具。我们的重点是 LLVM，它是使用最广泛的编译器基础设施之一。 llvm-autofix 的核心是代理友好的 LLVM 工具、可重现 LLVM 错误的基准 llvm-bench 以及用于修复 LLVM 错误的定制最小代理 llvm-autofix-mini。我们的评估表明，与常见软件错误相比，在解决编译器错误时，前沿模型的性能下降了 60%。我们的最小代理 llvm-autofix-mini 的性能也优于最先进的约 22%。这强调了像我们这样的专门工具来关闭法学硕士和编译器工程之间的循环的必要性。我们相信这项工作为在编译器等复杂系统中提升 LLM 能力奠定了基础。 GitHub：https://github.com/dtcxzyw/llvm-autofix
+
+</details>
+
+---
+
+## 7. An Agentic Approach to Generating XAI-Narratives / 生成 XAI 叙事的代理方法
+
+**Date**: 2026-03-20 | **arXiv**: [2603.20003v1](http://arxiv.org/abs/2603.20003v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.20003v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Explainable AI (XAI) research has experienced substantial growth in recent years. Existing XAI methods, however, have been criticized for being technical and expert-oriented, motivating the development of more interpretable and accessible explanations. In response, large language model (LLM)-generated XAI narratives have been proposed as a promising approach for translating post-hoc explanations into more accessible, natural-language explanations. In this work, we propose a multi-agent framework for XAI narrative generation and refinement. The framework comprises the Narrator, which generates and revises narratives based on feedback from multiple Critic Agents on faithfulness and coherence metrics, thereby enabling narrative improvement through iteration. We design five agentic systems (Basic Design, Critic Design, Critic-Rule Design, Coherent Design, and Coherent-Rule Design) and systematically evaluate their effectiveness across five LLMs on five tabular datasets. Results validate that the Basic Design, the Critic Design, and the Critic-Rule Design are effective in improving the faithfulness of narratives across all LLMs. Claude-4.5-Sonnet on Basic Design performs best, reducing the number of unfaithful narratives by 90% after three rounds of iteration. To address recurrent issues, we further introduce an ensemble strategy based on majority voting. This approach consistently enhances performance for four LLMs, except for DeepSeek-V3.2-Exp. These findings highlight the potential of agentic systems to produce faithful and coherent XAI narratives.
+
+近年来，可解释人工智能（XAI）研究经历了大幅增长。然而，现有的 XAI 方法因技术性和专家导向而受到批评，推动了更易解释和更容易理解的解释的发展。作为回应，大语言模型（LLM）生成的 XAI 叙述被提议作为一种有前景的方法，将事后解释转化为更容易理解的自然语言解释。在这项工作中，我们提出了一个用于 XAI 叙事生成和细化的多智能体框架。该框架包括叙述者，它根据多个评论家代理关于忠实度和连贯性指标的反馈生成和修改叙述，从而通过迭代改进叙述。我们设计了五个代理系统（基本设计、批评设计、批评规则设计、连贯设计和连贯规则设计），并在五个表格数据集上系统地评估了它们在五个法学硕士中的有效性。结果验证了基本设计、批评设计和批评规则设计能够有效提高所有法学硕士叙述的真实性。基础设计上的Claude-4.5-Sonnet表现最好，经过三轮迭代后，不忠实叙述的数量减少了90%。为了解决经常出现的问题，我们进一步引入了基于多数投票的集成策略。此方法持续增强了四个 LLM 的性能（DeepSeek-V3.2-Exp 除外）。这些发现凸显了代理系统产生忠实且连贯的 XAI 叙述的潜力。
+
+</details>
+
+---
+
+## 8. Trojan's Whisper: Stealthy Manipulation of OpenClaw through Injected Bootstrapped Guidance / 特洛伊木马的耳语：通过注入引导引导秘密操纵 OpenClaw
+
+**Date**: 2026-03-20 | **arXiv**: [2603.19974v1](http://arxiv.org/abs/2603.19974v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.19974v1)
+
+**Categories**: cs.CR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous coding agents are increasingly integrated into software development workflows, offering capabilities that extend beyond code suggestion to active system interaction and environment management. OpenClaw, a representative platform in this emerging paradigm, introduces an extensible skill ecosystem that allows third-party developers to inject behavioral guidance through lifecycle hooks during agent initialization. While this design enhances automation and customization, it also opens a novel and unexplored attack surface. In this paper, we identify and systematically characterize guidance injection, a stealthy attack vector that embeds adversarial operational narratives into bootstrap guidance files. Unlike traditional prompt injection, which relies on explicit malicious instructions, guidance injection manipulates the agent's reasoning context by framing harmful actions as routine best practices. These narratives are automatically incorporated into the agent's interpretive framework and influence future task execution without raising suspicion.We construct 26 malicious skills spanning 13 attack categories including credential exfiltration, workspace destruction, privilege escalation, and persistent backdoor installation. We evaluate them using ORE-Bench, a realistic developer workspace benchmark we developed. Across 52 natural user prompts and six state-of-the-art LLM backends, our attacks achieve success rates from 16.0% to 64.2%, with the majority of malicious actions executed autonomously without user confirmation. Furthermore, 94% of our malicious skills evade detection by existing static and LLM-based scanners. Our findings reveal fundamental tensions in the design of autonomous agent ecosystems and underscore the urgent need for defenses based on capability isolation, runtime policy enforcement, and transparent guidance provenance.
+
+自主编码代理越来越多地集成到软件开发工作流程中，提供的功能不仅限于代码建议，还包括主动系统交互和环境管理。 OpenClaw 是这一新兴范例中的代表平台，它引入了可扩展的技能生态系统，允许第三方开发人员在代理初始化期间通过生命周期挂钩注入行为指导。虽然这种设计增强了自动化和定制化，但它也打开了一个新颖且未经探索的攻击面。在本文中，我们识别并系统地描述了引导注入，这是一种将对抗性操作叙述嵌入到引导引导文件中的隐形攻击向量。与依赖于显式恶意指令的传统提示注入不同，引导注入通过将有害操作视为常规最佳实践来操纵代理的推理上下文。这些叙述会自动纳入代理的解释框架中，并在不引起怀疑的情况下影响未来的任务执行。我们构建了 26 种恶意技能，涵盖 13 个攻击类别，包括凭证泄露、工作区破坏、权限升级和持久后门安装。我们使用 ORE-Bench 来评估它们，这是我们开发的一个现实的开发人员工作空间基准。通过 52 个自然用户提示和 6 个最先进的 LLM 后端，我们的攻击实现了 16.0% 至 64.2% 的成功率，大多数恶意操作无需用户确认即可自主执行。此外，我们 94% 的恶意技能逃避了现有静态和基于 LLM 的扫描程序的检测。我们的研究结果揭示了自主代理生态系统设计中的基本矛盾，并强调了基于能力隔离、运行时策略执行和透明指导来源的防御的迫切需要。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-20 (39 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-03-20
