@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-24](papers/2026-03-24.md) - 9 papers
 - [2026-03-23](papers/2026-03-23.md) - 2 papers
 - [2026-03-20](papers/2026-03-20.md) - 7 papers
 - [2026-03-19](papers/2026-03-19.md) - 5 papers
@@ -36,6 +37,162 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-24 (9 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-03-24
+
+**Paper Count**: 9
+
+---
+
+## 1. WorldCache: Content-Aware Caching for Accelerated Video World Models / WorldCache：用于加速视频世界模型的内容感知缓存
+
+**Date**: 2026-03-23 | **arXiv**: [2603.22286v1](http://arxiv.org/abs/2603.22286v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.22286v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion Transformers (DiTs) power high-fidelity video world models but remain computationally expensive due to sequential denoising and costly spatio-temporal attention. Training-free feature caching accelerates inference by reusing intermediate activations across denoising steps; however, existing methods largely rely on a Zero-Order Hold assumption i.e., reusing cached features as static snapshots when global drift is small. This often leads to ghosting artifacts, blur, and motion inconsistencies in dynamic scenes. We propose \textbf{WorldCache}, a Perception-Constrained Dynamical Caching framework that improves both when and how to reuse features. WorldCache introduces motion-adaptive thresholds, saliency-weighted drift estimation, optimal approximation via blending and warping, and phase-aware threshold scheduling across diffusion steps. Our cohesive approach enables adaptive, motion-consistent feature reuse without retraining. On Cosmos-Predict2.5-2B evaluated on PAI-Bench, WorldCache achieves \textbf{2.3$\times$} inference speedup while preserving \textbf{99.4\%} of baseline quality, substantially outperforming prior training-free caching approaches. Our code can be accessed on \href{https://umair1221.github.io/World-Cache/}{World-Cache}.
+
+扩散变压器（DiT）为高保真视频世界模型提供动力，但由于顺序去噪和昂贵的时空注意力，计算成本仍然很高。免训练特征缓存通过在去噪步骤中重用中间激活来加速推理；然而，现有的方法很大程度上依赖于零阶保持假设，即当全局漂移很小时，将缓存的特征重新用作静态快照。这通常会导致动态场景中出现重影伪影、模糊和运动不一致。我们提出 \textbf{WorldCache}，一个感知约束的动态缓存框架，可以改进重用功能的时间和方式。 WorldCache 引入了运动自适应阈值、显着性加权漂移估计、通过混合和变形的最佳近似以及跨扩散步骤的相位感知阈值调度。我们的内聚方法可以实现自适应、运动一致的特征重用，而无需重新训练。在 PAI-Bench 上评估的 Cosmos-Predict2.5-2B 上，WorldCache 实现了 \textbf{2.3$\times$} 推理加速，同时保留了 \textbf{99.4\%} 的基线质量，大大优于之前的免训练缓存方法。我们的代码可以在 \href{https://umair1221.github.io/World-Cache/}{World-Cache} 上访问。
+
+</details>
+
+---
+
+## 2. ThinkJEPA: Empowering Latent World Models with Large Vision-Language Reasoning Model / ThinkJEPA：通过大视觉语言推理模型增强潜在世界模型
+
+**Date**: 2026-03-23 | **arXiv**: [2603.22281v1](http://arxiv.org/abs/2603.22281v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.22281v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL, cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent progress in latent world models (e.g., V-JEPA2) has shown promising capability in forecasting future world states from video observations. Nevertheless, dense prediction from a short observation window limits temporal context and can bias predictors toward local, low-level extrapolation, making it difficult to capture long-horizon semantics and reducing downstream utility. Vision--language models (VLMs), in contrast, provide strong semantic grounding and general knowledge by reasoning over uniformly sampled frames, but they are not ideal as standalone dense predictors due to compute-driven sparse sampling, a language-output bottleneck that compresses fine-grained interaction states into text-oriented representations, and a data-regime mismatch when adapting to small action-conditioned datasets. We propose a VLM-guided JEPA-style latent world modeling framework that combines dense-frame dynamics modeling with long-horizon semantic guidance via a dual-temporal pathway: a dense JEPA branch for fine-grained motion and interaction cues, and a uniformly sampled VLM \emph{thinker} branch with a larger temporal stride for knowledge-rich guidance. To transfer the VLM's progressive reasoning signals effectively, we introduce a hierarchical pyramid representation extraction module that aggregates multi-layer VLM representations into guidance features compatible with latent prediction. Experiments on hand-manipulation trajectory prediction show that our method outperforms both a strong VLM-only baseline and a JEPA-predictor baseline, and yields more robust long-horizon rollout behavior.
+
+潜在世界模型（例如 V-JEPA2）的最新进展显示出通过视频观测预测未来世界状态的良好能力。然而，短观察窗口的密集预测限制了时间上下文，并且可能使预测器偏向局部、低级外推，从而难以捕获长范围语义并降低下游效用。相比之下，视觉语言模型（VLM）通过对均匀采样的帧进行推理来提供强大的语义基础和常识，但由于计算驱动的稀疏采样、将细粒度交互状态压缩为面向文本的表示的语言输出瓶颈以及适应小型动作条件数据集时的数据机制不匹配，它们作为独立的密集预测器并不理想。我们提出了一种 VLM 引导的 JEPA 式潜在世界建模框架，该框架通过双时间路径将密集帧动力学建模与长视野语义指导相结合：用于细粒度运动和交互线索的密集 JEPA 分支，以及具有较大时间步长的均匀采样 VLM \emph{thinker} 分支，用于知识丰富的指导。为了有效地传输 VLM 的渐进推理信号，我们引入了分层金字塔表示提取模块，该模块将多层 VLM 表示聚合为与潜在预测兼容的指导特征。手动轨迹预测实验表明，我们的方法优于强大的仅 VLM 基线和 JEPA 预测器基线，并产生更稳健的长范围推出行为。
+
+</details>
+
+---
+
+## 3. Do World Action Models Generalize Better than VLAs? A Robustness Study / 世界行动模型比 VLA 更具有普遍性吗？稳健性研究
+
+**Date**: 2026-03-23 | **arXiv**: [2603.22078v1](http://arxiv.org/abs/2603.22078v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.22078v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robot action planning in the real world is challenging as it requires not only understanding the current state of the environment but also predicting how it will evolve in response to actions. Vision-language-action (VLA), which repurpose large-scale vision-language models for robot action generation using action experts, have achieved notable success across a variety of robotic tasks. Nevertheless, their performance remains constrained by the scope of their training data, exhibiting limited generalization to unseen scenarios and vulnerability to diverse contextual perturbations. More recently, world models have been revisited as an alternative to VLAs. These models, referred to as world action models (WAMs), are built upon world models that are trained on large corpora of video data to predict future states. With minor adaptations, their latent representation can be decoded into robot actions. It has been suggested that their explicit dynamic prediction capacity, combined with spatiotemporal priors acquired from web-scale video pretraining, enables WAMs to generalize more effectively than VLAs. In this paper, we conduct a comparative study of prominent state-of-the-art VLA policies and recently released WAMs. We evaluate their performance on the LIBERO-Plus and RoboTwin 2.0-Plus benchmarks under various visual and language perturbations. Our results show that WAMs achieve strong robustness, with LingBot-VA reaching 74.2% success rate on RoboTwin 2.0-Plus and Cosmos-Policy achieving 82.2% on LIBERO-Plus. While VLAs such as $π_{0.5}$ can achieve comparable robustness on certain tasks, they typically require extensive training with diverse robotic datasets and varied learning objectives. Hybrid approaches that partially incorporate video-based dynamic learning exhibit intermediate robustness, highlighting the importance of how video priors are integrated.
+
+现实世界中的机器人行动规划具有挑战性，因为它不仅需要了解环境的当前状态，还需要预测环境将如何响应行动而演变。视觉语言动作（VLA）利用动作专家重新利用大规模视觉语言模型来生成机器人动作，在各种机器人任务中取得了显着的成功。然而，它们的性能仍然受到训练数据范围的限制，对未见过的场景的泛化能力有限，并且容易受到各种背景扰动的影响。最近，世界模型作为 VLA 的替代品被重新审视。这些模型称为世界行动模型 (WAM)，建立在世界模型的基础上，这些世界模型经过大型视频数据集的训练以预测未来状态。通过细微的调整，它们的潜在表示可以被解码为机器人动作。有人认为，它们的显式动态预测能力与从网络规模视频预训练中获得的时空先验相结合，使 WAM 能够比 VLA 更有效地泛化。在本文中，我们对最先进的 VLA 政策和最近发布的 WAM 进行了比较研究。我们评估了它们在各种视觉和语言扰动下在 LIBERO-Plus 和 RoboTwin 2.0-Plus 基准上的表现。我们的结果表明，WAM 具有很强的鲁棒性，LingBot-VA 在 RoboTwin 2.0-Plus 上达到 74.2% 的成功率，Cosmos-Policy 在 LIBERO-Plus 上达到 82.2% 的成功率。虽然 $π_{0.5}$ 等 VLA 在某些任务上可以实现相当的鲁棒性，但它们通常需要使用不同的机器人数据集和不同的学习目标进行广泛的训练。部分结合基于视频的动态学习的混合方法表现出中等鲁棒性，突出了如何集成视频先验的重要性。
+
+</details>
+
+---
+
+## 4. What Do World Models Learn in RL? Probing Latent Representations in Learned Environment Simulators / 世界模型在强化学习中学到什么？探索学习环境模拟器中的潜在表示
+
+**Date**: 2026-03-23 | **arXiv**: [2603.21546v1](http://arxiv.org/abs/2603.21546v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.21546v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models learn to simulate environment dynamics from experience, enabling sample-efficient reinforcement learning. But what do these models actually represent internally? We apply interpretability techniques--including linear and nonlinear probing, causal interventions, and attention analysis--to two architecturally distinct world models: IRIS (discrete token transformer) and DIAMOND (continuous diffusion UNet), trained on Atari Breakout and Pong. Using linear probes, we find that both models develop linearly decodable representations of game state variables (object positions, scores), with MLP probes yielding only marginally higher R^2, confirming that these representations are approximately linear. Causal interventions--shifting hidden states along probe-derived directions--produce correlated changes in model predictions, providing evidence that representations are functionally used rather than merely correlated. Analysis of IRIS attention heads reveals spatial specialization: specific heads attend preferentially to tokens overlapping with game objects. Multi-baseline token ablation experiments consistently identify object-containing tokens as disproportionately important. Our findings provide interpretability evidence that learned world models develop structured, approximately linear internal representations of environment state across two games and two architectures.
+
+世界模型学习从经验中模拟环境动态，从而实现样本高效的强化学习。但这些模型实际上在内部代表什么？我们将可解释性技术（包括线性和非线性探测、因果干预和注意力分析）应用于两个架构不同的世界模型：IRIS（离散令牌转换器）和 DIAMOND（连续扩散 UNet），并在 Atari Breakout 和 Pong 上进行训练。使用线性探针，我们发现两个模型都开发了游戏状态变量（对象位置、分数）的线性可解码表示，而 MLP 探针仅产生稍高的 R^2，证实这些表示近似线性。因果干预——沿着探针导出的方向改变隐藏状态——在模型预测中产生相关变化，提供证据表明表示是在功能上使用的，而不仅仅是相关的。对 IRIS 注意力头的分析揭示了空间专业化：特定头优先关注与游戏对象重叠的标记。多基线标记消融实验一致认为包含对象的标记非常重要。我们的研究结果提供了可解释性证据，表明学习世界模型在两个游戏和两种架构中开发了结构化的、近似线性的环境状态内部表示。
+
+</details>
+
+---
+
+## 5. ARYA: A Physics-Constrained Composable & Deterministic World Model Architecture / ARYA：物理约束的可组合和确定性世界模型架构
+
+**Date**: 2026-03-22 | **arXiv**: [2603.21340v1](http://arxiv.org/abs/2603.21340v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.21340v1)
+
+**Categories**: cs.AI, cs.DC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper presents ARYA, a composable, physics-constrained, deterministic world model architecture built on five foundational principles: nano models, composability, causal reasoning, determinism, and architectural AI safety. We demonstrate that ARYA satisfies all canonical world model requirements, including state representation, dynamic prediction, causal and physical awareness, temporal consistency, generalization, learnability, and planning and control. Unlike monolithic foundation models, the ARYA foundation model implements these capabilities through a hierarchical system-of-system-of-systems of specialized nano models, orchestrated by AARA (ARYA Autonomous Research Agent), an always-on cognitive daemon that executes a continuous sense-decide-act-learn loop. The nano model architecture provides linear scaling, sparse activation, selective untraining, and sub-20-second training cycles, resolving the traditional tension between capability and computational efficiency. A central contribution is the Unfireable Safety Kernel: an architecturally immutable safety boundary that cannot be disabled or circumvented by any system component, including its own self-improvement engine. This is not a social or ethical alignment statement; it is a technical framework ensuring human control persists as autonomy increases. Safety is an architectural constraint governing every operation, not a policy layer applied after the fact. We present formal alignment between ARYA's architecture and canonical world model requirements, and report summarizing its state-of-the-art performance across 6 of 9 competitive benchmarks head-to-head with GPT-5.2, Opus 4.6, and V-JEPA-2. All with zero neural network parameters, across seven active industry domain nodes spanning aerospace, pharma manufacturing, oil and gas, smart cities, biotech, defense, and medical devices.
+
+本文介绍了 ARYA，一种可组合的、物理约束的、确定性的世界模型架构，它建立在五个基本原则之上：纳米模型、可组合性、因果推理、确定性和架构人工智能安全性。我们证明 ARYA 满足所有规范世界模型的要求，包括状态表示、动态预测、因果和物理意识、时间一致性、泛化、可学习性以及规划和控制。与整体基础模型不同，ARYA 基础模型通过专门纳米模型的分层系统系统实现这些功能，由 AARA（ARYA 自主研究代理）编排，AARA 是一个始终在线的认知守护进程，执行连续的感知-决定-行动-学习循环。纳米模型架构提供线性缩放、稀疏激活、选择性取消训练和 20 秒以下的训练周期，解决了能力和计算效率之间的传统紧张关系。一个核心贡献是不可激发的安全内核：一个架构上不可变的安全边界，不能被任何系统组件禁用或规避，包括其自身的自我改进引擎。这不是社会或道德联盟声明；它是一个技术框架，确保随着自主权的增加人类控制持续存在。安全是管理每个操作的架构约束，而不是事后应用的策略层。我们提出了 ARYA 架构与规范世界模型要求之间的正式一致性，并报告总结了其在与 GPT-5.2、Opus 4.6 和 V-JEPA-2 正面交锋的 9 个竞争基准中的 6 个中的最先进性能。所有神经网络参数均为零，横跨航空航天、制药制造、石油和天然气、智能城市、生物技术、国防和医疗设备等七个活跃行业领域节点。
+
+</details>
+
+---
+
+## 6. FluidWorld: Reaction-Diffusion Dynamics as a Predictive Substrate for World Models / FluidWorld：反应扩散动力学作为世界模型的预测基础
+
+**Date**: 2026-03-22 | **arXiv**: [2603.21315v1](http://arxiv.org/abs/2603.21315v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.21315v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models learn to predict future states of an environment, enabling planning and mental simulation. Current approaches default to Transformer-based predictors operating in learned latent spaces. This comes at a cost: O(N^2) computation and no explicit spatial inductive bias. This paper asks a foundational question: is self-attention necessary for predictive world modeling, or can alternative computational substrates achieve comparable or superior results? I introduce FluidWorld, a proof-of-concept world model whose predictive dynamics are governed by partial differential equations (PDEs) of reaction-diffusion type. Instead of using a separate neural network predictor, the PDE integration itself produces the future state prediction. In a strictly parameter-matched three-way ablation on unconditional UCF-101 video prediction (64x64, ~800K parameters, identical encoder, decoder, losses, and data), FluidWorld is compared against both a Transformer baseline (self-attention) and a ConvLSTM baseline (convolutional recurrence). While all three models converge to comparable single-step prediction loss, FluidWorld achieves 2x lower reconstruction error, produces representations with 10-15% higher spatial structure preservation and 18-25% more effective dimensionality, and critically maintains coherent multi-step rollouts where both baselines degrade rapidly. All experiments were conducted on a single consumer-grade PC (Intel Core i5, NVIDIA RTX 4070 Ti), without any large-scale compute. These results establish that PDE-based dynamics, which natively provide O(N) spatial complexity, adaptive computation, and global spatial coherence through diffusion, are a viable and parameter-efficient alternative to both attention and convolutional recurrence for world modeling.
+
+世界模型学习预测环境的未来状态，从而实现规划和心理模拟。当前的方法默认使用在学习的潜在空间中运行的基于 Transformer 的预测器。这是有代价的：O(N^2) 计算并且没有显式的空间归纳偏差。本文提出了一个基本问题：自注意力对于预测世界建模是否必要，或者替代计算基底能否获得可比或更好的结果？我介绍 FluidWorld，这是一个概念验证的世界模型，其预测动力学由反应扩散类型的偏微分方程 (PDE) 控制。 PDE 积分本身会产生未来状态预测，而不是使用单独的神经网络预测器。在无条件 UCF-101 视频预测（64x64、~800K 参数、相同的编码器、解码器、损失和数据）上进行严格参数匹配的三向消融中，FluidWorld 与 Transformer 基线（自注意力）和 ConvLSTM 基线（卷积递归）进行比较。虽然所有三个模型都收敛到可比较的单步预测损失，但 FluidWorld 实现了 2 倍的较低重建误差，生成的表示形式的空间结构保留率提高了 10-15%，有效维度提高了 18-25%，并且在两个基线快速退化的情况下严格保持了连贯的多步推出。所有实验均在一台消费级 PC（Intel Core i5、NVIDIA RTX 4070 Ti）上进行，没有任何大规模计算。这些结果表明，基于偏微分方程的动力学本质上提供了 O(N) 空间复杂度、自适应计算和通过扩散的全局空间一致性，是世界建模中注意力和卷积递归的可行且参数高效的替代方案。
+
+</details>
+
+---
+
+## 7. Revisiting Tree Search for LLMs: Gumbel and Sequential Halving for Budget-Scalable Reasoning / 重新审视法学硕士的树搜索：预算可扩展推理的 Gumbel 和顺序减半
+
+**Date**: 2026-03-22 | **arXiv**: [2603.21162v1](http://arxiv.org/abs/2603.21162v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.21162v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Neural tree search is a powerful decision-making algorithm widely used in complex domains such as game playing and model-based reinforcement learning. Recent work has applied AlphaZero-style tree search to enhance the reasoning capabilities of Large Language Models (LLMs) during inference, but we find that this approach suffers from a scaling failure: on GSM8K and Game24, accuracy drops as the search budget increases. In this paper, we present ReSCALE, an adaptation of Gumbel AlphaZero MCTS that replaces Dirichlet noise and PUCT selection with Gumbel sampling and Sequential Halving, restoring monotonic scaling without changes to the model or its training. ReSCALE reaches 58.4\% on GSM8K and 85.3\% on Game24 at budgets where the baseline degrades. Ablations confirm that Sequential Halving is the primary driver of the improvement.
+
+神经树搜索是一种强大的决策算法，广泛应用于游戏和基于模型的强化学习等复杂领域。最近的工作应用了 AlphaZero 式的树搜索来增强大型语言模型 (LLM) 在推理过程中的推理能力，但我们发现这种方法存在扩展失败的问题：在 GSM8K 和 Game24 上，随着搜索预算的增加，准确性会下降。在本文中，我们提出了 ReSCALE，它是 Gumbel AlphaZero MCTS 的一种改进，它用 Gumbel 采样和顺序减半取代了 Dirichlet 噪声和 PUCT 选择，在不改变模型或其训练的情况下恢复单调缩放。在基线下降的预算下，ReSCALE 在 GSM8K 上达到 58.4%，在 Game24 上达到 85.3%。消融证实，顺序减半是改善的主要驱动力。
+
+</details>
+
+---
+
+## 8. CounterScene: Counterfactual Causal Reasoning in Generative World Models for Safety-Critical Closed-Loop Evaluation / CounterScene：用于安全关键闭环评估的生成世界模型中的反事实因果推理
+
+**Date**: 2026-03-22 | **arXiv**: [2603.21104v1](http://arxiv.org/abs/2603.21104v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.21104v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generating safety-critical driving scenarios requires understanding why dangerous interactions arise, rather than merely forcing collisions. However, existing methods rely on heuristic adversarial agent selection and unstructured perturbations, lacking explicit modeling of interaction dependencies and thus exhibiting a realism--adversarial trade-off. We present CounterScene, a framework that endows closed-loop generative BEV world models with structured counterfactual reasoning for safety-critical scenario generation. Given a safe scene, CounterScene asks: what if the causally critical agent had behaved differently? To answer this, we introduce causal adversarial agent identification to identify the critical agent and classify conflict types, and develop a conflict-aware interactive world model in which a causal interaction graph is used to explicitly model dynamic inter-agent dependencies. Building on this structure, stage-adaptive counterfactual guidance performs minimal interventions on the identified agent, removing its spatial and temporal safety margins while allowing risk to emerge through natural interaction propagation. Extensive experiments on nuScenes demonstrate that CounterScene achieves the strongest adversarial effectiveness while maintaining superior trajectory realism across all horizons, improving long-horizon collision rate from 12.3% to 22.7% over the strongest baseline with better realism (ADE 1.88 vs.2.09). Notably, this advantage further widens over longer rollouts, and CounterScene generalizes zero-shot to nuPlan with state-of-the-art realism.
+
+生成安全关键的驾驶场景需要了解为什么会出现危险的相互作用，而不仅仅是强行碰撞。然而，现有方法依赖于启发式对抗性代理选择和非结构化扰动，缺乏交互依赖性的显式建模，从而表现出现实性——对抗性权衡。我们提出了 CounterScene，这是一个框架，为闭环生成 BEV 世界模型赋予结构化反事实推理，以生成安全关键场景。 CounterScene 提出一个安全场景：如果因果关系关键的智能体表现不同怎么办？为了回答这个问题，我们引入因果对抗代理识别来识别关键代理并对冲突类型进行分类，并开发一个冲突感知的交互式世界模型，其中因果交互图用于显式地建模动态代理间依赖关系。在此结构的基础上，阶段自适应反事实指导对已识别的代理执行最少的干预，消除其空间和时间安全裕度，同时允许通过自然交互传播出现风险。 nuScenes 上的大量实验表明，CounterScene 实现了最强的对抗有效性，同时在所有视野中保持卓越的轨迹真实感，将长视野碰撞率从最强基线的 12.3% 提高到 22.7%，并具有更好的真实感（ADE 1.88 vs.2.09）。值得注意的是，这种优势随着时间的推移而进一步扩大，CounterScene 将零样本推广到具有最先进现实主义的 nuPlan。
+
+</details>
+
+---
+
+## 9. Dreaming the Unseen: World Model-regularized Diffusion Policy for Out-of-Distribution Robustness / 梦想看不见的事物：世界模型规范化的扩散策略以实现分布外的鲁棒性
+
+**Date**: 2026-03-22 | **arXiv**: [2603.21017v1](http://arxiv.org/abs/2603.21017v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.21017v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion policies excel at visuomotor control but often fail catastrophically under severe out-of-distribution (OOD) disturbances, such as unexpected object displacements or visual corruptions. To address this vulnerability, we introduce the Dream Diffusion Policy (DDP), a framework that deeply integrates a diffusion world model into the policy's training objective via a shared 3D visual encoder. This co-optimization endows the policy with robust state-prediction capabilities. When encountering sudden OOD anomalies during inference, DDP detects the real-imagination discrepancy and actively abandons the corrupted visual stream. Instead, it relies on its internal "imagination" (autoregressively forecasted latent dynamics) to safely bypass the disruption, generating imagined trajectories before smoothly realigning with physical reality. Extensive evaluations demonstrate DDP's exceptional resilience. Notably, DDP achieves a 73.8% OOD success rate on MetaWorld (vs. 23.9% without predictive imagination) and an 83.3% success rate under severe real-world spatial shifts (vs. 3.3% without predictive imagination). Furthermore, as a stress test, DDP maintains a 76.7% real-world success rate even when relying entirely on open-loop imagination post-initialization.
+
+扩散策略在视觉运动控制方面表现出色，但在严重的分布外（OOD）干扰（例如意外的物体位移或视觉损坏）下常常会发生灾难性的失败。为了解决这个漏洞，我们引入了梦想扩散策略（DDP），该框架通过共享的 3D 视觉编码器将扩散世界模型深度集成到策略的训练目标中。这种协同优化赋予策略强大的状态预测能力。当推理过程中遇到突发的OOD异常时，DDP会检测到真实想象的差异并主动放弃损坏的视觉流。相反，它依靠其内部的“想象力”（自回归预测的潜在动态）来安全地绕过干扰，在顺利地与物理现实重新对齐之前生成想象的轨迹。广泛的评估证明了 DDP 卓越的弹性。值得注意的是，DDP 在 MetaWorld 上实现了 73.8% 的 OOD 成功率（没有预测想象的情况下为 23.9%），在严重的现实世界空间变化下的成功率为 83.3%（没有预测想象的情况下为 3.3%）。此外，作为压力测试，即使完全依赖初始化后的开环想象，DDP 也能保持 76.7% 的现实成功率。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-23 (2 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-03-23
