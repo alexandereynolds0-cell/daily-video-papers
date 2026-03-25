@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-25](papers/2026-03-25.md) - 23 papers
 - [2026-03-24](papers/2026-03-24.md) - 26 papers
 - [2026-03-23](papers/2026-03-23.md) - 6 papers
 - [2026-03-20](papers/2026-03-20.md) - 22 papers
@@ -45,6 +46,390 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-25 (23 papers)</b></summary>
+
+# arXiv Video Papers - 2026-03-25
+
+**Paper Count**: 23
+
+---
+
+## 1. DA-Flow: Degradation-Aware Optical Flow Estimation with Diffusion Models / DA-Flow：使用扩散模型进行退化感知光流估计
+
+**Date**: 2026-03-24 | **arXiv**: [2603.23499v1](http://arxiv.org/abs/2603.23499v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.23499v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Optical flow models trained on high-quality data often degrade severely when confronted with real-world corruptions such as blur, noise, and compression artifacts. To overcome this limitation, we formulate Degradation-Aware Optical Flow, a new task targeting accurate dense correspondence estimation from real-world corrupted videos. Our key insight is that the intermediate representations of image restoration diffusion models are inherently corruption-aware but lack temporal awareness. To address this limitation, we lift the model to attend across adjacent frames via full spatio-temporal attention, and empirically demonstrate that the resulting features exhibit zero-shot correspondence capabilities. Based on this finding, we present DA-Flow, a hybrid architecture that fuses these diffusion features with convolutional features within an iterative refinement framework. DA-Flow substantially outperforms existing optical flow methods under severe degradation across multiple benchmarks.
+
+当面对现实世界的损坏（例如模糊、噪声和压缩伪影）时，基于高质量数据训练的光流模型通常会严重退化。为了克服这一限制，我们制定了退化感知光流，这是一项新任务，旨在从现实世界的损坏视频中进行准确的密集对应估计。我们的主要见解是，图像恢复扩散模型的中间表示本质上是腐败感知的，但缺乏时间感知。为了解决这个限制，我们提升模型通过完整的时空注意力来参与相邻帧，并凭经验证明所得到的特征表现出零样本对应能力。基于这一发现，我们提出了 DA-Flow，这是一种混合架构，它将这些扩散特征与迭代细化框架内的卷积特征融合在一起。在多个基准测试严重退化的情况下，DA-Flow 的性能大大优于现有的光流方法。
+
+</details>
+
+---
+
+## 2. WildWorld: A Large-Scale Dataset for Dynamic World Modeling with Actions and Explicit State toward Generative ARPG / WildWorld：用于动态世界建模的大型数据集，具有针对生成 ARPG 的动作和显式状态
+
+**Date**: 2026-03-24 | **arXiv**: [2603.23497v1](http://arxiv.org/abs/2603.23497v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.23497v1)
+
+**Categories**: cs.CV
+
+**Project**: https://shandaai.github.io/wildworld-project/.  <details><summary><b>Abstract / 摘要</b></summary>
+
+Dynamical systems theory and reinforcement learning view world evolution as latent-state dynamics driven by actions, with visual observations providing partial information about the state. Recent video world models attempt to learn this action-conditioned dynamics from data. However, existing datasets rarely match the requirement: they typically lack diverse and semantically meaningful action spaces, and actions are directly tied to visual observations rather than mediated by underlying states. As a result, actions are often entangled with pixel-level changes, making it difficult for models to learn structured world dynamics and maintain consistent evolution over long horizons. In this paper, we propose WildWorld, a large-scale action-conditioned world modeling dataset with explicit state annotations, automatically collected from a photorealistic AAA action role-playing game (Monster Hunter: Wilds). WildWorld contains over 108 million frames and features more than 450 actions, including movement, attacks, and skill casting, together with synchronized per-frame annotations of character skeletons, world states, camera poses, and depth maps. We further derive WildBench to evaluate models through Action Following and State Alignment. Extensive experiments reveal persistent challenges in modeling semantically rich actions and maintaining long-horizon state consistency, highlighting the need for state-aware video generation. The project page is https://shandaai.github.io/wildworld-project/.
+
+动力系统理论和强化学习将世界演化视为由行为驱动的潜在状态动态，视觉观察提供了有关状态的部分信息。最近的视频世界模型试图从数据中学习这种以动作为条件的动态。然而，现有的数据集很少满足要求：它们通常缺乏多样化且语义上有意义的动作空间，并且动作直接与视觉观察相关，而不是由底层状态介导。因此，动作常常与像素级的变化纠缠在一起，使得模型很难学习结构化的世界动态并在长期范围内保持一致的进化。在本文中，我们提出了 WildWorld，这是一个具有明确状态注释的大规模动作条件世界建模数据集，是从逼真的 AAA 动作角色扮演游戏（《怪物猎人：荒野》）中自动收集的。 WildWorld 包含超过 1.08 亿帧，具有超过 450 个动作，包括移动、攻击和技能施放，以及角色骨架、世界状态、相机姿势和深度图的同步每帧注释。我们进一步推导出 WildBench，通过动作跟踪和状态对齐来评估模型。大量的实验揭示了对语义丰富的动作进行建模和保持长期状态一致性方面持续存在的挑战，这凸显了对状态感知视频生成的需求。项目页面为https://shandaai.github.io/wildworld-project/。
+
+</details>
+
+---
+
+## 3. Foveated Diffusion: Efficient Spatially Adaptive Image and Video Generation / 焦点扩散：高效的空间自适应图像和视频生成
+
+**Date**: 2026-03-24 | **arXiv**: [2603.23491v1](http://arxiv.org/abs/2603.23491v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.23491v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion and flow matching models have unlocked unprecedented capabilities for creative content creation, such as interactive image and streaming video generation. The growing demand for higher resolutions, frame rates, and context lengths, however, makes efficient generation increasingly challenging, as computational complexity grows quadratically with the number of generated tokens. Our work seeks to optimize the efficiency of the generation process in settings where the user's gaze location is known or can be estimated, for example, by using eye tracking. In these settings, we leverage the eccentricity-dependent acuity of human vision: while a user perceives very high-resolution visual information in a small region around their gaze location (the foveal region), the ability to resolve detail quickly degrades in the periphery of the visual field. Our approach starts with a mask modeling the foveated resolution to allocate tokens non-uniformly, assigning higher token density to foveal regions and lower density to peripheral regions. An image or video is generated in a mixed-resolution token setting, yielding results perceptually indistinguishable from full-resolution generation, while drastically reducing the token count and generation time. To this end, we develop a principled mechanism for constructing mixed-resolution tokens directly from high-resolution data, allowing a foveated diffusion model to be post-trained from an existing base model while maintaining content consistency across resolutions. We validate our approach through extensive analysis and a carefully designed user study, demonstrating the efficacy of foveation as a practical and scalable axis for efficient generation.
+
+扩散和流匹配模型解锁了前所未有的创意内容创建功能，例如交互式图像和流视频生成。然而，对更高分辨率、帧速率和上下文长度的需求不断增长，使得高效生成变得越来越具有挑战性，因为计算复杂性随着生成的令牌数量呈二次方增长。我们的工作旨在优化用户注视位置已知或可以估计的设置中的生成过程的效率，例如通过使用眼动追踪。在这些设置中，我们利用人类视觉的偏心率相关的敏锐度：当用户在其注视位置（中央凹区域）周围的小区域中感知非常高分辨率的视觉信息时，解析细节的能力在视野的外围迅速降低。我们的方法从对中心凹分辨率进行建模的掩模开始，以非均匀地分配令牌，将较高的令牌密度分配给中心凹区域，并将较低的密度分配给外围区域。图像或视频是在混合分辨率令牌设置中生成的，产生的结果在感知上与全分辨率生成没有区别，同时大大减少了令牌数量和生成时间。为此，我们开发了一种原则性机制，用于直接从高分辨率数据构建混合分辨率令牌，允许从现有基础模型对注视点扩散模型进行后训练，同时保持跨分辨率的内容一致性。我们通过广泛的分析和精心设计的用户研究验证了我们的方法，证明了注视点作为高效生成的实用且可扩展的轴的功效。
+
+</details>
+
+---
+
+## 4. AgentRVOS: Reasoning over Object Tracks for Zero-Shot Referring Video Object Segmentation / AgentRVOS：零镜头参考视频对象分割的对象轨迹推理
+
+**Date**: 2026-03-24 | **arXiv**: [2603.23489v1](http://arxiv.org/abs/2603.23489v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.23489v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Referring Video Object Segmentation (RVOS) aims to segment a target object throughout a video given a natural language query. Training-free methods for this task follow a common pipeline: a MLLM selects keyframes, grounds the referred object within those frames, and a video segmentation model propagates the results. While intuitive, this design asks the MLLM to make temporal decisions before any object-level evidence is available, limiting both reasoning quality and spatio-temporal coverage. To overcome this, we propose AgentRVOS, a training-free agentic pipeline built on the complementary strengths of SAM3 and a MLLM. Given a concept derived from the query, SAM3 provides reliable perception over the full spatio-temporal extent through generated mask tracks. The MLLM then identifies the target through query-grounded reasoning over this object-level evidence, iteratively pruning guided by SAM3's temporal existence information. Extensive experiments show that AgentRVOS achieves state-of-the-art performance among training-free methods across multiple benchmarks, with consistent results across diverse MLLM backbones. Our project page is available at: https://cvlab-kaist.github.io/AgentRVOS/.
+
+参考视频对象分割（RVOS）旨在根据自然语言查询来分割整个视频中的目标对象。此任务的免训练方法遵循通用流程：MLLM 选择关键帧，将这些帧中引用的对象作为基础，然后视频分割模型传播结果。虽然直观，但这种设计要求 MLLM 在任何对象级证据可用之前做出时间决策，从而限制了推理质量和时空覆盖范围。为了克服这个问题，我们提出了 AgentRVOS，这是一种基于 SAM3 和 MLLM 的互补优势而构建的免训练代理管道。给定从查询中得出的概念，SAM3 通过生成的掩模轨迹提供对完整时空范围的可靠感知。然后，MLLM 通过对此对象级证据进行基于查询的推理来识别目标，并在 SAM3 的时间存在信息的指导下进行迭代修剪。大量实验表明，AgentRVOS 在多个基准的免训练方法中实现了最先进的性能，并且在不同的 MLLM 主干中获得了一致的结果。我们的项目页面位于：https://cvlab-kaist.github.io/AgentRVOS/。
+
+</details>
+
+---
+
+## 5. TETO: Tracking Events with Teacher Observation for Motion Estimation and Frame Interpolation / TETO：通过教师观察来跟踪事件以进行运动估计和帧插值
+
+**Date**: 2026-03-24 | **arXiv**: [2603.23487v1](http://arxiv.org/abs/2603.23487v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.23487v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Event cameras capture per-pixel brightness changes with microsecond resolution, offering continuous motion information lost between RGB frames. However, existing event-based motion estimators depend on large-scale synthetic data that often suffers from a significant sim-to-real gap. We propose TETO (Tracking Events with Teacher Observation), a teacher-student framework that learns event motion estimation from only $\sim$25 minutes of unannotated real-world recordings through knowledge distillation from a pretrained RGB tracker. Our motion-aware data curation and query sampling strategy maximizes learning from limited data by disentangling object motion from dominant ego-motion. The resulting estimator jointly predicts point trajectories and dense optical flow, which we leverage as explicit motion priors to condition a pretrained video diffusion transformer for frame interpolation. We achieve state-of-the-art point tracking on EVIMO2 and optical flow on DSEC using orders of magnitude less training data, and demonstrate that accurate motion estimation translates directly to superior frame interpolation quality on BS-ERGB and HQ-EVFI.
+
+事件摄像机以微秒分辨率捕获每像素亮度变化，提供 RGB 帧之间丢失的连续运动信息。然而，现有的基于事件的运动估计器依赖于大规模的合成数据，这些数据通常存在显着的模拟与真实差距。我们提出了 TETO（通过教师观察跟踪事件），这是一个师生框架，通过预训练的 RGB 跟踪器的知识蒸馏，从仅 $\sim$25 分钟的未注释现实世界记录中学习事件运动估计。我们的运动感知数据管理和查询采样策略通过将对象运动与主导自我运动分开，最大限度地从有限数据中学习。由此产生的估计器联合预测点轨迹和密集光流，我们将其用作显式运动先验来调节用于帧插值的预训练视频扩散变换器。我们使用数量级较少的训练数据在 EVIMO2 上实现了最先进的点跟踪，在 DSEC 上实现了光流，并证明准确的运动估计可以直接转化为 BS-ERGB 和 HQ-EVFI 上的卓越帧插值质量。
+
+</details>
+
+---
+
+## 6. RealMaster: Lifting Rendered Scenes into Photorealistic Video / RealMaster：将渲染场景提升为逼真视频
+
+**Date**: 2026-03-24 | **arXiv**: [2603.23462v1](http://arxiv.org/abs/2603.23462v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.23462v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+State-of-the-art video generation models produce remarkable photorealism, but they lack the precise control required to align generated content with specific scene requirements. Furthermore, without an underlying explicit geometry, these models cannot guarantee 3D consistency. Conversely, 3D engines offer granular control over every scene element and provide native 3D consistency by design, yet their output often remains trapped in the "uncanny valley". Bridging this sim-to-real gap requires both structural precision, where the output must exactly preserve the geometry and dynamics of the input, and global semantic transformation, where materials, lighting, and textures must be holistically transformed to achieve photorealism. We present RealMaster, a method that leverages video diffusion models to lift rendered video into photorealistic video while maintaining full alignment with the output of the 3D engine. To train this model, we generate a paired dataset via an anchor-based propagation strategy, where the first and last frames are enhanced for realism and propagated across the intermediate frames using geometric conditioning cues. We then train an IC-LoRA on these paired videos to distill the high-quality outputs of the pipeline into a model that generalizes beyond the pipeline's constraints, handling objects and characters that appear mid-sequence and enabling inference without requiring anchor frames. Evaluated on complex GTA-V sequences, RealMaster significantly outperforms existing video editing baselines, improving photorealism while preserving the geometry, dynamics, and identity specified by the original 3D control.
+
+最先进的视频生成模型可产生卓越的照片级真实感，但它们缺乏使生成的内容与特定场景要求保持一致所需的精确控制。此外，如果没有底层的显式几何结构，这些模型就无法保证 3D 一致性。相反，3D 引擎提供对每个场景元素的精细控制，并通过设计提供原生 3D 一致性，但它们的输出常常陷入“恐怖谷”。弥合这种模拟与真实的差距需要结构精度（输出必须准确保留输入的几何形状和动态）和全局语义转换（其中材质、照明和纹理必须整体转换以实现照片级真实感）。我们提出了 RealMaster，这是一种利用视频扩散模型将渲染视频提升为逼真视频的方法，同时保持与 3D 引擎的输出完全对齐。为了训练该模型，我们通过基于锚点的传播策略生成配对数据集，其中第一帧和最后一帧经过增强以实现真实感，并使用几何条件提示在中间帧之间传播。然后，我们在这些配对视频上训练 IC-LoRA，将管道的高质量输出提炼成一个模型，该模型可以超越管道的限制，处理出现在序列中间的对象和角色，并无需锚帧即可进行推理。在复杂的 GTA-V 序列上进行评估后，RealMaster 显着优于现有的视频编辑基线，提高了照片真实感，同时保留了原始 3D 控件指定的几何形状、动态和特性。
+
+</details>
+
+---
+
+## 7. I3DM: Implicit 3D-aware Memory Retrieval and Injection for Consistent Video Scene Generation / I3DM：隐式 3D 感知内存检索和注入，用于生成一致的视频场景
+
+**Date**: 2026-03-24 | **arXiv**: [2603.23413v1](http://arxiv.org/abs/2603.23413v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.23413v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Despite remarkable progress in video generation, maintaining long-term scene consistency upon revisiting previously explored areas remains challenging. Existing solutions rely either on explicitly constructing 3D geometry, which suffers from error accumulation and scale ambiguity, or on naive camera Field-of-View (FoV) retrieval, which typically fails under complex occlusions. To overcome these limitations, we propose I3DM, a novel implicit 3D-aware memory mechanism for consistent video scene generation that bypasses explicit 3D reconstruction. At the core of our approach is a 3D-aware memory retrieval strategy, which leverages the intermediate features of a pre-trained Feed-Forward Novel View Synthesis (FF-NVS) model to score view relevance, enabling robust retrieval even in highly occluded scenarios. Furthermore, to fully utilize the retrieved historical frames, we introduce a 3D-aligned memory injection module. This module implicitly warps historical content to the target view and adaptively conditions the generation on reliable warping regions, leading to improved revisit consistency and accurate camera control. Extensive experiments demonstrate that our method outperforms state-of-the-art approaches, achieving superior revisit consistency, generation fidelity, and camera control precision.
+
+尽管视频生成取得了显着进展，但在重新访问先前探索的区域时保持长期场景一致性仍然具有挑战性。现有的解决方案要么依赖于显式构建 3D 几何结构，但会受到误差累积和尺度模糊的影响；要么依赖于简单的相机视场 (FoV) 检索，而这在复杂遮挡下通常会失败。为了克服这些限制，我们提出了 I3DM，这是一种新颖的隐式 3D 感知内存机制，用于绕过显式 3D 重建来生成一致的视频场景。我们方法的核心是 3D 感知记忆检索策略，它利用预先训练的前馈新颖视图合成 (FF-NVS) 模型的中间特征来对视图相关性进行评分，即使在高度遮挡的场景中也能实现稳健的检索。此外，为了充分利用检索到的历史帧，我们引入了 3D 对齐的内存注入模块。该模块隐式地将历史内容扭曲到目标视图，并自适应地调节可靠扭曲区域的生成，从而提高重访一致性和精确的摄像机控制。大量的实验表明，我们的方法优于最先进的方法，实现了卓越的重访一致性、生成保真度和相机控制精度。
+
+</details>
+
+---
+
+## 8. ABot-PhysWorld: Interactive World Foundation Model for Robotic Manipulation with Physics Alignment / ABot-PhysWorld：具有物理对准的机器人操作的交互式世界基础模型
+
+**Date**: 2026-03-24 | **arXiv**: [2603.23376v1](http://arxiv.org/abs/2603.23376v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.23376v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video-based world models offer a powerful paradigm for embodied simulation and planning, yet state-of-the-art models often generate physically implausible manipulations - such as object penetration and anti-gravity motion - due to training on generic visual data and likelihood-based objectives that ignore physical laws. We present ABot-PhysWorld, a 14B Diffusion Transformer model that generates visually realistic, physically plausible, and action-controllable videos. Built on a curated dataset of three million manipulation clips with physics-aware annotation, it uses a novel DPO-based post-training framework with decoupled discriminators to suppress unphysical behaviors while preserving visual quality. A parallel context block enables precise spatial action injection for cross-embodiment control. To better evaluate generalization, we introduce EZSbench, the first training-independent embodied zero-shot benchmark combining real and synthetic unseen robot-task-scene combinations. It employs a decoupled protocol to separately assess physical realism and action alignment. ABot-PhysWorld achieves new state-of-the-art performance on PBench and EZSbench, surpassing Veo 3.1 and Sora v2 Pro in physical plausibility and trajectory consistency. We will release EZSbench to promote standardized evaluation in embodied video generation.
+
+基于视频的世界模型为具体模拟和规划提供了强大的范例，但由于对通用视觉数据和忽略物理定律的基于可能性的目标进行训练，最先进的模型经常会产生物理上难以置信的操作，例如物体穿透和反重力运动。我们推出了 ABot-PhysWorld，这是一种 14B 扩散变压器模型，可生成视觉逼真、物理合理且动作可控的视频。它建立在包含 300 万个带有物理感知注释的操作剪辑的精选数据集的基础上，使用一种新颖的基于 DPO 的后训练框架和解耦鉴别器来抑制非物理行为，同时保持视觉质量。并行上下文块可以实现精确的空间动作注入，以实现跨实施例控制。为了更好地评估泛化性，我们引入了 EZSbench，这是第一个独立于训练的零样本基准，结合了真实和合成的看不见的机器人任务场景组合。它采用解耦协议来单独评估物理真实性和动作对齐。 ABot-PhysWorld 在 PBench 和 EZSbench 上实现了最先进的性能，在物理合理性和轨迹一致性方面超越了 Veo 3.1 和 Sora v2 Pro。我们将发布EZSbench以促进具体视频生成的标准化评估。
+
+</details>
+
+---
+
+## 9. ViBe: Ultra-High-Resolution Video Synthesis Born from Pure Images / ViBe：纯图像诞生的超高分辨率视频合成
+
+**Date**: 2026-03-24 | **arXiv**: [2603.23326v1](http://arxiv.org/abs/2603.23326v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.23326v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/WillWu111/ViBe.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Transformer-based video diffusion models rely on 3D attention over spatial and temporal tokens, which incurs quadratic time and memory complexity and makes end-to-end training for ultra-high-resolution videos prohibitively expensive. To overcome this bottleneck, we propose a pure image adaptation framework that upgrades a video Diffusion Transformer pre-trained at its native scale to synthesize higher-resolution videos. Unfortunately, naively fine-tuning with high-resolution images alone often introduces noticeable noise due to the image-video modality gap. To address this, we decouple the learning objective to separately handle modality alignment and spatial extrapolation. At the core of our approach is Relay LoRA, a two-stage adaptation strategy. In the first stage, the video diffusion model is adapted to the image domain using low-resolution images to bridge the modality gap. In the second stage, the model is further adapted with high-resolution images to acquire spatial extrapolation capability. During inference, only the high-resolution adaptation is retained to preserve the video generation modality while enabling high-resolution video synthesis. To enhance fine-grained detail synthesis, we further propose a High-Frequency-Awareness-Training-Objective, which explicitly encourages the model to recover high-frequency components from degraded latent representations via a dedicated reconstruction loss. Extensive experiments demonstrate that our method produces ultra-high-resolution videos with rich visual details without requiring any video training data, even outperforming previous state-of-the-art models trained on high-resolution videos by 0.8 on the VBench benchmark. Code will be available at https://github.com/WillWu111/ViBe.
+
+基于 Transformer 的视频扩散模型依赖于对空间和时间标记的 3D 注意力，这会导致时间和内存复杂性成倍增加，并使超高分辨率视频的端到端训练成本过高。为了克服这个瓶颈，我们提出了一个纯图像适应框架，该框架升级了以其本机规模预训练的视频扩散变压器，以合成更高分辨率的视频。不幸的是，由于图像-视频模态差距，仅对高分辨率图像进行简单的微调通常会引入明显的噪声。为了解决这个问题，我们将学习目标解耦，分别处理模态对齐和空间外推。我们方法的核心是 Relay LoRA，这是一种两阶段适应策略。在第一阶段，视频扩散模型适应图像域，使用低分辨率图像来弥合模态差距。在第二阶段，模型进一步适应高分辨率图像以获得空间外推能力。在推理过程中，仅保留高分辨率自适应，以保留视频生成模式，同时实现高分辨率视频合成。为了增强细粒度的细节合成，我们进一步提出了高频感知训练目标，它明确鼓励模型通过专用的重建损失从退化的潜在表示中恢复高频分量。大量实验表明，我们的方法无需任何视频训练数据即可生成具有丰富视觉细节的超高分辨率视频，甚至在 VBench 基准测试中比之前在高分辨率视频上训练的最先进模型高出 0.8。代码将在 https://github.com/WillWu111/ViBe 上提供。
+
+</details>
+
+---
+
+## 10. GO-Renderer: Generative Object Rendering with 3D-aware Controllable Video Diffusion Models / GO-Renderer：使用 3D 感知可控视频扩散模型进行生成对象渲染
+
+**Date**: 2026-03-24 | **arXiv**: [2603.23246v1](http://arxiv.org/abs/2603.23246v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.23246v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reconstructing a renderable 3D model from images is a useful but challenging task. Recent feedforward 3D reconstruction methods have demonstrated remarkable success in efficiently recovering geometry, but still cannot accurately model the complex appearances of these 3D reconstructed models. Recent diffusion-based generative models can synthesize realistic images or videos of an object using reference images without explicitly modeling its appearance, which provides a promising direction for object rendering, but lacks accurate control over the viewpoints. In this paper, we propose GO-Renderer, a unified framework integrating the reconstructed 3D proxies to guide the video generative models to achieve high-quality object rendering on arbitrary viewpoints under arbitrary lighting conditions. Our method not only enjoys the accurate viewpoint control using the reconstructed 3D proxy but also enables high-quality rendering in different lighting environments using diffusion generative models without explicitly modeling complex materials and lighting. Extensive experiments demonstrate that GO-Renderer achieves state-of-the-art performance across the object rendering tasks, including synthesizing images on new viewpoints, rendering the objects in a novel lighting environment, and inserting an object into an existing video.
+
+从图像重建可渲染的 3D 模型是一项有用但具有挑战性的任务。最近的前馈 3D 重建方法在有效恢复几何形状方面取得了显着的成功，但仍然无法准确地对这些 3D 重建模型的复杂外观进行建模。最近基于扩散的生成模型可以使用参考图像合成对象的真实图像或视频，而无需显式建模其外观，这为对象渲染提供了有希望的方向，但缺乏对视点的精确控制。在本文中，我们提出了 GO-Renderer，这是一个集成了重建的 3D 代理的统一框架，用于指导视频生成模型在任意光照条件下的任意视点上实现高质量的对象渲染。我们的方法不仅可以使用重建的 3D 代理进行精确的视点控制，而且还可以使用扩散生成模型在不同的照明环境中实现高质量渲染，而无需显式地建模复杂的材质和照明。大量实验表明，GO-Renderer 在对象渲染任务中实现了最先进的性能，包括在新视点合成图像、在新颖的照明环境中渲染对象以及将对象插入到现有视频中。
+
+</details>
+
+---
+
+## 11. InterDyad: Interactive Dyadic Speech-to-Video Generation by Querying Intermediate Visual Guidance / InterDyad：通过查询中间视觉引导生成交互式二元语音到视频
+
+**Date**: 2026-03-24 | **arXiv**: [2603.23132v1](http://arxiv.org/abs/2603.23132v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.23132v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Despite progress in speech-to-video synthesis, existing methods often struggle to capture cross-individual dependencies and provide fine-grained control over reactive behaviors in dyadic settings. To address these challenges, we propose InterDyad, a framework that enables naturalistic interactive dynamics synthesis via querying structural motion guidance. Specifically, we first design an Interactivity Injector that achieves video reenactment based on identity-agnostic motion priors extracted from reference videos. Building upon this, we introduce a MetaQuery-based modality alignment mechanism to bridge the gap between conversational audio and these motion priors. By leveraging a Multimodal Large Language Model (MLLM), our framework is able to distill linguistic intent from audio to dictate the precise timing and appropriateness of reactions. To further improve lip-sync quality under extreme head poses, we propose Role-aware Dyadic Gaussian Guidance (RoDG) for enhanced lip-synchronization and spatial consistency. Finally, we introduce a dedicated evaluation suite with novelly designed metrics to quantify dyadic interaction. Comprehensive experiments demonstrate that InterDyad significantly outperforms state-of-the-art methods in producing natural and contextually grounded two-person interactions. Please refer to our project page for demo videos: https://interdyad.github.io/.
+
+尽管语音到视频合成取得了进展，但现有方法通常难以捕获跨个体依赖性并提供对二元设置中反应行为的细粒度控制。为了应对这些挑战，我们提出了 InterDyad，这是一个通过查询结构运动指导来实现自然交互式动态合成的框架。具体来说，我们首先设计一个交互注入器，它基于从参考视频中提取的与身份无关的运动先验来实现视频重演。在此基础上，我们引入了一种基于 MetaQuery 的模态对齐机制，以弥合对话音频和这些运动先验之间的差距。通过利用多模态大语言模型（MLLM），我们的框架能够从音频中提取语言意图，以指示反应的精确时间和适当性。为了进一步提高极端头部姿势下的口型同步质量，我们提出了角色感知二元高斯指导（RoDG），以增强口型同步和空间一致性。最后，我们引入了一个专用的评估套件，其具有新颖设计的指标来量化二元交互。综合实验表明，InterDyad 在产生自然且基于情境的两人互动方面明显优于最先进的方法。请参阅我们的项目页面以获取演示视频：https://interdyad.github.io/。
+
+</details>
+
+---
+
+## 12. 3rd Place of MeViS-Audio Track of the 5th PVUW: VIRST-Audio / 第五届PVUW MeViS-Audio赛道第三名：VIRST-Audio
+
+**Date**: 2026-03-24 | **arXiv**: [2603.23126v1](http://arxiv.org/abs/2603.23126v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.23126v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Audio-based Referring Video Object Segmentation (ARVOS) requires grounding audio queries into pixel-level object masks over time, posing challenges in bridging acoustic signals with spatio-temporal visual representations. In this report, we present VIRST-Audio, a practical framework built upon a pretrained RVOS model integrated with a vision-language architecture. Instead of relying on audio-specific training, we convert input audio into text using an ASR module and perform segmentation using text-based supervision, enabling effective transfer from text-based reasoning to audio-driven scenarios. To improve robustness, we further incorporate an existence-aware gating mechanism that estimates whether the referred target object is present in the video and suppresses predictions when it is absent, reducing hallucinated masks and stabilizing segmentation behavior. We evaluate our approach on the MeViS-Audio track of the 5th PVUW Challenge, where VIRST-Audio achieves 3rd place, demonstrating strong generalization and reliable performance in audio-based referring video segmentation.
+
+基于音频的参考视频对象分割 (ARVOS) 需要随着时间的推移将音频查询融入像素级对象掩模，这给桥接声学信号与时空视觉表示带来了挑战。在本报告中，我们介绍了 VIRST-Audio，这是一个基于与视觉语言架构集成的预训练 RVOS 模型构建的实用框架。我们不依赖特定于音频的训练，而是使用 ASR 模块将输入音频转换为文本，并使用基于文本的监督执行分割，从而实现从基于文本的推理到音频驱动场景的有效转移。为了提高鲁棒性，我们进一步采用了一种存在感知门控机制，该机制可估计视频中是否存在所引用的目标对象，并在其不存在时抑制预测，从而减少幻觉掩模并稳定分割行为。我们在第五届 PVUW 挑战赛的 MeViS-Audio 赛道上评估了我们的方法，其中 VIRST-Audio 获得了第三名，在基于音频的参考视频分割中展示了强大的泛化性和可靠的性能。
+
+</details>
+
+---
+
+## 13. A Synchronized Audio-Visual Multi-View Capture System / 同步视听多视图采集系统
+
+**Date**: 2026-03-24 | **arXiv**: [2603.23089v1](http://arxiv.org/abs/2603.23089v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.23089v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-view capture systems have been an important tool in research for recording human motion under controlling conditions. Most existing systems are specified around video streams and provide little or no support for audio acquisition and rigorous audio-video alignment, despite both being essential for studying conversational interaction where timing at the level of turn-taking, overlap, and prosody matters. In this technical report, we describe an audio-visual multi-view capture system that addresses this gap by treating synchronized audio and synchronized video as first-class signals. The system combines a multi-camera pipeline with multi-channel microphone recording under a unified timing architecture and provides a practical workflow for calibration, acquisition, and quality control that supports repeatable recordings at scale. We quantify synchronization performance in deployment and show that the resulting recordings are temporally consistent enough to support fine-grained analysis and data-driven modeling of conversation behavior.
+
+多视图捕捉系统已成为在控制条件下记录人体运动研究的重要工具。大多数现有系统都是围绕视频流指定的，并且很少或根本不支持音频采集和严格的音视频对齐，尽管这对于研究对话交互至关重要，其中轮流、重叠和韵律级别的计时很重要。在本技术报告中，我们描述了一种视听多视图捕获系统，该系统通过将同步音频和同步视频视为一流信号来解决这一差距。该系统在统一的定时架构下将多摄像头管道与多通道麦克风记录相结合，并提供了用于校准、采集和质量控制的实用工作流程，支持大规模可重复记录。我们量化了部署中的同步性能，并表明生成的记录在时间上足够一致，足以支持对话行为的细粒度分析和数据驱动建模。
+
+</details>
+
+---
+
+## 14. VQ-Jarvis: Retrieval-Augmented Video Restoration Agent with Sharp Vision and Fast Thought / VQ-Jarvis：具有敏锐视野和快速思维的检索增强视频恢复代理
+
+**Date**: 2026-03-24 | **arXiv**: [2603.22998v1](http://arxiv.org/abs/2603.22998v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.22998v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video restoration in real-world scenarios is challenged by heterogeneous degradations, where static architectures and fixed inference pipelines often fail to generalize. Recent agent-based approaches offer dynamic decision making, yet existing video restoration agents remain limited by insufficient quality perception and inefficient search strategies. We propose VQ-Jarvis, a retrieval-augmented, all-in-one intelligent video restoration agent with sharper vision and faster thought. VQ-Jarvis is designed to accurately perceive degradations and subtle differences among paired restoration results, while efficiently discovering optimal restoration trajectories. To enable sharp vision, we construct VSR-Compare, the first large-scale video paired enhancement dataset with 20K comparison pairs covering 7 degradation types, 11 enhancement operators, and diverse content domains. Based on this dataset, we train a multiple operator judge model and a degradation perception model to guide agent decisions. To achieve fast thought, we introduce a hierarchical operator scheduling strategy that adapts to video difficulty: for easy cases, optimal restoration trajectories are retrieved in a one-step manner from a retrieval-augmented generation (RAG) library; for harder cases, a step-by-step greedy search is performed to balance efficiency and accuracy. Extensive experiments demonstrate that VQ-Jarvis consistently outperforms existing methods on complex degraded videos.
+
+现实场景中的视频恢复面临异构降级的挑战，其中静态架构和固定推理管道通常无法泛化。最近基于代理的方法提供了动态决策，但现有的视频恢复代理仍然受到质量感知不足和低效搜索策略的限制。我们提出了 VQ-Jarvis，这是一种检索增强的一体化智能视频恢复代理，具有更清晰的视觉和更快的思维。 VQ-Jarvis 旨在准确感知配对恢复结果之间的退化和细微差异，同时有效地发现最佳恢复轨迹。为了实现清晰的视觉，我们构建了 VSR-Compare，这是第一个大规模视频配对增强数据集，具有 20K 个比较对，涵盖 7 种退化类型、11 种增强算子和不同的内容领域。基于该数据集，我们训练了一个多操作员判断模型和一个退化感知模型来指导代理决策。为了实现快速思考，我们引入了一种适应视频难度的分层算子调度策略：对于简单的情况，从检索增强生成（RAG）库中以一步方式检索最佳恢复轨迹；对于更困难的情况，会执行逐步的贪婪搜索以平衡效率和准确性。大量实验表明，VQ-Jarvis 在处理复杂的降级视频时始终优于现有方法。
+
+</details>
+
+---
+
+## 15. WorldMesh: Generating Navigable Multi-Room 3D Scenes via Mesh-Conditioned Image Diffusion / WorldMesh：通过网格条件图像扩散生成可导航的多房间 3D 场景
+
+**Date**: 2026-03-24 | **arXiv**: [2603.22972v1](http://arxiv.org/abs/2603.22972v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.22972v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent progress in image and video synthesis has inspired their use in advancing 3D scene generation. However, we observe that text-to-image and -video approaches struggle to maintain scene- and object-level consistency beyond a limited environment scale due to the absence of explicit geometry. We thus present a geometry-first approach that decouples this complex problem of large-scale 3D scene synthesis into its structural composition, represented as a mesh scaffold, and realistic appearance synthesis, which leverages powerful image synthesis models conditioned on the mesh scaffold. From an input text description, we first construct a mesh capturing the environment's geometry (walls, floors, etc.), and then use image synthesis, segmentation and object reconstruction to populate the mesh structure with objects in realistic layouts. This mesh scaffold is then rendered to condition image synthesis, providing a structural backbone for consistent appearance generation. This enables scalable, arbitrarily-sized 3D scenes of high object richness and diversity, combining robust 3D consistency with photorealistic detail. We believe this marks a significant step toward generating truly environment-scale, immersive 3D worlds.
+
+图像和视频合成领域的最新进展激发了它们在推进 3D 场景生成方面的应用。然而，我们观察到，由于缺乏显式几何结构，文本到图像和视频方法很难在有限的环境规模之外保持场景和对象级的一致性。因此，我们提出了一种几何优先的方法，将大规模 3D 场景合成的复杂问题分解为其结构组成（表示为网格支架）和逼真的外观合成，该合成利用了以网格支架为条件的强大图像合成模型。根据输入的文本描述，我们首先构建一个捕获环境几何形状（墙壁、地板等）的网格，然后使用图像合成、分割和对象重建来使用真实布局中的对象填充网格结构。然后渲染该网格支架以调节图像合成，为一致的外观生成提供结构主干。这使得可扩展、任意大小的 3D 场景具有高对象丰富度和多样性，将强大的 3D 一致性与逼真的细节相结合。我们相信，这标志着向生成真正的环境规模、沉浸式 3D 世界迈出了重要一步。
+
+</details>
+
+---
+
+## 16. Cluster-Wise Spatio-Temporal Masking for Efficient Video-Language Pretraining / 用于高效视频语言预训练的集群时空掩蔽
+
+**Date**: 2026-03-24 | **arXiv**: [2603.22953v1](http://arxiv.org/abs/2603.22953v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.22953v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large-scale video-language pretraining enables strong generalization across multimodal tasks but often incurs prohibitive computational costs. Although recent advances in masked visual modeling help mitigate this issue, they still suffer from two fundamental limitations: severe visual information loss under high masking ratios and temporal information leakage caused by inter-frame correlations. To address these challenges, we propose ClusterSTM, a Cluster-Wise Spatio-Temporal Masking strategy for efficient video-language pretraining. ClusterSTM first performs intra-frame clustering to partition visual tokens into multiple semantically independent clusters, then conducts cluster-wise masking by retaining the token with the highest temporal density within each cluster. Our masking strategy ensure that the retained tokens capture holistic video content while exhibit strong temporal correlation. Additionally, we introduce a video-text relevance reconstruction objective that aligns high-level multimodal semantics beyond conventional visual reconstruction. Extensive experiments across multiple benchmarks demonstrate that ClusterSTM achieves superior performance on video-text retrieval, video question answering, and video captioning tasks, establishing a new state-of-the-art among efficient video-language models.
+
+大规模视频语言预训练可以实现跨多模式任务的强大泛化，但通常会产生高昂的计算成本。尽管屏蔽视觉建模的最新进展有助于缓解这个问题，但它们仍然面临两个基本限制：高屏蔽率下严重的视觉信息丢失和帧间相关性引起的时间信息泄漏。为了应对这些挑战，我们提出了 ClusterSTM，一种用于高效视频语言预训练的 Cluster-Wise Spatio-Temporal Masking 策略。 ClusterSTM 首先执行帧内聚类，将视觉标记划分为多个语义上独立的簇，然后通过保留每个簇内时间密度最高的标记来进行簇屏蔽。我们的掩蔽策略确保保留的标记捕获整体视频内容，同时表现出很强的时间相关性。此外，我们引入了视频文本相关性重建目标，该目标将高级多模态语义调整到传统视觉重建之外。跨多个基准的大量实验表明，ClusterSTM 在视频文本检索、视频问答和视频字幕任务上实现了卓越的性能，在高效的视频语言模型中建立了新的最先进技术。
+
+</details>
+
+---
+
+## 17. EVA: Efficient Reinforcement Learning for End-to-End Video Agent / EVA：端到端视频代理的高效强化学习
+
+**Date**: 2026-03-24 | **arXiv**: [2603.22918v1](http://arxiv.org/abs/2603.22918v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.22918v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL
+
+**Code**: https://github.com/wangruohui/EfficientVideoAgent.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video understanding with multimodal large language models (MLLMs) remains challenging due to the long token sequences of videos, which contain extensive temporal dependencies and redundant frames. Existing approaches typically treat MLLMs as passive recognizers, processing entire videos or uniformly sampled frames without adaptive reasoning. Recent agent-based methods introduce external tools, yet still depend on manually designed workflows and perception-first strategies, resulting in inefficiency on long videos. We present EVA, an Efficient Reinforcement Learning framework for End-to-End Video Agent, which enables planning-before-perception through iterative summary-plan-action-reflection reasoning. EVA autonomously decides what to watch, when to watch, and how to watch, achieving query-driven and efficient video understanding. To train such agents, we design a simple yet effective three-stage learning pipeline - comprising supervised fine-tuning (SFT), Kahneman-Tversky Optimization (KTO), and Generalized Reward Policy Optimization (GRPO) - that bridges supervised imitation and reinforcement learning. We further construct high-quality datasets for each stage, supporting stable and reproducible training. We evaluate EVA on six video understanding benchmarks, demonstrating its comprehensive capabilities. Compared with existing baselines, EVA achieves a substantial improvement of 6-12% over general MLLM baselines and a further 1-3% gain over prior adaptive agent methods. Our code and model are available at https://github.com/wangruohui/EfficientVideoAgent.
+
+由于视频的长标记序列包含广泛的时间依赖性和冗余帧，因此使用多模态大语言模型 (MLLM) 进行视频理解仍然具有挑战性。现有方法通常将 MLLM 视为被动识别器，在没有自适应推理的情况下处理整个视频或均匀采样的帧。最近基于代理的方法引入了外部工具，但仍然依赖于手动设计的工作流程和感知优先策略，导致长视频效率低下。我们提出了 EVA，一种用于端到端视频代理的高效强化学习框架，它通过迭代总结-计划-行动-反射推理实现感知前规划。 EVA自主决定看什么、什么时候看、如何看，实现查询驱动的高效视频理解。为了训练这样的智能体，我们设计了一个简单而有效的三阶段学习管道——包括监督微调（SFT）、卡尼曼-特沃斯基优化（KTO）和广义奖励策略优化（GRPO）——连接监督模仿和强化学习。我们进一步为每个阶段构建高质量的数据集，支持稳定且可重复的训练。我们在六个视频理解基准上评估 EVA，展示其综合能力。与现有基线相比，EVA 比一般 MLLM 基线实现了 6-12% 的大幅改进，并且比之前的自适应代理方法进一步提高了 1-3%。我们的代码和模型可以在 https://github.com/wangruohui/EfficientVideoAgent 获取。
+
+</details>
+
+---
+
+## 18. ForeSea: AI Forensic Search with Multi-modal Queries for Video Surveillance / ForeSea：用于视频监控的具有多模式查询的人工智能取证搜索
+
+**Date**: 2026-03-24 | **arXiv**: [2603.22872v1](http://arxiv.org/abs/2603.22872v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.22872v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Despite decades of work, surveillance still struggles to find specific targets across long, multi-camera video. Prior methods -- tracking pipelines, CLIP based models, and VideoRAG -- require heavy manual filtering, capture only shallow attributes, and fail at temporal reasoning. Real-world searches are inherently multimodal (e.g., "When does this person join the fight?" with the person's image), yet this setting remains underexplored. Also, there are no proper benchmarks to evaluate those setting - asking video with multimodal queries. To address this gap, we introduce ForeSeaQA, a new benchmark specifically designed for video QA with image-and-text queries and timestamped annotations of key events. The dataset consists of long-horizon surveillance footage paired with diverse multimodal questions, enabling systematic evaluation of retrieval, temporal grounding, and multimodal reasoning in realistic forensic conditions. Not limited to this benchmark, we propose ForeSea, an AI forensic search system with a 3-stage, plug-and-play pipeline. (1) A tracking module filters irrelevant footage; (2) a multimodal embedding module indexes the remaining clips; and (3) during inference, the system retrieves top-K candidate clips for a Video Large Language Model (VideoLLM) to answer queries and localize events. On ForeSeaQA, ForeSea improves accuracy by 3.5% and temporal IoU by 11.0 over prior VideoRAG models. To our knowledge, ForeSeaQA is the first benchmark to support complex multimodal queries with precise temporal grounding, and ForeSea is the first VideoRAG system built to excel in this setting.
+
+尽管经过数十年的努力，监控仍然难以在长长的多摄像机视频中找到特定目标。先前的方法——跟踪管道、基于 CLIP 的模型和 VideoRAG——需要大量的手动过滤，仅捕获浅层属性，并且无法进行时间推理。现实世界的搜索本质上是多模式的（例如，“这个人什么时候加入战斗？”与这个人的图像），但这种设置仍然没有得到充分探索。此外，没有适当的基准来评估这些设置 - 使用多模式查询询问视频。为了解决这一差距，我们引入了 ForeSeaQA，这是一个专门为视频 QA 设计的新基准，具有图像和文本查询以及关键事件的时间戳注释。该数据集由长视距监控录像和各种多模态问题组成，能够在现实法医条件下对检索、时间基础和多模态推理进行系统评估。不仅限于这个基准，我们还提出了 ForeSea，这是一个具有 3 阶段、即插即用管道的人工智能取证搜索系统。 (1)跟踪模块过滤不相关的镜头； (2)多模态嵌入模块对剩余剪辑进行索引； (3) 在推理过程中，系统检索视频大语言模型 (VideoLLM) 的前 K 个候选剪辑，以回答查询并定位事件。在 ForeSeaQA 上，与之前的 VideoRAG 模型相比，ForeSea 的准确率提高了 3.5%，时间 IoU 提高了 11.0。据我们所知，ForeSeaQA 是第一个支持具有精确时间基础的复杂多模式查询的基准测试，而 ForeSea 是第一个在此设置中表现出色的 VideoRAG 系统。
+
+</details>
+
+---
+
+## 19. From Pixels to Semantics: A Multi-Stage AI Framework for Structural Damage Detection in Satellite Imagery / 从像素到语义：卫星图像中结构损伤检测的多阶段人工智能框架
+
+**Date**: 2026-03-24 | **arXiv**: [2603.22768v1](http://arxiv.org/abs/2603.22768v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.22768v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Rapid and accurate structural damage assessment following natural disasters is critical for effective emergency response and recovery. However, remote sensing imagery often suffers from low spatial resolution, contextual ambiguity, and limited semantic interpretability, reducing the reliability of traditional detection pipelines. In this work, we propose a novel hybrid framework that integrates AI-based super-resolution, deep learning object detection, and Vision-Language Models (VLMs) for comprehensive post-disaster building damage assessment. First, we enhance pre- and post-disaster satellite imagery using a Video Restoration Transformer (VRT) to upscale images from 1024x1024 to 4096x4096 resolution, improving structural detail visibility. Next, a YOLOv11-based detector localizes buildings in pre-disaster imagery, and cropped building regions are analyzed using VLMs to semantically assess structural damage across four severity levels. To ensure robust evaluation in the absence of ground-truth captions, we employ CLIPScore for reference-free semantic alignment and introduce a multi-model VLM-as-a-Jury strategy to reduce individual model bias in safety-critical decision making. Experiments on subsets of the xBD dataset, including the Moore Tornado and Hurricane Matthew events, demonstrate that the proposed framework enhances the semantic interpretation of damaged buildings. In addition, our framework provides helpful recommendations to first responders for recovery based on damage analysis.
+
+自然灾害后快速准确的结构损坏评估对于有效的应急响应和恢复至关重要。然而，遥感图像往往存在空间分辨率低、上下文模糊和语义可解释性有限的问题，从而降低了传统检测管道的可靠性。在这项工作中，我们提出了一种新颖的混合框架，集成了基于人工智能的超分辨率、深度学习对象检测和视觉语言模型（VLM），用于全面的灾后建筑损坏评估。首先，我们使用视频恢复转换器 (VRT) 增强灾前和灾后卫星图像，将图像分辨率从 1024x1024 升级到 4096x4096，从而提高结构细节的可视性。接下来，基于 YOLOv11 的探测器在灾前图像中定位建筑物，并使用 VLM 分析裁剪的建筑物区域，以语义评估四个严重级别的结构损坏。为了确保在没有真实字幕的情况下进行稳健的评估，我们采用 CLIPScore 进行无参考语义对齐，并引入多模型 VLM-as-a-Jury 策略来减少安全关键决策中的个体模型偏差。对 xBD 数据集子集（包括摩尔龙卷风和马修飓风事件）的实验表明，所提出的框架增强了受损建筑物的语义解释。此外，我们的框架还根据损害分析为急救人员提供了有用的恢复建议。
+
+</details>
+
+---
+
+## 20. MVPBench: A Multi-Video Perception Evaluation Benchmark for Multi-Modal Video Understanding / MVPBench：多模态视频理解的多视频感知评估基准
+
+**Date**: 2026-03-24 | **arXiv**: [2603.22756v1](http://arxiv.org/abs/2603.22756v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.22756v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The rapid progress of Large Language Models (LLMs) has spurred growing interest in Multi-modal LLMs (MLLMs) and motivated the development of benchmarks to evaluate their perceptual and comprehension abilities. Existing benchmarks, however, are limited to static images or single videos, overlooking the complex interactions across multiple videos. To address this gap, we introduce the Multi-Video Perception Evaluation Benchmark (MVPBench), a new benchmark featuring 14 subtasks across diverse visual domains designed to evaluate models on extracting relevant information from video sequences to make informed decisions. MVPBench includes 5K question-answering tests involving 2.7K video clips sourced from existing datasets and manually annotated clips. Extensive evaluations reveal that current models struggle to process multi-video inputs effectively, underscoring substantial limitations in their multi-video comprehension. We anticipate MVPBench will drive advancements in multi-video perception.
+
+大型语言模型 (LLM) 的快速发展激发了人们对多模态 LLM (MLLM) 的兴趣，并推动了评估其感知和理解能力的基准的开发。然而，现有的基准仅限于静态图像或单个视频，忽略了多个视频之间的复杂交互。为了解决这一差距，我们引入了多视频感知评估基准 (MVPBench)，这是一个新的基准，具有跨不同视觉领域的 14 个子任务，旨在评估从视频序列中提取相关信息以做出明智决策的模型。 MVPBench 包括 5K 问答测试，涉及来自现有数据集的 2.7K 视频剪辑和手动注释的剪辑。广泛的评估表明，当前的模型难以有效地处理多视频输入，这凸显了其多视频理解的巨大局限性。我们预计 MVPBench 将推动多视频感知的进步。
+
+</details>
+
+---
+
+## 21. TrajLoom: Dense Future Trajectory Generation from Video / TrajLoom：从视频生成密集的未来轨迹
+
+**Date**: 2026-03-23 | **arXiv**: [2603.22606v1](http://arxiv.org/abs/2603.22606v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.22606v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Predicting future motion is crucial in video understanding and controllable video generation. Dense point trajectories are a compact, expressive motion representation, but modeling their future evolution from observed video remains challenging. We propose a framework that predicts future trajectories and visibility from past trajectories and video context. Our method has three components: (1) Grid-Anchor Offset Encoding, which reduces location-dependent bias by representing each point as an offset from its pixel-center anchor; (2) TrajLoom-VAE, which learns a compact spatiotemporal latent space for dense trajectories with masked reconstruction and a spatiotemporal consistency regularizer; and (3) TrajLoom-Flow, which generates future trajectories in latent space via flow matching, with boundary cues and on-policy K-step fine-tuning for stable sampling. We also introduce TrajLoomBench, a unified benchmark spanning real and synthetic videos with a standardized setup aligned with video-generation benchmarks. Compared with state-of-the-art methods, our approach extends the prediction horizon from 24 to 81 frames while improving motion realism and stability across datasets. The predicted trajectories directly support downstream video generation and editing. Code, model checkpoints, and datasets are available at https://trajloom.github.io/.
+
+预测未来运动对于视频理解和可控视频生成至关重要。密集点轨迹是一种紧凑的、富有表现力的运动表示，但根据观察到的视频对其未来的演变进行建模仍然具有挑战性。我们提出了一个框架，可以根据过去的轨迹和视频上下文预测未来的轨迹和可见性。我们的方法由三个部分组成：（1）网格锚点偏移编码，它通过将每个点表示为其像素中心锚点的偏移量来减少位置相关的偏差； (2) TrajLoom-VAE，它通过掩模重建和时空一致性正则化器学习密集轨迹的紧凑时空潜在空间； (3) TrajLoom-Flow，它通过流匹配生成潜在空间中的未来轨迹，并具有边界线索和用于稳定采样的策略 K 步微调。我们还推出了 TrajLoomBench，这是一个涵盖真实视频和合成视频的统一基准，其标准化设置与视频生成基准相一致。与最先进的方法相比，我们的方法将预测范围从 24 帧扩展到 81 帧，同时提高了运动真实性和跨数据集的稳定性。预测的轨迹直接支持下游视频生成和编辑。代码、模型检查点和数据集可在 https://trajloom.github.io/ 上获取。
+
+</details>
+
+---
+
+## 22. Ego2Web: A Web Agent Benchmark Grounded in Egocentric Videos / Ego2Web：基于自我中心视频的网络代理基准
+
+**Date**: 2026-03-23 | **arXiv**: [2603.22529v1](http://arxiv.org/abs/2603.22529v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.22529v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal AI agents are increasingly automating complex real-world workflows that involve online web execution. However, current web-agent benchmarks suffer from a critical limitation: they focus entirely on web-based interaction and perception, lacking grounding in the user's real-world physical surroundings. This limitation prevents evaluation in crucial scenarios, such as when an agent must use egocentric visual perception (e.g., via AR glasses) to recognize an object in the user's surroundings and then complete a related task online. To address this gap, we introduce Ego2Web, the first benchmark designed to bridge egocentric video perception and web agent execution. Ego2Web pairs real-world first-person video recordings with web tasks that require visual understanding, web task planning, and interaction in an online environment for successful completion. We utilize an automatic data-generation pipeline combined with human verification and refinement to curate well-constructed, high-quality video-task pairs across diverse web task types, including e-commerce, media retrieval, knowledge lookup, etc. To facilitate accurate and scalable evaluation for our benchmark, we also develop a novel LLM-as-a-Judge automatic evaluation method, Ego2WebJudge, which achieves approximately 84% agreement with human judgment, substantially higher than existing evaluation methods. Experiments with diverse SoTA agents on our Ego2Web show that their performance is weak, with substantial headroom across all task categories. We also conduct a comprehensive ablation study on task design, highlighting the necessity of accurate video understanding in the proposed task and the limitations of current agents. We hope Ego2Web can be a critical new resource for developing truly capable AI assistants that can seamlessly see, understand, and act across the physical and digital worlds.
+
+多模式人工智能代理越来越多地实现涉及在线网络执行的复杂现实工作流程的自动化。然而，当前的网络代理基准测试存在一个严重的限制：它们完全专注于基于网络的交互和感知，缺乏对用户现实世界物理环境的基础。这种限制阻碍了关键场景中的评估，例如代理必须使用以自我为中心的视觉感知（例如通过 AR 眼镜）来识别用户周围的物体，然后在线完成相关任务。为了解决这一差距，我们推出了 Ego2Web，这是第一个旨在弥合以自我为中心的视频感知和 Web 代理执行之间的基准测试。 Ego2Web 将现实世界的第一人称视频录制与需要视觉理解、网络任务规划以及在线环境中的交互才能成功完成的网络任务配对。我们利用自动数据生成管道与人工验证和细化相结合，在不同的网络任务类型（包括电子商务、媒体检索、知识查找等）中策划结构良好的高质量视频任务对。为了促进对我们的基准进行准确和可扩展的评估，我们还开发了一种新颖的LLM作为法官自动评估方法Ego2WebJudge，该方法与人类判断的一致性约为84％，远远高于现有的评估方法。在我们的 Ego2Web 上对不同 SoTA 代理进行的实验表明，它们的性能很弱，在所有任务类别上都有很大的空间。我们还对任务设计进行了全面的消融研究，强调了所提出的任务中准确视频理解的必要性以及当前智能体的局限性。我们希望 Ego2Web 能够成为开发真正强大的人工智能助手的重要新资源，这些助手可以在物理和数字世界中无缝地查看、理解和行动。
+
+</details>
+
+---
+
+## 23. Color When It Counts: Grayscale-Guided Online Triggering for Always-On Streaming Video Sensing / 重要时的色彩：灰度引导在线触发，实现始终在线的流视频传感
+
+**Date**: 2026-03-23 | **arXiv**: [2603.22466v1](http://arxiv.org/abs/2603.22466v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.22466v1)
+
+**Categories**: cs.CV, cs.AI, cs.HC, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Always-on sensing is essential for next-generation edge/wearable AI systems, yet continuous high-fidelity RGB video capture remains prohibitively expensive for resource-constrained mobile and edge platforms. We present a new paradigm for efficient streaming video understanding: grayscale-always, color-on-demand. Through preliminary studies, we discover that color is not always necessary. Sparse RGB frames suffice for comparable performance when temporal structure is preserved via continuous grayscale streams. Building on this insight, we propose ColorTrigger, an online training-free trigger that selectively activates color capture based on windowed grayscale affinity analysis. Designed for real-time edge deployment, ColorTrigger uses lightweight quadratic programming to detect chromatic redundancy causally, coupled with credit-budgeted control and dynamic token routing to jointly reduce sensing and inference costs. On streaming video understanding benchmarks, ColorTrigger achieves 91.6% of full-color baseline performance while using only 8.1% RGB frames, demonstrating substantial color redundancy in natural videos and enabling practical always-on video sensing on resource-constrained devices.
+
+始终在线的传感对于下一代边缘/可穿戴人工智能系统至关重要，但对于资源有限的移动和边缘平台来说，连续的高保真 RGB 视频捕获仍然过于昂贵。我们提出了一种高效的流媒体视频理解的新范例：始终灰度，按需颜色。通过初步研究，我们发现颜色并不总是必要的。当通过连续灰度流保留时间结构时，稀疏 RGB 帧足以实现可比较的性能。基于这一见解，我们提出了 ColorTrigger，这是一种无需培训的在线触发器，可基于窗口灰度亲和力分析选择性地激活颜色捕获。 ColorTrigger 专为实时边缘部署而设计，使用轻量级二次编程来因果检测色度冗余，再加上信用预算控制和动态令牌路由，共同降低感知和推理成本。在流媒体视频理解基准测试中，ColorTrigger 仅使用 8.1% RGB 帧，即可实现 91.6% 的全彩基准性能，展示了自然视频中的大量色彩冗余，并在资源受限的设备上实现了实用的始终在线视频传感。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-24 (26 papers)</b></summary>
 
 # arXiv Video Papers - 2026-03-24
