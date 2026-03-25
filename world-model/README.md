@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-25](papers/2026-03-25.md) - 6 papers
 - [2026-03-24](papers/2026-03-24.md) - 9 papers
 - [2026-03-23](papers/2026-03-23.md) - 2 papers
 - [2026-03-20](papers/2026-03-20.md) - 7 papers
@@ -37,6 +38,116 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-25 (6 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-03-25
+
+**Paper Count**: 6
+
+---
+
+## 1. ABot-PhysWorld: Interactive World Foundation Model for Robotic Manipulation with Physics Alignment / ABot-PhysWorld：具有物理对准的机器人操作的交互式世界基础模型
+
+**Date**: 2026-03-24 | **arXiv**: [2603.23376v1](http://arxiv.org/abs/2603.23376v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.23376v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video-based world models offer a powerful paradigm for embodied simulation and planning, yet state-of-the-art models often generate physically implausible manipulations - such as object penetration and anti-gravity motion - due to training on generic visual data and likelihood-based objectives that ignore physical laws. We present ABot-PhysWorld, a 14B Diffusion Transformer model that generates visually realistic, physically plausible, and action-controllable videos. Built on a curated dataset of three million manipulation clips with physics-aware annotation, it uses a novel DPO-based post-training framework with decoupled discriminators to suppress unphysical behaviors while preserving visual quality. A parallel context block enables precise spatial action injection for cross-embodiment control. To better evaluate generalization, we introduce EZSbench, the first training-independent embodied zero-shot benchmark combining real and synthetic unseen robot-task-scene combinations. It employs a decoupled protocol to separately assess physical realism and action alignment. ABot-PhysWorld achieves new state-of-the-art performance on PBench and EZSbench, surpassing Veo 3.1 and Sora v2 Pro in physical plausibility and trajectory consistency. We will release EZSbench to promote standardized evaluation in embodied video generation.
+
+基于视频的世界模型为具体模拟和规划提供了强大的范例，但由于对通用视觉数据和忽略物理定律的基于可能性的目标进行训练，最先进的模型经常会产生物理上难以置信的操作，例如物体穿透和反重力运动。我们推出了 ABot-PhysWorld，这是一种 14B 扩散变压器模型，可生成视觉逼真、物理合理且动作可控的视频。它建立在包含 300 万个带有物理感知注释的操作剪辑的精选数据集的基础上，使用一种新颖的基于 DPO 的后训练框架和解耦鉴别器来抑制非物理行为，同时保持视觉质量。并行上下文块可以实现跨实施例控制的精确空间动作注入。为了更好地评估泛化性，我们引入了 EZSbench，这是第一个独立于训练的零样本基准，结合了真实和合成的看不见的机器人任务场景组合。它采用解耦协议来单独评估物理真实性和动作对齐。 ABot-PhysWorld 在 PBench 和 EZSbench 上实现了最先进的性能，在物理合理性和轨迹一致性方面超越了 Veo 3.1 和 Sora v2 Pro。我们将发布EZSbench以促进具体视频生成的标准化评估。
+
+</details>
+
+---
+
+## 2. Neural ODE and SDE Models for Adaptation and Planning in Model-Based Reinforcement Learning / 基于模型的强化学习中用于适应和规划的神经 ODE 和 SDE 模型
+
+**Date**: 2026-03-24 | **arXiv**: [2603.23245v1](http://arxiv.org/abs/2603.23245v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.23245v1)
+
+**Categories**: cs.LG, cs.AI
+
+**Code**: https://github.com/ChaoHan-UoS/NeuralRL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We investigate neural ordinary and stochastic differential equations (neural ODEs and SDEs) to model stochastic dynamics in fully and partially observed environments within a model-based reinforcement learning (RL) framework. Through a sequence of simulations, we show that neural SDEs more effectively capture the inherent stochasticity of transition dynamics, enabling high-performing policies with improved sample efficiency in challenging scenarios. We leverage neural ODEs and SDEs for efficient policy adaptation to changes in environment dynamics via inverse models, requiring only limited interactions with the new environment. To address partial observability, we introduce a latent SDE model that combines an ODE with a GAN-trained stochastic component in latent space. Policies derived from this model provide a strong baseline, outperforming or matching general model-based and model-free approaches across stochastic continuous-control benchmarks. This work demonstrates the applicability of action-conditional latent SDEs for RL planning in environments with stochastic transitions. Our code is available at: https://github.com/ChaoHan-UoS/NeuralRL
+
+我们研究神经常微分方程和随机微分方程（神经常微分方程和神经微分方程），以在基于模型的强化学习 (RL) 框架内对完全和部分观察的环境中的随机动力学进行建模。通过一系列模拟，我们表明神经 SDE 可以更有效地捕获过渡动态的固有随机性，从而在具有挑战性的场景中实现高性能策略并提高样本效率。我们利用神经 ODE 和 SDE 通过逆模型来有效地调整政策以适应环境动态的变化，只需要与新环境进行有限的交互。为了解决部分可观测性问题，我们引入了一种潜在的 SDE 模型，它将 ODE 与潜在空间中经过 GAN 训练的随机分量相结合。从该模型导出的策略提供了强大的基线，在随机连续控制基准中优于或匹配基于模型和无模型的通用方法。这项工作证明了动作条件潜在 SDE 在随机转换环境中的 RL 规划中的适用性。我们的代码位于：https://github.com/ChaoHan-UoS/NeuralRL
+
+</details>
+
+---
+
+## 3. Describe-Then-Act: Proactive Agent Steering via Distilled Language-Action World Models / 描述然后行动：通过精炼的语言-动作世界模型进行主动代理指导
+
+**Date**: 2026-03-24 | **arXiv**: [2603.23149v1](http://arxiv.org/abs/2603.23149v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.23149v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Deploying safety-critical agents requires anticipating the consequences of actions before they are executed. While world models offer a paradigm for this proactive foresight, current approaches relying on visual simulation incur prohibitive latencies, often exceeding several seconds per step. In this work, we challenge the assumption that visual processing is necessary for failure prevention. We show that a trained policy's latent state, combined with its planned actions, already encodes sufficient information to anticipate action outcomes, making visual simulation redundant for failure prevention. To this end, we introduce DILLO (DIstiLLed Language-ActiOn World Model), a fast steering layer that shifts the paradigm from "simulate-then-act" to "describe-then-act." DILLO is trained via cross-modal distillation, where a privileged Vision Language Model teacher annotates offline trajectories and a latent-conditioned Large Language Model student learns to predict semantic outcomes. This creates a text-only inference path, bypassing heavy visual generation entirely, achieving a 14x speedup over baselines. Experiments on MetaWorld and LIBERO demonstrate that DILLO produces high-fidelity descriptions of the next state and is able to steer the policy, improving episode success rate by up to 15 pp and 9.3 pp on average across tasks.
+
+部署安全关键代理需要在执行之前预测操作的后果。虽然世界模型为这种主动预见提供了范例，但当前依赖视觉模拟的方法会产生令人望而却步的延迟，通常每步超过几秒。在这项工作中，我们挑战了视觉处理对于预防故障是必要的这一假设。我们表明，训练有素的策略的潜在状态与其计划的行动相结合，已经编码了足够的信息来预测行动结果，使得视觉模拟对于预防故障来说是多余的。为此，我们引入了 DILLO（DIstiLLed Language-Action World Model），这是一个快速控制层，可将范式从“模拟然后行动”转变为“描述然后行动”。 DILLO 通过跨模态蒸馏进行训练，其中一位享有特权的视觉语言模型教师注释离线轨迹，而一位潜在条件大语言模型学生学习预测语义结果。这创建了一条纯文本推理路径，完全绕过繁重的视觉生成，实现了基线 14 倍的加速。 MetaWorld 和 LIBERO 上的实验表明，DILLO 可以对下一个状态进行高保真描述，并能够引导策略，将任务中的事件成功率平均提高高达 15 pp 和 9.3 pp。
+
+</details>
+
+---
+
+## 4. PhotoAgent: A Robotic Photographer with Spatial and Aesthetic Understanding / PhotoAgent：具有空间和审美理解的机器人摄影师
+
+**Date**: 2026-03-24 | **arXiv**: [2603.22796v1](http://arxiv.org/abs/2603.22796v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.22796v1)
+
+**Categories**: cs.CV, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Embodied agents for creative tasks like photography must bridge the semantic gap between high-level language commands and geometric control. We introduce PhotoAgent, an agent that achieves this by integrating Large Multimodal Models (LMMs) reasoning with a novel control paradigm. PhotoAgent first translates subjective aesthetic goals into solvable geometric constraints via LMM-driven, chain-of-thought (CoT) reasoning, allowing an analytical solver to compute a high-quality initial viewpoint. This initial pose is then iteratively refined through visual reflection within a photorealistic internal world model built with 3D Gaussian Splatting (3DGS). This ``mental simulation'' replaces costly and slow physical trial-and-error, enabling rapid convergence to aesthetically superior results. Evaluations confirm that PhotoAgent excels in spatial reasoning and achieves superior final image quality.
+
+摄影等创造性任务的具体代理必须弥合高级语言命令和几何控制之间的语义差距。我们引入了 PhotoAgent，这是一种通过将大型多模态模型 (LMM) 推理与新颖的控制范例相集成来实现这一目标的代理。 PhotoAgent 首先通过 LMM 驱动的思想链 (CoT) 推理将主观审美目标转化为可解的几何约束，从而允许分析求解器计算高质量的初始视点。然后，通过在使用 3D 高斯泼溅 (3DGS) 构建的真实感内部世界模型中的视觉反射，迭代完善该初始姿势。这种“心理模拟”取代了昂贵且缓慢的物理试错，能够快速收敛到美观的卓越结果。评估证实 PhotoAgent 在空间推理方面表现出色，并实现了卓越的最终图像质量。
+
+</details>
+
+---
+
+## 5. AI Mental Models: Learned Intuition and Deliberation in a Bounded Neural Architecture / 人工智能心理模型：有界神经架构中学习的直觉和深思熟虑
+
+**Date**: 2026-03-23 | **arXiv**: [2603.22561v1](http://arxiv.org/abs/2603.22561v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.22561v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper asks whether a bounded neural architecture can exhibit a meaningful division of labor between intuition and deliberation on a classic 64-item syllogistic reasoning benchmark. More broadly, the benchmark is relevant to ongoing debates about world models and multi-stage reasoning in AI. It provides a controlled setting for testing whether a learned system can develop structured internal computation rather than only one-shot associative prediction. Experiment 1 evaluates a direct neural baseline for predicting full 9-way human response distributions under 5-fold cross-validation. Experiment 2 introduces a bounded dual-path architecture with separate intuition and deliberation pathways, motivated by computational mental-model theory (Khemlani & Johnson-Laird, 2022). Under cross-validation, bounded intuition reaches an aggregate correlation of r = 0.7272, whereas bounded deliberation reaches r = 0.8152, and the deliberation advantage is significant across folds (p = 0.0101). The largest held-out gains occur for NVC, Eca, and Oca, suggesting improved handling of rejection responses and c-a conclusions. A canonical 80:20 interpretability run and a five-seed stability sweep further indicate that the deliberation pathway develops sparse, differentiated internal structure, including an Oac-leaning state, a dominant workhorse state, and several weakly used or unused states whose exact indices vary across runs. These findings are consistent with reasoning-like internal organization under bounded conditions, while stopping short of any claim that the model reproduces full sequential processes of model construction, counterexample search, and conclusion revision.
+
+本文询问有界神经架构是否可以在经典的 64 项三段论推理基准上表现出直觉和深思熟虑之间有意义的分工。更广泛地说，该基准与正在进行的关于人工智能世界模型和多阶段推理的争论相关。它提供了一种受控设置，用于测试学习系统是否可以开发结构化内部计算，而不仅仅是一次性关联预测。实验 1 评估直接神经基线，用于预测 5 倍交叉验证下的完整 9 路人类反应分布。实验 2 引入了一种有界双路径架构，具有独立的直觉和深思熟虑路径，其动机是计算心智模型理论（Khemlani & Johnson-Laird，2022）。在交叉验证下，有界直觉达到 r = 0.7272 的总相关性，而有界深思熟虑达到 r = 0.8152，并且深思熟虑优势在跨倍数上显着 (p = 0.0101)。 NVC、Eca 和 Oca 的保留收益最大，这表明对拒绝响应和 c-a 结论的处理得到了改进。规范的 80:20 可解释性运行和五种子稳定性扫描进一步表明，审议途径形成了稀疏的、差异化的内部结构，包括 Oac 倾向状态、主要主力状态以及几个弱使用或未使用的状态，其确切指数在运行中有所不同。这些发现与有限条件下类似推理的内部组织一致，同时没有任何声称该模型再现了模型构建、反例搜索和结论修正的完整顺序过程。
+
+</details>
+
+---
+
+## 6. Model Predictive Control with Differentiable World Models for Offline Reinforcement Learning / 用于离线强化学习的可微世界模型的模型预测控制
+
+**Date**: 2026-03-23 | **arXiv**: [2603.22430v1](http://arxiv.org/abs/2603.22430v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.22430v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Offline Reinforcement Learning (RL) aims to learn optimal policies from fixed offline datasets, without further interactions with the environment. Such methods train an offline policy (or value function), and apply it at inference time without further refinement. We introduce an inference time adaptation framework inspired by model predictive control (MPC) that utilizes a pretrained policy along with a learned world model of state transitions and rewards. While existing world model and diffusion-planning methods use learned dynamics to generate imagined trajectories during training, or to sample candidate plans at inference time, they do not use inference-time information to optimize the policy parameters on the fly. In contrast, our design is a Differentiable World Model (DWM) pipeline that enables endto-end gradient computation through imagined rollouts for policy optimization at inference time based on MPC. We evaluate our algorithm on D4RL continuous-control benchmarks (MuJoCo locomotion tasks and AntMaze), and show that exploiting inference-time information to optimize the policy parameters yields consistent gains over strong offline RL baselines.
+
+离线强化学习（RL）旨在从固定的离线数据集中学习最优策略，而无需与环境进一步交互。此类方法训练离线策略（或价值函数），并在推理时应用它，而无需进一步细化。我们引入了受模型预测控制（MPC）启发的推理时间适应框架，该框架利用预训练策略以及状态转换和奖励的学习世界模型。虽然现有的世界模型和扩散规划方法使用学习动态在训练期间生成想象的轨迹，或在推理时对候选计划进行采样，但它们不使用推理时信息来动态优化策略参数。相比之下，我们的设计是可微分世界模型 (DWM) 管道，它通过基于 MPC 的推理时策略优化的想象部署来实现端到端梯度计算。我们在 D4RL 连续控制基准（MuJoCo 运动任务和 AntMaze）上评估我们的算法，并表明利用推理时间信息来优化策略参数可比强大的离线 RL 基准产生一致的增益。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-24 (9 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-03-24
