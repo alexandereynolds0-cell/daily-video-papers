@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-26](papers/2026-03-26.md) - 5 papers
 - [2026-03-25](papers/2026-03-25.md) - 6 papers
 - [2026-03-24](papers/2026-03-24.md) - 9 papers
 - [2026-03-23](papers/2026-03-23.md) - 2 papers
@@ -38,6 +39,98 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-26 (5 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-03-26
+
+**Paper Count**: 5
+
+---
+
+## 1. DreamerAD: Efficient Reinforcement Learning via Latent World Model for Autonomous Driving / DreamerAD：通过自动驾驶潜在世界模型进行高效强化学习
+
+**Date**: 2026-03-25 | **arXiv**: [2603.24587v1](http://arxiv.org/abs/2603.24587v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.24587v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce DreamerAD, the first latent world model framework that enables efficient reinforcement learning for autonomous driving by compressing diffusion sampling from 100 steps to 1 - achieving 80x speedup while maintaining visual interpretability. Training RL policies on real-world driving data incurs prohibitive costs and safety risks. While existing pixel-level diffusion world models enable safe imagination-based training, they suffer from multi-step diffusion inference latency (2s/frame) that prevents high-frequency RL interaction. Our approach leverages denoised latent features from video generation models through three key mechanisms: (1) shortcut forcing that reduces sampling complexity via recursive multi-resolution step compression, (2) an autoregressive dense reward model operating directly on latent representations for fine-grained credit assignment, and (3) Gaussian vocabulary sampling for GRPO that constrains exploration to physically plausible trajectories. DreamerAD achieves 87.7 EPDMS on NavSim v2, establishing state-of-the-art performance and demonstrating that latent-space RL is effective for autonomous driving.
+
+我们推出了 DreamerAD，这是第一个潜在世界模型框架，它通过将扩散采样从 100 步压缩到 1 步，实现自动驾驶的高效强化学习，在保持视觉可解释性的同时实现 80 倍的加速。根据现实世界的驾驶数据训练强化学习策略会带来高昂的成本和安全风险。虽然现有的像素级扩散世界模型可以实现安全的基于想象力的训练，但它们受到多步扩散推理延迟（2 秒/帧）的影响，从而阻碍了高频 RL 交互。我们的方法通过三个关键机制利用视频生成模型中的去噪潜在特征：(1) 通过递归多分辨率步骤压缩降低采样复杂性的捷径强制，(2) 直接对细粒度信用分配的潜在表示进行操作的自回归密集奖励模型，以及 (3) GRPO 的高斯词汇采样，将探索限制在物理上合理的轨迹。 DreamerAD 在 NavSim v2 上获得了 87.7 EPDMS，确立了最先进的性能，并证明了潜在空间 RL 对于自动驾驶是有效的。
+
+</details>
+
+---
+
+## 2. Latent-WAM: Latent World Action Modeling for End-to-End Autonomous Driving / Latent-WAM：端到端自动驾驶的潜在世界动作建模
+
+**Date**: 2026-03-25 | **arXiv**: [2603.24581v1](http://arxiv.org/abs/2603.24581v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.24581v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce Latent-WAM, an efficient end-to-end autonomous driving framework that achieves strong trajectory planning through spatially-aware and dynamics-informed latent world representations. Existing world-model-based planners suffer from inadequately compressed representations, limited spatial understanding, and underutilized temporal dynamics, resulting in sub-optimal planning under constrained data and compute budgets. Latent-WAM addresses these limitations with two core modules: a Spatial-Aware Compressive World Encoder (SCWE) that distills geometric knowledge from a foundation model and compresses multi-view images into compact scene tokens via learnable queries, and a Dynamic Latent World Model (DLWM) that employs a causal Transformer to autoregressively predict future world status conditioned on historical visual and motion representations. Extensive experiments on NAVSIM v2 and HUGSIM demonstrate new state-of-the-art results: 89.3 EPDMS on NAVSIM v2 and 28.9 HD-Score on HUGSIM, surpassing the best prior perception-free method by 3.2 EPDMS with significantly less training data and a compact 104M-parameter model.
+
+我们引入 Latent-WAM，这是一种高效的端到端自动驾驶框架，可通过空间感知和动态信息的潜在世界表示实现强大的轨迹规划。现有的基于世界模型的规划器受到压缩表示不充分、空间理解有限和时间动态利用不足的困扰，导致在数据和计算预算受限的情况下规划不理想。 Latent-WAM 通过两个核心模块解决了这些限制：空间感知压缩世界编码器 (SCWE)，它从基础模型中提取几何知识，并通过可学习查询将多视图图像压缩为紧凑的场景标记；动态潜在世界模型 (DLWM)，它采用因果 Transformer 根据历史视觉和运动表示自动回归预测未来世界状态。 NAVSIM v2 和 HUGSIM 上的大量实验展示了新的最先进结果：NAVSIM v2 上的 EPDMS 为 89.3，HUGSIM 上的 HD 分数为 28.9，以 3.2 EPDMS 超越了最佳先验无感​​知方法，并且训练数据显着减少，并且具有紧凑的 104M 参数模型。
+
+</details>
+
+---
+
+## 3. SEGAR: Selective Enhancement for Generative Augmented Reality / SEGAR：生成增强现实的选择性增强
+
+**Date**: 2026-03-25 | **arXiv**: [2603.24541v1](http://arxiv.org/abs/2603.24541v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.24541v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative world models offer a compelling foundation for augmented-reality (AR) applications: by predicting future image sequences that incorporate deliberate visual edits, they enable temporally coherent, augmented future frames that can be computed ahead of time and cached, avoiding per-frame rendering from scratch in real time. In this work, we present SEGAR, a preliminary framework that combines a diffusion-based world model with a selective correction stage to support this vision. The world model generates augmented future frames with region-specific edits while preserving others, and the correction stage subsequently aligns safety-critical regions with real-world observations while preserving intended augmentations elsewhere. We demonstrate this pipeline in driving scenarios as a representative setting where semantic region structure is well defined and real-world feedback is readily available. We view this as an early step toward generative world models as practical AR infrastructure, where future frames can be generated, cached, and selectively corrected on demand.
+
+生成世界模型为增强现实（AR）应用程序提供了令人信服的基础：通过预测包含有意视觉编辑的未来图像序列，它们可以实现时间连贯的增强未来帧，这些帧可以提前计算并缓存，从而避免从头开始实时渲染每帧。在这项工作中，我们提出了 SEGAR，这是一个初步框架，它将基于扩散的世界模型与选择性校正阶段相结合，以支持这一愿景。世界模型通过特定区域的编辑生成增强的未来框架，同时保留其他框架，校正阶段随后将安全关键区域与现实世界的观察结果保持一致，同时保留其他地方的预期增强。我们在驾驶场景中展示了这条管道作为代表性设置，其中语义区域结构被明确定义并且现实世界的反馈很容易获得。我们认为这是迈向生成世界模型作为实用 AR 基础设施的早期一步，未来的帧可以根据需要生成、缓存和有选择地纠正。
+
+</details>
+
+---
+
+## 4. CUA-Suite: Massive Human-annotated Video Demonstrations for Computer-Use Agents / CUA-Suite：针对计算机使用代理的大量人工注释视频演示
+
+**Date**: 2026-03-25 | **arXiv**: [2603.24440v1](http://arxiv.org/abs/2603.24440v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.24440v1)
+
+**Categories**: cs.LG, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Computer-use agents (CUAs) hold great promise for automating complex desktop workflows, yet progress toward general-purpose agents is bottlenecked by the scarcity of continuous, high-quality human demonstration videos. Recent work emphasizes that continuous video, not sparse screenshots, is the critical missing ingredient for scaling these agents. However, the largest existing open dataset, ScaleCUA, contains only 2 million screenshots, equating to less than 20 hours of video. To address this bottleneck, we introduce CUA-Suite, a large-scale ecosystem of expert video demonstrations and dense annotations for professional desktop computer-use agents. At its core is VideoCUA, which provides approximately 10,000 human-demonstrated tasks across 87 diverse applications with continuous 30 fps screen recordings, kinematic cursor traces, and multi-layerfed reasoning annotations, totaling approximately 55 hours and 6 million frames of expert video. Unlike sparse datasets that capture only final click coordinates, these continuous video streams preserve the full temporal dynamics of human interaction, forming a superset of information that can be losslessly transformed into the formats required by existing agent frameworks. CUA-Suite further provides two complementary resources: UI-Vision, a rigorous benchmark for evaluating grounding and planning capabilities in CUAs, and GroundCUA, a large-scale grounding dataset with 56K annotated screenshots and over 3.6 million UI element annotations. Preliminary evaluation reveals that current foundation action models struggle substantially with professional desktop applications (~60% task failure rate). Beyond evaluation, CUA-Suite's rich multimodal corpus supports emerging research directions including generalist screen parsing, continuous spatial control, video-based reward modeling, and visual world models. All data and models are publicly released.
+
+计算机使用代理 (CUA) 在自动化复杂桌面工作流程方面前景广阔，但通用代理的进展却因缺乏连续、高质量的人类演示视频而受到瓶颈。最近的工作强调，连续视频，而不是稀疏的屏幕截图，是扩展这些代理的关键缺失要素。然而，现有最大的开放数据集 ScaleCUA 仅包含 200 万张屏幕截图，相当于不到 20 小时的视频。为了解决这一瓶颈，我们推出了 CUA-Suite，这是一个为专业桌面计算机使用代理提供专家视频演示和密集注释的大型生态系统。其核心是VideoCUA，它在87个不同的应用程序中提供了大约10,000个人工演示的任务，具有连续的30 fps屏幕记录、运动学光标轨迹和多层推理注释，总计约55小时和600万帧的专家视频。与仅捕获最终点击坐标的稀疏数据集不同，这些连续视频流保留了人类交互的完整时间动态，形成了可以无损转换为现有代理框架所需的格式的信息超集。 CUA-Suite 还提供了两个互补资源：UI-Vision（用于评估 CUA 中的接地和规划能力的严格基准）和 GroundCUA（一个包含 56K 带注释的屏幕截图和超过 360 万个 UI 元素注释的大规模接地数据集）。初步评估表明，当前的基础行动模型与专业桌面应用程序存在很大差距（约 60% 的任务失败率）。除了评估之外，CUA-Suite 丰富的多模态语料库还支持新兴的研究方向，包括通用屏幕解析、连续空间控制、基于视频的奖励建模和视觉世界模型。所有数据和模型均公开发布。
+
+</details>
+
+---
+
+## 5. AI-Supervisor: Autonomous AI Research Supervision via a Persistent Research World Model / AI-Supervisor：通过持续研究世界模型进行自主人工智能研究监督
+
+**Date**: 2026-03-25 | **arXiv**: [2603.24402v1](http://arxiv.org/abs/2603.24402v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.24402v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing automated research systems operate as stateless, linear pipelines, generating outputs without maintaining a persistent understanding of the research landscape. They process papers sequentially, propose ideas without structured gap analysis, and lack mechanisms for agents to verify or refine each other's findings. We present AutoProf (Autonomous Professor), a multi-agent orchestration framework where specialized agents provide end-to-end AI research supervision driven by human interests, from literature review through gap discovery, method development, evaluation, and paper writing, via autonomous exploration and self-correcting updates. Unlike sequential pipelines, AutoProf maintains a continuously evolving Research World Model implemented as a Knowledge Graph, capturing methods, benchmarks, limitations, and unexplored gaps as shared memory across agents. The framework introduces three contributions: first, structured gap discovery that decomposes methods into modules, evaluates them across benchmarks, and identifies module-level gaps; second, self-correcting discovery loops that analyze why modules succeed or fail, detect benchmark biases, and assess evaluation adequacy; third, self-improving development loops using cross-domain mechanism search to iteratively address failing components. All agents operate under a consensus mechanism where findings are validated before being committed to the shared model. The framework is model-agnostic, supports mainstream large language models, and scales elastically with token budget from lightweight exploration to full-scale investigation.
+
+现有的自动化研究系统作为无状态的线性管道运行，产生输出而无需保持对研究领域的持续了解。他们按顺序处理论文，在没有结构化差距分析的情况下提出想法，并且缺乏代理验证或完善彼此发现的机制。我们提出了 AutoProf（自主教授），这是一个多代理编排框架，其中专门的代理提供由人类兴趣驱动的端到端人工智能研究监督，从文献综述到差距发现、方法开发、评估和论文写作，通过自主探索和自我纠正更新。与顺序管道不同，AutoProf 维护一个不断发展的研究世界模型，以知识图的形式实现，捕获方法、基准、限制和未探索的差距作为跨代理的共享内存。该框架引入了三个贡献：第一，结构化差距发现，将方法分解为模块，跨基准对其进行评估，并识别模块级差距；其次，自我纠正发现循环，分析模块成功或失败的原因，检测基准偏差，并评估评估充分性；第三，使用跨域机制搜索来迭代解决失败组件的自我改进开发循环。所有代理都在共识机制下运行，在提交到共享模型之前对结果进行验证。该框架与模型无关，支持主流大型语言模型，并通过代币预算从轻量级探索到全面调查进行弹性扩展。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-25 (6 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-03-25
