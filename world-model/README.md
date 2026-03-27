@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-27](papers/2026-03-27.md) - 6 papers
 - [2026-03-26](papers/2026-03-26.md) - 5 papers
 - [2026-03-25](papers/2026-03-25.md) - 6 papers
 - [2026-03-24](papers/2026-03-24.md) - 9 papers
@@ -39,6 +40,114 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-27 (6 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-03-27
+
+**Paper Count**: 6
+
+---
+
+## 1. Out of Sight but Not Out of Mind: Hybrid Memory for Dynamic Video World Models / 眼不见心不烦：动态视频世界模型的混合内存
+
+**Date**: 2026-03-26 | **arXiv**: [2603.25716v1](http://arxiv.org/abs/2603.25716v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.25716v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video world models have shown immense potential in simulating the physical world, yet existing memory mechanisms primarily treat environments as static canvases. When dynamic subjects hide out of sight and later re-emerge, current methods often struggle, leading to frozen, distorted, or vanishing subjects. To address this, we introduce Hybrid Memory, a novel paradigm requiring models to simultaneously act as precise archivists for static backgrounds and vigilant trackers for dynamic subjects, ensuring motion continuity during out-of-view intervals. To facilitate research in this direction, we construct HM-World, the first large-scale video dataset dedicated to hybrid memory. It features 59K high-fidelity clips with decoupled camera and subject trajectories, encompassing 17 diverse scenes, 49 distinct subjects, and meticulously designed exit-entry events to rigorously evaluate hybrid coherence. Furthermore, we propose HyDRA, a specialized memory architecture that compresses memory into tokens and utilizes a spatiotemporal relevance-driven retrieval mechanism. By selectively attending to relevant motion cues, HyDRA effectively preserves the identity and motion of hidden subjects. Extensive experiments on HM-World demonstrate that our method significantly outperforms state-of-the-art approaches in both dynamic subject consistency and overall generation quality.
+
+视频世界模型在模拟物理世界方面显示出巨大的潜力，但现有的记忆机制主要将环境视为静态画布。当动态主体隐藏在视线之外并随后重新出现时，当前的方法常常会遇到困难，导致主体冻结、扭曲或消失。为了解决这个问题，我们引入了混合记忆，这是一种新颖的范式，要求模型同时充当静态背景的精确档案管理员和动态主体的警惕跟踪器，确保在视野外间隔期间的运动连续性。为了促进这个方向的研究，我们构建了 HM-World，这是第一个专用于混合内存的大规模视频数据集。它具有 59K 个高保真剪辑，具有解耦的摄像机和主题轨迹，涵盖 17 个不同的场景、49 个不同的主题，以及精心设计的退出进入事件，以严格评估混合一致性。此外，我们提出了 HyDRA，一种专门的内存架构，它将内存压缩为令牌并利用时空相关性驱动的检索机制。通过选择性地关注相关运动线索，Hydra 有效地保留了隐藏对象的身份和运动。 HM-World 上的大量实验表明，我们的方法在动态主题一致性和整体生成质量方面都显着优于最先进的方法。
+
+</details>
+
+---
+
+## 2. Persistent Robot World Models: Stabilizing Multi-Step Rollouts via Reinforcement Learning / 持久机器人世界模型：通过强化学习稳定多步部署
+
+**Date**: 2026-03-26 | **arXiv**: [2603.25685v1](http://arxiv.org/abs/2603.25685v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.25685v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Action-conditioned robot world models generate future video frames of the manipulated scene given a robot action sequence, offering a promising alternative for simulating tasks that are difficult to model with traditional physics engines. However, these models are optimized for short-term prediction and break down when deployed autoregressively: each predicted clip feeds back as context for the next, causing errors to compound and visual quality to rapidly degrade. We address this through the following contributions. First, we introduce a reinforcement learning (RL) post-training scheme that trains the world model on its own autoregressive rollouts rather than on ground-truth histories. We achieve this by adapting a recent contrastive RL objective for diffusion models to our setting and show that its convergence guarantees carry over exactly. Second, we design a training protocol that generates and compares multiple candidate variable-length futures from the same rollout state, reinforcing higher-fidelity predictions over lower-fidelity ones. Third, we develop efficient, multi-view visual fidelity rewards that combine complementary perceptual metrics across camera views and are aggregated at the clip level for dense, low-variance training signal. Fourth, we show that our approach establishes a new state-of-the-art for rollout fidelity on the DROID dataset, outperforming the strongest baseline on all metrics (e.g., LPIPS reduced by 14% on external cameras, SSIM improved by 9.1% on the wrist camera), winning 98% of paired comparisons, and achieving an 80% preference rate in a blind human study.
+
+动作调节的机器人世界模型在给定机器人动作序列的情况下生成被操纵场景的未来视频帧，为模拟难以用传统物理引擎建模的任务提供了一种有前途的替代方案。然而，这些模型针对短期预测进行了优化，并且在自回归部署时会崩溃：每个预测剪辑都会作为下一个剪辑的上下文反馈，从而导致错误加剧和视觉质量迅速下降。我们通过以下贡献来解决这个问题。首先，我们引入了一种强化学习（RL）后训练方案，该方案根据自身的自回归部署而不是根据真实历史来训练世界模型。我们通过将最近的扩散模型的对比 RL 目标适应我们的设置来实现这一目标，并表明其收敛性保证了精确的延续。其次，我们设计了一个训练协议，该协议可以生成并比较来自同一推出状态的多个候选可变长度 future，从而增强对低保真度预测的高保真度预测。第三，我们开发了高效的多视图视觉保真度奖励，该奖励结合了跨摄像机视图的互补感知指标，并在剪辑级别聚合以获得密集、低方差的训练信号。第四，我们表明，我们的方法在 DROID 数据集上建立了新的最先进的展示保​​真度，在所有指标上都优于最强的基线（例如，外部摄像头的 LPIPS 降低了 14%，手腕摄像头的 SSIM 提高了 9.1%），赢得了 98% 的配对比较，并在盲人研究中获得了 80% 的偏好率。
+
+</details>
+
+---
+
+## 3. Modernising Reinforcement Learning-Based Navigation for Embodied Semantic Scene Graph Generation / 现代化基于强化学习的导航以实现具体语义场景图生成
+
+**Date**: 2026-03-26 | **arXiv**: [2603.25415v1](http://arxiv.org/abs/2603.25415v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.25415v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Semantic world models enable embodied agents to reason about objects, relations, and spatial context beyond purely geometric representations. In Organic Computing, such models are a key enabler for objective-driven self-adaptation under uncertainty and resource constraints. The core challenge is to acquire observations maximising model quality and downstream usefulness within a limited action budget.   Semantic scene graphs (SSGs) provide a structured and compact representation for this purpose. However, constructing them within a finite action horizon requires exploration strategies that trade off information gain against navigation cost and decide when additional actions yield diminishing returns.   This work presents a modular navigation component for Embodied Semantic Scene Graph Generation and modernises its decision-making by replacing the policy-optimisation method and revisiting the discrete action formulation. We study compact and finer-grained, larger discrete motion sets and compare a single-head policy over atomic actions with a factorised multi-head policy over action components. We evaluate curriculum learning and optional depth-based collision supervision, and assess SSG completeness, execution safety, and navigation behaviour.   Results show that replacing the optimisation algorithm alone improves SSG completeness by 21\% relative to the baseline under identical reward shaping. Depth mainly affects execution safety (collision-free motion), while completeness remains largely unchanged. Combining modern optimisation with a finer-grained, factorised action representation yields the strongest overall completeness--efficiency trade-off.
+
+语义世界模型使实体主体能够超越纯粹的几何表示来推理对象、关系和空间上下文。在有机计算中，此类模型是不确定性和资源限制下目标驱动自适应的关键推动者。核心挑战是在有限的行动预算内获取最大化模型质量和下游有用性的观测结果。   语义场景图（SSG）为此目的提供了结构化且紧凑的表示。然而，在有限的行动范围内构建它们需要探索策略，权衡信息增益与导航成本，并决定何时额外的行动会产生收益递减。   这项工作提出了用于具体语义场景图生成的模块化导航组件，并通过替换策略优化方法和重新审视离散动作公式来使其决策现代化。我们研究紧凑、更细粒度、更大的离散运动集，并将针对原子动作的单头策略与针对动作组件的分解多头策略进行比较。我们评估课程学习和可选的基于深度的碰撞监督，并评估 SSG 完整性、执行安全性和导航行为。   结果表明，在相同奖励塑造下，单独替换优化算法相对于基线提高了 21% 的 SSG 完整性。深度主要影响执行安全性（无碰撞运动），而完整性基本保持不变。将现代优化与更细粒度、分解的动作表示相结合，可以产生最强的整体完整性——效率权衡。
+
+</details>
+
+---
+
+## 4. MMaDA-VLA: Large Diffusion Vision-Language-Action Model with Unified Multi-Modal Instruction and Generation / MMaDA-VLA：具有统一多模态指令和生成的大扩散视觉-语言-动作模型
+
+**Date**: 2026-03-26 | **arXiv**: [2603.25406v1](http://arxiv.org/abs/2603.25406v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.25406v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language-Action (VLA) models aim to control robots for manipulation from visual observations and natural-language instructions. However, existing hierarchical and autoregressive paradigms often introduce architectural overhead, suffer from temporal inconsistency and long-horizon error accumulation, and lack a mechanism to capture environment dynamics without extra modules. To this end, we present MMaDA-VLA, a fully native pre-trained large diffusion VLA model that unifies multi-modal understanding and generation in a single framework. Our key idea is a native discrete diffusion formulation that embeds language, images, and continuous robot controls into one discrete token space and trains a single backbone with masked token denoising to jointly generate a future goal observation and an action chunk in parallel. Iterative denoising enables global, order-free refinement, improving long-horizon consistency while grounding actions in predicted future visual outcomes without auxiliary world models. Experiments across simulation benchmarks and real-world tasks show state-of-the-art performance, achieving 98.0% average success on LIBERO and 4.78 average length on CALVIN.
+
+视觉-语言-动作（VLA）模型旨在通过视觉观察和自然语言指令来控制机器人进行操作。然而，现有的分层和自回归范式通常会引入架构开销，遭受时间不一致和长期误差积累的困扰，并且缺乏无需额外模块即可捕获环境动态的机制。为此，我们提出了 MMaDA-VLA，这是一种完全原生的预训练大扩散 VLA 模型，它将多模态理解和生成统一在一个框架中。我们的关键思想是一种原生离散扩散公式，它将语言、图像和连续机器人控制嵌入到一个离散令牌空间中，并使用掩模令牌去噪训练单个主干，以并行地联合生成未来目标观察和动作块。迭代去噪可以实现全局、无序的细化，提高长期一致性，同时将动作基于预测的未来视觉结果，而无需辅助世界模型。跨模拟基准和实际任务的实验显示了最先进的性能，在 LIBERO 上实现了 98.0% 的平均成功率，在 CALVIN 上实现了 4.78 的平均长度。
+
+</details>
+
+---
+
+## 5. A Wireless World Model for AI-Native 6G Networks / AI-Native 6G 网络的无线世界模型
+
+**Date**: 2026-03-26 | **arXiv**: [2603.25216v1](http://arxiv.org/abs/2603.25216v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.25216v1)
+
+**Categories**: cs.NI, cs.AI, eess.SP
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Integrating AI into the physical layer is a cornerstone of 6G networks. However, current data-driven approaches struggle to generalize across dynamic environments because they lack an intrinsic understanding of electromagnetic wave propagation. We introduce the Wireless World Model (WWM), a multi-modal foundation framework predicting the spatiotemporal evolution of wireless channels by internalizing the causal relationship between 3D geometry and signal dynamics. Pre-trained on a massive ray-traced multi-modal dataset, WWM overcomes the data authenticity gap, further validated under real-world measurement data. Using a joint-embedding predictive architecture with a multi-modal mixture-of-experts Transformer, WWM fuses channel state information, 3D point clouds, and user trajectories into a unified representation. Across the five key downstream tasks supported by WWM, it achieves remarkable performance in seen environments, unseen generalization scenarios, and real-world measurements, consistently outperforming SOTA uni-modal foundation models and task-specific models. This paves the way for physics-aware 6G intelligence that adapts to the physical world.
+
+将AI集成到物理层是6G网络的基石。然而，当前的数据驱动方法很难在动态环境中推广，因为它们缺乏对电磁波传播的内在理解。我们引入了无线世界模型 (WWM)，这是一种多模态基础框架，通过内化 3D 几何和信号动态之间的因果关系来预测无线信道的时空演化。 WWM 在海量光线追踪多模态数据集上进行了预训练，克服了数据真实性差距，并在现实世界的测量数据下得到了进一步验证。 WWM 使用联合嵌入预测架构和多模态专家混合 Transformer，将通道状态信息、3D 点云和用户轨迹融合为统一表示。在 WWM 支持的五个关键下游任务中，它在可见环境、未见泛化场景和现实世界测量中取得了卓越的性能，始终优于 SOTA 单模态基础模型和特定任务模型。这为适应物理世界的物理感知 6G 智能铺平了道路。
+
+</details>
+
+---
+
+## 6. AI-Supervisor: Autonomous AI Research Supervision via a Persistent Research World Model / AI-Supervisor：通过持续研究世界模型进行自主人工智能研究监督
+
+**Date**: 2026-03-25 | **arXiv**: [2603.24402v2](http://arxiv.org/abs/2603.24402v2) | **PDF**: [Link](http://arxiv.org/pdf/2603.24402v2)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing automated research systems operate as stateless, linear pipelines -- generating outputs without maintaining any persistent understanding of the research landscape they navigate. They process papers sequentially, propose ideas without structured gap analysis, and lack mechanisms for agents to verify, challenge, or refine each other's findings. We present \textbf{AI-Supervisor}, a multi-agent orchestration framework where specialized agents provide end-to-end AI research supervision driven by human interests -- from literature review through gap discovery, method development, evaluation, and paper writing -- through autonomous exploration and self-correcting updates of research knowledge. Unlike sequential pipelines, AI-Supervisor maintains a continuously evolving \emph{Research World Model}, implemented as a Knowledge Graph, that captures methods, benchmarks, known limitations, and unexplored gaps, serving as shared memory across all agents and enabling agents to explore and build upon a structured understanding of the research landscape. The framework introduces three architectural contributions: (1) \emph{structured gap discovery} that decomposes methods into core modules, validates their performance across benchmarks, and maps the specific gaps each module creates; (2) \emph{self-correcting discovery loops} that probe why modules succeed on certain problems and fail on others, whether benchmarks carry hidden biases, and whether evaluation protocols remain adequate for emerging challenges; and (3) \emph{self-improving development loops} governed by cross-domain mechanism search that iteratively targets failing modules by finding solutions from other scientific fields. All agents operate under a \emph{consensus mechanism} where independent findings are corroborated before being committed to the Research World Model.
+
+现有的自动化研究系统作为无状态的线性管道运行——生成输出，而不保持对其所导航的研究环境的任何持久理解。他们按顺序处理论文，在没有结构化差距分析的情况下提出想法，并且缺乏代理验证、质疑或完善彼此发现的机制。我们提出了\textbf{AI-Supervisor}，一个多智能体编排框架，其中专业智能体通过自主探索和研究知识的自我修正更新，提供由人类兴趣驱动的端到端人工智能研究监督——从文献综述到差距发现、方法开发、评估和论文写作。与顺序管道不同，AI-Supervisor 维护着一个不断发展的 \emph{研究世界模型}，以知识图的形式实现，它捕获方法、基准、已知限制和未探索的差距，充当所有代理之间的共享内存，并使代理能够探索和建立对研究领域的结构化理解。该框架引入了三个架构贡献：（1）\emph{结构化差距发现}，将方法分解为核心模块，跨基准验证其性能，并映射每个模块创建的特定差距； （2）\emph{自我纠正发现循环}，探究为什么模块在某些问题上成功而在其他问题上失败，基准是否带有隐藏的偏差，以及评估协议是否足以应对新出现的挑战； (3)\emph{自我改进的开发循环}由跨域机制搜索控制，通过从其他科学领域寻找解决方案来迭代地针对失败的模块。所有代理都在\emph{共识机制}下运作，独立的发现在投入研究世界模型之前得到证实。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-26 (5 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-03-26
