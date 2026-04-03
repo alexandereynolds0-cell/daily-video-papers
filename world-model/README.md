@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-03](papers/2026-04-03.md) - 8 papers
 - [2026-04-02](papers/2026-04-02.md) - 4 papers
 - [2026-04-01](papers/2026-04-01.md) - 8 papers
 - [2026-03-31](papers/2026-03-31.md) - 5 papers
@@ -43,6 +44,146 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-03 (8 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-04-03
+
+**Paper Count**: 8
+
+---
+
+## 1. ActionParty: Multi-Subject Action Binding in Generative Video Games / ActionParty：生成视频游戏中的多主体动作绑定
+
+**Date**: 2026-04-02 | **arXiv**: [2604.02330v1](http://arxiv.org/abs/2604.02330v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.02330v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in video diffusion have enabled the development of "world models" capable of simulating interactive environments. However, these models are largely restricted to single-agent settings, failing to control multiple agents simultaneously in a scene. In this work, we tackle a fundamental issue of action binding in existing video diffusion models, which struggle to associate specific actions with their corresponding subjects. For this purpose, we propose ActionParty, an action controllable multi-subject world model for generative video games. It introduces subject state tokens, i.e. latent variables that persistently capture the state of each subject in the scene. By jointly modeling state tokens and video latents with a spatial biasing mechanism, we disentangle global video frame rendering from individual action-controlled subject updates. We evaluate ActionParty on the Melting Pot benchmark, demonstrating the first video world model capable of controlling up to seven players simultaneously across 46 diverse environments. Our results show significant improvements in action-following accuracy and identity consistency, while enabling robust autoregressive tracking of subjects through complex interactions.
+
+视频传播的最新进展使得能够模拟交互环境的“世界模型”得以发展。然而，这些模型很大程度上仅限于单代理设置，无法在场景中同时控制多个代理。在这项工作中，我们解决了现有视频传播模型中动作绑定的基本问题，该模型很难将特定动作与其相应的主题相关联。为此，我们提出了 ActionParty，一种用于生成视频游戏的动作可控多主体世界模型。它引入了主体状态标记，即持续捕获场景中每个主体状态的潜在变量。通过使用空间偏置机制对状态标记和视频潜伏进行联合建模，我们将全局视频帧渲染与单个动作控制的主题更新分开。我们根据 Melting Pot 基准评估 ActionParty，展示了第一个能够在 46 个不同环境中同时控制最多 7 名玩家的视频世界模型。我们的结果表明，行动跟踪准确性和身份一致性有了显着提高，同时通过复杂的交互实现了对受试者的稳健自回归跟踪。
+
+</details>
+
+---
+
+## 2. Omni123: Exploring 3D Native Foundation Models with Limited 3D Data by Unifying Text to 2D and 3D Generation / Omni123：通过将文本统一为 2D 和 3D 生成，探索具有有限 3D 数据的 3D 原生基础模型
+
+**Date**: 2026-04-02 | **arXiv**: [2604.02289v1](http://arxiv.org/abs/2604.02289v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.02289v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent multimodal large language models have achieved strong performance in unified text and image understanding and generation, yet extending such native capability to 3D remains challenging due to limited data. Compared to abundant 2D imagery, high-quality 3D assets are scarce, making 3D synthesis under-constrained. Existing methods often rely on indirect pipelines that edit in 2D and lift results into 3D via optimization, sacrificing geometric consistency. We present Omni123, a 3D-native foundation model that unifies text-to-2D and text-to-3D generation within a single autoregressive framework. Our key insight is that cross-modal consistency between images and 3D can serve as an implicit structural constraint. By representing text, images, and 3D as discrete tokens in a shared sequence space, the model leverages abundant 2D data as a geometric prior to improve 3D representations. We introduce an interleaved X-to-X training paradigm that coordinates diverse cross-modal tasks over heterogeneous paired datasets without requiring fully aligned text-image-3D triplets. By traversing semantic-visual-geometric cycles (e.g., text to image to 3D to image) within autoregressive sequences, the model jointly enforces semantic alignment, appearance fidelity, and multi-view geometric consistency. Experiments show that Omni123 significantly improves text-guided 3D generation and editing, demonstrating a scalable path toward multimodal 3D world models.
+
+最近的多模态大语言模型在统一文本和图像理解和生成方面取得了强大的性能，但由于数据有限，将这种本机功能扩展到 3D 仍然具有挑战性。与丰富的 2D 图像相比，高质量的 3D 资源稀缺，使得 3D 合成受到限制。现有方法通常依赖于间接管道，这些管道在 2D 中进行编辑并通过优化将结果提升到 3D，从而牺牲了几何一致性。我们推出了 Omni123，这是一种 3D 原生基础模型，它将文本到 2D 和文本到 3D 的生成统一在一个自回归框架内。我们的主要见解是图像和 3D 之间的跨模式一致性可以作为隐式结构约束。通过将文本、图像和 3D 表示为共享序列空间中的离散标记，该模型利用丰富的 2D 数据作为几何先验来改进 3D 表示。我们引入了一种交错的 X-to-X 训练范例，可以在异构配对数据集上协调不同的跨模式任务，而不需要完全对齐的文本-图像-3D 三元组。通过遍历自回归序列中的语义-视觉-几何循环（例如，文本到图像到 3D 到图像），该模型共同强制执行语义对齐、外观保真度和多视图几何一致性。实验表明，Omni123 显着改进了文本引导的 3D 生成和编辑，展示了通往多模式 3D 世界模型的可扩展路径。
+
+</details>
+
+---
+
+## 3. Model-Based Reinforcement Learning for Control under Time-Varying Dynamics / 基于模型的强化学习用于时变动力学控制
+
+**Date**: 2026-04-02 | **arXiv**: [2604.02260v1](http://arxiv.org/abs/2604.02260v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.02260v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learning-based control methods typically assume stationary system dynamics, an assumption often violated in real-world systems due to drift, wear, or changing operating conditions. We study reinforcement learning for control under time-varying dynamics. We consider a continual model-based reinforcement learning setting in which an agent repeatedly learns and controls a dynamical system whose transition dynamics evolve across episodes. We analyze the problem using Gaussian process dynamics models under frequentist variation-budget assumptions. Our analysis shows that persistent non-stationarity requires explicitly limiting the influence of outdated data to maintain calibrated uncertainty and meaningful dynamic regret guarantees. Motivated by these insights, we propose a practical optimistic model-based reinforcement learning algorithm with adaptive data buffer mechanisms and demonstrate improved performance on continuous control benchmarks with non-stationary dynamics.
+
+基于学习的控制方法通常假设系统动态稳定，但在现实系统中，由于漂移、磨损或变化的操作条件，这种假设经常被违反。我们研究强化学习在时变动态下的控制。我们考虑一种基于持续模型的强化学习设置，其中代理重复学习和控制动态系统，该系统的过渡动态在各个事件中不断演变。我们在频率变化预算假设下使用高斯过程动力学模型来分析问题。我们的分析表明，持续的非平稳性需要明确限制过时数据的影响，以维持校准的不确定性和有意义的动态后悔保证。受这些见解的启发，我们提出了一种实用的基于乐观模型的强化学习算法，具有自适应数据缓冲机制，并在非平稳动态的连续控制基准上展示了改进的性能。
+
+</details>
+
+---
+
+## 4. World Action Verifier: Self-Improving World Models via Forward-Inverse Asymmetry / 世界行动验证者：通过正逆不对称自我改进世界模型
+
+**Date**: 2026-04-02 | **arXiv**: [2604.01985v1](http://arxiv.org/abs/2604.01985v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.01985v1)
+
+**Categories**: cs.LG, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+General-purpose world models promise scalable policy evaluation, optimization, and planning, yet achieving the required level of robustness remains challenging. Unlike policy learning, which primarily focuses on optimal actions, a world model must be reliable over a much broader range of suboptimal actions, which are often insufficiently covered by action-labeled interaction data. To address this challenge, we propose World Action Verifier (WAV), a framework that enables world models to identify their own prediction errors and self-improve. The key idea is to decompose action-conditioned state prediction into two factors -- state plausibility and action reachability -- and verify each separately. We show that these verification problems can be substantially easier than predicting future states due to two underlying asymmetries: the broader availability of action-free data and the lower dimensionality of action-relevant features. Leveraging these asymmetries, we augment a world model with (i) a diverse subgoal generator obtained from video corpora and (ii) a sparse inverse model that infers actions from a subset of state features. By enforcing cycle consistency among generated subgoals, inferred actions, and forward rollouts, WAV provides an effective verification mechanism in under-explored regimes, where existing methods typically fail. Across nine tasks spanning MiniGrid, RoboMimic, and ManiSkill, our method achieves 2x higher sample efficiency while improving downstream policy performance by 18%.
+
+通用世界模型承诺可扩展的政策评估、优化和规划，但实现所需的稳健性水平仍然具有挑战性。与主要关注最优行动的政策学习不同，世界模型必须在更广泛的次优行动中可靠，而这些次优行动往往不能被行动标记的交互数据充分覆盖。为了应对这一挑战，我们提出了世界行动验证器（WAV），这是一个使世界模型能够识别自己的预测错误并自我改进的框架。关键思想是将动作条件状态预测分解为两个因素——状态合理性和动作可达性——并分别验证每个因素。我们表明，由于两个潜在的不对称性，这些验证问题比预测未来状态要容易得多：无动作数据的更广泛可用性和与动作相关的特征的维度较低。利用这些不对称性，我们通过（i）从视频语料库获得的多样化子目标生成器和（ii）从状态特征子集推断动作的稀疏逆模型来增强世界模型。通过在生成的子目标、推断的操作和前向推出之间强制执行循环一致性，WAV 在现有方法通常会失败的未充分探索的情况下提供了有效的验证机制。在涵盖 MiniGrid、RoboMimic 和 ManiSkill 的九项任务中，我们的方法实现了 2 倍的样本效率提高，同时将下游策略性能提高了 18%。
+
+</details>
+
+---
+
+## 5. DriveDreamer-Policy: A Geometry-Grounded World-Action Model for Unified Generation and Planning / DriveDreamer-Policy：用于统一生成和规划的基于几何的世界动作模型
+
+**Date**: 2026-04-02 | **arXiv**: [2604.01765v1](http://arxiv.org/abs/2604.01765v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.01765v1)
+
+**Categories**: cs.CV, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recently, world-action models (WAM) have emerged to bridge vision-language-action (VLA) models and world models, unifying their reasoning and instruction-following capabilities and spatio-temporal world modeling. However, existing WAM approaches often focus on modeling 2D appearance or latent representations, with limited geometric grounding-an essential element for embodied systems operating in the physical world. We present DriveDreamer-Policy, a unified driving world-action model that integrates depth generation, future video generation, and motion planning within a single modular architecture. The model employs a large language model to process language instructions, multi-view images, and actions, followed by three lightweight generators that produce depth, future video, and actions. By learning a geometry-aware world representation and using it to guide both future prediction and planning within a unified framework, the proposed model produces more coherent imagined futures and more informed driving actions, while maintaining modularity and controllable latency. Experiments on the Navsim v1 and v2 benchmarks demonstrate that DriveDreamer-Policy achieves strong performance on both closed-loop planning and world generation tasks. In particular, our model reaches 89.2 PDMS on Navsim v1 and 88.7 EPDMS on Navsim v2, outperforming existing world-model-based approaches while producing higher-quality future video and depth predictions. Ablation studies further show that explicit depth learning provides complementary benefits to video imagination and improves planning robustness.
+
+最近，世界动作模型（WAM）的出现连接了视觉-语言-动作（VLA）模型和世界模型，统一了它们的推理和指令跟踪能力以及时空世界建模。然而，现有的 WAM 方法通常侧重于对 2D 外观或潜在表示进行建模，几何基础有限——这是在物理世界中运行的具体系统的基本要素。我们推出了 DriveDreamer-Policy，这是一种统一的驾驶世界动作模型，它将深度生成、未来视频生成和运动规划集成在单个模块化架构中。该模型采用大型语言模型来处理语言指令、多视图图像和动作，然后是三个轻量级生成器，用于生成深度、未来视频和动作。通过学习几何感知的世界表示并用它来指导统一框架内的未来预测和规划，所提出的模型可以产生更连贯的想象未来和更明智的驾驶行为，同时保持模块化和可控延迟。 Navsim v1 和 v2 基准测试的实验表明，DriveDreamer-Policy 在闭环规划和世界生成任务上均实现了强大的性能。特别是，我们的模型在 Navsim v1 上达到 89.2 PDMS，在 Navsim v2 上达到 88.7 EPDMS，优于现有的基于世界模型的方法，同时产生更高质量的未来视频和深度预测。消融研究进一步表明，显式深度学习为视频想象力提供了补充优势，并提高了规划的稳健性。
+
+</details>
+
+---
+
+## 6. ModTrans: Translating Real-world Models for Distributed Training Simulator / ModTrans：将现实世界模型转换为分布式训练模拟器
+
+**Date**: 2026-04-02 | **arXiv**: [2604.01607v1](http://arxiv.org/abs/2604.01607v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.01607v1)
+
+**Categories**: cs.DC, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large-scale distributed training has been a research hot spot in machine learning systems for industry and academia in recent years. However, conducting experiments without physical machines and corresponding resources is difficult. One solution is to leverage distributed training simulators, but current ones like ASTRA-sim do not support importing real-world developed models, which poses challenges for ML researchers seeking to use them. Based on this challenge, we developed ModTrans, a translator supporting format translation from any real-world model to the ASTRA-sim simulator's input, removing the barrier between machine learning experts and machine learning system researchers. The experiment results show that ModTrans's cost is negligible.
+
+大规模分布式训练是近年来工业界和学术界机器学习系统的研究热点。然而，在没有物理机器和相应资源的情况下进行实验是很困难的。一种解决方案是利用分布式训练模拟器，但目前的 ASTRA-sim 等模拟器不支持导入现实世界开发的模型，这给寻求使用它们的机器学习研究人员带来了挑战。基于这一挑战，我们开发了 ModTrans，这是一个翻译器，支持从任何现实世界模型到 ASTRA-sim 模拟器输入的格式转换，消除了机器学习专家和机器学习系统研究人员之间的障碍。实验结果表明ModTrans的成本可以忽略不计。
+
+</details>
+
+---
+
+## 7. Semantic Modeling for World-Centered Architectures / 以世界为中心的架构的语义建模
+
+**Date**: 2026-04-01 | **arXiv**: [2604.01359v1](http://arxiv.org/abs/2604.01359v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.01359v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce world-centered multi-agent systems (WMAS) as an alternative to traditional agent-centered architectures, arguing that structured domains such as enterprises and institutional systems require a shared, explicit world representation to ensure semantic consistency, explainability, and long-term stability. We classify worlds along dimensions including ontological explicitness, normativity, etc. In WMAS, learning and coordination operate over a shared world model rather than isolated agent-local representations, enabling global consistency and verifiable system behavior. We propose semantic models as a mathematical formalism for representing such worlds. Finally, we present the Ontobox platform as a realization of WMAS.
+
+我们引入以世界为中心的多智能体系统（WMAS）作为传统以智能体为中心的架构的替代方案，认为企业和机构系统等结构化领域需要共享的、明确的世界表示，以确保语义一致性、可解释性和长期稳定性。我们按照本体显性、规范性等维度对世界进行分类。在 WMAS 中，学习和协调在共享世界模型上运行，而不是在孤立的代理本地表示上运行，从而实现全局一致性和可验证的系统行为。我们提出语义模型作为表示此类世界的数学形式。最后，我们将 Ontobox 平台作为 WMAS 的实现。
+
+</details>
+
+---
+
+## 8. Safety, Security, and Cognitive Risks in World Models / 世界模型中的安全、安保和认知风险
+
+**Date**: 2026-04-01 | **arXiv**: [2604.01346v1](http://arxiv.org/abs/2604.01346v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.01346v1)
+
+**Categories**: cs.CR, cs.AI, cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models -- learned internal simulators of environment dynamics -- are rapidly becoming foundational to autonomous decision-making in robotics, autonomous vehicles, and agentic AI. Yet this predictive power introduces a distinctive set of safety, security, and cognitive risks. Adversaries can corrupt training data, poison latent representations, and exploit compounding rollout errors to cause catastrophic failures in safety-critical deployments. World model-equipped agents are more capable of goal misgeneralisation, deceptive alignment, and reward hacking precisely because they can simulate the consequences of their own actions. Authoritative world model predictions further foster automation bias and miscalibrated human trust that operators lack the tools to audit.   This paper surveys the world model landscape; introduces formal definitions of trajectory persistence and representational risk; presents a five-profile attacker capability taxonomy; and develops a unified threat model extending MITRE ATLAS and the OWASP LLM Top 10 to the world model stack. We provide an empirical proof-of-concept on trajectory-persistent adversarial attacks (GRU-RSSM: A_1 = 2.26x amplification, -59.5% reduction under adversarial fine-tuning; stochastic RSSM proxy: A_1 = 0.65x; DreamerV3 checkpoint: non-zero action drift confirmed). We illustrate risks through four deployment scenarios and propose interdisciplinary mitigations spanning adversarial hardening, alignment engineering, NIST AI RMF and EU AI Act governance, and human-factors design. We argue that world models must be treated as safety-critical infrastructure requiring the same rigour as flight-control software or medical devices.
+
+世界模型——环境动力学的学习内部模拟器——正在迅速成为机器人、自动驾驶车辆和代理人工智能领域自主决策的基础。然而，这种预测能力带来了一系列独特的安全、保障和认知风险。攻击者可以破坏训练数据、毒害潜在表示，并利用复合部署错误在安全关键型部署中导致灾难性故障。配备世界模型的智能体更有能力进行目标错误概括、欺骗性调整和奖励黑客攻击，正是因为它们可以模拟自己行为的后果。权威的世界模型预测进一步助长了自动化偏差和错误校准的人类信任，导致操作员缺乏审计工具。   本文调查了世界模型格局；引入轨迹持久性和代表性风险的正式定义；提出了五种攻击者能力分类法；并开发了一个统一的威胁模型，将 MITRE ATLAS 和 OWASP LLM Top 10 扩展到世界模型堆栈。我们提供了关于轨迹持续对抗性攻击的经验概念验证（GRU-RSSM：A_1 = 2.26x 放大，对抗性微调下减少 -59.5%；随机 RSSM 代理：A_1 = 0.65x；DreamerV3 检查点：已确认非零动作漂移）。我们通过四种部署场景说明了风险，并提出了跨学科的缓解措施，包括对抗性强化、对齐工程、NIST AI RMF 和 EU AI Act 治理以及人为因素设计。我们认为，世界模型必须被视为安全关键基础设施，需要与飞行控制软件或医疗设备同样严格的要求。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-02 (4 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-04-02
