@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-06](papers/2026-04-06.md) - 2 papers
 - [2026-04-03](papers/2026-04-03.md) - 8 papers
 - [2026-04-02](papers/2026-04-02.md) - 4 papers
 - [2026-04-01](papers/2026-04-01.md) - 8 papers
@@ -44,6 +45,50 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-06 (2 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-04-06
+
+**Paper Count**: 2
+
+---
+
+## 1. Hierarchical Planning with Latent World Models / 使用潜在世界模型的分层规划
+
+**Date**: 2026-04-03 | **arXiv**: [2604.03208v1](http://arxiv.org/abs/2604.03208v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.03208v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Model predictive control (MPC) with learned world models has emerged as a promising paradigm for embodied control, particularly for its ability to generalize zero-shot when deployed in new environments. However, learned world models often struggle with long-horizon control due to the accumulation of prediction errors and the exponentially growing search space. In this work, we address these challenges by learning latent world models at multiple temporal scales and performing hierarchical planning across these scales, enabling long-horizon reasoning while substantially reducing inference-time planning complexity. Our approach serves as a modular planning abstraction that applies across diverse latent world-model architectures and domains. We demonstrate that this hierarchical approach enables zero-shot control on real-world non-greedy robotic tasks, achieving a 70% success rate on pick-&-place using only a final goal specification, compared to 0% for a single-level world model. In addition, across physics-based simulated environments including push manipulation and maze navigation, hierarchical planning achieves higher success while requiring up to 4x less planning-time compute.
+
+具有学习世界模型的模型预测控制（MPC）已成为体现控制的有前途的范例，特别是因为它在新环境中部署时能够泛化零样本。然而，由于预测误差的积累和搜索空间的指数级增长，学习的世界模型常常难以进行长期控制。在这项工作中，我们通过学习多个时间尺度的潜在世界模型并跨这些尺度执行分层规划来应对这些挑战，从而实现长视野推理，同时大幅降低推理时间规划的复杂性。我们的方法作为模块化规划抽象，适用于不同的潜在世界模型架构和领域。我们证明，这种分层方法可以对现实世界的非贪婪机器人任务进行零样本控制，仅使用最终目标规范就可以实现 70% 的拾放成功率，而单层世界模型的成功率为 0%。此外，在基于物理的模拟环境（包括推动操作和迷宫导航）中，分层规划取得了更高的成功，同时所需的规划时间计算量减少了 4 倍。
+
+</details>
+
+---
+
+## 2. InCoder-32B-Thinking: Industrial Code World Model for Thinking / InCoder-32B-Thinking：工业代码世界思维模型
+
+**Date**: 2026-04-03 | **arXiv**: [2604.03144v1](http://arxiv.org/abs/2604.03144v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.03144v1)
+
+**Categories**: cs.AR, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Industrial software development across chip design, GPU optimization, and embedded systems lacks expert reasoning traces showing how engineers reason about hardware constraints and timing semantics. In this work, we propose InCoder-32B-Thinking, trained on the data from the Error-driven Chain-of-Thought (ECoT) synthesis framework with an industrial code world model (ICWM) to generate reasoning traces. Specifically, ECoT generates reasoning chains by synthesizing the thinking content from multi-turn dialogue with environmental error feedback, explicitly modeling the error-correction process. ICWM is trained on domain-specific execution traces from Verilog simulation, GPU profiling, etc., learns the causal dynamics of how code affects hardware behavior, and enables self-verification by predicting execution outcomes before actual compilation. All synthesized reasoning traces are validated through domain toolchains, creating training data matching the natural reasoning depth distribution of industrial tasks. Evaluation on 14 general (81.3% on LiveCodeBench v5) and 9 industrial benchmarks (84.0% in CAD-Coder and 38.0% on KernelBench) shows InCoder-32B-Thinking achieves top-tier open-source results across all domains.GPU Optimization
+
+跨芯片设计、GPU 优化和嵌入式系统的工业软件开发缺乏专家推理轨迹来显示工程师如何推理硬件约束和时序语义。在这项工作中，我们提出了 InCoder-32B-Thinking，它使用工业代码世界模型 (ICWM) 对来自错误驱动思想链 (ECoT) 综合框架的数据进行训练，以生成推理轨迹。具体来说，ECOT通过综合多轮对话的思维内容和环境错误反馈来生成推理链，明确地建模纠错过程。 ICWM 根据来自 Verilog 仿真、GPU 分析等的特定领域执行跟踪进行训练，了解代码如何影响硬件行为的因果动态，并通过在实际编译之前预测执行结果来实现自我验证。所有合成的推理轨迹都通过领域工具链进行验证，创建与工业任务的自然推理深度分布相匹配的训练数据。对 14 个通用基准（LiveCodeBench v5 上的 81.3%）和 9 个工业基准（CAD-Coder 上的 84.0%，KernelBench 上的 38.0%）的评估显示，InCoder-32B-Thinking 在所有领域都取得了顶级的开源结果。 GPU 优化
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-03 (8 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-04-03
