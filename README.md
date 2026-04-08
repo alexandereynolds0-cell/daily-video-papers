@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-08](papers/2026-04-08.md) - 10 papers
 - [2026-04-07](papers/2026-04-07.md) - 13 papers
 - [2026-04-06](papers/2026-04-06.md) - 2 papers
 - [2026-04-03](papers/2026-04-03.md) - 32 papers
@@ -53,6 +54,178 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-08 (10 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-08
+
+**Paper Count**: 10
+
+---
+
+## 1. Action Images: End-to-End Policy Learning via Multiview Video Generation / 动作图像：通过多视图视频生成进行端到端政策学习
+
+**Date**: 2026-04-07 | **arXiv**: [2604.06168v1](http://arxiv.org/abs/2604.06168v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.06168v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World action models (WAMs) have emerged as a promising direction for robot policy learning, as they can leverage powerful video backbones to model the future states. However, existing approaches often rely on separate action modules, or use action representations that are not pixel-grounded, making it difficult to fully exploit the pretrained knowledge of video models and limiting transfer across viewpoints and environments. In this work, we present Action Images, a unified world action model that formulates policy learning as multiview video generation. Instead of encoding control as low-dimensional tokens, we translate 7-DoF robot actions into interpretable action images: multi-view action videos that are grounded in 2D pixels and explicitly track robot-arm motion. This pixel-grounded action representation allows the video backbone itself to act as a zero-shot policy, without a separate policy head or action module. Beyond control, the same unified model supports video-action joint generation, action-conditioned video generation, and action labeling under a shared representation. On RLBench and real-world evaluations, our model achieves the strongest zero-shot success rates and improves video-action joint generation quality over prior video-space world models, suggesting that interpretable action images are a promising route to policy learning.
+
+世界行动模型（WAM）已成为机器人政策学习的一个有前途的方向，因为它们可以利用强大的视频主干来模拟未来状态。然而，现有的方法通常依赖于单独的动作模块，或者使用非像素基础的动作表示，这使得很难充分利用视频模型的预训练知识，并限制跨视点和环境的传输。在这项工作中，我们提出了 Action Images，这是一种统一的世界动作模型，它将策略学习制定为多视图视频生成。我们没有将控制编码为低维标记，而是将 7-DoF 机器人动作转换为可解释的动作图像：基于 2D 像素并明确跟踪机器人手臂运动的多视图动作视频。这种基于像素的动作表示允许视频主干本身充当零镜头策略，无需单独的策略头或动作模块。除了控制之外，同一统一模型还支持共享表示下的视频动作联合生成、动作条件视频生成和动作标记。在 RLBench 和现实世界评估中，我们的模型实现了最强的零镜头成功率，并比之前的视频空间世界模型提高了视频动作联合生成质量，这表明可解释的动作图像是政策学习的一条有前途的途径。
+
+</details>
+
+---
+
+## 2. DiffHDR: Re-Exposing LDR Videos with Video Diffusion Models / DiffHDR：使用视频扩散模型重新曝光 LDR 视频
+
+**Date**: 2026-04-07 | **arXiv**: [2604.06161v1](http://arxiv.org/abs/2604.06161v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.06161v1)
+
+**Categories**: cs.CV, cs.AI, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Most digital videos are stored in 8-bit low dynamic range (LDR) formats, where much of the original high dynamic range (HDR) scene radiance is lost due to saturation and quantization. This loss of highlight and shadow detail precludes mapping accurate luminance to HDR displays and limits meaningful re-exposure in post-production workflows. Although techniques have been proposed to convert LDR images to HDR through dynamic range expansion, they struggle to restore realistic detail in the over- and underexposed regions. To address this, we present DiffHDR, a framework that formulates LDR-to-HDR conversion as a generative radiance inpainting task within the latent space of a video diffusion model. By operating in Log-Gamma color space, DiffHDR leverages spatio-temporal generative priors from a pretrained video diffusion model to synthesize plausible HDR radiance in over- and underexposed regions while recovering the continuous scene radiance of the quantized pixels. Our framework further enables controllable LDR-to-HDR video conversion guided by text prompts or reference images. To address the scarcity of paired HDR video data, we develop a pipeline that synthesizes high-quality HDR video training data from static HDRI maps. Extensive experiments demonstrate that DiffHDR significantly outperforms state-of-the-art approaches in radiance fidelity and temporal stability, producing realistic HDR videos with considerable latitude for re-exposure.
+
+大多数数字视频以 8 位低动态范围 (LDR) 格式存储，其中大部分原始高动态范围 (HDR) 场景亮度由于饱和和量化而丢失。这种高光和阴影细节的损失阻碍了将准确的亮度映射到 HDR 显示器，并限制了后期制作工作流程中有意义的重新曝光。尽管已经提出了通过动态范围扩展将 LDR 图像转换为 HDR 的技术，但它们很难恢复曝光过度和曝光不足区域的真实细节。为了解决这个问题，我们提出了 DiffHDR，这是一个框架，它将 LDR 到 HDR 的转换制定为视频扩散模型的潜在空间内的生成辐射修复任务。通过在 Log-Gamma 色彩空间中运行，DiffHDR 利用预训练视频扩散模型的时空生成先验，在曝光过度和曝光不足的区域合成合理的 HDR 辐射度，同时恢复量化像素的连续场景辐射度。我们的框架进一步实现了由文本提示或参考图像引导的可控 LDR 到 HDR 视频转换。为了解决配对 HDR 视频数据的稀缺问题，我们开发了一个管道，可以从静态 HDRI 地图合成高质量 HDR 视频训练数据。大量实验表明，DiffHDR 在辐射保真度和时间稳定性方面显着优于最先进的方法，可生成具有相当大的重新曝光范围的逼真 HDR 视频。
+
+</details>
+
+---
+
+## 3. OmniCamera: A Unified Framework for Multi-task Video Generation with Arbitrary Camera Control / OmniCamera：具有任意相机控制的多任务视频生成的统一框架
+
+**Date**: 2026-04-07 | **arXiv**: [2604.06010v1](http://arxiv.org/abs/2604.06010v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.06010v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video fundamentally intertwines two crucial axes: the dynamic content of a scene and the camera motion through which it is observed. However, existing generation models often entangle these factors, limiting independent control. In this work, we introduce OmniCamera, a unified framework designed to explicitly disentangle and command these two dimensions. This compositional approach enables flexible video generation by allowing arbitrary pairings of camera and content conditions, unlocking unprecedented creative control. To overcome the fundamental challenges of modality conflict and data scarcity inherent in such a system, we present two key innovations. First, we construct OmniCAM, a novel hybrid dataset combining curated real-world videos with synthetic data that provides diverse paired examples for robust multi-task learning. Second, we propose a Dual-level Curriculum Co-Training strategy that mitigates modality interference and synergistically learns from diverse data sources. This strategy operates on two levels: first, it progressively introduces control modalities by difficulties (condition-level), and second, trains for precise control on synthetic data before adapting to real data for photorealism (data-level). As a result, OmniCamera achieves state-of-the-art performance, enabling flexible control for complex camera movements while maintaining superior visual quality.
+
+视频从根本上将两个关键轴交织在一起：场景的动态内容和观察场景的摄像机运动。然而，现有的发电模型常常将这些因素纠缠在一起，限制了独立控制。在这项工作中，我们介绍了 OmniCamera，这是一个统一的框架，旨在明确地解开和控制这两个维度。这种合成方法通过允许摄像机和内容条件的任意配对来实现灵活的视频生成，从而解锁前所未有的创意控制。为了克服此类系统固有的模态冲突和数据稀缺的根本挑战，我们提出了两项​​关键创新。首先，我们构建了 OmniCAM，这是一个新颖的混合数据集，将精选的真实世界视频与合成数据相结合，为稳健的多任务学习提供了多样化的配对示例。其次，我们提出了一种双层课程协同培训策略，可以减轻模态干扰并从不同的数据源中协同学习。该策略在两个层面上运作：首先，它根据困难逐步引入控制方式（条件级），其次，在适应真实数据以达到真实感（数据级）之前训练对合成数据的精确控制。因此，OmniCamera 实现了最先进的性能，能够灵活控制复杂的相机运动，同时保持卓越的视觉质量。
+
+</details>
+
+---
+
+## 4. HumANDiff: Articulated Noise Diffusion for Motion-Consistent Human Video Generation / HumANDiff：用于生成运动一致的人类视频的铰接式噪声扩散
+
+**Date**: 2026-04-07 | **arXiv**: [2604.05961v1](http://arxiv.org/abs/2604.05961v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.05961v1)
+
+**Categories**: cs.CV
+
+**Project**: https://taohuumd.github.io/projects/HumANDiff/  <details><summary><b>Abstract / 摘要</b></summary>
+
+Despite tremendous recent progress in human video generation, generative video diffusion models still struggle to capture the dynamics and physics of human motions faithfully. In this paper, we propose a new framework for human video generation, HumANDiff, which enhances the human motion control with three key designs: 1) Articulated motion-consistent noise sampling that correlates the spatiotemporal distribution of latent noise and replaces the unstructured random Gaussian noise with 3D articulated noise sampled on the dense surface manifold of a statistical human body template. It inherits body topology priors for spatially and temporally consistent noise sampling. 2) Joint appearance-motion learning that enhances the standard training objective of video diffusion models by jointly predicting pixel appearances and corresponding physical motions from the articulated noises. It enables high-fidelity human video synthesis, e.g., capturing motion-dependent clothing wrinkles. 3) Geometric motion consistency learning that enforces physical motion consistency across frames via a novel geometric motion consistency loss defined in the articulated noise space. HumANDiff enables scalable controllable human video generation by fine-tuning video diffusion models with articulated noise sampling. Consequently, our method is agnostic to diffusion model design, and requires no modifications to the model architecture. During inference, HumANDiff enables image-to-video generation within a single framework, achieving intrinsic motion control without requiring additional motion modules. Extensive experiments demonstrate that our method achieves state-of-the-art performance in rendering motion-consistent, high-fidelity humans with diverse clothing styles. Project page: https://taohuumd.github.io/projects/HumANDiff/
+
+尽管最近在人类视频生成方面取得了巨大进展，但生成视频扩散模型仍然难以忠实地捕捉人类运动的动力学和物理特性。在本文中，我们提出了一种用于人体视频生成的新框架 HumANDiff，它通过三个关键设计增强了人体运动控制：1）铰接运动一致噪声采样，该采样与潜在噪声的时空分布相关，并用在统计人体模板的密集表面流形上采样的 3D 铰接噪声替换非结构化随机高斯噪声。它继承了身体拓扑先验，以实现空间和时间一致的噪声采样。 2）联合外观-运动学习，通过联合预测像素外观和来自关节噪声的相应物理运动，增强视频扩散模型的标准训练目标。它可以实现高保真人类视频合成，例如捕捉与运动相关的衣服皱纹。 3）几何运动一致性学习，通过在铰接噪声空间中定义的新颖的几何运动一致性损失来强制跨帧的物理运动一致性。 HumANDiff 通过使用清晰的噪声采样微调视频扩散模型，实现可扩展、可控的人类视频生成。因此，我们的方法与扩散模型设计无关，并且不需要对模型架构进行修改。在推理过程中，HumANDiff 能够在单个框架内生成图像到视频，从而实现内在运动控制，而无需额外的运动模块。大量的实验表明，我们的方法在渲染具有不同服装风格的运动一致、高保真人类方面实现了最先进的性能。项目页面：https://taohuumd.github.io/projects/HumANDiff/
+
+</details>
+
+---
+
+## 5. SCMAPR: Self-Correcting Multi-Agent Prompt Refinement for Complex-Scenario Text-to-Video Generation / SCMAPR：复杂场景文本到视频生成的自校正多代理提示细化
+
+**Date**: 2026-04-07 | **arXiv**: [2604.05489v1](http://arxiv.org/abs/2604.05489v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.05489v1)
+
+**Categories**: cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-to-Video (T2V) generation has benefited from recent advances in diffusion models, yet current systems still struggle under complex scenarios, which are generally exacerbated by the ambiguity and underspecification of text prompts. In this work, we formulate complex-scenario prompt refinement as a stage-wise multi-agent refinement process and propose SCMAPR, i.e., a scenario-aware and Self-Correcting Multi-Agent Prompt Refinement framework for T2V prompting. SCMAPR coordinates specialized agents to (i) route each prompt to a taxonomy-grounded scenario for strategy selection, (ii) synthesize scenario-aware rewriting policies and perform policy-conditioned refinement, and (iii) conduct structured semantic verification that triggers conditional revision when violations are detected. To clarify what constitutes complex scenarios in T2V prompting, provide representative examples, and enable rigorous evaluation under such challenging conditions, we further introduce {T2V-Complexity}, which is a complex-scenario T2V benchmark consisting exclusively of complex-scenario prompts. Extensive experiments on 3 existing benchmarks and our T2V-Complexity benchmark demonstrate that SCMAPR consistently improves text-video alignment and overall generation quality under complex scenarios, achieving up to 2.67\% and 3.28 gains in average score on VBench and EvalCrafter, and up to 0.028 improvement on T2V-CompBench over 3 State-Of-The-Art baselines.
+
+文本到视频（T2V）的生成受益于扩散模型的最新进展，但当前的系统仍然在复杂的场景下挣扎，而文本提示的模糊性和不规范通常会加剧这种情况。在这项工作中，我们将复杂场景提示细化制定为分阶段的多智能体提示细化过程，并提出了 SCMAPR，即用于 T2V 提示的场景感知和自校正多智能体提示细化框架。 SCMAPR 协调专门的代理来 (i) 将每个提示路由到基于分类的场景以进行策略选择，(ii) 综合场景感知重写策略并执行策略条件细化，以及 (iii) 进行结构化语义验证，在检测到违规时触发条件修订。为了阐明 T2V 提示中复杂场景的构成，提供代表性示例，并在这种具有挑战性的条件下进行严格评估，我们进一步引入了 {T2V-Complexity}，这是一个仅由复杂场景提示组成的复杂场景 T2V 基准。对 3 个现有基准测试和我们的 T2V-Complexity 基准测试进行的大量实验表明，SMAPR 在复杂场景下持续改善文本视频对齐和整体生成质量，在 VBench 和 EvalCrafter 上的平均得分分别提高了 2.67% 和 3.28，与 3 个 State-Of-The-Art 基准相比，T2V-CompBench 的平均得分提高了 0.028。
+
+</details>
+
+---
+
+## 6. Watch Before You Answer: Learning from Visually Grounded Post-Training / 回答之前先看一下：从训练后的视觉基础中学习
+
+**Date**: 2026-04-06 | **arXiv**: [2604.05117v1](http://arxiv.org/abs/2604.05117v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.05117v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+It is critical for vision-language models (VLMs) to comprehensively understand visual, temporal, and textual cues. However, despite rapid progress in multimodal modeling, video understanding performance still lags behind text-based reasoning. In this work, we find that progress is even worse than previously assumed: commonly reported long video understanding benchmarks contain 40-60% of questions that can be answered using text cues alone. Furthermore, we find that these issues are also pervasive in widely used post-training datasets, potentially undercutting the ability of post-training to improve VLM video understanding performance. Guided by this observation, we introduce VidGround as a simple yet effective solution: using only the actual visually grounded questions without any linguistic biases for post-training. When used in tandem with RL-based post-training algorithms, this simple technique improves performance by up to 6.2 points relative to using the full dataset, while using only 69.1% of the original post-training data. Moreover, we show that data curation with a simple post-training algorithm outperforms several more complex post-training techniques, highlighting that data quality is a major bottleneck for improving video understanding in VLMs. These results underscore the importance of curating post-training data and evaluation benchmarks that truly require visual grounding to advance the development of more capable VLMs. Project page: http://vidground.etuagi.com.
+
+对于视觉语言模型 (VLM) 来说，全面理解视觉、时间和文本线索至关重要。然而，尽管多模态建模取得了快速进展，视频理解性能仍然落后于基于文本的推理。在这项工作中，我们发现进展比之前假设的还要糟糕：通常报告的长视频理解基准包含 40-60% 的问题，可以仅使用文本提示来回答。此外，我们发现这些问题在广泛使用的后训练数据集中也普遍存在，可能会削弱后训练提高 VLM 视频理解性能的能力。在这一观察的指导下，我们引入了 VidGround 作为一种简单而有效的解决方案：仅使用实际的视觉基础问题，没有任何语言偏见进行后期训练。当与基于 RL 的后训练算法结合使用时，相对于使用完整数据集，这种简单的技术可将性能提高多达 6.2 个点，同时仅使用原始后训练数据的 69.1%。此外，我们还表明，使用简单的训练后算法进行的数据管理优于几种更复杂的训练后技术，这凸显了数据质量是提高 VLM 中视频理解的主要瓶颈。这些结果强调了整理训练后数据和评估基准的重要性，这些数据和评估基准确实需要视觉基础来推动功能更强大的 VLM 的开发。项目页面：http://vidground.etuagi.com。
+
+</details>
+
+---
+
+## 7. SVAgent: Storyline-Guided Long Video Understanding via Cross-Modal Multi-Agent Collaboration / SVAgent：通过跨模式多智能体协作进行故事情节引导的长视频理解
+
+**Date**: 2026-04-06 | **arXiv**: [2604.05079v1](http://arxiv.org/abs/2604.05079v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.05079v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video question answering (VideoQA) is a challenging task that requires integrating spatial, temporal, and semantic information to capture the complex dynamics of video sequences. Although recent advances have introduced various approaches for video understanding, most existing methods still rely on locating relevant frames to answer questions rather than reasoning through the evolving storyline as humans do. Humans naturally interpret videos through coherent storylines, an ability that is crucial for making robust and contextually grounded predictions. To address this gap, we propose SVAgent, a storyline-guided cross-modal multi-agent framework for VideoQA. The storyline agent progressively constructs a narrative representation based on frames suggested by a refinement suggestion agent that analyzes historical failures. In addition, cross-modal decision agents independently predict answers from visual and textual modalities under the guidance of the evolving storyline. Their outputs are then evaluated by a meta-agent to align cross-modal predictions and enhance reasoning robustness and answer consistency. Experimental results demonstrate that SVAgent achieves superior performance and interpretability by emulating human-like storyline reasoning in video understanding.
+
+视频问答 (VideoQA) 是一项具有挑战性的任务，需要集成空间、时间和语义信息来捕获视频序列的复杂动态。尽管最近的进展引入了各种视频理解方法，但大多数现有方法仍然依赖于定位相关帧来回答问题，而不是像人类那样通过不断发展的故事情节进行推理。人类自然地通过连贯的故事情节来解读视频，这种能力对于做出稳健且基于上下文的预测至关重要。为了解决这一差距，我们提出了 SVAgent，这是一种用于 VideoQA 的故事情节引导的跨模式多代理框架。故事情节代理根据分析历史失败的细化建议代理建议的框架逐步构建叙事表示。此外，跨模式决策代理在不断发展的故事情节的指导下独立预测视觉和文本模式的答案。然后，它们的输出由元代理进行评估，以调整跨模式预测并增强推理的稳健性和答案的一致性。实验结果表明，SVAgent 通过在视频理解中模拟类人故事情节推理，实现了卓越的性能和可解释性。
+
+</details>
+
+---
+
+## 8. GLANCE: A Global-Local Coordination Multi-Agent Framework for Music-Grounded Non-Linear Video Editing / GLANCE：基于音乐的非线性视频编辑的全球本地协调多智能体框架
+
+**Date**: 2026-04-06 | **arXiv**: [2604.05076v1](http://arxiv.org/abs/2604.05076v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.05076v1)
+
+**Categories**: cs.MA, cs.MM, cs.SD
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Music-grounded mashup video creation is a challenging form of video non-linear editing, where a system must compose a coherent timeline from large collections of source videos while aligning with music rhythm, user intent, story completeness, and long-range structural constraints. Existing approaches typically rely on fixed pipelines or simplified retrieval-and-concatenation paradigms, limiting their ability to adapt to diverse prompts and heterogeneous source materials. In this paper, we present GLANCE, a global-local coordination multi-agent framework for music-grounded nonlinear video editing. GLANCE adopts a bi-loop architecture for better editing practice: an outer loop performs long-horizon planning and task-graph construction, and an inner loop adopts the "Observe-Think-Act-Verify" flow for segment-wise editing tasks and their refinements. To address the cross-segment and global conflict emerging after subtimelines composition, we introduce a dedicated global-local coordination mechanism with both preventive and corrective components, which includes a novelly designed context controller, conflict region decomposition module, and a bottom-up dynamic negotiation mechanism. To support rigorous evaluation, we construct MVEBench, a new benchmark that factorizes editing difficulty along task type, prompt specificity, and music length, and propose an agent-as-a-judge evaluation framework for scalable multi-dimensional assessment. Experimental results show that GLANCE consistently outperforms prior research baselines and open-source product baselines under the same backbone models. With GPT-4o-mini as the backbone, GLANCE improves over the strongest baseline by 33.2% and 15.6% on two task settings, respectively. Human evaluation further confirms the quality of the generated videos and validates the effectiveness of the proposed evaluation framework.
+
+以音乐为基础的混搭视频创作是一种具有挑战性的视频非线性编辑形式，系统必须从大量源视频集合中组成连贯的时间线，同时与音乐节奏、用户意图、故事完整性和长期结构约束保持一致。现有方法通常依赖于固定管道或简化的检索和串联范例，限制了它们适应不同提示和异构源材料的能力。在本文中，我们提出了 GLANCE，一种用于基于音乐的非线性视频编辑的全局-局部协调多智能体框架。 GLANCE 采用双循环架构来实现更好的编辑实践：外循环执行长期规划和任务图构建，内循环采用“观察-思考-行动-验证”流程进行分段编辑任务及其细化。为了解决子时间线组合后出现的跨部门和全局冲突，我们引入了一种具有预防性和纠正性组件的专用全局局部协调机制，其中包括新颖设计的上下文控制器、冲突区域分解模块和自下而上的动态协商机制。为了支持严格的评估，我们构建了 MVEBench，这是一个新的基准，根据任务类型、提示特异性和音乐长度来考虑编辑难度，并提出了一个可扩展的多维评估的代理作为法官的评估框架。实验结果表明，在相同骨干模型下，GLANCE 始终优于先前的研究基线和开源产品基线。以 GPT-4o-mini 作为骨干，GLANCE 在两种任务设置上分别比最强基线提高了 33.2% 和 15.6%。人工评估进一步确认了生成视频的质量并验证了所提出的评估框架的有效性。
+
+</details>
+
+---
+
+## 9. Video-MME-v2: Towards the Next Stage in Benchmarks for Comprehensive Video Understanding / Video-MME-v2：迈向全面视频理解基准的下一阶段
+
+**Date**: 2026-04-06 | **arXiv**: [2604.05015v1](http://arxiv.org/abs/2604.05015v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.05015v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+With the rapid advancement of video understanding, existing benchmarks are becoming increasingly saturated, exposing a critical discrepancy between inflated leaderboard scores and real-world model capabilities. To address this widening gap, we introduce Video-MME-v2, a comprehensive benchmark designed to rigorously evaluate the robustness and faithfulness of video understanding. To systematically evaluate model capabilities, we design a \textbf{progressive tri-level hierarchy} that incrementally increases the complexity of video comprehension, ranging from multi-point visual information aggregation, to temporal dynamics modeling, and ultimately to complex multimodal reasoning. Besides, in contrast to conventional per-question accuracy, we propose a \textbf{group-based non-linear evaluation} strategy that enforces both consistency across related queries and coherence in multi-step reasoning. It penalizes fragmented or guess-based correctness and assigns credit only to answers supported by valid reasoning. To guarantee data quality, Video-MME-v2 is constructed through a rigorously controlled human annotation pipeline, involving 12 annotators and 50 independent reviewers. Backed by \textbf{3,300 human-hours} and up to \textbf{5 rounds} of quality assurance, Video-MME-v2 aims to serve as one of the most authoritative video benchmarks. Extensive experiments reveal a substantial gap between current best model Gemini-3-Pro and human experts, and uncover a clear hierarchical bottleneck where errors in visual information aggregation and temporal modeling propagate to limit high-level reasoning. We further find that thinking-based reasoning is highly dependent on textual cues, improving performance with subtitles but sometimes degrading it in purely visual settings. By exposing these limitations, Video-MME-v2 establishes a demanding new testbed for the development of next-generation video MLLMs.
+
+随着视频理解的快速进步，现有的基准测试变得越来越饱和，暴露了夸大的排行榜分数与现实世界模型能力之间的严重差异。为了解决这一不断扩大的差距，我们推出了 Video-MME-v2，这是一个综合基准测试，旨在严格评估视频理解的稳健性和忠实度。为了系统地评估模型能力，我们设计了一个 \textbf{渐进三级层次结构}，它逐渐增加视频理解的复杂性，范围从多点视觉信息聚合到时间动态建模，最终到复杂的多模态推理。此外，与传统的每个问题的准确性相比，我们提出了一种 \textbf{基于组的非线性评估} 策略，该策略可以强制相关查询之间的一致性和多步骤推理中的连贯性。它会惩罚零碎的或基于猜测的正确性，并仅将信用分配给有有效推理支持的答案。为了保证数据质量，Video-MME-v2 通过严格控制的人工注释管道构建，涉及 12 名注释者和 50 名独立审阅者。 Video-MME-v2 拥有 \textbf{3,300 人工小时}和高达 \textbf{5 轮}的质量保证，旨在成为最权威的视频基准之一。大量的实验揭示了当前最佳模型 Gemini-3-Pro 与人类专家之间的巨大差距，并揭示了一个明显的层次瓶颈，视觉信息聚合和时间建模中的错误传播到限制高级推理。我们进一步发现，基于思维的推理高度依赖于文本提示，通过字幕可以提高表现，但有时会在纯粹的视觉环境中降低表现。通过暴露这些限制，Video-MME-v2 为下一代视频 MLLM 的开发建立了一个要求严格的新测试平台。
+
+</details>
+
+---
+
+## 10. Veo-Act: How Far Can Frontier Video Models Advance Generalizable Robot Manipulation? / Veo-Act：前沿视频模型可以将通用机器人操作推进多远？
+
+**Date**: 2026-04-06 | **arXiv**: [2604.04502v1](http://arxiv.org/abs/2604.04502v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.04502v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation models have advanced rapidly and are beginning to show a strong understanding of physical dynamics. In this paper, we investigate how far an advanced video generation model such as Veo-3 can support generalizable robotic manipulation. We first study a zero-shot approach in which Veo-3 predicts future image sequences from current robot observations, while an inverse dynamics model IDM recovers the corresponding robot actions. The IDM is trained solely on random-play data, requiring neither human supervision nor expert demonstrations. The key intuition is that, if a video model can generate physically plausible future motions in image space, an IDM can translate those visual trajectories into executable robot actions. We evaluate this "Veo-3+IDM" approach in both simulation and the real world using a high-dimensional dexterous hand. We find that, owing to the strong generalization capability of frontier video models, Veo-3+IDM can consistently generate approximately correct task-level trajectories. However, its low-level control accuracy remains insufficient to solve most tasks reliably. Motivated by this observation, we develop a hierarchical framework, Veo-Act, which uses Veo-3 as a high-level motion planner and a VLA policy as the low-level executor, significantly improving the instruction-following performance of a state-of-the-art vision-language-action policy. Overall, our results suggest that, as video generation models continue to improve, video models can be a valuable component for generalizable robot learning.
+
+视频生成模型发展迅速，并开始表现出对物理动力学的深刻理解。在本文中，我们研究了 Veo-3 等高级视频生成模型可以在多大程度上支持通用的机器人操作。我们首先研究了一种零样本方法，其中 Veo-3 根据当前机器人观察结果预测未来图像序列，而逆动力学模型 IDM 则恢复相应的机器人动作。 IDM 仅根据随机游戏数据进行训练，不需要人工监督或专家演示。关键的直觉是，如果视频模型可以在图像空间中生成物理上合理的未来运动，那么 IDM 就可以将这些视觉轨迹转换为可执行的机器人动作。我们使用高维灵巧手在模拟和现实世界中评估这种“Veo-3+IDM”方法。我们发现，由于前沿视频模型强大的泛化能力，Veo-3+IDM 可以一致地生成近似正确的任务级轨迹。然而，其低水平的控制精度仍然不足以可靠地解决大多数任务。受这一观察的启发，我们开发了一个分层框架 Veo-Act，它使用 Veo-3 作为高级运动规划器，使用 VLA 策略作为低级执行器，显着提高了最先进的视觉-语言-动作策略的指令跟踪性能。总的来说，我们的结果表明，随着视频生成模型的不断改进，视频模型可以成为通用机器人学习的重要组成部分。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-07 (13 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-07
