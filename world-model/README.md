@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-09](papers/2026-04-09.md) - 4 papers
 - [2026-04-08](papers/2026-04-08.md) - 7 papers
 - [2026-04-07](papers/2026-04-07.md) - 1 papers
 - [2026-04-06](papers/2026-04-06.md) - 2 papers
@@ -47,6 +48,82 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-09 (4 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-04-09
+
+**Paper Count**: 4
+
+---
+
+## 1. How Much LLM Does a Self-Revising Agent Actually Need? / 自修代理人实际需要多少LLM？
+
+**Date**: 2026-04-08 | **arXiv**: [2604.07236v1](http://arxiv.org/abs/2604.07236v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.07236v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent LLM-based agents often place world modeling, planning, and reflection inside a single language model loop. This can produce capable behavior, but it makes a basic scientific question difficult to answer: which part of the agent's competence actually comes from the LLM, and which part comes from explicit structure around it?   We study this question not by claiming a general answer, but by making it empirically tractable. We introduce a declared reflective runtime protocol that externalizes agent state, confidence signals, guarded actions, and hypothetical transitions into inspectable runtime structure. We instantiate this protocol in a declarative runtime and evaluate it on noisy Collaborative Battleship [4] using four progressively structured agents over 54 games (18 boards $\times$ 3 seeds).   The resulting decomposition isolates four components: posterior belief tracking, explicit world-model planning, symbolic in-episode reflection, and sparse LLM-based revision. Across this decomposition, explicit world-model planning improves substantially over a greedy posterior-following baseline (+24.1pp win rate, +0.017 F1). Symbolic reflection operates as a real runtime mechanism -- with prediction tracking, confidence gating, and guarded revision actions -- even though its current revision presets are not yet net-positive in aggregate. Adding conditional LLM revision at about 4.3\% of turns yields only a small and non-monotonic change: average F1 rises slightly (+0.005) while win rate drops (31$\rightarrow$29 out of 54).   These results suggest a methodological contribution rather than a leaderboard claim: externalizing reflection turns otherwise latent agent behavior into inspectable runtime structure, allowing the marginal role of LLM intervention to be studied directly.
+
+最近基于 LLM 的智能体经常将世界建模、规划和反思置于单一语言模型循环中。这可以产生有能力的行为，但它使得一个基本的科学问题难以回答：代理人能力的哪一部分实际上来自于法学硕士，哪一部分来自于其周围的显式结构？   我们研究这个问题不是通过要求一个普遍的答案，而是通过使其在经验上易于处理。我们引入了一个声明的反射运行时协议，它将代理状态、置信信号、受保护的操作和假设的转换外部化为可检查的运行时结构。我们在声明性运行时实例化该协议，并在 54 场游戏（18 个棋盘 $\times$ 3 个种子）中使用四个渐进结构化代理在嘈杂的协作战舰 [4] 上对其进行评估。   由此产生的分解分离出四个组成部分：后验信念跟踪、显式世界模型规划、象征性的情节内反射和基于稀疏 LLM 的修订。通过这种分解，显式的世界模型规划比贪婪的后验基线（+24.1pp 获胜率，+0.017 F1）有了显着改善。符号反射作为一种真正的运行时机制运行——具有预测跟踪、置信门控和受保护的修订操作——尽管其当前的修订预设总体上尚未达到净正值。在大约 4.3% 的回合中添加有条件的 LLM 修订只会产生很小的非单调变化：平均 F1 略有上升（+0.005），而胜率下降（54 中的 31$\rightarrow$29）。   这些结果表明了方法论的贡献，而不是排行榜的主张：外部化反射将其他潜在的代理行为转变为可检查的运行时结构，从而允许直接研究法学硕士干预的边际作用。
+
+</details>
+
+---
+
+## 2. Telecom World Models: Unifying Digital Twins, Foundation Models, and Predictive Planning for 6G / 电信世界模型：统一 6G 数字孪生、基础模型和预测规划
+
+**Date**: 2026-04-08 | **arXiv**: [2604.06882v1](http://arxiv.org/abs/2604.06882v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.06882v1)
+
+**Categories**: cs.RO, eess.SP, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The integration of machine learning tools into telecom networks, has led to two prevailing paradigms, namely, language-based systems, such as Large Language Models (LLMs), and physics-based systems, such as Digital Twins (DTs). While LLM-based approaches enable flexible interaction and automation, they lack explicit representations of network dynamics. DTs, in contrast, offer a high-fidelity network simulation, but remain scenario-specific and are not designed for learning or decision-making under uncertainty. This gap becomes critical for 6G systems, where decisions must take into account the evolving network states, uncertainty, and the cascading effects of control actions across multiple layers. In this article, we introduce the {Telecom World Model}~(TWM) concept, an architecture for learned, action-conditioned, uncertainty-aware modeling of telecom system dynamics. We decompose the problem into two interacting worlds, a controllable system world consisting of operator-configurable settings and an external world that captures propagation, mobility, traffic, and failures. We propose a three-layer architecture, comprising a field world model for spatial environment prediction, a control/dynamics world model for action-conditioned Key Performance Indicator (KPI) trajectory prediction, and a telecom foundation model layer for intent translation and orchestration. We showcase a comparative analysis between existing paradigms, which demonstrates that TWM jointly provides telecom state grounding, fast action-conditioned roll-outs, calibrated uncertainty, multi-timescale dynamics, model-based planning, and LLM-integrated guardrails. Furthermore, we present a proof-of-concept on network slicing to validate the proposed architecture, showing that the full three-layer pipeline outperforms single-world baselines and accurately predicts KPI trajectories.
+
+机器学习工具与电信网络的集成催生了两种流行的范式，即基于语言的系统，例如大型语言模型（LLM）和基于物理的系统，例如数字孪生（DT）。虽然基于法学硕士的方法可以实现灵活的交互和自动化，但它们缺乏网络动态的明确表示。相比之下，DT 提供高保真网络模拟，但仍然针对特定场景，并且不是为不确定情况下的学习或决策而设计的。这种差距对于 6G 系统变得至关重要，其中决策必须考虑不断变化的网络状态、不确定性以及跨多个层的控制操作的级联效应。在本文中，我们介绍了{电信世界模型}~(TWM) 概念，这是一种用于电信系统动态学习、动作条件、不确定性感知建模的架构。我们将问题分解为两个相互作用的世界，一个由操作员可配置设置组成的可控系统世界和一个捕获传播、移动性、流量和故障的外部世界。我们提出了一个三层架构，包括用于空间环境预测的现场世界模型、用于动作条件关键绩效指标（KPI）轨迹预测的控制/动态世界模型以及用于意图转换和编排的电信基础模型层。我们展示了现有范式之间的比较分析，表明 TWM 共同提供电信状态基础、快速行动条件推出、校准不确定性、多时间尺度动态、基于模型的规划和 LLM 集成护栏。此外，我们提出了网络切片的概念验证，以验证所提出的架构，表明完整的三层管道优于单世界基线并准确预测 KPI 轨迹。
+
+</details>
+
+---
+
+## 3. The Rhetoric of Machine Learning / 机器学习的修辞
+
+**Date**: 2026-04-08 | **arXiv**: [2604.06754v1](http://arxiv.org/abs/2604.06754v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.06754v1)
+
+**Categories**: cs.LG, cs.CY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+I examine the technology of machine learning from the perspective of rhetoric, which is simply the art of persuasion. Rather than being a neutral and "objective" way to build "world models" from data, machine learning is (I argue) inherently rhetorical. I explore some of its rhetorical features, and examine one pervasive business model where machine learning is widely used, "manipulation as a service."
+
+我从修辞学的角度审视机器学习技术，这简直就是说服的艺术。机器学习（我认为）本质上是修辞性的，而不是从数据中构建“世界模型”的中立和“客观”方式。我探讨了它的一些修辞特征，并研究了一种广泛使用机器学习的普遍商业模式，即“操作即服务”。
+
+</details>
+
+---
+
+## 4. Neural Computers / 神经计算机
+
+**Date**: 2026-04-07 | **arXiv**: [2604.06425v1](http://arxiv.org/abs/2604.06425v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.06425v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We propose a new frontier: Neural Computers (NCs) -- an emerging machine form that unifies computation, memory, and I/O in a learned runtime state. Unlike conventional computers, which execute explicit programs, agents, which act over external execution environments, and world models, which learn environment dynamics, NCs aim to make the model itself the running computer. Our long-term goal is the Completely Neural Computer (CNC): the mature, general-purpose realization of this emerging machine form, with stable execution, explicit reprogramming, and durable capability reuse. As an initial step, we study whether early NC primitives can be learned solely from collected I/O traces, without instrumented program state. Concretely, we instantiate NCs as video models that roll out screen frames from instructions, pixels, and user actions (when available) in CLI and GUI settings. These implementations show that learned runtimes can acquire early interface primitives, especially I/O alignment and short-horizon control, while routine reuse, controlled updates, and symbolic stability remain open. We outline a roadmap toward CNCs around these challenges. If overcome, CNCs could establish a new computing paradigm beyond today's agents, world models, and conventional computers.
+
+我们提出了一个新的领域：神经计算机（NC）——一种新兴的机器形式，在学习的运行时状态下统一计算、内存和 I/O。与执行显式程序的传统计算机、在外部执行环境上运行的代理以及学习环境动态的世界模型不同，NC 的目标是使模型本身成为运行的计算机。我们的长期目标是完全神经计算机（CNC）：这种新兴机器形式的成熟、通用实现，具有稳定的执行、显式的重新编程和持久的功能重用。作为第一步，我们研究是否可以仅从收集的 I/O 跟踪中学习早期 NC 原语，而无需检测程序状态。具体来说，我们将 NC 实例化为视频模型，通过 CLI 和 GUI 设置中的指令、像素和用户操作（如果可用）推出屏幕框架。这些实现表明，学习的运行时可以获取早期的接口原语，特别是 I/O 对齐和短范围控制，同时例程重用、受控更新和符号稳定性保持开放。我们围绕这些挑战概述了 CNC 的路线图。如果克服的话，数控系统可以建立一种超越当今代理、世界模型和传统计算机的新计算范式。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-08 (7 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-04-08
