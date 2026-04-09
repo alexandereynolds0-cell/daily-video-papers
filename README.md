@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-09](papers/2026-04-09.md) - 6 papers
 - [2026-04-08](papers/2026-04-08.md) - 10 papers
 - [2026-04-07](papers/2026-04-07.md) - 13 papers
 - [2026-04-06](papers/2026-04-06.md) - 2 papers
@@ -54,6 +55,116 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-09 (6 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-09
+
+**Paper Count**: 6
+
+---
+
+## 1. INSPATIO-WORLD: A Real-Time 4D World Simulator via Spatiotemporal Autoregressive Modeling / INSPATIO-WORLD：通过时空自回归建模的实时 4D 世界模拟器
+
+**Date**: 2026-04-08 | **arXiv**: [2604.07209v1](http://arxiv.org/abs/2604.07209v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.07209v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Building world models with spatial consistency and real-time interactivity remains a fundamental challenge in computer vision. Current video generation paradigms often struggle with a lack of spatial persistence and insufficient visual realism, making it difficult to support seamless navigation in complex environments. To address these challenges, we propose INSPATIO-WORLD, a novel real-time framework capable of recovering and generating high-fidelity, dynamic interactive scenes from a single reference video. At the core of our approach is a Spatiotemporal Autoregressive (STAR) architecture, which enables consistent and controllable scene evolution through two tightly coupled components: Implicit Spatiotemporal Cache aggregates reference and historical observations into a latent world representation, ensuring global consistency during long-horizon navigation; Explicit Spatial Constraint Module enforces geometric structure and translates user interactions into precise and physically plausible camera trajectories. Furthermore, we introduce Joint Distribution Matching Distillation (JDMD). By using real-world data distributions as a regularizing guide, JDMD effectively overcomes the fidelity degradation typically caused by over-reliance on synthetic data. Extensive experiments demonstrate that INSPATIO-WORLD significantly outperforms existing state-of-the-art (SOTA) models in spatial consistency and interaction precision, ranking first among real-time interactive methods on the WorldScore-Dynamic benchmark, and establishing a practical pipeline for navigating 4D environments reconstructed from monocular videos.
+
+构建具有空间一致性和实时交互性的世界模型仍然是计算机视觉领域的一个基本挑战。当前的视频生成范式常常面临缺乏空间持久性和视觉真实感不足的问题，使得难以支持复杂环境中的无缝导航。为了应对这些挑战，我们提出了 INSPATIO-WORLD，这是一种新颖的实时框架，能够从单个参考视频中恢复和生成高保真动态交互场景。我们方法的核心是时空自回归（STAR）架构，它通过两个紧密耦合的组件实现一致且可控的场景演化：隐式时空缓存将参考和历史观察聚合到潜在的世界表示中，确保长范围导航期间的全局一致性；显式空间约束模块强制执行几何结构，并将用户交互转换为精确且物理上合理的相机轨迹。此外，我们引入了联合分布匹配蒸馏（JDMD）。通过使用真实世界的数据分布作为正则化指导，JDMD 有效地克服了通常因过度依赖合成数据而导致的保真度下降。大量实验表明，INSPATIO-WORLD 在空间一致性和交互精度方面显着优于现有的最先进（SOTA）模型，在 WorldScore-Dynamic 基准上的实时交互方法中排名第一，并建立了用于导航单目视频重建的 4D 环境的实用管道。
+
+</details>
+
+---
+
+## 2. Not all tokens contribute equally to diffusion learning / 并非所有代币对扩散学习的贡献均等
+
+**Date**: 2026-04-08 | **arXiv**: [2604.07026v1](http://arxiv.org/abs/2604.07026v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.07026v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+With the rapid development of conditional diffusion models, significant progress has been made in text-to-video generation. However, we observe that these models often neglect semantically important tokens during inference, leading to biased or incomplete generations under classifier-free guidance. We attribute this issue to two key factors: distributional bias caused by the long-tailed token frequency in training data, and spatial misalignment in cross-attention where semantically important tokens are overshadowed by less informative ones. To address these issues, we propose Distribution-Aware Rectification and Spatial Ensemble (DARE), a unified framework that improves semantic guidance in diffusion models from the perspectives of distributional debiasing and spatial consistency. First, we introduce Distribution-Rectified Classifier-Free Guidance (DR-CFG), which regularizes the training process by dynamically suppressing dominant tokens with low semantic density, encouraging the model to better capture underrepresented semantic cues and learn a more balanced conditional distribution. This design mitigates the risk of the model distribution overfitting to tokens with low semantic density. Second, we propose Spatial Representation Alignment (SRA), which adaptively reweights cross-attention maps according to token importance and enforces representation consistency, enabling semantically important tokens to exert stronger spatial guidance during generation. This mechanism effectively prevents low semantic-density tokens from dominating the attention allocation, thereby avoiding the dilution of the spatial and distributional guidance provided by high semantic-density tokens. Extensive experiments on multiple benchmark datasets demonstrate that DARE consistently improves generation fidelity and semantic alignment, achieving significant gains over existing approaches.
+
+随着条件扩散模型的快速发展，文本到视频的生成取得了重大进展。然而，我们观察到这些模型在推理过程中经常忽略语义上重要的标记，导致在无分类器指导下产生有偏差或不完整的生成。我们将此问题归因于两个关键因素：训练数据中的长尾标记频率引起的分布偏差，以及交叉注意力中的空间错位，其中语义上重要的标记被信息量较少的标记所掩盖。为了解决这些问题，我们提出了分布感知整流和空间集成（DARE），这是一个统一的框架，可以从分布去偏和空间一致性的角度改进扩散模型中的语义指导。首先，我们引入了分布校正无分类器指导（DR-CFG），它通过动态抑制低语义密度的主导标记来规范训练过程，鼓励模型更好地捕获代表性不足的语义线索并学习更平衡的条件分布。这种设计降低了模型分布过度拟合低语义密度标记的风险。其次，我们提出了空间表示对齐（SRA），它根据令牌重要性自适应地重新加权交叉注意力图并强制表示一致性，使语义重要的令牌在生成过程中发挥更强的空间指导。这种机制有效地防止了低语义密度标记主导注意力分配，从而避免了高语义密度标记提供的空间和分布指导的稀释。对多个基准数据集的大量实验表明，DARE 持续提高了生成保真度和语义对齐，比现有方法取得了显着的进步。
+
+</details>
+
+---
+
+## 3. NTIRE 2026 Challenge on Bitstream-Corrupted Video Restoration: Methods and Results / NTIRE 2026 关于比特流损坏视频恢复的挑战：方法和结果
+
+**Date**: 2026-04-08 | **arXiv**: [2604.06945v1](http://arxiv.org/abs/2604.06945v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.06945v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper reports on the NTIRE 2026 Challenge on Bitstream-Corrupted Video Restoration (BSCVR). The challenge aims to advance research on recovering visually coherent videos from corrupted bitstreams, whose decoding often produces severe spatial-temporal artifacts and content distortion. Built upon recent progress in bitstream-corrupted video recovery, the challenge provides a common benchmark for evaluating restoration methods under realistic corruption settings. We describe the dataset, evaluation protocol, and participating methods, and summarize the final results and main technical trends. The challenge highlights the difficulty of this emerging task and provides useful insights for future research on robust video restoration under practical bitstream corruption.
+
+本文报道了 NTIRE 2026 比特流损坏视频恢复挑战赛 (BSCVR)。该挑战赛旨在推进从损坏的比特流中恢复视觉连贯视频的研究，这些视频的解码通常会产生严重的时空伪影和内容失真。该挑战赛基于比特流损坏视频恢复方面的最新进展，为评估现实损坏环境下的恢复方法提供了通用基准。我们描述了数据集、评估协议和参与方法，并总结了最终结果和主要技术趋势。这一挑战凸显了这项新兴任务的难度，并为未来在实际比特流损坏情况下的稳健视频恢复研究提供了有用的见解。
+
+</details>
+
+---
+
+## 4. Grounded Forcing: Bridging Time-Independent Semantics and Proximal Dynamics in Autoregressive Video Synthesis / 扎根强迫：在自回归视频合成中桥接时间无关语义和近端动力学
+
+**Date**: 2026-04-08 | **arXiv**: [2604.06939v1](http://arxiv.org/abs/2604.06939v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.06939v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive video synthesis offers a promising pathway for infinite-horizon generation but is fundamentally hindered by three intertwined challenges: semantic forgetting from context limitations, visual drift due to positional extrapolation, and controllability loss during interactive instruction switching. Current methods often tackle these issues in isolation, limiting long-term coherence. We introduce Grounded Forcing, a novel framework that bridges time-independent semantics and proximal dynamics through three interlocking mechanisms. First, to address semantic forgetting, we propose a Dual Memory KV Cache that decouples local temporal dynamics from global semantic anchors, ensuring long-term semantic coherence and identity stability. Second, to suppress visual drift, we design Dual-Reference RoPE Injection, which confines positional embeddings within the training manifold while rendering global semantics time-invariant. Third, to resolve controllability issues, we develop Asymmetric Proximity Recache, which facilitates smooth semantic inheritance during prompt transitions via proximity-weighted cache updates. These components operate synergistically to tether the generative process to stable semantic cores while accommodating flexible local dynamics. Extensive experiments demonstrate that Grounded Forcing significantly enhances long-range consistency and visual stability, establishing a robust foundation for interactive long-form video synthesis.
+
+自回归视频合成为无限视野生成提供了一条有前途的途径，但从根本上受到三个相互交织的挑战的阻碍：上下文限制导致的语义遗忘、位置外推导致的视觉漂移以及交互式指令切换期间的可控性损失。当前的方法通常孤立地解决这些问题，限制了长期的一致性。我们引入了 Grounded Forcing，这是一种新颖的框架，它通过三个联锁机制将时间无关的语义和近端动力学联系起来。首先，为了解决语义遗忘问题，我们提出了一种双内存 KV 缓存，它将局部时间动态与全局语义锚点解耦，确保长期语义一致性和身份稳定性。其次，为了抑制视觉漂移，我们设计了双参考 RoPE 注入，它将位置嵌入限制在训练流形内，同时呈现全局语义时不变。第三，为了解决可控性问题，我们开发了非对称邻近重新缓存，它通过邻近加权缓存更新促进提示转换期间的平滑语义继承。这些组件协同运作，将生成过程束缚在稳定的语义核心上，同时适应灵活的局部动态。大量实验表明，Grounded Forcing 显着增强了远程一致性和视觉稳定性，为交互式长格式视频合成奠定了坚实的基础。
+
+</details>
+
+---
+
+## 5. Controllable Generative Video Compression / 可控生成视频压缩
+
+**Date**: 2026-04-08 | **arXiv**: [2604.06655v1](http://arxiv.org/abs/2604.06655v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.06655v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Perceptual video compression adopts generative video modeling to improve perceptual realism but frequently sacrifices signal fidelity, diverging from the goal of video compression to faithfully reproduce visual signal. To alleviate the dilemma between perception and fidelity, in this paper we propose Controllable Generative Video Compression (CGVC) paradigm to faithfully generate details guided by multiple visual conditions. Under the paradigm, representative keyframes of the scene are coded and used to provide structural priors for non-keyframe generation. Dense per-frame control prior is additionally coded to better preserve finer structure and semantics of each non-keyframe. Guided by these priors, non-keyframes are reconstructed by controllable video generation model with temporal and content consistency. Furthermore, to accurately recover color information of the video, we develop a color-distance-guided keyframe selection algorithm to adaptively choose keyframes. Experimental results show CGVC outperforms previous perceptual video compression method in terms of both signal fidelity and perceptual quality.
+
+感知视频压缩采用生成视频建模来提高感知真实感，但经常牺牲信号保真度，偏离了视频压缩忠实再现视觉信号的目标。为了缓解感知和保真度之间的困境，在本文中，我们提出了可控生成视频压缩（CGVC）范式，以忠实地生成由多种视觉条件引导的细节。在该范例下，场景的代表性关键帧被编码并用于为非关键帧生成提供结构先验。密集的每帧控制先验被额外编码，以更好地保留每个非关键帧的更精细的结构和语义。在这些先验的指导下，通过具有时间和内容一致性的可控视频生成模型来重建非关键帧。此外，为了准确地恢复视频的颜色信息，我们开发了一种颜色距离引导的关键帧选择算法来自适应地选择关键帧。实验结果表明，CGVC 在信号保真度和感知质量方面均优于先前的感知视频压缩方法。
+
+</details>
+
+---
+
+## 6. Evolution of Video Generative Foundations / 视频生成基础的演变
+
+**Date**: 2026-04-07 | **arXiv**: [2604.06339v1](http://arxiv.org/abs/2604.06339v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.06339v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/sjtuplayer/Awesome-Video-Foundations.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The rapid advancement of Artificial Intelligence Generated Content (AIGC) has revolutionized video generation, enabling systems ranging from proprietary pioneers like OpenAI's Sora, Google's Veo3, and Bytedance's Seedance to powerful open-source contenders like Wan and HunyuanVideo to synthesize temporally coherent and semantically rich videos. These advancements pave the way for building "world models" that simulate real-world dynamics, with applications spanning entertainment, education, and virtual reality. However, existing reviews on video generation often focus on narrow technical fields, e.g., Generative Adversarial Networks (GAN) and diffusion models, or specific tasks (e. g., video editing), lacking a comprehensive perspective on the field's evolution, especially regarding Auto-Regressive (AR) models and integration of multimodal information. To address these gaps, this survey firstly provides a systematic review of the development of video generation technology, tracing its evolution from early GANs to dominant diffusion models, and further to emerging AR-based and multimodal techniques. We conduct an in-depth analysis of the foundational principles, key advancements, and comparative strengths/limitations. Then, we explore emerging trends in multimodal video generation, emphasizing the integration of diverse data types to enhance contextual awareness. Finally, by bridging historical developments and contemporary innovations, this survey offers insights to guide future research in video generation and its applications, including virtual/augmented reality, personalized education, autonomous driving simulations, digital entertainment, and advanced world models, in this rapidly evolving field. For more details, please refer to the project at https://github.com/sjtuplayer/Awesome-Video-Foundations.
+
+人工智能生成内容 (AIGC) 的快速发展彻底改变了视频生成，使从 OpenAI 的 Sora、Google 的 Veo3 和字节跳动的 Seedance 等专有先驱到 Wan 和 HunyuanVideo 等强大的开源竞争者的系统能够合成时间连贯且语义丰富的视频。这些进步为构建模拟现实世界动态的“世界模型”铺平了道路，其应用涵盖娱乐、教育和虚拟现实。然而，现有的视频生成评论往往集中在狭窄的技术领域，例如生成对抗网络（GAN）和扩散模型，或特定任务（例如视频编辑），缺乏对该领域发展的全面视角，特别是在自回归（AR）模型和多模态信息的集成方面。为了解决这些差距，本次调查首先对视频生成技术的发展进行了系统回顾，追踪其从早期 GAN 到占主导地位的扩散模型的演变，并进一步发展到新兴的基于 AR 和多模态技术。我们对基本原则、关键进展和比较优势/局限性进行了深入分析。然后，我们探讨多模式视频生成的新兴趋势，强调整合不同数据类型以增强情境意识。最后，通过连接历史发展和当代创新，本次调查提供了指导视频生成及其应用的未来研究的见解，包括虚拟/增强现实、个性化教育、自动驾驶模拟、数字娱乐和先进的世界模型，在这个快速发展的领域。有关更多详细信息，请参阅该项目：https://github.com/sjtuplayer/Awesome-Video-Foundations。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-08 (10 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-08
