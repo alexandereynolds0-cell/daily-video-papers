@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-10](papers/2026-04-10.md) - 20 papers
 - [2026-04-09](papers/2026-04-09.md) - 6 papers
 - [2026-04-08](papers/2026-04-08.md) - 10 papers
 - [2026-04-07](papers/2026-04-07.md) - 13 papers
@@ -55,6 +56,344 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-10 (20 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-10
+
+**Paper Count**: 20
+
+---
+
+## 1. When Numbers Speak: Aligning Textual Numerals and Visual Instances in Text-to-Video Diffusion Models / 当数字说话时：在文本到视频扩散模型中对齐文本数字和视觉实例
+
+**Date**: 2026-04-09 | **arXiv**: [2604.08546v1](http://arxiv.org/abs/2604.08546v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.08546v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/H-EmbodVis/NUMINA.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-to-video diffusion models have enabled open-ended video synthesis, but often struggle with generating the correct number of objects specified in a prompt. We introduce NUMINA , a training-free identify-then-guide framework for improved numerical alignment. NUMINA identifies prompt-layout inconsistencies by selecting discriminative self- and cross-attention heads to derive a countable latent layout. It then refines this layout conservatively and modulates cross-attention to guide regeneration. On the introduced CountBench, NUMINA improves counting accuracy by up to 7.4% on Wan2.1-1.3B, and by 4.9% and 5.5% on 5B and 14B models, respectively. Furthermore, CLIP alignment is improved while maintaining temporal consistency. These results demonstrate that structural guidance complements seed search and prompt enhancement, offering a practical path toward count-accurate text-to-video diffusion. The code is available at https://github.com/H-EmbodVis/NUMINA.
+
+文本到视频的扩散模型已经实现了开放式视频合成，但通常难以生成提示中指定的正确数量的对象。我们引入了 NUMINA，这是一个无需培训的“识别然后指导”框架，用于改进数值对齐。 NUMINA 通过选择有区别的自注意力和交叉注意力头来识别提示布局不一致，以得出可数的潜在布局。然后，它保守地完善该布局并调节交叉注意力以指导再生。在推出的 CountBench 上，NUMINA 将 Wan2.1-1.3B 的计数精度提高了 7.4%，在 5B 和 14B 型号上分别提高了 4.9% 和 5.5%。此外，在保持时间一致性的同时，CLIP 对齐得到了改进。这些结果表明，结构指导补充了种子搜索和提示增强，为计数准确的文本到视频传播提供了实用途径。代码可在 https://github.com/H-EmbodVis/NUMINA 获取。
+
+</details>
+
+---
+
+## 2. AVGen-Bench: A Task-Driven Benchmark for Multi-Granular Evaluation of Text-to-Audio-Video Generation / AVGen-Bench：用于文本到音频视频生成的多粒度评估的任务驱动基准
+
+**Date**: 2026-04-09 | **arXiv**: [2604.08540v1](http://arxiv.org/abs/2604.08540v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.08540v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-to-Audio-Video (T2AV) generation is rapidly becoming a core interface for media creation, yet its evaluation remains fragmented. Existing benchmarks largely assess audio and video in isolation or rely on coarse embedding similarity, failing to capture the fine-grained joint correctness required by realistic prompts. We introduce AVGen-Bench, a task-driven benchmark for T2AV generation featuring high-quality prompts across 11 real-world categories. To support comprehensive assessment, we propose a multi-granular evaluation framework that combines lightweight specialist models with Multimodal Large Language Models (MLLMs), enabling evaluation from perceptual quality to fine-grained semantic controllability. Our evaluation reveals a pronounced gap between strong audio-visual aesthetics and weak semantic reliability, including persistent failures in text rendering, speech coherence, physical reasoning, and a universal breakdown in musical pitch control. Code and benchmark resources are available at http://aka.ms/avgenbench.
+
+文本到音频视频 (T2AV) 生成正在迅速成为媒体创建的核心接口，但其评估仍然分散。现有的基准在很大程度上孤立地评估音频和视频，或者依赖于粗略的嵌入相似性，无法捕获现实提示所需的细粒度联合正确性。我们推出了 AVGen-Bench，这是一个任务驱动的 T2AV 生成基准，具有跨 11 个现实世界类别的高质量提示。为了支持综合评估，我们提出了一种多粒度评估框架，将轻量级专家模型与多模态大型语言模型（MLLM）相结合，实现从感知质量到细粒度语义可控性的评估。我们的评估揭示了强大的视听美学和弱语义可靠性之间的明显差距，包括文本渲染、语音连贯性、物理推理方面的持续失败以及音乐音调控制的普遍崩溃。代码和基准测试资源可从 http://aka.ms/avgenbench 获取。
+
+</details>
+
+---
+
+## 3. Phantom: Physics-Infused Video Generation via Joint Modeling of Visual and Latent Physical Dynamics / Phantom：通过视觉和潜在物理动力学联合建模生成物理注入视频
+
+**Date**: 2026-04-09 | **arXiv**: [2604.08503v1](http://arxiv.org/abs/2604.08503v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.08503v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in generative video modeling, driven by large-scale datasets and powerful architectures, have yielded remarkable visual realism. However, emerging evidence suggests that simply scaling data and model size does not endow these systems with an understanding of the underlying physical laws that govern real-world dynamics. Existing approaches often fail to capture or enforce such physical consistency, resulting in unrealistic motion and dynamics. In his work, we investigate whether integrating the inference of latent physical properties directly into the video generation process can equip models with the ability to produce physically plausible videos. To this end, we propose Phantom, a Physics-Infused Video Generation model that jointly models the visual content and latent physical dynamics. Conditioned on observed video frames and inferred physical states, Phantom jointly predicts latent physical dynamics and generates future video frames. Phantom leverages a physics-aware video representation that serves as an abstract yet informaive embedding of the underlying physics, facilitating the joint prediction of physical dynamics alongside video content without requiring an explicit specification of a complex set of physical dynamics and properties. By integrating the inference of physical-aware video representation directly into the video generation process, Phantom produces video sequences that are both visually realistic and physically consistent. Quantitative and qualitative results on both standard video generation and physics-aware benchmarks demonstrate that Phantom not only outperforms existing methods in terms of adherence to physical dynamics but also delivers competitive perceptual fidelity.
+
+在大规模数据集和强大架构的推动下，生成视频建模的最新进展产生了显着的视觉真实感。然而，新出现的证据表明，简单地缩放数据和模型大小并不能赋予这些系统对控制现实世界动力学的基本物理定律的理解。现有的方法通常无法捕获或强制执行这种物理一致性，从而导致不切实际的运动和动态。在他的工作中，我们研究了将潜在物理属性的推断直接集成到视频生成过程中是否可以使模型具有生成物理上合理的视频的能力。为此，我们提出了 Phantom，一种物理注入的视频生成模型，可以联合建模视觉内容和潜在的物理动力学。以观察到的视频帧和推断的物理状态为条件，Phantom 联合预测潜在的物理动态并生成未来的视频帧。 Phantom 利用物理感知视频表示，作为底层物理的抽象但信息丰富的嵌入，促进物理动力学与视频内容的联合预测，而不需要一组复杂的物理动力学和属性的明确规范。通过将物理感知视频表示的推理直接集成到视频生成过程中，Phantom 生成的视频序列既视觉逼真又物理一致。标准视频生成和物理感知基准的定量和定性结果表明，Phantom 不仅在遵守物理动力学方面优于现有方法，而且还提供有竞争力的感知保真度。
+
+</details>
+
+---
+
+## 4. Novel View Synthesis as Video Completion / 新颖的视图合成作为视频完成
+
+**Date**: 2026-04-09 | **arXiv**: [2604.08500v1](http://arxiv.org/abs/2604.08500v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.08500v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We tackle the problem of sparse novel view synthesis (NVS) using video diffusion models; given $K$ ($\approx 5$) multi-view images of a scene and their camera poses, we predict the view from a target camera pose. Many prior approaches leverage generative image priors encoded via diffusion models. However, models trained on single images lack multi-view knowledge. We instead argue that video models already contain implicit multi-view knowledge and so should be easier to adapt for NVS. Our key insight is to formulate sparse NVS as a low frame-rate video completion task. However, one challenge is that sparse NVS is defined over an unordered set of inputs, often too sparse to admit a meaningful order, so the models should be $\textit{invariant}$ to permutations of that input set. To this end, we present FrameCrafter, which adapts video models (naturally trained with coherent frame orderings) to permutation-invariant NVS through several architectural modifications, including per-frame latent encodings and removal of temporal positional embeddings. Our results suggest that video models can be easily trained to "forget" about time with minimal supervision, producing competitive performance on sparse-view NVS benchmarks. Project page: https://frame-crafter.github.io/
+
+我们使用视频扩散模型解决稀疏新颖视图合成（NVS）问题；给定 $K$ ($\approx 5$) 个场景的多视图图像及其相机姿势，我们从目标相机姿势预测视图。许多现有方法利用通过扩散模型编码的生成图像先验。然而，在单个图像上训练的模型缺乏多视图知识。相反，我们认为视频模型已经包含隐式多视图知识，因此应该更容易适应 NVS。我们的主要见解是将稀疏 NVS 制定为低帧率视频完成任务。然而，一个挑战是稀疏 NVS 是在一组无序输入上定义的，通常太稀疏而无法接受有意义的顺序，因此模型对于该输入集的排列应该是$\textit{invariant}$。为此，我们提出了 FrameCrafter，它通过一些架构修改（包括每帧潜在编码和删除时间位置嵌入）使视频模型（自然地使用连贯帧排序进行训练）适应排列不变的 NVS。我们的结果表明，视频模型可以轻松训练，以最少的监督“忘记”时间，从而在稀疏视图 NVS 基准测试中产生具有竞争力的性能。项目页面：https://frame-crafter.github.io/
+
+</details>
+
+---
+
+## 5. EgoEverything: A Benchmark for Human Behavior Inspired Long Context Egocentric Video Understanding in AR Environment / EgoEverything：人类行为的基准激发了 AR 环境中长上下文以自我为中心的视频理解
+
+**Date**: 2026-04-09 | **arXiv**: [2604.08342v1](http://arxiv.org/abs/2604.08342v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.08342v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long context egocentric video understanding has recently attracted significant research attention, with augmented reality (AR) highlighted as one of its most important application domains. Nevertheless, the task remains highly challenging due to the need for reasoning over extended temporal contexts and diverse, unstructured activities. Although several benchmarks exist, most egocentric datasets rely on human worn cameras and focus mainly on visual content, with limited consideration of underlying user behavior when forming video-related queries. EgoEverything is a benchmark that explicitly considers human behavior by leveraging human attention signals, abstracted from gaze data, when generating questions. It comprises over 5,000 multiple choice question answer pairs, spanning more than 100 hours of video. By integrating human attention signals during question generation, it more faithfully captures natural human behavior and offers a realistic evaluation setting for long-context egocentric video understanding in AR.
+
+长上下文自我中心视频理解最近引起了广泛的研究关注，其中增强现实（AR）被强调为其最重要的应用领域之一。然而，由于需要对扩展的时间背景和多样化的非结构化活动进行推理，这项任务仍然极具挑战性。尽管存在多个基准，但大多数以自我为中心的数据集依赖于人类佩戴的相机，并且主要关注视觉内容，在形成视频相关查询时对潜在用户行为的考虑有限。 EgoEverything 是一个基准，在生成问题时，通过利用从注视数据中提取的人类注意力信号来明确考虑人类行为。它包含 5,000 多个多项选择题答案，涵盖超过 100 小时的视频。通过在问题生成过程中整合人类注意力信号，它可以更忠实地捕捉人类的自然行为，并为 AR 中的长上下文自我中心视频理解提供现实的评估设置。
+
+</details>
+
+---
+
+## 6. DiV-INR: Extreme Low-Bitrate Diffusion Video Compression with INR Conditioning / DiV-INR：具有 INR 调节功能的极低比特率扩散视频压缩
+
+**Date**: 2026-04-09 | **arXiv**: [2604.08329v1](http://arxiv.org/abs/2604.08329v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.08329v1)
+
+**Categories**: eess.IV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present a perceptually-driven video compression framework integrating implicit neural representations (INRs) and pre-trained video diffusion models to address the extremely low bitrate regime (<0.05 bpp). Our approach exploits the complementary strengths of INRs, which provide a compact video representation, and diffusion models, which offer rich generative priors learned from large-scale datasets. The INR-based conditioning replaces traditional intra-coded keyframes with bit-efficient neural representations trained to estimate latent features and guide the diffusion process. Our joint optimization of INR weights and parameter-efficient adapters for diffusion models allows the model to learn reliable conditioning signals while encoding video-specific information with minimal parameter overhead. Our experiments on UVG, MCL-JCV, and JVET Class-B benchmarks demonstrate substantial improvements in perceptual metrics (LPIPS, DISTS, and FID) at extremely low bitrates, including improvements on BD-LPIPS up to 0.214 and BD-FID up to 91.14 relative to HEVC, while also outperforming VVC and previous strong state-of-the-art neural and INR-only video codecs. Moreover, our analysis shows that INR-conditioned diffusion-based video compression first composes the scene layout and object identities before refining textural accuracy, exposing the semantic-to-visual hierarchy that enables perceptually faithful compression at extremely low bitrates.
+
+我们提出了一种感知驱动的视频压缩框架，集成了隐式神经表示（INR）和预训练的视频扩散模型，以解决极低比特率情况（<0.05 bpp）。我们的方法利用了 INR 和扩散模型的互补优势，INR 提供了紧凑的视频表示，扩散模型提供了从大规模数据集中学习到的丰富的生成先验。基于 INR 的调节用经过训练来估计潜在特征并指导扩散过程的位高效神经表示取代了传统的帧内编码关键帧。我们对 INR 权重和扩散模型的参数高效适配器进行联合优化，使模型能够学习可靠的调节信号，同时以最小的参数开销编码视频特定信息。我们在 UVG、MCL-JCV 和 JVET B 类基准上的实验表明，在极低比特率下感知指标（LPIPS、DISTS 和 FID）有了显着改进，包括相对于 HEVC BD-LPIPS 提高到 0.214，BD-FID 提高到 91.14，同时也优于 VVC 和之前强大的最先进的神经和仅 INR 视频编解码器。此外，我们的分析表明，INR 条件的基于扩散的视频压缩首先在细化纹理准确性之前组成场景布局和对象标识，暴露语义到视觉的层次结构，从而能够以极低的比特率实现感知上忠实的压缩。
+
+</details>
+
+---
+
+## 7. Semantic Noise Reduction via Teacher-Guided Dual-Path Audio-Visual Representation Learning / 通过教师指导的双路径视听表示学习来降低语义噪声
+
+**Date**: 2026-04-09 | **arXiv**: [2604.08147v1](http://arxiv.org/abs/2604.08147v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.08147v1)
+
+**Categories**: cs.SD, cs.CV
+
+**Code**: https://github.com/wanglg20/TG-DP.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in audio-visual representation learning have shown the value of combining contrastive alignment with masked reconstruction. However, jointly optimizing these objectives in a single forward pass forces the contrastive branch to rely on randomly visible patches designed for reconstruction rather than cross-modal alignment, introducing semantic noise and optimization interference. We propose TG-DP, a Teacher-Guided Dual-Path framework that decouples reconstruction and alignment into separate optimization paths. By disentangling the masking regimes of the two branches, TG-DP enables the contrastive pathway to use a visibility pattern better suited to cross-modal alignment. A teacher model further provides auxiliary guidance for organizing visible tokens in this branch, helping reduce interference and stabilize cross-modal representation learning. TG-DP achieves state-of-the-art performance in zero-shot retrieval. On AudioSet, it improves R@1 from 35.2\% to 37.4\% for video-to-audio retrieval and from 27.9\% to 37.1\% for audio-to-video retrieval. The learned representations also remain semantically robust, achieving state-of-the-art linear-probe performance on AS20K and VGGSound. Taken together, our results suggest that decoupling multimodal objectives and introducing teacher-guided structure into the contrastive pathway provide an effective framework for improving large-scale audio-visual pretraining. Code is available at https://github.com/wanglg20/TG-DP.
+
+视听表征学习的最新进展表明了将对比对齐与掩模重建相结合的价值。然而，在单个前向传递中联合优化这些目标迫使对比分支依赖于为重建而设计的随机可见补丁，而不是跨模态对齐，从而引入语义噪声和优化干扰。我们提出了 TG-DP，一种教师指导的双路径框架，它将重建和对齐解耦为单独的优化路径。通过解开两个分支的掩蔽机制，TG-DP 使对比路径能够使用更适合跨模态对齐的可见性模式。教师模型进一步为组织该分支中的可见标记提供辅助指导，有助于减少干扰并稳定跨模态表示学习。 TG-DP 在零样本检索方面实现了最先进的性能。在 AudioSet 上，它将视频到音频检索的 R@1 从 35.2% 提高到 37.4%，将音频到视频检索的 R@1 从 27.9% 提高到 37.1%。学习到的表示在语义上也保持稳健，在 AS20K 和 VGGSound 上实现了最先进的线性探针性能。综上所述，我们的结果表明，解耦多模态目标并将教师引导结构引入对比途径为改进大规模视听预训练提供了有效的框架。代码可在 https://github.com/wanglg20/TG-DP 获取。
+
+</details>
+
+---
+
+## 8. Uni-ViGU: Towards Unified Video Generation and Understanding via A Diffusion-Based Video Generator / Uni-ViGU：通过基于扩散的视频生成器实现统一视频生成和理解
+
+**Date**: 2026-04-09 | **arXiv**: [2604.08121v1](http://arxiv.org/abs/2604.08121v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.08121v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Project**: https://fr0zencrane.github.io/uni-vigu-page/.  <details><summary><b>Abstract / 摘要</b></summary>
+
+Unified multimodal models integrating visual understanding and generation face a fundamental challenge: visual generation incurs substantially higher computational costs than understanding, particularly for video. This imbalance motivates us to invert the conventional paradigm: rather than extending understanding-centric MLLMs to support generation, we propose Uni-ViGU, a framework that unifies video generation and understanding by extending a video generator as the foundation. We introduce a unified flow method that performs continuous flow matching for video and discrete flow matching for text within a single process, enabling coherent multimodal generation. We further propose a modality-driven MoE-based framework that augments Transformer blocks with lightweight layers for text generation while preserving generative priors. To repurpose generation knowledge for understanding, we design a bidirectional training mechanism with two stages: Knowledge Recall reconstructs input prompts to leverage learned text-video correspondences, while Capability Refinement fine-tunes on detailed captions to establish discriminative shared representations. Experiments demonstrate that Uni-ViGU achieves competitive performance on both video generation and understanding, validating generation-centric architectures as a scalable path toward unified multimodal intelligence. Project Page and Code: https://fr0zencrane.github.io/uni-vigu-page/.
+
+集成视觉理解和生成的统一多模态模型面临着一个根本性的挑战：视觉生成比理解产生更高的计算成本，特别是对于视频。这种不平衡促使我们颠覆传统范式：我们提出了 Uni-ViGU，一种通过扩展视频生成器作为基础来统一视频生成和理解的框架，而不是扩展以理解为中心的 MLLM 来支持生成。我们引入了一种统一的流方法，可以在单个进程中执行视频的连续流匹配和文本的离散流匹配，从而实现连贯的多模态生成。我们进一步提出了一种基于 MoE 的模态驱动框架，该框架通过轻量级层增强 Transformer 块以进行文本生成，同时保留生成先验。为了重新利用生成知识来促进理解，我们设计了一种包含两个阶段的双向训练机制：知识召回重建输入提示以利用学习的文本视频对应关系，而能力细化则对详细标题进行微调以建立有区别的共享表示。实验表明，Uni-ViGU 在视频生成和理解方面实现了具有竞争力的性能，验证了以生成为中心的架构是实现统一多模态智能的可扩展路径。项目页面和代码：https://fr0zencrane.github.io/uni-vigu-page/。
+
+</details>
+
+---
+
+## 9. Small Vision-Language Models are Smart Compressors for Long Video Understanding / 小视觉语言模型是用于长视频理解的智能压缩器
+
+**Date**: 2026-04-09 | **arXiv**: [2604.08120v1](http://arxiv.org/abs/2604.08120v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.08120v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Adapting Multimodal Large Language Models (MLLMs) for hour-long videos is bottlenecked by context limits. Dense visual streams saturate token budgets and exacerbate the lost-in-the-middle phenomenon. Existing heuristics, like sparse sampling or uniform pooling, blindly sacrifice fidelity by discarding decisive moments and wasting bandwidth on irrelevant backgrounds. We propose Tempo, an efficient query-aware framework compressing long videos for downstream understanding. Tempo leverages a Small Vision-Language Model (SVLM) as a local temporal compressor, casting token reduction as an early cross-modal distillation process to generate compact, intent-aligned representations in a single forward pass. To enforce strict budgets without breaking causality, we introduce Adaptive Token Allocation (ATA). Exploiting the SVLM's zero-shot relevance prior and semantic front-loading, ATA acts as a training-free $O(1)$ dynamic router. It allocates dense bandwidth to query-critical segments while compressing redundancies into minimal temporal anchors to maintain the global storyline. Extensive experiments show our 6B architecture achieves state-of-the-art performance with aggressive dynamic compression (0.5-16 tokens/frame). On the extreme-long LVBench (4101s), Tempo scores 52.3 under a strict 8K visual budget, outperforming GPT-4o and Gemini 1.5 Pro. Scaling to 2048 frames reaches 53.7. Crucially, Tempo compresses hour-long videos substantially below theoretical limits, proving true long-form video understanding relies on intent-driven efficiency rather than greedily padded context windows.
+
+针对长达一小时的视频采用多模态大型语言模型 (MLLM) 会受到上下文限制的瓶颈。密集的视觉流使代币预算饱和，并加剧了“迷失在中间”的现象。现有的启发式方法，例如稀疏采样或均匀池化，通过丢弃决定性时刻并在不相关的背景上浪费带宽来盲目地牺牲保真度。我们提出了 Tempo，一种高效的查询感知框架，可压缩长视频以供下游理解。 Tempo 利用小型视觉语言模型 (SVLM) 作为本地时间压缩器，将标记缩减作为早期的跨模式蒸馏过程，以在单个前向传递中生成紧凑的、意图一致的表示。为了在不破坏因果关系的情况下执行严格的预算，我们引入了自适应代币分配（ATA）。利用 SVLM 的零样本相关先验和语义前端加载，ATA 充当免训练 $O(1)$ 动态路由器。它为查询关键段分配密集的带宽，同时将冗余压缩到最小的时间锚点以维持全局故事情节。大量实验表明，我们的 6B 架构通过积极的动态压缩（0.5-16 个令牌/帧）实现了最先进的性能。在超长的 LVBench（4101s）上，Tempo 在严格的 8K 视觉预算下得分为 52.3，表现优于 GPT-4o 和 Gemini 1.5 Pro。缩放到2048帧达到53.7。至关重要的是，Tempo 将长达一小时的视频压缩得大大低于理论限制，证明真正的长视频理解依赖于意图驱动的效率，而不是贪婪地填充上下文窗口。
+
+</details>
+
+---
+
+## 10. DiffVC: A Non-autoregressive Framework Based on Diffusion Model for Video Captioning / DiffVC：基于扩散模型的视频字幕非自回归框架
+
+**Date**: 2026-04-09 | **arXiv**: [2604.08084v1](http://arxiv.org/abs/2604.08084v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.08084v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current video captioning methods usually use an encoder-decoder structure to generate text autoregressively. However, autoregressive methods have inherent limitations such as slow generation speed and large cumulative error. Furthermore, the few non-autoregressive counterparts suffer from deficiencies in generation quality due to the lack of sufficient multimodal interaction modeling. Therefore, we propose a non-autoregressive framework based on Diffusion model for Video Captioning (DiffVC) to address these issues. Its parallel decoding can effectively solve the problems of generation speed and cumulative error. At the same time, our proposed discriminative conditional Diffusion Model can generate higher-quality textual descriptions. Specifically, we first encode the video into a visual representation. During training, Gaussian noise is added to the textual representation of the ground-truth caption. Then, a new textual representation is generated via the discriminative denoiser with the visual representation as a conditional constraint. Finally, we input the new textual representation into a non-autoregressive language model to generate captions. During inference, we directly sample noise from the Gaussian distribution for generation. Experiments on MSVD, MSR-VTT, and VATEX show that our method can outperform previous non-autoregressive methods and achieve comparable performance to autoregressive methods, e.g., it achieved a maximum improvement of 9.9 on the CIDEr and improvement of 2.6 on the B@4, while having faster generation speed. The source code will be available soon.
+
+当前的视频字幕方法通常使用编码器-解码器结构来自回归生成文本。然而，自回归方法存在生成速度慢、累积误差大等固有局限性。此外，由于缺乏足够的多模态交互建模，少数非自回归对应物在生成质量方面存在缺陷。因此，我们提出了一种基于视频字幕扩散模型（DiffVC）的非自回归框架来解决这些问题。其并行解码可以有效解决生成速度和累积误差问题。同时，我们提出的判别性条件扩散模型可以生成更高质量的文本描述。具体来说，我们首先将视频编码为视觉表示。在训练期间，高斯噪声被添加到真实标题的文本表示中。然后，通过判别式降噪器生成新的文本表示，并将视觉表示作为条件约束。最后，我们将新的文本表示输入到非自回归语言模型中以生成字幕。在推理过程中，我们直接从高斯分布中采样噪声来生成。在MSVD、MSR-VTT和VATEX上的实验表明，我们的方法可以优于以前的非自回归方法，并达到与自回归方法相当的性能，例如，它在CIDEr上实现了9.9的最大改进，在B@4上实现了2.6的最大改进，同时具有更快的生成速度。源代码很快就会提供。
+
+</details>
+
+---
+
+## 11. AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding / AdaSpark：自适应稀疏性以实现高效的长视频理解
+
+**Date**: 2026-04-09 | **arXiv**: [2604.08077v1](http://arxiv.org/abs/2604.08077v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.08077v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Processing long-form videos with Video Large Language Models (Video-LLMs) is computationally prohibitive. Current efficiency methods often compromise fine-grained perception through irreversible information disposal or inhibit long-range temporal modeling via rigid, predefined sparse patterns. This paper introduces AdaSpark, an adaptive sparsity framework designed to address these limitations. AdaSpark first partitions video inputs into 3D spatio-temporal cubes. It then employs two co-designed, context-aware components: (1) Adaptive Cube-Selective Attention (AdaS-Attn), which adaptively selects a subset of relevant video cubes to attend for each query token, and (2) Adaptive Token-Selective FFN (AdaS-FFN), which selectively processes only the most salient tokens within each cube. An entropy-based (Top-p) selection mechanism adaptively allocates computational resources based on input complexity. Experiments demonstrate that AdaSpark significantly reduces computational load by up to 57% FLOPs while maintaining comparable performance to dense models and preserving fine-grained, long-range dependencies, as validated on challenging hour-scale video benchmarks.
+
+使用视频大语言模型 (Video-LLM) 处理长格式视频的计算量巨大。当前的效率方法通常通过不可逆的信息处理来损害细粒度的感知，或者通过严格的、预定义的稀疏模式来抑制远程时间建模。本文介绍了 AdaSpark，这是一种旨在解决这些限制的自适应稀疏框架。 AdaSpark 首先将视频输入划分为 3D 时空立方体。然后，它采用两个共同设计的上下文感知组件：(1) 自适应立方体选择性注意 (AdaS-Attn)，它自适应地选择相关视频立方体的子集来关注每个查询标记；(2) 自适应标记选择性 FFN (AdaS-FFN)，它仅有选择地处理每个立方体内最显着的标记。基于熵（Top-p）的选择机制根据输入复杂性自适应地分配计算资源。实验表明，AdaSpark 显着降低了高达 57% FLOP 的计算负载，同时保持了与密集模型相当的性能，并保留了细粒度、长范围的依赖关系，这一点在具有挑战性的小时尺度视频基准测试中得到了验证。
+
+</details>
+
+---
+
+## 12. ABMAMBA: Multimodal Large Language Model with Aligned Hierarchical Bidirectional Scan for Efficient Video Captioning / ABMAMBA：具有对齐的分层双向扫描的多模态大语言模型，可实现高效的视频字幕
+
+**Date**: 2026-04-09 | **arXiv**: [2604.08050v1](http://arxiv.org/abs/2604.08050v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.08050v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In this study, we focus on video captioning by fully open multimodal large language models (MLLMs). The comprehension of visual sequences is challenging because of their intricate temporal dependencies and substantial sequence length. The core attention mechanisms of existing Transformer-based approaches scale quadratically with the sequence length, making them computationally prohibitive. To address these limitations, we propose Aligned Hierarchical Bidirectional Scan Mamba (ABMamba), a fully open MLLM with linear computational complexity that enables the scalable processing of video sequences. ABMamba extends Deep State Space Models as its language backbone, replacing the costly quadratic attention mechanisms, and employs a novel Aligned Hierarchical Bidirectional Scan module that processes videos across multiple temporal resolutions. On standard video captioning benchmarks such as VATEX and MSR-VTT, ABMamba demonstrates competitive performance compared to typical MLLMs while achieving approximately three times higher throughput.
+
+在本研究中，我们重点关注完全开放的多模态大语言模型（MLLM）的视频字幕。视觉序列的理解具有挑战性，因为它们复杂的时间依赖性和大量的序列长度。现有基于 Transformer 的方法的核心注意力机制与序列长度成二次方缩放，这使得它们的计算量过高。为了解决这些限制，我们提出了对齐分层双向扫描 Mamba (ABMamba)，这是一种完全开放的 MLLM，具有线性计算复杂性，可实现视频序列的可扩展处理。 ABMamba 扩展了深度状态空间模型作为其语言骨干，取代了昂贵的二次注意力机制，并采用了一种新颖的对齐分层双向扫描模块，可以跨多个时间分辨率处理视频。在 VATEX 和 MSR-VTT 等标准视频字幕基准测试中，ABMamba 表现出与典型 MLLM 相比具有竞争力的性能，同时实现了大约三倍的吞吐量。
+
+</details>
+
+---
+
+## 13. Bridging Time and Space: Decoupled Spatio-Temporal Alignment for Video Grounding / 连接时间和空间：视频接地的解耦时空对齐
+
+**Date**: 2026-04-09 | **arXiv**: [2604.08014v1](http://arxiv.org/abs/2604.08014v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.08014v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Spatio-Temporal Video Grounding requires jointly localizing target objects across both temporal and spatial dimensions based on natural language queries, posing fundamental challenges for existing Multimodal Large Language Models (MLLMs). We identify two core challenges: \textit{entangled spatio-temporal alignment}, arising from coupling two heterogeneous sub-tasks within the same autoregressive output space, and \textit{dual-domain visual token redundancy}, where target objects exhibit simultaneous temporal and spatial sparsity, rendering the overwhelming majority of visual tokens irrelevant to the grounding query. To address these, we propose \textbf{Bridge-STG}, an end-to-end framework that decouples temporal and spatial localization while maintaining semantic coherence. While decoupling is the natural solution to this entanglement, it risks creating a semantic gap between the temporal MLLM and the spatial decoder. Bridge-STG resolves this through two pivotal designs: the \textbf{Spatio-Temporal Semantic Bridging (STSB)} mechanism with Explicit Temporal Alignment (ETA) distills the MLLM's temporal reasoning context into enriched bridging queries as a robust semantic interface; and the \textbf{Query-Guided Spatial Localization (QGSL)} module leverages these queries to drive a purpose-built spatial decoder with multi-layer interactive queries and positive/negative frame sampling, jointly eliminating dual-domain visual token redundancy. Extensive experiments across multiple benchmarks demonstrate that Bridge-STG achieves state-of-the-art performance among MLLM-based methods. Bridge-STG improves average m\_vIoU from $26.4$ to $34.3$ on VidSTG and demonstrates strong cross-task transfer across various fine-grained video understanding tasks under a unified multi-task training regime.
+
+时空视频基础需要基于自然语言查询在时间和空间维度上联合定位目标对象，这对现有的多模态大语言模型（MLLM）提出了根本性挑战。我们确定了两个核心挑战：\textit{纠缠的时空对齐}，是由于在同一自回归输出空间内耦合两个异构子任务而产生的；\textit{双域视觉令牌冗余}，其中目标对象表现出同时的时间和空间稀疏性，使得绝大多数视觉令牌与基础查询无关。为了解决这些问题，我们提出了 \textbf{Bridge-STG}，这是一种端到端框架，可以在保持语义一致性的同时解耦时间和空间定位。虽然解耦是解决这种纠缠的自然解决方案，但它有可能在时间 MLLM 和空间解码器之间产生语义差距。 Bridge-STG 通过两个关键设计解决了这个问题：具有显式时间对齐 (ETA) 的 \textbf{时空语义桥接 (STSB)} 机制将 MLLM 的时间推理上下文提炼为丰富的桥接查询，作为强大的语义接口； \textbf{查询引导空间定位（QGSL）}模块利用这些查询来驱动具有多层交互式查询和正/负帧采样的专用空间解码器，共同消除双域视觉令牌冗余。跨多个基准的大量实验表明，Bridge-STG 在基于 MLLM 的方法中实现了最先进的性能。 Bridge-STG 将 VidSTG 上的平均 m\_vIoU 从 26.4 美元提高到 34.3 美元，并在统一的多任务训练机制下展示了跨各种细粒度视频理解任务的强大跨任务传输。
+
+</details>
+
+---
+
+## 14. SceneScribe-1M: A Large-Scale Video Dataset with Comprehensive Geometric and Semantic Annotations / SceneScribe-1M：具有全面几何和语义注释的大规模视频数据集
+
+**Date**: 2026-04-09 | **arXiv**: [2604.07990v1](http://arxiv.org/abs/2604.07990v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.07990v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The convergence of 3D geometric perception and video synthesis has created an unprecedented demand for large-scale video data that is rich in both semantic and spatio-temporal information. While existing datasets have advanced either 3D understanding or video generation, a significant gap remains in providing a unified resource that supports both domains at scale. To bridge this chasm, we introduce SceneScribe-1M, a new large-scale, multi-modal video dataset. It comprises one million in-the-wild videos, each meticulously annotated with detailed textual descriptions, precise camera parameters, dense depth maps, and consistent 3D point tracks. We demonstrate the versatility and value of SceneScribe-1M by establishing benchmarks across a wide array of downstream tasks, including monocular depth estimation, scene reconstruction, and dynamic point tracking, as well as generative tasks such as text-to-video synthesis, with or without camera control. By open-sourcing SceneScribe-1M, we aim to provide a comprehensive benchmark and a catalyst for research, fostering the development of models that can both perceive the dynamic 3D world and generate controllable, realistic video content.
+
+3D几何感知和视频合成的融合对富含语义和时空信息的大规模视频数据产生了前所未有的需求。虽然现有数据集已经提高了 3D 理解或视频生成能力，但在提供大规模支持这两个领域的统一资源方面仍然存在巨大差距。为了弥合这一鸿沟，我们引入了 SceneScribe-1M，这是一个新的大规模、多模式视频数据集。它包含一百万个野外视频，每个视频都经过精心注释，包括详细的文本描述、精确的相机参数、密集的深度图和一致的 3D 点轨迹。我们通过在各种下游任务中建立基准来展示 SceneScribe-1M 的多功能性和价值，这些任务包括单目深度估计、场景重建和动态点跟踪，以及文本到视频合成（带或不带相机控制）等生成任务。通过开源 SceneScribe-1M，我们的目标是为研究提供全面的基准和催化剂，促进模型的开发，这些模型既可以感知动态 3D 世界，又可以生成可控、逼真的视频内容。
+
+</details>
+
+---
+
+## 15. Lighting-grounded Video Generation with Renderer-based Agent Reasoning / 使用基于渲染器的代理推理生成基于光照的视频
+
+**Date**: 2026-04-09 | **arXiv**: [2604.07966v1](http://arxiv.org/abs/2604.07966v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.07966v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion models have achieved remarkable progress in video generation, but their controllability remains a major limitation. Key scene factors such as layout, lighting, and camera trajectory are often entangled or only weakly modeled, restricting their applicability in domains like filmmaking and virtual production where explicit scene control is essential. We present LiVER, a diffusion-based framework for scene-controllable video generation. To achieve this, we introduce a novel framework that conditions video synthesis on explicit 3D scene properties, supported by a new large-scale dataset with dense annotations of object layout, lighting, and camera parameters. Our method disentangles these properties by rendering control signals from a unified 3D representation. We propose a lightweight conditioning module and a progressive training strategy to integrate these signals into a foundational video diffusion model, ensuring stable convergence and high fidelity. Our framework enables a wide range of applications, including image-to-video and video-to-video synthesis where the underlying 3D scene is fully editable. To further enhance usability, we develop a scene agent that automatically translates high-level user instructions into the required 3D control signals. Experiments show that LiVER achieves state-of-the-art photorealism and temporal consistency while enabling precise, disentangled control over scene factors, setting a new standard for controllable video generation.
+
+扩散模型在视频生成方面取得了显着的进步，但其可控性仍然是一个主要限制。布局、照明和摄像机轨迹等关键场景因素通常是相互纠缠的或仅弱建模，限制了它们在电影制作和虚拟制作等领域的适用性，在这些领域中，明确的场景控制至关重要。我们提出了 LiVER，一种基于扩散的场景可控视频生成框架。为了实现这一目标，我们引入了一种新颖的框架，该框架在显式 3D 场景属性上调节视频合成，并由具有对象布局、照明和相机参数密集注释的新大规模数据集支持。我们的方法通过从统一的 3D 表示中渲染控制信号来理清这些属性。我们提出了一种轻量级调节模块和渐进式训练策略，将这些信号集成到基础视频扩散模型中，确保稳定的收敛和高保真度。我们的框架支持广泛的应用，包括图像到视频和视频到视频合成，其中底层 3D 场景是完全可编辑的。为了进一步增强可用性，我们开发了一种场景代理，可以自动将高级用户指令转换为所需的 3D 控制信号。实验表明，LiVER 实现了最先进的照片级真实感和时间一致性，同时能够对场景因素进行精确、解开的控制，为可控视频生成设立了新标准。
+
+</details>
+
+---
+
+## 16. ImVideoEdit: Image-learning Video Editing via 2D Spatial Difference Attention Blocks / ImVideoEdit：通过 2D 空间差异注意力块进行图像学习视频编辑
+
+**Date**: 2026-04-09 | **arXiv**: [2604.07958v1](http://arxiv.org/abs/2604.07958v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.07958v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current video editing models often rely on expensive paired video data, which limits their practical scalability. In essence, most video editing tasks can be formulated as a decoupled spatiotemporal process, where the temporal dynamics of the pretrained model are preserved while spatial content is selectively and precisely modified. Based on this insight, we propose ImVideoEdit, an efficient framework that learns video editing capabilities entirely from image pairs. By freezing the pre-trained 3D attention modules and treating images as single-frame videos, we decouple the 2D spatial learning process to help preserve the original temporal dynamics. The core of our approach is a Predict-Update Spatial Difference Attention module that progressively extracts and injects spatial differences. Rather than relying on rigid external masks, we incorporate a Text-Guided Dynamic Semantic Gating mechanism for adaptive and implicit text-driven modifications. Despite training on only 13K image pairs for 5 epochs with exceptionally low computational overhead, ImVideoEdit achieves editing fidelity and temporal consistency comparable to larger models trained on extensive video datasets.
+
+当前的视频编辑模型通常依赖于昂贵的配对视频数据，这限制了它们的实际可扩展性。本质上，大多数视频编辑任务可以被表述为解耦的时空过程，其中预训练模型的时间动态被保留，而空间内容被选择性地、精确地修改。基于这一见解，我们提出了 ImVideoEdit，这是一个完全从图像对学习视频编辑功能的高效框架。通过冻结预先训练的 3D 注意力模块并将图像视为单帧视频，我们解耦了 2D 空间学习过程，以帮助保留原始的时间动态。我们方法的核心是预测更新空间差异注意力模块，它逐步提取和注入空间差异。我们不依赖严格的外部掩码，而是采用文本引导的动态语义门控机制来进行自适应和隐式文本驱动的修改。尽管仅对 13K 图像对进行 5 个 epoch 的训练，计算开销极低，但 ImVideoEdit 实现的编辑保真度和时间一致性与在大量视频数据集上训练的大型模型相当。
+
+</details>
+
+---
+
+## 17. PanoSAM2: Lightweight Distortion- and Memory-aware Adaptions of SAM2 for 360 Video Object Segmentation / PanoSAM2：SAM2 的轻量级失真和内存感知改编，用于 360 度视频对象分割
+
+**Date**: 2026-04-09 | **arXiv**: [2604.07901v1](http://arxiv.org/abs/2604.07901v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.07901v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+360 video object segmentation (360VOS) aims to predict temporally-consistent masks in 360 videos, offering full-scene coverage, benefiting applications, such as VR/AR and embodied AI. Learning 360VOS model is nontrivial due to the lack of high-quality labeled dataset. Recently, Segment Anything Models (SAMs), especially SAM2 -- with its design of memory module -- shows strong, promptable VOS capability. However, directly using SAM2 for 360VOS yields implausible results as 360 videos suffer from the projection distortion, semantic inconsistency of left-right sides, and sparse object mask information in SAM2's memory. To this end, we propose PanoSAM2, a novel 360VOS framework based on our lightweight distortion- and memory-aware adaptation strategies of SAM2 to achieve reliable 360VOS while retaining SAM2's user-friendly prompting design. Concretely, to tackle the projection distortion and semantic inconsistency issues, we propose a Pano-Aware Decoder with seam-consistent receptive fields and iterative distortion refinement to maintain continuity across the 0/360 degree boundary. Meanwhile, a Distortion-Guided Mask Loss is introduced to weight pixels by distortion magnitude, stressing stretched regions and boundaries. To address the object sparsity issue, we propose a Long-Short Memory Module to maintain a compact long-term object pointer to re-instantiate and align short-term memories, thereby enhancing temporal coherence. Extensive experiments show that PanoSAM2 yields substantial gains over SAM2: +5.6 on 360VOTS and +6.7 on PanoVOS, showing the effectiveness of our method.
+
+360 度视频对象分割 (360VOS) 旨在预测 360 度视频中时间一致的掩模，提供全场景覆盖，使 VR/AR 和嵌入式 AI 等应用受益。由于缺乏高质量的标记数据集，学习 360VOS 模型并非易事。最近，分段任意模型（SAM），尤其是SAM2——及其内存模块的设计——显示出强大、及时的VOS能力。然而，直接将 SAM2 用于 360VOS 会产生令人难以置信的结果，因为 360 度视频存在投影失真、左右两侧语义不一致以及 SAM2 内存中对象掩码信息稀疏的问题。为此，我们提出了 PanoSAM2，一种基于 SAM2 的轻量级失真和内存感知自适应策略的新型 360VOS 框架，以实现可靠的 360VOS，同时保留 SAM2 的用户友好提示设计。具体来说，为了解决投影失真和语义不一致问题，我们提出了一种具有接缝一致感受野和迭代失真细化的全景感知解码器，以保持跨 0/360 度边界的连续性。同时，引入了失真引导掩模损失，通过失真幅度对像素进行加权，强调拉伸区域和边界。为了解决对象稀疏问题，我们提出了一种长短期内存模块来维护紧凑的长期对象指针，以重新实例化和对齐短期内存，从而增强时间一致性。大量实验表明，PanoSAM2 比 SAM2 产生了显着的增益：360VOTS 上 +5.6，PanoVOS 上 +6.7，显示了我们方法的有效性。
+
+</details>
+
+---
+
+## 18. VSAS-BENCH: Real-Time Evaluation of Visual Streaming Assistant Models / VSAS-BENCH：视觉流媒体助理模型的实时评估
+
+**Date**: 2026-04-08 | **arXiv**: [2604.07634v1](http://arxiv.org/abs/2604.07634v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.07634v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/apple/ml-vsas-bench.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Streaming vision-language models (VLMs) continuously generate responses given an instruction prompt and an online stream of input frames. This is a core mechanism for real-time visual assistants. Existing VLM frameworks predominantly assess models in offline settings. In contrast, the performance of a streaming VLM depends on additional metrics beyond pure video understanding, including proactiveness, which reflects the timeliness of the model's responses, and consistency, which captures the robustness of its responses over time. To address this limitation, we propose VSAS-Bench, a new framework and benchmark for Visual Streaming Assistants. In contrast to prior benchmarks that primarily employ single-turn question answering on video inputs, VSAS-Bench features temporally dense annotations with over 18,000 annotations across diverse input domains and task types. We introduce standardized synchronous and asynchronous evaluation protocols, along with metrics that isolate and measure distinct capabilities of streaming VLMs. Using this framework, we conduct large-scale evaluations of recent video and streaming VLMs, analyzing the accuracy-latency trade-off under key design factors such as memory buffer length, memory access policy, and input resolution, yielding several practical insights. Finally, we show empirically that conventional VLMs can be adapted to streaming settings without additional training, and demonstrate that these adapted models outperform recent streaming VLMs. For example, Qwen3-VL-4B surpasses Dispider, the best streaming VLM on our benchmark, by 3% under the asynchronous protocol. The benchmark and code will be available at https://github.com/apple/ml-vsas-bench.
+
+流式视觉语言模型 (VLM) 在给定指令提示和在线输入帧流的情况下不断生成响应。这是实时视觉助手的核心机制。现有的 VLM 框架主要评估离线环境中的模型。相比之下，流式 VLM 的性能取决于纯视频理解之外的其他指标，包括主动性（反映模型响应的及时性）和一致性（捕获随时间变化的响应的稳健性）。为了解决这一限制，我们提出了 VSAS-Bench，这是视觉流媒体助手的新框架和基准。与之前主要在视频输入上采用单轮问答的基准测试相比，VSAS-Bench 具有时间密集的注释，在不同的输入域和任务类型中拥有超过 18,000 个注释。我们引入标准化的同步和异步评估协议，以及隔离和测量流式 VLM 不同功能的指标。使用这个框架，我们对最近的视频和流媒体 VLM 进行了大规模评估，分析了内存缓冲区长度、内存访问策略和输入分辨率等关键设计因素下的准确性与延迟权衡，得出了一些实用的见解。最后，我们凭经验证明传统的 VLM 无需额外训练即可适应流媒体设置，并证明这些适应模型优于最新的流媒体 VLM。例如，Qwen3-VL-4B 在异步协议下超过了我们基准测试中最好的流媒体 VLM Dispider 3%。基准测试和代码将在 https://github.com/apple/ml-vsas-bench 上提供。
+
+</details>
+
+---
+
+## 19. TR-EduVSum: A Turkish-Focused Dataset and Consensus Framework for Educational Video Summarization / TR-EduVSum：以土耳其为中心的教育视频摘要数据集和共识框架
+
+**Date**: 2026-04-08 | **arXiv**: [2604.07553v1](http://arxiv.org/abs/2604.07553v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.07553v1)
+
+**Categories**: cs.CL, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This study presents a framework for generating the gold-standard summary fully automatically and reproducibly based on multiple human summaries of Turkish educational videos. Within the scope of the study, a new dataset called TR-EduVSum was created, encompassing 82 Turkish course videos in the field of "Data Structures and Algorithms" and containing a total of 3281 independent human summaries. Inspired by existing pyramid-based evaluation approaches, the AutoMUP (Automatic Meaning Unit Pyramid) method is proposed, which extracts consensus-based content from multiple human summaries. AutoMUP clusters the meaning units extracted from human summaries using embedding, statistically models inter-participant agreement, and generates graded summaries based on consensus weight. In this framework, the gold summary corresponds to the highest-consensus AutoMUP configuration, constructed from the most frequently supported meaning units across human summaries. Experimental results show that AutoMUP summaries exhibit high semantic overlap with robust LLM (Large Language Model) summaries such as Flash 2.5 and GPT-5.1. Furthermore, ablation studies clearly demonstrate the decisive role of consensus weight and clustering in determining summary quality. The proposed approach can be generalized to other Turkic languages at low cost.
+
+这项研究提出了一个框架，用于根据土耳其教育视频的多个人工摘要完全自动且可重复地生成黄金标准摘要。在研究范围内，创建了一个名为 TR-EduVSum 的新数据集，其中包含“数据结构和算法”领域的 82 个土耳其语课程视频，总共包含 3281 个独立的人工摘要。受现有基于金字塔的评估方法的启发，提出了 AutoMUP（自动意义单位金字塔）方法，该方法从多个人工摘要中提取基于共识的内容。 AutoMUP 使用嵌入对从人工摘要中提取的含义单元进行聚类，对参与者间的一致性进行统计建模，并根据共识权重生成分级摘要。在此框架中，黄金摘要对应于最高共识的 AutoMUP 配置，由人类摘要中最常支持的含义单元构建而成。实验结果表明，AutoMUP 摘要与强大的 LLM（大型语言模型）摘要（例如 Flash 2.5 和 GPT-5.1）表现出高度语义重叠。此外，消融研究清楚地证明了共识权重和聚类在确定摘要质量方面的决定性作用。所提出的方法可以以低成本推广到其他突厥语言。
+
+</details>
+
+---
+
+## 20. Grasp as You Dream: Imitating Functional Grasping from Generated Human Demonstrations / 随心所欲地抓取：从生成的人类演示中模仿功能性抓取
+
+**Date**: 2026-04-08 | **arXiv**: [2604.07517v1](http://arxiv.org/abs/2604.07517v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.07517v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Building generalist robots capable of performing functional grasping in everyday, open-world environments remains a significant challenge due to the vast diversity of objects and tasks. Existing methods are either constrained to narrow object/task sets or rely on prohibitively large-scale data collection to capture real-world variability. In this work, we present an alternative approach, GraspDreamer, a method that leverages human demonstrations synthesized by visual generative models (VGMs) (e.g., video generation models) to enable zero-shot functional grasping without labor-intensive data collection. The key idea is that VGMs pre-trained on internet-scale human data implicitly encode generalized priors about how humans interact with the physical world, which can be combined with embodiment-specific action optimization to enable functional grasping with minimal effort. Extensive experiments on the public benchmarks with different robot hands demonstrate the superior data efficiency and generalization performance of GraspDreamer compared to previous methods. Real-world evaluations further validate the effectiveness on real robots. Additionally, we showcase that GraspDreamer can (1) be naturally extended to downstream manipulation tasks, and (2) can generate data to support visuomotor policy learning.
+
+由于物体和任务的多样性，构建能够在日常开放世界环境中执行功能性抓取的多面手机器人仍然是一项重大挑战。现有的方法要么局限于狭窄的对象/任务集，要么依赖大规模的数据收集来捕获现实世界的变化。在这项工作中，我们提出了一种替代方法 GraspDreamer，该方法利用视觉生成模型（VGM）（例如视频生成模型）合成的人类演示来实现零样本功能抓取，而无需劳动密集型数据收集。关键思想是，在互联网规模的人类数据上预先训练的 VGM 隐式地编码了关于人类如何与物理世界交互的广义先验，这可以与特定于实施例的动作优化相结合，以最小的努力实现功能性抓取。使用不同机器人手在公共基准上进行的大量实验表明，与之前的方法相比，GraspDreamer 具有卓越的数据效率和泛化性能。真实世界的评估进一步验证了真实机器人的有效性。此外，我们还展示了 GraspDreamer 可以（1）自然地扩展到下游操作任务，（2）可以生成数据来支持视觉运动策略学习。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-09 (6 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-09
