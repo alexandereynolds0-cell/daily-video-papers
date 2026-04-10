@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-10](papers/2026-04-10.md) - 7 papers
 - [2026-04-09](papers/2026-04-09.md) - 4 papers
 - [2026-04-08](papers/2026-04-08.md) - 7 papers
 - [2026-04-07](papers/2026-04-07.md) - 1 papers
@@ -48,6 +49,132 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-10 (7 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-04-10
+
+**Paper Count**: 7
+
+---
+
+## 1. Grounding Clinical AI Competency in Human Cognition Through the Clinical World Model and Skill-Mix Framework / 通过临床世界模型和技能组合框架将临床人工智能能力植根于人类认知
+
+**Date**: 2026-04-09 | **arXiv**: [2604.08226v1](http://arxiv.org/abs/2604.08226v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.08226v1)
+
+**Categories**: cs.AI, cs.HC, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The competency of any intelligent agent is bounded by its formal account of the world in which it operates. Clinical AI lacks such an account. Existing frameworks address evaluation, regulation, or system design in isolation, without a shared model of the clinical world to connect them. We introduce the Clinical World Model, a framework that formalizes care as a tripartite interaction among Patient, Provider, and Ecosystem. To formalize how any agent, whether human or artificial, transforms information into clinical action, we develop parallel decision-making architectures for providers, patients, and AI agents, grounded in validated principles of clinical cognition.   The Clinical AI Skill-Mix operationalizes competency through eight dimensions. Five define the clinical competency space (condition, phase, care setting, provider role, and task) and three specify how AI engages human reasoning (assigned authority, agent facing, and anchoring layer). The combinatorial product of these dimensions yields a space of billions of distinct competency coordinates. A central structural implication is that validation within one coordinate provides minimal evidence for performance in another, rendering the competency space irreducible. The framework supplies a common grammar through which clinical AI can be specified, evaluated, and bounded across stakeholders. By making this structure explicit, the Clinical World Model reframes the field's central question from whether AI works to in which competency coordinates reliability has been demonstrated, and for whom.
+
+任何智能代理的能力都受到其对其运作的世界的正式描述的限制。临床人工智能缺乏这样的账户。现有框架单独处理评估、监管或系统设计，没有临床世界的共享模型来连接它们。我们引入了临床世界模型，该框架将护理形式化为患者、提供者和生态系统之间的三方互动。为了正式确定任何代理（无论是人类还是人工）如何将信息转化为临床行动，我们基于经过验证的临床认知原则，为提供者、患者和人工智能代理开发并行决策架构。   临床人工智能技能组合通过八个维度来发挥能力。其中五个定义了临床能力空间（条件、阶段、护理环境、提供者角色和任务），三个指定了人工智能如何参与人类推理（分配的权限、面向代理和锚定层）。这些维度的组合乘积产生了数十亿个不同能力坐标的空间。一个中心结构含义是，一个坐标内的验证为另一个坐标内的绩效提供了最少的证据，从而使能力空间不可简化。该框架提供了一个通用语法，通过该语法可以在利益相关者之间指定、评估和界定临床人工智能。通过使这种结构变得明确，临床世界模型重新构建了该领域的核心问题：人工智能是否有效，能力协调可靠性已得到证明，以及对谁有效。
+
+</details>
+
+---
+
+## 2. How Far Are Large Multimodal Models from Human-Level Spatial Action? A Benchmark for Goal-Oriented Embodied Navigation in Urban Airspace / 大型多模态模型距离人类水平的空间行动还有多远？城市空域目标导向的嵌入式导航基准
+
+**Date**: 2026-04-09 | **arXiv**: [2604.07973v1](http://arxiv.org/abs/2604.07973v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.07973v1)
+
+**Categories**: cs.AI
+
+**Code**: https://github.com/serenditipy-AC/Embodied-Navigation-Bench.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large multimodal models (LMMs) show strong visual-linguistic reasoning but their capacity for spatial decision-making and action remains unclear. In this work, we investigate whether LMMs can achieve embodied spatial action like human through a challenging scenario: goal-oriented navigation in urban 3D spaces. We first spend over 500 hours constructing a dataset comprising 5,037 high-quality goal-oriented navigation samples, with an emphasis on 3D vertical actions and rich urban semantic information. Then, we comprehensively assess 17 representative models, including non-reasoning LMMs, reasoning LMMs, agent-based methods, and vision-language-action models. Experiments show that current LMMs exhibit emerging action capabilities, yet remain far from human-level performance. Furthermore, we reveal an intriguing phenomenon: navigation errors do not accumulate linearly but instead diverge rapidly from the destination after a critical decision bifurcation. The limitations of LMMs are investigated by analyzing their behavior at these critical decision bifurcations. Finally, we experimentally explore four promising directions for improvement: geometric perception, cross-view understanding, spatial imagination, and long-term memory. The project is available at: https://github.com/serenditipy-AC/Embodied-Navigation-Bench.
+
+大型多模态模型（LMM）显示出强大的视觉语言推理能力，但其空间决策和行动的能力仍不清楚。在这项工作中，我们研究了 LMM 是否可以通过具有挑战性的场景（城市 3D 空间中的目标导向导航）实现像人类一样的具体空间动作。我们首先花费 500 多个小时构建一个包含 5,037 个高质量目标导向导航样本的数据集，重点关注 3D 垂直动作和丰富的城市语义信息。然后，我们全面评估了 17 个代表性模型，包括非推理 LMM、推理 LMM、基于代理的方法和视觉-语言-动作模型。实验表明，当前的 LMM 表现出新兴的行动能力，但与人类水平的表现仍相距甚远。此外，我们揭示了一个有趣的现象：导航误差不会线性累积，而是在关键决策分叉后迅速偏离目的地。通过分析 LMM 在这些关键决策分叉处的行为，研究了 LMM 的局限性。最后，我们通过实验探索了四个有希望的改进方向：几何感知、跨视图理解、空间想象力和长期记忆。该项目位于：https://github.com/serenditipy-AC/Embodied-Navigation-Bench。
+
+</details>
+
+---
+
+## 3. WorldMAP: Bootstrapping Vision-Language Navigation Trajectory Prediction with Generative World Models / WorldMAP：使用生成世界模型引导视觉语言导航轨迹预测
+
+**Date**: 2026-04-09 | **arXiv**: [2604.07957v1](http://arxiv.org/abs/2604.07957v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.07957v1)
+
+**Categories**: cs.AI, cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language models (VLMs) and generative world models are opening new opportunities for embodied navigation. VLMs are increasingly used as direct planners or trajectory predictors, while world models support look-ahead reasoning by imagining future views. Yet predicting a reliable trajectory from a single egocentric observation remains challenging. Current VLMs often generate unstable trajectories, and world models, though able to synthesize plausible futures, do not directly provide the grounded signals needed for navigation learning. This raises a central question: how can generated futures be turned into supervision for grounded trajectory prediction? We present WorldMAP, a teacher--student framework that converts world-model-generated futures into persistent semantic-spatial structure and planning-derived supervision. Its world-model-driven teacher builds semantic-spatial memory from generated videos, grounds task-relevant targets and obstacles, and produces trajectory pseudo-labels through explicit planning. A lightweight student with a multi-hypothesis trajectory head is then trained to predict navigation trajectories directly from vision-language inputs. On Target-Bench, WorldMAP achieves the best ADE and FDE among compared methods, reducing ADE by 18.0% and FDE by 42.1% relative to the best competing baseline, while lifting a small open-source VLM to DTW performance competitive with proprietary models. More broadly, the results suggest that, in embodied navigation, the value of world models may lie less in supplying action-ready imagined evidence than in synthesizing structured supervision for navigation learning.
+
+视觉语言模型（VLM）和生成世界模型正在为具身导航带来新的机遇。 VLM 越来越多地用作直接规划器或轨迹预测器，而世界模型通过想象未来视图来支持前瞻推理。然而，从单一的以自我为中心的观察中预测可靠的轨迹仍然具有挑战性。当前的 VLM 通常会生成不稳定的轨迹，而世界模型虽然能够合成合理的未来，但不能直接提供导航学习所需的接地信号。这就提出了一个核心问题：如何将生成的期货转化为对接地轨迹预测的监督？我们提出了 WorldMAP，一个师生框架，它将世界模型生成的未来转换为持久的语义空间结构和规划衍生的监督。其世界模型驱动的教师从生成的视频中构建语义空间记忆，为与任务相关的目标和障碍奠定基础，并通过显式规划生成轨迹伪标签。然后，训练具有多假设轨迹头的轻量级学生直接根据视觉语言输入预测导航轨迹。在 Target-Bench 上，WorldMAP 在比较方法中实现了最佳的 ADE 和 FDE，相对于最佳竞争基准，将 ADE 降低了 18.0%，将 FDE 降低了 42.1%，同时将小型开源 VLM 提升到了与专有模型相媲美的 DTW 性能。更广泛地说，结果表明，在具体导航中，世界模型的价值可能不在于提供行动就绪的想象证据，而在于综合导航学习的结构化监督。
+
+</details>
+
+---
+
+## 4. DailyArt: Discovering Articulation from Single Static Images via Latent Dynamics / DailyArt：通过潜在动态发现单个静态图像的清晰度
+
+**Date**: 2026-04-09 | **arXiv**: [2604.07758v1](http://arxiv.org/abs/2604.07758v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.07758v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Articulated objects are essential for embodied AI and world models, yet inferring their kinematics from a single closed-state image remains challenging because crucial motion cues are often occluded. Existing methods either require multi-state observations or rely on explicit part priors, retrieval, or other auxiliary inputs that partially expose the structure to be inferred. In this work, we present DailyArt, which formulates articulated joint estimation from a single static image as a synthesis-mediated reasoning problem. Instead of directly regressing joints from a heavily occluded observation, DailyArt first synthesizes a maximally articulated opened state under the same camera view to expose articulation cues, and then estimates the full set of joint parameters from the discrepancy between the observed and synthesized states. Using a set-prediction formulation, DailyArt recovers all joints simultaneously without requiring object-specific templates, multi-view inputs, or explicit part annotations at test time. Taking estimated joints as conditions, the framework further supports part-level novel state synthesis as a downstream capability. Extensive experiments show that DailyArt achieves strong performance in articulated joint estimation and supports part-level novel state synthesis conditioned on joints. Project page is available at https://rangooo123.github.io/DaliyArt.github.io/.
+
+铰接物体对于具体人工智能和世界模型至关重要，但从单个闭合状态图像推断其运动学仍然具有挑战性，因为关键的运动线索经常被遮挡。现有方法要么需要多状态观察，要么依赖于显式部分先验、检索或其他部分暴露要推断的结构的辅助输入。在这项工作中，我们提出了 DailyArt，它将单个静态图像的关节联合估计表述为合成介导的推理问题。 DailyArt 不是直接从严重遮挡的观察中回归关节，而是首先在同一摄像机视图下合成最大关节打开状态以暴露关节线索，然后根据观察到的状态与合成状态之间的差异估计全套关节参数。使用集合预测公式，DailyArt 可同时恢复所有关节，而无需在测试时使用特定于对象的模板、多视图输入或显式零件注释。以估计的关节为条件，该框架进一步支持部分级新状态合成作为下游功能。大量实验表明，DailyArt 在关节估计方面取得了强大的性能，并支持以关节为条件的部分级新颖状态合成。项目页面位于 https://rangooo123.github.io/DaliyArt.github.io/。
+
+</details>
+
+---
+
+## 5. CausalVAE as a Plug-in for World Models: Towards Reliable Counterfactual Dynamics / CausalVAE 作为世界模型的插件：迈向可靠的反事实动态
+
+**Date**: 2026-04-09 | **arXiv**: [2604.07712v1](http://arxiv.org/abs/2604.07712v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.07712v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In this work, CausalVAE is introduced as a plug-in structural module for latent world models and is attached to diverse encoder-transition backbones. Across the reported benchmarks, competitive factual prediction is preserved and intervention-aware counterfactual retrieval is improved after the plug-in is added, suggesting stronger robustness under distribution shift and interventions. The largest gains are observed on the Physics benchmark: when averaged over 8 paired baselines, CF-H@1 is improved by +102.5%. In a representative GNN-NLL setting on Physics, CF-H@1 is increased from 11.0 to 41.0 (+272.7%). Through causal analysis, learned structural dependencies are shown to recover meaningful first-order physical interaction trends, supporting the interpretability of the learned latent causal structure.
+
+在这项工作中，CausalVAE 作为潜在世界模型的插件结构模块引入，并附加到不同的编码器转换主干上。在报告的基准中，添加插件后，竞争性事实预测得以保留，干预感知的反事实检索得到改善，这表明在分布转移和干预下具有更强的鲁棒性。最大的增益是在物理基准上观察到的：当对 8 个配对基线进行平均时，CF-H@1 提高了 +102.5%。在物理学的代表性 GNN-NLL 设置中，CF-H@1 从 11.0 增加到 41.0 (+272.7%)。通过因果分析，学习到的结构依赖性可以恢复有意义的一阶物理交互趋势，支持学习到的潜在因果结构的可解释性。
+
+</details>
+
+---
+
+## 6. GIRL: Generative Imagination Reinforcement Learning via Information-Theoretic Hallucination Control / 女孩：通过信息理论幻觉控制生成想象力强化学习
+
+**Date**: 2026-04-08 | **arXiv**: [2604.07426v1](http://arxiv.org/abs/2604.07426v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.07426v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Model-based reinforcement learning (MBRL) improves sample efficiency by optimizing policies inside imagined rollouts, but long-horizon planning degrades when model errors compound and imagined trajectories drift off the training manifold. We introduce GIRL (Generative Imagination Reinforcement Learning), a latent world-model framework that addresses this failure mode with two key components. First, a cross-modal grounding signal derived from a frozen foundation model (DINOv2) anchors the latent transition prior to a semantically consistent embedding space, penalizing inconsistent or implausible predictions. Second, an uncertainty-adaptive trust-region bottleneck interprets the KL regularizer as the Lagrange multiplier of a constrained optimization problem, restricting imagination drift within a learned region calibrated by Expected Information Gain and a Relative Performance Loss signal.   We re-derive a value-gap bound using the Performance Difference Lemma and Integral Probability Metrics, yielding a bound that remains informative as the discount factor approaches one and connects the objective to real-environment regret. Experiments across three benchmark suites, including DeepMind Control, Adroit Hand Manipulation, and Meta-World with visual distractors, show that GIRL reduces latent rollout drift by 38 to 61 percent across tasks relative to DreamerV3, improves asymptotic return, and requires fewer environment interactions on long-horizon tasks. GIRL also outperforms TD-MPC2 on sparse-reward and high-contact settings under standard evaluation metrics. A distilled-prior variant reduces inference overhead and improves computational efficiency relative to the full model.
+
+基于模型的强化学习 (MBRL) 通过优化想象中的部署内的策略来提高样本效率，但当模型错误复合且想象的轨迹偏离训练流形时，长期规划就会降低。我们引入了 GIRL（生成想象力强化学习），这是一个潜在的世界模型框架，它通过两个关键组件解决了这种故障模式。首先，从冻结基础模型 (DINOv2) 派生的跨模态接地信号将潜在转变锚定在语义一致的嵌入空间之前，从而惩罚不一致或不可信的预测。其次，不确定性自适应信赖域瓶颈将 KL 正则化器解释为约束优化问题的拉格朗日乘子，限制由预期信息增益和相对性能损失信号校准的学习区域内的想象漂移。   我们使用性能差异引理和积分概率度量重新推导价值差距界限，产生一个界限，当折扣因子接近 1 并将目标与真实环境遗憾联系起来时，该界限仍能提供信息。三个基准测试套件（包括 DeepMind Control、Adroit Hand Manipulation 和带有视觉干扰物的 Meta-World）的实验表明，相对于 DreamerV3，GIRL 将跨任务的潜在推出漂移降低了 38% 到 61%，提高了渐近回报，并且在长期任务中需要更少的环境交互。在标准评估指标下，GIRL 在稀疏奖励和高接触设置方面也优于 TD-MPC2。相对于完整模型，蒸馏先验变体可减少推理开销并提高计算效率。
+
+</details>
+
+---
+
+## 7. How Much LLM Does a Self-Revising Agent Actually Need? / 自修代理人实际需要多少LLM？
+
+**Date**: 2026-04-08 | **arXiv**: [2604.07236v2](http://arxiv.org/abs/2604.07236v2) | **PDF**: [Link](http://arxiv.org/pdf/2604.07236v2)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent LLM-based agents often place world modeling, planning, and reflection inside a single language model loop. This can produce capable behavior, but it makes a basic scientific question difficult to answer: which part of the agent's competence actually comes from the LLM, and which part comes from explicit structure around it?   We study this question not by claiming a general answer, but by making it empirically tractable. We introduce a declared reflective runtime protocol that externalizes agent state, confidence signals, guarded actions, and hypothetical transitions into inspectable runtime structure. We instantiate this protocol in a declarative runtime and evaluate it on noisy Collaborative Battleship [4] using four progressively structured agents over 54 games (18 boards $\times$ 3 seeds).   The resulting decomposition isolates four components: posterior belief tracking, explicit world-model planning, symbolic in-episode reflection, and sparse LLM-based revision. Across this decomposition, explicit world-model planning improves substantially over a greedy posterior-following baseline (+24.1pp win rate, +0.017 F1). Symbolic reflection operates as a real runtime mechanism -- with prediction tracking, confidence gating, and guarded revision actions -- even though its current revision presets are not yet net-positive in aggregate. Adding conditional LLM revision at about 4.3\% of turns yields only a small and non-monotonic change: average F1 rises slightly (+0.005) while win rate drops (31$\rightarrow$29 out of 54).   These results suggest a methodological contribution rather than a leaderboard claim: externalizing reflection turns otherwise latent agent behavior into inspectable runtime structure, allowing the marginal role of LLM intervention to be studied directly.
+
+最近基于 LLM 的智能体经常将世界建模、规划和反思置于单一语言模型循环中。这可以产生有能力的行为，但它使得一个基本的科学问题难以回答：代理人能力的哪一部分实际上来自于法学硕士，哪一部分来自于其周围的显式结构？   我们研究这个问题不是通过要求一个普遍的答案，而是通过使其在经验上易于处理。我们引入了一个声明的反射运行时协议，它将代理状态、置信信号、受保护的操作和假设的转换外部化为可检查的运行时结构。我们在声明性运行时实例化该协议，并在 54 场游戏（18 个棋盘 $\times$ 3 个种子）中使用四个渐进结构化代理在嘈杂的协作战舰 [4] 上对其进行评估。   由此产生的分解分离出四个组成部分：后验信念跟踪、显式世界模型规划、象征性的情节内反射和基于稀疏 LLM 的修订。通过这种分解，显式的世界模型规划比贪婪的后验基线（+24.1pp 获胜率，+0.017 F1）有了显着改善。符号反射作为一种真正的运行时机制运行——具有预测跟踪、置信门控和受保护的修订操作——尽管其当前的修订预设总体上尚未达到净正值。在大约 4.3% 的回合中添加有条件的 LLM 修订只会产生很小的非单调变化：平均 F1 略有上升（+0.005），而胜率下降（54 中的 31$\rightarrow$29）。   这些结果表明了方法论的贡献，而不是排行榜的主张：外部化反射将其他潜在的代理行为转变为可检查的运行时结构，从而允许直接研究法学硕士干预的边际作用。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-09 (4 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-04-09
