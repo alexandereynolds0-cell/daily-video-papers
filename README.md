@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-13](papers/2026-04-13.md) - 4 papers
 - [2026-04-10](papers/2026-04-10.md) - 20 papers
 - [2026-04-09](papers/2026-04-09.md) - 6 papers
 - [2026-04-08](papers/2026-04-08.md) - 10 papers
@@ -56,6 +57,82 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-13 (4 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-13
+
+**Paper Count**: 4
+
+---
+
+## 1. Tango: Taming Visual Signals for Efficient Video Large Language Models / Tango：驯服视觉信号以实现高效的视频大语言模型
+
+**Date**: 2026-04-10 | **arXiv**: [2604.09547v1](http://arxiv.org/abs/2604.09547v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.09547v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Token pruning has emerged as a mainstream approach for developing efficient Video Large Language Models (Video LLMs). This work revisits and advances the two predominant token-pruning paradigms: attention-based selection and similarity-based clustering. Our study reveals two critical limitations in existing methods: (1) conventional top-k selection strategies fail to fully account for the attention distribution, which is often spatially multi-modal and long-tailed in magnitude; and (2) direct similarity-based clustering frequently generates fragmented clusters, resulting in distorted representations after pooling. To address these bottlenecks, we propose Tango, a novel framework designed to optimize the utilization of visual signals. Tango integrates a diversity-driven strategy to enhance attention-based token selection, and introduces Spatio-temporal Rotary Position Embedding (ST-RoPE) to preserve geometric structure via locality priors. Comprehensive experiments across various Video LLMs and video understanding benchmarks demonstrate the effectiveness and generalizability of our approach. Notably, when retaining only 10% of the video tokens, Tango preserves 98.9% of the original performance on LLaVA-OV while delivering a 1.88x inference speedup.
+
+令牌修剪已成为开发高效视频大语言模型（视频 LLM）的主流方法。这项工作重新审视并推进了两种主要的标记修剪范例：基于注意力的选择和基于相似性的聚类。我们的研究揭示了现有方法的两个关键局限性：（1）传统的 top-k 选择策略无法充分考虑注意力分布，这种分布通常是空间多模态且大小长尾的； (2)直接基于相似性的聚类经常生成碎片簇，导致池化后的表示失真。为了解决这些瓶颈，我们提出了 Tango，这是一种旨在优化视觉信号利用的新颖框架。 Tango 集成了多样性驱动策略来增强基于注意力的标记选择，并引入时空旋转位置嵌入（ST-RoPE）以通过局部先验保留几何结构。各种视频法学硕士和视频理解基准的综合实验证明了我们方法的有效性和普遍性。值得注意的是，当仅保留 10% 的视频令牌时，Tango 保留了 LLaVA-OV 上 98.9% 的原始性能，同时提供 1.88 倍的推理加速。
+
+</details>
+
+---
+
+## 2. Rays as Pixels: Learning A Joint Distribution of Videos and Camera Trajectories / 射线作为像素：学习视频和相机轨迹的联合分布
+
+**Date**: 2026-04-10 | **arXiv**: [2604.09429v1](http://arxiv.org/abs/2604.09429v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.09429v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recovering camera parameters from images and rendering scenes from novel viewpoints have long been treated as separate tasks in computer vision and graphics. This separation breaks down when image coverage is sparse or poses are ambiguous, since each task needs what the other produces. We propose Rays as Pixels, a Video Diffusion Model (VDM) that learns a joint distribution over videos and camera trajectories. We represent each camera as dense ray pixels (raxels) and denoise them jointly with video frames through Decoupled Self-Cross Attention mechanism. A single trained model handles three tasks: predicting camera trajectories from video, jointly generating video and camera trajectory from input images, and generating video from input images along a target camera trajectory. Because the model can both predict trajectories from a video and generate views conditioned on its own predictions, we evaluate it through a closed-loop self-consistency test, demonstrating that its forward and inverse predictions agree. Notably, trajectory prediction requires far fewer denoising steps than video generation, even a few denoising steps suffice for self-consistency. We report results on pose estimation and camera-controlled video generation.
+
+从图像中恢复相机参数并从新的视角渲染场景长期以来一直被视为计算机视觉和图形学中的独立任务。当图像覆盖稀疏或姿势不明确时，这种分离就会崩溃，因为每个任务都需要另一个任务产生的东西。我们提出射线作为像素，这是一种视频扩散模型（VDM），可以学习视频和相机轨迹的联合分布。我们将每个相机表示为密集射线像素（raxels），并通过解耦自交叉注意机制将它们与视频帧联合去噪。单个经过训练的模型可处理三项任务：根据视频预测摄像机轨迹、根据输入图像联合生成视频和摄像机轨迹，以及根据输入图像沿目标摄像机轨迹生成视频。由于该模型既可以预测视频中的轨迹，又可以根据其自身的预测生成视图，因此我们通过闭环自我一致性测试对其进行评估，证明其前向和逆向预测是一致的。值得注意的是，轨迹预测所需的去噪步骤比视频生成少得多，即使几个去噪步骤也足以实现自洽。我们报告姿势估计和相机控制视频生成的结果。
+
+</details>
+
+---
+
+## 3. Multi-task Just Recognizable Difference for Video Coding for Machines: Database, Model, and Coding Application / 机器视频编码的多任务可识别差异：数据库、模型和编码应用程序
+
+**Date**: 2026-04-10 | **arXiv**: [2604.09421v1](http://arxiv.org/abs/2604.09421v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.09421v1)
+
+**Categories**: eess.IV, cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Just Recognizable Difference (JRD) boosts coding efficiency for machine vision through visibility threshold modeling, but is currently limited to a single-task scenario. To address this issue, we propose a Multi-Task JRD (MT-JRD) dataset and an Attribute-assisted MT-JRD (AMT-JRD) model for Video Coding for Machines (VCM), enhancing both prediction accuracy and coding efficiency. First, we construct a dataset comprising 27,264 JRD annotations from machines, supporting three representative tasks including object detection, instance segmentation, and keypoint detection. Secondly, we propose the AMT-JRD prediction model, which integrates Generalized Feature Extraction Module (GFEM) and Specialized Feature Extraction Module (SFEM) to facilitate joint learning across multiple tasks. Thirdly, we innovatively incorporate object attribute information into object-wise JRD prediction through the Attribute Feature Fusion Module (AFFM), which introduces prior knowledge about object size and location. This design effectively compensates for the limitations of relying solely on image features and enhances the model's capacity to represent the perceptual mechanisms of machine vision. Finally, we apply the AMT-JRD model to VCM, where the accurately predicted JRDs are applied to reduce the coding bit rate while preserving accuracy across multiple machine vision tasks. Extensive experimental results demonstrate that AMT-JRD achieves precise and robust multi-task prediction with a mean absolute error of 3.781 and error variance of 5.332 across three tasks, outperforming the state-of-the-art single-task prediction model by 6.7% and 6.3%, respectively. Coding experiments further reveal that compared to the baseline VVC and JPEG, the AMT-JRD-based VCM improves an average of 3.861% and 7.886% Bjontegaard Delta-mean Average Precision (BD-mAP), respectively.
+
+可识别差异 (JRD) 通过可见性阈值建模提高机器视觉的编码效率，但目前仅限于单任务场景。为了解决这个问题，我们提出了用于机器视频编码（VCM）的多任务JRD（MT-JRD）数据集和属性辅助MT-JRD（AMT-JRD）模型，提高了预测精度和编码效率。首先，我们构建了一个包含来自机器的 27,264 个 JRD 注释的数据集，支持三个代表性任务，包括对象检测、实例分割和关键点检测。其次，我们提出了 AMT-JRD 预测模型，它集成了广义特征提取模块（GFEM）和专用特征提取模块（SFEM），以促进跨多个任务的联合学习。第三，我们通过属性特征融合模块（AFFM）创新地将对象属性信息纳入对象级 JRD 预测中，该模块引入了有关对象大小和位置的先验知识。这种设计有效地弥补了单纯依赖图像特征的局限性，增强了模型表征机器视觉感知机制的能力。最后，我们将 AMT-JRD 模型应用于 VCM，其中准确预测的 JRD 用于降低编码比特率，同时保持多个机器视觉任务的准确性。大量实验结果表明，AMT-JRD 实现了精确且鲁棒的多任务预测，三个任务的平均绝对误差为 3.781，误差方差为 5.332，分别比最先进的单任务预测模型高出 6.7% 和 6.3%。编码实验进一步表明，与基线 VVC 和 JPEG 相比，基于 AMT-JRD 的 VCM 的 Bjontegaard Delta 平均精度 (BD-mAP) 分别平均提高了 3.861% 和 7.886%。
+
+</details>
+
+---
+
+## 4. PhysInOne: Visual Physics Learning and Reasoning in One Suite / PhysInOne：一套视觉物理学习和推理工具
+
+**Date**: 2026-04-10 | **arXiv**: [2604.09415v1](http://arxiv.org/abs/2604.09415v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.09415v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present PhysInOne, a large-scale synthetic dataset addressing the critical scarcity of physically-grounded training data for AI systems. Unlike existing datasets limited to merely hundreds or thousands of examples, PhysInOne provides 2 million videos across 153,810 dynamic 3D scenes, covering 71 basic physical phenomena in mechanics, optics, fluid dynamics, and magnetism. Distinct from previous works, our scenes feature multiobject interactions against complex backgrounds, with comprehensive ground-truth annotations including 3D geometry, semantics, dynamic motion, physical properties, and text descriptions. We demonstrate PhysInOne's efficacy across four emerging applications: physics-aware video generation, long-/short-term future frame prediction, physical property estimation, and motion transfer. Experiments show that fine-tuning foundation models on PhysInOne significantly enhances physical plausibility, while also exposing critical gaps in modeling complex physical dynamics and estimating intrinsic properties. As the largest dataset of its kind, orders of magnitude beyond prior works, PhysInOne establishes a new benchmark for advancing physics-grounded world models in generation, simulation, and embodied AI.
+
+我们推出了 PhysInOne，这是一个大规模合成数据集，解决了人工智能系统物理训练数据严重匮乏的问题。与仅限于数百或数千个示例的现有数据集不同，PhysInOne 提供了 200 万个视频，涵盖 153,810 个动态 3D 场景，涵盖力学、光学、流体动力学和磁学方面的 71 种基本物理现象。与之前的作品不同，我们的场景以复杂背景下的多对象交互为特色，并具有全面的真实注释，包括 3D 几何、语义、动态运动、物理属性和文本描述。我们展示了 PhysInOne 在四个新兴应用中的功效：物理感知视频生成、长期/短期未来帧预测、物理属性估计和运动传输。实验表明，在 PhysInOne 上微调基础模型可显着增强物理合理性，同时也暴露了复杂物理动力学建模和内在属性估计方面的关键差距。作为同类中最大的数据集，其数量级超出了之前的工作，PhysInOne 为在生成、模拟和具体人工智能方面推进基于物理的世界模型建立了新的基准。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-10 (20 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-10
