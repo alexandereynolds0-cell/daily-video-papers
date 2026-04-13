@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-13](papers/2026-04-13.md) - 7 papers
 - [2026-04-10](papers/2026-04-10.md) - 42 papers
 - [2026-04-09](papers/2026-04-09.md) - 30 papers
 - [2026-04-08](papers/2026-04-08.md) - 43 papers
@@ -51,6 +52,130 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-13 (7 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-04-13
+
+**Paper Count**: 7
+
+---
+
+## 1. Event-Driven Temporal Graph Networks for Asynchronous Multi-Agent Cyber Defense in NetForge_RL / NetForge_RL 中用于异步多代理网络防御的事件驱动时态图网络
+
+**Date**: 2026-04-10 | **arXiv**: [2604.09523v1](http://arxiv.org/abs/2604.09523v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.09523v1)
+
+**Categories**: cs.LG, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The transition of Multi-Agent Reinforcement Learning (MARL) policies from simulated cyber wargames to operational Security Operations Centers (SOCs) is fundamentally bottlenecked by the Sim2Real gap. Legacy simulators abstract away network protocol physics, rely on synchronous ticks, and provide clean state vectors rather than authentic, noisy telemetry. To resolve these limitations, we introduce NetForge_RL: a high-fidelity cyber operations simulator that reformulates network defense as an asynchronous, continuous-time Partially Observable Semi-Markov Decision Process (POSMDP). NetForge enforces Zero-Trust Network Access (ZTNA) constraints and requires defenders to process NLP-encoded SIEM telemetry. Crucially, NetForge bridges the Sim2Real gap natively via a dual-mode engine, allowing high-throughput MARL training in a mock hypervisor and zero-shot evaluation against live exploits in a Docker hypervisor. To navigate this continuous-time POSMDP, we propose Continuous-Time Graph MARL (CT-GMARL), utilizing fixed-step Neural Ordinary Differential Equations (ODEs) to process irregularly sampled alerts. We evaluate our framework against discrete baselines (R-MAPPO, QMIX). Empirical results demonstrate that CT-GMARL achieves a converged median Blue reward of 57,135 - a 2.0x improvement over R-MAPPO and 2.1x over QMIX. Critically, CT-GMARL restores 12x more compromised services than the strongest baseline by avoiding the "scorched earth" failure mode of trivially minimizing risk by destroying network utility. On zero-shot transfer to the live Docker environment, CT-GMARL policies achieve a median reward of 98,026, validating the Sim2Real bridge.
+
+多智能体强化学习 (MARL) 策略从模拟网络兵棋向可操作的安全运营中心 (SOC) 的转变从根本上受到 Sim2Real 差距的瓶颈。传统模拟器抽象了网络协议物理，依赖同步滴答，并提供干净的状态向量，而不是真实的、嘈杂的遥测。为了解决这些限制，我们引入了 NetForge_RL：一种高保真网络作战模拟器，它将网络防御重新表述为异步、连续时间的部分可观察半马尔可夫决策过程 (POSMDP)。 NetForge 强制实施零信任网络访问 (ZTNA) 限制，并要求防御者处理 NLP 编码的 SIEM 遥测数据。至关重要的是，NetForge 通过双模式引擎本地弥合了 Sim2Real 的差距，允许在模拟虚拟机管理程序中进行高吞吐量 MARL 训练，并针对 Docker 虚拟机管理程序中的实时漏洞进行零样本评估。为了导航这个连续时间 POSMDP，我们提出了连续时间图 MARL (CT-GMARL)，利用固定步长神经常微分方程 (ODE) 来处理不规则采样的警报。我们根据离散基线（R-MAPPO、QMIX）评估我们的框架。实证结果表明，CT-GMARL 实现了 57,135 的聚合中值 Blue 奖励，比 R-MAPPO 提高了 2.0 倍，比 QMIX 提高了 2.1 倍。至关重要的是，CT-GMARL 通过避免通过破坏网络实用程序来最小化风险的“焦土”故障模式，恢复的受损服务比最强基线多 12 倍。在零样本传输到实时 Docker 环境时，CT-GMARL 策略获得的中值奖励为 98,026，验证了 Sim2Real 桥。
+
+</details>
+
+---
+
+## 2. Semantic Rate-Distortion for Bounded Multi-Agent Communication: Capacity-Derived Semantic Spaces and the Communication Cost of Alignment / 有界多智能体通信的语义率失真：容量导出的语义空间和对齐的通信成本
+
+**Date**: 2026-04-10 | **arXiv**: [2604.09521v1](http://arxiv.org/abs/2604.09521v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.09521v1)
+
+**Categories**: cs.IT, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+When two agents of different computational capacities interact with the same environment, they need not compress a common semantic alphabet differently; they can induce different semantic alphabets altogether. We show that the quotient POMDP $Q_{m,T}(M)$ - the unique coarsest abstraction consistent with an agent's capacity - serves as a capacity-derived semantic space for any bounded agent, and that communication between heterogeneous agents exhibits a sharp structural phase transition. Below a critical rate $R_{\text{crit}}$ determined by the quotient mismatch, intent-preserving communication is structurally impossible. In the supported one-way memoryless regime, classical side-information coding then yields exponential decay above the induced benchmark. Classical coding theorems tell you the rate once the source alphabet is fixed; our contribution is to derive that alphabet from bounded interaction itself.   Concretely, we prove: (1) a fixed-$\varepsilon$ structural phase-transition theorem whose lower bound is fully general on the common-history quotient comparison; (2) a one-way Wyner-Ziv benchmark identification on quotient alphabets, with exact converse, exact operational equality for memoryless quotient sources, and an ergodic long-run bridge via explicit mixing bounds; (3) an asymptotic one-way converse in the shrinking-distortion regime $\varepsilon = O(1/T)$, proved from the message stream and decoder side information; and (4) alignment traversal bounds enabling compositional communication through intermediate capacity levels. Experiments on eight POMDP environments (including RockSample(4,4)) illustrate the phase transition, a structured-policy benchmark shows the one-way rate can drop by up to $19\times$ relative to the counting bound, and a shrinking-distortion sweep matches the regime of the asymptotic converse.
+
+当两个具有不同计算能力的智能体与同一环境交互时，它们不需要以不同的方式压缩公共语义字母表；它们可以完全产生不同的语义字母。我们证明了商 POMDP $Q_{m,T}(M)$ - 与代理能力一致的唯一最粗糙抽象 - 作为任何有界代理的能力衍生语义空间，并且异构代理之间的通信表现出尖锐的结构相变。低于由商不匹配确定的临界速率 $R_{\text{crit}}$ 时，保留意图的通信在结构上是不可能的。在受支持的单向无记忆机制中，经典的辅助信息编码会产生高于诱导基准的指数衰减。经典编码定理告诉您一旦源字母表固定后的速率；我们的贡献是从有界交互本身中推导出该字母表。   具体来说，我们证明：（1）一个固定$\varepsilon$结构相变定理，其下界在共同历史商比较上是完全通用的； (2) 商字母表上的单向 Wyner-Ziv 基准识别，具有精确逆向、无记忆商源的精确运算等式，以及通过显式混合界限的遍历长期桥接； (3) 收缩失真机制 $\varepsilon = O(1/T)$ 中的渐近单向逆，由消息流和解码器边信息证明； (4) 对齐遍历边界，通过中间容量级别实现组合通信。在八个 POMDP 环境（包括 RockSample(4,4)）上进行的实验说明了相变，结构化策略基准显示单向速率相对于计数界限可下降高达 $19\times$，并且收缩失真扫描与渐近相反的状态相匹配。
+
+</details>
+
+---
+
+## 3. VISOR: Agentic Visual Retrieval-Augmented Generation via Iterative Search and Over-horizon Reasoning / VISOR：通过迭代搜索和超视距推理进行代理视觉检索增强生成
+
+**Date**: 2026-04-10 | **arXiv**: [2604.09508v1](http://arxiv.org/abs/2604.09508v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.09508v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual Retrieval-Augmented Generation (VRAG) empowers Vision-Language Models to retrieve and reason over visually rich documents. To tackle complex queries requiring multi-step reasoning, agentic VRAG systems interleave reasoning with iterative retrieval.. However, existing agentic VRAG faces two critical bottlenecks. (1) Visual Evidence Sparsity: key evidence is scattered across pages yet processed in isolation, hindering cross-page reasoning; moreover, fine-grained intra-image evidence often requires precise visual actions, whose misuse degrades retrieval quality; (2) Search Drift in Long Horizons: the accumulation of visual tokens across retrieved pages dilutes context and causes cognitive overload, leading agents to deviate from their search objective. To address these challenges, we propose VISOR (Visual Retrieval-Augmented Generation via Iterative Search and Over-horizon Reasoning), a unified single-agent framework. VISOR features a structured Evidence Space for progressive cross-page reasoning, coupled with a Visual Action Evaluation and Correction mechanism to manage visual actions. Additionally, we introduce a Dynamic Trajectory with Sliding Window and Intent Injection to mitigate search drift. They anchor the evidence space while discarding earlier raw interactions, preventing context from being overwhelmed by visual tokens. We train VISOR using a Group Relative Policy Optimization-based Reinforcement Learning (GRPO-based RL) pipeline with state masking and credit assignment tailored for dynamic context reconstruction. Extensive experiments on ViDoSeek, SlideVQA, and MMLongBench demonstrate that VISOR achieves state-of-the-art performance with superior efficiency for long-horizon visual reasoning tasks.
+
+视觉检索增强生成 (VRAG) 使视觉语言模型能够对视觉丰富的文档进行检索和推理。为了解决需要多步推理的复杂查询，代理 VRAG 系统将推理与迭代检索交织在一起。然而，现有的代理 VRAG 面临两个关键瓶颈。 （1）视觉证据稀疏性：关键证据分散在各个页面上，并且孤立地进行处理，阻碍了跨页面推理；此外，细粒度的图像内证据通常需要精确的视觉动作，其滥用会降低检索质量； (2) 长期搜索漂移：检索页面中视觉标记的积累会稀释上下文并导致认知过载，导致代理偏离其搜索目标。为了应对这些挑战，我们提出了 VISOR（通过迭代搜索和超视距推理的视觉检索增强生成），这是一个统一的单代理框架。 VISOR 具有用于渐进式跨页面推理的结构化证据空间，以及用于管理视觉动作的视觉动作评估和校正机制。此外，我们引入了带有滑动窗口和意图注入的动态轨迹，以减轻搜索漂移。它们锚定证据空间，同时丢弃早期的原始交互，防止上下文被视觉标记淹没。我们使用基于组相对策略优化的强化学习（基于 GRPO 的 RL）管道来训练 VISOR，该管道具有专为动态上下文重建而定制的状态屏蔽和信用分配。 ViDoSeek、SlideVQA 和 MMLongBench 上的大量实验表明，VISOR 在长视野视觉推理任务中实现了最先进的性能和卓越的效率。
+
+</details>
+
+---
+
+## 4. Strategic Algorithmic Monoculture:Experimental Evidence from Coordination Games / 战略算法单一文化:来自协调博弈的实验证据
+
+**Date**: 2026-04-10 | **arXiv**: [2604.09502v1](http://arxiv.org/abs/2604.09502v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.09502v1)
+
+**Categories**: cs.AI, cs.GT, cs.MA, econ.TH
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI agents increasingly operate in multi-agent environments where outcomes depend on coordination. We distinguish primary algorithmic monoculture -- baseline action similarity -- from strategic algorithmic monoculture, whereby agents adjust similarity in response to incentives. We implement a simple experimental design that cleanly separates these forces, and deploy it on human and large language model (LLM) subjects. LLMs exhibit high levels of baseline similarity (primary monoculture) and, like humans, they regulate it in response to coordination incentives (strategic monoculture). While LLMs coordinate extremely well on similar actions, they lag behind humans in sustaining heterogeneity when divergence is rewarded.
+
+人工智能代理越来越多地在多代理环境中运行，其结果取决于协调。我们将初级算法单一文化（基线动作相似性）与战略算法单一文化区分开来，策略单一文化中主体根据激励调整相似性。我们实施了一个简单的实验设计，可以清楚地分离这些力量，并将其部署在人类和大型语言模型（LLM）受试者上。法学硕士表现出高度的基线相似性（主要单一文化），并且像人类一样，他们根据协调激励（战略单一文化）对其进行调节。虽然法学硕士在类似的行动上协调得非常好，但当分歧得到奖励时，他们在维持异质性方面落后于人类。
+
+</details>
+
+---
+
+## 5. Agentic Jackal: Live Execution and Semantic Value Grounding for Text-to-JQL / Agentic Jackal：文本到 JQL 的实时执行和语义价值基础
+
+**Date**: 2026-04-10 | **arXiv**: [2604.09470v1](http://arxiv.org/abs/2604.09470v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.09470v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Translating natural language into Jira Query Language (JQL) requires resolving ambiguous field references, instance-specific categorical values, and complex Boolean predicates. Single-pass LLMs cannot discover which categorical values (e.g., component names or fix versions) actually exist in a given Jira instance, nor can they verify generated queries against a live data source, limiting accuracy on paraphrased or ambiguous requests. No open, execution-based benchmark exists for mapping natural language to JQL. We introduce Jackal, the first large-scale, execution-based text-to-JQL benchmark comprising 100,000 validated NL-JQL pairs on a live Jira instance with over 200,000 issues. To establish baselines on Jackal, we propose Agentic Jackal, a tool-augmented agent that equips LLMs with live query execution via the Jira MCP server and JiraAnchor, a semantic retrieval tool that resolves natural-language mentions of categorical values through embedding-based similarity search. Among 9 frontier LLMs evaluated, single-pass models average only 43.4% execution accuracy on short natural-language queries, highlighting that text-to-JQL remains an open challenge. The agentic approach improves 7 of 9 models, with a 9.0% relative gain on the most linguistically challenging variant; in a controlled ablation isolating JiraAnchor, categorical-value accuracy rises from 48.7% to 71.7%, with component-field accuracy jumping from 16.9% to 66.2%. Our analysis identifies inherent semantic ambiguities, such as issue-type disambiguation and text-field selection, as the dominant failure modes rather than value-resolution errors, pointing to concrete directions for future work. We publicly release the benchmark, all agent transcripts, and evaluation code to support reproducibility.
+
+将自然语言转换为 Jira 查询语言 (JQL) 需要解决不明确的字段引用、特定于实例的分类值和复杂的布尔谓词。单通道 LLM 无法发现给定 Jira 实例中实际存在哪些分类值（例如组件名称或修复版本），也无法验证针对实时数据源生成的查询，从而限制了释义或模糊请求的准确性。不存在用于将自然语言映射到 JQL 的开放的、基于执行的基准。我们推出了 Jackal，这是第一个大规模、基于执行的文本到 JQL 基准测试，包含在实时 Jira 实例上经过验证的 100,000 个 NL-JQL 对，并存在超过 200,000 个问题。为了在 Jackal 上建立基线，我们提出了 Agentic Jackal，这是一种工具增强代理，可以通过 Jira MCP 服务器和 JiraAnchor 为 LLM 提供实时查询执行功能，JiraAnchor 是一种语义检索工具，可以通过基于嵌入的相似性搜索来解析自然语言中对分类值的提及。在评估的 9 个前沿 LLM 中，单遍模型在短自然语言查询上的平均执行准确度仅为 43.4%，这凸显了文本到 JQL 仍然是一个开放的挑战。代理方法改进了 9 个模型中的 7 个，在最具语言挑战性的变体上相对提高了 9.0%；在受控消融隔离 JiraAnchor 中，分类值准确度从 48.7% 上升到 71.7%，分量字段准确度从 16.9% 跃升至 66.2%。我们的分析将固有的语义歧义（例如问题类型消歧和文本字段选择）确定为主要的失败模式，而不是价值解析错误，为未来的工作指明了具体方向。我们公开发布基准、所有代理成绩单和评估代码以支持可重复性。
+
+</details>
+
+---
+
+## 6. From Reasoning to Agentic: Credit Assignment in Reinforcement Learning for Large Language Models / 从推理到代理：大型语言模型强化学习中的学分分配
+
+**Date**: 2026-04-10 | **arXiv**: [2604.09459v1](http://arxiv.org/abs/2604.09459v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.09459v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning (RL) for large language models (LLMs) increasingly relies on sparse, outcome-level rewards -- yet determining which actions within a long trajectory caused the outcome remains difficult. This credit assignment (CA) problem manifests in two regimes: reasoning RL, where credit must be distributed across tokens and steps within a single chain-of-thought generation (500--30K+ tokens); and agentic RL, where multi-turn environment interaction introduces stochastic transitions, partial observability, and horizons of 100+ turns (100K--1M tokens), making episode-level credit increasingly uninformative.   We survey 47 CA methods (41 core, 6 adjacent enablers) published between 2024 and early 2026, organizing them in a two-dimensional taxonomy by assignment granularity (token, segment, step, turn, multi-agent) and methodology (Monte Carlo, temporal difference, model-based, game-theoretic, information-theoretic). Beyond the survey itself, we contribute three reusable resources: (1) a structured, machine-readable paper inventory with taxonomy labels, baseline families, and evidence levels; (2) a reporting checklist for future CA papers, validated against the reviewed literature to identify systematic methodological gaps; and (3) a benchmark protocol specification with task families, metadata requirements, and controlled bifurcation tasks, accompanied by a method selection decision tree.   Our synthesis suggests that the shift from reasoning to agentic RL complicates and reshapes the credit assignment landscape: reasoning CA is maturing around process reward models and critic-free group comparison, while agentic CA is driving genuinely new approaches -- hindsight counterfactual analysis, privileged asymmetric critics, and turn-level MDP reformulations -- that have no direct precedent in reasoning RL.
+
+大型语言模型 (LLM) 的强化学习 (RL) 越来越依赖于稀疏的结果级奖励，但确定长轨迹中的哪些操作导致了结果仍然很困难。这种信用分配（CA）问题体现在两种制度中：推理强化学习，其中信用必须分布在单个思想链生成（500--30K+ 代币）内的代币和步骤之间；以及代理强化学习，其中多回合环境交互引入了随机转换、部分可观察性和 100 多个回合（100K--1M 代币）的视野，使得剧集级别的信用信息越来越缺乏。   我们调查了 2024 年至 2026 年初发布的 47 个 CA 方法（41 个核心、6 个相邻推动因素），通过分配粒度（令牌、分段、步骤、回合、多代理）和方法（蒙特卡罗、时间差异、基于模型、博弈论、信息论）将它们组织在二维分类中。除了调查本身之外，我们还提供了三种可重复使用的资源：（1）结构化的、机器可读的纸质清单，其中包含分类标签、基线家族和证据水平； (2) 未来 CA 论文的报告清单，根据已审查的文献进行验证，以确定系统的方法论差距； (3) 基准协议规范，其中包含任务族、元数据要求和受控分叉任务，并附有方法选择决策树。   我们的综合表明，从推理到代理强化学习的转变使信用分配格局复杂化并重塑了信用分配格局：推理CA正在围绕过程奖励模型和无批评者群体比较而成熟，而代理CA正在推动真正的新方法——事后反事实分析、特权非对称批评家和回合级MDP重新制定——这些方法在推理RL中没有直接先例。
+
+</details>
+
+---
+
+## 7. Many-Tier Instruction Hierarchy in LLM Agents / LLM Agent 中的多层指令层次结构
+
+**Date**: 2026-04-10 | **arXiv**: [2604.09443v1](http://arxiv.org/abs/2604.09443v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.09443v1)
+
+**Categories**: cs.CL, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language model agents receive instructions from many sources-system messages, user prompts, tool outputs, and more-each carrying different levels of trust and authority. When these instructions conflict, models must reliably follow the highest-privilege instruction to remain safe and effective. The dominant paradigm, instruction hierarchy (IH), assumes a fixed, small set of privilege levels (typically fewer than five) defined by rigid role labels (e.g., system > user). This is inadequate for real-world agentic settings, where conflicts can arise across far more sources and contexts. In this work, we propose Many-Tier Instruction Hierarchy (ManyIH), a paradigm for resolving instruction conflicts among instructions with arbitrarily many privilege levels. We introduce ManyIH-Bench, the first benchmark for ManyIH. ManyIH-Bench requires models to navigate up to 12 levels of conflicting instructions with varying privileges, comprising 853 agentic tasks (427 coding and 426 instruction-following). ManyIH-Bench composes constraints developed by LLMs and verified by humans to create realistic and difficult test cases spanning 46 real-world agents. Our experiments show that even the current frontier models perform poorly (~40% accuracy) when instruction conflict scales. This work underscores the urgent need for methods that explicitly target fine-grained, scalable instruction conflict resolution in agentic settings.
+
+大型语言模型代理从许多来源接收指令——系统消息、用户提示、工具输出等等——每个来源都带有不同级别的信任和权限。当这些指令发生冲突时，模型必须可靠地遵循最高权限的指令以保持安全和有效。主导范例指令层次结构 (IH) 假定由严格的角色标签（例如系统 > 用户）定义的一组固定的、小型的特权级别（通常少于五个）。这对于现实世界的代理环境来说是不够的，在现实世界中，冲突可能会在更多的来源和环境中出现。在这项工作中，我们提出了多层指令层次结构（ManyIH），这是一种解决具有任意多个特权级别的指令之间的指令冲突的范例。我们推出 ManyIH-Bench，这是 ManyIH 的第一个基准测试。 ManyIH-Bench 要求模型能够导航具有不同权限的最多 12 个级别的冲突指令，包括 853 个代理任务（427 个编码和 426 个指令跟踪）。 ManyIH-Bench 组合了法学硕士开发并经人类验证的约束，以创建跨越 46 个现实世界代理的真实且困难的测试用例。我们的实验表明，当指令冲突规模扩大时，即使是当前的前沿模型也表现不佳（约 40% 的准确率）。这项工作强调了迫切需要在代理环境中明确针对细粒度、可扩展指令冲突解决的方法。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-10 (42 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-04-10
