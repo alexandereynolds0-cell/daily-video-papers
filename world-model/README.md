@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-14](papers/2026-04-14.md) - 6 papers
 - [2026-04-13](papers/2026-04-13.md) - 2 papers
 - [2026-04-10](papers/2026-04-10.md) - 7 papers
 - [2026-04-09](papers/2026-04-09.md) - 4 papers
@@ -50,6 +51,116 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-14 (6 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-04-14
+
+**Paper Count**: 6
+
+---
+
+## 1. Grounded World Model for Semantically Generalizable Planning / 用于语义泛化规划的扎根世界模型
+
+**Date**: 2026-04-13 | **arXiv**: [2604.11751v1](http://arxiv.org/abs/2604.11751v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.11751v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In Model Predictive Control (MPC), world models predict the future outcomes of various action proposals, which are then scored to guide the selection of the optimal action. For visuomotor MPC, the score function is a distance metric between a predicted image and a goal image, measured in the latent space of a pretrained vision encoder like DINO and JEPA. However, it is challenging to obtain the goal image in advance of the task execution, particularly in new environments. Additionally, conveying the goal through an image offers limited interactivity compared with natural language. In this work, we propose to learn a Grounded World Model (GWM) in a vision-language-aligned latent space. As a result, each proposed action is scored based on how close its future outcome is to the task instruction, reflected by the similarity of embeddings. This approach transforms the visuomotor MPC to a VLA that surpasses VLM-based VLAs in semantic generalization. On the proposed WISER benchmark, GWM-MPC achieves a 87% success rate on the test set comprising 288 tasks that feature unseen visual signals and referring expressions, yet remain solvable with motions demonstrated during training. In contrast, traditional VLAs achieve an average success rate of 22%, even though they overfit the training set with a 90% success rate.
+
+在模型预测控制（MPC）中，世界模型预测各种行动建议的未来结果，然后对其进行评分以指导最佳行动的选择。对于视觉运动 MPC，得分函数是预测图像和目标图像之间的距离度量，在 DINO 和 JEPA 等预训练视觉编码器的潜在空间中测量。然而，在任务执行之前获取目标图像具有挑战性，特别是在新环境中。此外，与自然语言相比，通过图像传达目标的交互性有限。在这项工作中，我们建议在视觉语言对齐的潜在空间中学习接地世界模型（GWM）。因此，每个提议的动作都是根据其未来结果与任务指令的接近程度来评分的，这反映在嵌入的相似性上。这种方法将视觉运动 MPC 转换为 VLA，在语义泛化方面超越了基于 VLM 的 VLA。在拟议的 WISER 基准上，GWM-MPC 在包含 288 个任务的测试集上实现了 87% 的成功率，这些任务具有看不见的视觉信号和指代表达，但仍然可以通过训练期间演示的运动来解决。相比之下，传统 VLA 的平均成功率为 22%，尽管它们以 90% 的成功率过度拟合训练集。
+
+</details>
+
+---
+
+## 2. Dyadic Partnership(DP): A Missing Link Towards Full Autonomy in Medical Robotics / 二元伙伴关系（DP）：医疗机器人实现完全自治的缺失环节
+
+**Date**: 2026-04-13 | **arXiv**: [2604.11423v1](http://arxiv.org/abs/2604.11423v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.11423v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+For the past decades medical robotic solutions were mostly based on the concept of tele-manipulation. While their design was extremely intelligent, allowing for better access, improved dexterity, reduced tremor, and improved imaging, their intelligence was limited. They therefore left cognition and decision making to the surgeon. As medical robotics advances towards high-level autonomy, the scientific community needs to explore the required pathway towards partial and full autonomy. Here, we introduce the concept of Dyadic Partnership(DP), a new paradigm in which robots and clinicians engage in intelligent, expert interaction and collaboration. The Dyadic Partners would discuss and agree on decisions and actions during their dynamic and interactive collaboration relying also on intuitive advanced media using generative AI, such as a world model, and advanced multi-modal visualization. This article outlines the foundational components needed to enable such systems, including foundation models for clinical intelligence, multi-modal intent recognition, co-learning frameworks, advanced visualization, and explainable, trust-aware interaction. We further discuss key challenges such as data scarcity, lack of standardization, and ethical acceptance. Dyadic partnership is introduced and is positioned as a powerful yet achievable, acceptable milestone offering a promising pathway toward safer, more intuitive collaboration and a gradual transition to full autonomy across diverse clinical settings.
+
+在过去的几十年里，医疗机器人解决方案主要基于远程操作的概念。虽然他们的设计非常智能，可以更好地进入、提高灵活性、减少震颤并改善成像，但他们的智能是有限的。因此，他们将认知和决策权留给了外科医生。随着医疗机器人技术向高度自治方向发展，科学界需要探索实现部分和完全自治所需的途径。在这里，我们引入了二元伙伴关系（DP）的概念，这是一种机器人和临床医生进行智能、专家互动和协作的新范式。二元合作伙伴将在动态和交互式协作期间讨论并商定决策和行动，同时还依赖于使用生成人工智能的直观高级媒体，例如世界模型和高级多模式可视化。本文概述了启用此类系统所需的基础组件，包括临床智能的基础模型、多模式意图识别、共同学习框架、高级可视化以及可解释的信任感知交互。我们进一步讨论了数据稀缺、缺乏标准化和道德接受等关键挑战。引入二元合作伙伴关系，并将其定位为一个强大但可实现、可接受的里程碑，为实现更安全、更直观的协作以及在不同临床环境中逐步过渡到完全自主提供了一条充满希望的途径。
+
+</details>
+
+---
+
+## 3. ComSim: Building Scalable Real-World Robot Data Generation via Compositional Simulation / ComSim：通过组合仿真构建可扩展的真实世界机器人数据生成
+
+**Date**: 2026-04-13 | **arXiv**: [2604.11386v1](http://arxiv.org/abs/2604.11386v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.11386v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advancements in foundational models, such as large language models and world models, have greatly enhanced the capabilities of robotics, enabling robots to autonomously perform complex tasks. However, acquiring large-scale, high-quality training data for robotics remains a challenge, as it often requires substantial manual effort and is limited in its coverage of diverse real-world environments. To address this, we propose a novel hybrid approach called Compositional Simulation, which combines classical simulation and neural simulation to generate accurate action-video pairs while maintaining real-world consistency. Our approach utilizes a closed-loop real-sim-real data augmentation pipeline, leveraging a small amount of real-world data to generate diverse, large-scale training datasets that cover a broader spectrum of real-world scenarios. We train a neural simulator to transform classical simulation videos into real-world representations, improving the accuracy of policy models trained in real-world environments. Through extensive experiments, we demonstrate that our method significantly reduces the sim2real domain gap, resulting in higher success rates in real-world policy model training. Our approach offers a scalable solution for generating robust training data and bridging the gap between simulated and real-world robotics.
+
+大型语言模型和世界模型等基础模型的最新进展极大地增强了机器人的能力，使机器人能够自主执行复杂的任务。然而，获取大规模、高质量的机器人训练数据仍然是一个挑战，因为它通常需要大量的手动工作，并且对不同现实环境的覆盖范围有限。为了解决这个问题，我们提出了一种称为组合模拟的新型混合方法，它将经典模拟和神经模拟结合起来，生成准确的动作视频对，同时保持现实世界的一致性。我们的方法利用闭环真实-模拟-真实数据增强管道，利用少量真实世界数据生成多样化的大规模训练数据集，涵盖更广泛的真实世界场景。我们训练神经模拟器将经典模拟视频转换为现实世界的表示，从而提高在现实世界环境中训练的政策模型的准确性。通过大量的实验，我们证明我们的方法显着减少了 sim2real 域差距，从而在现实世界的政策模型训练中获得更高的成功率。我们的方法提供了一个可扩展的解决方案，用于生成强大的训练数据并缩小模拟机器人与现实世界机器人之间的差距。
+
+</details>
+
+---
+
+## 4. WM-DAgger: Enabling Efficient Data Aggregation for Imitation Learning with World Models / WM-DAgger：利用世界模型实现模仿学习的高效数据聚合
+
+**Date**: 2026-04-13 | **arXiv**: [2604.11351v1](http://arxiv.org/abs/2604.11351v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.11351v1)
+
+**Categories**: cs.RO
+
+**Code**: https://github.com/czs12354-xxdbd/WM-Dagger.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Imitation learning is a powerful paradigm for training robotic policies, yet its performance is limited by compounding errors: minor policy inaccuracies could drive robots into unseen out-of-distribution (OOD) states in the training set, where the policy could generate even bigger errors, leading to eventual failures. While the Data Aggregation (DAgger) framework tries to address this issue, its reliance on continuous human involvement severely limits scalability. In this paper, we propose WM-DAgger, an efficient data aggregation framework that leverages World Models to synthesize OOD recovery data without requiring human involvement. Specifically, we focus on manipulation tasks with an eye-in-hand robotic arm and only few-shot demonstrations. To avoid synthesizing misleading data and overcome the hallucination issues inherent to World Models, our framework introduces two key mechanisms: (1) a Corrective Action Synthesis Module that generates task-oriented recovery actions to prevent misleading supervision, and (2) a Consistency-Guided Filtering Module that discards physically implausible trajectories by anchoring terminal synthesized frames to corresponding real frames in expert demonstrations. We extensively validate WM-DAgger on multiple real-world robotic tasks. Results that our method significantly improves success rates, achieving a 93.3\% success rate in soft bag pushing with only five demonstrations. The source code is publicly available at https://github.com/czs12354-xxdbd/WM-Dagger.
+
+模仿学习是训练机器人策略的强大范例，但其性能受到复合错误的限制：微小的策略不准确可能会导致机器人进入训练集中看不见的分布外（OOD）状态，在这种状态下，策略可能会产生更大的错误，导致最终失败。虽然数据聚合（DAgger）框架试图解决这个问题，但它对持续人类参与的依赖严重限制了可扩展性。在本文中，我们提出了 WM-DAgger，这是一种高效的数据聚合框架，它利用世界模型来合成 OOD 恢复数据，而无需人工参与。具体来说，我们专注于使用手眼机械臂进行操作任务，并且仅进行少量演示。为了避免合成误导性数据并克服世界模型固有的幻觉问题，我们的框架引入了两个关键机制：（1）纠正动作合成模块，生成面向任务的恢复动作以防止误导性监督；（2）一致性引导过滤模块，通过将终端合成帧锚定到专家演示中相应的真实帧来丢弃物理上不可信的轨迹。我们在多个现实世界的机器人任务上广泛验证了 WM-DAgger。结果表明，我们的方法显着提高了成功率，仅经过 5 次演示，就实现了 93.3% 的软包推送成功率。源代码可在 https://github.com/czs12354-xxdbd/WM-Dagger 上公开获取。
+
+</details>
+
+---
+
+## 5. 3D-Anchored Lookahead Planning for Persistent Robotic Scene Memory via World-Model-Based MCTS / 通过基于世界模型的 MCTS 进行持久机器人场景记忆的 3D 锚定前瞻规划
+
+**Date**: 2026-04-13 | **arXiv**: [2604.11302v1](http://arxiv.org/abs/2604.11302v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.11302v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present 3D-Anchored Lookahead Planning (3D-ALP), a System 2 reasoning engine for robotic manipulation that combines Monte Carlo Tree Search (MCTS) with a 3D-consistent world model as the rollout oracle. Unlike reactive policies that evaluate actions from the current camera frame only, 3D-ALP maintains a persistent camera-to-world (c2w) anchor that survives occlusion, enabling accurate replanning to object positions that are no longer directly observable. On a 5-step sequential reach task requiring spatial memory (Experiment E3), 3D-ALP achieves 0.650 0.109 success rate on memory-required steps versus 0.006 0.008 for a greedy reactive baseline (Δ=+0.645), while step 5 success reaches 0.822 against 0.000 for greedy. An ablation study (30 episodes, 3 seeds) isolates tree search spatial memory as the primary driver (+0.533, 82% of gain) with additional benefit from deeper lookahead (+0.111, 17%). We also identify and resolve four structural failure modes in applying UCT-MCTS (Upper Confidence Bounds applied to Trees [10]) to continuous robotic manipulation.
+
+我们提出了 3D 锚定前瞻规划 (3D-ALP)，这是一种用于机器人操作的 System 2 推理引擎，它将蒙特卡洛树搜索 (MCTS) 与 3D 一致的世界模型结合起来作为推出预言机。与仅评估当前相机帧的动作的反应性策略不同，3D-ALP 维护一个持久的相机到世界 (c2w) 锚点，该锚点在遮挡情况下仍能幸存，从而能够准确地重新规划不再直接观察到的对象位置。在需要空间记忆的 5 步顺序到达任务中（实验 E3），3D-ALP 在需要记忆的步骤上实现了 0.650 0.109 的成功率，而贪婪反应基线的成功率为 0.006 0.008 (Δ=+0.645)，而第 5 步的成功率达到 0.822，而贪婪的成功率为 0.000。消融研究（30 集，3 个种子）将树搜索空间记忆作为主要驱动因素（+0.533，增益的 82%），并从更深入的前瞻中获得额外的好处（+0.111，17%）。我们还在将 UCT-MCTS（应用于树木的置信上限 [10]）应用于连续机器人操作时识别并解决了四种结构故障模式。
+
+</details>
+
+---
+
+## 6. OccuBench: Evaluating AI Agents on Real-World Professional Tasks via Language World Models / OccuBench：通过语言世界模型评估人工智能代理在现实世界专业任务中的表现
+
+**Date**: 2026-04-13 | **arXiv**: [2604.10866v1](http://arxiv.org/abs/2604.10866v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.10866v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI agents are expected to perform professional work across hundreds of occupational domains (from emergency department triage to nuclear reactor safety monitoring to customs import processing), yet existing benchmarks can only evaluate agents in the few domains where public environments exist. We introduce OccuBench, a benchmark covering 100 real-world professional task scenarios across 10 industry categories and 65 specialized domains, enabled by Language World Models (LWMs) that simulate domain-specific environments through LLM-driven tool response generation. Our multi-agent synthesis pipeline automatically produces evaluation instances with guaranteed solvability, calibrated difficulty, and document-grounded diversity. OccuBench evaluates agents along two complementary dimensions: task completion across professional domains and environmental robustness under controlled fault injection (explicit errors, implicit data degradation, and mixed faults). We evaluate 15 frontier models across 8 model families and find that: (1) no single model dominates all industries, as each has a distinct occupational capability profile; (2) implicit faults (truncated data, missing fields) are harder than both explicit errors (timeouts, 500s) and mixed faults, because they lack overt error signals and require the agent to independently detect data degradation; (3) larger models, newer generations, and higher reasoning effort consistently improve performance. GPT-5.2 improves by 27.5 points from minimal to maximum reasoning effort; and (4) strong agents are not necessarily strong environment simulators. Simulator quality is critical for LWM-based evaluation reliability. OccuBench provides the first systematic cross-industry evaluation of AI agents on professional occupational tasks.
+
+人工智能代理预计将在数百个职业领域（从急诊室分诊到核反应堆安全监控到海关进口处理）执行专业工作，但现有基准只能评估公共环境存在的少数领域的代理。我们推出 OccuBench，这是一个涵盖 10 个行业类别和 65 个专业领域的 100 个真实专业任务场景的基准测试，由语言世界模型 (LWM) 启用，该模型通过 LLM 驱动的工具响应生成来模拟特定领域的环境。我们的多智能体合成管道自动生成具有保证可解性、校准难度和基于文档的多样性的评估实例。 OccuBench 按照两个互补的维度评估代理：跨专业领域的任务完成情况和受控故障注入（显式错误、隐式数据降级和混合故障）下的环境鲁棒性。我们评估了 8 个模型系列中的 15 个前沿模型，发现：（1）没有一个模型能够主导所有行业，因为每个模型都有不同的职业能力特征； (2) 隐式错误（截断数据、丢失字段）比显式错误（超时、500 秒）和混合错误更难，因为它们缺乏明显的错误信号，并且需要代理独立检测数据降级； (3) 更大的模型、更新的世代和更高的推理能力不断提高性能。 GPT-5.2 从最小推理到最大推理工作提高了 27.5 分； (4)强代理不一定是强环境模拟器。模拟器质量对于基于 LWM 的评估可靠性至关重要。 OccuBench 首次对 AI 代理在专业职业任务上进行系统性跨行业评估。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-13 (2 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-04-13
