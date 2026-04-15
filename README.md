@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-15](papers/2026-04-15.md) - 5 papers
 - [2026-04-13](papers/2026-04-13.md) - 4 papers
 - [2026-04-10](papers/2026-04-10.md) - 20 papers
 - [2026-04-09](papers/2026-04-09.md) - 6 papers
@@ -57,6 +58,98 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-15 (5 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-15
+
+**Paper Count**: 5
+
+---
+
+## 1. DINO-Explorer: Active Underwater Discovery via Ego-Motion Compensated Semantic Predictive Coding / DINO-Explorer：通过自我运动补偿语义预测编码进行主动水下发现
+
+**Date**: 2026-04-14 | **arXiv**: [2604.12933v1](http://arxiv.org/abs/2604.12933v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.12933v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Marine ecosystem degradation necessitates continuous, scientifically selective underwater monitoring. However, most autonomous underwater vehicles (AUVs) operate as passive data loggers, capturing exhaustive video for offline review and frequently missing transient events of high scientific value. Transitioning to active perception requires a causal, online signal that highlights significant phenomena while suppressing maneuver-induced visual changes. We propose DINO-Explorer, a novelty-aware perception framework driven by a continuous semantic surprise signal. Operating within the latent space of a frozen DINOv3 foundation model, it leverages a lightweight, action-conditioned recurrent predictor to anticipate short-horizon semantic evolution. An efference-copy-inspired module utilizes globally pooled optical flow to discount self-induced visual changes without suppressing genuine environmental novelty. We evaluate this signal on the downstream task of asynchronous event triage under variant telemetry constraints. Results demonstrate that DINO-Explorer provides a robust, bandwidth-efficient attention mechanism. At a fixed operating point, the system retains 78.8% of post-discovery human-reviewer consensus events with a 56.8% trigger confirmation rate, effectively surfacing mission-relevant phenomena. Crucially, ego-motion conditioning suppresses 45.5% of false positives relative to an uncompensated surprise signal baseline. In a replay-side Pareto ablation study, DINO-Explorer robustly dominates the validated peak F1 versus telemetry bandwidth frontier, reducing telemetry bandwidth by 48.2% at the selected operating point while maintaining a 62.2% peak F1 score, successfully concentrating data transmission around human-verified novelty events.
+
+海洋生态系统退化需要持续、科学选择性的水下监测。然而，大多数自主水下航行器（AUV）作为被动数据记录器运行，捕获详尽的视频以供离线查看，并且经常遗漏具有高科学价值的瞬态事件。向主动感知的转变需要一个因果的在线信号，该信号可以突出显着的现象，同时抑制机动引起的视觉变化。我们提出了 DINO-Explorer，这是一种由连续语义惊喜信号驱动的新颖感知感知框架。它在冻结的 DINOv3 基础模型的潜在空间内运行，利用轻量级、动作条件循环预测器来预测短期语义演化。受效果复制启发的模块利用全局汇集的光流来减少自我引起的视觉变化，而不抑制真正的环境新颖性。我们在变量遥测约束下在异步事件分类的下游任务上评估该信号。结果表明，DINO-Explorer 提供了强大的、带宽高效的注意力机制。在固定操作点，系统保留了 78.8% 的发现后人工审核共识事件，触发确认率为 56.8%，有效地呈现了与任务相关的现象。至关重要的是，相对于未补偿的意外信号基线，自我运动调节可抑制 45.5% 的误报。在回放端 Pareto 消融研究中，DINO-Explorer 稳健地主导了经过验证的峰值 F1 与遥测带宽前沿，在选定的操作点将遥测带宽减少了 48.2%，同时保持了 62.2% 的峰值 F1 分数，成功地将数据传输集中在人类验证的新颖事件周围。
+
+</details>
+
+---
+
+## 2. VideoFlexTok: Flexible-Length Coarse-to-Fine Video Tokenization / VideoFlexTok：灵活长度的从粗到细的视频标记化
+
+**Date**: 2026-04-14 | **arXiv**: [2604.12887v1](http://arxiv.org/abs/2604.12887v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.12887v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual tokenizers map high-dimensional raw pixels into a compressed representation for downstream modeling. Beyond compression, tokenizers dictate what information is preserved and how it is organized. A de facto standard approach to video tokenization is to represent a video as a spatiotemporal 3D grid of tokens, each capturing the corresponding local information in the original signal. This requires the downstream model that consumes the tokens, e.g., a text-to-video model, to learn to predict all low-level details "pixel-by-pixel" irrespective of the video's inherent complexity, leading to high learning complexity.   We present VideoFlexTok, which represents videos with a variable-length sequence of tokens structured in a coarse-to-fine manner -- where the first tokens (emergently) capture abstract information, such as semantics and motion, and later tokens add fine-grained details. The generative flow decoder enables realistic video reconstructions from any token count. This representation structure allows adapting the token count according to downstream needs and encoding videos longer than the baselines with the same budget.   We evaluate VideoFlexTok on class- and text-to-video generative tasks and show that it leads to more efficient training compared to 3D grid tokens, e.g., achieving comparable generation quality (gFVD and ViCLIP Score) with a 5x smaller model (1.1B vs 5.2B). Finally, we demonstrate how VideoFlexTok can enable long video generation without prohibitive computational cost by training a text-to-video model on 10-second 81-frame videos with only 672 tokens, 8x fewer than a comparable 3D grid tokenizer.
+
+视觉分词器将高维原始像素映射为下游建模的压缩表示。除了压缩之外，标记器还决定保留哪些信息以及如何组织信息。视频标记化事实上的标准方法是将视频表示为标记的时空 3D 网格，每个标记捕获原始信号中相应的局部信息。这需要使用令牌的下游模型（例如文本到视频模型）学习“逐像素”预测所有低级细节，而不考虑视频固有的复杂性，从而导致较高的学习复杂性。   我们提出了 VideoFlexTok，它用由粗到细的方式构造的可变长度令牌序列来表示视频 - 其中第一个令牌（突然）捕获抽象信息，例如语义和运动，而后面的令牌添加细粒度的细节。生成流解码器可以根据任何令牌计数进行真实的视频重建。这种表示结构允许根据下游需求调整令牌计数，并在相同预算下编码比基线更长的视频。   我们在类和文本到视频生成任务上评估了 VideoFlexTok，并表明与 3D 网格标记相比，它可以带来更高效的训练，例如，使用小 5 倍的模型（1.1B 与 5.2B）实现相当的生成质量（gFVD 和 ViCLIP 分数）。最后，我们演示了 VideoFlexTok 如何在仅使用 672 个标记（比同类 3D 网格标记生成器少 8 倍）的 10 秒 81 帧视频上训练文本到视频模型，从而在无需高昂计算成本的情况下生成长视频。
+
+</details>
+
+---
+
+## 3. All in One: A Unified Synthetic Data Pipeline for Multimodal Video Understanding / 多合一：用于多模态视频理解的统一合成数据管道
+
+**Date**: 2026-04-14 | **arXiv**: [2604.12335v1](http://arxiv.org/abs/2604.12335v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.12335v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Training multimodal large language models (MLLMs) for video understanding requires large-scale annotated data spanning diverse tasks such as object counting, question answering, and segmentation. However, collecting and annotating multimodal video data in real-world is costly, slow, and inherently limited in diversity and coverage. To address this challenge, we propose a unified synthetic data generation pipeline capable of automatically producing unlimited multimodal video data with rich and diverse supervision. Our framework supports multiple task formats within a single pipeline, enabling scalable and consistent data creation across tasks. To further enhance reasoning ability, we introduce a VQA-based fine-tuning strategy that trains models to answer structured questions about visual content rather than relying solely on captions or simple instructions. This formulation encourages deeper visual grounding and reasoning. We evaluate our approach in three challenging tasks: video object counting, video-based visual question answering, and video object segmentation. Experimental results demonstrate that models trained predominantly on synthetic data generalize effectively to real-world datasets, often outperforming traditionally trained counterparts. Our findings highlight the potential of unified synthetic data pipelines as a scalable alternative to expensive real-world annotation for multimodal video understanding.
+
+训练用于视频理解的多模态大语言模型 (MLLM) 需要跨越对象计数、问答和分割等不同任务的大规模注释数据。然而，在现实世界中收集和注释多模态视频数据成本高昂、速度缓慢，并且多样性和覆盖范围本身就受到限制。为了应对这一挑战，我们提出了一个统一的合成数据生成管道，能够自动生成具有丰富多样监督的无限多模态视频数据。我们的框架支持单个管道中的多种任务格式，从而实现跨任务的可扩展且一致的数据创建。为了进一步增强推理能力，我们引入了基于 VQA 的微调策略，该策略训练模型回答有关视觉内容的结构化问题，而不是仅仅依赖字幕或简单指令。这种表述鼓励更深入的视觉基础和推理。我们在三个具有挑战性的任务中评估我们的方法：视频对象计数、基于视频的视觉问答和视频对象分割。实验结果表明，主要基于合成数据训练的模型可以有效地推广到现实世界的数据集，通常优于传统训练的模型。我们的研究结果强调了统一合成数据管道作为多模态视频理解的昂贵的现实世界注释的可扩展替代方案的潜力。
+
+</details>
+
+---
+
+## 4. AIM: Intent-Aware Unified world action Modeling with Spatial Value Maps / 目标：使用空间价值图进行意图感知统一世界行动建模
+
+**Date**: 2026-04-13 | **arXiv**: [2604.11135v1](http://arxiv.org/abs/2604.11135v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.11135v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pretrained video generation models provide strong priors for robot control, but existing unified world action models still struggle to decode reliable actions without substantial robot-specific training. We attribute this limitation to a structural mismatch: while video models capture how scenes evolve, action generation requires explicit reasoning about where to interact and the underlying manipulation intent. We introduce AIM, an intent-aware unified world action model that bridges this gap via an explicit spatial interface. Instead of decoding actions directly from future visual representations, AIM predicts an aligned spatial value map that encodes task-relevant interaction structure, enabling a control-oriented abstraction of future dynamics. Built on a pretrained video generation model, AIM jointly models future observations and value maps within a shared mixture-of-transformers architecture. It employs intent-causal attention to route future information to the action branch exclusively through the value representation. We further propose a self-distillation reinforcement learning stage that freezes the video and value branches and optimizes only the action head using dense rewards derived from projected value-map responses together with sparse task-level signals. To support training and evaluation, we construct a simulation dataset of 30K manipulation trajectories with synchronized multi-view observations, actions, and value-map annotations. Experiments on RoboTwin 2.0 benchmark show that AIM achieves a 94.0% average success rate, significantly outperforming prior unified world action baselines. Notably, the improvement is more pronounced in long-horizon and contact-sensitive manipulation tasks, demonstrating the effectiveness of explicit spatial-intent modeling as a bridge between visual world modeling and robot control.
+
+预训练的视频生成模型为机器人控制提供了强大的先验，但现有的统一世界动作模型仍然难以在没有大量针对机器人的训练的情况下解码可靠的动作。我们将此限制归因于结构不匹配：虽然视频模型捕捉场景如何演变，但动作生成需要明确推理在哪里交互以及潜在的操纵意图。我们引入了 AIM，这是一种意图感知的统一世界动作模型，它通过显式的空间接口弥合了这一差距。 AIM 不是直接从未来的视觉表示中解码动作，而是预测一个对齐的空间值图，该图对与任务相关的交互结构进行编码，从而实现未来动态的面向控制的抽象。 AIM 基于预训练的视频生成模型而构建，在共享的混合变压器架构中对未来的观察结果和价值图进行联合建模。它采用意图因果注意力，仅通过值表示将未来信息路由到操作分支。我们进一步提出了一个自蒸馏强化学习阶段，该阶段冻结视频和价值分支，并使用从投影价值图响应和稀疏任务级信号中获得的密集奖励仅优化动作头。为了支持训练和评估，我们构建了一个包含 30K 操作轨迹的模拟数据集，其中包含同步的多视图观察、动作和值图注释。 RoboTwin 2.0 基准测试表明，AIM 的平均成功率达到 94.0%，显着优于之前的统一世界行动基准。值得注意的是，这种改进在长视野和接触敏感操作任务中更为明显，证明了显式空间意图建模作为视觉世界建模和机器人控制之间桥梁的有效性。
+
+</details>
+
+---
+
+## 5. OmniScript: Towards Audio-Visual Script Generation for Long-Form Cinematic Video / OmniScript：为长格式电影视频生成视听脚本
+
+**Date**: 2026-04-13 | **arXiv**: [2604.11102v1](http://arxiv.org/abs/2604.11102v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.11102v1)
+
+**Categories**: cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current multimodal large language models (MLLMs) have demonstrated remarkable capabilities in short-form video understanding, yet translating long-form cinematic videos into detailed, temporally grounded scripts remains a significant challenge. This paper introduces the novel video-to-script (V2S) task, aiming to generate hierarchical, scene-by-scene scripts encompassing character actions, dialogues, expressions, and audio cues. To facilitate this, we construct a first-of-its-kind human-annotated benchmark and propose a temporally-aware hierarchical evaluation framework. Furthermore, we present OmniScript, an 8B-parameter omni-modal (audio-visual) language model tailored for long-form narrative comprehension. OmniScript is trained via a progressive pipeline that leverages chain-of-thought supervised fine-tuning for plot and character reasoning, followed by reinforcement learning using temporally segmented rewards. Extensive experiments demonstrate that despite its parameter efficiency, OmniScript significantly outperforms larger open-source models and achieves performance comparable to state-of-the-art proprietary models, including Gemini 3-Pro, in both temporal localization and multi-field semantic accuracy.
+
+当前的多模态大语言模型（MLLM）在短视频理解方面表现出了卓越的能力，但将长电影视频翻译成详细的、基于时间的脚本仍然是一个重大挑战。本文介绍了新颖的视频到脚本（V2S）任务，旨在生成包含角色动作、对话、表情和音频提示的分层、逐场景脚本。为了促进这一点，我们构建了一个首个人类注释基准，并提出了一个时间感知的分层评估框架。此外，我们还提出了 OmniScript，这是一种专为长篇叙事理解而定制的 8B 参数全模态（视听）语言模型。 OmniScript 通过渐进式管道进行训练，该管道利用思想链监督微调来进行情节和角色推理，然后使用时间分段奖励进行强化学习。大量实验表明，尽管参数效率较高，但 OmniScript 在时间定位和多字段语义准确性方面的性能显着优于较大的开源模型，并实现了与最先进的专有模型（包括 Gemini 3-Pro）相当的性能。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-13 (4 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-13
