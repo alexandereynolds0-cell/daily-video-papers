@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-17](papers/2026-04-17.md) - 12 papers
 - [2026-04-16](papers/2026-04-16.md) - 12 papers
 - [2026-04-15](papers/2026-04-15.md) - 5 papers
 - [2026-04-13](papers/2026-04-13.md) - 4 papers
@@ -59,6 +60,212 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-17 (12 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-17
+
+**Paper Count**: 12
+
+---
+
+## 1. AnimationBench: Are Video Models Good at Character-Centric Animation? / AnimationBench：视频模型擅长以角色为中心的动画吗？
+
+**Date**: 2026-04-16 | **arXiv**: [2604.15299v1](http://arxiv.org/abs/2604.15299v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.15299v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation has advanced rapidly, with recent methods producing increasingly convincing animated results. However, existing benchmarks-largely designed for realistic videos-struggle to evaluate animation-style generation with its stylized appearance, exaggerated motion, and character-centric consistency. Moreover, they also rely on fixed prompt sets and rigid pipelines, offering limited flexibility for open-domain content and custom evaluation needs. To address this gap, we introduce AnimationBench, the first systematic benchmark for evaluating animation image-to-video generation. AnimationBench operationalizes the Twelve Basic Principles of Animation and IP Preservation into measurable evaluation dimensions, together with Broader Quality Dimensions including semantic consistency, motion rationality, and camera motion consistency. The benchmark supports both a standardized close-set evaluation for reproducible comparison and a flexible open-set evaluation for diagnostic analysis, and leverages visual-language models for scalable assessment. Extensive experiments show that AnimationBench aligns well with human judgment and exposes animation-specific quality differences overlooked by realism-oriented benchmarks, leading to more informative and discriminative evaluation of state-of-the-art I2V models.
+
+视频生成发展迅速，最近的方法产生了越来越令人信服的动画结果。然而，现有的基准（主要是为逼真的视频设计的）很难评估动画风格的生成及其风格化的外观、夸张的动作和以角色为中心的一致性。此外，它们还依赖于固定的提示集和严格的管道，为开放域内容和自定义评估需求提供的灵活性有限。为了解决这一差距，我们引入了 AnimationBench，这是第一个用于评估动画图像到视频生成的系统基准。 AnimationBench 将动画和 IP 保护的十二项基本原则转化为可衡量的评估维度，以及更广泛的质量维度，包括语义一致性、运动合理性和摄像机运动一致性。该基准支持用于可重复比较的标准化封闭集评估和用于诊断分析的灵活开放集评估，并利用视觉语言模型进行可扩展评估。大量实验表明，AnimationBench 与人类判断非常一致，并揭示了以现实为导向的基准所忽视的特定于动画的质量差异，从而对最先进的 I2V 模型进行信息更丰富、更具辨别力的评估。
+
+</details>
+
+---
+
+## 2. Boundary-Centric Active Learning for Temporal Action Segmentation / 用于时间动作分割的以边界为中心的主动学习
+
+**Date**: 2026-04-16 | **arXiv**: [2604.15173v1](http://arxiv.org/abs/2604.15173v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.15173v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Temporal action segmentation (TAS) demands dense temporal supervision, yet most of the annotation cost in untrimmed videos is spent identifying and refining action transitions, where segmentation errors concentrate and small temporal shifts disproportionately degrade segmental metrics. We introduce B-ACT, a clip-budgeted active learning framework that explicitly allocates supervision to these high-leverage boundary regions. B-ACT operates in a hierarchical two-stage loop: (i) it ranks and queries unlabeled videos using predictive uncertainty, and (ii) within each selected video, it detects candidate transitions from the current model predictions and selects the top-$K$ boundaries via a novel boundary score that fuses neighborhood uncertainty, class ambiguity, and temporal predictive dynamics. Importantly, our annotation protocol requests labels for only the boundary frames while still training on boundary-centered clips to exploit temporal context through the model's receptive field. Extensive experiments on GTEA, 50Salads, and Breakfast demonstrate that boundary-centric supervision delivers strong label efficiency and consistently surpasses representative TAS active learning baselines and prior state of the art under sparse budgets, with the largest gains on datasets where boundary placement dominates edit and overlap-based F1 scores.
+
+时间动作分割（TAS）需要密集的时间监督，但未经修剪的视频中的大部分注释成本都花在识别和细化动作转换上，其中分割错误集中，小的时间变化不成比例地降低了分段指标。我们引入了 B-ACT，这是一个预算有限的主动学习框架，它明确地将监督分配给这些高杠杆边界区域。 B-ACT 在分层两阶段循环中运行：(i) 使用预测不确定性对未标记视频进行排名和查询，(ii) 在每个选定的视频中，它检测当前模型预测的候选转换，并通过融合邻域不确定性、类模糊性和时间预测动态的新颖边界分数选择 top-$K$ 边界。重要的是，我们的注释协议仅请求边界帧的标签，同时仍然对以边界为中心的剪辑进行训练，以通过模型的感受野利用时间上下文。在 GTEA、50Salads 和 Breakfast 上进行的大量实验表明，以边界为中心的监督可提供强大的标签效率，并始终超越代表性的 TAS 主动学习基线和稀疏预算下的现有技术水平，在边界放置主导编辑和基于重叠的 F1 分数的数据集上获得最大收益。
+
+</details>
+
+---
+
+## 3. KVNN: Learnable Multi-Kernel Volterra Neural Networks / KVNN：可学习的多内核 Volterra 神经网络
+
+**Date**: 2026-04-16 | **arXiv**: [2604.15141v1](http://arxiv.org/abs/2604.15141v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.15141v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Higher-order learning is fundamentally rooted in exploiting compositional features. It clearly hinges on enriching the representation by more elaborate interactions of the data which, in turn, tends to increase the model complexity of conventional large-scale deep learning models. In this paper, a kernelized Volterra Neural Network (kVNN) is proposed. The key to the achieved efficiency lies in using a learnable multi-kernel representation, where different interaction orders are modeled by distinct polynomial-kernel components with compact, learnable centers, yielding an order-adaptive parameterization. Features are learned by the composition of layers, each of which consists of parallel branches of different polynomial orders, enabling kVNN filters to directly replace standard convolutional kernels within existing architectures. The theoretical results are substantiated by experiments on two representative tasks: video action recognition and image denoising. The results demonstrate favorable performance-efficiency trade-offs: kVNN consistently yields reduced model (parameters) and computational (GFLOPs) complexity with competitive and often improved performance. These results are maintained even when trained from scratch without large-scale pretraining. In summary, we substantiate that structured kernelized higher-order layers offer a practical path to balancing expressivity and computational cost in modern deep networks.
+
+高阶学习从根本上植根于利用组合特征。它显然取决于通过更精细的数据交互来丰富表示，这反过来又会增加传统大规模深度学习模型的模型复杂性。本文提出了一种核化 Volterra 神经网络（kVNN）。实现效率的关键在于使用可学习的多核表示，其中不同的交互阶数由具有紧凑、可学习中心的不同多项式核组件建模，从而产生阶数自适应参数化。特征是通过层的组合来学习的，每个层都由不同多项式阶数的并行分支组成，使得 kVNN 滤波器能够直接替换现有架构中的标准卷积核。理论结果通过视频动作识别和图像去噪这两个代表性任务的实验得到了证实。结果证明了良好的性能效率权衡：kVNN 始终降低模型（参数）和计算 (GFLOP) 复杂性，同时具有竞争性且经常改进的性能。即使在没有大规模预训练的情况下从头开始训练，这些结果也能保持。总之，我们证实结构化内核化高阶层提供了平衡现代深度网络中的表达性和计算成本的实用途径。
+
+</details>
+
+---
+
+## 4. How to Correctly Make Mistakes: A Framework for Constructing and Benchmarking Mistake Aware Egocentric Procedural Videos / 如何正确犯错误：构建和基准测试错误意识自我中心程序视频的框架
+
+**Date**: 2026-04-16 | **arXiv**: [2604.15134v1](http://arxiv.org/abs/2604.15134v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.15134v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reliable procedural monitoring in video requires exposure to naturally occurring human errors and the recoveries that follow. In egocentric recordings, mistakes are often partially occluded by hands and revealed through subtle object state changes, while existing procedural datasets provide limited and inconsistent mistake and correction traces. We present PIE-V (Psychologically Inspired Error injection for Videos), a framework for constructing and benchmarking mistake-aware egocentric procedural videos by augmenting clean keystep procedures with controlled, human-plausible deviations. PIE-V combines a psychology-informed error planner conditioned on procedure phase and semantic step load, a correction planner that models recovery behavior, an LLM writer that performs cascade-consistent rewrites, and an LLM judge that validates procedural coherence and repairs failures. For video segment edits, PIE-V synthesizes replacement clips with text-guided video generation and stitches them into the episode to preserve visual plausibility. Applied to 17 tasks and 50 Ego-Exo4D scenarios, PIE-V injects 102 mistakes and generates 27 recovery corrections. For benchmarking, we introduce a unified taxonomy and a human rubric with nine metrics that cover step-level and procedure-level quality, including plausibility, procedure logic with annotator confidence, state change coherence, and grounding between text and video. Using this protocol, we audit several existing resources and compare PIE-V against a freeform LLM generation baseline under the same criteria. Together, the framework and rubric support post-completion verification for egocentric procedural mistake detection and correction.
+
+视频中可靠的程序监控需要暴露自然发生的人为错误以及随后的恢复。在以自我为中心的录音中，错误通常被手部分遮挡，并通过微妙的对象状态变化显露出来，而现有的程序数据集提供有限且不一致的错误和纠正痕迹。我们提出了 PIE-V（视频的心理启发错误注入），这是一个框架，用于通过使用受控的、人类可信的偏差来增强干净的关键步骤程序，从而构建和基准化错误感知的以自我为中心的程序视频。 PIE-V 结合了一个以程序阶段和语义步骤负载为条件的心理学错误规划器、一个对恢复行为进行建模的校正规划器、一个执行级联一致重写的 LLM 编写器以及一个验证程序一致性和修复故障的 LLM 判断器。对于视频片段编辑，PIE-V 通过文本引导视频生成来合成替换剪辑，并将它们拼接到剧集中以保持视觉可信度。 PIE-V 应用于 17 个任务和 50 个 Ego-Exo4D 场景，注入了 102 个错误并生成 27 个恢复校正。对于基准测试，我们引入了统一的分类法和包含九个指标的人类标准，涵盖步骤级和程序级质量，包括合理性、带有注释者置信度的程序逻辑、状态变化一致性以及文本和视频之间的基础。使用该协议，我们审核了多个现有资源，并在相同标准下将 PIE-V 与自由形式的 LLM 生成基线进行比较。该框架和标题共同支持完成后验证，以检测和纠正以自我为中心的程序错误。
+
+</details>
+
+---
+
+## 5. MCSC-Bench: Multimodal Context-to-Script Creation for Realistic Video Production / MCSC-Bench：用于真实视频制作的多模式上下文到脚本创建
+
+**Date**: 2026-04-16 | **arXiv**: [2604.15127v1](http://arxiv.org/abs/2604.15127v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.15127v1)
+
+**Categories**: cs.MM
+
+**Code**: https://github.com/huanran-hu/MCSC.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Real-world video creation often involves a complex reasoning workflow of selecting relevant shots from noisy materials, planning missing shots for narrative completeness, and organizing them into coherent storylines. However, existing benchmarks focus on isolated sub-tasks and lack support for evaluating this full process. To address this gap, we propose Multimodal Context-to-Script Creation (MCSC), a new task that transforms noisy multimodal inputs and user instructions into structured, executable video scripts. We further introduce MCSC-Bench, the first large-scale MCSC dataset, comprising 11K+ well-annotated videos. Each sample includes: (1) redundant multimodal materials and user instructions; (2) a coherent, production-ready script containing material-based shots, newly planned shots (with shooting instructions), and shot-aligned voiceovers. MCSC-Bench supports comprehensive evaluation across material selection, narrative planning, and conditioned script generation, and includes both in-domain and out-of-domain test sets. Experiments show that current multimodal LLMs struggle with structure-aware reasoning under long contexts, highlighting the challenges posed by our benchmark. Models trained on MCSC-Bench achieve SOTA performance, with an 8B model surpassing Gemini-2.5-Pro, and generalize to out-of-domain scenarios. Downstream video generation guided by the generated scripts further validates the practical value of MCSC. Datasets are available at: https://github.com/huanran-hu/MCSC.
+
+现实世界的视频创作通常涉及复杂的推理工作流程，从嘈杂的材料中选择相关镜头，规划缺失的镜头以实现叙事完整性，并将它们组织成连贯的故事情节。然而，现有的基准侧重于孤立的子任务，缺乏对评估整个过程的支持。为了解决这一差距，我们提出了多模态上下文到脚本创建（MCSC），这是一项新任务，可将嘈杂的多模态输入和用户指令转换为结构化的可执行视频脚本。我们进一步介绍了 MCSC-Bench，这是第一个大规模 MCSC 数据集，包含 11K+ 注释良好的视频。每个样本包括：（1）多余的多式联运材料和用户说明； (2) 一个连贯的、可立即制作的剧本，包含基于素材的镜头、新规划的镜头（带有拍摄说明）以及镜头对齐的配音。 MCSC-Bench 支持跨材料选择、叙事规划和条件脚本生成的综合评估，并包括域内和域外测试集。实验表明，当前的多模式法学硕士在长上下文中难以进行结构感知推理，这凸显了我们的基准带来的挑战。在 MCSC-Bench 上训练的模型实现了 SOTA 性能，8B 模型超越了 Gemini-2.5-Pro，并泛化到域外场景。由生成的脚本引导的下游视频生成进一步验证了MCSC的实用价值。数据集可在以下网址获取：https://github.com/huanran-hu/MCSC。
+
+</details>
+
+---
+
+## 6. Flow of Truth: Proactive Temporal Forensics for Image-to-Video Generation / 真相流：图像到视频生成的主动时间取证
+
+**Date**: 2026-04-16 | **arXiv**: [2604.15003v1](http://arxiv.org/abs/2604.15003v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.15003v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The rapid rise of image-to-video (I2V) generation enables realistic videos to be created from a single image but also brings new forensic demands. Unlike static images, I2V content evolves over time, requiring forensics to move beyond 2D pixel-level tampering localization toward tracing how pixels flow and transform throughout the video. As frames progress, embedded traces drift and deform, making traditional spatial forensics ineffective. To address this unexplored dimension, we present **Flow of Truth**, the first proactive framework focusing on temporal forensics in I2V generation. A key challenge lies in discovering a forensic signature that can evolve consistently with the generation process, which is inherently a creative transformation rather than a deterministic reconstruction. Despite this intrinsic difficulty, we innovatively redefine video generation as *the motion of pixels through time rather than the synthesis of frames*. Building on this view, we propose a learnable forensic template that follows pixel motion and a template-guided flow module that decouples motion from image content, enabling robust temporal tracing. Experiments show that Flow of Truth generalizes across commercial and open-source I2V models, substantially improving temporal forensics performance.
+
+图像到视频 (I2V) 生成的快速兴起使得可以从单个图像创建逼真的视频，但也带来了新的取证需求。与静态图像不同，I2V 内容会随着时间的推移而演变，要求取证超越 2D 像素级篡改定位，转向跟踪像素在整个视频中的流动和转换方式。随着帧的进展，嵌入的痕迹会漂移和变形，使得传统的空间取证变得无效。为了解决这个未探索的维度，我们提出了 **Flow of Truth**，这是第一个专注于 I2V 生成中的时间取证的主动框架。一个关键的挑战在于发现一个可以与生成过程一致演变的取证签名，这本质上是一种创造性的转变，而不是确定性的重建。尽管存在这种内在的困难，我们创新地将视频生成重新定义为“像素随时间的运动而不是帧的合成”。基于这个观点，我们提出了一个可学习的取证模板，该模板遵循像素运动，以及一个模板引导的流模块，可将运动与图像内容解耦，从而实现强大的时间跟踪。实验表明，Flow of Truth 可以推广到商业和开源 I2V 模型，从而显着提高时间取证性能。
+
+</details>
+
+---
+
+## 7. Prompt-to-Gesture: Measuring the Capabilities of Image-to-Video Deictic Gesture Generation / 提示手势：测量图像到视频指示手势生成的能力
+
+**Date**: 2026-04-16 | **arXiv**: [2604.14953v1](http://arxiv.org/abs/2604.14953v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.14953v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Gesture recognition research, unlike NLP, continues to face acute data scarcity, with progress constrained by the need for costly human recordings or image processing approaches that cannot generate authentic variability in the gestures themselves. Recent advancements in image-to-video foundation models have enabled the generation of photorealistic, semantically rich videos guided by natural language. These capabilities open up new possibilities for creating effort-free synthetic data, raising the critical question of whether video Generative AI models can augment and complement traditional human-generated gesture data. In this paper, we introduce and analyze prompt-based video generation to construct a realistic deictic gestures dataset and rigorously evaluate its effectiveness for downstream tasks. We propose a data generation pipeline that produces deictic gestures from a small number of reference samples collected from human participants, providing an accessible approach that can be leveraged both within and beyond the machine learning community. Our results demonstrate that the synthetic gestures not only align closely with real ones in terms of visual fidelity but also introduce meaningful variability and novelty that enrich the original data, further supported by superior performance of various deep models using a mixed dataset. These findings highlight that image-to-video techniques, even in their early stages, offer a powerful zero-shot approach to gesture synthesis with clear benefits for downstream tasks.
+
+与 NLP 不同，手势识别研究继续面临严重的数据稀缺问题，其进展受到需要昂贵的人类记录或图像处理方法的限制，而这些方法无法产生手势本身的真实变化。图像到视频基础模型的最新进展使得能够生成由自然语言引导的逼真、语义丰富的视频。这些功能为轻松创建合成数据开辟了新的可能性，并提出了视频生成人工智能模型是否可以增强和补充传统人类生成的手势数据的关键问题。在本文中，我们介绍并分析基于提示的视频生成，以构建真实的指示手势数据集，并严格评估其对下游任务的有效性。我们提出了一种数据生成管道，该管道可以根据从人类参与者收集的少量参考样本生成指示手势，从而提供一种可在机器学习社区内外使用的可访问方法。我们的结果表明，合成手势不仅在视觉保真度方面与真实手势紧密结合，而且还引入了有意义的可变性和新颖性，丰富了原始数据，并得到使用混合数据集的各种深度模型的卓越性能的进一步支持。这些发现强调，图像到视频技术，即使在早期阶段，也提供了一种强大的零样本手势合成方法，对下游任务具有明显的好处。
+
+</details>
+
+---
+
+## 8. Chain-of-Glimpse: Search-Guided Progressive Object-Grounded Reasoning for Video Understanding / Chain-of-Glimpse：用于视频理解的搜索引导渐进式基于对象的推理
+
+**Date**: 2026-04-16 | **arXiv**: [2604.14692v1](http://arxiv.org/abs/2604.14692v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.14692v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video understanding requires identifying and reasoning over semantically discriminative visual objects across frames, yet existing object-agnostic solutions struggle to effectively handle substantial object variations over time. To address this, we introduce Chain-of-Glimpse, a search-guided progressive object-grounded reasoning framework that explicitly anchors each reasoning step to specific visual evidence regions, enabling compositional and multi-step decision-making. Formally, Chain-of-Glimpse formulates video reasoning as a step-by-step process that incrementally builds spatially grounded traces around task-relevant visual objects, thereby mitigating over-reliance on saliency-driven cues. Specifically, Chain-of-Glimpse features a search-guided controller, optimized via reinforcement learning with a format reward that significantly incentivizes grounding capability, to iteratively ground visual evidence regions and form reliable reasoning trajectories, yielding accurate and interpretable multi-step decisions. Extensive evaluations on both in domain NExTQA and out-of-domain Video-Holmes, CG-Bench Reasoning, and VRBench benchmarks demonstrate consistent performance gains, robustness and generalization of Chain-of-Glimpse across diverse video reasoning tasks.
+
+视频理解需要跨帧对语义上有区别的视觉对象进行识别和推理，但现有的与对象无关的解决方案很难有效地处理随时间推移的大量对象变化。为了解决这个问题，我们引入了 Chain-of-Glimpse，这是一种搜索引导的渐进式基于对象的推理框架，该框架将每个推理步骤明确锚定到特定的视觉证据区域，从而实现组合和多步骤决策。从形式上来说，Chain-of-Glimpse 将视频推理制定为一个循序渐进的过程，围绕与任务相关的视觉对象逐步构建空间接地痕迹，从而减轻对显着性驱动线索的过度依赖。具体来说，Chain-of-Glimpse 具有一个搜索引导控制器，通过强化学习进行优化，并具有显着激励接地能力的格式奖励，以迭代地接地视觉证据区域并形成可靠的推理轨迹，从而产生准确且可解释的多步骤决策。对域内 NExTQA 和域外 Video-Holmes、CG-Bench Reasoning 和 VRBench 基准的广泛评估表明，Chain-of-Glimpse 在不同的视频推理任务中具有一致的性能增益、鲁棒性和泛化性。
+
+</details>
+
+---
+
+## 9. CMTM: Cross-Modal Token Modulation for Unsupervised Video Object Segmentation / CMTM：用于无监督视频对象分割的跨模态令牌调制
+
+**Date**: 2026-04-16 | **arXiv**: [2604.14630v1](http://arxiv.org/abs/2604.14630v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.14630v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in unsupervised video object segmentation have highlighted the potential of two-stream architectures that integrate appearance and motion cues. However, fully leveraging these complementary sources of information requires effectively modeling their interdependencies. In this paper, we introduce cross-modality token modulation, a novel approach designed to strengthen the interaction between appearance and motion cues. Our method establishes dense connections between tokens from each modality, enabling efficient intra-modal and inter-modal information propagation through relation transformer blocks. To improve learning efficiency, we incorporate a token masking strategy that addresses the limitations of relying solely on increased model complexity. Our approach achieves state-of-the-art performance across all public benchmarks, outperforming existing methods.
+
+无监督视频对象分割的最新进展凸显了集成外观和运动线索的双流架构的潜力。然而，充分利用这些互补的信息源需要有效地建模它们的相互依赖性。在本文中，我们介绍了跨模态令牌调制，这是一种旨在加强外观和运动线索之间交互的新颖方法。我们的方法在每个模态的标记之间建立密集连接，从而通过关系转换器块实现高效的模内和模间信息传播。为了提高学习效率，我们采用了令牌屏蔽策略，该策略解决了仅依赖于增加模型复杂性的局限性。我们的方法在所有公共基准测试中实现了最先进的性能，优于现有方法。
+
+</details>
+
+---
+
+## 10. TurboTalk: Progressive Distillation for One-Step Audio-Driven Talking Avatar Generation / TurboTalk：渐进式蒸馏，用于一步式音频驱动的说话头像生成
+
+**Date**: 2026-04-16 | **arXiv**: [2604.14580v1](http://arxiv.org/abs/2604.14580v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.14580v1)
+
+**Categories**: cs.CV, cs.MM, cs.SD
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing audio-driven video digital human generation models rely on multi-step denoising, resulting in substantial computational overhead that severely limits their deployment in real-world settings. While one-step distillation approaches can significantly accelerate inference, they often suffer from training instability. To address this challenge, we propose TurboTalk, a two-stage progressive distillation framework that effectively compresses a multi-step audio-driven video diffusion model into a single-step generator. We first adopt Distribution Matching Distillation to obtain a strong and stable 4-step student, and then progressively reduce the denoising steps from 4 to 1 through adversarial distillation. To ensure stable training under extreme step reduction, we introduce a progressive timestep sampling strategy and a self-compare adversarial objective that provides an intermediate adversarial reference that stabilizes progressive distillation. Our method achieve single-step generation of video talking avatar, boosting inference speed by 120 times while maintaining high generation quality.
+
+现有的音频驱动视频数字人类生成模型依赖于多步去噪，导致大量的计算开销，严重限制了它们在现实环境中的部署。虽然一步蒸馏方法可以显着加速推理，但它们经常会遇到训练不稳定的问题。为了应对这一挑战，我们提出了 TurboTalk，这是一种两阶段渐进蒸馏框架，可有效地将多步音频驱动视频扩散模型压缩为单步生成器。我们首先采用分布匹配蒸馏来获得强大且稳定的4步学生，然后通过对抗性蒸馏逐步将去噪步骤从4减少到1。为了确保在极端步数减少下的稳定训练，我们引入了渐进时间步采样策略和自比较对抗目标，该目标提供了稳定渐进蒸馏的中间对抗参考。我们的方法实现了视频说话头像的单步生成，将推理速度提高了 120 倍，同时保持了较高的生成质量。
+
+</details>
+
+---
+
+## 11. Controllable Video Object Insertion via Multiview Priors / 通过多视图先验的可控视频对象插入
+
+**Date**: 2026-04-16 | **arXiv**: [2604.14556v1](http://arxiv.org/abs/2604.14556v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.14556v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video object insertion is a critical task for dynamically inserting new objects into existing environments. Previous video generation methods focus primarily on synthesizing entire scenes while struggling with ensuring consistent object appearance, spatial alignment, and temporal coherence when inserting objects into existing videos. In this paper, we propose a novel solution for Video Object Insertion, which integrates multi-view object priors to address the common challenges of appearance inconsistency and occlusion handling in dynamic environments. By lifting 2D reference images into multi-view representations and leveraging a dual-path view-consistent conditioning mechanism, our framework ensures stable identity guidance and robust integration across diverse viewpoints. A quality-aware weighting mechanism is also employed to adaptively handle noisy or imperfect inputs. Additionally, we introduce an Integration-Aware Consistency Module that guarantees spatial realism, effectively resolving occlusion and boundary artifacts while maintaining temporal continuity across frames. Experimental results show that our solution significantly improves the quality of video object insertion, providing stable and realistic integration.
+
+视频对象插入是将新对象动态插入现有环境的一项关键任务。以前的视频生成方法主要侧重于合成整个场景，同时在将对象插入现有视频时努力确保一致的对象外观、空间对齐和时间连贯性。在本文中，我们提出了一种新颖的视频对象插入解决方案，它集成了多视图对象先验，以解决动态环境中外观不一致和遮挡处理的常见挑战。通过将 2D 参考图像提升为多视图表示并利用双路径视图一致调节机制，我们的框架确保了稳定的身份引导和跨不同视点的稳健集成。还采用质量感知加权机制来自适应处理噪声或不完美的输入。此外，我们引入了集成感知一致性模块，可保证空间真实性，有效解决遮挡和边界伪影，同时保持跨帧的时间连续性。实验结果表明，我们的解决方案显着提高了视频对象插入的质量，提供稳定且真实的集成。
+
+</details>
+
+---
+
+## 12. One Token per Highly Selective Frame: Towards Extreme Compression for Long Video Understanding / 每个高选择性帧一个令牌：实现长视频理解的极限压缩
+
+**Date**: 2026-04-15 | **arXiv**: [2604.14149v2](http://arxiv.org/abs/2604.14149v2) | **PDF**: [Link](http://arxiv.org/pdf/2604.14149v2)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long video understanding is inherently challenging for vision-language models (VLMs) because of the extensive number of frames. With each video frame typically expanding into tens or hundreds of tokens, the limited context length of large language models (LLMs) forces the VLMs to perceive the frames sparsely and lose temporal information. To address this, we explore extreme video token compression towards one token per frame at the final LLM layer. Our key insight is that heuristic-based compression, widely adopted by previous methods, is prone to information loss, and this necessitates supervising LLM layers into learnable and progressive modules for token-level compression (LP-Comp). Such compression enables our VLM to digest 2x-4x more frames with improved performance. To further increase the token efficiency, we investigate frame-level compression, which selects the frames most relevant to the queries via the internal attention scores of the LLM layers, named question-conditioned compression (QC-Comp). As a notable distinction from previous studies, we mitigate the position bias of LLM attention in long contexts, i.e., the over-concentration on the beginning and end of a sequence, by splitting long videos into short segments and employing local attention. Collectively, our combined token-level and frame-level leads to an extreme compression model for long video understanding, named XComp, achieving a significantly larger compression ratio and enabling denser frame sampling. Our XComp is finetuned from VideoChat-Flash with a data-efficient supervised compression tuning stage that only requires 2.5% of the supervised fine-tuning data, yet boosts the accuracy from 42.9% to 46.2% on LVBench and enhances multiple other long video benchmarks.
+
+由于帧数量庞大，长视频理解对于视觉语言模型 (VLM) 来说本质上是一个挑战。由于每个视频帧通常会扩展到数十或数百个标记，大型语言模型 (LLM) 的上下文长度有限，迫使 VLM 稀疏地感知帧并丢失时间信息。为了解决这个问题，我们在最后的 LLM 层探索了极端的视频令牌压缩，每帧一个令牌。我们的主要见解是，以前的方法广泛采用的基于启发式的压缩很容易丢失信息，这需要将 LLM 层监督为可学习和渐进的模块，以进行令牌级压缩 (LP-Comp)。这种压缩使我们的 VLM 能够消化 2 倍到 4 倍的帧，同时提高性能。为了进一步提高令牌效率，我们研究了帧级压缩，它通过 LLM 层的内部注意力分数选择与查询最相关的帧，称为问题条件压缩（QC-Comp）。与之前的研究的一个显着区别是，我们通过将长视频分割成短片段并采用局部注意力，减轻了 LLM 注意力在长上下文中的位置偏差，即过度集中在序列的开头和结尾。总的来说，我们组合的令牌级和帧级产生了一种用于长视频理解的极端压缩模型，名为 XComp，实现了显着更大的压缩比并实现了更密集的帧采样。我们的 XComp 从 VideoChat-Flash 进行了微调，具有数据高效的监督压缩调整阶段，仅需要 2.5% 的监督微调数据，却将 LVBench 上的准确性从 42.9% 提高到 46.2%，并增强了多个其他长视频基准测试。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-16 (12 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-16
