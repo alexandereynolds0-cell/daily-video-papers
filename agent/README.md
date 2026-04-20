@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-20](papers/2026-04-20.md) - 6 papers
 - [2026-04-17](papers/2026-04-17.md) - 45 papers
 - [2026-04-16](papers/2026-04-16.md) - 31 papers
 - [2026-04-15](papers/2026-04-15.md) - 39 papers
@@ -56,6 +57,114 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-20 (6 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-04-20
+
+**Paper Count**: 6
+
+---
+
+## 1. ChemGraph-XANES: An Agentic Framework for XANES Simulation and Analysis / ChemGraph-XANES：XANES 模拟和分析的代理框架
+
+**Date**: 2026-04-17 | **arXiv**: [2604.16205v1](http://arxiv.org/abs/2604.16205v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.16205v1)
+
+**Categories**: cond-mat.mtrl-sci, cs.AI, physics.chem-ph
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Computational X-ray absorption near-edge structure (XANES) is widely used to probe local coordination environments, oxidation states, and electronic structure in chemically complex systems. However, the use of computational XANES at scale is constrained more by workflow complexity than by the underlying simulation method itself. To address this challenge, we present ChemGraph-XANES, an agentic framework for automated XANES simulation and analysis that unifies natural-language task specification, structure acquisition, FDMNES input generation, task-parallel execution, spectral normalization, and provenance-aware data curation. Built on ASE, FDMNES, Parsl, and a LangGraph/LangChain-based tool interface, the framework exposes XANES workflow operations as typed Python tools that can be orchestrated by large language model (LLM) agents. In multi-agent mode, a retrieval-augmented expert agent consults the FDMNES manual to ground parameter selection, while executor agents translate user requests into structured tool calls. We demonstrate documentation-grounded parameter retrieval and show that the same workflow supports both explicit structure-file inputs and chemistry-level natural-language requests. Because independent XANES calculations are naturally task-parallel, the framework is well suited for high-throughput deployment on high-performance computing (HPC) systems, enabling scalable XANES database generation for downstream analysis and machine-learning applications. ChemGraph-XANES thus provides a reproducible and extensible workflow layer for physics-based XANES simulation, spectral curation, and agent-compatible computational spectroscopy.
+
+计算 X 射线吸收近边结构 (XANES) 广泛用于探测化学复杂系统中的局部配位环境、氧化态和电子结构。然而，计算 XANES 的大规模使用更多地受到工作流程复杂性的限制，而不是底层模拟方法本身的限制。为了应对这一挑战，我们推出了 ChemGraph-XANES，这是一种用于自动化 XANES 模拟和分析的代理框架，它统一了自然语言任务规范、结构采集、FDMNES 输入生成、任务并行执行、光谱归一化和来源感知数据管理。该框架基于 ASE、FDMNES、Parsl 和基于 LangGraph/LangChain 的工具接口构建，将 XANES 工作流操作公开为类型化 Python 工具，可以由大型语言模型 (LLM) 代理进行编排。在多代理模式下，检索增强的专家代理参考 FDMNES 手册来进行参数选择，而执行代理将用户请求转换为结构化工具调用。我们演示了基于文档的参数检索，并表明相同的工作流程支持显式结构文件输入和化学级自然语言请求。由于独立的 XANES 计算本质上是任务并行的，因此该框架非常适合高性能计算 (HPC) 系统上的高吞吐量部署，从而为下游分析和机器学习应用程序生成可扩展的 XANES 数据库。因此，ChemGraph-XANES 为基于物理的 XANES 模拟、光谱管理和与代理兼容的计算光谱提供了可重复且可扩展的工作流程层。
+
+</details>
+
+---
+
+## 2. MARCH: Multi-Agent Radiology Clinical Hierarchy for CT Report Generation / 三月：用于生成 CT 报告的多代理放射学临床层次结构
+
+**Date**: 2026-04-17 | **arXiv**: [2604.16175v1](http://arxiv.org/abs/2604.16175v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.16175v1)
+
+**Categories**: cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Automated 3D radiology report generation often suffers from clinical hallucinations and a lack of the iterative verification found in human practice. While recent Vision-Language Models (VLMs) have advanced the field, they typically operate as monolithic "black-box" systems without the collaborative oversight characteristic of clinical workflows. To address these challenges, we propose MARCH (Multi-Agent Radiology Clinical Hierarchy), a multi-agent framework that emulates the professional hierarchy of radiology departments and assigns specialized roles to distinct agents. MARCH utilizes a Resident Agent for initial drafting with multi-scale CT feature extraction, multiple Fellow Agents for retrieval-augmented revision, and an Attending Agent that orchestrates an iterative, stance-based consensus discourse to resolve diagnostic discrepancies. On the RadGenome-ChestCT dataset, MARCH significantly outperforms state-of-the-art baselines in both clinical fidelity and linguistic accuracy. Our work demonstrates that modeling human-like organizational structures enhances the reliability of AI in high-stakes medical domains.
+
+自动生成 3D 放射学报告经常会出现临床幻觉，并且缺乏人类实践中的迭代验证。虽然最近的视觉语言模型 (VLM) 推动了该领域的发展，但它们通常作为整体“黑匣子”系统运行，没有临床工作流程的协作监督特征。为了应对这些挑战，我们提出了 MARCH（多代理放射学临床层次结构），这是一个多代理框架，它模拟放射科的专业层次结构，并将专门的角色分配给不同的代理。 MARCH 利用常驻代理进行多尺度 CT 特征提取的初步起草，使用多个伙伴代理进行检索增强修订，并利用主治代理协调基于立场的迭代共识讨论以解决诊断差异。在 RadGenome-ChestCT 数据集上，MARCH 在临床保真度和语言准确性方面均显着优于最先进的基线。我们的工作表明，模拟类人组织结构可以增强人工智能在高风险医疗领域的可靠性。
+
+</details>
+
+---
+
+## 3. SocialGrid: A Benchmark for Planning and Social Reasoning in Embodied Multi-Agent Systems / SocialGrid：体现多智能体系统中规划和社会推理的基准
+
+**Date**: 2026-04-17 | **arXiv**: [2604.16022v1](http://arxiv.org/abs/2604.16022v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.16022v1)
+
+**Categories**: cs.AI, cs.LG, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As Large Language Models (LLMs) transition from text processors to autonomous agents, evaluating their social reasoning in embodied multi-agent settings becomes critical. We introduce SocialGrid, an embodied multi-agent environment inspired by Among Us that evaluates LLM agents on planning, task execution, and social reasoning. Our evaluations reveal that even the strongest open model (GPT-OSS-120B) achieves below 60% accuracy in task completion and planning, with agents getting stuck in repetitive behaviors or failing to navigate basic obstacles. Since poor navigation confounds evaluation of social intelligence, SocialGrid offers an optional Planning Oracle to isolate social reasoning from planning deficits. While planning assistance improves task completion, social reasoning remains a bottleneck: agents fail to detect deception at near-random chance regardless of scale, relying on shallow heuristics rather than accumulating behavioral evidence. SocialGrid provides automatic failure analysis and fine-grained metrics, enabling developers to diagnose and improve their agents. We also establish a competitive leaderboard using Elo ratings from adversarial league play.
+
+随着大型语言模型（LLM）从文本处理器过渡到自主代理，在具体的多代理设置中评估其社会推理变得至关重要。我们引入了 SocialGrid，这是一个受我们之中启发的具体多智能体环境，它评估 LLM 智能体的规划、任务执行和社交推理。我们的评估表明，即使是最强大的开放模型 (GPT-OSS-120B) 在任务完成和规划方面的准确度也低于 60%，代理会陷入重复行为或无法克服基本障碍。由于糟糕的导航会混淆社交智能的评估，SocialGrid 提供了一个可选的规划预言机来将社交推理与规划缺陷隔离开来。虽然规划援助可以提高任务完成率，但社会推理仍然是一个瓶颈：无论规模如何，代理都无法以近乎随机的机会检测到欺骗，依赖于浅层启发法而不是积累行为证据。 SocialGrid 提供自动故障分析和细粒度指标，使开发人员能够诊断和改进他们的代理。我们还使用对抗性联赛的 Elo 评级建立了一个竞争性排行榜。
+
+</details>
+
+---
+
+## 4. Neurosymbolic Repo-level Code Localization / 神经符号回购级代码本地化
+
+**Date**: 2026-04-17 | **arXiv**: [2604.16021v1](http://arxiv.org/abs/2604.16021v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.16021v1)
+
+**Categories**: cs.SE, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Code localization is a cornerstone of autonomous software engineering. Recent advancements have achieved impressive performance on real-world issue benchmarks. However, we identify a critical yet overlooked bias: these benchmarks are saturated with keyword references (e.g. file paths, function names), encouraging models to rely on superficial lexical matching rather than genuine structural reasoning. We term this phenomenon the Keyword Shortcut. To address this, we formalize the challenge of Keyword-Agnostic Logical Code Localization (KA-LCL) and introduce KA-LogicQuery, a diagnostic benchmark requiring structural reasoning without any naming hints. Our evaluation reveals a catastrophic performance drop of state-of-the-art approaches on KA-LogicQuery, exposing their lack of deterministic reasoning capabilities. We propose LogicLoc, a novel agentic framework that combines large language models with the rigorous logical reasoning of Datalog for precise localization. LogicLoc extracts program facts from the codebase and leverages an LLM to synthesize Datalog programs, with parser-gated validation and mutation-based intermediate-rule diagnostic feedback to ensure correctness and efficiency. The validated programs are executed by a high-performance inference engine, enabling accurate and verifiable localization in a fully automated, closed-loop workflow. Experimental results demonstrate that LogicLoc significantly outperforms SOTA methods on KA-LogicQuery while maintaining competitive performance on popular issue-driven benchmarks. Notably, LogicLoc attains superior performance with significantly lower token consumption and faster execution by offloading structural traversal to a deterministic engine, reducing the overhead of iterative LLM inference.
+
+代码本地化是自主软件工程的基石。最近的进展在现实问题基准上取得了令人印象深刻的表现。然而，我们发现了一个关键但被忽视的偏见：这些基准测试充满了关键字引用（例如文件路径、函数名称），鼓励模型依赖于肤浅的词汇匹配而不是真正的结构推理。我们将这种现象称为关键字快捷方式。为了解决这个问题，我们正式提出了与关键字无关的逻辑代码本地化 (KA-LCL) 的挑战，并引入了 KA-LogicQuery，这是一种无需任何命名提示即可进行结构推理的诊断基准。我们的评估揭示了 KA-LogicQuery 上最先进方法的灾难性性能下降，暴露了它们缺乏确定性推理能力。我们提出了 LogicLoc，一种新颖的代理框架，它将大型语言模型与 Datalog 的严格逻辑推理相结合，以实现精确定位。 LogicLoc 从代码库中提取程序事实，并利用 LLM 合成 Datalog 程序，并通过解析器门控验证和基于突变的中间规则诊断反馈来确保正确性和效率。经过验证的程序由高性能推理引擎执行，从而在完全自动化的闭环工作流程中实现准确且可验证的定位。实验结果表明，LogicLoc 在 KA-LogicQuery 上的性能显着优于 SOTA 方法，同时在流行的问题驱动基准测试中保持具有竞争力的性能。值得注意的是，LogicLoc 通过将结构遍历卸载到确定性引擎，减少了迭代 LLM 推理的开销，从而显着降低了令牌消耗并加快了执行速度，从而实现了卓越的性能。
+
+</details>
+
+---
+
+## 5. AgentV-RL: Scaling Reward Modeling with Agentic Verifier / AgentV-RL：使用 Agentic Verifier 扩展奖励模型
+
+**Date**: 2026-04-17 | **arXiv**: [2604.16004v1](http://arxiv.org/abs/2604.16004v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.16004v1)
+
+**Categories**: cs.CL, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Verifiers have been demonstrated to enhance LLM reasoning via test-time scaling (TTS). Yet, they face significant challenges in complex domains. Error propagation from incorrect intermediate reasoning can lead to false positives for seemingly plausible solutions, while lacking external grounding makes verifiers unreliable on computation or knowledge-intensive tasks. To address these challenges, we propose Agentic Verifier, a framework that transforms reward modeling into a multi-turn, tool-augmented deliberative process. We introduce complementary forward and backward agents: one traces solutions from premises to conclusions, while the other re-checks conclusions against their underlying premises. This bidirectional process enables a comprehensive, reliable, and interpretable assessment of solutions. To facilitate practical deployment, we propose AgentV-RL. Through proactive exploration and reinforcement learning, the verifier autonomously interleaves tool-use with internal reasoning. Extensive experiments show that Agentic Verifier yields consistent performance gains under both parallel and sequential TTS. Notably, our 4B variant surpasses state-of-the-art ORMs by 25.2%, positioning it as a promising paradigm for agentic reward modeling.
+
+验证者已被证明可以通过测试时间缩放（TTS）来增强 LLM 推理。然而，他们在复杂领域面临着重大挑战。不正确的中间推理产生的错误传播可能会导致看似合理的解决方案出现误报，而缺乏外部基础会使验证者在计算或知识密集型任务上变得不可靠。为了应对这些挑战，我们提出了 Agentic Verifier，这是一个将奖励建模转变为多轮、工具增强的审议过程的框架。我们引入互补的前向和后向代理：一个将解决方案从前提追踪到结论，而另一个则根据其基本前提重新检查结论。这种双向过程可以对解决方案进行全面、可靠且可解释的评估。为了便于实际部署，我们提出了AgentV-RL。通过主动探索和强化学习，验证者自主地将工具使用与内部推理交织在一起。大量实验表明，Agentic Verifier 在并行和顺序 TTS 下都能产生一致的性能增益。值得注意的是，我们的 4B 变体超过了最先进的 ORM 25.2%，将其定位为代理奖励建模的一个有前途的范例。
+
+</details>
+
+---
+
+## 6. Weak-Link Optimization for Multi-Agent Reasoning and Collaboration / 多智能体推理与协作的薄弱环节优化
+
+**Date**: 2026-04-17 | **arXiv**: [2604.15972v1](http://arxiv.org/abs/2604.15972v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.15972v1)
+
+**Categories**: cs.AI, cs.CL, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM-driven multi-agent frameworks address complex reasoning tasks through multi-role collaboration. However, existing approaches often suffer from reasoning instability, where individual agent errors are amplified through collaboration, undermining overall performance. Current research mainly focuses on enhancing high-capability agents or suppressing unreliable outputs to improve framework effectiveness, while systematic identification and reinforcement of performance-limiting agents receive less attention. To address this gap, we propose WORC, a \underline{w}eak-link \underline{o}ptimization framework for multi-agent \underline{r}easoning and \underline{c}ollaboration, grounded in the weak-link principle. WORC follows a two-stage workflow. In the weak agent localization stage, task features are constructed, and a meta-learning-based weight predictor trained on optimal configurations identified by swarm intelligence algorithms (SIAs) enables zero-shot mapping from these features to agent performance weights, where the agent with the lowest predicted weight is identified as the weak agent. In the weak-link optimization stage, an uncertainty-driven allocation strategy assigns additional reasoning budgets to weak agents, with lower predicted weights leading to larger repeated-sampling quotas to compensate for reliability deficiencies. Experimental results show that WORC achieves an average accuracy of 82.2\% on reasoning benchmarks while improving framework stability and cross-architecture generalization, suggesting that compensating for weak links, rather than reinforcing strengths alone, enhances the robustness of multi-agent systems.
+
+LLM 驱动的多代理框架通过多角色协作解决复杂的推理任务。然而，现有的方法经常会遇到推理不稳定的问题，个体代理的错误会通过协作而被放大，从而损害整体性能。目前的研究主要集中在增强高能力智能体或抑制不可靠的输出以提高框架有效性，而对性能限制智能体的系统识别和强化关注较少。为了解决这一差距，我们提出了 WORC，一个基于弱链接原则的用于多代理推理和协作的 \underline{w}eak-link \underline{o} 优化框架。 WORC 遵循两阶段工作流程。在弱代理定位阶段，构建任务特征，并根据群体智能算法（SIA）识别的最佳配置训练基于元学习的权重预测器，从而实现从这些特征到代理性能权重的零样本映射，其中预测权重最低的代理被识别为弱代理。在弱环节优化阶段，不确定性驱动的分配策略为弱智能体分配额外的推理预算，较低的预测权重导致较大的重复采样配额，以弥补可靠性缺陷。实验结果表明，WORC 在推理基准上实现了 82.2% 的平均准确率，同时提高了框架稳定性和跨架构泛化能力，这表明补偿薄弱环节而不是单独增强优势，可以增强多智能体系统的鲁棒性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-17 (45 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-04-17
