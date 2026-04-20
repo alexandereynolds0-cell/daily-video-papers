@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-20](papers/2026-04-20.md) - 1 papers
 - [2026-04-17](papers/2026-04-17.md) - 12 papers
 - [2026-04-16](papers/2026-04-16.md) - 12 papers
 - [2026-04-15](papers/2026-04-15.md) - 5 papers
@@ -60,6 +61,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-20 (1 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-20
+
+**Paper Count**: 1
+
+---
+
+## 1. Efficient Video Diffusion Models: Advancements and Challenges / 高效的视频传播模型：进步和挑战
+
+**Date**: 2026-04-17 | **arXiv**: [2604.15911v1](http://arxiv.org/abs/2604.15911v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.15911v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video diffusion models have rapidly become the dominant paradigm for high-fidelity generative video synthesis, but their practical deployment remains constrained by severe inference costs. Compared with image generation, video synthesis compounds computation across spatial-temporal token growth and iterative denoising, making attention and memory traffic major bottlenecks in real-world settings. This survey provides a systematic and deployment-oriented review of efficient video diffusion models. We propose a unified categorization that organizes existing methods into four classes of main paradigms, including step distillation, efficient attention, model compression, and cache/trajectory optimization. Building on this categorization, we respectively analyze algorithmic trends of these four paradigms and examine how different design choices target two core objectives: reducing the number of function evaluations and minimizing per-step overhead. Finally, we discuss open challenges and future directions, including quality preservation under composite acceleration, hardware-software co-design, robust real-time long-horizon generation, and open infrastructure for standardized evaluation. To the best of our knowledge, our work is the first comprehensive survey on efficient video diffusion models, offering researchers and engineers a structured overview of the field and its emerging research directions.
+
+视频扩散模型已迅速成为高保真生成视频合成的主导范例，但其实际部署仍然受到严重的推理成本的限制。与图像生成相比，视频合成复合了时空标记增长和迭代去噪的计算，使得注意力和内存流量成为现实世界环境中的主要瓶颈。这项调查对高效视频传播模型进行了系统且面向部署的审查。我们提出了一个统一的分类，将现有的方法组织成四类主要范式，包括步骤蒸馏、高效注意力、模型压缩和缓存/轨迹优化。在此分类的基础上，我们分别分析了这四种范式的算法趋势，并研究了不同的设计选择如何针对两个核心目标：减少函数评估的数量和最小化每步开销。最后，我们讨论了开放的挑战和未来的方向，包括复合加速下的质量保持、硬件-软件协同设计、强大的实时长视野生成以及用于标准化评估的开放基础设施。据我们所知，我们的工作是对高效视频传播模型的首次全面调查，为研究人员和工程师提供了该领域及其新兴研究方向的结构化概述。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-17 (12 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-17
