@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-21](papers/2026-04-21.md) - 1 papers
 - [2026-04-17](papers/2026-04-17.md) - 4 papers
 - [2026-04-16](papers/2026-04-16.md) - 3 papers
 - [2026-04-15](papers/2026-04-15.md) - 2 papers
@@ -54,6 +55,34 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-21 (1 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-04-21
+
+**Paper Count**: 1
+
+---
+
+## 1. TensorHub: Rethinking AI Model Hub with Tensor-Centric Compression / TensorHub：通过以张量为中心的压缩重新思考 AI 模型中心
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17104v1](http://arxiv.org/abs/2604.17104v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17104v1)
+
+**Categories**: cs.DC, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern AI models are growing rapidly in size and redundancy, leading to significant storage and distribution challenges in model hubs. We present TensorHub, a tensor-centric system for reducing storage overhead through fine-grained deduplication and compression. TensorHub leverages tensor-level fingerprinting and clustering to identify redundancy across models without requiring annotations. Our design enables efficient storage reduction while preserving model usability and performance. Experiments on real-world model repositories demonstrate substantial storage savings with minimal overhead.
+
+现代人工智能模型的规模和冗余度正在迅速增长，导致模型中心面临巨大的存储和分发挑战。我们推出 TensorHub，这是一个以张量为中心的系统，通过细粒度的重复数据删除和压缩来减少存储开销。 TensorHub 利用张量级指纹识别和聚类来识别模型之间的冗余，而无需注释。我们的设计可以有效减少存储空间，同时保持模型的可用性和性能。对现实世界模型存储库的实验表明，可以以最小的开销节省大量存储空间。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-17 (4 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-04-17
