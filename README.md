@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-21](papers/2026-04-21.md) - 6 papers
 - [2026-04-20](papers/2026-04-20.md) - 1 papers
 - [2026-04-17](papers/2026-04-17.md) - 12 papers
 - [2026-04-16](papers/2026-04-16.md) - 12 papers
@@ -61,6 +62,114 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-21 (6 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-21
+
+**Paper Count**: 6
+
+---
+
+## 1. DreamShot: Personalized Storyboard Synthesis with Video Diffusion Prior / DreamShot：具有视频扩散优先级的个性化故事板合成
+
+**Date**: 2026-04-19 | **arXiv**: [2604.17195v1](http://arxiv.org/abs/2604.17195v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17195v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Storyboard synthesis plays a crucial role in visual storytelling, aiming to generate coherent shot sequences that visually narrate cinematic events with consistent characters, scenes, and transitions. However, existing approaches are mostly adapted from text-to-image diffusion models, which struggle to maintain long-range temporal coherence, consistent character identities, and narrative flow across multiple shots. In this paper, we introduce DreamShot, a video generative model based storyboard framework that fully exploits powerful video diffusion priors for controllable multi-shot synthesis. DreamShot supports both Text-to-Shot and Reference-to-Shot generation, as well as story continuation conditioned on previous frames, enabling flexible and context-aware storyboard generation. By leveraging the spatial-temporal consistency inherent in video generative models, DreamShot produces visually and semantically coherent sequences with improved narrative fidelity and character continuity. Furthermore, DreamShot incorporates a multi-reference role conditioning module that accepts multiple character reference images and enforces identity alignment via a Role-Attention Consistency Loss, explicitly constraining attention between reference and generated roles. Extensive experiments demonstrate that DreamShot achieves superior scene coherence, role consistency, and generation efficiency compared to state-of-the-art text-to-image storyboard models, establishing a new direction toward controllable video model-driven visual storytelling.
+
+故事板合成在视觉叙事中起着至关重要的作用，旨在生成连贯的镜头序列，以视觉方式叙述具有一致的角色、场景和过渡的电影事件。然而，现有的方法大多改编自文本到图像的扩散模型，这些模型很难在多个镜头中保持长期的时间连贯性、一致的角色身份和叙事流。在本文中，我们介绍了 DreamShot，一种基于视频生成模型的故事板框架，它充分利用强大的视频扩散先验来实现可控的多镜头合成。 DreamShot 支持文本到镜头和参考到镜头生成，以及以先前帧为条件的故事延续，从而实现灵活且上下文感知的故事板生成。通过利用视频生成模型中固有的时空一致性，DreamShot 可以生成视觉和语义上连贯的序列，并提高叙事保真度和角色连续性。此外，DreamShot 还包含一个多参考角色调节模块，该模块接受多个角色参考图像，并通过角色注意力一致性损失强制身份对齐，明确限制参考角色和生成角色之间的注意力。大量实验表明，与最先进的文本到图像故事板模型相比，DreamShot 实现了卓越的场景连贯性、角色一致性和生成效率，为可控视频模型驱动的视觉叙事建立了新方向。
+
+</details>
+
+---
+
+## 2. Inference-Time Temporal Probability Smoothing for Stable Video Segmentation with SAM2 under Weak Prompts / 在弱提示下使用 SAM2 实现稳定视频分割的推理时间时间概率平滑
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17115v1](http://arxiv.org/abs/2604.17115v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17115v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Interactive video segmentation models such as SAM2 have demonstrated strong generalization across diverse visual domains. However, under weak user supervision, for example, when sparse point prompts are provided on a single frame, their predictions often suffer from temporal instability, including flickering boundaries, object dropout, and inconsistent object extents across frames. These issues limit their reliability in downstream video understanding and control applications.   In this paper, we propose an inference-time temporal probability smoothing method that improves the temporal stability of SAM2-based video segmentation without retraining or architectural modification. Our approach operates directly on per-frame segmentation probability maps and leverages optical-flow-based motion warping together with pixel-wise uncertainty estimates derived from segmentation entropy, and forward-backwards flow consistency. These signals are used to adaptively blend current-frame predictions with motion-aligned historical estimates, yielding temporally coherent segmentation outputs under weak prompts.   We evaluate the proposed method on four diverse video sequences using a comprehensive set of frame-wise and temporal stability metrics, including motion-compensated IoU, boundary consistency, object persistence, and area volatility. Experimental results demonstrate consistent improvements in temporal stability over vanilla SAM2 inference while preserving spatial accuracy. The proposed framework is lightweight, model-agnostic, and well-suited for real-time, interactive video segmentation.
+
+SAM2 等交互式视频分割模型已在不同视觉领域表现出强大的泛化能力。然而，在弱用户监督下，例如，当在单个帧上提供稀疏点提示时，它们的预测通常会受到时间不稳定的影响，包括闪烁的边界、对象丢失和跨帧的对象范围不一致。这些问题限制了它们在下游视频理解和控制应用中的可靠性。   在本文中，我们提出了一种推理时间时间概率平滑方法，该方法可以提高基于 SAM2 的视频分割的时间稳定性，而无需重新训练或架构修改。我们的方法直接在每帧分割概率图上运行，并利用基于光流的运动扭曲以及从分割熵导出的像素级不确定性估计和前向-后向流一致性。这些信号用于自适应地将当前帧预测与运动对齐的历史估计混合，在弱提示下产生时间连贯的分割输出。   我们使用一套全面的逐帧和时间稳定性指标（包括运动补偿 IoU、边界一致性、对象持久性和区域波动性）在四个不同的视频序列上评估所提出的方法。实验结果表明，与普通 SAM2 推理相比，时间稳定性得到了持续改进，同时保持了空间精度。所提出的框架是轻量级的、与模型无关的，非常适合实时、交互式视频分割。
+
+</details>
+
+---
+
+## 3. Motion-Guided Semantic Alignment with Negative Prompts for Zero-Shot Video Action Recognition / 运动引导语义对齐与零镜头视频动作识别的负提示
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17062v1](http://arxiv.org/abs/2604.17062v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17062v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Zero-shot action recognition is challenging due to the semantic gap between seen and unseen classes. We present a novel framework that enhances CLIP with disentangled embeddings and semantic-guided interaction. A Motion Separation Module (MSM) separates motion-sensitive and global-static features, while a Motion Aggregation Block (MAB) employs gated cross-attention to refine motion representation without re-coupling redundant information. To facilitate generalization to unseen categories, we enforce semantic alignment between video features and textual representations by aligning projected embeddings with positive textual prompts, while leveraging negative prompts to explicitly model "non-class" semantics. Experiments on standard benchmarks demonstrate that our method consistently outperforms prior CLIP-based approaches, achieving robust zero-shot action recognition across both coarse and fine-grained datasets.
+
+由于可见类和未见类之间的语义差距，零样本动作识别具有挑战性。我们提出了一种新颖的框架，通过解开的嵌入和语义引导的交互来增强 CLIP。运动分离模块 (MSM) 分离运动敏感和全局静态特征，而运动聚合块 (MAB) 采用门控交叉注意力来细化运动表示，而无需重新耦合冗余信息。为了促进对未见过的类别的泛化，我们通过将投影嵌入与正面文本提示对齐来强制视频特征和文本表示之间的语义对齐，同时利用负面提示来显式建模“非类”语义。标准基准测试的实验表明，我们的方法始终优于先前基于 CLIP 的方法，在粗粒度和细粒度数据集上实现了稳健的零样本动作识别。
+
+</details>
+
+---
+
+## 4. LIVE: Leveraging Image Manipulation Priors for Instruction-based Video Editing / LIVE：利用图像处理先验进行基于指令的视频编辑
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17021v1](http://arxiv.org/abs/2604.17021v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17021v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video editing aims to modify input videos according to user intent. Recently, end-to-end training methods have garnered widespread attention, constructing paired video editing data through video generation or editing models. However, compared to image editing, the high annotation costs of video data severely constrain the scale, quality, and task diversity of video editing datasets when relying on video generative models or manual annotation. To bridge this gap, we propose LIVE, a joint training framework that leverages large-scale, high-quality image editing data alongside video datasets to bolster editing capabilities. To mitigate the domain discrepancy between static images and dynamic videos, we introduce a frame-wise token noise strategy, which treats the latents of specific frames as reasoning tokens, leveraging large pretrained video generative models to create plausible temporal transformations. Moreover, through cleaning public datasets and constructing an automated data pipeline, we adopt a two-stage training strategy to anneal video editing capabilities. Furthermore, we curate a comprehensive evaluation benchmark encompassing over 60 challenging tasks that are prevalent in image editing but scarce in existing video datasets. Extensive comparative and ablation experiments demonstrate that our method achieves state-of-the-art performance. The source code will be publicly available.
+
+视频编辑旨在根据用户意图修改输入视频。最近，端到端的训练方法引起了广泛的关注，通过视频生成或编辑模型构建配对视频编辑数据。然而，与图像编辑相比，当依赖视频生成模型或手动标注时，视频数据的高标注成本严重限制了视频编辑数据集的规模、质量和任务多样性。为了弥补这一差距，我们提出了 LIVE，这是一个联合训练框架，利用大规模、高质量的图像编辑数据和视频数据集来增强编辑能力。为了减轻静态图像和动态视频之间的域差异，我们引入了逐帧标记噪声策略，该策略将特定帧的潜在特征视为推理标记，利用大型预训练视频生成模型来创建合理的时间转换。此外，通过清理公共数据集和构建自动化数据管道，我们采用两阶段训练策略来退火视频编辑能力。此外，我们还策划了一个全面的评估基准，涵盖 60 多个具有挑战性的任务，这些任务在图像编辑中很常见，但在现有视频数据集中很少。广泛的比较和消融实验表明我们的方法实现了最先进的性能。源代码将公开。
+
+</details>
+
+---
+
+## 5. Inductive Convolution Nuclear Norm Minimization for Tensor Completion with Arbitrary Sampling / 任意采样张量补全的归纳卷积核范数最小化
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17001v1](http://arxiv.org/abs/2604.17001v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17001v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The recently established Convolution Nuclear Norm Minimization (CNNM) addresses the problem of \textit{tensor completion with arbitrary sampling} (TCAS), which involves restoring a tensor from a subset of its entries sampled in an arbitrary manner. Despite its promising performance, the optimization procedure of CNNM needs performing Singular Value Decomposition (SVD) multiple times, which is computationally expensive and hard to parallelize. To address the issue, we reformulate the optimization objective of CNNM from the perspective of convolution eigenvectors. By introducing pre-learned convolution eigenvectors which are shared among different tensors, we propose a novel method called Inductive Convolution Nuclear Norm Minimization (ICNNM), which bypasses the SVD step so as to decrease significantly the computational time. In addition, due to the extra prior knowledge encoded in the pre-learned convolution eigenvectors, ICNNM also outperforms CNNM in terms of recovery performance. Extensive experiments on video completion, prediction and frame interpolation verify the superiority of ICNNM over CNNM and several other competing methods.
+
+最近建立的卷积核范数最小化（CNNM）解决了 \textit{任意采样张量完成}（TCAS）的问题，其中涉及从以任意方式采样的条目子集恢复张量。尽管其性能很有前景，但 CNNM 的优化过程需要多次执行奇异值分解（SVD），这在计算上是昂贵的并且难以并行化。为了解决这个问题，我们从卷积特征向量的角度重新制定了 CNNM 的优化目标。通过引入在不同张量之间共享的预先学习的卷积特征向量，我们提出了一种称为归纳卷积核范数最小化（ICNNM）的新方法，它绕过了 SVD 步骤，从而显着减少了计算时间。此外，由于预学习的卷积特征向量中编码了额外的先验知识，ICNNM 在恢复性能方面也优于 CNNM。关于视频补全、预测和帧插值的大量实验验证了 ICNNM 相对于 CNNM 和其他几种竞争方法的优越性。
+
+</details>
+
+---
+
+## 6. DVAR: Adversarial Multi-Agent Debate for Video Authenticity Detection / DVAR：视频真实性检测的对抗性多智能体辩论
+
+**Date**: 2026-04-18 | **arXiv**: [2604.16987v1](http://arxiv.org/abs/2604.16987v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.16987v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The rapid evolution of video generation technologies poses a significant challenge to media forensics, as conventional detection methods often fail to generalize beyond their training distributions. To address this, we propose DVAR (Debate-based Video Authenticity Reasoning), a training-free framework that reformulates video detection as a structured multi-agent forensic reasoning process. Moving beyond the paradigm of pattern matching, DVAR orchestrates a competition between a Generative Hypothesis Agent and a Natural Mechanism Agent. Through iterative rounds of cross-examination, these agents defend their respective explanations against abnormal evidence, driving a logical convergence where the truth emerges from rigorous stress-testing. To adjudicate these conflicting claims, we apply Occam's Razor through the Minimum Description Length (MDL) framework, defining an Explanatory Cost to quantify the "logical burden" of each reasoning path. Furthermore, we integrate GenVideoKB, a dynamic knowledge repository that provides high-level reasoning heuristics on generative boundaries and failure modes. Extensive experiments demonstrate that DVAR achieves competitive performance against supervised state-of-the-art methods while exhibiting superior generalization to unseen generative architectures. By transforming detection into a transparent debate, DVAR provides explicit, interpretable reasoning traces for robust video authenticity assessment.
+
+视频生成技术的快速发展对媒体取证提出了重大挑战，因为传统的检测方法通常无法推广到其训练分布之外。为了解决这个问题，我们提出了 DVAR（基于辩论的视频真实性推理），这是一种免训练框架，它将视频检测重新表述为结构化的多智能体取证推理过程。 DVAR 超越了模式匹配的范式，精心策划了生成假设智能体和自然机制智能体之间的竞争。通过反复的盘问，这些代理人针对异常证据捍卫了各自的解释，推动了逻辑趋同，真相从严格的压力测试中浮现出来。为了裁决这些相互冲突的主张，我们通过最小描述长度（MDL）框架应用奥卡姆剃刀，定义解释成本来量化每个推理路径的“逻辑负担”。此外，我们还集成了 GenVideoKB，这是一个动态知识库，可提供有关生成边界和故障模式的高级推理启发法。大量实验表明，DVAR 实现了与监督的最先进方法相比的竞争性能，同时对看不见的生成架构表现出卓越的泛化能力。通过将检测转变为透明的辩论，DVAR 为稳健的视频真实性评估提供了明确的、可解释的推理轨迹。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-20 (1 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-20
