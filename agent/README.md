@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-21](papers/2026-04-21.md) - 15 papers
 - [2026-04-20](papers/2026-04-20.md) - 6 papers
 - [2026-04-17](papers/2026-04-17.md) - 45 papers
 - [2026-04-16](papers/2026-04-16.md) - 31 papers
@@ -57,6 +58,264 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-21 (15 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-04-21
+
+**Paper Count**: 15
+
+---
+
+## 1. Safe and Policy-Compliant Multi-Agent Orchestration for Enterprise AI / 适用于企业 AI 的安全且符合策略的多代理编排
+
+**Date**: 2026-04-19 | **arXiv**: [2604.17240v1](http://arxiv.org/abs/2604.17240v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17240v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Enterprise AI systems increasingly deploy multiple intelligent agents across mission-critical workflows that must satisfy hard policy constraints, bounded risk exposure, and comprehensive auditability (SOX, HIPAA, GDPR). Existing coordination methods - cooperative MARL, consensus protocols, and centralized planners - optimize expected reward while treating constraints implicitly. This paper introduces CAMCO (Constraint-Aware Multi-Agent Cognitive Orchestration), a runtime coordination layer that models multi-agent decision-making as a constrained optimization problem. CAMCO integrates three mechanisms: (i) a constraint projection engine enforcing policy-feasible actions via convex projection, (ii) adaptive risk-weighted Lagrangian utility shaping, and (iii) an iterative negotiation protocol with provably bounded convergence. Unlike training-time constrained RL, CAMCO operates as deployment-time middleware compatible with any agent architecture, with policy predicates designed for direct integration with production engines such as OPA. Evaluation across three enterprise scenarios - including comparison against a constrained Lagrangian MARL baseline - demonstrates zero policy violations, risk exposure below threshold (mean ratio 0.71), 92-97% utility retention, and mean convergence in 2.4 iterations.
+
+企业人工智能系统越来越多地在关键任务工作流程中部署多个智能代理，这些工作流程必须满足严格的政策约束、有限的风险暴露和全面的可审计性（SOX、HIPAA、GDPR）。现有的协调方法——合作 MARL、共识协议和集中规划器——在隐式处理约束的同时优化预期奖励。本文介绍了 CAMCO（约束感知多智能体认知编排），这是一个运行时协调层，它将多智能体决策建模为约束优化问题。 CAMCO 集成了三种机制：(i) 通过凸投影强制执行政策可行行动的约束投影引擎，(ii) 自适应风险加权拉格朗日效用塑造，以及 (iii) 具有可证明有界收敛的迭代协商协议。与训练时间受限的 RL 不同，CAMCO 作为与任何代理架构兼容的部署时中间件运行，其策略谓词旨在与 OPA 等生产引擎直接集成。对三个企业场景的评估（包括与受约束的拉格朗日 MARL 基线的比较）表明零政策违规、低于阈值的风险暴露（平均比率 0.71）、92-97% 的效用保留以及 2.4 次迭代的平均收敛。
+
+</details>
+
+---
+
+## 2. A Multi-Agent Approach for Claim Verification from Tabular Data Documents / 表格数据文档索赔验证的多代理方法
+
+**Date**: 2026-04-19 | **arXiv**: [2604.17225v1](http://arxiv.org/abs/2604.17225v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17225v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present a novel approach for claim verification from tabular data documents. Recent LLM-based approaches either employ complex pretraining/fine-tuning or decompose verification into subtasks, often lacking comprehensive explanations and generalizability. To address these limitations, we propose a Multi-Agentic framework for Claim verification (MACE) consisting of three specialized agents: Planner, Executor, and Verifier. Instead of elaborate finetuning, each agent employs a zero-shot Chain-of-Thought setup to perform its tasks. MACE produces interpretable verification traces, with the Planner generating explicit reasoning strategies, the Executor providing detailed computation steps, and the Verifier validating the logic. Experiments demonstrate that MACE achieves state-of-the-art (SOTA) performance on two datasets and performs on par with the best models on two others, while achieving 80--100\% of best performance with substantially smaller models: 27--92B parameters versus 235B. This combination of competitive performance, memory efficiency, and transparent reasoning highlights our framework's effectiveness.
+
+我们提出了一种从表格数据文档进行声明验证的新颖方法。最近基于法学硕士的方法要么采用复杂的预训练/微调，要么将验证分解为子任务，通常缺乏全面的解释和概括性。为了解决这些限制，我们提出了一个用于声明验证（MACE）的多代理框架，由三个专门的代理组成：规划者、执行者和验证者。每个代理都采用零样本思想链设置来执行其任务，而不是进行精细的微调。 MACE 生成可解释的验证轨迹，规划器生成显式推理策略，执行器提供详细的计算步骤，验证器验证逻辑。实验表明，MACE 在两个数据集上实现了最先进的 (SOTA) 性能，并且在另外两个数据集上的性能与最佳模型相当，同时使用更小的模型实现了 80--100% 的最佳性能：27--92B 参数与 235B 参数。这种竞争性能、内存效率和透明推理的结合凸显了我们框架的有效性。
+
+</details>
+
+---
+
+## 3. Do LLM-derived graph priors improve multi-agent coordination? / LLM 派生的图先验是否可以改善多智能体协调？
+
+**Date**: 2026-04-19 | **arXiv**: [2604.17191v1](http://arxiv.org/abs/2604.17191v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17191v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent reinforcement learning (MARL) is crucial for AI systems that operate collaboratively in distributed and adversarial settings, particularly in multi-domain operations (MDO). A central challenge in cooperative MARL is determining how agents should coordinate: existing approaches must either hand-specify graph topology, rely on proximity-based heuristics, or learn structure entirely from environment interaction; all of which are brittle, semantically uninformed, or data-intensive. We investigate whether large language models (LLMs) can generate useful coordination graph priors for MARL by using minimal natural language descriptions of agent observations to infer latent coordination patterns. These priors are integrated into MARL algorithms via graph convolutional layers within a graph neural network (GNN)-based pipeline, and evaluated on four cooperative scenarios from the Multi-Agent Particle Environment (MPE) benchmark against baselines spanning the full spectrum of coordination modeling, from independent learners to state-of-the-art graph-based methods. We further ablate across five compact open-source LLMs to assess the sensitivity of prior quality to model choice. Our results provide the first quantitative evidence that LLM-derived graph priors can enhance coordination and adaptability in dynamic multi-agent environments, and demonstrate that models as small as 1.5B parameters are sufficient for effective prior generation.
+
+多智能体强化学习（MARL）对于在分布式和对抗性环境中协作运行的人工智能系统至关重要，特别是在多域操作（MDO）中。合作 MARL 的一个核心挑战是确定代理应如何协调：现有方法必须手动指定图拓扑，依赖基于邻近性的启发式方法，或者完全从环境交互中学习结构；所有这些都是脆弱的、语义上无知的或数据密集型的。我们研究大型语言模型 (LLM) 是否可以通过使用代理观察的最小自然语言描述来推断潜在的协调模式，从而为 MARL 生成有用的协调图先验。这些先验通过基于图神经网络 (GNN) 的管道中的图卷积层集成到 MARL 算法中，并根据多智能体粒子环境 (MPE) 基准的四种协作场景，针对跨越整个协调建模范围的基线进行评估，从独立学习器到最先进的基于图的方法。我们进一步消除了五个紧凑的开源法学硕士，以评估先前质量对模型选择的敏感性。我们的结果提供了第一个定量证据，证明 LLM 派生的图先验可以增强动态多智能体环境中的协调和适应性，并证明小至 1.5B 参数的模型足以有效生成先验。
+
+</details>
+
+---
+
+## 4. Persona-Based Requirements Engineering for Explainable Multi-Agent Educational Systems: A Scenario Simulator for Clinical Reasoning Training / 可解释的多智能体教育系统的基于角色的需求工程：用于临床推理训练的场景模拟器
+
+**Date**: 2026-04-19 | **arXiv**: [2604.17186v1](http://arxiv.org/abs/2604.17186v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17186v1)
+
+**Categories**: cs.SE, cs.AI, cs.ET, cs.HC, cs.MA
+
+**Code**: https://github.com/2sigmaEdTech/MAS/
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As Artificial Intelligence (AI) and Agentic AI become increasingly integrated across sectors such as education and healthcare, it is critical to ensure that Multi-Agent Education System (MAES) is explainable from the early stages of requirements engineering (RE) within the AI software development lifecycle. Explainability is essential to build trust, promote transparency, and enable effective human-AI collaboration. Although personas are well-established in human-computer interaction to represent users and capture their needs and behaviors, their role in RE for explainable MAES remains underexplored. This paper proposes a human-first, persona-driven, explainable MAES RE framework and demonstrates the framework through a MAES for clinical reasoning training. The framework integrates personas and user stories throughout the RE process to capture the needs, goals, and interactions of various stakeholders, including medical educators, medical students, AI patient agent, and clinical agents (physical exam agent, diagnostic agent, clinical intervention agent, supervisor agent, evaluation agent). The goals, underlying models, and knowledge base shape agent interactions and inform explainability requirements that guided the clinical reasoning training of medical students. A post-usage survey found that more than 78\% of medical students reported that MAES improved their clinical reasoning skills. These findings demonstrate that RE based on persona effectively connects technical requirements with non-technical medical students from a human-centered approach, ensuring that explainable MAES are trustworthy, interpretable, and aligned with authentic clinical scenarios from the early stages of the AI system engineering. The partial MAES for the clinical scenario simulator is~\href{https://github.com/2sigmaEdTech/MAS/}{open sourced here}.
+
+随着人工智能 (AI) 和代理人工智能在教育和医疗保健等领域的集成度越来越高，确保多代理教育系统 (MAES) 在人工智能软件开发生命周期内的需求工程 (RE) 的早期阶段是可解释的至关重要。可解释性对于建立信任、提高透明度和实现有效的人机协作至关重要。尽管角色在人机交互中已经很成熟，可以代表用户并捕获他们的需求和行为，但它们在可解释的 MAES 的 RE 中的作用仍未得到充分探索。本文提出了一个以人为本、角色驱动、可解释的 MAES RE 框架，并通过用于临床推理训练的 MAES 演示了该框架。该框架在整个 RE 流程中集成了角色和用户故事，以捕获各个利益相关者的需求、目标和交互，包括医学教育者、医学生、AI 患者代理和临床代理（体检代理、诊断代理、临床干预代理、主管代理、评估代理）。目标、基础模型和知识库塑造了代理交互，并提供了指导医学生临床推理训练的可解释性要求。一项使用后调查发现，超过 78% 的医学生表示 MAES 提高了他们的临床推理能力。这些发现表明，基于角色的 RE 通过以人为本的方法有效地将技术要求与非技术医学生联系起来，确保可解释的 MAES 是值得信赖的、可解释的，并与人工智能系统工程早期阶段的真实临床场景保持一致。临床场景模拟器的部分 MAES 是~\href{https://github.com/2sigmaEdTech/MAS/}{开源}。
+
+</details>
+
+---
+
+## 5. Systematic Capability Benchmarking of Frontier Large Language Models for Offensive Cyber Tasks / 用于进攻性网络任务的前沿大型语言模型的系统能力基准测试
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17159v1](http://arxiv.org/abs/2604.17159v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17159v1)
+
+**Categories**: cs.CR, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present, to our knowledge, the most comprehensive cross-model evaluation of LLM agents on offensive cybersecurity tasks, benchmarking 10 frontier models from 7 providers on all 200 challenges of the NYU CTF Bench. Building on the D-CIPHER multi-agent framework, we extend it with multi-provider backend support, a custom Kali Linux environment with over 100 pre-installed penetration testing tools, and runtime tool-discovery agents. Through a controlled factorial study, we find that the Kali Linux environment yields a +9.5 percentage-point improvement over Ubuntu, while auto-prompting and category-specific tips often degrade performance in well-equipped environments. Among models, Claude 4.5 Opus achieves the highest solve rate (59%), followed by Gemini 3 Pro (52%), with Gemini 3 Flash offering the best cost-efficiency at $0.05 per solve. Asymmetric planner/executor model assignments provide no meaningful benefit while coherent same-model configurations consistently outperform mixed-tier pairings. Our results indicate that environment tooling and model selection emerge as the strongest drivers of performance, whereas prompt engineering interventions show diminishing or negative returns in well-equipped environments. Reported performance reflects both model reasoning ability and compatibility with agent tooling and API integration.
+
+据我们所知，我们对 LLM 代理在进攻性网络安全任务上进行了最全面的跨模型评估，对来自 7 个提供商的 10 个前沿模型进行了纽约大学 CTF 基准的所有 200 项挑战的基准测试。在 D-CIPHER 多代理框架的基础上，我们通过多提供商后端支持、具有 100 多个预装渗透测试工具的自定义 Kali Linux 环境以及运行时工具发现代理对其进行了扩展。通过受控因子研究，我们发现 Kali Linux 环境比 Ubuntu 提高了 9.5 个百分点，而自动提示和特定类别的提示通常会降低设备齐全的环境中的性能。在模型中，Claude 4.5 Opus 实现了最高的解决率（59%），其次是 Gemini 3 Pro（52%），Gemini 3 Flash 提供了最佳的成本效益，每次解决 0.05 美元。不对称的规划器/执行器模型分配没有提供任何有意义的好处，而一致的同模型配置始终优于混合层配对。我们的结果表明，环境工具和模型选择是绩效的最强驱动因素，而及时的工程干预在装备精良的环境中显示出递减或负回报。报告的性能反映了模型推理能力以及与代理工具和 API 集成的兼容性。
+
+</details>
+
+---
+
+## 6. Graph-of-Agents: A Graph-based Framework for Multi-Agent LLM Collaboration / 代理图：基于图的多代理 LLM 协作框架
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17148v1](http://arxiv.org/abs/2604.17148v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17148v1)
+
+**Categories**: cs.AI
+
+**Code**: https://github.com/UNITES-Lab/GoA.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+With an ever-growing zoo of LLMs and benchmarks, the need to orchestrate multiple models for improved task performance has never been more pressing. While frameworks like Mixture-of-Agents (MoA) attempt to coordinate LLMs, they often fall short in terms of (1) selecting relevant agents, (2) facilitating effective intra-agent communication, and (3) integrating responses efficiently. In this work, we propose Graph-of-Agents (GoA), a new graph-based framework for modeling multi-agent LLM communication. Our approach begins with node sampling, selecting only the most relevant agents by leveraging model cards that summarize each model's domain, task specialization, and other characteristics. Next, we construct edges between the selected agents by evaluating their responses against one another to determine relevance ordering. Directed message passing is then performed from highly relevant agents to less relevant ones to enhance their responses, followed by reverse message passing to refine the original responses of the more relevant agents. Finally, the updated responses are aggregated via graph-based pooling (e.g., max or mean pooling) to produce a single, unified answer. We evaluate GoA on diverse multi-domain benchmarks (MMLU, MMLU-Pro, GPQA) and domain-specific benchmarks (MATH, HumanEval, MedMCQA), with an agent pool of 6 LLMs spanning multiple domains. Surprisingly, GoA achieves superior performance using only 3 selected agents, outperforming recent multi-agent LLM baselines that utilize all 6 agents simultaneously. By adopting a graph structure, GoA offers both scalability and effectiveness through structured message passing-positioning it as a strong candidate for navigating the challenges of the ever-growing LLM zoo. Code is available at: https://github.com/UNITES-Lab/GoA.
+
+随着法学硕士和基准的不断增长，编排多个模型以提高任务性能的需求变得前所未有的紧迫。虽然像 Mixture-of-Agents (MoA) 这样的框架试图协调 LLM，但它们通常在以下方面存在不足：(1) 选择相关代理，(2) 促进有效的代理内部通信，以及 (3) 有效地整合响应。在这项工作中，我们提出了 Graph-of-Agents (GoA)，这是一种新的基于图的框架，用于建模多代理 LLM 通信。我们的方法从节点采样开始，通过利用总结每个模型的领域、任务专业化和其他特征的模型卡来仅选择最相关的代理。接下来，我们通过评估所选代理之间的响应来确定相关性排序，从而构建所选代理之间的边。然后，从高度相关的代理到不太相关的代理执行定向消息传递，以增强其响应，然后进行反向消息传递，以细化更相关的代理的原始响应。最后，更新后的响应通过基于图的池化（例如，最大池化或平均池化）进行聚合，以产生一个统一的答案。我们根据不同的多领域基准（MMLU、MMLU-Pro、GPQA）和特定领域基准（MATH、HumanEval、MedMCQA）评估 GoA，代理池由跨越多个领域的 6 个法学硕士组成。令人惊讶的是，GoA 仅使用 3 个选定的代理就实现了卓越的性能，优于最近同时使用所有 6 个代理的多代理 LLM 基线。通过采用图形结构，GoA 通过结构化消息传递提供可扩展性和有效性，使其成为应对不断增长的 LLM 动物园挑战的有力候选者。代码位于：https://github.com/UNITES-Lab/GoA。
+
+</details>
+
+---
+
+## 7. The Consensus Trap: Rescuing Multi-Agent LLMs from Adversarial Majorities via Token-Level Collaboration / 共识陷阱：通过代币级协作将多代理法学硕士从对抗性多数中拯救出来
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17139v1](http://arxiv.org/abs/2604.17139v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17139v1)
+
+**Categories**: cs.CL, cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent large language model (LLM) architectures increasingly rely on response-level aggregation, such as Majority Voting (MAJ), to raise reasoning ceilings. However, in open environments, agents are highly susceptible to stealthy contextual corruption, such as targeted prompt injections. We reveal a critical structural vulnerability in current multi-agent systems: response-level aggregation collapses when corrupted agents form a local majority. Because voting aggregates fully-formed conclusions, it is blind to flawed intermediate logic. To overcome this systematic limitation, we propose the Token-Level Round-Robin (RR) Collaboration, where agents sequentially interleave generation within a shared auto-regressive context. We formalize this process as a discrete-time dynamical system, proving that token-level interleaving transitions aggregation from a brittle counting of final votes (a linear sum) to a dynamic, interwoven chain of logic (a non-linear operator product). Through this theoretical lens, we prove that the honest model's restorative pull can overpower adversarial corruptions, even when corrupted agents form a majority. We conduct an exhaustive empirical evaluation across diverse reasoning benchmarks and demonstrate that while MAJ collapses when corrupted agents reach a majority, RR maintains robust accuracy well beyond this critical threshold.
+
+多智能体大语言模型 (LLM) 架构越来越依赖响应级聚合，例如多数投票 (MAJ)，以提高推理上限。然而，在开放环境中，代理非常容易受到隐秘的上下文损坏，例如有针对性的提示注入。我们揭示了当前多智能体系统中的一个关键结构漏洞：当损坏的智能体形成局部多数时，响应级别的聚合就会崩溃。由于投票汇总了完整的结论，因此它对有缺陷的中间逻辑视而不见。为了克服这种系统限制，我们提出了代币级循环（RR）协作，其中代理在共享的自回归上下文中顺序交错生成。我们将这个过程形式化为一个离散时间动态系统，证明代币级交错将聚合从脆弱的最终投票计数（线性和）转变为动态的、交织的逻辑链（非线性算子乘积）。通过这个理论视角，我们证明诚实模型的恢复性吸引力可以压倒对抗性腐败，即使腐败主体占多数。我们对不同的推理基准进行了详尽的实证评估，并证明，虽然当腐败代理达到多数时 MAJ 崩溃，但 RR 保持了远远超出这个关键阈值的稳健准确性。
+
+</details>
+
+---
+
+## 8. BOIL: Learning Environment Personalized Information / BOIL：学习环境个性化信息
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17137v1](http://arxiv.org/abs/2604.17137v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17137v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Navigating complex environments poses challenges for multi-agent systems, requiring efficient extraction of insights from limited information. In this paper, we introduce the Blackbox Oracle Information Learning (BOIL) process, a scalable solution for extracting valuable insights from the environment structure. Leveraging the Pagerank algorithm and common information maximization, BOIL facilitates the extraction of information to guide long-term agent behavior applicable to problems such as coverage, patrolling, and stochastic reachability. Through experiments, we demonstrate the efficacy of BOIL in generating strategy distributions conducive to improved performance over extended time horizons, surpassing heuristic approaches in complex environments.
+
+驾驭复杂的环境给多智能体系统带来了挑战，需要从有限的信息中有效地提取见解。在本文中，我们介绍了 Blackbox Oracle 信息学习 (BOIL) 流程，这是一种可扩展的解决方案，用于从环境结构中提取有价值的见解。利用 Pagerank 算法和公共信息最大化，BOIL 有助于信息提取，以指导适用于覆盖、巡逻和随机可达性等问题的长期代理行为。通过实验，我们证明了 BOIL 在生成有利于在较长时间范围内提高性能的策略分布方面的功效，超越了复杂环境中的启发式方法。
+
+</details>
+
+---
+
+## 9. GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization (V1.0) / GenericAgent：通过上下文信息密度最大化实现代币高效的自我进化LLM代理（V1.0）
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17091v1](http://arxiv.org/abs/2604.17091v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17091v1)
+
+**Categories**: cs.CL
+
+**Code**: https://github.com/lsdefine/GenericAgent
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon large language model (LLM) agents are fundamentally limited by context. As interactions become longer, tool descriptions, retrieved memories, and raw environmental feedback accumulate and push out the information needed for decision-making. At the same time, useful experience gained from tasks is often lost across episodes. We argue that long-horizon performance is determined not by context length, but by how much decision-relevant information is maintained within a finite context budget. We present GenericAgent (GA), a general-purpose, self-evolving LLM agent system built around a single principle: context information density maximization. GA implements this through four closely connected components: a minimal atomic tool set that keeps the interface simple, a hierarchical on-demand memory that only shows a small high-level view by default, a self-evolution mechanism that turns verified past trajectories into reusable SOPs and executable code, and a context truncation and compression layer that maintains information density during long executions. Across task completion, tool use efficiency, memory effectiveness, self-evolution, and web browsing, GA consistently outperforms leading agent systems while using significantly fewer tokens and interactions, and it continues to evolve over time. Project: https://github.com/lsdefine/GenericAgent
+
+长视野大语言模型（LLM）代理从根本上受到上下文的限制。随着交互时间的延长，工具描述、检索到的记忆和原始环境反馈会不断积累并推出决策所需的信息。与此同时，从任务中获得的有用经验往往会在不同阶段中丢失。我们认为，长期性能不是由上下文长度决定的，而是由有限上下文预算内保留了多少决策相关信息决定的。我们提出了 GenericAgent (GA)，这是一个通用的、自我进化的 LLM 代理系统，围绕一个原则构建：上下文信息密度最大化。 GA 通过四个紧密相连的组件来实现这一点：保持界面简单的最小原子工具集、默认情况下仅显示小型高级视图的分层按需内存、将经过验证的过去轨迹转化为可重用的 SOP 和可执行代码的自进化机制，以及在长时间执行期间保持信息密度的上下文截断和压缩层。在任务完成、工具使用效率、记忆效率、自我进化和网页浏览方面，GA 始终优于领先的代理系统，同时使用的令牌和交互显着减少，并且随着时间的推移不断发展。项目：https://github.com/lsdefine/GenericAgent
+
+</details>
+
+---
+
+## 10. Harness as an Asset: Enforcing Determinism via the Convergent AI Agent Framework (CAAF) / 利用作为资产：通过融合 AI 代理框架 (CAAF) 强化确定性
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17025v1](http://arxiv.org/abs/2604.17025v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17025v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large Language Models (LLMs) produce a controllability gap in safety-critical engineering: even low rates of undetected constraint violations render a system undeployable. Current orchestration paradigms suffer from sycophantic compliance, context attention decay [Liu et al., 2024], and stochastic oscillation during self-correction [Huang et al., 2024].   We introduce the Convergent AI Agent Framework (CAAF), which transitions agentic workflows from open-loop generation to closed-loop Fail-Safe Determinism via three pillars: (1) Recursive Atomic Decomposition with physical context firewalls; (2) Harness as an Asset, formalizing domain invariants into machine-readable registries enforced by a deterministic Unified Assertion Interface (UAI); and (3) Structured Semantic Gradients with State Locking for monotonic convergence.   Empirical evaluation across two domains -- SAE Level 3 (L3) autonomous driving (AD) (n=30, 7 conditions) and pharmaceutical continuous flow reactor design (n=20, 4 conditions including a Mono+UAI ablation) -- shows that CAAF-all-GPT-4o-mini achieves 100% paradox detection while monolithic GPT-4o achieves 0% (even at temperature=0). The pharmaceutical benchmark features 7 simultaneous constraints with nonlinear Arrhenius interactions and a 3-way minimal unsatisfiable subset, representing a structurally harder challenge than the 2-constraint AD paradox. Alternative multi-agent architectures (debate, sequential checking) also achieve 0% across 80 trials, confirming that CAAF's reliability derives from its deterministic UAI, not from multi-agent orchestration per se. A Mono+UAI ablation (95%) isolates UAI as the core contribution. CAAF's reliability is invariant to prompt hints; all components use a single commodity model, enabling fully offline deployment.
+
+大型语言模型 (LLM) 在安全关键型工程中产生了可控性差距：即使未被检测到的约束违规发生率很低，也会导致系统无法部署。当前的编排范式遭受阿谀奉承、上下文注意力衰减 [Liu et al., 2024] 和自我纠正过程中的随机振荡 [Huang et al., 2024] 的困扰。   我们引入了融合人工智能代理框架（CAAF），它通过三个支柱将代理工作流程从开环生成转变为闭环故障安全确定性：（1）具有物理上下文防火墙的递归原子分解； (2) 利用作为资产，将域不变量形式化为由确定性统一断言接口 (UAI) 强制执行的机器可读注册表； (3) 具有状态锁定的结构化语义梯度以实现单调收敛。   跨两个领域的实证评估——SAE 3 级 (L3) 自动驾驶 (AD)（n=30，7 个条件）和制药连续流动反应器设计（n=20，4 个条件，包括 Mono+UAI 消融）——表明 CAAF-all-GPT-4o-mini 实现了 100% 悖论检测，而单片 GPT-4o 实现了 0%（即使在温度 = 0 时）。制药基准具有 7 个具有非线性阿伦尼乌斯相互作用的同时约束和一个 3 路最小不可满足子集，代表了比 2 约束 AD 悖论在结构上更难的挑战。替代的多代理架构（辩论、顺序检查）在 80 次试验中也实现了 0%，这证实了 CAAF 的可靠性源自其确定性 UAI，而不是来自多代理编排本身。 Mono+UAI 消融 (95%) 将 UAI 隔离为核心贡献。 CAAF 的可靠性对于提示提示是不变的；所有组件都使用单一商品模型，从而实现完全离线部署。
+
+</details>
+
+---
+
+## 11. Small Model as Master Orchestrator: Learning Unified Agent-Tool Orchestration with Parallel Subtask Decomposition / 作为主编排器的小模型：学习具有并行子任务分解的统一代理工具编排
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17009v1](http://arxiv.org/abs/2604.17009v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17009v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent systems (MAS) demonstrate clear advantages in tackling complex problems by coordinating diverse agents and external tools. However, most existing orchestration methods rely on static workflows or serial agent scheduling, and are further constrained by heterogeneous interface protocols between tools and agents. This leads to high system complexity and poor extensibility. To mitigate these issues, we propose Agent-as-Tool, a unified parallel orchestration paradigm that abstracts both agents and tools into a standardized, learnable action space with protocol normalization and explicit state feedback. Building on this paradigm, we train a lightweight orchestrator, ParaManager, which decouples planning decisions from subtask solving, enabling state-aware parallel subtask decomposition, delegation, and asynchronous execution. For training, we adopt a two-stage ParaManager training pipeline. It improves robustness by incorporating supervised fine-tuning (SFT) trajectories equipped with recovery mechanisms, and further applies reinforcement learning (RL) to achieve an optimal balance among task success, protocol compliance, diversity, and reasoning efficiency. Experiments show that ParaManager achieves strong performance across multiple benchmarks and exhibits robust generalization under unseen model pools.
+
+多代理系统（MAS）通过协调不同的代理和外部工具在解决复杂问题方面表现出明显的优势。然而，大多数现有的编排方法依赖于静态工作流或串行代理调度，并且进一步受到工具和代理之间异构接口协议的限制。这导致系统复杂度高、可扩展性差。为了缓解这些问题，我们提出了代理即工具（Agent-as-Tool），这是一种统一的并行编排范式，它将代理和工具抽象为一个标准化的、可学习的动作空间，并具有协议规范化和显式的状态反馈。在此范例的基础上，我们训练了一个轻量级编排器 ParaManager，它将规划决策与子任务解决解耦，从而实现状态感知的并行子任务分解、委托和异步执行。对于训练，我们采用两阶段 ParaManager 训练管道。它通过结合配备恢复机制的监督微调（SFT）轨迹来提高鲁棒性，并进一步应用强化学习（RL）来实现任务成功、协议合规性、多样性和推理效率之间的最佳平衡。实验表明，ParaManager 在多个基准测试中实现了强大的性能，并在未见过的模型池下表现出强大的泛化能力。
+
+</details>
+
+---
+
+## 12. Bolzano: Case Studies in LLM-Assisted Mathematical Research / 博尔扎诺：法学硕士辅助数学研究案例研究
+
+**Date**: 2026-04-18 | **arXiv**: [2604.16989v1](http://arxiv.org/abs/2604.16989v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.16989v1)
+
+**Categories**: cs.CL, cs.AI, cs.LG, cs.LO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We report new results on six problems in mathematics and theoretical computer science, produced with the assistance of Bolzano, an open-source multi-agent LLM system. Bolzano orchestrates rounds of interaction between parallel prover agents and a verifier agent while maintaining a persistent knowledge base that is carried across rounds. Classified using the significance-autonomy taxonomy of Feng et al., four of the six results reach the level of publishable research, and three of the six were produced essentially autonomously by Bolzano. Our results provide evidence that LLMs can contribute meaningfully to mathematical research, complementing recent reports by Bubeck et al., Woodruff et al., and others.
+
+我们报告了在数学和理论计算机科学的六个问题上的新结果，这些结果是在开源多代理法学硕士系统 Bolzano 的帮助下产生的。 Bolzano 协调并行证明者代理和验证者代理之间的多轮交互，同时维护跨轮的持久知识库。使用 Feng 等人的重要性自主分类法进行分类，六项结果中的四项达到了可发表研究的水平，六项中的三项基本上是由博尔扎诺自主产生的。我们的结果证明法学硕士可以对数学研究做出有意义的贡献，补充了 Bubeck 等人、Woodruff 等人等人最近的报告。
+
+</details>
+
+---
+
+## 13. Visual Inception: Compromising Long-term Planning in Agentic Recommenders via Multimodal Memory Poisoning / 视觉起始：通过多模态内存中毒损害代理推荐器的长期规划
+
+**Date**: 2026-04-18 | **arXiv**: [2604.16966v1](http://arxiv.org/abs/2604.16966v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.16966v1)
+
+**Categories**: cs.CR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The evolution from static ranking models to Agentic Recommender Systems (Agentic RecSys) empowers AI agents to maintain long-term user profiles and autonomously plan service tasks. While this paradigm shift enhances personalization, it introduces a vulnerability: reliance on Long-term Memory (LTM). In this paper, we uncover a threat termed "Visual Inception." Unlike traditional adversarial attacks that seek immediate misclassification, Visual Inception injects triggers into user-uploaded images (e.g., lifestyle photos) that act as "sleeper agents" within the system's memory. When retrieved during future planning, these poisoned memories hijack the agent's reasoning chain, steering it toward adversary-defined goals (e.g., promoting high-margin products) without prompt injection. To mitigate this, we propose CognitiveGuard, a dual-process defense framework inspired by human cognition. It consists of a System 1 Perceptual Sanitizer (diffusion-based purification) to cleanse sensory inputs and a System 2 Reasoning Verifier (counterfactual consistency checks) to detect anomalies in memory-driven planning. Extensive experiments on a mock e-commerce agent environment demonstrate that Visual Inception achieves about 85% Goal-Hit Rate (GHR), while CognitiveGuard reduces this risk to around 10% with configurable latency trade-offs (about 1.5s in lite mode to about 6.5s for full sequential verification), without quality degradation under our setup.
+
+从静态排名模型到代理推荐系统（Agentic RecSys）的演变使人工智能代理能够维护长期用户配置文件并自主规划服务任务。虽然这种范式转变增强了个性化，但它引入了一个漏洞：对长期记忆（LTM）的依赖。在本文中，我们发现了一种称为“视觉初始”的威胁。与寻求立即错误分类的传统对抗性攻击不同，Visual Inception 将触发器注入到用户上传的图像（例如生活方式照片）中，这些图像充当系统内存中的“休眠代理”。当在未来的规划过程中检索到时，这些有毒的记忆会劫持智能体的推理链，将其引导向对手定义的目标（例如，推广高利润产品），而无需立即注入。为了缓解这一问题，我们提出了 CognitiveGuard，这是一种受人类认知启发的双进程防御框架。它由用于净化感官输入的系统 1 感知净化器（基于扩散的净化）和用于检测内存驱动规划中的异​​常的系统 2 推理验证器（反事实一致性检查）组成。在模拟电子商务代理环境上进行的大量实验表明，Visual Inception 实现了约 85% 的目标命中率 (GHR)，而 CognitiveGuard 通过可配置的延迟权衡（精简模式下的约 1.5 秒到完整顺序验证的约 6.5 秒）将此风险降低到 10% 左右，并且在我们的设置下没有质量下降。
+
+</details>
+
+---
+
+## 14. AutoPKG: An Automated Framework for Dynamic E-commerce Product-Attribute Knowledge Graph Construction / AutoPKG：动态电子商务产品属性知识图构建的自动化框架
+
+**Date**: 2026-04-18 | **arXiv**: [2604.16950v1](http://arxiv.org/abs/2604.16950v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.16950v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Product attribute extraction in e-commerce is bottlenecked by ontologies that are inconsistent, incomplete, and costly to maintain. We present AutoPKG, a multi-agent Large Language Model (LLM) framework that automatically constructs a Product-attribute Knowledge Graph (PKG) from multimodal product content. AutoPKG induces product types and type-specific attribute keys on demand, extracts attribute values from text and images, and consolidates updates through a centralized decision agent that maintains a globally consistent canonical graph. We also propose an evaluation protocol for dynamic PKGs that measures type and key validity, consolidation quality, and edge-level accuracy for value assertions after canonicalization. On a large real-world marketplace catalog dataset from Lazada (Alibaba), AutoPKG achieves up to 0.953 Weighted Knowledge Efficiency (WKE) for product types, 0.724 WKE for attribute keys, and 0.531 edge-level F1 for multimodal value extraction. Across three public benchmarks, our method improves edge-level exact-match F1 by 0.152 and yields a precision gain of 0.208 on the attribute extraction application. Online A/B tests show that AutoPKG-derived attributes increase Gross Merchandise Value (GMV) in Badge by 3.81 percent, in Search by 5.32 percent, and in Recommendation by 7.89 percent, supporting the practical value of AutoPKG in production.
+
+电子商务中的产品属性提取受到本体不一致、不完整且维护成本高昂的瓶颈。我们提出了 AutoPKG，一种多智能体大型语言模型 (LLM) 框架，可根据多模式产品内容自动构建产品属性知识图 (PKG)。 AutoPKG 根据需要归纳产品类型和特定于类型的属性键，从文本和图像中提取属性值，并通过维护全局一致的规范图的集中式决策代理来整合更新。我们还提出了一种动态 PKG 的评估协议，用于衡量标准化后价值断言的类型和密钥有效性、整合质量和边缘级准确性。在 Lazada（阿里巴巴）的大型真实世界市场目录数据集上，AutoPKG 针对产品类型实现了高达 0.953 的加权知识效率 (WKE)，针对属性键实现了 0.724 WKE，针对多模式值提取实现了 0.531 边缘级 F1。在三个公共基准测试中，我们的方法将边缘级精确匹配 F1 提高了 0.152，并在属性提取应用程序上产生了 0.208 的精度增益。在线A/B测试表明，AutoPKG衍生属性使徽章中的商品总价值（GMV）提高了3.81％，搜索中提高了5.32％，推荐中提高了7.89％，支持了AutoPKG在生产中的实用价值。
+
+</details>
+
+---
+
+## 15. MEMRES: A Memory-Augmented Resolver with Confidence Cascade for Agentic Python Dependency Resolution / MEMRES：具有置信级联的内存增强解析器，用于代理 Python 依赖项解析
+
+**Date**: 2026-04-18 | **arXiv**: [2604.16941v1](http://arxiv.org/abs/2604.16941v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.16941v1)
+
+**Categories**: cs.SE, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present MEMRES, an agentic system for Python dependency resolution that introduces a multi-level confidence cascade where the LLM serves as the last resort. Our system combines: (1) a Self-Evolving Memory that accumulates reusable resolution patterns via tips and shortcuts; (2) an Error Pattern Knowledge Base with 200+ curated import-to-package mappings; (3) a Semantic Import Analyzer; and (4) a Python 2 heuristic detector resolving the largest failure category. On HG2.9K using Gemma-2 9B (10 GB VRAM). MEMRES resolves 2503 of 2890 (86.6%, 10-run average) snippets, combining intra-session memory with our confidence cascade for the remainder. This already exceeds PLLM's 54.7% overall success rate by a wide margin.
+
+我们提出了 MEMRES，这是一种用于 Python 依赖性解析的代理系统，它引入了多级置信级联，其中 LLM 作为最后的手段。我们的系统结合了：（1）自我进化记忆，通过提示和快捷方式积累可重复使用的解决模式； (2) 错误模式知识库，包含 200 多个精选的导入到包映射； (3) 语义导入分析器； (4) Python 2 启发式检测器解决最大的故障类别。在 HG2.9K 上使用 Gemma-2 9B (10 GB VRAM)。 MEMRES 解析了 2890 个片段中的 2503 个（86.6%，10 次运行平均值）片段，将会话内内存与剩余片段的置信级联相结合。这已经大大超过了 PLLM 54.7% 的总体成功率。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-20 (6 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-04-20
