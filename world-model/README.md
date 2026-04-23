@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-23](papers/2026-04-23.md) - 7 papers
 - [2026-04-22](papers/2026-04-22.md) - 10 papers
 - [2026-04-21](papers/2026-04-21.md) - 1 papers
 - [2026-04-17](papers/2026-04-17.md) - 4 papers
@@ -56,6 +57,132 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-23 (7 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-04-23
+
+**Paper Count**: 7
+
+---
+
+## 1. Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning / 占用奖励塑造：改善离线目标条件强化学习的信用分配
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20627v1](http://arxiv.org/abs/2604.20627v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20627v1)
+
+**Categories**: cs.LG, cs.RO
+
+**Project**: https://aravindvenu7.github.io/website/ors/  **Code**: https://github.com/aravindvenu7/occupancy_reward_shaping;
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The temporal lag between actions and their long-term consequences makes credit assignment a challenge when learning goal-directed behaviors from data. Generative world models capture the distribution of future states an agent may visit, indicating that they have captured temporal information. How can that temporal information be extracted to perform credit assignment? In this paper, we formalize how the temporal information stored in world models encodes the underlying geometry of the world. Leveraging optimal transport, we extract this geometry from a learned model of the occupancy measure into a reward function that captures goal-reaching information. Our resulting method, Occupancy Reward Shaping, largely mitigates the problem of credit assignment in sparse reward settings. ORS provably does not alter the optimal policy, yet empirically improves performance by 2.2x across 13 diverse long-horizon locomotion and manipulation tasks. Moreover, we demonstrate the effectiveness of ORS in the real world for controlling nuclear fusion on 3 Tokamak control tasks.   Code: https://github.com/aravindvenu7/occupancy_reward_shaping; Website: https://aravindvenu7.github.io/website/ors/
+
+当从数据中学习目标导向的行为时，行动与其长期后果之间的时间滞后使得信用分配成为一个挑战。生成世界模型捕获代理可能访问的未来状态的分布，表明它们已经捕获了时间信息。如何提取时间信息来执行学分分配？在本文中，我们形式化了世界模型中存储的时间信息如何编码世界的底层几何形状。利用最佳传输，我们将这种几何形状从占用度量的学习模型中提取到捕获目标达成信息的奖励函数中。我们得出的方法“占用奖励塑造”在很大程度上缓解了稀疏奖励环境中的信用分配问题。事实证明，ORS 不会改变最优策略，但根据经验，在 13 种不同的长视野运动和操纵任务中，性能提高了 2.2 倍。此外，我们还证明了 ORS 在现实世界中在 3 个托卡马克控制任务中控制核聚变的有效性。   代码：https://github.com/aravindvenu7/ocupancy_reward_shaping；网站：https://aravindvenu7.github.io/website/ors/
+
+</details>
+
+---
+
+## 2. Cortex 2.0: Grounding World Models in Real-World Industrial Deployment / Cortex 2.0：在现实世界的工业部署中奠定世界模型的基础
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20246v1](http://arxiv.org/abs/2604.20246v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20246v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Industrial robotic manipulation demands reliable long-horizon execution across embodiments, tasks, and changing object distributions. While Vision-Language-Action models have demonstrated strong generalization, they remain fundamentally reactive. By optimizing the next action given the current observation without evaluating potential futures, they are brittle to the compounding failure modes of long-horizon tasks. Cortex 2.0 shifts from reactive control to plan-and-act by generating candidate future trajectories in visual latent space, scoring them for expected success and efficiency, then committing only to the highest-scoring candidate. We evaluate Cortex 2.0 on a single-arm and dual-arm manipulation platform across four tasks of increasing complexity: pick and place, item and trash sorting, screw sorting, and shoebox unpacking. Cortex 2.0 consistently outperforms state-of-the-art Vision-Language-Action baselines, achieving the best results across all tasks. The system remains reliable in unstructured environments characterized by heavy clutter, frequent occlusions, and contact-rich manipulation, where reactive policies fail. These results demonstrate that world-model-based planning can operate reliably in complex industrial environments.
+
+工业机器人操纵需要跨实施例、任务和不断变化的对象分布的可靠的长视野执行。虽然视觉-语言-行动模型已经表现出很强的泛化性，但它们从根本上仍然是反应性的。通过根据当前观察来优化下一步行动而不评估潜在的未来，它们对于长期任务的复合失败模式来说很脆弱。 Cortex 2.0 通过在视觉潜在空间中生成候选者的未来轨迹，对它们的预期成功和效率进行评分，然后仅承诺得分最高的候选者，从被动控制转变为计划和行动。我们在单臂和双臂操作平台上评估 Cortex 2.0，涵盖四个日益复杂的任务：拾取和放置、物品和垃圾分类、螺丝分类和鞋盒拆包。 Cortex 2.0 始终优于最先进的视觉-语言-动作基线，在所有任务中取得最佳结果。该系统在以严重混乱、频繁遮挡和接触丰富的操纵为特征的非结构化环境中仍然可靠，在这些环境中，反应性策略会失败。这些结果表明，基于世界模型的规划可以在复杂的工业环境中可靠地运行。
+
+</details>
+
+---
+
+## 3. Toward Safe Autonomous Robotic Endovascular Interventions using World Models / 使用世界模型实现安全的自主机器人血管内干预
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20151v1](http://arxiv.org/abs/2604.20151v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20151v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous mechanical thrombectomy (MT) presents substantial challenges due to highly variable vascular geometries and the requirements for accurate, real-time control. While reinforcement learning (RL) has emerged as a promising paradigm for the automation of endovascular navigation, existing approaches often show limited robustness when faced with diverse patient anatomies or extended navigation horizons. In this work, we investigate a world-model-based framework for autonomous endovascular navigation built on TD-MPC2, a model-based RL method that integrates planning and learned dynamics. We evaluate a TD-MPC2 agent trained on multiple navigation tasks across hold out patient-specific vasculatures and benchmark its performance against the state-of-the-art Soft Actor-Critic (SAC) algorithm agent. Both approaches are further validated in vitro using patient-specific vascular phantoms under fluoroscopic guidance. In simulation, TD-MPC2 demonstrates a significantly higher mean success rate than SAC (58% vs. 36%, p < 0.001), and mean tip contact forces of 0.15 N, well below the proposed 1.5 N vessel rupture threshold. Mean success rates for TD-MPC2 (68%) were comparable to SAC (60%) in vitro, but TD-MPC2 achieved superior path ratios (p = 0.017) at the cost of longer procedure times (p < 0.001). Together, these results provide the first demonstration of autonomous MT navigation validated across both hold out in silico data and fluoroscopy-guided in vitro experiments, highlighting the promise of world models for safe and generalizable AI-assisted endovascular interventions.
+
+由于血管几何形状高度可变以及精确、实时控制的要求，自主机械取栓 (MT) 面临着巨大的挑战。虽然强化学习 (RL) 已成为血管内导航自动化的一个有前景的范例，但现有方法在面对不同的患者解剖结构或扩展的导航范围时往往表现出有限的鲁棒性。在这项工作中，我们研究了基于世界模型的自主血管内导航框架，该框架基于 TD-MPC2，这是一种基于模型的 RL 方法，集成了规划和学习动力学。我们评估了经过多个导航任务训练的 TD-MPC2 代理，涵盖患者特定的脉管系统，并根据最先进的 Soft Actor-Critic (SAC) 算法代理对其性能进行基准测试。 Both approaches are further validated in vitro using patient-specific vascular phantoms under fluoroscopic guidance.在模拟中，TD-MPC2 的平均成功率明显高于 SAC（58% vs. 36%，p < 0.001），平均尖端接触力为 0.15 N，远低于建议的 1.5 N 血管破裂阈值。体外 TD-MPC2 的平均成功率 (68%) 与 SAC (60%) 相当，但 TD-MPC2 以更长的手术时间为代价 (p < 0.001) 实现了更高的路径比 (p = 0.017)。总之，这些结果首次证明了自主 MT 导航在计算机数据和透视引导的体外实验中得到验证，凸显了安全和通用的人工智能辅助血管内干预的世界模型的前景。
+
+</details>
+
+---
+
+## 4. Efficient Reinforcement Learning using Linear Koopman Dynamics for Nonlinear Robotic Systems / 使用线性库普曼动力学进行非线性机器人系统的高效强化学习
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19980v1](http://arxiv.org/abs/2604.19980v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19980v1)
+
+**Categories**: cs.RO, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper presents a model-based reinforcement learning (RL) framework for optimal closed-loop control of nonlinear robotic systems. The proposed approach learns linear lifted dynamics through Koopman operator theory and integrates the resulting model into an actor-critic architecture for policy optimization, where the policy represents a parameterized closed-loop controller. To reduce computational cost and mitigate model rollout errors, policy gradients are estimated using one-step predictions of the learned dynamics rather than multi-step propagation. This leads to an online mini-batch policy gradient framework that enables policy improvement from streamed interaction data. The proposed framework is evaluated on several simulated nonlinear control benchmarks and two real-world hardware platforms, including a Kinova Gen3 robotic arm and a Unitree Go1 quadruped. Experimental results demonstrate improved sample efficiency over model-free RL baselines, superior control performance relative to model-based RL baselines, and control performance comparable to classical model-based methods that rely on exact system dynamics.
+
+本文提出了一种基于模型的强化学习（RL）框架，用于非线性机器人系统的最佳闭环控制。所提出的方法通过库普曼算子理论学习线性提升动力学，并将所得模型集成到用于策略优化的行动者批评家架构中，其中策略代表参数化闭环控制器。为了降低计算成本并减轻模型推出错误，使用学习动态的一步预测而不是多步传播来估计策略梯度。这导致了一个在线小批量策略梯度框架，可以从流式交互数据中改进策略。所提出的框架在几个模拟非线性控制基准和两个现实世界的硬件平台上进行了评估，包括 Kinova Gen3 机械臂和 Unitree Go1 四足机器人。实验结果表明，与无模型 RL 基线相比，样本效率得到了提高，与基于模型的 RL 基线相比，控制性能更加优越，并且控制性能与依赖精确系统动力学的基于模型的经典方法相当。
+
+</details>
+
+---
+
+## 5. ChipCraftBrain: Validation-First RTL Generation via Multi-Agent Orchestration / ChipCraftBrain：通过多代理编排生成验证优先的 RTL
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19856v1](http://arxiv.org/abs/2604.19856v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19856v1)
+
+**Categories**: cs.AR, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large Language Models (LLMs) show promise for generating Register-Transfer Level (RTL) code from natural language specifications, but single-shot generation achieves only 60-65% functional correctness on standard benchmarks. Multi-agent approaches such as MAGE reach 95.9% on VerilogEval yet remain untested on harder industrial benchmarks such as NVIDIA's CVDP, lack synthesis awareness, and incur high API costs.   We present ChipCraftBrain, a framework combining symbolic-neural reasoning with adaptive multi-agent orchestration for automated RTL generation. Four innovations drive the system: (1) adaptive orchestration over six specialized agents via a PPO policy over a 168-dim state (an alternative world-model MPC planner is also evaluated); (2) a hybrid symbolic-neural architecture that solves K-map and truth-table problems algorithmically while specialized agents handle waveform timing and general RTL; (3) knowledge-augmented generation from a 321-pattern base plus 971 open-source reference implementations with focus-aware retrieval; and (4) hierarchical specification decomposition into dependency-ordered sub-modules with interface synchronization.   On VerilogEval-Human, ChipCraftBrain achieves 97.2% mean pass@1 (range 96.15-98.72% across 7 runs, best 154/156), on par with ChipAgents (97.4%, self-reported) and ahead of MAGE (95.9%). On a 302-problem non-agentic subset of CVDP spanning five task categories, we reach 94.7% mean pass@1 (286/302, averaged over 3 runs), a 36-60 percentage-point lift per category over the published single-shot baseline; we additionally lead three of four categories shared with NVIDIA's ACE-RTL despite using roughly 30x fewer per-problem attempts. A RISC-V SoC case study demonstrates hierarchical decomposition generating 8/8 lint-passing modules (689 LOC) validated on FPGA, where monolithic generation fails entirely.
+
+大型语言模型 (LLM) 有望根据自然语言规范生成寄存器传输级 (RTL) 代码，但单次生成在标准基准测试中仅实现 60-65% 的功能正确性。 MAGE 等多代理方法在 VerilogEval 上达到 95.9%，但尚未在 NVIDIA 的 CVDP 等更严格的工业基准上进行测试，缺乏综合意识，并且会产生高昂的 API 成本。   我们提出了 ChipCraftBrain，这是一个将符号神经推理与自适应多代理编排相结合的框架，用于自动 RTL 生成。该系统由四项创新驱动：(1) 通过 168 维状态上的 PPO 策略对 6 个专门代理进行自适应编排（还评估了另一种世界模型 MPC 规划器）； (2) 混合符号神经架构，通过算法解决 K-map 和真值表问题，同时专门代理处理波形定时和通用 RTL； (3) 从 321 个模式库加上 971 个具有焦点感知检索的开源参考实现进行知识增强生成； (4) 分层规范分解为具有接口同步的依赖顺序子模块。   在 VerilogEval-Human 上，ChipCraftBrain 的平均 pass@1 达到 97.2%（7 次运行范围为 96.15-98.72%，最佳 154/156），与 ChipAgents（97.4%，自我报告）持平，并领先于 MAGE（95.9%）。在涵盖 5 个任务类别的 CVDP 的 302 个问题非代理子集上，我们达到了 94.7% 的平均 pass@1（286/302，3 次运行的平均值），每个类别比已发布的单次基线提高了 36-60 个百分点；尽管每个问题的尝试次数减少了大约 30 倍，但我们在与 NVIDIA ACE-RTL 共享的四个类别中还领先其中三个。 RISC-V SoC 案例研究展示了在 FPGA 上验证的分层分解生成 8/8 lint-passing 模块 (689 LOC)，其中单片生成完全失败。
+
+</details>
+
+---
+
+## 6. Mask World Model: Predicting What Matters for Robust Robot Policy Learning / 面具世界模型：预测对于鲁棒机器人策略学习来说重要的事情
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19683v1](http://arxiv.org/abs/2604.19683v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19683v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models derived from large-scale video generative pre-training have emerged as a promising paradigm for generalist robot policy learning. However, standard approaches often focus on high-fidelity RGB video prediction, this can result in overfitting to irrelevant factors, such as dynamic backgrounds and illumination changes. These distractions reduce the model's ability to generalize, ultimately leading to unreliable and fragile control policies. To address this, we introduce the Mask World Model (MWM), which leverages video diffusion architectures to predict the evolution of semantic masks instead of pixels. This shift imposes a geometric information bottleneck, forcing the model to capture essential physical dynamics and contact relations while filtering out visual noise. We seamlessly integrate this mask dynamics backbone with a diffusion-based policy head to enable robust end-to-end control. Extensive evaluations demonstrate the superiority of MWM on the LIBERO and RLBench simulation benchmarks, significantly outperforming the state-of-the-art RGB-based world models. Furthermore, real-world experiments and robustness evaluation (via random token pruning) reveal that MWM exhibits superior generalization capabilities and robust resilience to texture information loss.
+
+来自大规模视频生成预训练的世界模型已成为通用机器人策略学习的有前途的范例。然而，标准方法通常侧重于高保真 RGB 视频预测，这可能会导致对不相关因素的过度拟合，例如动态背景和照明变化。这些干扰降低了模型的泛化能力，最终导致控制政策不可靠且脆弱。为了解决这个问题，我们引入了掩模世界模型（MWM），它利用视频扩散架构来预测语义掩模而不是像素的演变。这种转变带来了几何信息瓶颈，迫使模型捕捉必要的物理动力学和接触关系，同时滤除视觉噪声。我们将这种掩模动态主干与基于扩散的策略头无缝集成，以实现强大的端到端控制。广泛的评估证明了 MWM 在 LIBERO 和 RLBench 模拟基准上的优越性，显着优于最先进的基于 RGB 的世界模型。此外，现实世界的实验和鲁棒性评估（通过随机令牌修剪）表明，MWM 表现出卓越的泛化能力和对纹理信息丢失的强大恢复能力。
+
+</details>
+
+---
+
+## 7. Safety-Critical Contextual Control via Online Riemannian Optimization with World Models / 通过世界模型的在线黎曼优化进行安全关键的上下文控制
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19639v1](http://arxiv.org/abs/2604.19639v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19639v1)
+
+**Categories**: eess.SY, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern world models are becoming too complex to admit explicit dynamical descriptions. We study safety-critical contextual control, where a Planner must optimize a task objective using only feasibility samples from a black-box Simulator, conditioned on a context signal $ξ_t$. We develop a sample-based Penalized Predictive Control (PPC) framework grounded in online Riemannian optimization, in which the Simulator compresses the feasibility manifold into a score-based density $\hat{p}(u \mid ξ_t)$ that endows the action space with a Riemannian geometry guiding the Planner's gradient descent. The barrier curvature $κ(ξ_t)$, the minimum curvature of the conditional log-density $-\ln\hat{p}(\cdot\midξ_t)$, governs both convergence rate and safety margin, replacing the Lipschitz constant of the unknown dynamics. Our main result is a contextual safety bound showing that the distance from the true feasibility manifold is controlled by the score estimation error and a ratio that depends on $κ(ξ_t)$, both of which improve with richer context. Simulations on a dynamic navigation task confirm that contextual PPC substantially outperforms marginal and frozen density models, with the advantage growing after environment shifts.
+
+现代世界模型变得过于复杂，无法接受明确的动力学描述。我们研究安全关键的上下文控制，其中规划器必须仅使用来自黑盒模拟器的可行性样本来优化任务目标，以上下文信号$ xi_t $为条件。我们开发了一个基于在线黎曼优化的基于样本的惩罚预测控制（PPC）框架，其中模拟器将可行性流形压缩为基于分数的密度$\hat{p}(u\mid xi_t)$，赋予动作空间一个黎曼几何形状，指导规划器的梯度下降。势垒曲率 $κ(xi_t)$，即条件对数密度 $-\ln\hat{p}(\cdot\midxi_t)$ 的最小曲率，控制着收敛速度和安全裕度，取代了未知动力学的 Lipschitz 常数。我们的主要结果是上下文安全界限，表明与真实可行性流形的距离由分数估计误差和取决于 $κ(xi_t)$ 的比率控制，这两者都随着更丰富的上下文而改善。对动态导航任务的模拟证实，上下文 PPC 大大优于边际密度模型和冻结密度模型，并且在环境变化后优势不断增强。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-22 (10 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-04-22
