@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-23](papers/2026-04-23.md) - 16 papers
 - [2026-04-22](papers/2026-04-22.md) - 19 papers
 - [2026-04-21](papers/2026-04-21.md) - 6 papers
 - [2026-04-20](papers/2026-04-20.md) - 1 papers
@@ -63,6 +64,284 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-23 (16 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-23
+
+**Paper Count**: 16
+
+---
+
+## 1. Video-ToC: Video Tree-of-Cue Reasoning / Video-ToC：视频线索树推理
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20473v1](http://arxiv.org/abs/2604.20473v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20473v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/qizhongtan/Video-ToC.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing Video Large Language Models (Video LLMs) struggle with complex video understanding, exhibiting limited reasoning capabilities and potential hallucinations. In particular, these methods tend to perform reasoning solely relying on the pretrained inherent reasoning rationales whilst lacking perception-aware adaptation to the input video content. To address this, we propose \textbf{Video-ToC}, a novel video reasoning framework that enhances video understanding through tree-of-cue reasoning. Specifically, our approach introduces three key innovations: (1) A tree-guided visual cue localization mechanism, which endows the model with enhanced fine-grained perceptual capabilities through structured reasoning patterns; (2) A reasoning-demand reward mechanism, which dynamically adjusts the reward value for reinforcement learning (RL) based on the estimation of reasoning demands, enabling on-demand incentives for more effective reasoning strategies; and (3) An automated annotation pipeline that constructs the Video-ToC-SFT-1k and Video-ToC-RL-2k datasets for supervised fine-tuning (SFT) and RL training, respectively. Extensive evaluations on six video understanding benchmarks and a video hallucination benchmark demonstrate the superiority of Video-ToC over baselines and recent methods. Code is available at https://github.com/qizhongtan/Video-ToC.
+
+现有的视频大语言模型（视频 LLM）难以理解复杂的视频，表现出有限的推理能力和潜在的幻觉。特别是，这些方法往往仅依赖于预先训练的固有推理原理来执行推理，同时缺乏对输入视频内容的感知感知适应。为了解决这个问题，我们提出了 \textbf{Video-ToC}，这是一种新颖的视频推理框架，可以通过线索树推理来增强视频理解。具体来说，我们的方法引入了三个关键创新：（1）树引导的视觉线索定位机制，通过结构化推理模式赋予模型增强的细粒度感知能力； （2）推理需求奖励机制，根据推理需求的估计动态调整强化学习（RL）的奖励值，实现按需激励以实现更有效的推理策略； (3) 一个自动注释管道，分别构建用于监督微调 (SFT) 和 RL 训练的 Video-ToC-SFT-1k 和 Video-ToC-RL-2k 数据集。对六个视频理解基准和视频幻觉基准的广泛评估证明了 Video-ToC 相对于基线和最新方法的优越性。代码可在 https://github.com/qizhongtan/Video-ToC 获取。
+
+</details>
+
+---
+
+## 2. DynamicRad: Content-Adaptive Sparse Attention for Long Video Diffusion / DynamicRad：长视频扩散的内容自适应稀疏注意力
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20470v1](http://arxiv.org/abs/2604.20470v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20470v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/Adamlong3/DynamicRad.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Leveraging the natural spatiotemporal energy decay in video diffusion offers a path to efficiency, yet relying solely on rigid static masks risks losing critical long-range information in complex dynamics. To address this issue, we propose \textbf{DynamicRad}, a unified sparse-attention paradigm that grounds adaptive selection within a radial locality prior. DynamicRad introduces a \textbf{dual-mode} strategy: \textit{static-ratio} for speed-optimized execution and \textit{dynamic-threshold} for quality-first filtering. To ensure robustness without online search overhead, we integrate an offline Bayesian Optimization (BO) pipeline coupled with a \textbf{semantic motion router}. This lightweight projection module maps prompt embeddings to optimal sparsity regimes with \textbf{minimal runtime overhead}. Unlike online profiling methods, our offline BO optimizes attention reconstruction error (MSE) on a physics-based proxy task, ensuring rapid convergence. Experiments on HunyuanVideo and Wan2.1-14B demonstrate that DynamicRad pushes the efficiency--quality Pareto frontier, achieving \textbf{1.7$\times$--2.5$\times$ inference speedups} with \textbf{over 80\% effective sparsity}. In some long-sequence settings, the dynamic mode even matches or exceeds the dense baseline, while mask-aware LoRA further improves long-horizon coherence. Code is available at https://github.com/Adamlong3/DynamicRad.
+
+利用视频扩散中的自然时空能量衰减提供了一条提高效率的途径，但仅依赖刚性静态掩模可能会丢失复杂动态中的关键远程信息。为了解决这个问题，我们提出了 \textbf{DynamicRad}，这是一种统一的稀疏注意力范式，它将自适应选择建立在径向局部先验的基础上。 DynamicRad 引入了 \textbf{双模式} 策略：\textit{static-ratio} 用于速度优化执行，\textit{dynamic-threshold} 用于质量优先过滤。为了确保鲁棒性而无需在线搜索开销，我们集成了离线贝叶斯优化（BO）管道和\textbf{语义运动路由器}。这个轻量级投影模块将提示嵌入映射到具有 \textbf{最小运行​​时开销}的最佳稀疏状态。与在线分析方法不同，我们的离线 BO 在基于物理的代理任务上优化了注意力重建误差 (MSE)，确保快速收敛。在 HunyuanVideo 和 Wan2.1-14B 上的实验表明，DynamicRad 推动了效率-质量 Pareto 前沿，实现了 \textbf{1.7$\times$--2.5$\times$ 推理加速}和 \textbf{超过 80\% 的有效稀疏度}。在某些长序列设置中，动态模式甚至匹配或超过密集基线，而掩模感知 LoRA 进一步提高了长视野相干性。代码可在 https://github.com/Adamlong3/DynamicRad 获取。
+
+</details>
+
+---
+
+## 3. SignDATA: Data Pipeline for Sign Language Translation / SignDATA：手语翻译数据管道
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20357v1](http://arxiv.org/abs/2604.20357v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20357v1)
+
+**Categories**: cs.CV, cs.CL
+
+**Code**: https://github.com/balaboom123/signdata-slt.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Sign-language datasets are difficult to preprocess consistently because they vary in annotation schema, clip timing, signer framing, and privacy constraints. Existing work usually reports downstream models, while the preprocessing pipeline that converts raw video into training-ready pose or video artifacts remains fragmented, backend-specific, and weakly documented. We present SignDATA, a config-driven preprocessing toolkit that standardizes heterogeneous sign-language corpora into comparable outputs for learning. The system supports two end-to-end recipes: a pose recipe that performs acquisition, manifesting, person localization, clipping, cropping, landmark extraction, normalization, and WebDataset export, and a video recipe that replaces pose extraction with signer-cropped video packaging. SignDATA exposes interchangeable MediaPipe and MMPose backends behind a common interface, typed job schemas, experiment-level overrides, and per-stage checkpointing with config- and manifest-aware hashes. We validate the toolkit through a research-oriented evaluation design centered on backend comparison, preprocessing ablations, and privacy-aware video generation on datasets. Our contribution is a reproducible preprocessing layer for sign-language research that makes extractor choice, normalization policy, and privacy tradeoffs explicit, configurable, and empirically comparable.Code is available at https://github.com/balaboom123/signdata-slt.
+
+手语数据集很难一致地进行预处理，因为它们在注释模式、剪辑时间、签名者框架和隐私限制方面各不相同。现有的工作通常报告下游模型，而将原始视频转换为训练就绪姿势或视频工件的预处理管道仍然支离破碎、特定于后端且记录薄弱。我们推出了 SignDATA，这是一个配置驱动的预处理工具包，可将异构手语语料库标准化为可比较的学习输出。该系统支持两个端到端配方：一个姿势配方，执行采集、表现、人物定位、剪辑、裁剪、地标提取、标准化和 WebDataset 导出，以及一个视频配方，用签名者裁剪的视频打包代替姿势提取。 SignDATA 在通用接口、类型化作业模式、实验级覆盖以及具有配置和清单感知哈希的每阶段检查点后面公开了可互换的 MediaPipe 和 MMPos 后端。我们通过以研究为导向的评估设计来验证该工具包，该设计以后端比较、预处理消融和数据集上的隐私意识视频生成为中心。我们的贡献是为手语研究提供了一个可重复的预处理层，使提取器选择、标准化策略和隐私权衡变得明确、可配置且具有经验可比性。代码可在 https://github.com/balaboom123/signdata-slt 获取。
+
+</details>
+
+---
+
+## 4. UniCVR: From Alignment to Reranking for Unified Zero-Shot Composed Visual Retrieval / UniCVR：从统一零样本组合视觉检索的对齐到重新排序
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20318v1](http://arxiv.org/abs/2604.20318v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20318v1)
+
+**Categories**: cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Composed image retrieval, multi-turn composed image retrieval, and composed video retrieval all share a common paradigm: composing the reference visual with modification text to retrieve the desired target. Despite this shared structure, the three tasks have been studied in isolation, with no prior work proposing a unified framework, let alone a zero-shot solution. In this paper, we propose UniCVR, the first unified zero-shot composed visual retrieval framework that jointly addresses all three tasks without any task-specific human-annotated data. UniCVR strategically combines two complementary strengths: Multimodal Large Language Models (MLLMs) for compositional query understanding and Vision-Language Pre-trained (VLP) models for structured visual retrieval. Concretely, UniCVR operates in two stages. In Stage I, we train the MLLM as a compositional query embedder via contrastive learning on a curated multi-source dataset of approximately 3.5M samples, bridging the heterogeneous embedding spaces between the MLLM and the frozen VLP gallery encoder. A cluster-based hard negative sampling strategy is proposed to strengthen contrastive supervision. In Stage II, we introduce an MLLM-guided dual-level reranking mechanism that applies adaptive budgeted subset scoring to a small number of top-ranked candidates, and then exploits the resulting relevance signals through a dual-level re-scoring scheme, producing more accurate final rankings with minimal computational overhead. Extensive experiments across five benchmarks covering all three tasks demonstrate that UniCVR achieves cutting-edge performance, validating its effectiveness and generalizability. Our data and code will be released upon acceptance.
+
+组合图像检索、多轮组合图像检索和组合视频检索都共享一个共同的范例：将参考视觉与修改文本组合起来以检索所需的目标。尽管有这种共享的结构，但这三个任务都是孤立研究的，之前没有提出统一框架的工作，更不用说零样本解决方案了。在本文中，我们提出了 UniCVR，这是第一个统一的零镜头组合视觉检索框架，它联合解决所有三个任务，而无需任何特定于任务的人工注释数据。 UniCVR 战略性地结合了两种互补的优势：用于组合查询理解的多模态大型语言模型 (MLLM) 和用于结构化视觉检索的视觉语言预训练 (VLP) 模型。具体来说，UniCVR 分两个阶段运行。在第一阶段，我们通过对大约 350 万个样本的精选多源数据集进行对比学习，将 MLLM 训练为组合查询嵌入器，从而桥接 MLLM 和冻结的 VLP 图库编码器之间的异构嵌入空间。提出了基于聚类的硬负抽样策略来加强对比监督。在第二阶段，我们引入了一种 MLLM 引导的双层重新排名机制，该机制将自适应预算子集评分应用于少量排名靠前的候选者，然后通过双层重新评分方案利用所得的相关性信号，以最小的计算开销产生更准确的最终排名。涵盖所有三项任务的五个基准的广泛实验表明，UniCVR 实现了尖端性能，验证了其有效性和通用性。我们的数据和代码将在接受后发布。
+
+</details>
+
+---
+
+## 5. X-Cache: Cross-Chunk Block Caching for Few-Step Autoregressive World Models Inference / X-Cache：用于少步自回归世界模型推理的跨块块缓存
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20289v1](http://arxiv.org/abs/2604.20289v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20289v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Real-time world simulation is becoming a key infrastructure for scalable evaluation and online reinforcement learning of autonomous driving systems. Recent driving world models built on autoregressive video diffusion achieve high-fidelity, controllable multi-camera generation, but their inference cost remains a bottleneck for interactive deployment. However, existing diffusion caching methods are designed for offline video generation with multiple denoising steps, and do not transfer to this scenario. Few-step distilled models have no inter-step redundancy left for these methods to reuse, and sequence-level parallelization techniques require future conditioning that closed-loop interactive generation does not provide. We present X-Cache, a training-free acceleration method that caches along a different axis: across consecutive generation chunks rather than across denoising steps. X-Cache maintains per-block residual caches that persist across chunks, and applies a dual-metric gating mechanism over a structure- and action-aware block-input fingerprint to independently decide whether each block should recompute or reuse its cached residual. To prevent approximation errors from permanently contaminating the autoregressive KV cache, X-Cache identifies KV update chunks (the forward passes that write clean keys and values into the persistent cache) and unconditionally forces full computation on these chunks, cutting off error propagation. We implement X-Cache on X-world, a production multi-camera action-conditioned driving world model built on multi-block causal DiT with few-step denoising and rolling KV cache. X-Cache achieves 71% block skip rate with 2.6x wall-clock speedup while maintaining minimum degradation.
+
+实时世界模拟正在成为自动驾驶系统可扩展评估和在线强化学习的关键基础设施。最近基于自回归视频扩散构建的驾驶世界模型实现了高保真、可控的多摄像头生成，但其推理成本仍然是交互式部署的瓶颈。然而，现有的扩散缓存方法是为具有多个去噪步骤的离线视频生成而设计的，并且不能转移到这种场景。少步蒸馏模型没有留下可供这些方法重用的步骤间冗余，并且序列级并行化技术需要闭环交互式生成所无法提供的未来条件。我们提出了 X-Cache，一种无需训练的加速方法，它沿着不同的轴进行缓存：跨连续的生成块而不是跨降噪步骤。 X-Cache 维护跨块持续存在的每块残留缓存，并在结构和动作感知的块输入指纹上应用双度量门控机制，以独立决定每个块是否应该重新计算或重用其缓存的残留。为了防止近似错误永久污染自回归 KV 缓存，X-Cache 识别 KV 更新块（将干净的键和值写入持久缓存的前向传递）并无条件强制对这些块进行完整计算，从而切断错误传播。我们在 X-world 上实现了 X-Cache，X-world 是一个生产多摄像头动作条件驾驶世界模型，构建在多块因果 DiT 上，具有几步降噪和滚动 KV 缓存。 X-Cache 实现了 71% 的块跳跃率和 2.6 倍的挂钟加速，同时保持最低的性能下降。
+
+</details>
+
+---
+
+## 6. HumanScore: Benchmarking Human Motions in Generated Videos / HumanScore：对生成视频中的人体动作进行基准测试
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20157v1](http://arxiv.org/abs/2604.20157v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20157v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in model architectures, compute, and data scale have driven rapid progress in video generation, producing increasingly realistic content. Yet, no prior method systematically measures how faithfully these systems render human bodies and motion dynamics. In this paper, we present HumanScore, a systematic framework to evaluate the quality of human motions in AI-generated videos. HumanScore defines six interpretable metrics spanning kinematic plausibility, temporal stability, and biomechanical consistency, enabling fine-grained diagnosis beyond visual realism alone. Through carefully designed prompts, we elicit a diverse set of movements at varying intensities and evaluate videos generated by thirteen state-of-the-art models. Our analysis reveals consistent gaps between perceptual plausibility and motion biomechanical fidelity, identifies recurrent failure modes (e.g., temporal jitter, anatomically implausible poses, and motion drift), and produces robust model rankings from quantitative and physically meaningful criteria.
+
+模型架构、计算和数据规模的最新进展推动了视频生成的快速进步，产生了越来越真实的内容。然而，现有方法还没有系统地测量这些系统渲染人体和运动动力学的真实程度。在本文中，我们提出了 HumanScore，这是一个评估人工智能生成视频中人体动作质量的系统框架。 HumanScore 定义了六个可解释的指标，涵盖运动学合理性、时间稳定性和生物力学一致性，从而实现了超越视觉真实性的细粒度诊断。通过精心设计的提示，我们引发了一系列不同强度的动作，并评估了十三个最先进模型生成的视频。我们的分析揭示了感知合理性和运动生物力学保真度之间的一致差距，识别反复出现的故障模式（例如时间抖动、解剖学上不合理的姿势和运动漂移），并根据定量和物理意义的标准生成可靠的模型排名。
+
+</details>
+
+---
+
+## 7. IMPACT-CYCLE: A Contract-Based Multi-Agent System for Claim-Level Supervisory Correction of Long-Video Semantic Memory / IMPACT-CYCLE：基于合同的多智能体系统，用于长视频语义记忆的声明级监督纠正
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20136v1](http://arxiv.org/abs/2604.20136v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20136v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/MKong17/IMPACT_CYCLE.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Correcting errors in long-video understanding is disproportionately costly: existing multimodal pipelines produce opaque, end-to-end outputs that expose no intermediate state for inspection, forcing annotators to revisit raw video and reconstruct temporal logic from scratch. The core bottleneck is not generation quality alone, but the absence of a supervisory interface through which human effort can be proportional to the scope of each error. We present IMPACT-CYCLE, a supervisory multi-agent system that reformulates long-video understanding as iterative claim-level maintenance of a shared semantic memory -- a structured, versioned state encoding typed claims, a claim dependency graph, and a provenance log. Role-specialized agents operating under explicit authority contracts decompose verification into local object-relation correctness, cross-temporal consistency, and global semantic coherence, with corrections confined to structurally dependent claims. When automated evidence is insufficient, the system escalates to human arbitration as the supervisory authority with final override rights; dependency-closure re-verification then ensures correction cost remains proportional to error scope. Experiments on VidOR show substantially improved downstream reasoning (VQA: 0.71 to 0.79) and a 4.8x reduction in human arbitration cost, with workload significantly lower than manual annotation. Code will be released at https://github.com/MKong17/IMPACT_CYCLE.
+
+纠正长视频理解中的错误成本高昂：现有的多模式管道产生不透明的端到端输出，不暴露中间状态以供检查，迫使注释者重新访问原始视频并从头开始重建时间逻辑。核心瓶颈不仅仅是发电质量，而是缺乏监督界面，通过该界面，人力可以与每个错误的范围成正比。我们提出了 IMPACT-CYCLE，一个监督多智能体系统，它将长视频理解重新表述为共享语义记忆的迭代声明级维护——结构化的、版本化的状态编码类型声明、声明依赖图和来源日志。在显式权威契约下运行的角色专业代理将验证分解为本地对象关系正确性、跨时间一致性和全局语义一致性，并将更正仅限于结构上依赖的声明。当自动证据不足时，系统升级为人工仲裁，作为监督机构，拥有最终推翻权；然后，依赖性关闭重新验证可确保纠正成本与错误范围保持成正比。 VidOR 的实验表明，下游推理得到了显着改善（VQA：0.71 至 0.79），人工仲裁成本降低了 4.8 倍，工作量显着低于手动注释。代码将在 https://github.com/MKong17/IMPACT_CYCLE 发布。
+
+</details>
+
+---
+
+## 8. Feedback-Driven Rate Control for Learned Video Compression / 用于学习视频压缩的反馈驱动速率控制
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20104v1](http://arxiv.org/abs/2604.20104v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20104v1)
+
+**Categories**: cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+End-to-end learned video compression has achieved strong rate-distortion performance, but rate control remains underexplored, especially in target-bitrate-driven and budget-constrained scenarios. Existing methods mainly rely on explicit R-D-lambda modeling or feed-forward prediction, which may lack stable online adjustment when video content varies dynamically.   We propose a feedback-driven rate control framework for learned video compression. First, we build a single-model multi-rate coding interface on top of a DCVC-style framework, enabling continuous bitrate control through the rate-distortion parameter lambda. Then, a log-domain PI/PID closed-loop controller updates lambda online according to the error between the target bitrate and the entropy-estimated bitrate, achieving stable target bitrate tracking. To further improve frame-level bit allocation under budget constraints, we introduce a dual-branch GRU-based adjustment controller that refines the base control signal using budget-state features and causal coding statistics.   Experiments on UVG and HEVC show that the proposed PI/PID controller achieves average bitrate errors of 2.88% and 2.95% on DCVC and DCVC-TCM, respectively. With the proposed adjustment controller, the method further achieves average BD-rate reductions of 5.69% and 4.49%, while reducing the average bitrate errors to 2.13% and 2.24%. These results show that the proposed method provides a practical solution for learned video compression with both controllable bitrate and improved rate-distortion performance.
+
+端到端学习视频压缩已经实现了强大的码率失真性能，但码率控制仍未得到充分探索，特别是在目标比特率驱动和预算受限的场景中。现有的方法主要依赖于显式的R-D-lambda建模或前馈预测，当视频内容动态变化时，这可能缺乏稳定的在线调整。   我们提出了一种用于学习视频压缩的反馈驱动的速率控制框架。首先，我们在 DCVC 式框架之上构建单模型多速率编码接口，通过速率失真参数 lambda 实现连续比特率控制。然后，对数域PI/PID闭环控制器根据目标码率与熵估计码率之间的误差在线更新lambda，实现稳定的目标码率跟踪。为了进一步改善预算约束下的帧级比特分配，我们引入了一种基于双分支 GRU 的调整控制器，该控制器使用预算状态特征和因果编码统计来细化基本控制信号。   UVG 和 HEVC 上的实验表明，所提出的 PI/PID 控制器在 DCVC 和 DCVC-TCM 上分别实现了 2.88% 和 2.95% 的平均比特率误差。利用所提出的调整控制器，该方法进一步实现平均BD码率降低5.69%和4.49%，同时将平均比特率误差降低至2.13%和2.24%。这些结果表明，所提出的方法为学习视频压缩提供了一种实用的解决方案，具有可控的比特率和改进的率失真性能。
+
+</details>
+
+---
+
+## 9. UniCon3R: Contact-aware 3D Human-Scene Reconstruction from Monocular Video / UniCon3R：从单目视频重建接触感知 3D 人景
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19923v1](http://arxiv.org/abs/2604.19923v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19923v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce UniCon3R (Unified Contact-aware 3D Reconstruction), a unified feed-forward framework for online human-scene 4D reconstruction from monocular videos. Recent feed-forward methods enable real-time world-coordinate human motion and scene reconstruction, but they often produce physically implausible artifacts such as bodies floating above the ground or penetrating parts of the scene. The key reason is that existing approaches fail to model physical interactions between the human and the environment. A natural next step is to predict human-scene contact as an auxiliary output -- yet we find this alone is not sufficient: contact must actively correct the reconstruction. To address this, we explicitly model interaction by inferring 3D contact from the human pose and scene geometry and use the contact as a corrective cue for generating the final pose. This enables UniCon3R to jointly recover high-fidelity scene geometry and spatially aligned 3D humans within the scene. Experiments on standard human-centric video benchmarks such as RICH, EMDB, 3DPW and SLOPER4D show that UniCon3R outperforms state-of-the-art baselines on physical plausibility and global human motion estimation while achieving real-time online inference. We experimentally demonstrate that contact serves as a powerful internal prior rather than just an external metric, thus establishing a new paradigm for physically grounded joint human-scene reconstruction. Project page is available at https://surtantheta.github.io/UniCon3R .
+
+我们引入了 UniCon3R（统一接触感知 3D 重建），这是一种用于从单目视频进行在线人体场景 4D 重建的统一前馈框架。最近的前馈方法可以实现实时的世界坐标人体运动和场景重建，但它们通常会产生物理上难以置信的伪影，例如漂浮在地面上方的物体或穿透场景的部分。关键原因是现有方法无法模拟人类与环境之间的物理相互作用。自然的下一步是预测人类场景接触作为辅助输出——但我们发现仅靠这一点还不够：接触必须主动纠正重建。为了解决这个问题，我们通过从人体姿势和场景几何形状推断 3D 接触来显式地建模交互，并使用接触作为生成最终姿势的纠正提示。这使得 UniCon3R 能够联合恢复高保真场景几何形状和场景内空间对齐的 3D 人体。在 RICH、EMDB、3DPW 和 SLOPER4D 等标准以人为中心的视频基准上进行的实验表明，UniCon3R 在物理合理性和全局人体运动估计方面优于最先进的基准，同时实现了实时在线推理。我们通过实验证明，接触是一个强大的内部先验，而不仅仅是一个外部度量，从而为物理接地的联合人类场景重建建立了一个新的范例。项目页面位于 https://surtantheta.github.io/UniCon3R 。
+
+</details>
+
+---
+
+## 10. AnyRecon: Arbitrary-View 3D Reconstruction with Video Diffusion Model / AnyRecon：使用视频扩散模型进行任意视图 3D 重建
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19747v1](http://arxiv.org/abs/2604.19747v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19747v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Sparse-view 3D reconstruction is essential for modeling scenes from casual captures, but remain challenging for non-generative reconstruction. Existing diffusion-based approaches mitigates this issues by synthesizing novel views, but they often condition on only one or two capture frames, which restricts geometric consistency and limits scalability to large or diverse scenes. We propose AnyRecon, a scalable framework for reconstruction from arbitrary and unordered sparse inputs that preserves explicit geometric control while supporting flexible conditioning cardinality. To support long-range conditioning, our method constructs a persistent global scene memory via a prepended capture view cache, and removes temporal compression to maintain frame-level correspondence under large viewpoint changes. Beyond better generative model, we also find that the interplay between generation and reconstruction is crucial for large-scale 3D scenes. Thus, we introduce a geometry-aware conditioning strategy that couples generation and reconstruction through an explicit 3D geometric memory and geometry-driven capture-view retrieval. To ensure efficiency, we combine 4-step diffusion distillation with context-window sparse attention to reduce quadratic complexity. Extensive experiments demonstrate robust and scalable reconstruction across irregular inputs, large viewpoint gaps, and long trajectories.
+
+稀疏视图 3D 重建对于随意捕捉的场景建模至关重要，但对于非生成重建仍然具有挑战性。现有的基于扩散的方法通过合成新颖的视图来缓解这个问题，但它们通常仅以一两个捕获帧为条件，这限制了几何一致性并限制了大型或不同场景的可扩展性。我们提出了 AnyRecon，这是一个可扩展的框架，用于从任意和无序的稀疏输入进行重建，保留显式的几何控制，同时支持灵活的条件基数。为了支持远程调节，我们的方法通过预先设置的捕获视图缓存构建持久的全局场景内存，并删除时间压缩以在大视点变化下保持帧级对应。除了更好的生成模型之外，我们还发现生成和重建之间的相互作用对于大规模 3D 场景至关重要。因此，我们引入了一种几何感知调节策略，该策略通过显式 3D 几何内存和几何驱动的捕获视图检索将生成和重建结合起来。为了确保效率，我们将 4 步扩散蒸馏与上下文窗口稀疏注意力相结合，以降低二次复杂度。大量的实验证明了在不规则输入、大视点间隙和长轨迹上的稳健和可扩展的重建。
+
+</details>
+
+---
+
+## 11. CityRAG: Stepping Into a City via Spatially-Grounded Video Generation / CityRAG：通过空间视频生成走进城市
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19741v1](http://arxiv.org/abs/2604.19741v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19741v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We address the problem of generating a 3D-consistent, navigable environment that is spatially grounded: a simulation of a real location. Existing video generative models can produce a plausible sequence that is consistent with a text (T2V) or image (I2V) prompt. However, the capability to reconstruct the real world under arbitrary weather conditions and dynamic object configurations is essential for downstream applications including autonomous driving and robotics simulation. To this end, we present CityRAG, a video generative model that leverages large corpora of geo-registered data as context to ground generation to the physical scene, while maintaining learned priors for complex motion and appearance changes. CityRAG relies on temporally unaligned training data, which teaches the model to semantically disentangle the underlying scene from its transient attributes. Our experiments demonstrate that CityRAG can generate coherent minutes-long, physically grounded video sequences, maintain weather and lighting conditions over thousands of frames, achieve loop closure, and navigate complex trajectories to reconstruct real-world geography.
+
+我们解决了生成基于空间的 3D 一致、可导航环境的问题：模拟真实位置。现有的视频生成模型可以生成与文本 (T2V) 或图像 (I2V) 提示一致的合理序列。然而，在任意天气条件和动态对象配置下重建现实世界的能力对于自动驾驶和机器人模拟等下游应用至关重要。为此，我们提出了 CityRAG，这是一种视频生成模型，它利用大量地理注册数据作为物理场景地面生成的上下文，同时保持复杂运动和外观变化的学习先验。 CityRAG 依赖于时间上未对齐的训练数据，该数据教导模型在语义上将底层场景与其瞬态属性分开。我们的实验表明，CityRAG 可以生成连贯的长达数分钟的物理接地视频序列，维持数千帧的天气和照明条件，实现闭环，并导航复杂的轨迹以重建现实世界的地理。
+
+</details>
+
+---
+
+## 12. UniT: Toward a Unified Physical Language for Human-to-Humanoid Policy Learning and World Modeling / Unit：为人对人的政策学习和世界建模建立统一的物理语言
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19734v1](http://arxiv.org/abs/2604.19734v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19734v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scaling humanoid foundation models is bottlenecked by the scarcity of robotic data. While massive egocentric human data offers a scalable alternative, bridging the cross-embodiment chasm remains a fundamental challenge due to kinematic mismatches. We introduce UniT (Unified Latent Action Tokenizer via Visual Anchoring), a framework that establishes a unified physical language for human-to-humanoid transfer. Grounded in the philosophy that heterogeneous kinematics share universal visual consequences, UniT employs a tri-branch cross-reconstruction mechanism: actions predict vision to anchor kinematics to physical outcomes, while vision reconstructs actions to filter out irrelevant visual confounders. Concurrently, a fusion branch synergies these purified modalities into a shared discrete latent space of embodiment-agnostic physical intents. We validate UniT across two paradigms: 1) Policy Learning (VLA-UniT): By predicting these unified tokens, it effectively leverages diverse human data to achieve state-of-the-art data efficiency and robust out-of-distribution (OOD) generalization on both humanoid simulation benchmark and real-world deployments, notably demonstrating zero-shot task transfer. 2) World Modeling (WM-UniT): By aligning cross-embodiment dynamics via unified tokens as conditions, it realizes direct human-to-humanoid action transfer. This alignment ensures that human data seamlessly translates into enhanced action controllability for humanoid video generation. Ultimately, by inducing a highly aligned cross-embodiment representation (empirically verified by t-SNE visualizations revealing the convergence of human and humanoid features into a shared manifold), UniT offers a scalable path to distill vast human knowledge into general-purpose humanoid capabilities.
+
+机器人数据的稀缺阻碍了人形基础模型的扩展。虽然大量以自我为中心的人类数据提供了可扩展的替代方案，但由于运动学不匹配，弥合跨实体鸿沟仍然是一个根本挑战。我们引入了 UniT（通过视觉锚定的统一潜在动作分词器），这是一个为人与人之间的传输建立统一物理语言的框架。基于异构运动学共享普遍视觉后果的理念，UnitT 采用了三分支交叉重建机制：动作预测视觉，将运动学锚定到物理结果，而视觉重建动作，以过滤掉不相关的视觉混杂因素。同时，融合分支将这些纯化的模态协同作用到与实施例无关的物理意图的共享离散潜在空间中。我们通过两种范式验证 UnitT：1）策略学习（VLA-UnitT）：通过预测这些统一的令牌，它有效地利用不同的人类数据，在人形模拟基准和实际部署上实现最先进的数据效率和强大的分布外（OOD）泛化，特别是展示了零样本任务转移。 2）世界建模（WM-UniT）：通过统一令牌作为条件来调整跨实体动态，实现直接的人与人之间的动作转移。这种对齐确保人类数据无缝转化为人形视频生成的增强动作可控性。最终，通过引入高度一致的跨实体表示（通过 t-SNE 可视化进行经验验证，揭示人类和类人特征融合到共享流形中），UnitT 提供了一条可扩展的路径，将大量人类知识提炼为通用类人功能。
+
+</details>
+
+---
+
+## 13. ReImagine: Rethinking Controllable High-Quality Human Video Generation via Image-First Synthesis / ReImagine：重新思考通过图像优先合成的可控高质量人类视频生成
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19720v1](http://arxiv.org/abs/2604.19720v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19720v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/Taited/ReImagine.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human video generation remains challenging due to the difficulty of jointly modeling human appearance, motion, and camera viewpoint under limited multi-view data. Existing methods often address these factors separately, resulting in limited controllability or reduced visual quality. We revisit this problem from an image-first perspective, where high-quality human appearance is learned via image generation and used as a prior for video synthesis, decoupling appearance modeling from temporal consistency. We propose a pose- and viewpoint-controllable pipeline that combines a pretrained image backbone with SMPL-X-based motion guidance, together with a training-free temporal refinement stage based on a pretrained video diffusion model. Our method produces high-quality, temporally consistent videos under diverse poses and viewpoints. We also release a canonical human dataset and an auxiliary model for compositional human image synthesis. Code and data are publicly available at https://github.com/Taited/ReImagine.
+
+由于在有限的多视图数据下联合建模人类外观、运动和相机视点非常困难，人类视频生成仍然具有挑战性。现有方法通常单独解决这些因素，导致可控性有限或视觉质量降低。我们从图像优先的角度重新审视这个问题，通过图像生成学习高质量的人体外观，并将其用作视频合成的先验，将外观建模与时间一致性解耦。我们提出了一种姿势和视点可控的管道，它将预训练的图像主干与基于 SMPL-X 的运动指导相结合，以及基于预训练的视频扩散模型的免训练时间细化阶段。我们的方法可以在不同的姿势和视角下生成高质量、时间一致的视频。我们还发布了一个规范的人体数据集和一个用于合成人体图像合成的辅助模型。代码和数据可在 https://github.com/Taited/ReImagine 上公开获取。
+
+</details>
+
+---
+
+## 14. Mask World Model: Predicting What Matters for Robust Robot Policy Learning / 面具世界模型：预测对于鲁棒机器人策略学习来说重要的事情
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19683v1](http://arxiv.org/abs/2604.19683v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19683v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models derived from large-scale video generative pre-training have emerged as a promising paradigm for generalist robot policy learning. However, standard approaches often focus on high-fidelity RGB video prediction, this can result in overfitting to irrelevant factors, such as dynamic backgrounds and illumination changes. These distractions reduce the model's ability to generalize, ultimately leading to unreliable and fragile control policies. To address this, we introduce the Mask World Model (MWM), which leverages video diffusion architectures to predict the evolution of semantic masks instead of pixels. This shift imposes a geometric information bottleneck, forcing the model to capture essential physical dynamics and contact relations while filtering out visual noise. We seamlessly integrate this mask dynamics backbone with a diffusion-based policy head to enable robust end-to-end control. Extensive evaluations demonstrate the superiority of MWM on the LIBERO and RLBench simulation benchmarks, significantly outperforming the state-of-the-art RGB-based world models. Furthermore, real-world experiments and robustness evaluation (via random token pruning) reveal that MWM exhibits superior generalization capabilities and robust resilience to texture information loss.
+
+来自大规模视频生成预训练的世界模型已成为通用机器人策略学习的有前途的范例。然而，标准方法通常侧重于高保真 RGB 视频预测，这可能会导致对不相关因素的过度拟合，例如动态背景和照明变化。这些干扰降低了模型的泛化能力，最终导致控制政策不可靠且脆弱。为了解决这个问题，我们引入了掩模世界模型（MWM），它利用视频扩散架构来预测语义掩模而不是像素的演变。这种转变带来了几何信息瓶颈，迫使模型捕捉必要的物理动力学和接触关系，同时滤除视觉噪声。我们将这种掩模动态主干与基于扩散的策略头无缝集成，以实现强大的端到端控制。广泛的评估证明了 MWM 在 LIBERO 和 RLBench 模拟基准上的优越性，显着优于最先进的基于 RGB 的世界模型。此外，现实世界的实验和鲁棒性评估（通过随机令牌修剪）表明，MWM 表现出卓越的泛化能力和对纹理信息丢失的强大恢复能力。
+
+</details>
+
+---
+
+## 15. MMControl: Unified Multi-Modal Control for Joint Audio-Video Generation / MMControl：用于联合音频-视频生成的统一多模态控制
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19679v2](http://arxiv.org/abs/2604.19679v2) | **PDF**: [Link](http://arxiv.org/pdf/2604.19679v2)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in Diffusion Transformers (DiTs) have enabled high-quality joint audio-video generation, producing videos with synchronized audio within a single model. However, existing controllable generation frameworks are typically restricted to video-only control. This restricts comprehensive controllability and often leads to suboptimal cross-modal alignment. To bridge this gap, we present MMControl, which enables users to perform Multi-Modal Control in joint audio-video generation. MMControl introduces a dual-stream conditional injection mechanism. It incorporates both visual and acoustic control signals, including reference images, reference audio, depth maps, and pose sequences, into a joint generation process. These conditions are injected through bypass branches into a joint audio-video Diffusion Transformer, enabling the model to simultaneously generate identity-consistent video and timbre-consistent audio under structural constraints. Furthermore, we introduce modality-specific guidance scaling, which allows users to independently and dynamically adjust the influence strength of each visual and acoustic condition at inference time. Extensive experiments demonstrate that MMControl achieves fine-grained, composable control over character identity, voice timbre, body pose, and scene layout in joint audio-video generation.
+
+扩散变压器 (DiT) 的最新进展实现了高质量的联合音频-视频生成，在单个模型中生成具有同步音频的视频。然而，现有的可控生成框架通常仅限于仅视频控制。这限制了综合可控性，并且常常导致跨模式对齐不理想。为了弥补这一差距，我们提出了 MMControl，它使用户能够在联合音频-视频生成中执行多模式控制。 MMControl引入了双流条件注入机制。它将视觉和声学控制信号（包括参考图像、参考音频、深度图和姿势序列）合并到联合生成过程中。这些条件通过旁路分支注入联合音视频扩散变压器，使模型能够在结构约束下同时生成身份一致的视频和音色一致的音频。此外，我们引入了特定于模态的指导缩放，它允许用户在推理时独立且动态地调整每个视觉和听觉条件的影响强度。大量实验表明，MMControl 在联合音视频生成中实现了对角色身份、音色、身体姿势和场景布局的细粒度、可组合控制。
+
+</details>
+
+---
+
+## 16. CoInteract: Physically-Consistent Human-Object Interaction Video Synthesis via Spatially-Structured Co-Generation / CoInteract：通过空间结构联合生成物理一致的人机交互视频合成
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19636v1](http://arxiv.org/abs/2604.19636v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19636v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Synthesizing human--object interaction (HOI) videos has broad practical value in e-commerce, digital advertising, and virtual marketing. However, current diffusion models, despite their photorealistic rendering capability, still frequently fail on (i) the structural stability of sensitive regions such as hands and faces and (ii) physically plausible contact (e.g., avoiding hand--object interpenetration). We present CoInteract, an end-to-end framework for HOI video synthesis conditioned on a person reference image, a product reference image, text prompts, and speech audio. CoInteract introduces two complementary designs embedded into a Diffusion Transformer (DiT) backbone. First, we propose a Human-Aware Mixture-of-Experts (MoE) that routes tokens to lightweight, region-specialized experts via spatially supervised routing, improving fine-grained structural fidelity with minimal parameter overhead. Second, we propose Spatially-Structured Co-Generation, a dual-stream training paradigm that jointly models an RGB appearance stream and an auxiliary HOI structure stream to inject interaction geometry priors. During training, the HOI stream attends to RGB tokens and its supervision regularizes shared backbone weights; at inference, the HOI branch is removed for zero-overhead RGB generation. Experimental results demonstrate that CoInteract significantly outperforms existing methods in structural stability, logical consistency, and interaction realism.
+
+合成人与物体交互（HOI）视频在电子商务、数字广告和虚拟营销中具有广泛的实用价值。然而，当前的扩散模型尽管具有逼真的渲染能力，但仍然经常在以下方面失败：（i）手和脸等敏感区域的结构稳定性；以及（ii）物理上合理的接触（例如，避免手与物体的相互渗透）。我们提出了 CoInteract，这是一个以人参考图像、产品参考图像、文本提示和语音音频为条件的 HOI 视频合成的端到端框架。 CoInteract 引入了两种嵌入扩散变压器 (DiT) 主干的互补设计。首先，我们提出了一种人类感知专家混合（MoE），通过空间监督路由将代币路由到轻量级、区域专业的专家，以最小的参数开销提高细粒度的结构保真度。其次，我们提出了空间结构化联合生成，这是一种双流训练范例，联合建模 RGB 外观流和辅助 HOI 结构流以注入交互几何先验。在训练期间，HOI 流关注 RGB 令牌，其监督规范共享主干权重；在推理时，HOI 分支被删除以实现零开销 RGB 生成。实验结果表明，CoInteract 在结构稳定性、逻辑一致性和交互真实性方面显着优于现有方法。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-22 (19 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-22
