@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-24](papers/2026-04-24.md) - 18 papers
 - [2026-04-23](papers/2026-04-23.md) - 39 papers
 - [2026-04-22](papers/2026-04-22.md) - 34 papers
 - [2026-04-21](papers/2026-04-21.md) - 15 papers
@@ -60,6 +61,310 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-24 (18 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-04-24
+
+**Paper Count**: 18
+
+---
+
+## 1. Tool Attention Is All You Need: Dynamic Tool Gating and Lazy Schema Loading for Eliminating the MCP/Tools Tax in Scalable Agentic Workflows / 您所需要的就是工具关注：动态工具门控和延迟模式加载，用于消除可扩展代理工作流程中的 MCP/工具税
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21816v1](http://arxiv.org/abs/2604.21816v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21816v1)
+
+**Categories**: cs.AI
+
+**Code**: https://github.com/asadani/tool-attention
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The Model Context Protocol (MCP) has become a common interface for connecting large language model (LLM) agents to external tools, but its reliance on stateless, eager schema injection imposes a hidden per-turn overhead the MCP Tax or Tools Tax that practitioner reports place between roughly 10k and 60k tokens in typical multi-server deployments. This payload inflates the key-value cache, is associated with reasoning degradation as context utilization approaches published fracture points around 70%, and turns token budgets into a recurring operational cost. We introduce Tool Attention, a middleware-layer mechanism that generalizes the "Attention Is All You Need" paradigm from self-attention over tokens to gated attention over tools. Tool Attention combines (i) an Intent Schema Overlap (ISO) score from sentence embeddings, (ii) a state-aware gating function enforcing preconditions and access scopes, and (iii) a two-phase lazy schema loader that keeps a compact summary pool in context and promotes full JSON schemas only for top-k gated tools. We evaluate on a simulated 120-tool, six-server benchmark whose per-server token counts are calibrated to public audits of real MCP deployments. In this simulation, Tool Attention directly reduces measured per-turn tool tokens by 95.0% (47.3k -> 2.4k) and raises effective context utilization (a token-ratio quantity) from 24% to 91%. End-to-end figures for task success, latency, cost, and reasoning quality are reported as projections derived from the measured token counts combined with published deployment telemetry; they are not measured on live LLM agents, and we mark projected values explicitly throughout. Taken together, the results support a simple thesis: protocol-level efficiency, not raw context length, is a binding constraint on scalable gentic systems. The code for this work is accessible at https://github.com/asadani/tool-attention
+
+模型上下文协议 (MCP) 已成为将大型语言模型 (LLM) 代理连接到外部工具的通用接口，但它对无状态、急切模式注入的依赖会带来隐藏的每轮 MCP 税或工具税开销，据从业者报告，在典型的多服务器部署中，该开销大约为 10k 到 60k 代币。此有效负载会导致键值缓存膨胀，随着上下文利用率接近已发布的断裂点 70% 左右，与推理性能下降相关，并将令牌预算转变为经常性运营成本。我们引入了工具注意力（Tool Attention），这是一种中间件层机制，它概括了“注意力就是你所需要的一切”范式，从对令牌的自我注意力到对工具的门控注意力。工具注意力结合了（i）来自句子嵌入的意图模式重叠（ISO）分数，（ii）强制执行前提条件和访问范围的状态感知门函数，以及（iii）两阶段惰性模式加载器，它在上下文中保留紧凑的摘要池，并仅针对 top-k 门控工具提升完整的 JSON 模式。我们对模拟的 120 个工具、六台服务器基准进行评估，其每台服务器的令牌计数根据真实 MCP 部署的公共审计进行校准。在此模拟中，工具注意力直接将测量的每回合工具令牌减少了 95.0% (47.3k -> 2.4k)，并将有效上下文利用率（令牌比率数量）从 24% 提高到 91%。任务成功、延迟、成本和推理质量的端到端数据以根据测量的令牌计数与已发布的部署遥测数据得出的预测进行报告；它们不是在现场法学硕士代理人身上进行测量的，我们在整个过程中明确标记了预测值。总而言之，结果支持一个简单的论点：协议级效率，而不是原始上下文长度，是可扩展遗传系统的约束约束。这项工作的代码可在 https://github.com/asadani/tool-attention 访问
+
+</details>
+
+---
+
+## 2. Learning to Communicate: Toward End-to-End Optimization of Multi-Agent Language Systems / 学习沟通：走向多代理语言系统的端到端优化
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21794v1](http://arxiv.org/abs/2604.21794v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21794v1)
+
+**Categories**: cs.AI, cs.CL, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent systems built on large language models have shown strong performance on complex reasoning tasks, yet most work focuses on agent roles and orchestration while treating inter-agent communication as a fixed interface. Latent communication through internal representations such as key-value caches offers a promising alternative to text-based protocols, but existing approaches do not jointly optimize communication with multi-agent reasoning. Therefore we propose DiffMAS, a training framework that treats latent communication as a learnable component of multi-agent systems. DiffMAS performs parameter-efficient supervised training over multi-agent latent trajectories, enabling agents to jointly learn how information should be encoded and interpreted across interactions. Experiments on mathematical reasoning, scientific QA, code generation, and commonsense benchmarks show that DiffMAS consistently improves reasoning accuracy and decoding stability over single-agent inference, text-based multi-agent systems, and prior latent communication methods, achieving 26.7% on AIME24, 20.2% on GPQA-Diamond, and consistent gains across reasoning benchmarks.
+
+基于大型语言模型构建的多代理系统在复杂的推理任务上表现出了强大的性能，但大多数工作都集中在代理角色和编排上，同时将代理间通信视为固定接口。通过键值缓存等内部表示进行的潜在通信为基于文本的协议提供了一种有前途的替代方案，但现有方法并未与多代理推理联合优化通信。因此，我们提出了 DiffMAS，这是一种将潜在通信视为多智能体系统的可学习组件的训练框架。 DiffMAS 对多智能体潜在轨迹执行参数高效的监督训练，使智能体能够共同学习如何跨交互编码和解释信息。数学推理、科学 QA、代码生成和常识基准测试表明，与单智能体推理、基于文本的多智能体系统和先前的潜在通信方法相比，DiffMAS 持续提高了推理准确性和解码稳定性，在 AIME24 上实现了 26.7%，在 GPQA-Diamond 上实现了 20.2%，并且在推理基准测试中取得了一致的收益。
+
+</details>
+
+---
+
+## 3. Agentic AI-assisted coding offers a unique opportunity to instill epistemic grounding during software development / 智能人工智能辅助编码提供了在软件开发过程中灌输认知基础的独特机会
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21744v1](http://arxiv.org/abs/2604.21744v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21744v1)
+
+**Categories**: cs.SE, cs.AI, q-bio.BM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The capabilities of AI-assisted coding are progressing at breakneck speed. Chat-based vibe coding has evolved into fully fledged AI-assisted, agentic software development using agent scaffolds where the human developer creates a plan that agentic AIs implement. One current trend is utilizing documents beyond this plan document, such as project and method-scoped documents. Here we propose GROUNDING.md, a community-governed, field-scoped epistemic grounding document, using mass spectrometry-based proteomics as an example. This explicit field-scoped grounding document encodes Hard Constraints (non-negotiable validity invariants empirically required for scientific correctness) and Convention Parameters (community-agreed defaults) that override all other contexts to enforce validity, regardless of what the user prompts. In practice, this will empower a non-domain expert to generate code, tools, and software that have best practices baked in at the ground level, providing confidence to the software developer but also to those reviewing or using the final product. Undoubtedly it is easier to have agentic AIs adhere to guidelines than humans, and this opportunity allows for organizations to develop epistemic grounding documents in such a way as to keep domain experts in the loop in a future of democratized generation of bespoke software solutions.
+
+人工智能辅助编码的能力正在以惊人的速度发展。基于聊天的氛围编码已经发展成为完全成熟的人工智能辅助、使用代理支架的代理软件开发，其中人类开发人员创建了代理人工智能实施的计划。当前的趋势是利用超出此计划文档的文档，例如项目和方法范围的文档。在这里，我们提出 GROUNDING.md，这是一个社区管理的、领域范围的认知基础文档，以基于质谱的蛋白质组学为例。这个明确的领域范围的基础文档对硬约束（科学正确性凭经验所需的不可协商的有效性不变量）和约定参数（社区商定的默认值）进行编码，它们覆盖所有其他上下文以强制有效性，无论用户提示什么。在实践中，这将使非领域专家能够生成具有最佳实践的代码、工具和软件，为软件开发人员以及审查或使用最终产品的人员提供信心。毫无疑问，让代理人工智能比人类更容易遵守指导方针，并且这个机会允许组织开发认知基础文档，以便让领域专家了解未来民主化定制软件解决方案的情况。
+
+</details>
+
+---
+
+## 4. DryRUN: On the Role of Public Tests in LLM-Driven Code Generation / DryRUN：论公共测试在 LLM 驱动的代码生成中的作用
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21598v1](http://arxiv.org/abs/2604.21598v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21598v1)
+
+**Categories**: cs.SE, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent frameworks are widely used in autonomous code generation and have applications in complex algorithmic problem-solving. Recent work has addressed the challenge of generating functionally correct code by incorporating simulation-driven planning and debugging, where language models trace execution steps to verify logic. However, these approaches depend on human-provided public test cases to ground the debugging and simulation loop. Manually authoring comprehensive input-output examples is a labor-intensive bottleneck in the software development lifecycle. Because ground-truth input-output examples are rarely available prior to implementation in real-world software engineering, this dependency restricts methods to curated competitive programming benchmarks. Furthermore, we identify that reliance on these public tests induces an ``overconfidence gap,'' causing frameworks to overfit to simplistic examples and fail on hidden evaluations. In contrast, we observe that external sample inputs are not strictly necessary for code generation. We demonstrate that large language models can autonomously generate valid inputs and simulate execution traces to self-correct. Consequently, we develop DryRUN, a framework that eliminates the need for ground-truth samples by allowing the LLM to iteratively plan, autonomously generate its own inputs and simulate execution, mitigating algorithmic overconfidence. Evaluations on the LiveCodeBench v6 dataset (post-March 2025) demonstrate that DryRUN matches performance against CodeSIM, a state-of-the-art and public-test-dependent framework, while operating entirely without public test cases or external execution feedback while reducing output token consumption.
+
+多代理框架广泛应用于自主代码生成，并在复杂算法问题解决中得到应用。最近的工作通过结合模拟驱动的规划和调试来解决生成功能正确的代码的挑战，其中语言模型跟踪执行步骤以验证逻辑。然而，这些方法依赖于人类提供的公共测试用例来支撑调试和模拟循环。手动编写全面的输入输出示例是软件开发生命周期中的劳动密集型瓶颈。由于在现实世界的软件工程中实现之前很少有真实的输入输出示例，因此这种依赖性将方法限制为策划的竞争性编程基准。此外，我们发现对这些公开测试的依赖会导致“过度自信差距”，导致框架过度拟合简单的示例并无法进行隐藏评估。相反，我们观察到外部样本输入对于代码生成来说并不是严格必要的。我们证明大型语言模型可以自主生成有效输入并模拟执行跟踪以进行自我纠正。因此，我们开发了 DryRUN，这是一个框架，通过允许法学硕士迭代计划、自主生成自己的输入并模拟执行，从而消除对真实样本的需求，从而减轻算法的过度自信。对 LiveCodeBench v6 数据集（2025 年 3 月后）的评估表明，DryRUN 的性能与 CodeSIM（一种最先进且依赖于公共测试的框架）相匹配，同时完全无需公共测试用例或外部执行反馈即可运行，同时减少了输出令牌消耗。
+
+</details>
+
+---
+
+## 5. AgenticQwen: Training Small Agentic Language Models with Dual Data Flywheels for Industrial-Scale Tool Use / AgenticQwen：使用双数据飞轮训练小型代理语言模型以供工业规模工具使用
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21590v1](http://arxiv.org/abs/2604.21590v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21590v1)
+
+**Categories**: cs.CL
+
+**Code**: https://github.com/modelscope/easydistill.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern industrial applications increasingly demand language models that act as agents, capable of multi-step reasoning and tool use in real-world settings. These tasks are typically performed under strict cost and latency constraints, making small agentic models highly desirable. In this paper, we introduce the AgenticQwen family of models, trained via multi-round reinforcement learning (RL) on synthetic data and a limited amount of open-source data. Our training framework combines reasoning RL and agentic RL with dual data flywheels that automatically generate increasingly challenging tasks. The reasoning flywheel increases task difficulty by learning from errors, while the agentic flywheel expands linear workflows into multi-branch behavior trees that better reflect the decision complexity of real-world applications. We validate AgenticQwen on public benchmarks and in an industrial agent system. The models achieve strong performance on multiple agentic benchmarks, and in our industrial agent system, close the gap with much larger models on search and data analysis tasks. Model checkpoints and part of the synthetic data: https://huggingface.co/collections/alibaba-pai/agenticqwen. Data synthesis and RL training code: https://github.com/haruhi-sudo/data_synth_and_rl. The data synthesis pipeline is also integrated into EasyDistill: https://github.com/modelscope/easydistill.
+
+现代工业应用越来越需要充当代理的语言模型，能够在现实环境中进行多步推理和工具使用。这些任务通常是在严格的成本和延迟限制下执行的，这使得小型代理模型非常受欢迎。在本文中，我们介绍了 AgenticQwen 系列模型，通过对合成数据和有限数量的开源数据进行多轮强化学习 (RL) 进行训练。我们的训练框架将推理强化学习和代理强化学习与双数据飞轮相结合，自动生成越来越具有挑战性的任务。推理飞轮通过从错误中学习来增加任务难度，而代理飞轮将线性工作流程扩展为多分支行为树，更好地反映现实应用程序的决策复杂性。我们在公共基准和工业代理系统中验证 AgenticQwen。这些模型在多个代理基准上实现了强大的性能，并且在我们的工业代理系统中，在搜索和数据分析任务上缩小了与更大模型的差距。模型检查点和部分合成数据：https://huggingface.co/collections/alibaba-pai/agenticqwen。数据合成和RL训练代码：https://github.com/haruhi-sudo/data_synth_and_rl。数据合成管道也集成到 EasyDistill 中：https://github.com/modelscope/easydistill。
+
+</details>
+
+---
+
+## 6. GeoMind: An Agentic Workflow for Lithology Classification with Reasoned Tool Invocation / GeoMind：通过合理的工具调用进行岩性分类的代理工作流程
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21501v1](http://arxiv.org/abs/2604.21501v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21501v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Lithology classification in well logs is a fundamental geoscience data mining task that aims to infer rock types from multi dimensional geophysical sequences. Despite recent progress, existing approaches typically formulate the problem as a static, single-step discriminative mapping. This static paradigm limits evidence-based diagnostic reasoning against geological standards, often yielding predictions that are detached from geological reality due to a lack of domain priors. In this work, we propose GeoMind, a tool-augmented agentic framework that models lithology classification as a sequential reasoning process. GeoMind organizes its toolkit into perception, reasoning, and analysis modules, which respectively translate raw logs into semantic trends, infer lithology hypotheses from multi-source evidence, and verify predictions against stratigraphic constraints. A global planner adaptively coordinates these modules based on input characteristics, enabling geologically plausible and evidence-grounded decisions. To guarantee the logical consistency of GeoMind, we introduce a fine-grained process supervision strategy. Unlike standard methods that focus solely on final outcomes, our approach optimizes intermediate reasoning steps, ensuring the validity of decision trajectories and alignment to geological constraints. Experiments on four benchmark well-log datasets demonstrate that GeoMind consistently outperforms strong baselines in classification performance while providing transparent and traceable decision-making processes.
+
+测井岩性分类是一项基本的地球科学数据挖掘任务，旨在从多维地球物理序列推断岩石类型。尽管最近取得了进展，但现有方法通常将问题表述为静态的单步判别映射。这种静态范式限制了针对地质标准的基于证据的诊断推理，由于缺乏领域先验，通常会产生脱离地质现实的预测。在这项工作中，我们提出了 GeoMind，这是一种工具增强的代理框架，它将岩性分类建模为顺序推理过程。 GeoMind 将其工具包分为感知、推理和分析模块，分别将原始日志转换为语义趋势、从多源证据推断岩性假设，并根据地层约束验证预测。全局规划器根据输入特征自适应地协调这些模块，从而实现地质上合理且基于证据的决策。为了保证GeoMind的逻辑一致性，我们引入了细粒度的过程监督策略。与仅关注最终结果的标准方法不同，我们的方法优化了中间推理步骤，确保决策轨迹的有效性并符合地质约束。对四个基准测井数据集的实验表明，GeoMind 在分类性能方面始终优于强大的基线，同时提供透明且可追踪的决策流程。
+
+</details>
+
+---
+
+## 7. AI-Gram: When Visual Agents Interact in a Social Network / AI-Gram：当视觉代理在社交网络中交互时
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21446v1](http://arxiv.org/abs/2604.21446v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21446v1)
+
+**Categories**: cs.AI, cs.CL, cs.MA, cs.SI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present AI-Gram, a live platform enabling image-based interactions, to study social dynamics in a fully autonomous multi-agent visual network where all participants are LLM-driven agents. Using the platform, we conduct experiments on how agents communicate and adapt through visual media, and observe the spontaneous emergence of visual reply chains, indicating rich communicative structure. At the same time, agents exhibit aesthetic sovereignty resisting stylistic convergence toward social partners, anchoring under adversarial influence, and a decoupling between visual similarity and social ties. These results reveal a fundamental asymmetry in current agent architectures: strong expressive communication paired with a steadfast preservation of individual visual identity. We release AI-Gram as a publicly accessible, continuously evolving platform for studying social dynamics in Al-native multi-agent systems. https://ai-gram.ai/
+
+我们推出了 AI-Gram，一个支持基于图像交互的实时平台，用于研究完全自主的多智能体视觉网络中的社会动态，其中所有参与者都是法学硕士驱动的智能体。利用该平台，我们对智能体如何通过视觉媒体进行交流和适应进行实验，并观察视觉回复链的自发出现，表明丰富的交流结构。与此同时，代理人表现出审美主权，抵制与社会伙伴的风格趋同，在敌对影响下锚定，以及视觉相似性和社会联系之间的脱钩。这些结果揭示了当前代理架构中的根本不对称性：强大的表达性沟通与个人视觉身份的坚定保留相结合。我们发布 AI-Gram 作为一个可公开访问、不断发展的平台，用于研究 Al-native 多智能体系统中的社会动态。 https://ai-gram.ai/
+
+</details>
+
+---
+
+## 8. HiCrew: Hierarchical Reasoning for Long-Form Video Understanding via Question-Aware Multi-Agent Collaboration / HiCrew：通过问题感知多智能体协作进行长格式视频理解的分层推理
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21444v1](http://arxiv.org/abs/2604.21444v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21444v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-form video understanding remains fundamentally challenged by pervasive spatiotemporal redundancy and intricate narrative dependencies that span extended temporal horizons. While recent structured representations compress visual information effectively, they frequently sacrifice temporal coherence, which is critical for causal reasoning. Meanwhile, existing multi-agent frameworks operate through rigid, pre-defined workflows that fail to adapt their reasoning strategies to question-specific demands. In this paper, we introduce HiCrew, a hierarchical multi-agent framework that addresses these limitations through three core contributions. First, we propose a Hybrid Tree structure that leverages shot boundary detection to preserve temporal topology while performing relevance-guided hierarchical clustering within semantically coherent segments. Second, we develop a Question-Aware Captioning mechanism that synthesizes intent-driven visual prompts to generate precision-oriented semantic descriptions. Third, we integrate a Planning Layer that dynamically orchestrates agent collaboration by adaptively selecting roles and execution paths based on question complexity. Extensive experiments on EgoSchema and NExT-QA validate the effectiveness of our approach, demonstrating strong performance across diverse question types with particularly pronounced gains in temporal and causal reasoning tasks that benefit from our hierarchical structure-preserving design.
+
+长视频理解仍然受到普遍的时空冗余和跨越扩展时间范围的复杂叙事依赖性的根本挑战。虽然最近的结构化表示有效地压缩了视觉信息，但它们经常牺牲时间连贯性，而这对于因果推理至关重要。与此同时，现有的多代理框架通过严格的预定义工作流程进行操作，无法使其推理策略适应特定问题的需求。在本文中，我们介绍了 HiCrew，这是一个分层多代理框架，它通过三个核心贡献解决了这些限制。首先，我们提出了一种混合树结构，它利用镜头边界检测来保留时间拓扑，同时在语义相干的片段内执行相关性引导的分层聚类。其次，我们开发了一种问题感知字幕机制，该机制综合意图驱动的视觉提示以生成面向精度的语义描述。第三，我们集成了一个规划层，该层通过根据问题复杂性自适应地选择角色和执行路径来动态协调代理协作。 EgoSchema 和 NExT-QA 上的大量实验验证了我们方法的有效性，证明了在不同问题类型中的强大性能，并且在时间和因果推理任务中取得了特别显着的收益，这得益于我们的分层结构保留设计。
+
+</details>
+
+---
+
+## 9. FairQE: Multi-Agent Framework for Mitigating Gender Bias in Translation Quality Estimation / FairQE：减轻翻译质量评估中性别偏见的多代理框架
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21420v1](http://arxiv.org/abs/2604.21420v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21420v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Quality Estimation (QE) aims to assess machine translation quality without reference translations, but recent studies have shown that existing QE models exhibit systematic gender bias. In particular, they tend to favor masculine realizations in gender-ambiguous contexts and may assign higher scores to gender-misaligned translations even when gender is explicitly specified. To address these issues, we propose FairQE, a multi-agent-based, fairness-aware QE framework that mitigates gender bias in both gender-ambiguous and gender-explicit scenarios. FairQE detects gender cues, generates gender-flipped translation variants, and combines conventional QE scores with LLM-based bias-mitigating reasoning through a dynamic bias-aware aggregation mechanism. This design preserves the strengths of existing QE models while calibrating their gender-related biases in a plug-and-play manner. Extensive experiments across multiple gender bias evaluation settings demonstrate that FairQE consistently improves gender fairness over strong QE baselines. Moreover, under MQM-based meta-evaluation following the WMT 2023 Metrics Shared Task, FairQE achieves competitive or improved general QE performance. These results show that gender bias in QE can be effectively mitigated without sacrificing evaluation accuracy, enabling fairer and more reliable translation evaluation.
+
+质量估计（QE）旨在在没有参考翻译的情况下评估机器翻译质量，但最近的研究表明，现有的 QE 模型表现出系统性的性别偏见。特别是，他们倾向于在性别模糊的背景下倾向于男性化的实现，并且即使明确指定性别，也可能为性别不一致的翻译分配更高的分数。为了解决这些问题，我们提出了 FairQE，这是一种基于多主体、具有公平意识的 QE 框架，可以减轻性别模糊和性别明确场景中的性别偏见。 FairQE 检测性别线索，生成性别翻转的翻译变体，并通过动态偏见感知聚合机制将传统 QE 分数与基于 LLM 的偏见减轻推理相结合。这种设计保留了现有量化宽松模型的优势，同时以即插即用的方式校准其与性别相关的偏见。跨多个性别偏见评估设置的广泛实验表明，与强大的 QE 基线相比，FairQE 持续改善了性别公平性。此外，在 WMT 2023 Metrics Shared Task 之后基于 MQM 的元评估下，FairQE 实现了具有竞争力或改进的总体 QE 性能。这些结果表明，在不牺牲评估准确性的情况下，可以有效缓解量化评估中的性别偏见，从而实现更公平、更可靠的翻译评估。
+
+</details>
+
+---
+
+## 10. VLAA-GUI: Knowing When to Stop, Recover, and Search, A Modular Framework for GUI Automation / VLAA-GUI：了解何时停止、恢复和搜索，GUI 自动化的模块化框架
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21375v1](http://arxiv.org/abs/2604.21375v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21375v1)
+
+**Categories**: cs.CL, cs.AI, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous GUI agents face two fundamental challenges: early stopping, where agents prematurely declare success without verifiable evidence, and repetitive loops, where agents cycle through the same failing actions without recovery. We present VLAA-GUI, a modular GUI agentic framework built around three integrated components that guide the system on when to Stop, Recover, and Search. First, a mandatory Completeness Verifier enforces UI-observable success criteria and verification at every finish step -- with an agent-level verifier that cross-examines completion claims with decision rules, rejecting those lacking direct visual evidence. Second, a mandatory Loop Breaker provides multi-tier filtering: switching interaction mode after repeated failures, forcing strategy changes after persistent screen-state recurrence, and binding reflection signals to strategy shifts. Third, an on-demand Search Agent searches online for unfamiliar workflows by directly querying a capable LLM with search ability, returning results as plain text. We additionally integrate a Coding Agent for code-intensive actions and a Grounding Agent for precise action grounding, both invoked on demand when required. We evaluate VLAA-GUI across five top-tier backbones, including Opus 4.5, 4.6 and Gemini 3.1 Pro, on two benchmarks with Linux and Windows tasks, achieving top performance on both (77.5% on OSWorld and 61.0% on WindowsAgentArena). Notably, three of the five backbones surpass human performance (72.4%) on OSWorld in a single pass. Ablation studies show that all three proposed components consistently improve a strong backbone, while a weaker backbone benefits more from these tools when the step budget is sufficient. Further analysis also shows that the Loop Breaker nearly halves wasted steps for loop-prone models.
+
+自主 GUI 代理面临两个基本挑战：早期停止（代理在没有可验证证据的情况下过早地宣布成功）和重复循环（代理循环执行相同的失败操作而不进行恢复）。我们推出了 VLAA-GUI，这是一个围绕三个集成组件构建的模块化 GUI 代理框架，可指导系统何时停止、恢复和搜索。首先，强制性的完整性验证程序在每个完成步骤中强制执行 UI 可观察的成功标准和验证——代理级验证程序通过决策规则交叉检查完成声明，拒绝那些缺乏直接视觉证据的声明。其次，强制循环断路器提供多层过滤：在重复失败后切换交互模式，在持续屏幕状态重复后强制策略更改，以及将反射信号与策略转换绑定。第三，按需搜索代理通过直接查询具有搜索能力的法学硕士来在线搜索不熟悉的工作流程，并以纯文本形式返回结果。我们还集成了用于代码密集型操作的编码代理和用于精确操作接地的接地代理，两者都在需要时按需调用。我们在 Linux 和 Windows 任务的两个基准测试中跨五个顶级主干网（包括 Opus 4.5、4.6 和 Gemini 3.1 Pro）评估 VLAA-GUI，在这两个基准上都实现了最高性能（OSWorld 上为 77.5%，WindowsAgentArena 上为 61.0%）。值得注意的是，五个骨干网中的三个在 OSWorld 上一次超越了人类表现（72.4%）。消融研究表明，所有三个提议的组件持续改善强大的骨干网，而当步骤预算足够时，较弱的骨干网从这些工具中受益更多。进一步的分析还表明，Loop Breaker 几乎将易发生循环模型的浪费步骤减少了一半。
+
+</details>
+
+---
+
+## 11. Strategic Heterogeneous Multi-Agent Architecture for Cost-Effective Code Vulnerability Detection / 用于经济有效的代码漏洞检测的战略异构多代理架构
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21282v1](http://arxiv.org/abs/2604.21282v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21282v1)
+
+**Categories**: cs.CR, cs.LG, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Automated code vulnerability detection is critical for software security, yet existing approaches face a fundamental trade-off between detection accuracy and computational cost. We propose a heterogeneous multi-agent architecture inspired by game-theoretic principles, combining cloud-based LLM experts with a local lightweight verifier. Our "3+1" architecture deploys three cloud-based expert agents (DeepSeek-V3) that analyze code from complementary perspectives - code structure, security patterns, and debugging logic - in parallel, while a local verifier (Qwen3-8B) performs adversarial validation at zero marginal cost.   We formalize this design through a two-layer game framework: (1) a cooperative game among experts capturing super-additive value from diverse perspectives, and (2) an adversarial verification game modeling quality assurance incentives.   Experiments on 262 real samples from the NIST Juliet Test Suite across 14 CWE types, with balanced vulnerable and benign classes, demonstrate that our approach achieves a 77.2% F1 score with 62.9% precision and 100% recall at $0.002 per sample - outperforming both a single-expert LLM baseline (F1 71.4%) and Cppcheck static analysis (MCC 0). The adversarial verifier significantly improves precision (+10.3 percentage points, p < 1e-6, McNemar's test) by filtering false positives, while parallel execution achieves a 3.0x speedup.   Our work demonstrates that game-theoretic design principles can guide effective heterogeneous multi-agent architectures for cost-sensitive software engineering tasks.
+
+自动代码漏洞检测对于软件安全至关重要，但现有方法面临检测准确性和计算成本之间的基本权衡。我们提出了一种受博弈论原理启发的异构多代理架构，将基于云的 LLM 专家与本地轻量级验证器相结合。我们的“3+1”架构部署了三个基于云的专家代理（DeepSeek-V3），它们从互补的角度（代码结构、安全模式和调试逻辑）并行分析代码，而本地验证器（Qwen3-8B）则以零边际成本执行对抗性验证。   我们通过两层博弈框架形式化了这种设计：（1）专家之间的合作博弈，从不同的角度捕获超附加价值；（2）对抗性验证博弈建模质量保证激励。   对 NIST Juliet 测试套件中 14 个 CWE 类型的 262 个真实样本进行的实验表明，我们的方法以每个样本 0.002 美元的价格实现了 77.2% 的 F1 分数、62.9% 的精确度和 100% 的召回率，优于单专家 LLM 基线 (F1 71.4%) 和 Cppcheck 静态分析 (MCC 0)。对抗性验证器通过过滤误报显着提高了精度（+10.3 个百分点，p < 1e-6，McNemar 测试），同时并行执行实现了 3.0 倍的加速。   我们的工作表明，博弈论设计原则可以指导有效的异构多代理架构来完成成本敏感的软件工程任务。
+
+</details>
+
+---
+
+## 12. Multi-Agent Empowerment and Emergence of Complex Behavior in Groups / 多智能体赋权和群体中复杂行为的出现
+
+**Date**: 2026-04-22 | **arXiv**: [2604.21155v1](http://arxiv.org/abs/2604.21155v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21155v1)
+
+**Categories**: cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Intrinsic motivations are receiving increasing attention, i.e. behavioral incentives that are not engineered, but emerge from the interaction of an agent with its surroundings. In this work we study the emergence of behaviors driven by one such incentive, empowerment, specifically in the context of more than one agent. We formulate a principled extension of empowerment to the multi-agent setting, and demonstrate its efficient calculation. We observe that this intrinsic motivation gives rise to characteristic modes of group-organization in two qualitatively distinct environments: a pair of agents coupled by a tendon, and a controllable Vicsek flock. This demonstrates the potential of intrinsic motivations such as empowerment to not just drive behavior for only individual agents but also higher levels of behavioral organization at scale.
+
+内在动机越来越受到关注，即行为激励不是经过设计的，而是从主体与其周围环境的相互作用中产生的。在这项工作中，我们研究了由这种激励（授权）驱动的行为的出现，特别是在多个代理人的背景下。我们制定了对多智能体设置的授权的原则性扩展，并证明了其高效计算。我们观察到，这种内在动机在两​​个性质不同的环境中产生了群体组织的特征模式：一对由肌腱耦合的代理，以及可控的 Vicsek 群。这证明了内在动机（例如授权）的潜力，不仅可以驱动个体代理的行为，而且可以大规模地驱动更高水平的行为组织。
+
+</details>
+
+---
+
+## 13. Agentic AI for Personalized Physiotherapy: A Multi-Agent Framework for Generative Video Training and Real-Time Pose Correction / 用于个性化物理治疗的代理人工智能：用于生成视频训练和实时姿势校正的多代理框架
+
+**Date**: 2026-04-22 | **arXiv**: [2604.21154v1](http://arxiv.org/abs/2604.21154v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21154v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+At-home physiotherapy compliance remains critically low due to a lack of personalized supervision and dynamic feedback. Existing digital health solutions rely on static, pre-recorded video libraries or generic 3D avatars that fail to account for a patient's specific injury limitations or home environment. In this paper, we propose a novel Multi-Agent System (MAS) architecture that leverages Generative AI and computer vision to close the tele-rehabilitation loop. Our framework consists of four specialized micro-agents: a Clinical Extraction Agent that parses unstructured medical notes into kinematic constraints; a Video Synthesis Agent that utilizes foundational video generation models to create personalized, patient-specific exercise videos; a Vision Processing Agent for real-time pose estimation; and a Diagnostic Feedback Agent that issues corrective instructions. We present the system architecture, detail the prototype pipeline using Large Language Models and MediaPipe, and outline our clinical evaluation plan. This work demonstrates the feasibility of combining generative media with agentic autonomous decision-making to scale personalized patient care safely and effectively.
+
+由于缺乏个性化监督和动态反馈，家庭物理治疗的依从性仍然非常低。现有的数字健康解决方案依赖于静态、预先录制的视频库或通用 3D 化身，而无法考虑患者的具体损伤限制或家庭环境。在本文中，我们提出了一种新颖的多智能体系统（MAS）架构，该架构利用生成式人工智能和计算机视觉来闭合远程康复循环。我们的框架由四个专门的微代理组成：临床提取代理，将非结构化医疗记录解析为运动学约束；视频合成代理，利用基础视频生成模型来创建个性化、针对患者的运动视频；用于实时姿态估计的视觉处理代理；以及发出纠正指令的诊断反馈代理。我们展示了系统架构，详细介绍了使用大型语言模型和 MediaPipe 的原型管道，并概述了我们的临床评估计划。这项工作证明了将生成媒体与代理自主决策相结合以安全有效地扩展个性化患者护理的可行性。
+
+</details>
+
+---
+
+## 14. AGNT2: Autonomous Agent Economies on Interaction-Optimized Layer 2 Infrastructure / AGNT2：交互优化的第 2 层基础设施上的自治代理经济
+
+**Date**: 2026-04-22 | **arXiv**: [2604.21129v1](http://arxiv.org/abs/2604.21129v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21129v1)
+
+**Categories**: cs.MA, cs.AI, cs.DC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current blockchain Layer 2 solutions, including Optimism, Arbitrum, zkSync, and their derivatives, optimize for human-initiated financial transactions. Autonomous AI agents instead generate high-frequency, semantically rich service invocations among mutually untrusting principals. Existing chains treat those interactions as generic calldata, forcing identity, escrow, dependency ordering, and session state to be encoded above the execution layer at the wrong cost point. We present AGNT2, a three-tier stack purpose-built for agent and microservice coordination on-chain. AGNT2 combines: (1) a sidecar deployment pattern that turns any Docker container into an on-chain agent without application-code modification; (2) Layer Top P2P state channels for established bilateral pairs (<100 ms, rough design target 1K-5K TPS per pair, 10M+ aggregate TPS design envelope under endpoint-resource limits), Layer Core as a dependency-aware sequenced rollup for first-contact and multi-party interactions (500 ms-2 s, 300K-500K TPS design target), and Layer Root settlement with computational fraud proofs anchored to any EVM L1; and (3) an agent-native execution environment plus interaction trie that make service invocation, identity, reputation, capabilities, and session context first-class protocol objects. This paper focuses on the execution-layer systems problem: sequencing, state, settlement, and the data-availability (DA) bandwidth gap that bounds all three. Simulation and analytical modeling support the architecture, and prototype measurements validate selected components, but no end-to-end Layer Core implementation exists yet. Practical deployment is currently constrained to roughly 10K-100K TPS by DA throughput, leaving a ~100x gap at the target ceiling. AGNT2 argues that the agent economy requires a dedicated execution layer rather than a general-purpose chain repurposed for agents.
+
+当前的区块链第 2 层解决方案，包括 Optimism、Arbitrum、zkSync 及其衍生品，针对人类发起的金融交易进行了优化。相反，自主人工智能代理在相互不信任的主体之间生成高频、语义丰富的服务调用。现有链将这些交互视为通用调用数据，迫使身份、托管、依赖顺序和会话状态以错误的成本点在执行层之上进行编码。我们推出 AGNT2，这是一个专为链上代理和微服务协调而构建的三层堆栈。 AGNT2 结合了：（1）sidecar 部署模式，无需修改应用程序代码，即可将任何 Docker 容器转变为链上代理； (2) 用于建立双边对的 Layer Top P2P 状态通道（<100 ms，粗略设计目标每对 1K-5K TPS，端点资源限制下 10M+ 聚合 TPS 设计范围），Layer Core 作为首次接触和多方交互的依赖感知有序汇总（500 ms-2 s，300K-500K TPS 设计目标），以及锚定到任何 EVM 的计算欺诈证明的 Layer Root 结算L1； (3) 代理本机执行环境加上交互 trie，使服务调用、身份、信誉、功能和会话上下文成为一流的协议对象。本文重点讨论执行层系统问题：排序、状态、结算以及限制这三者的数据可用性 (DA) 带宽差距。仿真和分析建模支持该架构，原型测量验证所选组件，但尚不存在端到端的层核心实现。目前，实际部署的 DA 吞吐量被限制在大约 10K-100K TPS，与目标上限还有大约 100 倍的差距。 AGNT2 认为，代理经济需要专用的执行层，而不是为代理重新设计的通用链。
+
+</details>
+
+---
+
+## 15. Breaking MCP with Function Hijacking Attacks: Novel Threats for Function Calling and Agentic Models / 通过函数劫持攻击破坏 MCP：函数调用和代理模型的新威胁
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20994v1](http://arxiv.org/abs/2604.20994v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20994v1)
+
+**Categories**: cs.CR, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The growth of agentic AI has drawn significant attention to function calling Large Language Models (LLMs), which are designed to extend the capabilities of AI-powered system by invoking external functions. Injection and jailbreaking attacks have been extensively explored to showcase the vulnerabilities of LLMs to user prompt manipulation. The expanded capabilities of agentic models introduce further vulnerabilities via their function calling interface. Recent work in LLM security showed that function calling can be abused, leading to data tampering and theft, causing disruptive behavior such as endless loops, or causing LLMs to produce harmful content in the style of jailbreaking attacks. This paper introduces a novel function hijacking attack (FHA) that manipulates the tool selection process of agentic models to force the invocation of a specific, attacker-chosen function. While existing attacks focus on semantic preference of the model for function-calling tasks, we show that FHA is largely agnostic to the context semantics and robust to the function sets, making it applicable across diverse domains. We further demonstrate that FHA can be trained to produce universal adversarial functions, enabling a single attacked function to hijack tool selection across multiple queries and payload configurations. We conducted experiments on 5 different models, including instructed and reasoning variants, reaching 70% to 100% ASR over the established BFCL dataset. Our findings further demonstrate the need for strong guardrails and security modules for agentic systems.
+
+代理人工智能的发展引起了人们对函数调用大型语言模型（LLM）的极大关注，该模型旨在通过调用外部函数来扩展人工智能驱动的系统的功能。注入和越狱攻击已被广泛探索，以展示 LLM 对用户提示操纵的漏洞。代理模型的扩展功能通过其函数调用接口引入了更多漏洞。最近 LLM 安全方面的工作表明，函数调用可能会被滥用，导致数据篡改和盗窃，造成无限循环等破坏性行为，或导致 LLM 产生越狱攻击形式的有害内容。本文介绍了一种新颖的函数劫持攻击（FHA），它操纵代理模型的工具选择过程来强制调用攻击者选择的特定函数。虽然现有的攻击侧重于函数调用任务模型的语义偏好，但我们表明 FHA 在很大程度上与上下文语义无关，并且对函数集具有鲁棒性，使其适用于不同的领域。我们进一步证明，FHA 可以被训练来产生通用的对抗功能，从而使单个受攻击的功能能够跨多个查询和有效负载配置劫持工具选择。我们对 5 种不同的模型进行了实验，包括指令模型和推理模型，在已建立的 BFCL 数据集上达到了 70% 到 100% 的 ASR。我们的研究结果进一步证明了代理系统需要强大的护栏和安全模块。
+
+</details>
+
+---
+
+## 16. Diagnosing CFG Interpretation in LLMs / 法学硕士中 CFG 解释的诊断
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20811v1](http://arxiv.org/abs/2604.20811v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20811v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As LLMs are increasingly integrated into agentic systems, they must adhere to dynamically defined, machine-interpretable interfaces. We evaluate LLMs as in-context interpreters: given a novel context-free grammar, can LLMs generate syntactically valid, behaviorally functional, and semantically faithful outputs? We introduce RoboGrid, a framework that disentangles syntax, behavior, and semantics through controlled stress-tests of recursion depth, expression complexity, and surface styles. Our experiments reveal a consistent hierarchical degradation: LLMs often maintain surface syntax but fail to preserve structural semantics. Despite the partial mitigation provided by CoT reasoning, performance collapses under structural density, specifically deep recursion and high branching, with semantic alignment vanishing at extreme depths. Furthermore, "Alien" lexicons reveal that LLMs rely on semantic bootstrapping from keywords rather than pure symbolic induction. These findings pinpoint critical gaps in hierarchical state-tracking required for reliable, grammar-agnostic agents.
+
+随着法学硕士越来越多地集成到代理系统中，它们必须遵守动态定义的、机器可解释的接口。我们将法学硕士作为上下文解释器进行评估：给定一种新颖的上下文无关语法，法学硕士能否生成句法有效、行为功能和语义忠实的输出？我们引入了 RoboGrid，这是一个通过对递归深度、表达式复杂性和表面样式进行受控压力测试来理清语法、行为和语义的框架。我们的实验揭示了一致的层次退化：法学硕士通常保持表面语法，但无法保留结构语义。尽管 CoT 推理提供了部分缓解，但在结构密度下，特别是深度递归和高分支，性能崩溃，语义对齐在极端深度消失。此外，“外星人”词典表明法学硕士依赖于关键字的语义引导，而不是纯粹的符号归纳。这些发现指出了可靠的、与语法无关的代理所需的分层状态跟踪中的关键差距。
+
+</details>
+
+---
+
+## 17. Supplement Generation Training for Enhancing Agentic Task Performance / 增强代理任务绩效的补充剂生成培训
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20727v1](http://arxiv.org/abs/2604.20727v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20727v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Training large foundation models for agentic tasks is increasingly impractical due to the high computational costs, long iteration cycles, and rapid obsolescence as new models are continuously released. Instead of post-training massive models for every new task or domain, we propose Supplement Generation Training (SGT), a more efficient and sustainable strategy. SGT trains a smaller LLM to generate useful supplemental text that, when appended to the original input, helps the larger LLM solve the task more effectively. These lightweight models can dynamically adapt supplements to task requirements, improving performance without modifying the underlying large models. This approach decouples task-specific optimization from large foundation models and enables more flexible, cost-effective deployment of LLM-powered agents in real-world applications.
+
+由于计算成本高、迭代周期长以及随着新模型的不断发布而快速过时，为代理任务训练大型基础模型变得越来越不切实际。我们提出了补充生成训练（SGT），一种更高效、更可持续的策略，而不是针对每个新任务或领域对大规模模型进行后期训练。 SGT 训练较小的 LLM 来生成有用的补充文本，当附加到原始输入时，可以帮助较大的 LLM 更有效地解决任务。这些轻量级模型可以根据任务要求动态调整补充，从而在不修改底层大型模型的情况下提高性能。这种方法将特定于任务的优化与大型基础模型分离，并能够在实际应用中更灵活、更经济高效地部署由 LLM 驱动的代理。
+
+</details>
+
+---
+
+## 18. Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization / 学习进化：通过文本参数图优化的多智能体系统自我改进框架
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20714v1](http://arxiv.org/abs/2604.20714v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20714v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Designing and optimizing multi-agent systems (MAS) is a complex, labor-intensive process of "Agent Engineering." Existing automatic optimization methods, primarily focused on flat prompt tuning, lack the structural awareness to debug the intricate web of interactions in MAS. More critically, these optimizers are static; they do not learn from experience to improve their own optimization strategies. To address these gaps, we introduce Textual Parameter Graph Optimization (TPGO), a framework that enables a multi-agent system to learn to evolve. TPGO first models the MAS as a Textual Parameter Graph (TPG), where agents, tools, and workflows are modular, optimizable nodes. To guide evolution, we derive "textual gradients," structured natural language feedback from execution traces, to pinpoint failures and suggest granular modifications. The core of our framework is Group Relative Agent Optimization (GRAO), a novel meta-learning strategy that learns from historical optimization experiences. By analyzing past successes and failures, GRAO becomes progressively better at proposing effective updates, allowing the system to learn how to optimize itself. Extensive experiments on complex benchmarks like GAIA and MCP-Universe show that TPGO significantly enhances the performance of state-of-the-art agent frameworks, achieving higher success rates through automated, self-improving optimization.
+
+设计和优化多代理系统 (MAS) 是一个复杂的、劳动密集型的“代理工程”过程。现有的自动优化方法主要集中于平面提示调整，缺乏结构意识来调试 MAS 中复杂的交互网络。更关键的是，这些优化器是静态的；他们没有从经验中学习来改进自己的优化策略。为了解决这些差距，我们引入了文本参数图优化（TPGO），这是一个使多智能体系统能够学习进化的框架。 TPGO 首先将 MAS 建模为文本参数图 (TPG)，其中代理、工具和工作流程是模块化、可优化的节点。为了指导进化，我们导出“文本梯度”，即从执行轨迹中获得的结构化自然语言反馈，以查明故障并提出粒度修改建议。我们框架的核心是组相对代理优化（GRAO），这是一种新颖的元学习策略，可以从历史优化经验中学习。通过分析过去的成功和失败，GRAO 越来越善于提出有效的更新，使系统能够学习如何优化自身。对 GAIA 和 MCP-Universe 等复杂基准的大量实验表明，TPGO 显着增强了最先进代理框架的性能，通过自动化、自我改进的优化实现了更高的成功率。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-23 (39 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-04-23
