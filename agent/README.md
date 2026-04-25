@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-25](papers/2026-04-25.md) - 3 papers
 - [2026-04-24](papers/2026-04-24.md) - 18 papers
 - [2026-04-23](papers/2026-04-23.md) - 39 papers
 - [2026-04-22](papers/2026-04-22.md) - 34 papers
@@ -61,6 +62,66 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-25 (3 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-04-25
+
+**Paper Count**: 3
+
+---
+
+## 1. From Research Question to Scientific Workflow: Leveraging Agentic AI for Science Automation / 从研究问题到科学工作流程：利用代理人工智能实现科学自动化
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21910v1](http://arxiv.org/abs/2604.21910v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21910v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scientific workflow systems automate execution -- scheduling, fault tolerance, resource management -- but not the semantic translation that precedes it. Scientists still manually convert research questions into workflow specifications, a task requiring both domain knowledge and infrastructure expertise. We propose an agentic architecture that closes this gap through three layers: an LLM interprets natural language into structured intents (semantic layer); validated generators produce reproducible workflow DAGs (deterministic layer); and domain experts author ``Skills'': markdown documents encoding vocabulary mappings, parameter constraints, and optimization strategies (knowledge layer). This decomposition confines LLM non-determinism to intent extraction: identical intents always yield identical workflows. We implement and evaluate the architecture on the 1000 Genomes population genetics workflow and Hyperflow WMS running on Kubernetes. In an ablation study on 150 queries, Skills raise full-match intent accuracy from 44% to 83%; skill-driven deferred workflow generation reduces data transfer by 92\%; and the end-to-end pipeline completes queries on Kubernetes with LLM overhead below 15 seconds and cost under $0.001 per query.
+
+科学工作流程系统自动执行——调度、容错、资源管理——但不执行其之前的语义翻译。科学家们仍然手动将研究问题转换为工作流程规范，这项任务需要领域知识和基础设施专业知识。我们提出了一种代理架构，通过三层来缩小这一差距：法学硕士将自然语言解释为结构化意图（语义层）；经过验证的生成器可生成可重复的工作流程 DAG（确定性层）；领域专家撰写了“技能”：编码词汇映射、参数约束和优化策略（知识层）的 Markdown 文档。这种分解将 LLM 的非确定性限制在意图提取上：相同的意图总是会产生相同的工作流程。我们在 Kubernetes 上运行的 1000 Genomes 群体遗传学工作流程和 Hyperflow WMS 上实现并评估了该架构。在针对 150 个查询的消融研究中，Skills 将全匹配意图准确率从 44% 提高到 83%；技能驱动的延迟工作流程生成将数据传输减少了 92%；端到端管道在 Kubernetes 上完成查询，LLM 开销低于 15 秒，每个查询的成本低于 0.001 美元。
+
+</details>
+
+---
+
+## 2. Nemobot Games: Crafting Strategic AI Gaming Agents for Interactive Learning with Large Language Models / Nemobot Games：利用大型语言模型打造战略性 AI 游戏代理以实现交互式学习
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21896v1](http://arxiv.org/abs/2604.21896v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21896v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper introduces a new paradigm for AI game programming, leveraging large language models (LLMs) to extend and operationalize Claude Shannon's taxonomy of game-playing machines. Central to this paradigm is Nemobot, an interactive agentic engineering environment that enables users to create, customize, and deploy LLM-powered game agents while actively engaging with AI-driven strategies. The LLM-based chatbot, integrated within Nemobot, demonstrates its capabilities across four distinct classes of games. For dictionary-based games, it compresses state-action mappings into efficient, generalized models for rapid adaptability. In rigorously solvable games, it employs mathematical reasoning to compute optimal strategies and generates human-readable explanations for its decisions. For heuristic-based games, it synthesizes strategies by combining insights from classical minimax algorithms (see, e.g., shannon1950chess) with crowd-sourced data. Finally, in learning-based games, it utilizes reinforcement learning with human feedback and self-critique to iteratively refine strategies through trial-and-error and imitation learning. Nemobot amplifies this framework by offering a programmable environment where users can experiment with tool-augmented generation and fine-tuning of strategic game agents. From strategic games to role-playing games, Nemobot demonstrates how AI agents can achieve a form of self-programming by integrating crowdsourced learning and human creativity to iteratively refine their own logic. This represents a step toward the long-term goal of self-programming AI.
+
+本文介绍了人工智能游戏编程的新范式，利用大型语言模型 (LLM) 来扩展和操作克劳德·香农的游戏机分类法。这一范例的核心是 Nemobot，这是一种交互式代理工程环境，使用户能够创建、定制和部署由 LLM 驱动的游戏代理，同时积极参与人工智能驱动的策略。基于法学硕士的聊天机器人集成在 Nemobot 中，展示了其在四种不同类别游戏中的功能。对于基于字典的游戏，它将状态-动作映射压缩为高效、通用的模型，以实现快速适应性。在严格可解的游戏中，它采用数学推理来计算最佳策略并为其决策生成人类可读的解释。对于基于启发式的游戏，它通过将经典极小极大算法（参见例如 shannon1950chess）的见解与众包数据相结合来综合策略。最后，在基于学习的游戏中，它利用带有人类反馈和自我批评的强化学习，通过试错和模仿学习迭代地完善策略。 Nemobot 通过提供一个可编程环境来扩展该框架，用户可以在其中尝试工具增强的生成和策略游戏代理的微调。从战略游戏到角色扮演游戏，Nemobot 展示了人工智能代理如何通过整合众包学习和人类创造力来迭代完善自身逻辑，从而实现某种形式的自编程。这代表着朝着自编程人工智能的长期目标迈出了一步。
+
+</details>
+
+---
+
+## 3. Task-Driven Co-Design of Heterogeneous Multi-Robot Systems / 异构多机器人系统的任务驱动协同设计
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21894v1](http://arxiv.org/abs/2604.21894v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21894v1)
+
+**Categories**: cs.RO, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Designing multi-agent robotic systems requires reasoning across tightly coupled decisions spanning heterogeneous domains, including robot design, fleet composition, and planning. Much effort has been devoted to isolated improvements in these domains, whereas system-level co-design considering trade-offs and task requirements remains underexplored. In this work, we present a formal and compositional framework for the task-driven co-design of heterogeneous multi-robot systems. Building on a monotone co-design theory, we introduce general abstractions of robots, fleets, planners, executors, and evaluators as interconnected design problems with well-defined interfaces that are agnostic to both implementations and tasks. This structure enables efficient joint optimization of robot design, fleet composition, and planning under task-specific performance constraints. A series of case studies demonstrates the capabilities of the framework. Various component models can be seamlessly incorporated, including new robot types, task profiles, and probabilistic sensing objectives, while non-obvious design alternatives are systematically uncovered with optimality guarantees. The results highlight the flexibility, scalability, and interpretability of the proposed approach, and illustrate how formal co-design enables principled reasoning about complex heterogeneous multi-robot systems.
+
+设计多智能体机器人系统需要对跨异构领域的紧密耦合决策进行推理，包括机器人设计、车队组成和规划。人们在这些领域投入了大量的努力来进行孤立的改进，而考虑权衡和任务要求的系统级协同设计仍然没有得到充分探索。在这项工作中，我们提出了一个用于异构多​​机器人系统任务驱动协同设计的正式组合框架。基于单调协同设计理论，我们引入了机器人、车队、规划器、执行器和评估器的一般抽象，作为具有明确定义的接口的互连设计问题，这些接口对实现和任务都是不可知的。这种结构可以在特定任务的性能约束下实现机器人设计、机群组成和规划的高效联合优化。一系列案例研究展示了该框架的功能。各种组件模型可以无缝整合，包括新的机器人类型、任务配置文件和概率传感目标，同时系统地发现非显而易见的设计替代方案并保证最优性。结果突出了所提出方法的灵活性、可扩展性和可解释性，并说明了形式化协同设计如何实现复杂异构多机器人系统的原则性推理。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-24 (18 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-04-24
