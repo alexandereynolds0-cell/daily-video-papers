@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-26](papers/2026-04-26.md) - 4 papers
 - [2026-04-24](papers/2026-04-24.md) - 16 papers
 - [2026-04-23](papers/2026-04-23.md) - 16 papers
 - [2026-04-22](papers/2026-04-22.md) - 19 papers
@@ -65,6 +66,82 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-26 (4 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-26
+
+**Paper Count**: 4
+
+---
+
+## 1. Seeing Fast and Slow: Learning the Flow of Time in Videos / 看快与慢：学习视频中的时间流动
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21931v1](http://arxiv.org/abs/2604.21931v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21931v1)
+
+**Categories**: cs.CV, cs.AI, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+How can we tell whether a video has been sped up or slowed down? How can we generate videos at different speeds? Although videos have been central to modern computer vision research, little attention has been paid to perceiving and controlling the passage of time. In this paper, we study time as a learnable visual concept and develop models for reasoning about and manipulating the flow of time in videos. We first exploit the multimodal cues and temporal structure naturally present in videos to learn, in a self-supervised manner, to detect speed changes and estimate playback speed. We then show that these learned temporal reasoning models enable us to curate the largest slow-motion video dataset to date from noisy in-the-wild sources. Such slow-motion footage, typically filmed by high-speed cameras, contains substantially richer temporal detail than standard videos. Using this data, we further develop models capable of temporal control, including speed-conditioned video generation, which produces motion at specified playback speed, and temporal super-resolution, which tranforms low-FPS, blurry videos into high-FPS sequences with fine-grained temporal details. Our findings highlight time as a manipulable, perceptual dimension in video learning, opening doors to temporally controllable video generation, temporal forensics detection, and potentially richer world-models that understand how events unfold over time.
+
+我们如何判断视频是否被加速或减慢？我们如何生成不同速度的视频？尽管视频一直是现代计算机视觉研究的核心，但人们很少关注感知和控制时间的流逝。在本文中，我们将时间作为一种可学习的视觉概念进行研究，并开发用于推理和操纵视频中时间流动的模型。我们首先利用视频中自然存在的多模态线索和时间结构，以自我监督的方式学习，检测速度变化并估计播放速度。然后，我们表明，这些学习到的时间推理模型使我们能够从嘈杂的野外来源中策划迄今为止最大的慢动作视频数据集。这种慢动作镜头通常由高速摄像机拍摄，包含比标准视频更丰富的时间细节。利用这些数据，我们进一步开发了能够进行时间控制的模型，包括速度调节视频生成（以指定的播放速度产生运动）和时间超分辨率（将低 FPS、模糊视频转换为具有细粒度时间细节的高 FPS 序列）。我们的研究结果强调了时间作为视频学习中可操纵的感知维度，为时间可控的视频生成、时间取证检测以及了解事件如何随时间展开的潜在更丰富的世界模型打开了大门。
+
+</details>
+
+---
+
+## 2. VistaBot: View-Robust Robot Manipulation via Spatiotemporal-Aware View Synthesis / VistaBot：通过时空感知视图合成进行视图鲁棒机器人操作
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21914v1](http://arxiv.org/abs/2604.21914v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21914v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recently, end-to-end robotic manipulation models have gained significant attention for their generalizability and scalability. However, they often suffer from limited robustness to camera viewpoint changes when training with a fixed camera. In this paper, we propose VistaBot, a novel framework that integrates feed-forward geometric models with video diffusion models to achieve view-robust closed-loop manipulation without requiring camera calibration at test time. Our approach consists of three key components: 4D geometry estimation, view synthesis latent extraction, and latent action learning. VistaBot is integrated into both action-chunking (ACT) and diffusion-based ($π_0$) policies and evaluated across simulation and real-world tasks. We further introduce the View Generalization Score (VGS) as a new metric for comprehensive evaluation of cross-view generalization. Results show that VistaBot improves VGS by 2.79$\times$ and 2.63$\times$ over ACT and $π_0$, respectively, while also achieving high-quality novel view synthesis. Our contributions include a geometry-aware synthesis model, a latent action planner, a new benchmark metric, and extensive validation across diverse environments. The code and models will be made publicly available.
+
+最近，端到端机器人操作模型因其通用性和可扩展性而受到广泛关注。然而，在使用固定相机进行训练时，它们通常对相机视点变化的鲁棒性有限。在本文中，我们提出了 VistaBot，这是一种新颖的框架，它将前馈几何模型与视频扩散模型相结合，以实现视图稳健的闭环操作，而无需在测试时校准相机。我们的方法由三个关键部分组成：4D 几何估计、视图合成潜在提取和潜在动作学习。 VistaBot 集成到动作分块 (ACT) 和基于扩散 ($π_0$) 的策略中，并在模拟和现实世界任务中进行评估。我们进一步引入视图泛化分数（VGS）作为综合评估跨视图泛化的新指标。结果表明，VistaBot 比 ACT 和 $π_0$ 分别将 VGS 提高了 2.79$\times$ 和 2.63$\times$，同时还实现了高质量的新颖视图合成。我们的贡献包括几何感知综合模型、潜在行动规划器、新的基准指标以及跨不同环境的广泛验证。代码和模型将公开。
+
+</details>
+
+---
+
+## 3. A Scale-Adaptive Framework for Joint Spatiotemporal Super-Resolution with Diffusion Models / 具有扩散模型的联合时空超分辨率的尺度自适应框架
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21903v1](http://arxiv.org/abs/2604.21903v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21903v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Deep-learning video super-resolution has progressed rapidly, but climate applications typically super-resolve (increase resolution) either space or time, and joint spatiotemporal models are often designed for a single pair of super-resolution (SR) factors (upscaling spatial and temporal ratio between the low-resolution sequence and the high-resolution sequence), limiting transfer across spatial resolutions and temporal cadences (frame rates). We present a scale-adaptive framework that reuses the same architecture across factors by decomposing spatiotemporal SR into a deterministic prediction of the conditional mean, with attention, and a residual conditional diffusion model, with an optional mass-conservation (same precipitation amount in inputs and outputs) transform to preserve aggregated totals. Assuming that larger SR factors primarily increase underdetermination (hence required context and residual uncertainty) rather than changing the conditional-mean structure, scale adaptivity is achieved by retuning three factor-dependent hyperparameters before retraining: the diffusion noise schedule amplitude beta (larger for larger factors to increase diversity), the temporal context length L (set to maintain comparable attention horizons across cadences) and optionally a third, the mass-conservation function f (tapered to limit the amplification of extremes for large factors). Demonstrated on reanalysis precipitation over France (Comephore), the same architecture spans super-resolution factors from 1 to 25 in space and 1 to 6 in time, yielding a reusable architecture and tuning recipe for joint spatiotemporal super-resolution across scales.
+
+深度学习视频超分辨率发展迅速，但气候应用通常在空间或时间上进行超分辨率（提高分辨率），而联合时空模型通常是针对一对超分辨率（SR）因素（放大低分辨率序列和高分辨率序列之间的空间和时间比率）而设计的，限制了空间分辨率和时间节奏（帧速率）之间的传输。我们提出了一个尺度自适应框架，通过将时空 SR 分解为条件均值的确定性预测（注意）和残差条件扩散模型，通过可选的质量守恒（输入和输出中的相同降水量）变换来保留汇总总量，跨因素重用相同的架构。假设较大的 SR 因子主要增加不确定性（因此需要上下文和剩余不确定性），而不是改变条件均值结构，则通过在重新训练之前重新调整三个与因子相关的超参数来实现尺度适应性：扩散噪声计划幅度 beta（较大的因子越大以增加多样性）、时间上下文长度 L（设置为跨节奏保持可比较的注意力范围）以及可选的第三个质量守恒函数 f（逐渐减小以限制大的极端值的放大）。因素）。在法国 (Comephore) 的再分析降水中得到证明，相同的架构在空间上跨越 1 到 25 个超分辨率因子，在时间上跨越 1 到 6 个超分辨率因子，从而产生了可重复使用的架构和跨尺度联合时空超分辨率的调整方法。
+
+</details>
+
+---
+
+## 4. Grounding Video Reasoning in Physical Signals / 将视频推理融入物理信号中
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21873v1](http://arxiv.org/abs/2604.21873v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21873v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Physical video understanding requires more than naming an event correctly. A model can answer a question about pouring, sliding, or collision from textual regularities while still failing to localize the event in time or space. We introduce a grounded benchmark for physical video understanding that extends the what--when--where evaluation structure of V-STaR to four video sources, six physics domains, three prompt families (physics, vstar_like, and neutral_rstr), and four input conditions (original, shuffled, ablated, and frame-masked). The benchmark contains 1,560 base video clips from SSV2, YouCook2, HoloAssist, and Roundabout-TAU. Each clip is first converted into a shared grounded event record, and the three query families are derived from that record. Temporal and spatial targets are shared across prompt families, while the non-physics families use deterministic family-appropriate semantic a_what targets derived from the same record. Across models and prompt families, physics remains the strongest regime overall, vstar_like is the clearest non-physics semantic comparison, and neutral_rstr behaves as a harder templated control. Prompt-family robustness is selective rather than universal, perturbation gains cluster in weak original cases, and spatial grounding is the weakest across settings. These results suggest that video Q&A reasoning benchmarks shall report physically grounded, prompt-aware, and perturbation-aware diagnostics alongside aggregate accuracy.
+
+物理视频理解需要的不仅仅是正确命名事件。模型可以根据文本规律回答有关倾倒、滑动或碰撞的问题，但仍然无法在时间或空间上定位事件。我们引入了一个用于物理视频理解的基础基准，它将 V-STaR 的“何时-何地”评估结构扩展到四个视频源、六个物理域、三个提示族（物理、vstar_like 和中性_rstr）和四个输入条件（原始、混洗、消融和帧屏蔽）。该基准测试包含来自 SSV2、YouCook2、HoloAssist 和 Roundabout-TAU 的 1,560 个基本视频剪辑。每个剪辑首先被转换为共享的接地事件记录，并且三个查询系列都从该记录派生。时间和空间目标在提示族之间共享，而非物理族使用从同一记录派生的确定性族适当的语义 a_what 目标。在模型和提示系列中，物理仍然是整体上最强的机制，vstar_like是最清晰的非物理语义比较，而neutral_rstr则表现为更难的模板化控制。即时家庭稳健性是选择性的而不是普遍的，扰动增益在弱原始情况下聚集，并且空间接地在所有设置中是最弱的。这些结果表明，视频问答推理基准应报告物理基础、提示感知和扰动感知诊断以及总体准确性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-24 (16 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-24
