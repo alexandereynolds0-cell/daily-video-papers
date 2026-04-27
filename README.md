@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-27](papers/2026-04-27.md) - 4 papers
 - [2026-04-26](papers/2026-04-26.md) - 4 papers
 - [2026-04-24](papers/2026-04-24.md) - 16 papers
 - [2026-04-23](papers/2026-04-23.md) - 16 papers
@@ -66,6 +67,84 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-27 (4 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-27
+
+**Paper Count**: 4
+
+---
+
+## 1. Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond / 主体世界建模：基础、能力、法则及其他
+
+**Date**: 2026-04-24 | **arXiv**: [2604.22748v1](http://arxiv.org/abs/2604.22748v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.22748v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As AI systems move from generating text to accomplishing goals through sustained interaction, the ability to model environment dynamics becomes a central bottleneck. Agents that manipulate objects, navigate software, coordinate with others, or design experiments require predictive environment models, yet the term world model carries different meanings across research communities. We introduce a "levels x laws" taxonomy organized along two axes. The first defines three capability levels: L1 Predictor, which learns one-step local transition operators; L2 Simulator, which composes them into multi-step, action-conditioned rollouts that respect domain laws; and L3 Evolver, which autonomously revises its own model when predictions fail against new evidence. The second identifies four governing-law regimes: physical, digital, social, and scientific. These regimes determine what constraints a world model must satisfy and where it is most likely to fail. Using this framework, we synthesize over 400 works and summarize more than 100 representative systems spanning model-based reinforcement learning, video generation, web and GUI agents, multi-agent social simulation, and AI-driven scientific discovery. We analyze methods, failure modes, and evaluation practices across level-regime pairs, propose decision-centric evaluation principles and a minimal reproducible evaluation package, and outline architectural guidance, open problems, and governance challenges. The resulting roadmap connects previously isolated communities and charts a path from passive next-step prediction toward world models that can simulate, and ultimately reshape, the environments in which agents operate.
+
+随着人工智能系统从生成文本转向通过持续交互实现目标，对环境动态进行建模的能力成为一个中心瓶颈。操纵物体、导航软件、与他人协调或设计实验的代理需要预测环境模型，但世界模型一词在不同的研究社区中具有不同的含义。我们引入了沿两个轴组织的“级别 x 法则”分类法。第一个定义了三个能力级别：L1 Predictor，学习单步局部转换算子； L2 Simulator，将它们组合成尊重领域法则的多步骤、以动作为条件的部署； L3 Evolver，当新证据的预测失败时，它会自动修改自己的模型。第二个确定了四种管辖法律制度：物理、数字、社会和科学。这些制度决定了世界模式必须满足哪些约束以及最有可能失败的地方。使用这个框架，我们综合了 400 多个作品，总结了 100 多个代表性系统，涵盖基于模型的强化学习、视频生成、Web 和 GUI 代理、多代理社会模拟和人工智能驱动的科学发现。我们分析跨级别-制度对的方法、故障模式和评估实践，提出以决策为中心的评估原则和最小的可重复评估包，并概述架构指南、开放问题和治理挑战。由此产生的路线图连接了以前孤立的社区，并绘制了从被动的下一步预测到可以模拟并最终重塑代理运行环境的世界模型的路径。
+
+</details>
+
+---
+
+## 2. EV-CLIP: Efficient Visual Prompt Adaptation for CLIP in Few-shot Action Recognition under Visual Challenges / EV-CLIP：视觉挑战下少镜头动作识别中 CLIP 的高效视觉提示适应
+
+**Date**: 2026-04-24 | **arXiv**: [2604.22595v1](http://arxiv.org/abs/2604.22595v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.22595v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/AI-CV-Lab/EV-CLIP.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+CLIP has demonstrated strong generalization in visual domains through natural language supervision, even for video action recognition. However, most existing approaches that adapt CLIP for action recognition have primarily focused on temporal modeling, often overlooking spatial perception. In real-world scenarios, visual challenges such as low-light environments or egocentric viewpoints can severely impair spatial understanding, an essential precursor for effective temporal reasoning. To address this limitation, we propose Efficient Visual Prompting for CLIP (EV-CLIP), an efficient adaptation framework designed for few-shot video action recognition across diverse scenes and viewpoints. EV-CLIP introduces two visual prompts: mask prompts, which guide the model's attention to action-relevant regions by reweighting pixels, and context prompts, which perform lightweight temporal modeling by compressing frame-wise features into a compact representation. For a comprehensive evaluation, we curate five benchmark datasets and analyze domain shifts to quantify the influence of diverse visual and semantic factors on action recognition. Experimental results demonstrate that EV-CLIP outperforms existing parameter-efficient methods in overall performance. Moreover, its efficiency remains independent of the backbone scale, making it well-suited for deployment in real-world, resource-constrained scenarios. The code is available at https://github.com/AI-CV-Lab/EV-CLIP.
+
+CLIP 通过自然语言监督在视觉领域展示了强大的泛化能力，甚至对于视频动作识别也是如此。然而，大多数现有的采用 CLIP 进行动作识别的方法主要集中在时间建模上，往往忽视了空间感知。在现实场景中，弱光环境或以自我为中心的观点等视觉挑战可能会严重损害空间理解，而空间理解是有效时间推理的重要前提。为了解决这个限制，我们提出了 Efficient Visual Prompting for CLIP (EV-CLIP)，这是一种高效的适应框架，专为跨不同场景和视点的少镜头视频动作识别而设计。 EV-CLIP 引入了两种视觉提示：掩模提示（通过重新加权像素来引导模型对动作相关区域的注意力）和上下文提示（通过将逐帧特征压缩为紧凑表示来执行轻量级时间建模）。为了进行全面评估，我们整理了五个基准数据集并分析领域转移，以量化不同视觉和语义因素对动作识别的影响。实验结果表明，EV-CLIP 在整体性能上优于现有的参数高效方法。此外，它的效率仍然独立于主干规模，使其非常适合在现实世界、资源受限的场景中部署。代码可在 https://github.com/AI-CV-Lab/EV-CLIP 获取。
+
+</details>
+
+---
+
+## 3. FlowAnchor: Stabilizing the Editing Signal for Inversion-Free Video Editing / FlowAnchor：稳定编辑信号以实现无反转视频编辑
+
+**Date**: 2026-04-24 | **arXiv**: [2604.22586v1](http://arxiv.org/abs/2604.22586v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.22586v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We propose FlowAnchor, a training-free framework for stable and efficient inversion-free, flow-based video editing. Inversion-free editing methods have recently shown impressive efficiency and structure preservation in images by directly steering the sampling trajectory with an editing signal. However, extending this paradigm to videos remains challenging, often failing in multi-object scenes or with increased frame counts. We identify the root cause as the instability of the editing signal in high-dimensional video latent spaces, which arises from imprecise spatial localization and length-induced magnitude attenuation. To overcome this challenge, FlowAnchor explicitly anchors both where to edit and how strongly to edit. It introduces Spatial-aware Attention Refinement, which enforces consistent alignment between textual guidance and spatial regions, and Adaptive Magnitude Modulation, which adaptively preserves sufficient editing strength. Together, these mechanisms stabilize the editing signal and guide the flow-based evolution toward the desired target distribution. Extensive experiments demonstrate that FlowAnchor achieves more faithful, temporally coherent, and computationally efficient video editing across challenging multi-object and fast-motion scenarios. The project page is available at https://cuc-mipg.github.io/FlowAnchor.github.io/.
+
+我们提出了 FlowAnchor，这是一个免训练框架，用于稳定、高效、无反转、基于流的视频编辑。无反转编辑方法最近通过使用编辑信号直接控制采样轨迹，在图像中显示出令人印象深刻的效率和结构保留。然而，将这种范例扩展到视频仍然具有挑战性，在多对象场景或帧数增加的情况下通常会失败。我们确定根本原因是高维视频潜在空间中编辑信号的不稳定，这是由不精确的空间定位和长度引起的幅度衰减引起的。为了克服这一挑战，FlowAnchor 明确锚定了编辑位置和编辑强度。它引入了空间感知注意细化（它强制文本指导和空间区域之间的一致对齐）和自适应幅度调制（它自适应地保留足够的编辑强度）。这些机制共同稳定了编辑信号，并引导基于流的进化向所需的目标分布发展。大量实验表明，FlowAnchor 在具有挑战性的多对象和快速运动场景中实现了更忠实、时间连贯且计算效率更高的视频编辑。该项目页面位于 https://cuc-mipg.github.io/FlowAnchor.github.io/。
+
+</details>
+
+---
+
+## 4. Video Analysis and Generation via a Semantic Progress Function / 通过语义进展功能进行视频分析和生成
+
+**Date**: 2026-04-24 | **arXiv**: [2604.22554v1](http://arxiv.org/abs/2604.22554v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.22554v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Transformations produced by image and video generation models often evolve in a highly non-linear manner: long stretches where the content barely changes are followed by sudden, abrupt semantic jumps. To analyze and correct this behavior, we introduce a Semantic Progress Function, a one-dimensional representation that captures how the meaning of a given sequence evolves over time. For each frame, we compute distances between semantic embeddings and fit a smooth curve that reflects the cumulative semantic shift across the sequence. Departures of this curve from a straight line reveal uneven semantic pacing. Building on this insight, we propose a semantic linearization procedure that reparameterizes (or retimes) the sequence so that semantic change unfolds at a constant rate, yielding smoother and more coherent transitions. Beyond linearization, our framework provides a model-agnostic foundation for identifying temporal irregularities, comparing semantic pacing across different generators, and steering both generated and real-world video sequences toward arbitrary target pacing.
+
+图像和视频生成模型产生的转换通常以高度非线性的方式演变：内容几乎没有变化的长时间延伸，随后是突然的、突然的语义跳跃。为了分析和纠正这种行为，我们引入了语义进展函数，这是一种一维表示，可以捕获给定序列的含义如何随时间演变。对于每一帧，我们计算语义嵌入之间的距离并拟合反映整个序列的累积语义偏移的平滑曲线。这条曲线与直线的偏离揭示了语义节奏的不均匀。基于这种见解，我们提出了一种语义线性化程序，可以重新参数化（或重新定时）序列，以便语义变化以恒定的速率展开，从而产生更平滑、更连贯的过渡。除了线性化之外，我们的框架还提供了一个与模型无关的基础，用于识别时间不规则性、比较不同生成器之间的语义节奏，以及将生成的视频序列和现实世界的视频序列引导至任意目标节奏。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-26 (4 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-26
