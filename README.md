@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-28](papers/2026-04-28.md) - 16 papers
 - [2026-04-27](papers/2026-04-27.md) - 4 papers
 - [2026-04-26](papers/2026-04-26.md) - 4 papers
 - [2026-04-24](papers/2026-04-24.md) - 16 papers
@@ -67,6 +68,278 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-28 (16 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-28
+
+**Paper Count**: 16
+
+---
+
+## 1. DYMAPIA: A Multi-Domain Framework for Detecting AI-based Video Manipulation / DYMAPIA：用于检测基于 AI 的视频操纵的多域框架
+
+**Date**: 2026-04-27 | **arXiv**: [2604.24426v1](http://arxiv.org/abs/2604.24426v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.24426v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI-generated media are advancing rapidly, raising pressing concerns for content authenticity and digital trust. We introduce DYMAPIA, a multi-domain Deepfake detection framework that fuses spatial, spectral, and temporal cues to capture subtle traces of manipulation in visual data. The system builds dynamic anomaly masks by combining evidence from Fourier spectra, local texture descriptors, edge irregularities, and optical flow consistency, which highlight tampered regions with fine spatial accuracy. These masks guide DistXCNet, a lightweight classifier distilled from Xception and optimized with depthwise separable convolutions for fast, region-focused classification. This joint design achieves state-of-the-art results, with accuracy and F1-scores exceeding 99\% on FF++, Celeb-DF, and VDFD benchmarks, while keeping the model compact enough for real-time use. Beyond outperforming existing full-frame and multidomain detectors, DYMAPIA demonstrates deployment readiness for time-critical forensic tasks, including media verification, misinformation defense, and secure content filtering.
+
+人工智能生成的媒体正在迅速发展，引发了人们对内容真实性和数字信任的紧迫担忧。我们引入了 DYMAPIA，这是一个多域 Deepfake 检测框架，它融合了空间、光谱和时间线索，以捕获视觉数据中微妙的操纵痕迹。该系统通过结合傅立叶光谱、局部纹理描述符、边缘不规则性和光流一致性的证据来构建动态异常掩模，从而以精细的空间精度突出显示被篡改的区域。这些掩码指导 DistXCNet，这是一种从 Xception 中提炼出来的轻量级分类器，并通过深度可分离卷积进行优化，以实现快速、以区域为中心的分类。这种联合设计实现了最先进的结果，在 FF++、Celeb-DF 和 VDFD 基准上的准确度和 F1 分数超过 99%，同时保持模型足够紧凑以供实时使用。除了超越现有的全框架和多域探测器之外，DYMAPIA 还展示了对时间关键的取证任务的部署准备情况，包括媒体验证、错误信息防御和安全内容过滤。
+
+</details>
+
+---
+
+## 2. QEVA: A Reference-Free Evaluation Metric for Narrative Video Summarization with Multimodal Question Answering / QEVA：多模态问答叙事视频摘要的无参考评估指标
+
+**Date**: 2026-04-27 | **arXiv**: [2604.24052v1](http://arxiv.org/abs/2604.24052v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.24052v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video-to-text summarization remains underexplored in terms of comprehensive evaluation methods. Traditional n-gram overlap-based metrics and recent large language model (LLM)-based approaches depend heavily on human-written reference summaries, limiting their practicality and sensitivity to nuanced semantic aspects. In this paper, we propose QEVA, a reference-free metric evaluating candidate summaries directly against source videos through multimodal question answering. QEVA assesses summaries along three clear dimensions: Coverage, Factuality, and Chronology. We also introduce MLVU(VS)-Eval, a new annotated benchmark derived from the MLVU dataset, comprising 800 summaries generated from 200 videos using state-of-the-art video-language multimodal models. This dataset establishes a transparent and consistent framework for evaluation. Experimental results demonstrate that QEVA shows higher correlation with human judgments compared to existing approaches, as measured by Kendall's $τ_b$, $τ_c$, and Spearman's $ρ$. We hope that our benchmark and metric will facilitate meaningful progress in video-to-text summarization research and provide valuable insights for the development of future evaluation methods.
+
+视频到文本摘要在综合评估方法方面仍待探索。传统的基于 n-gram 重叠的指标和最近基于大语言模型 (LLM) 的方法严重依赖于人类编写的参考摘要，限制了它们的实用性和对细微语义方面的敏感性。在本文中，我们提出了 QEVA，这是一种无参考指标，通过多模态问答直接针对源视频评估候选摘要。 QEVA 从三个明确的维度评估摘要：覆盖范围、事实性和时间顺序。我们还引入了 MLVU(VS)-Eval，这是一种源自 MLVU 数据集的新带注释基准，包含使用最先进的视频语言多模态模型从 200 个视频生成的 800 个摘要。该数据集建立了一个透明且一致的评估框架。实验结果表明，与现有方法相比，QEVA 显示出与人类判断更高的相关性，根据 Kendall 的 $τ_b$、$τ_c$ 和 Spearman 的 $ρ$ 进行测量。我们希望我们的基准和指标将促进视频到文本摘要研究取得有意义的进展，并为未来评估方法的开发提供有价值的见解。
+
+</details>
+
+---
+
+## 3. 2nd of the 5th PVUW MeViS-Audio Track: ASR-SaSaSa2VA / 第五届PVUW MeViS-音频曲目第二名：ASR-SaSaSa2VA
+
+**Date**: 2026-04-27 | **arXiv**: [2604.23935v1](http://arxiv.org/abs/2604.23935v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.23935v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Audio-based video object segmentation aims to locate and segment objects in videos conditioned on audio cues, requiring precise understanding of both appearance and motion. Recent audio-driven video segmentation methods extend MLLMs by fusing audio and visual features for end-to-end localization. Despite their promise, these approaches are computationally intensive, struggle with aligning temporal audio cues to dynamic video content, and depend on large paired audio-video datasets. To address these challenges, we present ASR-SaSaSa2VA, a resource-efficient framework for audio-guided video segmentation. The key idea is to convert audio inputs into textual motion descriptions via automatic speech recognition (ASR) models and then leverage pre-trained text-based referring video segmentation models (e.g., SaSaSa2VA) for pixel-level predictions. To further enhance robustness, we incorporate a no-target expression detection module, implemented by a fine-tuned audio-based MLLM, which filters out audio clips that do not refer to any target object. This design allows the system to exploit strong pre-trained models while effectively handling ambiguous or irrelevant audio inputs. Our approach achieves a final score of 80.7 in the 5th PVUW Challenge (MeViS-v2-Audio track), earning the second-place ranking.
+
+基于音频的视频对象分割旨在根据音频提示定位和分割视频中的对象，需要精确理解外观和运动。最近的音频驱动视频分割方法通过融合端到端本地化的音频和视觉特征来扩展 MLLM。尽管前景广阔，但这些方法的计算量很大，难以将时间音频提示与动态视频内容对齐，并且依赖于大型配对音频-视频数据集。为了应对这些挑战，我们提出了 ASR-SaSaSa2VA，这是一种用于音频引导视频分割的资源高效框架。关键思想是通过自动语音识别 (ASR) 模型将音频输入转换为文本运动描述，然后利用预先训练的基于文本的参考视频分割模型（例如 SaSaSa2VA）进行像素级预测。为了进一步增强鲁棒性，我们引入了一个无目标表达检测模块，该模块由经过微调的基于音频的 MLLM 实现，可过滤掉不涉及任何目标对象的音频剪辑。这种设计允许系统利用强大的预训练模型，同时有效处理模糊或不相关的音频输入。我们的方法在第五届 PVUW 挑战赛（MeViS-v2-Audio 赛道）中获得了 80.7 分的最终成绩，获得了第二名。
+
+</details>
+
+---
+
+## 4. Exploring Audio Hallucination in Egocentric Video Understanding / 探索以自我为中心的视频理解中的音频幻觉
+
+**Date**: 2026-04-26 | **arXiv**: [2604.23860v1](http://arxiv.org/abs/2604.23860v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.23860v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Egocentric videos provide a distinctive setting in which sound serves as crucial cues to understand user activities and surroundings, particularly when visual information is unstable or occluded due to continuous camera movement. State-of-the-art large audio-visual language models (AV-LLMs) can generate multimodal descriptions. However, we show in this work that they are prone to audio hallucinations, often inferring sounds from visual cues that are visible but not heard. We present a systematic and automatic evaluation framework for analyzing audio hallucinations in egocentric video through a targeted question-answering (Q/A) protocol. We curate a dataset of 300 egocentric videos and design 1,000 sound-focused questions to probe model outputs. To characterize hallucinations, we propose a grounded taxonomy that distinguishes between foreground action sounds from the user activities and background ambient sounds. Our evaluation shows that advanced AV-LLMs, such as Qwen2.5 Omni, exhibit high hallucination rates, achieving only 27.3% and 39.5% accuracy on Q/As related to foreground and background sounds, respectively. With this work, we highlight the need to measure the reliability of multimodal responses, emphasizing that robust evaluation of hallucinations is essential to develop reliable AV-LLMs.
+
+以自我为中心的视频提供了一种独特的设置，其中声音作为理解用户活动和周围环境的关键线索，特别是当视觉信息由于连续摄像机移动而不稳定或被遮挡时。最先进的大型视听语言模型（AV-LLM）可以生成多模态描述。然而，我们在这项工作中表明，他们容易产生幻听，经常从可见但听不到的视觉线索中推断出声音。我们提出了一个系统的、自动的评估框架，用于通过有针对性的问答（Q/A）协议来分析以自我为中心的视频中的音频幻觉。我们整理了包含 300 个以自我为中心的视频的数据集，并设计了 1,000 个以声音为中心的问题来探究模型输出。为了表征幻觉，我们提出了一种基础分类法，可以区分用户活动中的前景动作声音和背景环境声音。我们的评估表明，先进的 AV-LLM（例如 Qwen2.5 Omni）表现出较高的幻觉率，在与前景和背景声音相关的 Q/As 方面分别仅达到 27.3% 和 39.5% 的准确度。通过这项工作，我们强调需要衡量多模式反应的可靠性，并强调对幻觉的稳健评估对于开发可靠的 AV-LLM 至关重要。
+
+</details>
+
+---
+
+## 5. Latent Inter-Frame Pruning: A Training-Free Method Bridging Traditional Video Compression and Modern Diffusion Transformers for Efficient Generation / 潜在帧间修剪：一种连接传统视频压缩和现代扩散变压器以实现高效生成的免训练方法
+
+**Date**: 2026-04-26 | **arXiv**: [2604.23858v1](http://arxiv.org/abs/2604.23858v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.23858v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation, while capable of generating realistic videos, is computationally expensive and slow, prohibiting real-time applications. In this paper, we observe that video latents encoded via an autoencoder under the Latent Diffusion Model (LDM) framework contain redundancy along the temporal axis. Analogous to how traditional video compression algorithms avoid transmitting redundant frame data, we propose the Latent Inter-frame Pruning framework to prune (skip the re-computation of) duplicated latent patches, thereby reducing computational burden and increasing throughput. However, direct pruning results in visual artifacts due to the discrepancy between full-sequence training and pruned inference. To resolve these artifacts, we propose an Attention Recovery mechanism to bridge the train-inference gap. With our proposed method, we increase video editing throughput by 1.44$\times$, achieving 12.44 FPS on an NVIDIA RTX 6000 while maintaining video quality. We hope our work inspires further research into integrating traditional video compression methods with modern video generation pipelines. This work is a preliminary work on Training-free Latent Inter-Frame Pruning with Attention Recovery.
+
+视频生成虽然能够生成逼真的视频，但计算成本昂贵且速度缓慢，阻碍了实时应用。在本文中，我们观察到在潜在扩散模型（LDM）框架下通过自动编码器编码的视频潜在信息包含沿时间轴的冗余。与传统视频压缩算法如何避免传输冗余帧数据类似，我们提出了潜在帧间修剪框架来修剪（跳过重新计算）重复的潜在补丁，从而减少计算负担并提高吞吐量。然而，由于全序列训练和修剪推理之间的差异，直接修剪会导致视觉伪影。为了解决这些问题，我们提出了一种注意力恢复机制来弥补训练与推理之间的差距。通过我们提出的方法，我们将视频编辑吞吐量提高了 1.44$\times$，在 NVIDIA RTX 6000 上实现了 12.44 FPS，同时保持了视频质量。我们希望我们的工作能够激发进一步的研究，将传统视频压缩方法与现代视频生成管道相集成。这项工作是关于带有注意力恢复的免训练潜在帧间剪枝的初步工作。
+
+</details>
+
+---
+
+## 6. MuSS: A Large-Scale Dataset and Cinematic Narrative Benchmark for Multi-Shot Subject-to-Video Generation / MuSS：用于多镜头主题视频生成的大规模数据集和电影叙事基准
+
+**Date**: 2026-04-26 | **arXiv**: [2604.23789v1](http://arxiv.org/abs/2604.23789v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.23789v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While video foundation models excel at single-shot generation, real-world cinematic storytelling inherently relies on complex multi-shot sequencing. Further progress is constrained by the absence of datasets that address three core challenges: authentic narrative logic, spatiotemporal text-video alignment conflicts, and the "copy-paste" dilemma prevalent in Subject-to-Video (S2V) generation. To bridge this gap, we introduce MuSS, a large-scale, dual-track dataset tailored for multi-shot video and S2V generation. Sourced from over 3,000 movies, MuSS explicitly supports both complex montage transitions and subject-centric narratives. To construct this dataset, we pioneer a progressive captioning pipeline that eliminates contextual conflicts by ensuring local shot-level accuracy before enforcing global narrative coherence. Crucially, we implement a cross-shot matching mechanism to fundamentally eradicate the S2V copy-paste shortcut. Alongside the dataset, we propose the Cinematic Narrative Benchmark, featuring a visual-logic-driven paradigm and a novel Anti-Copy-Paste Variance (ACP-Var) metric to rigorously assess continuous storytelling and 3D structural consistency. Extensive experiments demonstrate that while current baselines struggle with continuous narrative logic or degenerate into trivial 2D sticker generators, our MuSS-augmented model achieves state-of-the-art narrative effectiveness and cross-shot identity preservation.
+
+虽然视频基础模型擅长单镜头生成，但现实世界的电影故事讲述本质上依赖于复杂的多镜头排序。进一步的进展受到缺乏解决三个核心挑战的数据集的限制：真实的叙事逻辑、时空文本视频对齐冲突以及主题到视频（S2V）生成中普遍存在的“复制粘贴”困境。为了弥补这一差距，我们引入了 MuSS，这是一个专为多镜头视频和 S2V 生成而定制的大规模双轨数据集。 MuSS 源自 3,000 多部电影，明确支持复杂的蒙太奇过渡和以主题为中心的叙事。为了构建这个数据集，我们开创了一种渐进式字幕管道，通过在强制全局叙事连贯性之前确保局部镜头级别的准确性来消除上下文冲突。至关重要的是，我们实现了跨镜头匹配机制，从根本上消除 S2V 复制粘贴捷径。除了数据集之外，我们还提出了电影叙事基准，其特点是视觉逻辑驱动的范例和新颖的反复制粘贴方差 (ACP-Var) 指标，以严格评估连续的故事讲述和 3D 结构一致性。大量的实验表明，虽然当前的基线在连续的叙事逻辑中挣扎或退化为琐碎的 2D 贴纸生成器，但我们的 MuSS 增强模型实现了最先进的叙事有效性和交叉镜头身份保留。
+
+</details>
+
+---
+
+## 7. BVI-Mamba: Video Enhancement Using a Visual State-Space Model for Low-Light and Underwater Environments / BVI-Mamba：使用视觉状态空间模型针对弱光和水下环境进行视频增强
+
+**Date**: 2026-04-26 | **arXiv**: [2604.23655v1](http://arxiv.org/abs/2604.23655v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.23655v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/russellllaputa/BVI-Mamba.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Videos captured in low-light and underwater conditions often suffer from distortions such as noise, low contrast, color imbalance, and blur. These issues not only limit visibility but also degrade automatic tasks like detection. Post-processing is typically required but can be time-consuming. AI-based tools for video enhancement also demand significantly more computational resources compared to image-based methods. This paper introduces a novel framework, Visual Mamba, designed to reduce memory usage and computational time by leveraging the Visual State Space (VSS) model. The framework consists of two modules: (i) a feature alignment module, where spatio-temporal displacement between input frames is registered in the feature space, and (ii) an enhancement module, where noise removal and brightness adjustment are performed using a UNet-like architecture, with all convolutional layers replaced by VSS blocks. Experimental results show that the Visual Mamba technique outperforms Transformer and convolution-based models in both low-light and underwater video enhancement tasks. Code is available on line at https://github.com/russellllaputa/BVI-Mamba.
+
+在弱光和水下条件下拍摄的视频经常会出现噪点、对比度低、色彩不平衡和模糊等失真现象。这些问题不仅限制了可见性，而且还降低了检测等自动任务的性能。通常需要进行后处理，但可能非常耗时。与基于图像的方法相比，基于人工智能的视频增强工具还需要更多的计算资源。本文介绍了一种新颖的框架 Visual Mamba，旨在通过利用视觉状态空间 (VSS) 模型来减少内存使用和计算时间。该框架由两个模块组成：(i) 特征对齐模块，其中输入帧之间的时空位移在特征空间中注册；(ii) 增强模块，其中使用类似 UNet 的架构执行噪声去除和亮度调整，所有卷积层都替换为 VSS 块。实验结果表明，Visual Mamba 技术在低光和水下视频增强任务中均优于 Transformer 和基于卷积的模型。代码可在线获取：https://github.com/russellllaputa/BVI-Mamba。
+
+</details>
+
+---
+
+## 8. Talker-T2AV: Joint Talking Audio-Video Generation with Autoregressive Diffusion Modeling / Talker-T2AV：使用自回归扩散建模联合说话音频-视频生成
+
+**Date**: 2026-04-26 | **arXiv**: [2604.23586v1](http://arxiv.org/abs/2604.23586v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.23586v1)
+
+**Categories**: cs.CV, cs.CL, cs.MM, cs.SD, eess.AS
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint audio-video generation models have shown that unified generation yields stronger cross-modal coherence than cascaded approaches. However, existing models couple modalities throughout denoising via pervasive attention, treating high-level semantics and low-level details in a fully entangled manner. This is suboptimal for talking head synthesis: while audio and facial motion are semantically correlated, their low-level realizations (acoustic signals and visual textures) follow distinct rendering processes. Enforcing joint modeling across all levels causes unnecessary entanglement and reduces efficiency. We propose Talker-T2AV, an autoregressive diffusion framework where high-level cross-modal modeling occurs in a shared backbone, while low-level refinement uses modality-specific decoders. A shared autoregressive language model jointly reasons over audio and video in a unified patch-level token space. Two lightweight diffusion transformer heads decode the hidden states into frame-level audio and video latents. Experiments on talking portrait benchmarks show Talker-T2AV outperforms dual-branch baselines in lip-sync accuracy, video quality, and audio quality, achieving stronger cross-modal consistency than cascaded pipelines.
+
+联合音频-视频生成模型表明，统一生成比级联方法产生更强的跨模式一致性。然而，现有模型通过普遍关注在整个去噪过程中耦合模态，以完全纠缠的方式处理高级语义和低级细节。这对于头部说话合成来说不是最佳的：虽然音频和面部运动在语义上相关，但它们的低级实现（声学信号和视觉纹理）遵循不同的渲染过程。在所有级别上强制联合建模会导致不必要的纠缠并降低效率。我们提出了 Talker-T2AV，一种自回归扩散框架，其中高级跨模态建模发生在共享主干中，而低级细化使用模态特定的解码器。共享的自回归语言模型在统一的补丁级标记空间中对音频和视频进行联合推理。两个轻量级扩散变压器头将隐藏状态解码为帧级音频和视频潜在状态。对说话肖像基准的实验表明，Talker-T2AV 在口型同步精度、视频质量和音频质量方面优于双分支基线，实现了比级联管道更强的跨模式一致性。
+
+</details>
+
+---
+
+## 9. CineAGI: Character-Consistent Movie Creation through LLM-Orchestrated Multi-Modal Generation and Cross-Scene Integration / CineAGI：通过法学硕士精心策划的多模式生成和跨场景集成创建角色一致的电影
+
+**Date**: 2026-04-26 | **arXiv**: [2604.23579v1](http://arxiv.org/abs/2604.23579v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.23579v1)
+
+**Categories**: cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Automated movie creation requires coordinating multiple characters, modalities, and narrative elements across extended sequences -- a challenge that existing end-to-end approaches struggle to address effectively. We present \textbf{CineAGI}, a hierarchical movie generation framework that decomposes this complex task through specialized multi-agent orchestration. Our framework employs three key innovations: (1) a multi-agent narrative synthesis module where specialized LLM agents collaboratively generate comprehensive cinematic blueprints with character profiles, scene descriptions, and cross-modal specifications; (2) a decoupled character-centric pipeline that maintains identity consistency through instance-level tracking and integration while enabling flexible multi-character composition; and (3) a hierarchical audio-visual synchronization mechanism ensuring frame-level alignment of dialogue, expressions, and music. Extensive experiments demonstrate that CineAGI achieves 40\% improvement in overall consistency, 4.4\% gain in subject consistency, 5.4\% enhancement in aesthetic quality, and 28.7\% higher character consistency compared to baselines. Our work establishes a principled foundation for automated multi-scene video generation that preserves narrative coherence and character authenticity.
+
+自动化电影创作需要在扩展序列中协调多个角色、模式和叙事元素——现有的端到端方法难以有效解决这一挑战。我们提出了 \textbf{CineAGI}，一个分层电影生成框架，它通过专门的多代理编排分解这个复杂的任务。我们的框架采用了三个关键创新：（1）多代理叙事合成模块，其中专业的法学硕士代理协作生成具有角色简介、场景描述和跨模式规范的全面电影蓝图； (2) 解耦的以角色为中心的管道，通过实例级跟踪和集成来保持身份一致性，同时实现灵活的多角色组合； (3)分层视听同步机制，确保对话、表情和音乐的帧级对齐。大量实验表明，与基线相比，CineAGI 整体一致性提高了 40%，主题一致性提高了 4.4%，审美质量提高了 5.4%，角色一致性提高了 28.7%。我们的工作为自动多场景视频生成奠定了原则基础，可保持叙事连贯性和人物真实性。
+
+</details>
+
+---
+
+## 10. PhysLayer: Language-Guided Layered Animation with Depth-Aware Physics / PhysLayer：具有深度感知物理功能的语言引导分层动画
+
+**Date**: 2026-04-26 | **arXiv**: [2604.23574v1](http://arxiv.org/abs/2604.23574v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.23574v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing image-to-video generation methods often produce physically implausible motions and lack precise control over object dynamics. While prior approaches have incorporated physics simulators, they remain confined to 2D planar motions and fail to capture depth-aware spatial interactions. We introduce PhysLayer, a novel framework enabling language-guided, depth-aware layered animation of static images. PhysLayer consists of three key components: First, a language-guided scene understanding module that utilizes vision foundation models to decompose scenes into depth-based layers by analyzing object composition, material properties, and physical parameters. Second, a depth-aware layered physics simulation that extends 2D rigid-body dynamics with depth motion and perspective-consistent scaling, enabling more realistic object interactions without requiring full 3D reconstruction. Third, a physics-guided video synthesis module that integrates simulated trajectories with scene-aware relighting for temporally coherent results. Experimental results demonstrate improvements in CLIP-Similarity (+2.2\%), FID score (+9.3\%), and Motion-FID (+3\%), with human evaluation showing enhanced physical plausibility (+24\%) and text-video alignment (+35\%). Our approach provides a practical balance between physical realism and computational efficiency for controllable image animation.
+
+现有的图像到视频生成方法通常会产生物理上难以置信的运动，并且缺乏对对象动态的精确控制。虽然之前的方法已经结合了物理模拟器，但它们仍然局限于 2D 平面运动，并且无法捕获深度感知的空间交互。我们介绍 PhysLayer，这是一种新颖的框架，支持语言引导、深度感知的静态图像分层动画。 PhysLayer 由三个关键组件组成：首先，语言引导的场景理解模块，利用视觉基础模型通过分析对象组成、材料属性和物理参数将场景分解为基于深度的层。其次，深度感知分层物理模拟通过深度运动和透视一致的缩放扩展 2D 刚体动力学，从而无需完整的 3D 重建即可实现更真实的对象交互。第三，物理引导的视频合成模块将模拟轨迹与场景感知重新照明相结合，以获得时间相干的结果。实验结果表明，CLIP-相似性 (+2.2\%)、FID 分数 (+9.3\%) 和 Motion-FID (+3\%) 均得到改进，人类评估显示物理合理性 (+24\%) 和文本视频对齐 (+35\%) 得到增强。我们的方法为可控图像动画提供了物理真实性和计算效率之间的实际平衡。
+
+</details>
+
+---
+
+## 11. Emotion-Conditioned Short-Horizon Human Pose Forecasting with a Lightweight Predictive World Model / 使用轻量级预测世界模型进行情感条件短视人体姿势预测
+
+**Date**: 2026-04-26 | **arXiv**: [2604.23532v1](http://arxiv.org/abs/2604.23532v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.23532v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Short-term human pose prediction plays a crucial role in interactive systems, assistive robots, and emotion-aware human-computer interaction[1-3]. While current trajectory prediction models primarily rely on geometric motion cues, they often overlook the underlying emotional signals influencing human motion dynamics[4-5]. This paper investigates whether facial expression-derived emotion embeddings can provide auxiliary conditional signals for short-term pose prediction. To further evaluate multimodal conditionation in a recursive prediction setting, we propose a lightweight autoregressive predictive world model that performs 15-step rolling pose prediction. This framework combines pose keypoints with emotion embeddings through a learnable gating mechanism and performs autoregressive unfolding prediction using a recurrent sequence model based on a two-layer LSTM architecture. Experiments were conducted on two small-scale pose-emotion video datasets: controlled motion sequences with minimal facial expression changes and, natural emotion-driven motion sequences with considerable facial expression changes. The results show that simple multimodal fusion does not consistently improve prediction accuracy, while normalized gating fusion significantly enhances the performance of emotion-driven motion sequences. Furthermore, counterfactual perturbation experiments demonstrate that the predicted trajectory exhibits measurable sensitivity to changes in multimodal input, suggesting that facial expression embeddings act as auxiliary conditional signals rather than redundant features. In summary, these results indicate that incorporating facial expression-derived emotion embeddings into emotion-conditional short-term pose prediction based on a lightweight predictive world model architecture is a feasible approach.
+
+短期人体姿势预测在交互系统、辅助机器人和情感感知人机交互中发挥着至关重要的作用[1-3]。虽然当前的轨迹预测模型主要依赖于几何运动线索，但它们经常忽略影响人体运动动力学的潜在情感信号[4-5]。本文研究了面部表情衍生的情感嵌入是否可以为短期姿势预测提供辅助条件信号。为了进一步评估递归预测设置中的多模态条件，我们提出了一种轻量级自回归预测世界模型，该模型执行 15 步滚动姿势预测。该框架通过可学习的门控机制将姿势关键点与情感嵌入相结合，并使用基于两层 LSTM 架构的循环序列模型执行自回归展开预测。在两个小规模姿势情感视频数据集上进行了实验：具有最小面部表情变化的受控运动序列和具有相当大面部表情变化的自然情绪驱动的运动序列。结果表明，简单的多模态融合并不能始终如一地提高预测精度，而归一化门控融合可以显着增强情感驱动运动序列的性能。此外，反事实扰动实验表明，预测轨迹对多模态输入的变化表现出可测量的敏感性，这表明面部表情嵌入充当辅助条件信号而不是冗余特征。总之，这些结果表明，将面部表情衍生的情感嵌入结合到基于轻量级预测世界模型架构的情感条件短期姿势预测中是一种可行的方法。
+
+</details>
+
+---
+
+## 12. Beyond Static Collision Handling: Adaptive Semantic ID Learning for Multimodal Recommendation at Industrial Scale / 超越静态碰撞处理：工业规模多模态推荐的自适应语义 ID 学习
+
+**Date**: 2026-04-26 | **arXiv**: [2604.23522v1](http://arxiv.org/abs/2604.23522v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.23522v1)
+
+**Categories**: cs.IR, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern recommendation systems involve massive catalogs of multimodal items, where scalable item identification must balance compactness, semantic fidelity, and downstream effectiveness. Semantic IDs (SIDs) address this need by representing items as short discrete token sequences derived from multimodal signals, providing a compact interface for retrieval, ranking, and generative recommendation. However, effective SID learning is hindered by collisions, where different items are assigned identical or highly confusable codes. Existing methods mainly rely on improved quantization or fixed overlap regularization, but they do not adaptively distinguish whether an overlap should be suppressed or preserved. We propose AdaSID, an adaptive semantic ID learning framework for recommendation. AdaSID regulates SID overlaps through a two-stage process. First, it relaxes repulsion for observed overlaps when the involved items are semantically compatible, preserving admissible sharing rather than uniformly separating all collisions. Second, it allocates the remaining regulation pressure according to local collision load and training progress, strengthening control in congested regions while gradually rebalancing optimization toward recommendation alignment. This design adaptively decides which overlaps to penalize, how strongly to regulate them, and when to shift the learning focus. Extensive offline and online experiments validate AdaSID. On two public benchmarks, AdaSID improves Recall and NDCG by about 4.5% on average over strong baselines, while improving codebook utilization and SID diversity. In Kuaishou e-commerce, an online A/B test on short-video retrieval covering tens of millions of users achieves statistically significant gains, including a 0.98% GMV improvement, and industrial ranking evaluation shows consistent AUC improvements.
+
+现代推荐系统涉及大量多模式项目目录，其中可扩展的项目识别必须平衡紧凑性、语义保真度和下游有效性。语义 ID (SID) 通过将项目表示为源自多模态信号的短离散标记序列来满足这一需求，为检索、排名和生成推荐提供紧凑的界面。然而，有效的 SID 学习会受到冲突的阻碍，即不同的项目被分配相同或高度易混淆的代码。现有方法主要依赖于改进的量化或固定重叠正则化，但它们不能自适应地区分重叠是否应该被抑制或保留。我们提出了 AdaSID，一种用于推荐的自适应语义 ID 学习框架。 AdaSID 通过两阶段过程调节 SID 重叠。首先，当涉及的项目在语义上兼容时，它会放松对观察到的重叠的排斥，保留可接受的共享，而不是统一分离所有冲突。其次，根据局部碰撞载荷和训练进度分配剩余调节压力，加强对拥堵区域的控制，同时逐步重新平衡优化以实现推荐对齐。这种设计自适应地决定对哪些重叠进行惩罚、对它们进行监管的力度以及何时转移学习重点。大量的离线和在线实验验证了 AdaSID。在两个公共基准测试中，AdaSID 的召回率和 NDCG 比强基线平均提高了约 4.5%，同时提高了码本利用率和 SID 多样性。在快手电商中，覆盖千万用户的短视频检索在线A/B测试取得了统计上显着的收益，其中GMV提升了0.98%，行业排名评估显示AUC持续提升。
+
+</details>
+
+---
+
+## 13. BurstGP: Enhancing Raw Burst Image Super Resolution with Generative Priors / BurstGP：利用生成先验增强原始突发图像超分辨率
+
+**Date**: 2026-04-26 | **arXiv**: [2604.23508v1](http://arxiv.org/abs/2604.23508v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.23508v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Burst image super resolution (BISR) aims to construct a single high-resolution (HR) image by aggregating information from multiple low-resolution (LR) frames, relying on temporal redundancy and spatial coherence across the burst. While conventional methods achieve impressive results, they often struggle with complex textures and oversmoothing. Diffusion models, particularly those pretrained on high-quality data, have shown remarkable capability in generating realistic details for image and video super-resolution. However, their potential remains largely under-explored in BISR, where existing approaches typically rely on task-specific diffusion models trained from scratch and operate on single-frame reconstructions. In this work, we propose BurstGP, a novel diffusion-based solution for BISR, which leverages generative priors of recent foundation models to overcome these issues. In particular, we build a multiframe-aware diffusion model on top of a conventional BISR approach, which boosts image quality with minimal loss to fidelity. Further, we introduce (i) a novel degradation-aware conditioning mechanism, which controls synthesis of fine details based on the estimated degradation in the input, and (ii) a robust sRGB-to-lRGB inverter, enabling us to utilize generative multiframe (video) sRGB priors, while operating with raw input and lRGB output images. Empirically, we demonstrate that BurstGP outperforms the existing state of the art, both quantitatively (especially with respect to perceptual metrics, including MUSIQ and LPIPS) and qualitatively. In particular, our proposed method excels at recovering richer textures and finer structural details, highlighting the potential of video priors for BISR over traditional methods.
+
+突发图像超分辨率（BISR）旨在通过聚合来自多个低分辨率（LR）帧的信息来构建单个高分辨率（HR）图像，依赖于突发中的时间冗余和空间相干性。虽然传统方法取得了令人印象深刻的结果，但它们经常难以处理复杂的纹理和过度平滑。扩散模型，特别是那些基于高质量数据进行预训练的模型，在生成图像和视频超分辨率的真实细节方面表现出了卓越的能力。然而，它们在 BISR 中的潜力在很大程度上仍未得到充分开发，现有方法通常依赖于从头开始训练的特定任务扩散模型并在单帧重建上运行。在这项工作中，我们提出了 BurstGP，一种基于扩散的新型 BISR 解决方案，它利用最新基础模型的生成先验来克服这些问题。特别是，我们在传统 BISR 方法之上构建了多帧感知扩散模型，该模型可以在保真度损失最小的情况下提高图像质量。此外，我们引入了（i）一种新颖的退化感知调节机制，该机制根据输入中估计的退化来控制精细细节的合成，以及（ii）强大的 sRGB 到 lRGB 逆变器，使我们能够利用生成多帧（视频）sRGB 先验，同时使用原始输入和 lRGB 输出图像。根据经验，我们证明 BurstGP 在数量上（特别是在感知指标方面，包括 MUSIQ 和 LPIPS）和质量上都优于现有的技术水平。特别是，我们提出的方法擅长恢复更丰富的纹理和更精细的结构细节，凸显了 BISR 视频先验相对于传统方法的潜力。
+
+</details>
+
+---
+
+## 14. A Heterogeneous Two-Stream Framework for Video Action Recognition with Comparative Fusion Analysis / 具有比较融合分析的视频动作识别异构双流框架
+
+**Date**: 2026-04-25 | **arXiv**: [2604.23415v1](http://arxiv.org/abs/2604.23415v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.23415v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Most two-stream action recognition networks apply the same convolutional backbone to both RGB and optical flow streams, ignoring the fact that the two modalities have fundamentally different structural properties. Optical flow captures fine-grained motion patterns, while RGB frames carry rich appearance and scene context - treating them identically discards this distinction. We propose DualStreamHybrid, a heterogeneous two-stream architecture that assigns each stream a backbone suited to its input: a pretrained ViT-Tiny/16 for RGB frames, and a MobileNetV2 trained from scratch on a 20-channel stacked optical flow representation. A learned projection layer maps the two differently-sized feature vectors to a common dimensionality before fusion, enabling the two streams to interact without forcing architectural symmetry. We design five fusion strategies within a unified framework - late fusion, concatenation, cross-attention, weighted fusion, and gated fusion - and evaluate them on UCF11 (1,600 videos, 11 classes) and UCF50 (6,681 videos, 50 classes) to study how fusion behaviour scales with dataset size. On UCF11, cross-attention achieves 98.12% test accuracy, outperforming the RGB-only ViT-Tiny baseline of 95.94%, which suggests that explicit inter-modal attention is particularly effective on smaller, less complex datasets. On UCF50, weighted fusion reaches 96.86% and proves the most consistent strategy across both benchmarks. The learned stream weights reveal an interesting pattern: UCF11 sees near-equal modality contribution (RGB: 0.507, flow: 0.493), while UCF50 favours the RGB stream slightly more (RGB: 0.554, flow: 0.446) - arguably reflecting the larger and more visually diverse action space. Taken together, these results suggest that even a lightweight motion stream meaningfully complements a strong appearance encoder, and that the optimal fusion strategy depends on dataset scale.
+
+大多数双流动作识别网络将相同的卷积主干应用于 RGB 和光流流，忽略了这两种模式具有根本不同的结构特性的事实。光流捕获细粒度的运动模式，而 RGB 帧则承载丰富的外观和场景上下文 - 对它们进行相同的处理会丢弃这种区别。我们提出了 DualStreamHybrid，这是一种异构双流架构，为每个流分配一个适合其输入的主干：用于 RGB 帧的预训练 ViT-Tiny/16，以及在 20 通道堆叠光流表示上从头开始训练的 MobileNetV2。学习的投影层在融合之前将两个不同大小的特征向量映射到公共维度，使两个流能够交互而不会强制架构对称。我们在统一框架内设计了五种融合策略 - 后期融合、串联、交叉注意、加权融合和门控融合 - 并在 UCF11（1,600 个视频，11 个类别）和 UCF50（6,681 个视频，50 个类别）上对其进行评估，以研究融合行为如何随数据集大小进行扩展。在 UCF11 上，交叉注意力实现了 98.12% 的测试准确率，优于仅 RGB 的 ViT-Tiny 基线的 95.94%，这表明显式的模态间注意力在较小、不太复杂的数据集上特别有效。在 UCF50 上，加权融合达到 96.86%，并证明在两个基准测试中是最一致的策略。学习到的流权重揭示了一个有趣的模式：UCF11 看到近乎相等的模态贡献（RGB：0.507，流：0.493），而 UCF50 稍微更倾向于 RGB 流（RGB：0.554，流：0.446） - 可以说反映了更大且视觉上更多样化的动作空间。总而言之，这些结果表明，即使是轻量级运动流也能有意义地补充强大的外观编码器，并且最佳融合策略取决于数据集规模。
+
+</details>
+
+---
+
+## 15. PushupBench: Your VLM is not good at counting pushups / PushupBench：您的 VLM 不擅长计算俯卧撑次数
+
+**Date**: 2026-04-25 | **arXiv**: [2604.23407v1](http://arxiv.org/abs/2604.23407v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.23407v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/EvolvingLMMs-Lab/lmms-eval/pull/1262)
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large vision-language models (VLMs) can recognize \textit{what} happens in video but fail to count \textit{how many} times. We introduce \textbf{PushupBench}, 446 long-form clips (avg. 36.7s) for evaluating repetition counting. The best frontier model achieves 42.1\% exact accuracy; open-source 4B models score $\sim$6\%, matching supervised baselines. We show that accuracy alone misleads -- weaker models exploit the modal count rather than reason temporally. Fine-tuning on counting with 1k samples transfers to general video understanding: MVBench (+2.15), PerceptionTest (+1.88), TVBench (+4.54), suggesting counting is a proxy for broader temporal reasoning.PushupBench incorporated in \texttt{lmms-eval} (https://github.com/EvolvingLMMs-Lab/lmms-eval/pull/1262) and hosted on (pushupbench.com/)
+
+大型视觉语言模型 (VLM) 可以识别视频中发生的 \textit{什么}，但无法计算 \textit{多少} 次。我们引入 \textbf{PushupBench}，446 个长格式剪辑（平均 36.7 秒）用于评估重复计数。最佳前沿模型准确率达到42.1%；开源 4B 模型得分 $\sim$6\%，与监督基线匹配。我们表明，仅准确性会产生误导——较弱的模型利用模态计数而不是临时推理。对 1k 样本计数进行微调可转移到一般视频理解：MVBench (+2.15)、PerceptionTest (+1.88)、TVBench (+4.54)，表明计数是更广泛时间推理的代理。PushupBench 纳入 \texttt{lmms-eval} (https://github.com/EvolvingLMMs-Lab/lmms-eval/pull/1262) 并托管于（pushupbench.com/）
+
+</details>
+
+---
+
+## 16. EAD-Net: Emotion-Aware Talking Head Generation with Spatial Refinement and Temporal Coherence / EAD-Net：具有空间细化和时间连贯性的情感感知头部说话生成器
+
+**Date**: 2026-04-25 | **arXiv**: [2604.23325v1](http://arxiv.org/abs/2604.23325v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.23325v1)
+
+**Categories**: cs.CV, cs.AI, eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Emotionally talking head video generation aims to generate expressive portrait videos with accurate lip synchronization and emotional facial expressions. Current methods rely on simple emotional labels, leading to insufficient semantic information. While introducing high-level semantics enhances expressiveness, it easily causes lip-sync degradation. Furthermore, mainstream generation methods struggle to balance computational efficiency and global motion awareness in long videos and suffer from poor temporal coherence. Therefore, we propose an \textbf{E}motion-\textbf{A}ware \textbf{D}iffusion model-based \textbf{Net}work, called \textbf{EAD-Net}. We introduce SyncNet supervision and Temporal Representation Alignment (TREPA) to mitigate lip-sync degradation caused by multi-modal fusion. To model complex spatio-temporal dependencies in long video sequences, we propose a Spatio-Temporal Directional Attention (STDA) mechanism that captures global motion patterns through strip attention. Additionally, we design a Temporal Frame graph Reasoning Module (TFRM) to explicitly model temporal coherence between video frames through graph structure learning. To enhance emotional semantic control, a large language model is employed to extract textual descriptions from real videos, serving as high-level semantic guidance. Experiments on the HDTF and MEAD datasets demonstrate that our method outperforms existing methods in terms of lip-sync accuracy, temporal consistency, and emotional accuracy.
+
+情感头部视频生成旨在生成具有准确唇形同步和情感面部表情的富有表现力的肖像视频。目前的方法依赖于简单的情感标签，导致语义信息不足。引入高级语义虽然增强了表现力，但很容易导致口型同步退化。此外，主流生成方法难以平衡长视频中的计算效率和全局运动意识，并且时间相干性较差。因此，我们提出了一种基于 \textbf{E}motion-\textbf{A}ware \textbf{D}iffusion 模型的 \textbf{Net} 工作，称为 \textbf{EAD-Net}。我们引入了 SyncNet 监督和时间表示对齐（TREPA）来减轻多模态融合引起的唇形同步退化。为了对长视频序列中复杂的时空依赖性进行建模，我们提出了一种时空方向注意力（STDA）机制，该机制通过条带注意力捕获全局运动模式。此外，我们设计了一个时间帧图推理模块（TFRM），通过图结构学习显式地模拟视频帧之间的时间一致性。为了增强情感语义控制，采用大型语言模型从真实视频中提取文本描述，作为高级语义指导。 HDTF 和 MEAD 数据集上的实验表明，我们的方法在口型同步准确性、时间一致性和情感准确性方面优于现有方法。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-27 (4 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-27
