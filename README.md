@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-29](papers/2026-04-29.md) - 12 papers
 - [2026-04-28](papers/2026-04-28.md) - 16 papers
 - [2026-04-27](papers/2026-04-27.md) - 4 papers
 - [2026-04-26](papers/2026-04-26.md) - 4 papers
@@ -68,6 +69,212 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-29 (12 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-29
+
+**Paper Count**: 12
+
+---
+
+## 1. MarkIt: Training-Free Visual Markers for Precise Video Temporal Grounding / MarkIt：无需培训的视觉标记，可实现精确的视频时间接地
+
+**Date**: 2026-04-28 | **arXiv**: [2604.25886v1](http://arxiv.org/abs/2604.25886v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.25886v1)
+
+**Categories**: cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video temporal grounding (VTG) aims to localize the start and end timestamps of the event described by a given query within an untrimmed video. Despite the strong open-world video understanding and recognition ability of video language large models (Vid-LLMs), outputting precise temporal grounding information remains challenging, since explicit temporal cues are scarce in untrimmed videos, and query-relevant entities are hard to track consistently across the video timeline. In this paper, we present \MarkIt{}, a training-free framework that transforms an input video into a query-conditioned marked video, which empowers Vid-LLMs to generate more reliable temporal localization predictions. The core component of \MarkIt{} is an annotation-free query-to-mask grounding bridge (Q2M-Bridge). Given a natural-language query, it automatically derives a compact set of canonical subject tags through linguistic parsing and normalization, then maps these tags to query-conditioned instance masks using text-conditioned open-vocabulary segmentation. The bridge also embeds lightweight semantic instance markers and a persistent frame index into each frame, effectively transforming long-range temporal reasoning into explicit visual cues for Vid-LLMs. \MarkIt{} adopts an inference-time plug-and-play design, needs no modifications to Vid-LLM weights, and is fully compatible with supervised fine-tuning. Experiments conducted on multiple mainstream moment retrieval and highlight detection benchmarks demonstrate that \MarkIt {} achieves state-of-the-art results, delivering consistent temporal grounding improvements across a wide range of existing models.
+
+视频时间接地 (VTG) 旨在定位未修剪视频中给定查询所描述的事件的开始和结束时间戳。尽管视频语言大型模型（Vid-LLM）具有强大的开放世界视频理解和识别能力，但输出精确的时间基础信息仍然具有挑战性，因为在未经修剪的视频中缺乏明确的时间线索，并且很难在整个视频时间轴上一致地跟踪与查询相关的实体。在本文中，我们提出了 \MarkIt{}，这是一个免训练框架，可将输入视频转换为查询条件标记视频，使 Vid-LLM 能够生成更可靠的时间本地化预测。 \MarkIt{} 的核心组件是一个无注释的查询到掩模接地桥（Q2M-Bridge）。给定自然语言查询，它通过语言解析和标准化自动导出一组紧凑的规范主题标签，然后使用文本条件开放词汇分割将这些标签映射到查询条件实例掩码。该桥还将轻量级语义实例标记和持久帧索引嵌入到每个帧中，有效地将远程时间推理转换为 Vid-LLM 的明确视觉提示。 \MarkIt{} 采用推理时即插即用设计，无需修改 Vid-LLM 权重，并且完全兼容监督微调。在多个主流时刻检索和亮点检测基准上进行的实验表明，\MarkIt {} 实现了最先进的结果，在各种现有模型中提供了一致的时间基础改进。
+
+</details>
+
+---
+
+## 2. Action-Aware Generative Sequence Modeling for Short Video Recommendation / 用于短视频推荐的动作感知生成序列建模
+
+**Date**: 2026-04-28 | **arXiv**: [2604.25834v1](http://arxiv.org/abs/2604.25834v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.25834v1)
+
+**Categories**: cs.AI, cs.IR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+With the rapid development of the Internet, users have increasingly higher expectations for the recommendation accuracy of online content consumption platforms. However, short videos often contain diverse segments, and users may not hold the same attitude toward all of them. Traditional binary-classification recommendation models, which treat a video as a single holistic entity, face limitations in accurately capturing such nuanced preferences. Considering that user consumption is a temporal process, this paper demonstrates that the timing of user actions can represent diverse intentions through statistical analysis and examination of action patterns. Based on this insight, we propose a novel modeling paradigm: Action-Aware Generative Sequence Network (A2Gen), which refines user actions along the temporal dimension and chains them into sequences for unified processing and prediction. First, we introduce the Context-aware Attention Module (CAM) to model action sequences enriched with item-specific contextual features. Building upon this, we develop the Hierarchical Sequence Encoder (HSE) to learn temporal action patterns from users' historical actions. Finally, through leveraging CAM, we design a module for action sequence generation: the Action-seq Autoregressive Generator (AAG). Extensive offline experiments on the Kuaishou's dataset and the Tmall public dataset demonstrate the superiority of our proposed model. Furthermore, through large-scale online A/B testing deployed on Kuaishou's platform, our model achieves significant improvements over baseline methods in multi-task prediction by leveraging sequential information. Specifically, it yields increases of 0.34% in user watch time, 8.1% in interaction rate, and 0.162% in overall user retention (LifeTime-7), leading to successful deployment across all traffic, serving over 400 million users every day.
+
+随着互联网的快速发展，用户对在线内容消费平台的推荐准确率期望越来越高。然而，短视频往往包含不同的片段，用户对所有短视频的态度可能并不相同。传统的二元分类推荐模型将视频视为一个整体实体，在准确捕捉如此细微的偏好方面面临着局限性。考虑到用户消费是一个时间过程，本文通过统计分析和行为模式检查证明用户行为的时间可以代表不同的意图。基于这一见解，我们提出了一种新颖的建模范式：动作感知生成序列网络（A2Gen），它沿着时间维度细化用户动作并将其链接成序列以进行统一处理和预测。首先，我们引入上下文感知注意力模块（CAM）来对富含特定项目上下文特征的动作序列进行建模。在此基础上，我们开发了分层序列编码器（HSE）来从用户的历史操作中学习时间操作模式。最后，通过利用 CAM，我们设计了一个用于生成动作序列的模块：Action-seq 自回归生成器（AAG）。在快手数据集和天猫公共数据集上进行的大量离线实验证明了我们提出的模型的优越性。此外，通过在快手平台上部署的大规模在线A/B测试，我们的模型利用顺序信息在多任务预测方面比基线方法取得了显着改进。具体来说，它使用户观看时间增加了 0.34%，互动率增加了 8.1%，总体用户保留率 (LifeTime-7) 增加了 0.162%，从而在所有流量上成功部署，每天为超过 4 亿用户提供服务。
+
+</details>
+
+---
+
+## 3. Mutual Forcing: Dual-Mode Self-Evolution for Fast Autoregressive Audio-Video Character Generation / 相互强迫：用于快速自回归音频-视频字符生成的双模式自进化
+
+**Date**: 2026-04-28 | **arXiv**: [2604.25819v1](http://arxiv.org/abs/2604.25819v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.25819v1)
+
+**Categories**: cs.CV, cs.SD
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In this work, we propose Mutual Forcing, a framework for fast autoregressive audio-video generation with long-horizon audio-video synchronization. Our approach addresses two key challenges: joint audio-video modeling and fast autoregressive generation. To ease joint audio-video optimization, we adopt a two-stage training strategy: we first train uni-modal generators and then couple them into a unified audio-video model for joint training on paired data. For streaming generation, we ask whether a native fast causal audio-video model can be trained directly, instead of following existing streaming distillation pipelines that typically train a bidirectional model first and then convert it into a causal generator through multiple distillation stages. Our answer is Mutual Forcing, which builds directly on native autoregressive model and integrates few-step and multi-step generation within a single weight-shared model, enabling self-distillation and improved training-inference consistency. The multi-step mode improves the few-step mode via self-distillation, while the few-step mode generates historical context during training to improve training-inference consistency; because the two modes share parameters, these two effects reinforce each other within a single model. Compared with prior approaches such as Self-Forcing, Mutual Forcing removes the need for an additional bidirectional teacher model, supports more flexible training sequence lengths, reduces training overhead, and allows the model to improve directly from real paired data rather than a fixed teacher. Experiments show that Mutual Forcing matches or surpasses strong baselines that require around 50 sampling steps while using only 4 to 8 steps, demonstrating substantial advantages in both efficiency and quality. The project page is available at https://mutualforcing.github.io.
+
+在这项工作中，我们提出了 Mutual Forcing，一种具有长视野音视频同步的快速自回归音视频生成框架。我们的方法解决了两个关键挑战：联合音频视频建模和快速自回归生成。为了简化联合音视频优化，我们采用两阶段训练策略：首先训练单模态生成器，然后将它们耦合到统一的音视频模型中，以便对配对数据进行联合训练。对于流式生成，我们询问是否可以直接训练原生快速因果音视频模型，而不是遵循现有的流式蒸馏管道，通常先训练双向模型，然后通过多个蒸馏阶段将其转换为因果生成器。我们的答案是相互强迫，它直接构建在本机自回归模型的基础上，并将少步和多步生成集成到单个权重共享模型中，从而实现自蒸馏并提高训练推理的一致性。多步模式通过自蒸馏改进了少步模式，而少步模式在训练过程中生成历史上下文，以提高训练-推理的一致性；由于这两种模式共享参数，因此这两种效应在单个模型中相互增强。与 Self-Forcing 等之前的方法相比，Mutual Forcing 不需要额外的双向教师模型，支持更灵活的训练序列长度，减少训练开销，并允许模型直接从真实的配对数据而不是固定的教师中进行改进。实验表明，相互强迫匹配或超过了需要大约 50 个采样步骤的强大基线，而仅使用 4 到 8 个步骤，在效率和质量方面展现了巨大的优势。该项目页面位于 https://mutualforcing.github.io。
+
+</details>
+
+---
+
+## 4. DualFact+: A Multimodal Fact Verification Framework for Procedural Video Understanding / DualFact+：用于程序视频理解的多模式事实验证框架
+
+**Date**: 2026-04-28 | **arXiv**: [2604.25584v1](http://arxiv.org/abs/2604.25584v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.25584v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce DualFact, a dual-layer, multimodal factuality evaluation framework for procedural video captioning. DualFact separates factual correctness into conceptual facts, capturing abstract semantic roles (e.g., Action, Ingredient, Tool, Location), and contextual facts, capturing their grounded predicate-argument realizations in video. To support complete and role-consistent evaluation, DualFact incorporates implicit argument augmentation (VIA) and contrastive fact sets. We instantiate DualFact in two modes: DualFact-T, which verifies facts against textual evidence, and DualFact-V, which verifies facts against video-grounded visual evidence. Experiments on YouCook3-Fact and CraftBench-Fact show that state-of-the-art multimodal language models produce fluent but often factually incomplete captions, with systematic omissions and role-level inconsistencies. DualFact correlates more strongly with human factuality judgments than standard metrics, particularly for contextual facts, and reveals that caption-only evaluation overestimates hallucinations compared to video-grounded verification. Overall, DualFact offers an interpretable and human-aligned evaluation protocol that highlights persistent challenges in multimodal factual grounding, extending beyond surface-level fluency.
+
+我们介绍 DualFact，这是一种用于程序视频字幕的双层、多模态真实性评估框架。 DualFact 将事实正确性分解为概念性事实，捕获抽象语义角色（例如，动作、成分、工具、位置）和上下文事实，捕获视频中基于谓词论证的实现。为了支持完整且角色一致的评估，DualFact 结合了隐式论证增强 (VIA) 和对比事实集。我们以两种模式实例化 DualFact：DualFact-T（根据文本证据验证事实）和 DualFact-V（根据基于视频的视觉证据验证事实）。 YouCook3-Fact 和 CraftBench-Fact 上的实验表明，最先进的多模态语言模型可以生成流畅但实际上不完整的字幕，存在系统性遗漏和角色级别的不一致。与标准指标相比，DualFact 与人类事实性判断的相关性更强，特别是对于上下文事实，并表明与基于视频的验证相比，仅标题评估会高估幻觉。总体而言，DualFact 提供了一种可解释且人性化的评估协议，突出了多模式事实基础方面持续存在的挑战，超越了表面的流畅性。
+
+</details>
+
+---
+
+## 5. A Systematic Post-Train Framework for Video Generation / 用于视频生成的系统化后训练框架
+
+**Date**: 2026-04-28 | **arXiv**: [2604.25427v1](http://arxiv.org/abs/2604.25427v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.25427v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While large-scale video diffusion models have demonstrated impressive capabilities in generating high-resolution and semantically rich content, a significant gap remains between their pretraining performance and real-world deployment requirements due to critical issues such as prompt sensitivity, temporal inconsistency, and prohibitive inference costs. To bridge this gap, we propose a comprehensive post-training framework that systematically aligns pretrained models with user intentions through four synergistic stages: we first employ Supervised Fine-Tuning (SFT) to transform the base model into a stable instruction-following policy, followed by a Reinforcement Learning from Human Feedback (RLHF) stage that utilizes a novel Group Relative Policy Optimization (GRPO) method tailored for video diffusion to enhance perceptual quality and temporal coherence; subsequently, we integrate Prompt Enhancement via a specialized language model to refine user inputs, and finally address system efficiency through Inference Optimization. Together, these components provide a systematic approach to improving visual quality, temporal coherence, and instruction following, while preserving the controllability learned during pretraining. The result is a practical blueprint for building scalable post-training pipelines that are stable, adaptable, and effective in real-world deployment. Extensive experiments demonstrate that this unified pipeline effectively mitigates common artifacts and significantly improves controllability and visual aesthetics while adhering to strict sampling cost constraints.
+
+虽然大规模视频扩散模型在生成高分辨率和语义丰富的内容方面表现出了令人印象深刻的能力，但由于即时敏感性、时间不一致和过高的推理成本等关键问题，其预训练性能与现实世界的部署要求之间仍然存在显着差距。为了弥补这一差距，我们提出了一个全面的后训练框架，通过四个协同阶段系统地使预训练模型与用户意图保持一致：我们首先采用监督微调（SFT）将基本模型转变为稳定的指令跟踪策略，然后是人类反馈强化学习（RLHF）阶段，该阶段利用为视频传播量身定制的新颖的组相对策略优化（GRPO）方法来增强感知质量和时间连贯性；随后，我们通过专门的语言模型集成提示增强来细化用户输入，并最终通过推理优化解决系统效率问题。这些组件共同提供了一种系统方法来提高视觉质量、时间一致性和指令遵循，同时保留在预训练期间学到的可控性。其结果是构建可扩展的训练后管道的实用蓝图，这些管道在实际部署中稳定、适应性强且有效。大量的实验表明，这种统一的管道有效地减少了常见的伪影，并显着提高了可控性和视觉美感，同时遵守严格的采样成本限制。
+
+</details>
+
+---
+
+## 6. HuM-Eval: A Coarse-to-Fine Framework for Human-Centric Video Evaluation / HuM-Eval：以人为中心的视频评估从粗到细的框架
+
+**Date**: 2026-04-28 | **arXiv**: [2604.25361v1](http://arxiv.org/abs/2604.25361v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.25361v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation models have developed rapidly in recent years, where generating natural human motion plays a pivotal role. However, accurately evaluating the quality of generated human motion video remains a significant challenge. Existing evaluation metrics primarily focus on global scene statistics, often overlooking fine-grained human details and consequently failing to align with human subjective preference. To bridge this gap, we propose HuM-Eval, a novel human-centric evaluation framework that adopts a coarse-to-fine strategy. Specifically, our framework first utilizes a Vision Language Model to perform a coarse assessment of global video quality. It then proceeds to a fine-grained analysis, using 2D pose to verify anatomical correctness and 3D human motion to evaluate motion stability. Extensive experiments demonstrate that HuM-Eval achieves an average human correlation of 58.2%, outperforming state-of-the-art baselines. Furthermore, we introduce HuM-Bench, a comprehensive benchmark comprising 1,000 diverse prompts, and conduct a detailed evaluation of existing text-to-video models, paving the way for next-generation human motion generation.
+
+视频生成模型近年来发展迅速，其中生成自然的人体运动起着关键作用。然而，准确评估生成的人体运动视频的质量仍然是一个重大挑战。现有的评估指标主要关注全局场景统计，往往忽视细粒度的人类细节，因此无法符合人类的主观偏好。为了弥补这一差距，我们提出了 HuM-Eval，这是一种新颖的以人为中心的评估框架，采用从粗到细的策略。具体来说，我们的框架首先利用视觉语言模型对全局视频质量进行粗略评估。然后进行细粒度分析，使用 2D 姿势验证解剖正确性，使用 3D 人体运动评估运动稳定性。大量实验表明，HuM-Eval 的平均人类相关性达到 58.2%，优于最先进的基线。此外，我们还引入了包含 1,000 个不同提示的综合基准 HuM-Bench，并对现有的文本到视频模型进行详细评估，为下一代人体运动生成铺平道路。
+
+</details>
+
+---
+
+## 7. Cutscene Agent: An LLM Agent Framework for Automated 3D Cutscene Generation / Cutscene Agent：用于自动生成 3D 过场动画的 LLM 代理框架
+
+**Date**: 2026-04-28 | **arXiv**: [2604.25318v1](http://arxiv.org/abs/2604.25318v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.25318v1)
+
+**Categories**: cs.GR, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cutscenes are carefully choreographed cinematic sequences embedded in video games and interactive media, serving as the primary vehicle for narrative delivery, character development, and emotional engagement. Producing cutscenes is inherently complex: it demands seamless coordination across screenwriting, cinematography, character animation, voice acting, and technical direction, often requiring days to weeks of collaborative effort from multidisciplinary teams to produce minutes of polished content. In this work, we present Cutscene Agent, an LLM agent framework for automated end-to-end cutscene generation. The framework makes three contributions: (1)~a Cutscene Toolkit built on the Model Context Protocol (MCP) that establishes \emph{bidirectional} integration between LLM agents and the game engine -- agents not only invoke engine operations but continuously observe real-time scene state, enabling closed-loop generation of editable engine-native cinematic assets; (2)~a multi-agent system where a director agent orchestrates specialist subagents for animation, cinematography, and sound design, augmented by a visual reasoning feedback loop for perception-driven refinement; and (3)~CutsceneBench, a hierarchical evaluation benchmark for cutscene generation. Unlike typical tool-use benchmarks that evaluate short, isolated function calls, cutscene generation requires long-horizon, multi-step orchestration of dozens of interdependent tool invocations with strict ordering constraints -- a capability dimension that existing benchmarks do not cover. We evaluate a range of LLMs on CutsceneBench and analyze their performance across this challenging task.
+
+过场动画是嵌入视频游戏和互动媒体中精心设计的电影序列，作为叙事交付、角色发展和情感参与的主要工具。制作过场动画本质上是复杂的：它需要剧本、摄影、角色动画、配音和技术指导之间的无缝协调，通常需要多学科团队几天到几周的协作努力才能制作出几分钟的精美内容。在这项工作中，我们提出了 Cutscene Agent，一个用于自动生成端到端过场动画的 LLM 代理框架。该框架做出了三个贡献：(1)~基于模型上下文协议 (MCP) 构建的过场动画工具包，在 LLM 代理和游戏引擎之间建立了\emph{双向}集成——代理不仅调用引擎操作，而且持续观察实时场景状态，从而实现可编辑引擎原生电影资产的闭环生成； (2)~一个多代理系统，其中导演代理协调动画、电影摄影和声音设计的专业子代理，并通过视觉推理反馈循环进行增强，以实现感知驱动的细化； (3)~CutsceneBench，过场动画生成的分层评估基准。与评估简短、孤立的函数调用的典型工具使用基准不同，过场动画生成需要对数十个相互依赖的工具调用进行长期、多步骤的编排，并具有严格的排序约束——这是现有基准未涵盖的功能维度。我们在 CutsceneBench 上评估一系列法学硕士，并分析他们在这项具有挑战性的任务中的表现。
+
+</details>
+
+---
+
+## 8. OmniVTG: A Large-Scale Dataset and Training Paradigm for Open-World Video Temporal Grounding / OmniVTG：开放世界视频时间接地的大规模数据集和训练范例
+
+**Date**: 2026-04-28 | **arXiv**: [2604.25276v1](http://arxiv.org/abs/2604.25276v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.25276v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/oceanflowlab/OmniVTG.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video Temporal Grounding (VTG), the task of localizing video segments from text queries, struggles in open-world settings due to limited dataset scale and semantic diversity, causing performance gaps between common and rare concepts. To overcome these limitations, we introduce OmniVTG, a new large-scale dataset for open-world VTG, coupled with a Self-Correction Chain-of-Thought (CoT) training paradigm designed to enhance the grounding capabilities of Multimodal Large Language Models (MLLMs). Our OmniVTG is constructed via a novel Semantic Coverage Iterative Expansion pipeline, which first identifies gaps in the vocabulary of existing datasets and collects videos that are highly likely to contain these target concepts. For high-quality annotation, we leverage the insight that modern MLLMs excel at dense captioning more than direct grounding and design a caption-centric data engine to prompt MLLMs to generate dense, timestamped descriptions. Beyond the dataset, we observe that simple supervised finetuning (SFT) is insufficient, as a performance gap between rare and common concepts still persists. We find that MLLMs' video understanding ability significantly surpasses their direct grounding ability. Based on this, we propose a Self-Correction Chain-of-Thought (CoT) training paradigm. We train the MLLM to first predict, then use its understanding capabilities to reflect on and refine its own predictions. This capability is instilled via a three-stage pipeline of SFT, CoT finetuning, and reinforcement learning. Extensive experiments show our approach not only excels at open-world grounding in our OmniVTG dataset but also achieves state-of-the-art zero-shot performance on four existing VTG benchmarks. Code is available at https://github.com/oceanflowlab/OmniVTG.
+
+视频时间基础（VTG）是从文本查询中本地化视频片段的任务，由于有限的数据集规模和语义多样性，在开放世界环境中陷入困境，导致常见和罕见概念之间的性能差距。为了克服这些限制，我们引入了 OmniVTG，这是一种用于开放世界 VTG 的新型大型数据集，并结合了自校正思想链 (CoT) 训练范式，旨在增强多模态大型语言模型 (MLLM) 的基础能力。我们的 OmniVTG 是通过一种新颖的语义覆盖迭代扩展管道构建的，该管道首先识别现有数据集词汇中的差距，并收集极有可能包含这些目标概念的视频。为了获得高质量的注释，我们利用现代 MLLM 比直接基础更擅长密集字幕的洞察力，并设计了一个以字幕为中心的数据引擎来提示 MLLM 生成密集的带时间戳的描述。除了数据集之外，我们观察到简单的监督微调（SFT）是不够的，因为罕见概念和常见概念之间的性能差距仍然存在。我们发现 MLLM 的视频理解能力显着超过了他们的直接接地能力。基于此，我们提出了一种自我修正思想链（CoT）训练范式。我们训练 MLLM 首先进行预测，然后利用其理解能力来反思和完善自己的预测。这种能力是通过 SFT、CoT 微调和强化学习的三阶段管道灌输的。大量实验表明，我们的方法不仅在 OmniVTG 数据集的开放世界基础上表现出色，而且还在四个现有 VTG 基准上实现了最先进的零样本性能。代码可在 https://github.com/oceanflowlab/OmniVTG 获取。
+
+</details>
+
+---
+
+## 9. FCMBench-Video: Benchmarking Document Video Intelligence / FCMBench-Video：文档视频智能基准测试
+
+**Date**: 2026-04-28 | **arXiv**: [2604.25186v1](http://arxiv.org/abs/2604.25186v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.25186v1)
+
+**Categories**: cs.CV, cs.CE, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Document understanding is a critical capability in financial credit review, onboarding, and remote verification, where both decision accuracy and evidence traceability matter. Compared with static document images, document videos present a temporally redundant and sequentially unfolding evidence stream, require evidence integration across frames, and preserve acquisition-process cues relevant to authenticity-sensitive and anti-fraud review. We introduce FCMBench-Video, a benchmark for document-video intelligence that evaluates document perception, temporal grounding, and evidence-grounded reasoning under realistic capture conditions. For privacy-compliant yet realistic data at scale, we organize construction as an atomic-acquisition and composition workflow that records reusable single-document clips, applies controlled degradations, and assembles long-form multi-document videos with prescribed temporal spans. FCMBench-Video is built from 495 atomic videos composed into 1,200 long-form videos paired with 11,322 expert-annotated question--answer instances, covering 28 document types over 20s--60s duration tiers and 5,960 Chinese / 5,362 English instances. Evaluations on nine recent Video-MLLMs show that FCMBench-Video provides meaningful separation across systems and capabilities: counting is the most duration-sensitive task, Cross-Document Validation and Evidence-Grounded Selection probe higher-level evidence integration, and Visual Prompt Injection provides a complementary robustness dimension. The overall score distribution is broad and approximately bell-shaped, indicating a benchmark that is neither saturated nor dominated by trivial cases. Together, these results position FCMBench-Video as a reproducible benchmark for tracking Video-MLLM progress on document-video understanding and probing capability boundaries in authenticity-sensitive credit-domain applications.
+
+文档理解是金融信用审查、入职和远程验证中的一项关键能力，其中决策准确性和证据可追溯性都很重要。与静态文档图像相比，文档视频呈现时间冗余且顺序展开的证据流，需要跨帧的证据集成，并保留与真实性敏感和反欺诈审查相关的采集过程线索。我们推出了 FCMBench-Video，这是文档视频智能的基准，可评估真实捕获条件下的文档感知、时间基础和证据推理。对于符合隐私且真实的大规模数据，我们将构建组织为原子采集和合成工作流程，记录可重复使用的单文档剪辑，应用受控降级，并组装具有规定时间跨度的长格式多文档视频。 FCMBench-Video 由 495 个原子视频组成，组成 1,200 个长视频，并配有 11,322 个专家注释的问答实例，涵盖 28 种文档类型，持续时间超过 20 秒-60 秒，以及 5,960 个中文/5,362 个英文实例。对最近九个视频 MLLM 的评估表明，FCMBench-Video 提供了跨系统和功能的有意义的分离：计数是对持续时间最敏感的任务，跨文档验证和基于证据的选择探测更高级别的证据集成，而视觉提示注入提供了补充的稳健性维度。总体得分分布较宽且近似钟形，表明基准既不饱和也不被琐碎案例主导。总之，这些结果将 FCMBench-Video 定位为可重复的基准，用于跟踪视频 MLLM 在文档视频理解方面的进展以及在真实性敏感的信用域应用程序中探测能力边界。
+
+</details>
+
+---
+
+## 10. IAM: Identity-Aware Human Motion and Shape Joint Generation / IAM：身份感知人体运动和形状联合生成
+
+**Date**: 2026-04-28 | **arXiv**: [2604.25164v1](http://arxiv.org/abs/2604.25164v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.25164v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in text-driven human motion generation enable models to synthesize realistic motion sequences from natural language descriptions. However, most existing approaches assume identity-neutral motion and generate movements using a canonical body representation, ignoring the strong influence of body morphology on motion dynamics. In practice, attributes such as body proportions, mass distribution, and age significantly affect how actions are performed, and neglecting this coupling often leads to physically inconsistent motions. We propose an identity-aware motion generation framework that explicitly models the relationship between body morphology and motion dynamics. Instead of relying on explicit geometric measurements, identity is represented using multimodal signals, including natural language descriptions and visual cues. We further introduce a joint motion-shape generation paradigm that simultaneously synthesizes motion sequences and body shape parameters, allowing identity cues to directly modulate motion dynamics. Extensive experiments on motion capture datasets and large-scale in-the-wild videos demonstrate improved motion realism and motion-identity consistency while maintaining high motion quality. Project page: https://vjwq.github.io/IAM
+
+文本驱动的人体运动生成的最新进展使模型能够从自然语言描述中合成真实的运动序列。然而，大多数现有方法假设身份中立的运动并使用规范的身体表示生成运动，忽略了身体形态对运动动力学的强烈影响。在实践中，身体比例、质量分布和年龄等属性会显着影响动作的执行方式，而忽略这种耦合通常会导致物理上不一致的运动。我们提出了一种身份感知运动生成框架，该框架明确地模拟了身体形态和运动动力学之间的关系。身份不是依赖于明确的几何测量，而是使用多模态信号来表示，包括自然语言描述和视觉提示。我们进一步引入了一种联合运动形状生成范例，它同时合成运动序列和身体形状参数，允许身份线索直接调节运动动力学。对运动捕捉数据集和大规模野外视频的大量实验表明，在保持高运动质量的同时，运动真实性和运动身份一致性得到了改善。项目页面：https://vjwq.github.io/IAM
+
+</details>
+
+---
+
+## 11. World-R1: Reinforcing 3D Constraints for Text-to-Video Generation / World-R1：加强文本转视频生成的 3D 约束
+
+**Date**: 2026-04-27 | **arXiv**: [2604.24764v1](http://arxiv.org/abs/2604.24764v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.24764v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent video foundation models demonstrate impressive visual synthesis but frequently suffer from geometric inconsistencies. While existing methods attempt to inject 3D priors via architectural modifications, they often incur high computational costs and limit scalability. We propose World-R1, a framework that aligns video generation with 3D constraints through reinforcement learning. To facilitate this alignment, we introduce a specialized pure text dataset tailored for world simulation. Utilizing Flow-GRPO, we optimize the model using feedback from pre-trained 3D foundation models and vision-language models to enforce structural coherence without altering the underlying architecture. We further employ a periodic decoupled training strategy to balance rigid geometric consistency with dynamic scene fluidity. Extensive evaluations reveal that our approach significantly enhances 3D consistency while preserving the original visual quality of the foundation model, effectively bridging the gap between video generation and scalable world simulation.
+
+最近的视频基础模型展示了令人印象深刻的视觉合成，但经常遇到几何不一致的问题。虽然现有方法尝试通过架构修改注入 3D 先验，但它们通常会产生高昂的计算成本并限制可扩展性。我们提出了 World-R1，一个通过强化学习使视频生成与 3D 约束保持一致的框架。为了促进这种一致性，我们引入了专门为世界模拟量身定制的纯文本数据集。利用 Flow-GRPO，我们利用来自预训练 3D 基础模型和视觉语言模型的反馈来优化模型，以在不改变底层架构的情况下增强结构一致性。我们进一步采用周期性解耦训练策略来平衡刚性几何一致性和动态场景流动性。广泛的评估表明，我们的方法显着增强了 3D 一致性，同时保留了基础模型的原始视觉质量，有效地弥合了视频生成和可扩展世界模拟之间的差距。
+
+</details>
+
+---
+
+## 12. Learning Human-Intention Priors from Large-Scale Human Demonstrations for Robotic Manipulation / 从大规模人类机器人操作演示中学习人类意图先验
+
+**Date**: 2026-04-27 | **arXiv**: [2604.24681v1](http://arxiv.org/abs/2604.24681v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.24681v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human videos contain rich manipulation priors, but using them for robot learning remains difficult because raw observations entangle scene understanding, human motion, and embodiment-specific action. We introduce MoT-HRA, a hierarchical vision-language-action framework that learns human-intention priors from large-scale human demonstrations. We first curate HA-2.2M, a 2.2M-episode action-language dataset reconstructed from heterogeneous human videos through hand-centric filtering, spatial reconstruction, temporal segmentation, and language alignment. On top of this dataset, MoT-HRA factorizes manipulation into three coupled experts: a vision-language expert predicts an embodiment-agnostic 3D trajectory, an intention expert models MANO-style hand motion as a latent human-motion prior, and a fine expert maps the intention-aware representation to robot action chunks. A shared-attention trunk and read-only key-value transfer allow downstream control to use human priors while limiting interference with upstream representations. Experiments on hand motion generation, simulated manipulation, and real-world robot tasks show that MoT-HRA improves motion plausibility and robust control under distribution shift.
+
+人类视频包含丰富的操作先验，但将它们用于机器人学习仍然很困难，因为原始观察涉及场景理解、人类运动和具体实施例的动作。我们介绍了 MoT-HRA，这是一种分层视觉-语言-动作框架，可以从大规模人类演示中学习人类意图先验。我们首先策划 HA-2.2M，这是一个 2.2M 集的动作语言数据集，通过以手为中心的过滤、空间重建、时间分割和语言对齐从异构人类视频中重建。在此数据集之上，MoT-HRA 将操作分解为三个耦合专家：视觉语言专家预测与具体实施无关的 3D 轨迹，意图专家将 MANO 式手部运动建模为潜在的人类运动先验，而精细专家将意图感知表示映射到机器人动作块。共享注意力主干和只读键值传输允许下游控制使用人类先验，同时限制对上游表示的干扰。手部动作生成、模拟操纵和现实世界机器人任务的实验表明，MoT-HRA 提高了分布偏移下的运动合理性和鲁棒控制。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-28 (16 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-28
