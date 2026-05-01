@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-01](papers/2026-05-01.md) - 9 papers
 - [2026-04-30](papers/2026-04-30.md) - 7 papers
 - [2026-04-29](papers/2026-04-29.md) - 4 papers
 - [2026-04-28](papers/2026-04-28.md) - 3 papers
@@ -62,6 +63,162 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-01 (9 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-05-01
+
+**Paper Count**: 9
+
+---
+
+## 1. Dreaming Across Towns: Semantic Rollout and Town-Adversarial Regularization for Zero-Shot Held-Out-Town Fixed-Route Driving in CARLA / 跨越城镇的梦想：CARLA 中零射击保持城镇固定路线驾驶的语义推广和城镇对抗正则化
+
+**Date**: 2026-04-30 | **arXiv**: [2604.27994v1](http://arxiv.org/abs/2604.27994v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.27994v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learned driving agents often degrade when deployed in unseen environments. This paper studies a deliberately bounded instance of that problem in the CARLA simulator: zero-shot transfer of a closed-loop fixed-route driving agent from Town05 and Town06 to unseen Town03 and Town04. The study isolates structural town shift by keeping weather fixed to ClearNoon and removing traffic and pedestrians. We build on a Dreamer-style latent world-model agent and add two training-only auxiliary losses: multi-horizon prediction of future visual-semantic embeddings along imagined rollouts and town-adversarial supervision on a semantic projection of the recurrent latent state. A causal context feature conditions the semantic rollout predictor, while the actor and critic retain the standard control feature. The policy receives no navigation command, route polyline, goal pose, or map input; the reference route is used only by the environment for reward, progress, success, and termination. Across the evaluated held-out towns, the proposed model achieves the highest mean success rate among the included Dreamer-family methods. Secondary safety and lane-keeping metrics are mixed across towns. These results support a bounded conclusion: in this controlled fixed-weather CARLA setting, semantic rollout supervision combined with town-adversarial regularization improves mean held-out-town route completion.
+
+当部署在看不见的环境中时，学习过的驾驶代理通常会退化。本文研究了 CARLA 模拟器中该问题的一个故意有界的实例：闭环固定路线驾驶代理从 Town05 和 Town06 到看不见的 Town03 和 Town04 的零次转移。该研究通过将天气固定在 ClearNoon 并消除交通和行人来隔离城镇的结构性转变。我们以梦想家风格的潜在世界模型代理为基础，并添加了两个仅训练的辅助损失：沿着想象的推出对未来视觉语义嵌入的多视野预测，以及对循环潜在状态的语义投影的城镇对抗性监督。因果上下文特征决定了语义推出预测器，而参与者和批评者保留了标准控制特征。该策略不接收导航命令、路线折线、目标姿态或地图输入；参考路线仅由环境用于奖励、进度、成功和终止。在评估的坚持城镇中，所提出的模型在所包含的梦想家家庭方法中实现了最高的平均成功率。各个城镇的次要安全和车道保持指标参差不齐。这些结果支持一个有限的结论：在这种受控的固定天气 CARLA 设置中，语义推出监督与城镇对抗正则化相结合提高了平均保留城镇路线的完成率。
+
+</details>
+
+---
+
+## 2. GUI Agents with Reinforcement Learning: Toward Digital Inhabitants / 具有强化学习功能的 GUI 代理：迈向数字居民
+
+**Date**: 2026-04-30 | **arXiv**: [2604.27955v1](http://arxiv.org/abs/2604.27955v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.27955v1)
+
+**Categories**: cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Graphical User Interface (GUI) agents have emerged as a promising paradigm for intelligent systems that perceive and interact with graphical interfaces visually. Yet supervised fine-tuning alone cannot handle long-horizon credit assignment, distribution shifts, and safe exploration in irreversible environments, making Reinforcement Learning (RL) a central methodology for advancing automation. In this work, we present the first comprehensive overview of the intersection between RL and GUI agents, and examine how this research direction may evolve toward digital inhabitants. We propose a principled taxonomy that organizes existing methods into Offline RL, Online RL, and Hybrid Strategies, and complement it with analyses of reward engineering, data efficiency, and key technical innovations. Our analysis reveals several emerging trends: the tension between reliability and scalability is motivating the adoption of composite, multi-tier reward architectures; GUI I/O latency bottlenecks are accelerating the shift toward world-model-based training, which can yield substantial performance gains; and the spontaneous emergence of System-2-style deliberation suggests that explicit reasoning supervision may not be necessary when sufficiently rich reward signals are available. We distill these findings into a roadmap covering process rewards, continual RL, cognitive architectures, and safe deployment, aiming to guide the next generation of robust GUI automation and its agent-native infrastructure.
+
+图形用户界面（GUI）代理已经成为智能系统的一个有前途的范例，可以直观地感知图形界面并与之交互。然而，仅靠监督微调无法处理长期信用分配、分配变化以及不可逆环境中的安全探索，这使得强化学习（RL）成为推进自动化的核心方法。在这项工作中，我们首次全面概述了 RL 和 GUI 代理之间的交叉点，并研究了这一研究方向如何向数字居民发展。我们提出了一种原则性的分类法，将现有方法组织为离线强化学习、在线强化学习和混合策略，并通过奖励工程、数据效率和关键技术创新的分析对其进行补充。我们的分析揭示了几个新兴趋势：可靠性和可扩展性之间的紧张关系正在推动复合、多层奖励架构的采用； GUI I/O 延迟瓶颈正在加速向基于世界模型的训练的转变，这可以带来显着的性能提升；系统2式审议的自发出现表明，当有足够丰富的奖励信号可用时，明确的推理监督可能不是必要的。我们将这些发现提炼成涵盖流程奖励、持续强化学习、认知架构和安全部署的路线图，旨在指导下一代强大的 GUI 自动化及其代理原生基础设施。
+
+</details>
+
+---
+
+## 3. Flying by Inference: Active Inference World Models for Adaptive UAV Swarms / 推理飞行：自适应无人机群的主动推理世界模型
+
+**Date**: 2026-04-30 | **arXiv**: [2604.27935v1](http://arxiv.org/abs/2604.27935v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.27935v1)
+
+**Categories**: cs.RO, eess.SP, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper presents an expert-guided active-inference-inspired framework for adaptive UAV swarm trajectory planning. The proposed method converts multi-UAV trajectory design from a repeated combinatorial optimization problem into a hierarchical probabilistic inference problem. In the offline phase, a genetic-algorithm planner with repulsive-force collision avoidance (GA--RF) generates expert demonstrations, which are abstracted into Mission, Route, and Motion dictionaries. These dictionaries are used to learn a probabilistic world model that captures how expert mission allocations induce route orders and how route orders induce motion-level behaviors. During online operation, the UAV swarm evaluates candidate actions by forming posterior beliefs over symbolic states and minimizing KL-divergence-based abnormality indicators with respect to expert-derived reference distributions. This enables mission allocation, route insertion, motion adaptation, and collision-aware replanning without rerunning the offline optimizer. Bayesian state estimators, including EKF and PF modules, are integrated at the motion level to improve trajectory correction under uncertainty. Simulation results show that the proposed framework preserves expert-like planning structure while producing smoother and more stable behavior than modified Q-learning. Additional validation using real-flight UAV trajectory data demonstrates that the learned world model can correct symbolic predictions under noisy and non-smooth observations, supporting its applicability to adaptive UAV swarm autonomy.
+
+本文提出了一种由专家引导的主动推理启发的自适应无人机群轨迹规划框架。该方法将多无人机轨迹设计从重复的组合优化问题转化为分层概率推理问题。在离线阶段，具有排斥力碰撞避免（GA--RF）功能的遗传算法规划器生成专家演示，这些演示被抽象为任务、路线和运动字典。这些字典用于学习概率世界模型，该模型捕获专家任务分配如何引发路线订单以及路线订单如何引发运动级行为。在在线操作期间，无人机群通过形成符号状态的后验信念并最小化基于专家导出的参考分布的基于 KL 散度的异常指标来评估候选动作。这可以实现任务分配、路线插入、运动适应和碰撞感知重新规划，而无需重新运行离线优化器。贝叶斯状态估计器（包括 EKF 和 PF 模块）在运动层面集成，以改善不确定性下的轨迹校正。仿真结果表明，所提出的框架保留了类似专家的规划结构，同时产生比修改后的 Q 学习更平滑、更稳定的行为。使用真实飞行无人机轨迹数据进行的额外验证表明，学习的世界模型可以纠正噪声和非平滑观测下的符号预测，支持其适用于自适应无人机群自治。
+
+</details>
+
+---
+
+## 4. Simulating clinical interventions with a generative multimodal model of human physiology / 使用人体生理学生成多模态模型模拟临床干预
+
+**Date**: 2026-04-30 | **arXiv**: [2604.27899v1](http://arxiv.org/abs/2604.27899v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.27899v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Understanding how human health changes over time, and why responses to interventions vary between individuals, remains a central challenge in medicine. Here we present HealthFormer, a decoder-only transformer that models the human physiological trajectory generatively, by training on data from the Human Phenotype Project, a multi-visit cohort of over 15,000 deeply phenotyped individuals. We tokenise each participant's health trajectory across 667 measurements spanning seven domains: blood biomarkers, body composition, sleep physiology, continuous glucose monitoring, gut microbiome, wearable-derived physiology, and behaviour and medication exposure. We train HealthFormer to forecast individual physiological trajectories across these domains, and from this single generative objective a range of clinically relevant tasks can be expressed as queries on the model. We show that, without task-specific training, HealthFormer transfers to four independent cohorts and improves prediction for 27 of 30 incident-disease and mortality endpoints, exceeding established clinical risk scores in every comparison. We further show that the model can simulate interventions in silico: in a held-out personalised-nutrition trial, intervention-conditioned predictions recover individual six-month biomarker changes (e.g., Pearson r = 0.78 for diastolic blood pressure). Across 41 randomised intervention-outcome comparisons drawn from published trials, our results show that the predicted direction of effect agrees in every case, and the predicted mean falls within the reported 95% confidence interval in 30 cases. We position HealthFormer as an initial health world model, from which forecasting, risk stratification, and intervention-conditioned simulation arise as queries, providing a basis for clinical digital twins.
+
+了解人类健康如何随着时间的推移而变化，以及为什么个体对干预措施的反应有所不同，仍然是医学领域的一个核心挑战。在这里，我们展示了 HealthFormer，这是一个仅解码器的转换器，通过对人类表型项目的数据进行训练，生成地模拟人类生理轨迹，该项目是一个由超过 15,000 名深度表型个体组成的多次访问队列。我们通过跨越七个领域的 667 项测量来标记每个参与者的健康轨迹：血液生物标志物、身体成分、睡眠生理学、连续血糖监测、肠道微生物组、可穿戴设备衍生的生理学以及行为和药物暴露。我们训练 HealthFormer 来预测跨这些领域的个体生理轨迹，并且从这个单一的生成目标可以将一系列临床相关任务表示为对模型的查询。我们表明，在没有针对特定任务的培训的情况下，HealthFormer 可以转移到四个独立队列，并改进了对 30 个事件疾病和死亡率终点中的 27 个的预测，在每次比较中都超过了既定的临床风险评分。我们进一步表明，该模型可以模拟干预措施：在一项持续的个性化营养试验中，干预条件预测恢复了个体六个月生物标志物的变化（例如，舒张压的皮尔逊 r = 0.78）。在从已发表的试验中进行的 41 项随机干预结果比较中，我们的结果表明，每个案例的预测效果方向都是一致的，并且 30 个案例的预测平均值落在报告的 95% 置信区间内。我们将 HealthFormer 定位为初始健康世界模型，其中预测、风险分层和干预条件模拟作为查询出现，为临床数字孪生提供了基础。
+
+</details>
+
+---
+
+## 5. Graph World Models: Concepts, Taxonomy, and Future Directions / 图世界模型：概念、分类和未来方向
+
+**Date**: 2026-04-30 | **arXiv**: [2604.27895v1](http://arxiv.org/abs/2604.27895v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.27895v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As one of the mainstream models of artificial intelligence, world models allow agents to learn the representation of the environment for efficient prediction and planning. However, classical world models based on flat tensors face several key problems, including noise sensitivity, error accumulation and weak reasoning. To address these limitations, many recent studies use graph structure to decompose the environment into entity nodes and interactive edges, and model virtual environments in a structured space. This paper systematically formalizes and unifies these emerging graph-based works under the concept of graph world models (GWMs). To the best of our knowledge, GWMs have not yet been explicitly defined and surveyed as a unified research paradigm. Furthermore, we propose a taxonomy based on relational inductive biases (RIB), categorizing GWMs by the specific structural priors they inject: (1) spatial RIB for topological abstraction; (2) physical RIB for dynamic simulation; and (3) logical RIB for causal and semantic reasoning. For each model category, we outline the key design principles, summarize representative models, and conduct comparative analyses. We further discuss open challenges and future directions, including dynamic graph adaptation, probabilistic relational dynamics, multi-granularity inductive biases, and the need for dedicated benchmarks and evaluation metrics for GWMs.
+
+作为人工智能的主流模型之一，世界模型允许智能体学习环境的表示，以进行有效的预测和规划。然而，基于平坦张量的经典世界模型面临着几个关键问题，包括噪声敏感性、误差累积和弱推理。为了解决这些限制，最近的许多研究使用图结构将环境分解为实体节点和交互边，并在结构化空间中对虚拟环境进行建模。本文在图世界模型（GWM）的概念下系统地形式化和统一了这些新兴的基于图的工作。据我们所知，GWM 尚未被明确定义并作为统一的研究范式进行调查。此外，我们提出了一种基于关系归纳偏差（RIB）的分类法，根据 GWM 注入的特定结构先验对 GWM 进行分类：（1）用于拓扑抽象的空间 RIB； (2)用于动态模拟的物理RIB； (3) 用于因果和语义推理的逻辑 RIB。对于每个模型类别，我们概述了关键设计原则，总结了代表性模型，并进行了比较分析。我们进一步讨论开放的挑战和未来的方向，包括动态图适应、概率关系动力学、多粒度归纳偏差以及 GWM 专用基准和评估指标的需求。
+
+</details>
+
+---
+
+## 6. BAss: Symbolic Reasoning in Abstract Dialectical Frameworks / BAss：抽象辩证框架中的符号推理
+
+**Date**: 2026-04-30 | **arXiv**: [2604.27576v1](http://arxiv.org/abs/2604.27576v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.27576v1)
+
+**Categories**: cs.LO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present BAss (BDD-based ADF symbolic solver), a novel analysis tool for Abstract Dialectical Frameworks (ADFs) based on Binary Decision Diagrams (BDDs). It supports the fully symbolic computation of all admissible, complete, and preferred interpretations, as well as two-valued and stable models of an ADFs. Our approach is inspired by the recently discovered equivalence between Boolean Networks (BNs) and ADFs by Heyninck et al. (2024) and Azpeitia et al. (2024), significantly extending current BDD-based tools bioLQM, AEON, and adf-bdd. We conducted experiments on a large-scale collection of real-world models from both the BN and ADF communities. Our results show that BAss dramatically outperforms previous BDD-based tools and is competitive (even significantly better in some cases) with state-of-the-art SAT/ASP-based methods, particularly in scenarios involving large solution spaces. Notably, BAss is able to enumerate all fixed points or minimal trap spaces of certain biological networks beyond the reach of existing tools, thereby enabling new analysis and case studies in systems biology. These results highlight the practical relevance of symbolic reasoning for complex real-world applications, particularly in systems biology and formal argumentation.
+
+我们提出了 BAss（基于 BDD 的 ADF 符号求解器），这是一种基于二元决策图（BDD）的抽象辩证框架（ADF）的新颖分析工具。它支持所有可接受的、完整的和首选解释的完全符号计算，以及 ADF 的二值和稳定模型。我们的方法受到 Heyninck 等人最近发现的布尔网络 (BN) 和 ADF 之间的等价性的启发。 （2024）和 Azpeitia 等人。 (2024)，显着扩展了当前基于 BDD 的工具 bioLQM、AEON 和 adf-bdd。我们对来自 BN 和 ADF 社区的大量真实世界模型进行了实验。我们的结果表明，BAss 的性能显着优于以前基于 BDD 的工具，并且与最先进的基于 SAT/ASP 的方法相比具有竞争力（在某些情况下甚至明显更好），特别是在涉及大型解决方案空间的场景中。值得注意的是，BAss 能够枚举某些生物网络的所有固定点或最小陷阱空间，超出现有工具的范围，从而实现系统生物学中的新分析和案例研究。这些结果强调了符号推理对于复杂的现实世界应用的实际相关性，特别是在系统生物学和形式论证中。
+
+</details>
+
+---
+
+## 7. RAY-TOLD: Ray-Based Latent Dynamics for Dense Dynamic Obstacle Avoidance with TDMPC / RAY-TOLD：基于射线的潜在动力学，通过 TDMPC 实现密集动态避障
+
+**Date**: 2026-04-30 | **arXiv**: [2604.27450v1](http://arxiv.org/abs/2604.27450v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.27450v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Dense, dynamic crowds pose a persistent challenge for autonomous mobile robots. Purely reactive planning methods, such as Model Predictive Path Integral (MPPI) control, often fail to escape local minima in complex scenarios due to their limited prediction horizon. To bridge this gap, we propose Ray-based Task-Oriented Latent Dynamics (RAY-TOLD), a hybrid control architecture that integrates obstacle information into latent dynamics and utilizes the robustness of physics-based MPPI with the long-horizon foresight of reinforcement learning. RAY-TOLD leverages a LiDAR-centric latent dynamics model to encode high-dimensional sensor data into a compact state representation, enabling the learning of a terminal value function and a policy prior. We introduce a policy mixture sampling strategy that augments the MPPI candidate population with trajectories derived from the learned policy, effectively guiding the planner towards the goal while maintaining kinematic feasibility. Extensive tests in a stochastic environment with high-density dynamic obstacles demonstrate that our method outperforms the MPPI baseline, reducing the collision rate. The results confirm that blending short-horizon physics-based rollouts with learned long-horizon intent significantly enhances navigation reliability and safety.
+
+密集、动态的人群对自主移动机器人构成了持续的挑战。纯粹的反应式规划方法，例如模型预测路径积分（MPPI）控制，由于其预测范围有限，通常无法在复杂场景中逃脱局部极小值。为了弥补这一差距，我们提出了基于射线的面向任务的潜在动力学（RAY-TOLD），这是一种混合控制架构，它将障碍物信息集成到潜在动力学中，并利用基于物理的 MPPI 的鲁棒性和强化学习的长期远见。 RAY-TOLD 利用以 LiDAR 为中心的潜在动力学模型将高维传感器数据编码为紧凑的状态表示，从而能够学习终端价值函数和策略先验。我们引入了一种策略混合抽样策略，该策略通过从学习策略中得出的轨迹来增加 MPPI 候选群体，有效地指导规划者实现目标，同时保持运动学可行性。在具有高密度动态障碍物的随机环境中进行的广泛测试表明，我们的方法优于 MPPI 基线，降低了碰撞率。结果证实，将基于物理的短视距部署与学习的长视距意图相结合可显着提高导航的可靠性和安全性。
+
+</details>
+
+---
+
+## 8. Detecting is Easy, Adapting is Hard: Local Expert Growth for Visual Model-Based Reinforcement Learning under Distribution Shift / 检测很容易，适应很难：分布转移下基于视觉模型的强化学习的本地专家增长
+
+**Date**: 2026-04-30 | **arXiv**: [2604.27411v1](http://arxiv.org/abs/2604.27411v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.27411v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual model-based reinforcement learning (MBRL) agents can perform well on the training distribution, but often break down once the test environment shifts. In visual MBRL, recognizing that a shift has occurred is often the easier part; the harder part is turning that recognition into useful action-level correction. We study several ways of responding to shift, including planning penalties, direct fine-tuning, global residual correction, and coarse gating. In our experiments, these approaches either do not improve closed-loop control or hurt in-distribution (ID) performance. Based on these negative results, we propose JEPA-Indexed Local Expert Growth. The method uses a frozen JEPA representation only for problem indexing, while cluster-specific residual experts add local action corrections on top of the original controller. The baseline controller itself is not modified. Using paired-bootstrap evaluation, we find that the original naive-preference variant is not stable under stricter testing. In contrast, the harder-pair variant produces statistically significant OOD improvements on all four evaluated shift conditions while preserving ID performance. The learned experts also remain useful when the same shift is encountered again, which supports the view of adaptation as incremental knowledge growth rather than repeated full retraining. We further show that automatic ID rejection can be achieved with simple density models, whereas fine-grained discrimination among OOD sub-families is limited by the representation. Overall, the results indicate that, for visual MBRL under distribution shift, the main challenge is not simply noticing that the environment has changed, but applying the right local action correction after the change has been recognized.
+
+基于视觉模型的强化学习（MBRL）代理可以在训练分布上表现良好，但一旦测试环境发生变化，通常会崩溃。在视觉 MBRL 中，识别已经发生的转变通常是更容易的部分；更困难的部分是将这种认识转化为有用的行动层面的纠正。我们研究了几种应对转变的方法，包括规划惩罚、直接微调、全局残差校正和粗选门。在我们的实验中，这些方法要么不能改善闭环控制，要么会损害分布内 (ID) 性能。基于这些负面结果，我们提出了 JEPA 指数本地专家增长。该方法仅使用冻结的 JEPA 表示来进行问题索引，而特定于集群的残差专家则在原始控制器之上添加本地操作校正。基线控制器本身没有被修改。使用配对引导评估，我们发现原始的朴素偏好变体在更严格的测试下并不稳定。相比之下，较硬的配对变体在所有四个评估的换档条件下产生了统计上显着的 OOD 改进，同时保留了 ID 性能。当再次遇到相同的转变时，博学的专家仍然有用，这支持了适应作为增量知识增长而不是重复的全面再培训的观点。我们进一步表明，可以通过简单的密度模型实现自动 ID 拒绝，而 OOD 子族之间的细粒度区分受到表示的限制。总体而言，结果表明，对于分布偏移下的视觉 MBRL，主要挑战不是简单地注意到环境发生了变化，而是在识别出变化后应用正确的局部动作校正。
+
+</details>
+
+---
+
+## 9. Theory Under Construction: Orchestrating Language Models for Research Software Where the Specification Evolves / 正在构建的理论：在规范不断发展的情况下为研究软件编排语言模型
+
+**Date**: 2026-04-29 | **arXiv**: [2604.27209v1](http://arxiv.org/abs/2604.27209v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.27209v1)
+
+**Categories**: cs.SE, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models can now generate substantial code and draft research text, but research-software projects require more than either artifact alone. The mathematical thesis, executable system, benchmark surface, and public claims must mature together, yet often drift apart. We identify two LM-specific failure modes: hallucination accumulation, in which claims exceed what code or theory supports and unsupported assertions propagate across sessions; and desynchronization, in which code, theory, or the model's own world model fall out of alignment.   We propose Comet-H, an iterative prompt automaton that orchestrates ideation, implementation, evaluation, grounding, and paper-writing as coupled coordinates of a single workspace state. At each step, a controller selects the next prompt by scoring it against what the workspace currently lacks, carries unfinished follow-up work forward with a half-life, and re-checks the paper and README against the code and benchmarks whenever documentation changes. We frame prompt selection as a small contextual bandit problem over prompt families, with prompts as arms, workspace deficits as context, and a hand-weighted linear score. This transparent scorer, paired with a fading record of unfinished work, bounds long-horizon follow-ups, requires no learned policy, and makes each prompt choice legible from the workspace.   We created a portfolio of 46 research-software repositories across two dozen domains. We study A3 in depth, a Python static-analysis tool built entirely within the loop, which reaches (F1 = 0.768) on a 90-case benchmark, compared with a next-best baseline of 0.364. Across approximately 400 commits, we find that audit-and-contraction passes dominate the later phases of every successful trajectory.
+
+大型语言模型现在可以生成大量代码和起草研究文本，但研究软件项目需要的不仅仅是任何一个工件。数学论文、可执行系统、基准面和公共主张必须一起成熟，但往往会出现疏离。我们确定了两种特定于 LM 的故障模式：幻觉累积，其中声明超出了代码或理论支持的范围，并且不受支持的断言在会话中传播；以及去同步，其中代码、理论或模型自己的世界模型失去了一致性。   我们提出 Comet-H，这是一种迭代提示自动机，它将构思、实现、评估、基础和论文写作协调为单个工作空间状态的耦合坐标。在每一步中，控制器都会根据工作区当前缺乏的内容进行评分来选择下一个提示，以半衰期推进未完成的后续工作，并在文档发生变化时根据代码和基准重新检查论文和自述文件。我们将提示选择视为提示系列上的一个小型上下文强盗问题，以提示为手臂，工作空间赤字为上下文，以及手动加权的线性分数。这个透明的记分器，与未完成工作的褪色记录相结合，限制了长期的后续行动，不需要学习策略，并使每个即时选择在工作空间中清晰可见。   我们创建了涵盖 20 个领域的 46 个研究软件存储库的组合。我们深入研究了 A3，这是一种完全在循环内构建的 Python 静态分析工具，在 90 例基准测试中达到了 (F1 = 0.768)，而次佳基线为 0.364。在大约 400 次提交中，我们发现审核和收缩通过在每个成功轨迹的后期阶段占据主导地位。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-30 (7 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-04-30
