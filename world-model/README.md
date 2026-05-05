@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-05](papers/2026-05-05.md) - 5 papers
 - [2026-05-04](papers/2026-05-04.md) - 1 papers
 - [2026-05-02](papers/2026-05-02.md) - 1 papers
 - [2026-05-01](papers/2026-05-01.md) - 9 papers
@@ -65,6 +66,98 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-05 (5 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-05-05
+
+**Paper Count**: 5
+
+---
+
+## 1. DynoSLAM: Dynamic SLAM with Generative Graph Neural Networks for Real-World Social Navigation / DynoSLAM：使用生成图神经网络的动态 SLAM，用于现实世界的社交导航
+
+**Date**: 2026-05-04 | **arXiv**: [2605.02759v1](http://arxiv.org/abs/2605.02759v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.02759v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Traditional Simultaneous Localization and Mapping (SLAM) algorithms rely heavily on the static environment assumption, which severely limits their applicability in real-world spaces populated by moving entities, such as pedestrians. In this work, we propose DynoSLAM, a tightly-coupled Dynamic GraphSLAM architecture that integrates socially-aware Graph Neural Networks (GNNs) directly into the factor graph optimization. Unlike conventional approaches that use rigid constant-velocity heuristics or deterministic single-agent neural priors, our framework formulates pedestrian motion forecasting as a stochastic World Model. By utilizing Monte Carlo rollouts from a trained GNN, we capture the multimodal epistemic uncertainty of human interactions and embed it into the SLAM graph via a dynamic Mahalanobis distance factor. We demonstrate through extensive simulated experiments that this stochastic formulation not only maintains highly accurate retrospective tracking but also prevents the optimization failures caused by the deterministic "argmax problem". Ultimately, extracting the empirical mean and covariance matrices of future pedestrian states provides a mathematically rigorous, probabilistic safety envelope for downstream local planners, enabling anticipatory and collision-free robot navigation in densely crowded environments.
+
+传统的同步定位和建图（SLAM）算法严重依赖静态环境假设，这严重限制了它们在由行人等移动实体组成的现实空间中的适用性。在这项工作中，我们提出了 DynoSLAM，一种紧密耦合的动态 GraphSLAM 架构，它将社交感知图神经网络（GNN）直接集成到因子图优化中。与使用严格的恒速启发式或确定性单代理神经先验的传统方法不同，我们的框架将行人运动预测制定为随机世界模型。通过利用经过训练的 GNN 的蒙特卡洛推出，我们捕获了人类交互的多模态认知不确定性，并通过动态马哈拉诺比斯距离因子将其嵌入到 SLAM 图中。我们通过大量的模拟实验证明，这种随机公式不仅可以保持高度准确的回顾性跟踪，而且可以防止由确定性“argmax 问题”引起的优化失败。最终，提取未来行人状态的经验均值和协方差矩阵为下游本地规划者提供了数学上严格的概率安全范围，从而在密集拥挤的环境中实现预期和无碰撞的机器人导航。
+
+</details>
+
+---
+
+## 2. Shadow-Loom: Causal Reasoning over Graphical World Model of Narratives / Shadow-Loom：图形化叙事世界模型的因果推理
+
+**Date**: 2026-05-04 | **arXiv**: [2605.02475v1](http://arxiv.org/abs/2605.02475v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.02475v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Stories hold a reader's attention because they have causes, secrets, and consequences. Shadow-Loom is an experimental open-source framework that turns a narrative into a versioned graphical world model and lets two engines act on it: a causal physics grounded in Pearl's ladder of causation and a recently proposed counterfactual calculus over Ancestral Multi-World Networks; and a narrative physics that scores the same graph against four structural reader-states -- mystery, dramatic irony, suspense, and surprise -- in the tradition of Sternberg's curiosity/suspense/surprise triad, with suspense formalised in the structural-affect line of work on story comprehension and computational suspense. Large language models are used only at the boundary: extraction, rendering, and audit; identification, intervention, and counterfactual reasoning are carried out in typed code over the graph. The system is offered as a research artefact rather than as a benchmarked NLP model; code, fixtures, and pipeline are released open source.
+
+故事之所以能吸引读者的注意力，是因为它们有原因、秘密和后果。 Shadow-Loom 是一个实验性开源框架，它将叙述转变为版本化的图形世界模型，并让两个引擎对其起作用：基于 Pearl 因果关系阶梯的因果物理和最近提出的基于祖先多元世界网络的反事实演算；叙事物理学按照斯腾伯格的好奇/悬念/惊喜三合一的传统，根据四种结构性读者状态（神秘、戏剧性讽刺、悬念和惊喜）对相同的图表进行评分，其中悬念在故事理解和计算悬念的结构情感工作中形式化。大型语言模型仅在边界使用：提取、渲染和审计；识别、干预和反事实推理都是通过图表上的键入代码进行的。该系统作为研究制品提供，而不是作为基准 NLP 模型；代码、装置和管道均开源发布。
+
+</details>
+
+---
+
+## 3. Latent State Design for World Models under Sufficiency Constraints / 充足性约束下世界模型的潜在状态设计
+
+**Date**: 2026-05-03 | **arXiv**: [2605.01694v1](http://arxiv.org/abs/2605.01694v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.01694v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A world model matters to an agent only through the state it constructs. That state must preserve some information, discard other information, and support some future function: prediction, control, planning, memory, grounding, or counterfactual reasoning. This paper treats world-model research as latent state design under sufficiency constraints.   We propose a functional taxonomy that groups methods by what their latent state is for, rather than by architecture or application domain: predictive embedding, recurrent belief state, object/causal structure, latent action interface, grounded planning interface, and memory substrate. These roles expose distinctions that architecture-based groupings hide, including the gap between predictive sufficiency and control sufficiency, and the gap between passive video prediction and counterfactual action modeling.   The taxonomy supports an evaluation framework that judges a model by the sufficiency constraint its latent state was built to satisfy. We compare methods along seven axes: representation, prediction, planning, controllability, causal/counterfactual support, memory, and uncertainty. We use the resulting matrix as a diagnostic for what a latent state preserves, discards, and enables.   The conclusion that follows is that an actionable world model is the one whose state construction matches the task, not the one that preserves the most information.
+
+世界模型仅通过其构建的状态对代理而言才重要。该状态必须保留一些信息，丢弃其他信息，并支持一些未来功能：预测、控制、规划、记忆、基础或反事实推理。本文将世界模型研究视为充分性约束下的潜在状态设计。   我们提出了一种功能分类法，根据其潜在状态的用途，而不是按架构或应用领域对方法进行分组：预测嵌入、循环信念状态、对象/因果结构、潜在动作接口、接地规划接口和内存基底。这些角色暴露了基于架构的分组隐藏的区别，包括预测充分性和控制充分性之间的差距，以及被动视频预测和反事实动作建模之间的差距。   该分类法支持一个评估框架，该框架通过模型的潜在状态要满足的充分性约束来判断模型。我们沿着七个轴比较方法：表示、预测、规划、可控性、因果/反事实支持、记忆和不确定性。我们使用生成的矩阵来诊断潜在状态保留、丢弃和启用的内容。   由此得出的结论是，可操作的世界模型是其状态构造与任务相匹配的模型，而不是保留最多信息的模型。
+
+</details>
+
+---
+
+## 4. Dynamics Distillation for Efficient and Transferable Control Learning / 用于高效且可转移的控制学习的动力学蒸馏
+
+**Date**: 2026-05-02 | **arXiv**: [2605.01516v1](http://arxiv.org/abs/2605.01516v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.01516v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robust control policy learning for autonomous driving requires training environments to be both physically realistic and computationally scalable, properties that existing simulators provide only in isolation. We introduce Sim2Sim2Sim, a framework that bridges high-fidelity vehicle simulation and scalable reinforcement learning by distilling simulator dynamics into a highly parallelizable learned dynamics model. By training control policies purely within this distilled environment and deploying them back into the high-fidelity source simulator, we demonstrate more efficient policy optimization and reliable transfer under challenging dynamics. We further show that predictive accuracy alone does not fully characterize a learned dynamics model's suitability as a reinforcement learning training environment, which should also be assessed by the quality of the policies it enables.
+
+自动驾驶的鲁棒控制策略学习要求训练环境既具有物理真实性又具有计算可扩展性，而现有模拟器只能单独提供这些属性。我们引入了 Sim2Sim2Sim，这是一个框架，通过将模拟器动力学提炼为高度并行的学习动力学模型，将高保真车辆仿真和可扩展强化学习联系起来。通过纯粹在这个蒸馏环境中训练控制策略并将它们部署回高保真源模拟器中，我们展示了在具有挑战性的动态下更有效的策略优化和可靠的传输。我们进一步表明，仅预测准确性并不能完全表征学习动态模型作为强化学习训练环境的适用性，还应该通过其所支持的策略的质量来评估。
+
+</details>
+
+---
+
+## 5. Action Agent: Agentic Video Generation Meets Flow-Constrained Diffusion / 动作代理：代理视频生成遇到流量约束扩散
+
+**Date**: 2026-05-02 | **arXiv**: [2605.01477v1](http://arxiv.org/abs/2605.01477v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.01477v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present Action Agent, a two-stage framework that unifies agentic navigation video generation with flow-constrained diffusion control for multi-embodiment robot navigation. In Stage I, a large language model (LLM) acts as an orchestration module that selects video diffusion models, refines prompts through iterative validation, and accumulates cross-task memory to synthesize physically plausible first-person navigation videos from language and image inputs. This increases video generation success from 35% (single-shot) to 86% across 50 navigation tasks. In Stage II, we introduce FlowDiT, a Flow-Constrained Diffusion Transformer that converts optimized goal videos and language instructions into continuous velocity commands using action-space denoising diffusion. FlowDiT integrates DINOv2 visual features, learned optical flow for ego-motion representation, and CLIP language embeddings for semantic stopping. We pretrain on the RECON outdoor navigation dataset and fine-tune on 203 Unitree G1 humanoid episodes collected in Isaac Sim to calibrate velocity dynamics. A single 43M-parameter checkpoint achieves 73.2% navigation success in simulation and 64.7% task completion on a real Unitree G1 in unseen indoor environments under open-loop execution, while operating at 40--47 Hz. We evaluate Action Agent across three embodiments: a Unitree G1 humanoid (real hardware), a drone, and a wheeled mobile robot (Isaac Sim), demonstrating that decoupling trajectory imagination from execution yields a scalable and embodiment-aware paradigm for language-guided navigation.
+
+我们提出了 Action Agent，这是一个两阶段框架，它将代理导航视频生成与流约束扩散控制相结合，用于多实施例机器人导航。在第一阶段，大型语言模型（LLM）充当编排模块，选择视频扩散模型，通过迭代验证细化提示，并积累跨任务内存以从语言和图像输入合成物理上合理的第一人称导航视频。这将 50 个导航任务中的视频生成成功率从 35%（单次）提高到 86%。在第二阶段，我们引入了 FlowDiT，一种流约束扩散变压器，它使用动作空间去噪扩散将优化的目标视频和语言指令转换为连续速度命令。 FlowDiT 集成了 DINOv2 视觉特征、用于自我运动表示的学习光流以及用于语义停止的 CLIP 语言嵌入。我们对 RECON 户外导航数据集进行预训练，并对 Isaac Sim 中收集的 203 个 Unitree G1 人形数据集进行微调，以校准速度动力学。单个 43M 参数检查点在开环执行下，在不可见的室内环境中，在模拟中实现了 73.2% 的导航成功率，在真实的 Unitree G1 上实现了 64.7% 的任务完成率，同时运行频率为 40--47 Hz。我们通过三个实施例评估 Action Agent：Unitree G1 人形机器人（真实硬件）、无人机和轮式移动机器人 (Isaac Sim)，证明将轨迹想象与执行分离可以产生可扩展且可感知实施例的语言引导导航范例。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-04 (1 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-05-04
