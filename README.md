@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-05](papers/2026-05-05.md) - 6 papers
 - [2026-05-01](papers/2026-05-01.md) - 11 papers
 - [2026-04-30](papers/2026-04-30.md) - 9 papers
 - [2026-04-29](papers/2026-04-29.md) - 12 papers
@@ -71,6 +72,118 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-05 (6 papers)</b></summary>
+
+# arXiv Video Papers - 2026-05-05
+
+**Paper Count**: 6
+
+---
+
+## 1. TMD-Bench: A Multi-Level Evaluation Paradigm for Music-Dance Co-Generation / TMD-Bench：音乐舞蹈联生的多层次评估范式
+
+**Date**: 2026-05-03 | **arXiv**: [2605.01809v1](http://arxiv.org/abs/2605.01809v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.01809v1)
+
+**Categories**: cs.SD, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Unified audio-visual generation is rapidly gaining industrial and creative relevance, enabling applications in virtual production and interactive media. However, when moving from general audio-video synthesis to music-dance co-generation, the task becomes substantially harder: musical rhythm, phrasing, and accents must drive choreographic motion at fine temporal resolution, and such rhythmic coupling is not captured by unimodal metrics or generic audiovisual consistency scores used in current evaluation practice. We introduce TMD-Bench, a benchmark for text-driven music-dance co-generation that assesses systems across unimodal generation quality, instruction adherence, and cross-modal rhythmic alignment. The benchmark integrates computable physical metrics with perceptual multimodal judgments, and is supported by a curated rhythm-aligned music-dance dataset and a fine-grained Music Captioner for structured music semantics. TMD-Bench further reveals that (i) modern commercial audio-visual models, such as Veo 3 and Sora 2, produce high-quality music and video, while rhythmic coupling remains less consistently optimized and leaves room for improvement, and (ii) our unified baseline RhyJAM trained on rhythm-aligned data achieves competitive beat-level synchronization while maintaining competitive unimodal fidelity. This presents prospects for building next-generation music-dance models that explicitly optimize rhythmic and kinetic coherence.
+
+统一视听生成正在迅速获得工业和创意相关性，从而实现虚拟制作和交互式媒体中的应用。然而，当从一般的音频-视频合成转向音乐-舞蹈联合生成时，任务变得更加困难：音乐节奏、乐句和口音必须以精细的时间分辨率驱动编舞运动，而当前评估实践中使用的单峰度量或通用视听一致性分数无法捕获这种节奏耦合。我们推出了 TMD-Bench，这是文本驱动的音乐-舞蹈联合生成的基准，用于评估单模态生成质量、指令依从性和跨模态节奏对齐的系统。该基准将可计算的物理指标与感知多模态判断相结合，并得到精心策划的节奏对齐音乐舞蹈数据集和用于结构化音乐语义的细粒度音乐字幕器的支持。 TMD-Bench 进一步揭示，(i) 现代商业视听模型，如 Veo 3 和 Sora 2，可以产生高质量的音乐和视频，而节奏耦合仍然不太一致优化，并留有改进的空间，(ii) 我们在节奏对齐数据上训练的统一基线 RhyJAM 实现了有竞争力的节拍水平同步，同时保持有竞争力的单峰保真度。这为构建明确优化节奏和动力学连贯性的下一代音乐舞蹈模型提供了前景。
+
+</details>
+
+---
+
+## 2. Motion-Aware Caching for Efficient Autoregressive Video Generation / 用于高效自回归视频生成的运动感知缓存
+
+**Date**: 2026-05-03 | **arXiv**: [2605.01725v1](http://arxiv.org/abs/2605.01725v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.01725v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/ywlq/MotionCache.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive video generation paradigms offer theoretical promise for long video synthesis, yet their practical deployment is hindered by the computational burden of sequential iterative denoising. While cache reuse strategies can accelerate generation by skipping redundant denoising steps, existing methods rely on coarse-grained chunk-level skipping that fails to capture fine-grained pixel dynamics. This oversight is critical: pixels with high motion require more denoising steps to prevent error accumulation, while static pixels tolerate aggressive skipping. We formalize this insight theoretically by linking cache errors to residual instability, and propose MotionCache, a motion-aware cache framework that exploits inter-frame differences as a lightweight proxy for pixel-level motion characteristics. MotionCache employs a coarse-to-fine strategy: an initial warm-up phase establishes semantic coherence, followed by motion-weighted cache reuse that dynamically adjusts update frequencies per token. Extensive experiments on state-of-the-art models like SkyReels-V2 and MAGI-1 demonstrate that MotionCache achieves significant speedups of $\textbf{6.28}\times$ and $\textbf{1.64}\times$ respectively, while effectively preserving generation quality (VBench: $1\%\downarrow$ and $0.01\%\downarrow$ respectively). The code is available at https://github.com/ywlq/MotionCache.
+
+自回归视频生成范例为长视频合成提供了理论上的希望，但其实际部署却受到顺序迭代去噪的计算负担的阻碍。虽然缓存重用策略可以通过跳过冗余去噪步骤来加速生成，但现有方法依赖于粗粒度的块级跳过，而无法捕获细粒度的像素动态。这种疏忽至关重要：高运动的像素需要更多的去噪步骤以防止错误累积，而静态像素则可以容忍剧烈的跳跃。我们通过将缓存错误与残余不稳定性联系起来，从理论上形式化了这一见解，并提出了 MotionCache，这是一种运动感知缓存框架，它利用帧间差异作为像素级运动特征的轻量级代理。 MotionCache 采用从粗到细的策略：初始预热阶段建立语义一致性，然后是运动加权缓存重用，动态调整每个令牌的更新频率。对 SkyReels-V2 和 MAGI-1 等最先进模型的大量实验表明，MotionCache 分别实现了 $\textbf{6.28}\times$ 和 $\textbf{1.64}\times$ 的显着加速，同时有效地保持了生成质量（VBench：分别为 $1\%\downarrow$ 和 $0.01\%\downarrow$）。该代码可从 https://github.com/ywlq/MotionCache 获取。
+
+</details>
+
+---
+
+## 3. SignVerse-2M: A Two-Million-Clip Pose-Native Universe of 25+ Sign Languages / SignVerse-2M：包含 200 万个剪辑的姿势原生宇宙，包含 25 多种手语
+
+**Date**: 2026-05-03 | **arXiv**: [2605.01720v1](http://arxiv.org/abs/2605.01720v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.01720v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing large-scale sign language resources typically provide supervision only at the level of raw video-text alignment and are often produced in laboratory settings. While such resources are important for semantic understanding, they do not directly provide a unified interface for open-world recognition and translation, or for modern pose-driven sign language video generation frameworks: 1. RGB-based pretrained recognition models depend heavily on fixed backgrounds or clothing conditions during recording, and are less robust in open-world settings than style-agnostic pose-processing models. 2. Recent pose-guided image/video generation models mostly use a unified keypoint representation such as DWPose as their control interface. At present, the sign language field still lacks a data resource that can directly interface with this modern pose-native paradigm while also targeting real-world open scenarios. We present SignVerse-2M, a large-scale multilingual pose-native dataset for sign language pose modeling and evaluation. Built from publicly available multilingual sign language video resources, it applies DWPose in a unified preprocessing pipeline to convert raw videos into 2D pose sequences that can be used directly for modeling, resulting in a consolidated corpus of about two million clips covering more than 25 sign languages. Unlike many laboratory datasets, this resource preserves the recording conditions and speaker diversity of real-world videos while reducing appearance variation through a unified pose representation. Toward this goal, we further provide the data construction pipeline, task definitions, and a simple SignDW Transformer baseline, demonstrating the feasibility of this resource for multilingual pose-space modeling and its compatibility with modern pose-driven pipelines, while discussing the evaluation claims it can support as well as its current limitations.
+
+现有的大规模手语资源通常仅在原始视频文本对齐级别提供监督，并且通常是在实验室环境中生成的。虽然这些资源对于语义理解很重要，但它们并不直接为开放世界识别和翻译或现代姿势驱动的手语视频生成框架提供统一的接口： 1. 基于 RGB 的预训练识别模型在很大程度上依赖于录制期间的固定背景或服装条件，并且在开放世界设置中不如与风格无关的姿势处理模型稳健。 2.最近的姿势引导图像/视频生成模型大多使用统一的关键点表示（例如DWPose）作为其控制接口。目前，手语领域仍然缺乏能够直接与这种现代姿势原生范式对接，同时又针对现实世界开放场景的数据资源。我们提出了 SignVerse-2M，这是一个用于手语姿势建模和评估的大规模多语言姿势本机数据集。它基于公开的多语言手语视频资源构建，在统一的预处理管道中应用 DWPose，将原始视频转换为可直接用于建模的 2D 姿势序列，从而形成包含约 200 万个剪辑的综合语料库，涵盖超过 25 种手语。与许多实验室数据集不同，该资源保留了现实世界视频的录制条件和说话者多样性，同时通过统一的姿势表示减少了外观变化。为了实现这一目标，我们进一步提供了数据构建管道、任务定义和简单的 SignDW Transformer 基线，展示了该资源用于多语言姿势空间建模的可行性及其与现代姿势驱动管道的兼容性，同时讨论了它可以支持的评估声明及其当前的局限性。
+
+</details>
+
+---
+
+## 4. Latent State Design for World Models under Sufficiency Constraints / 充足性约束下世界模型的潜在状态设计
+
+**Date**: 2026-05-03 | **arXiv**: [2605.01694v1](http://arxiv.org/abs/2605.01694v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.01694v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A world model matters to an agent only through the state it constructs. That state must preserve some information, discard other information, and support some future function: prediction, control, planning, memory, grounding, or counterfactual reasoning. This paper treats world-model research as latent state design under sufficiency constraints.   We propose a functional taxonomy that groups methods by what their latent state is for, rather than by architecture or application domain: predictive embedding, recurrent belief state, object/causal structure, latent action interface, grounded planning interface, and memory substrate. These roles expose distinctions that architecture-based groupings hide, including the gap between predictive sufficiency and control sufficiency, and the gap between passive video prediction and counterfactual action modeling.   The taxonomy supports an evaluation framework that judges a model by the sufficiency constraint its latent state was built to satisfy. We compare methods along seven axes: representation, prediction, planning, controllability, causal/counterfactual support, memory, and uncertainty. We use the resulting matrix as a diagnostic for what a latent state preserves, discards, and enables.   The conclusion that follows is that an actionable world model is the one whose state construction matches the task, not the one that preserves the most information.
+
+世界模型仅通过其构建的状态对代理而言才重要。该状态必须保留一些信息，丢弃其他信息，并支持一些未来功能：预测、控制、规划、记忆、基础或反事实推理。本文将世界模型研究视为充分性约束下的潜在状态设计。   我们提出了一种功能分类法，根据其潜在状态的用途，而不是按架构或应用领域对方法进行分组：预测嵌入、循环信念状态、对象/因果结构、潜在动作接口、接地规划接口和内存基底。这些角色暴露了基于架构的分组隐藏的区别，包括预测充分性和控制充分性之间的差距，以及被动视频预测和反事实动作建模之间的差距。   该分类法支持一个评估框架，该框架通过模型的潜在状态要满足的充分性约束来判断模型。我们沿着七个轴比较方法：表示、预测、规划、可控性、因果/反事实支持、记忆和不确定性。我们使用生成的矩阵来诊断潜在状态保留、丢弃和启用的内容。   由此得出的结论是，可操作的世界模型是其状态构造与任务相匹配的模型，而不是保留最多信息的模型。
+
+</details>
+
+---
+
+## 5. IMPACT-Scribe: Interactive Temporal Action Segmentation with Boundary Scribbles and Query Planning / IMPACT-Scribe：具有边界涂鸦和查询规划的交互式时间动作分割
+
+**Date**: 2026-05-03 | **arXiv**: [2605.01668v1](http://arxiv.org/abs/2605.01668v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.01668v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/BanzQians/IMPACT_AS.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Dense temporal annotation of procedural activity videos is vital for action understanding and embodied intelligence but remains labor-intensive due to reactive tools. Each correction is treated as an isolated edit, limiting reuse of information on annotator uncertainty and model reliability. We introduce IMPACT-Scribe, a correction-driven framework for dense labeling that uses each correction to improve future human-machine collaboration. IMPACT-Scribe combines uncertainty-aware boundary scribble supervision, local proposal modeling, cost-aware query planning, structured propagation, and correction-driven adaptation. Experiments and a human study show that this closed-loop design improves labeling quality per effort, enhances boundary accuracy, and fosters better human-machine interaction over time. The code will be made publicly available at https://github.com/BanzQians/IMPACT_AS.
+
+程序活动视频的密集时间注释对于动作理解和体现智能至关重要，但由于反应性工具，仍然是劳动密集型的。每次更正都被视为单独的编辑，限制了有关注释器不确定性和模型可靠性的信息的重用。我们推出了 IMPACT-Scribe，这是一种用于密集标记的校正驱动框架，它使用每次校正来改善未来的人机协作。 IMPACT-Scribe 结合了不确定性感知边界涂鸦监督、局部提案建模、成本感知查询规划、结构化传播和校正驱动的适应。实验和人体研究表明，这种闭环设计可以提高每次工作的标签质量，提高边界精度，并随着时间的推移促进更好的人机交互。该代码将在 https://github.com/BanzQians/IMPACT_AS 上公开发布。
+
+</details>
+
+---
+
+## 6. TRIMMER: A New Paradigm for Video Summarization through Self-Supervised Reinforcement Learning / TRIMMER：通过自监督强化学习进行视频摘要的新范式
+
+**Date**: 2026-05-03 | **arXiv**: [2605.01659v1](http://arxiv.org/abs/2605.01659v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.01659v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The rapid growth of video content across domains such as surveillance, education, and social media has made efficient content understanding increasingly critical. Video summarization addresses this challenge by generating concise yet semantically meaningful representations, but existing approaches often rely on expensive manual annotations, struggle to generalize across domains, and incur significant computational costs due to complex architectures. Moreover, unsupervised and weakly supervised methods typically underperform compared to supervised counterparts in capturing long-range temporal dependencies and semantic structure. In this work, we propose TRIMMER (Temporal Relative Information Maximization for Multi-objective Efficient Reinforcement), a novel self-supervised reinforcement learning framework for video summarization. TRIMMER operates in two stages: it first learns robust representations via self-supervised learning and then performs spatio-temporal decision making through reinforcement learning guided by information-theoretic reward functions. Unlike prior approaches that rely on similarity-based objectives, our method introduces entropy-based metrics to capture higher-order temporal dynamics and semantic diversity, while computing rewards directly over selected frame indices to improve computational efficiency. Extensive experiments on standard benchmarks demonstrate that TRIMMER achieves state-of-the-art performance among unsupervised and self-supervised methods, while remaining competitive with leading supervised approaches, highlighting its effectiveness for scalable and generalizable video summarization.
+
+监控、教育和社交媒体等领域视频内容的快速增长使得高效的内容理解变得越来越重要。视频摘要通过生成简洁但语义上有意义的表示来解决这一挑战，但现有方法通常依赖于昂贵的手动注释，难以跨领域泛化，并且由于复杂的架构而产生大量的计算成本。此外，与有监督方法相比，无监督和弱监督方法在捕获远程时间依赖性和语义结构方面通常表现不佳。在这项工作中，我们提出了 TRIMMER（多目标高效强化的时间相对信息最大化），这是一种用于视频摘要的新型自监督强化学习框架。 TRIMMER 分两个阶段运行：首先通过自我监督学习学习稳健的表示，然后通过信息论奖励函数指导的强化学习执行时空决策。与依赖于基于相似性的目标的先前方法不同，我们的方法引入了基于熵的度量来捕获高阶时间动态和语义多样性，同时直接在选定的帧索引上计算奖励以提高计算效率。对标准基准的大量实验表明，TRIMMER 在无监督和自监督方法中实现了最先进的性能，同时与领先的监督方法保持竞争力，突出了其在可扩展和可概括的视频摘要方面的有效性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-01 (11 papers)</b></summary>
 
 # arXiv Video Papers - 2026-05-01
