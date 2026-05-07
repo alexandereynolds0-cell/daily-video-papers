@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-07](papers/2026-05-07.md) - 10 papers
 - [2026-05-06](papers/2026-05-06.md) - 4 papers
 - [2026-05-05](papers/2026-05-05.md) - 5 papers
 - [2026-05-04](papers/2026-05-04.md) - 1 papers
@@ -67,6 +68,178 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-07 (10 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-05-07
+
+**Paper Count**: 10
+
+---
+
+## 1. Driver-WM: A Driver-Centric Traffic-Conditioned Latent World Model for In-Cabin Dynamics Rollout / Driver-WM：以驾驶员为中心、以交通为条件的潜在世界模型，用于车内动力学的推出
+
+**Date**: 2026-05-06 | **arXiv**: [2605.05092v1](http://arxiv.org/abs/2605.05092v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.05092v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Safe L2/L3 driving automation requires anticipating human-in-the-loop reactions during shared-control transitions. While most driving world models forecast the external environment, in-cabin intelligence remains strictly recognition-oriented and lacks multi-step rollout capabilities for driver dynamics. We introduce Driver-WM, a driver-centric latent world model that rolls out in-cabin dynamics causally conditioned on out-cabin traffic context. This formulation unifies physical kinematics forecasting with auxiliary behavioral and emotional semantic recognition. Operating in a compact latent space constructed from frozen vision-language features, Driver-WM adopts a dual-stream architecture to separately encode external traffic and internal driver states. These streams are directionally coupled via a gated causal injection mechanism, which uses a learned vector gate to modulate external contextual perturbations while strictly enforcing temporal causality. Evaluations on a multi-task assistive driving benchmark demonstrate that Driver-WM yields robust long-horizon geometric forecasting for reactive high-motion maneuvers and improves semantic alignment for both driver and traffic states. Finally, the explicit external-to-internal conditioning allows for controlled test-time interventions to systematically analyze mechanism responses.
+
+安全的 L2/L3 驾驶自动化需要预测共享控制转换期间的人机交互反应。虽然大多数驾驶世界模型都会预测外部环境，但车内智能仍然严格以识别为导向，缺乏针对驾驶员动态的多步推出功能。我们引入了 Driver-WM，这是一种以驾驶员为中心的潜在世界模型，它根据车外交通环境推出了车内动态。该公式将物理运动学预测与辅助行为和情感语义识别相结合。 Driver-WM 在由冻结视觉语言特征构建的紧凑潜在空间中运行，采用双流架构来单独编码外部流量和内部驱动程序状态。这些流通过门控因果注入机制定向耦合，该机制使用学习的向量门来调节外部上下文扰动，同时严格执行时间因果关系。对多任务辅助驾驶基准的评估表明，Driver-WM 可为反应性高运动操作提供稳健的长视野几何预测，并改善驾驶员和交通状态的语义对齐。最后，明确的外部到内部调节允许受控的测试时间干预来系统地分析机制反应。
+
+</details>
+
+---
+
+## 2. The Predictive-Causal Gap: An Impossibility Theorem and Large-Scale Neural Evidence / 预测因果差距：不可能定理和大规模神经证据
+
+**Date**: 2026-05-06 | **arXiv**: [2605.05029v1](http://arxiv.org/abs/2605.05029v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.05029v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We report a systematic failure mode in predictive representation learning. Across 2695 neural network configurations trained to predict linear-Gaussian dynamics, the optimal encoder tracks the environment rather than the system it is meant to model. The mean causal fidelity -- the fraction of encoder sensitivity allocated to system degrees of freedom -- is 0.49, and only 2.5% of configurations exceed 0.70. The failure intensifies with dimension: at N=100, the optimal encoder becomes causally blind (fidelity ~10^{-8}) while achieving 92% lower prediction error than the causal representation. We prove this is not an optimization artifact but a structural property of the predictive objective: when environment modes are slower or less noisy than system modes, every minimizer of the population risk encodes the former. The set of dynamics exhibiting this predictive-causal gap is open and of positive measure in parameter space. In a nonlinear Duffing-GRU sweep, unconstrained predictors learn environment-dominant representations in 55% of tasks (95% CI 41--68%) versus 24% under operational grounding (p=2.3e-3); the median out-of-distribution MSE inflation under environment shift is 1.82x versus 1.00x. Operational grounding -- restricting the loss to system observables -- partially suppresses the gap, but causal fidelity is never recovered without an explicit system-environment boundary. The results identify the predictive-causal gap as a structural limit of learning, with implications for self-supervised representation learning, world models, and the scaling paradigm.
+
+我们报告了预测表示学习中的系统故障模式。在经过训练来预测线性高斯动力学的 2695 个神经网络配置中，最佳编码器跟踪环境而不是它要建模的系统。平均因果保真度（分配给系统自由度的编码器灵敏度分数）为 0.49，只有 2.5% 的配置超过 0.70。失败随着维度的增加而加剧：在 N=100 时，最优编码器变得因果盲（保真度 ~10^{-8}），同时实现比因果表示低 92% 的预测误差。我们证明这不是优化工件，而是预测目标的结构属性：当环境模式比系统模式更慢或噪音更少时，总体风险的每个最小化都会对前者进行编码。表现出这种预测因果差距的动态集是开放的，并且在参数空间中具有正测量值。在非线性 Duffing-GRU 扫描中，无约束预测器在 55% 的任务中学习环境主导表示（95% CI 41--68%），而在操作基础下则为 24%（p=2.3e-3）；环境转变下的分布外 MSE 通胀中位数为 1.82 倍，而环境变化时为 1.00 倍。操作基础——限制系统可观测值的损失——部分地抑制了差距，但如果没有明确的系统环境边界，因果保真度就永远无法恢复。结果将预测因果差距确定为学习的结构性限制，对自监督表征学习、世界模型和缩放范式具有影响。
+
+</details>
+
+---
+
+## 3. A geometric relation of the error introduced by sampling a language model's output distribution to its internal state / 通过对语言模型的输出分布对其内部状态进行采样而引入的误差的几何关系
+
+**Date**: 2026-05-06 | **arXiv**: [2605.04899v1](http://arxiv.org/abs/2605.04899v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.04899v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+GPT-style language models are sensitive to single-token changes at generation points where the predicted probability distribution is spread across multiple tokens. Viewing this sensitivity as a geometric property, we derive an $\mathfrak{so}(n)$-valued 1-form that depends only on the geometry of the token embeddings. Despite this purely geometric origin, we show that its curvature is semantically meaningful: On chess reasoning tasks, the curvature couples to the world model of an off-the-shelf instruction-tuned model, with transformations clustering by board region and respecting piece importance. Our findings suggest that token space geometry directly reflects how models internally represent problems.
+
+GPT 风格的语言模型对生成点处的单个标记变化很敏感，其中预测的概率分布分布在多个标记上。将这种敏感性视为几何属性，我们推导出 $\mathfrak{so}(n)$ 值的 1-形式，该形式仅取决于令牌嵌入的几何形状。尽管有这种纯粹的几何起源，但我们表明它的曲率在语义上是有意义的：在国际象棋推理任务中，曲率与现成的指令调整模型的世界模型耦合，变换按棋盘区域进行聚类并尊重棋子的重要性。我们的研究结果表明，令牌空间几何直接反映了模型内部如何表示问题。
+
+</details>
+
+---
+
+## 4. Gyan: An Explainable Neuro-Symbolic Language Model / Gyan：可解释的神经符号语言模型
+
+**Date**: 2026-05-06 | **arXiv**: [2605.04759v1](http://arxiv.org/abs/2605.04759v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.04759v1)
+
+**Categories**: cs.CL, cs.AI, cs.ET, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Transformer based pre-trained large language models have become ubiquitous. There is increasing evidence to suggest that even with large scale pre-training, these models do not capture complete compositional context and certainly not, the full human analogous context. Besides, by the very nature of the architecture, these models hallucinate, are difficult to maintain, are not easily interpretable and require enormous compute resources for training and inference. Here, we describe Gyan, an explainable language model based on a novel non-transformer architecture, without any of these limitations. Gyan achieves SOTA performance on 3 widely cited data sets and superior performance on two proprietary data sets. The novel architecture decouples the language model from knowledge acquisition and representation. The model draws on rhetorical structure theory, semantic role theory and knowledge-based computational linguistics. Gyan's meaning representation structure captures the complete compositional context and attempts to mimic humans by expanding the context to a 'world model'. AI model adoption critically depends on trust and transparency especially in mission critical use cases. Collectively, our results demonstrate that it is possible to create models which are trustable and reliable for mission critical tasks. We believe our work has tremendous potential for guiding the development of transparent and trusted architectures for language models.
+
+基于 Transformer 的预训练大型语言模型已经变得无处不在。越来越多的证据表明，即使进行了大规模的预训练，这些模型也无法捕获完整的构图上下文，当然也不能捕获完整的人类类似上下文。此外，由于架构的本质，这些模型会产生幻觉，难以维护，不易解释，并且需要大量的计算资源来进行训练和推理。在这里，我们描述了 Gyan，一种基于新颖的非变压器架构的可解释语言模型，没有任何这些限制。 Gyan 在 3 个广泛引用的数据集上实现了 SOTA 性能，并在两个专有数据集上实现了卓越的性能。这种新颖的架构将语言模型与知识获取和表示解耦。该模型借鉴了修辞结构理论、语义角色理论和基于知识的计算语言学。 Gyan 的意义表示结构捕获了完整的组合上下文，并试图通过将上下文扩展到“世界模型”来模仿人类。人工智能模型的采用关键取决于信任和透明度，尤其是在关键任务用例中。总的来说，我们的结果表明，创建对于关键任务而言可信且可靠的模型是可能的。我们相信我们的工作在指导透明且可信的语言模型架构的开发方面具有巨大的潜力。
+
+</details>
+
+---
+
+## 5. ELVIS: Ensemble-Calibrated Latent Imagination for Long-Horizon Visual MPC / ELVIS：长视野视觉 MPC 的整体校准潜在想象力
+
+**Date**: 2026-05-06 | **arXiv**: [2605.04709v1](http://arxiv.org/abs/2605.04709v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.04709v1)
+
+**Categories**: cs.LG, cs.RO, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A central challenge of visual control with model-based reinforcement learning (RL) is reliable long-horizon planning: long rollouts with learned latent dynamics exhibit branching futures and multi-modal action-value distributions. In addition, compounding model errors amplified by visual occlusions make deep imagination brittle. We present ELVIS, a latent model predictive controller (MPC) designed to make long-horizon planning practical. ELVIS plans in a Dreamer-style recurrent state space model (RSSM) and replaces standard unimodal model predictive path integral (MPPI) with a Gaussian-mixture MPPI that maintains multiple coherent hypotheses over long horizons, avoiding mode averaging under branching rollouts. In parallel, ELVIS stabilizes deep imagination with a shared uncertainty-aware lambda-return: an ensemble of latent critics defines an upper-confidence-bound (UCB) score that gates a time-varying lambda, adaptively trading off bootstrapping versus look-ahead to limit compounding error during planning. The same return is used both to train an actor-critic prior from imagined rollouts and to score candidate trajectories inside GMM-MPPI, aligning RL objectives with the planner's long-horizon optimization. On fourteen DeepMind Control Suite visual tasks, ELVIS establishes state-of-the-art performance compared with TD-MPC2 and DreamerV3. Finally, ELVIS transfers zero-shot to a real-world sand-spraying task with severe occlusions, improving surface-quality metrics and demonstrating robustness beyond simulation.
+
+基于模型的强化学习 (RL) 视觉控制的一个核心挑战是可靠的长期规划：具有学习的潜在动态的长期部署表现出分支未来和多模式动作价值分布。此外，由于视觉遮挡而放大的复合模型误差使深度想象力变得脆弱。我们推出了 ELVIS，一种潜在模型预测控制器 (MPC)，旨在使长期规划变得实用。 ELVIS 采用 Dreamer 式循环状态空间模型 (RSSM) 进行规划，并用高斯混合 MPPI 取代标准单峰模型预测路径积分 (MPPI)，该高斯混合 MPPI 在长期范围内保持多个连贯假设，避免在分支部署下进行模式平均。与此同时，ELVIS 通过共享的不确定性感知 lambda-return 来稳定深层想象力：潜在批评者的集合定义了一个置信上限（UCB）分数，该分数门控时变 lambda，自适应地权衡引导与前瞻，以限制规划期间的复合错误。相同的回报既可用于在想象的推出之前训练 actor-critic，也可用于对 GMM-MPPI 内的候选轨迹进行评分，从而使 RL 目标与规划器的长期优化保持一致。在 14 个 DeepMind Control Suite 视觉任务中，与 TD-MPC2 和 DreamerV3 相比，ELVIS 建立了最先进的性能。最后，ELVIS 将零射击转移到具有严重遮挡的现实世界喷砂任务中，改善了表面质量指标并展示了超越模拟的鲁棒性。
+
+</details>
+
+---
+
+## 6. Dream-MPC: Gradient-Based Model Predictive Control with Latent Imagination / Dream-MPC：具有潜在想象力的基于梯度的模型预测控制
+
+**Date**: 2026-05-06 | **arXiv**: [2605.04568v1](http://arxiv.org/abs/2605.04568v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.04568v1)
+
+**Categories**: cs.LG, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+State-of-the-art model-based Reinforcement Learning (RL) approaches either use gradient-free, population-based methods for planning, learned policy networks, or a combination of policy networks and planning. Hybrid approaches that combine Model Predictive Control (MPC) with a learned model and a policy prior to leverage the advantages of both paradigms have shown promising results. However, these approaches typically rely on gradient-free optimization methods, which can be computationally expensive for high-dimensional control tasks. While gradient-based methods are a promising alternative, recent works have empirically shown that gradient-based methods often perform worse than their gradient-free counterparts. We propose Dream-MPC, a novel approach that generates few candidate trajectories from a rolled-out policy and optimizes each trajectory by gradient ascent using a learned world model, uncertainty regularization and amortization of optimization iterations over time by reusing previously optimized actions. Our results on 24 continuous control tasks show that Dream-MPC can significantly improve the performance of the underlying policy and can outperform gradient-free MPC and state-of-the-art baselines. We will open source our code and more at https://dream-mpc.github.io.
+
+最先进的基于模型的强化学习 (RL) 方法要么使用无梯度、基于人口的方法进行规划、学习策略网络，要么使用策略网络和规划的组合。将模型预测控制（MPC）与学习模型和策略相结合的混合方法在利用这两种范式的优点之前已经显示出有希望的结果。然而，这些方法通常依赖于无梯度优化方法，这对于高维控制任务来说计算成本可能很高。虽然基于梯度的方法是一种有前途的替代方法，但最近的研究经验表明，基于梯度的方法通常比无梯度方法的性能更差。我们提出了 Dream-MPC，这是一种新颖的方法，它从推出的策略中生成少量候选轨迹，并通过使用学习的世界模型的梯度上升、不确定性正则化以及通过重用先前优化的操作随时间摊销优化迭代来优化每个轨迹。我们在 24 个连续控制任务上的结果表明，Dream-MPC 可以显着提高底层策略的性能，并且可以超越无梯度 MPC 和最先进的基线。我们将在 https://dream-mp​​c.github.io 开源我们的代码和更多内容。
+
+</details>
+
+---
+
+## 7. Counter-Dyna: Data-Efficient RL-Based HVAC Control using Counterfactual Building Models / Counter-Dyna：使用反事实建筑模型进行数据高效的基于 RL 的 HVAC 控制
+
+**Date**: 2026-05-06 | **arXiv**: [2605.04555v1](http://arxiv.org/abs/2605.04555v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.04555v1)
+
+**Categories**: cs.LG, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Model-based reinforcement learning (MBRL) offers a promising approach for data-efficient energy management in buildings, combining the strengths of predictive modeling and reinforcement learning. While previous MBRL methods applied to HVAC control have reduced training data requirements, they still require several months of interaction with the building to learn a satisfactory control policy. A key reason is that existing surrogate models attempt to predict the entire state-space, including weather and electricity prices that are unaffected by control actions, or completely ignore these variables. Addressing these issues, we propose Counter-Dyna, a method that enhances the data-efficiency of Dyna, an MBRL method. We create data-efficient counterfactual surrogate models (CSM) by leveraging invariances in the state-space. Using a CSM in Dyna speeds up RL training measured in environment interaction data compared to previous results. In comparison with previous state-of-the-art that used 6-12 months of environment interactions, our method needs only 5 weeks. We evaluate our method in a large simulation study using the literature standard BOPTEST framework and proximal policy algorithm (PPO) as the RL algorithm. Our results show cost-saving potentials of 5.3% to 17.0% in a hypothetical deployment scenario. Our work is a significant step towards making real-world deployment of RL algorithms in HVAC control practically viable.
+
+基于模型的强化学习 (MBRL) 结合了预测建模和强化学习的优势，为建筑物中数据高效的能源管理提供了一种有前景的方法。虽然以前应用于 HVAC 控制的 MBRL 方法减少了训练数据要求，但它们仍然需要与建筑物进行几个月的交互才能学习令人满意的控制策略。一个关键原因是现有的代理模型试图预测整个状态空间，包括不受控制行为影响的天气和电价，或者完全忽略这些变量。为了解决这些问题，我们提出了 Counter-Dyna，这是一种提高 Dyna（MBRL 方法）数据效率的方法。我们通过利用状态空间中的不变性来创建数据高效的反事实代理模型（CSM）。与之前的结果相比，在 Dyna 中使用 CSM 可以加快环境交互数据中测量的 RL 训练速度。与之前需要 6-12 个月的环境交互的最先进技术相比，我们的方法只需要 5 周。我们使用文献标准 BOPTEST 框架和近端策略算法 (PPO) 作为 RL 算法，在大型模拟研究中评估我们的方法。我们的结果显示，在假设的部署场景中，成本节约潜力可达 5.3% 至 17.0%。我们的工作是朝着在 HVAC 控制中实际部署 RL 算法迈出的重要一步。
+
+</details>
+
+---
+
+## 8. Counterfactual identifiability beyond global monotonicity: non-monotone triangular structural causal models / 超越全局单调性的反事实可识别性：非单调三角结构因果模型
+
+**Date**: 2026-05-06 | **arXiv**: [2605.04413v1](http://arxiv.org/abs/2605.04413v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.04413v1)
+
+**Categories**: cs.LG, stat.ME
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Structural causal models provide a unified semantics for interventions and counterfactuals, but most identifiability results rely on restrictive assumptions like global monotonicity, which are often violated in embodied interaction, where the same exogenous perturbation can induce opposite responses under different contact contexts. We ask what structure still suffices once global monotonicity is dropped. We introduce non-monotone triangular structural causal models (NM-TM-SCM), which retain triangular recursion but replace global monotonicity with mechanism-wise invertibility and context-independent inverse transport. We prove that these conditions are equivalent to exogenous isomorphism and imply complete counterfactual identifiability, and we give a counterexample showing that local invertibility alone is insufficient. We instantiate the theory in CausalInverter, with triangular invertible layers, orientation gates, and transport-stability regularization. On synthetic non-monotonic mechanisms, the structural bias yields systematic counterfactual gains as non-monotonicity increases. On MuJoCo Door, our model achieves perfect event-level counterfactual recovery, lowers continuous angle error relative to a Transformer baseline, and delivers substantially more stable recovery than Transformer and conditional-flow predictors. On MuJoCo Push, where non-monotonicity is weaker, the same low-data predictors remain competitive or better, consistent with a bias-variance boundary. These results identify a broader identifiable regime between globally monotone triangular models and unconstrained black-box world models.
+
+结构因果模型为干预和反事实提供了统一的语义，但大多数可识别性结果依赖于全局单调性等限制性假设，这些假设在具体交互中经常被违反，其中相同的外源扰动可以在不同的接触环境下引起相反的反应。我们要问的是，一旦全局单调性消失，什么结构仍然足够。我们引入了非单调三角结构因果模型（NM-TM-SCM），它保留了三角递归，但用机制可逆性和上下文无关的逆传输取代了全局单调性。我们证明这些条件等价于外生同构，并且意味着完全的反事实可识别性，并且我们给出了一个反例，表明仅局部可逆性是不够的。我们在 CausalInverter 中实例化了该理论，包括三角形可逆层、方向门和传输稳定性正则化。在合成非单调机制上，随着非单调性的增加，结构偏差会产生系统性的反事实增益。在 MuJoCo Door 上，我们的模型实现了完美的事件级反事实恢复，降低了相对于 Transformer 基线的连续角度误差，并提供了比 Transformer 和条件流预测器更加稳定的恢复。在 MuJoCo Push 上，非单调性较弱，相同的低数据预测器仍然具有竞争力或更好，与偏差方差边界一致。这些结果确定了全局单调三角模型和无约束黑盒世界模型之间更广泛的可识别机制。
+
+</details>
+
+---
+
+## 9. Awaking Spatial Intelligence in Unified Multimodal Understanding and Generation / 在统一多模态理解和生成中唤醒空间智能
+
+**Date**: 2026-05-05 | **arXiv**: [2605.04128v1](http://arxiv.org/abs/2605.04128v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.04128v1)
+
+**Categories**: cs.GR, cs.AI, cs.CL, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present JoyAI-Image, a unified multimodal foundation model for visual understanding, text-to-image generation, and instruction-guided image editing. JoyAI-Image couples a spatially enhanced Multimodal Large Language Model (MLLM) with a Multimodal Diffusion Transformer (MMDiT), allowing perception and generation to interact through a shared multimodal interface. Around this architecture, we build a scalable training recipe that combines unified instruction tuning, long-text rendering supervision, spatially grounded data, and both general and spatial editing signals. This design gives the model broad multimodal capability while strengthening geometry-aware reasoning and controllable visual synthesis. Experiments across understanding, generation, long-text rendering, and editing benchmarks show that JoyAI-Image achieves state-of-the-art or highly competitive performance. More importantly, the bidirectional loop between enhanced understanding, controllable spatial editing, and novel-view-assisted reasoning enables the model to move beyond general visual competence toward stronger spatial intelligence. These results suggest a promising path for unified visual models in downstream applications such as vision-language-action systems and world models.
+
+我们推出了 JoyAI-Image，这是一个用于视觉理解、文本到图像生成和指令引导图像编辑的统一多模态基础模型。 JoyAI-Image 将空间增强的多模态大语言模型 (MLLM) 与多模态扩散变压器 (MMDiT) 结合起来，允许感知和生成通过共享的多模态界面进行交互。围绕这个架构，我们构建了一个可扩展的训练配方，它结合了统一指令调整、长文本渲染监督、空间接地数据以及通用和空间编辑信号。这种设计赋予模型广泛的多模态能力，同时加强几何感知推理和可控视觉合成。跨理解、生成、长文本渲染和编辑基准的实验表明，JoyAI-Image 实现了最先进或极具竞争力的性能。更重要的是，增强理解、可控空间编辑和新颖视图辅助推理之间的双向循环使模型能够超越一般视觉能力，迈向更强的空间智能。这些结果为视觉-语言-动作系统和世界模型等下游应用中的统一视觉模型提供了一条有前途的道路。
+
+</details>
+
+---
+
+## 10. iWorld-Bench: A Benchmark for Interactive World Models with a Unified Action Generation Framework / iWorld-Bench：具有统一动作生成框架的交互式世界模型的基准
+
+**Date**: 2026-05-05 | **arXiv**: [2605.03941v2](http://arxiv.org/abs/2605.03941v2) | **PDF**: [Link](http://arxiv.org/pdf/2605.03941v2)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Achieving Artificial General Intelligence (AGI) requires agents that learn and interact adaptively, with interactive world models providing scalable environments for perception, reasoning, and action. Yet current research still lacks large-scale datasets and unified benchmarks to evaluate their physical interaction capabilities. To address this, we propose iWorld-Bench, a comprehensive benchmark for training and testing world models on interaction-related abilities such as distance perception and memory. We construct a diverse dataset with 330k video clips and select 2.1k high-quality samples covering varied perspectives, weather, and scenes. As existing world models differ in interaction modalities, we introduce an Action Generation Framework to unify evaluation and design six task types, generating 4.9k test samples. These tasks jointly assess model performance across visual generation, trajectory following, and memory. Evaluating 14 representative world models, we identify key limitations and provide insights for future research. The iWorld-Bench model leaderboard is publicly available at iWorld-Bench.com.
+
+实现通用人工智能 (AGI) 需要智能体能够自适应地学习和交互，并通过交互式世界模型为感知、推理和行动提供可扩展的环境。然而目前的研究仍然缺乏大规模的数据集和统一的基准来评估它们的物理交互能力。为了解决这个问题，我们提出了 iWorld-Bench，这是一个用于训练和测试距离感知和记忆等交互相关能力的世界模型的综合基准。我们构建了一个包含 330k 视频片段的多样化数据集，并选择了 2100 个涵盖不同视角、天气和场景的高质量样本。由于现有的世界模型在交互方式上有所不同，我们引入了一个动作生成框架来统一评估和设计六种任务类型，生成 4.9k 测试样本。这些任务共同评估视觉生成、轨迹跟踪和记忆方面的模型性能。通过评估 14 个具有代表性的世界模型，我们确定了关键局限性并为未来的研究提供了见解。 iWorld-Bench 模型排行榜可在 iWorld-Bench.com 上公开获取。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-06 (4 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-05-06
