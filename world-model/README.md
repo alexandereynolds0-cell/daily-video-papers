@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-09](papers/2026-05-09.md) - 8 papers
 - [2026-05-07](papers/2026-05-07.md) - 10 papers
 - [2026-05-06](papers/2026-05-06.md) - 4 papers
 - [2026-05-05](papers/2026-05-05.md) - 5 papers
@@ -68,6 +69,146 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-09 (8 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-05-09
+
+**Paper Count**: 8
+
+---
+
+## 1. 3D MRI Image Pretraining via Controllable 2D Slice Navigation Task / 通过可控 2D 切片导航任务进行 3D MRI 图像预训练
+
+**Date**: 2026-05-07 | **arXiv**: [2605.06487v1](http://arxiv.org/abs/2605.06487v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.06487v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Self-supervised pretraining has become the mainstream approach for learning MRI representations from unlabeled scans. However, most existing objectives still treat each scan primarily as static aggregations of slices, patches or volumes. We ask whether there exists an intrinsic form of self-supervision signal that is different from reconstructing the masked patches, through transforming the 3D volumes into controllable 2D rendered sequences: by rendering slices at continuous positions, orientations, and scales, a 3D volume can be converted into dense video-action sequences whose controls are the action trajectories. We study this formulation with an action-conditioned pretraining objective, where a tokenizer encodes slice observations and a latent dynamics model predicts the evolution of latent features. Across representative anatomical and spatial downstream tasks, the proposed pretraining is evaluated against standard static-volume baselines, tokenizer-only pretraining, and dynamics variants without aligned actions. These results suggest that controllable MRI slice navigation provides a useful complementary pretraining interface for learning anatomical and spatial representations from large unlabeled MRI collections.
+
+自监督预训练已成为从未标记扫描中学习 MRI 表示的主流方法。然而，大多数现有目标仍然主要将每次扫描视为切片、补丁或卷的静态聚合。我们通过将 3D 体积转换为可控的 2D 渲染序列，询问是否存在与重建遮罩补丁不同的自我监督信号的内在形式：通过在连续位置、方向和尺度上渲染切片，3D 体积可以转换为密集的视频动作序列，其控制是动作轨迹。我们用动作条件预训练目标来研究这个公式，其中分词器对切片观察进行编码，潜在动力学模型预测潜在特征的演变。在代表性的解剖和空间下游任务中，根据标准静态体积基线、仅标记器预训练和没有对齐动作的动态变体来评估所提出的预训练。这些结果表明，可控 MRI 切片导航提供了一个有用的补充预训练界面，用于从大量未标记的 MRI 集合中学习解剖和空间表示。
+
+</details>
+
+---
+
+## 2. Reconstruction or Semantics? What Makes a Latent Space Useful for Robotic World Models / 重构还是语义？是什么让潜在空间对机器人世界模型有用
+
+**Date**: 2026-05-07 | **arXiv**: [2605.06388v1](http://arxiv.org/abs/2605.06388v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.06388v1)
+
+**Categories**: cs.CV, cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World model-based policy evaluation is a practical proxy for testing real-world robot control by rolling out candidate actions in action-conditioned video diffusion models. As these models increasingly adopt latent diffusion modeling (LDM), choosing the right latent space becomes critical. While the status quo uses autoencoding latent spaces like VAEs that are primarily trained for pixel reconstruction, recent work suggests benefits from pretrained encoders with representation-aligned semantic latent spaces. We systematically evaluate these latent spaces for action-conditioned LDM by comparing six reconstruction and semantic encoders to train world model variants under a fixed protocol on BridgeV2 dataset, and show effective world model training in high-dimensional representation spaces with and without dimension compression. We then propose three axes to assess robotic world model performance: visual fidelity, planning and downstream policy performance, and latent representation quality. Our results show visual fidelity alone is insufficient for world model selection. While reconstruction encoders like VAE and Cosmos achieve strong pixel-level scores, semantic encoders such as V-JEPA 2.1 (strongest overall on policy), Web-DINO, and SigLIP 2 generally excel across the other two axes at all model scales. Our study advocates semantic latent space as stronger foundation for policy-relevant robotics diffusion world models.
+
+基于世界模型的策略评估是通过在动作条件视频扩散模型中推出候选动作来测试现实世界机器人控制的实用代理。随着这些模型越来越多地采用潜在扩散模型（LDM），选择正确的潜在空间变得至关重要。虽然现状使用自动编码潜在空间（例如主要针对像素重建进行训练的 VAE），但最近的工作表明具有与表示对齐的语义潜在空间的预训练编码器的好处。我们通过比较六种重建和语义编码器来系统地评估动作条件 LDM 的这些潜在空间，以在 BridgeV2 数据集上的固定协议下训练世界模型变体，并展示在有和没有维度压缩的高维表示空间中有效的世界模型训练。然后，我们提出三个轴来评估机器人世界模型的性能：视觉保真度、规划和下游政策性能以及潜在表示质量。我们的结果表明，仅靠视觉保真度不足以选择世界模型。虽然 VAE 和 Cosmos 等重建编码器实现了很强的像素级分数，但 V-JEPA 2.1（策略整体最强）、Web-DINO 和 SigLIP 2 等语义编码器通常在所有模型规模的其他两个轴上都表现出色。我们的研究主张语义潜在空间作为与政策相关的机器人扩散世界模型的更坚实的基础。
+
+</details>
+
+---
+
+## 3. MANTRA: Synthesizing SMT-Validated Compliance Benchmarks for Tool-Using LLM Agents / MANTRA：为使用工具的 LLM 代理综合 SMT 验证的合规性基准
+
+**Date**: 2026-05-07 | **arXiv**: [2605.06334v1](http://arxiv.org/abs/2605.06334v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.06334v1)
+
+**Categories**: cs.CL, cs.LG, cs.LO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Tool-using large language model (LLM) agents are increasingly deployed in settings where their reliable behavior is governed by strict procedural manuals. Ensuring that such agents comply with the rules from these manuals is challenging, as they are typically written for humans in natural language while agent behavior manifests as an execution trace of tool calls. Existing evaluations of LLM agents rely on manually constructed benchmarks or LLM-based judges, which either do not scale or lack reliability for complex, long-horizon manuals. To overcome these limitations, we present MANTRA, a framework for automatically synthesizing machine-checkable compliance benchmarks from natural-language manuals and tool schemas. MANTRA independently generates (i) a symbolic world model capturing procedural dependencies, and (ii) a set of trace-level compliance checks for a given task, and validates their consistency using SMT solving. A structured repair loop resolves inconsistencies, requiring human intervention only as a fallback. %This yields benchmarks that are formally validated. Importantly, MANTRA supports arbitrary domains and long procedural manuals, and provides a tunable notion of task complexity which is utilized to automatically derive challenging tasks accompanying compliance checks. Using MANTRA, we build a new benchmark suite with 285 tasks across 6 domains scaling to 50+ page manuals with minimal human effort. Empirically, we show that the compliance checks are richer with stronger constraint enforcement compared to existing benchmarks. Additionally, the granularity of the checks can be used for debugging the agents' failure modes. These results demonstrate that combining automated benchmark generation with formally grounded validation methods enables scalable and reliable benchmarking of tool-using agents.
+
+使用工具的大型语言模型（LLM）代理越来越多地部署在其可靠行为受严格程序手册控制的环境中。确保此类代理遵守这些手册中的规则具有挑战性，因为它们通常是用自然语言为人类编写的，而代理行为表现为工具调用的执行跟踪。现有的 LLM 代理评估依赖于手动构建的基准或基于 LLM 的评判，这些基准要么无法扩展，要么缺乏复杂、长期手册的可靠性。为了克服这些限制，我们提出了 MANTRA，这是一个从自然语言手册和工具模式自动合成机器可检查的合规性基准的框架。 MANTRA 独立生成 (i) 捕获程序依赖性的符号世界模型，以及 (ii) 针对给定任务的一组跟踪级别合规性检查，并使用 SMT 求解验证其一致性。结构化修复循环可以解决不一致问题，仅需要人工干预作为后备措施。 %这产生了经过正式验证的基准。重要的是，MANTRA 支持任意领域和冗长的程序手册，并提供任务复杂性的可调概念，用于自动导出伴随合规性检查的挑战性任务。使用 MANTRA，我们构建了一个新的基准套件，其中包含 6 个领域的 285 项任务，以最少的人力扩展到 50 多页手册。根据经验，我们表明与现有基准相比，合规性检查更丰富，约束执行更严格。此外，检查的粒度可用于调试代理的故障模式。这些结果表明，将自动基准生成与正式验证方法相结合，可以对使用工具的代理进行可扩展且可靠的基准测试。
+
+</details>
+
+---
+
+## 4. Render, Don't Decode: Weight-Space World Models with Latent Structural Disentanglement / 渲染，而不是解码：具有潜在结构解缠结的权重空间世界模型
+
+**Date**: 2026-05-07 | **arXiv**: [2605.06298v1](http://arxiv.org/abs/2605.06298v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.06298v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Training world models on vast quantities of unlabelled videos is a critical step toward fully autonomous intelligence. However, the prevailing paradigm of encoding raw pixels into opaque latent spaces and relying on heavy decoders for reconstruction leaves these models computationally expensive and uninterpretable. We address this problem by introducing NOVA, a world modelling framework that represents the system state as the weights and biases of an auxiliary coordinate-based implicit neural representation (INR). This structured representation is analytically rendered, which eliminates the decoder bottleneck while conferring compactness, portability, and zero-shot super-resolution. Furthermore, like most latent action models, NOVA can be distilled into a context-dependent video generator via an action-matching objective. Surprisingly, without resorting to auxiliary losses or adversarial objectives, NOVA can disentangle structural scene components such as background, foreground, and inter-frame motion, enabling users to edit either content or dynamics without compromising the other. We validate our framework on several challenging datasets, achieving strong controllable forecasting while operating on a single consumer GPU at $\sim$40M parameters. Ultimately, structured representations like INRs not only enhance our understanding of latent dynamics but also pave the way for immersive and customisable virtual experiences.
+
+在大量未标记的视频上训练世界模型是迈向完全自主智能的关键一步。然而，将原始像素编码到不透明的潜在空间并依赖大量解码器进行重建的流行范例使得这些模型的计算成本昂贵且难以解释。我们通过引入 NOVA 来解决这个问题，NOVA 是一个世界建模框架，它将系统状态表示为基于辅助坐标的隐式神经表示（INR）的权重和偏差。这种结构化表示经过分析渲染，消除了解码器瓶颈，同时具有紧凑性、可移植性和零样本超分辨率。此外，与大多数潜在动作模型一样，NOVA 可以通过动作匹配目标提炼为上下文相关的视频生成器。令人惊讶的是，在不诉诸辅助损失或对抗性目标的情况下，NOVA 可以解开背景、前景和帧间运动等结构场景组件，使用户能够编辑内容或动态，而不会影响另一个。我们在几个具有挑战性的数据集上验证了我们的框架，在单个消费级 GPU 上以 4000 万美元的参数运行时实现了强大的可控预测。最终，像 INR 这样的结构化表示不仅增强了我们对潜在动态的理解，而且还为沉浸式和可定制的虚拟体验铺平了道路。
+
+</details>
+
+---
+
+## 5. When to Trust Imagination: Adaptive Action Execution for World Action Models / 何时信任想象力：世界行动模型的自适应行动执行
+
+**Date**: 2026-05-07 | **arXiv**: [2605.06222v1](http://arxiv.org/abs/2605.06222v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.06222v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) have recently emerged as a promising paradigm for robotic manipulation by jointly predicting future visual observations and future actions. However, current WAMs typically execute a fixed number of predicted actions after each model inference, leaving the robot blind to whether the imagined future remains consistent with the actual physical rollout. In this work, we formulate adaptive WAM execution as a future-reality verification problem: the robot should execute longer when the WAM-predicted future remains reliable, and replan earlier when reality deviates from imagination. To this end, we propose Future Forward Dynamics Causal Attention (FFDC), a lightweight verifier that jointly reasons over predicted future actions, predicted visual dynamics, real observations, and language instructions to estimate whether the remaining action rollout can still be trusted. FFDC enables adaptive action chunk sizes as an emergent consequence of prediction-observation consistency, preserving the efficiency of long-horizon execution while restoring responsiveness in contact-rich or difficult phases. We further introduce Mixture-of-Horizon Training to improve long-horizon trajectory coverage for adaptive execution. Experiments on the RoboTwin benchmark and in the real world demonstrate that our method achieves a strong robustness-efficiency trade-off: on RoboTwin, it reduces WAM forward passes by 69.10% and execution time by 34.02%, while improving success rate by 2.54% over the short-chunk baseline; in real-world experiments, it improves success rate by 35%.
+
+世界行动模型（WAM）最近通过联合预测未来的视觉观察和未来的行动而成为机器人操纵的一个有前景的范式。然而，当前的 WAM 通常在每次模型推理后执行固定数量的预测动作，从而使机器人无法判断想象的未来是否与实际的物理部署保持一致。在这项工作中，我们将自适应 WAM 执行制定为未来现实验证问题：当 WAM 预测的未来仍然可靠时，机器人应该执行更长时间，而当现实偏离想象时，机器人应该更早地重新计划。为此，我们提出了未来前向动态因果注意（FFDC），这是一种轻量级验证器，可以对预测的未来动作、预测的视觉动态、真实的观察和语言指令进行联合推理，以估计剩余的动作推出是否仍然可信。 FFDC 使自适应动作块大小成为预测观察一致性的紧急结果，保持长期执行的效率，同时恢复接触丰富或困难阶段的响应能力。我们进一步引入混合视野训练来提高自适应执行的长视野轨迹覆盖范围。 RoboTwin 基准测试和现实世界中的实验表明，我们的方法实现了强大的鲁棒性与效率权衡：在 RoboTwin 上，它减少了 69.10% 的 WAM 前向传播和 34.02% 的执行时间，同时比短块基线提高了 2.54% 的成功率；在实际实验中，它的成功率提高了 35%。
+
+</details>
+
+---
+
+## 6. EA-WM: Event-Aware Generative World Model with Structured Kinematic-to-Visual Action Fields / EA-WM：具有结构化运动学到视觉动作场的事件感知生成世界模型
+
+**Date**: 2026-05-07 | **arXiv**: [2605.06192v1](http://arxiv.org/abs/2605.06192v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.06192v1)
+
+**Categories**: cs.CV, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pretrained video diffusion models provide powerful spatiotemporal generative priors, making them a natural foundation for robotic world models. While recent world-action models jointly optimize future videos and actions, they predominantly treat video generation as an auxiliary representation for policy learning. Consequently, they insufficiently explore the inverse problem: leveraging action signals to guide video synthesis, thereby often failing to preserve precise robot spatial geometry and fine-grained robot-object interaction dynamics in the generated rollouts. To bridge this gap, we present EA-WM, an Event-Aware Generative World Model that effectively closes the loop between kinematic control and visual perception. Rather than injecting joint or end-effector actions as abstract, low-dimensional tokens, EA-WM projects actions and kinematic states directly into the target camera view as Structured Kinematic-to-Visual Action Fields. To fully exploit this geometrically grounded representation, we introduce event-aware bidirectional fusion blocks that modulate cross-branch attention, capturing object state changes and interaction dynamics. Evaluated on the comprehensive WorldArena benchmark, EA-WM achieves state-of-the-art performance, outperforming existing baselines by a significant margin.
+
+预训练的视频扩散模型提供了强大的时空生成先验，使它们成为机器人世界模型的天然基础。虽然最近的世界行动模型联合优化了未来的视频和行动，但它们主要将视频生成视为政策学习的辅助表示。因此，他们没有充分探索逆问题：利用动作信号来指导视频合成，从而常常无法在生成的展示中保留精确的机器人空间几何形状和细粒度的机器人与物体交互动态。为了弥补这一差距，我们提出了 EA-WM，这是一种事件感知生成世界模型，可以有效地闭合运动控制和视觉感知之间的循环。 EA-WM 不是将关节或末端执行器动作作为抽象的低维标记注入，而是将动作和运动学状态作为结构化运动学到视觉动作场直接投影到目标摄像机视图中。为了充分利用这种基于几何的表示，我们引入了事件感知的双向融合块，它可以调节跨分支注意力，捕获对象状态变化和交互动态。根据综合 WorldArena 基准进行评估，EA-WM 实现了最先进的性能，显着优于现有基准。
+
+</details>
+
+---
+
+## 7. Causal Reinforcement Learning for Complex Card Games: A Magic The Gathering Benchmark / 复杂卡牌游戏的因果强化学习：万智牌基准
+
+**Date**: 2026-05-07 | **arXiv**: [2605.06066v1](http://arxiv.org/abs/2605.06066v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.06066v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Causal reinforcement learning (RL) lacks benchmarks for complex systems that combine sequential decision making, hidden information, large masked action spaces, and explicit causal structure. We introduce MTG-Causal-RL, a Gymnasium benchmark built on Magic: The Gathering with a 3,077-dimensional partial observation, a 478-action masked discrete action space, five competitive Standard archetypes, three reward schemes, and a hand-specified Structural Causal Model (SCM) over strategic variables. Every episode exposes causal variables, SCM-predicted intervention effects, and per-factor credit traces, making causal credit assignment, leave-one-out cross-archetype transfer, and policy auditability first-class metrics. We adapt a panel of reference baselines: random, heuristic, masked PPO, a causal-world-model PPO variant, and an architecture-matched scalar control. We propose Causal Graph-Factored Advantage PPO (CGFA-PPO) as a reference causal agent that uses SCM parents of win probability as factor-aligned critic targets with an intervention-calibration loss. All comparisons use paired seeds, paired-bootstrap confidence intervals, and Holm-Bonferroni correction within pre-registered families. Masked PPO and CGFA-PPO reach competitive in-distribution win rates and exceed the random baseline; per-factor calibration trajectories and leave-one-out transfer gaps expose diagnostic structure that scalar win rate alone cannot. We release the benchmark, reference-baseline results, and full evaluation protocol openly. By coupling a strategically rich, partially observed domain with an explicit causal interface and statistical protocol, MTG-Causal-RL gives causal-RL, world-model, and LLM-agent research a shared testbed for questions current benchmarks cannot pose together: causal credit assignment under masked action spaces, structural transfer across archetypes, and SCM-grounded policy auditability.
+
+因果强化学习 (RL) 缺乏结合顺序决策、隐藏信息、大屏蔽动作空间和显式因果结构的复杂系统的基准。我们引入了 MTG-Causal-RL，这是一个基于 Magic: The Gathering 构建的 Gymnasium 基准测试，具有 3,077 维部分观察、478 个动作屏蔽离散动作空间、五个竞争性标准原型、三个奖励方案以及针对策略变量的手动指定的结构因果模型 (SCM)。每个事件都会暴露因果变量、SCM 预测的干预效果和每个因素的信用轨迹，使因果信用分配、留一法跨原型转移和政策可审计性成为一流的指标。我们调整了一组参考基线：随机、启发式、屏蔽 PPO、因果世界模型 PPO 变体和架构匹配的标量控制。我们提出因果图因子优势 PPO (CGFA-PPO) 作为参考因果代理，它使用获胜概率的 SCM 父母作为具有干预校准损失的因子对齐批评家目标。所有比较均使用预注册家族内的配对种子、配对引导置信区间和 Holm-Bonferroni 校正。 Masked PPO 和 CGFA-PPO 达到有竞争力的分布内获胜率并超过随机基线；每因素校准轨迹和留一转移间隙揭示了仅标量胜率无法揭示的诊断结构。我们公开发布基准、参考基准结果和完整的评估协议。通过将战略上丰富的、部分观察的领域与明确的因果接口和统计协议相结合，MTG-Causal-RL 为因果强化学习、世界模型和 LLM 代理研究提供了一个共享测试平台，用于解决当前基准无法共同提出的问题：隐藏行动空间下的因果信用分配、跨原型的结构转移以及基于 SCM 的政策可审计性。
+
+</details>
+
+---
+
+## 8. HaM-World: Soft-Hamiltonian World Models with Selective Memory for Planning / HaM-World：具有用于规划的选择性记忆的软哈密尔顿世界模型
+
+**Date**: 2026-05-07 | **arXiv**: [2605.05951v1](http://arxiv.org/abs/2605.05951v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.05951v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models enable model-based planning through learned latent dynamics, but imagined rollouts become unstable as the planning horizon grows or the dynamics distribution shifts. We argue that this instability reflects two missing structures in planner-facing latents: history-conditioned memory for approximate Markov completeness, and geometric organization that separates configuration, momentum, and task semantics. We propose HaM-World (HMW), a structured world model that decomposes the latent state into a canonical (q, p) subspace and a context subspace c, while using Mamba selective state-space memory as the history-conditioned input to the same latent dynamics. Within this interface, (q, p) evolves through an energy-derived Hamiltonian vector field plus learnable residual/control dynamics, while c captures semantic, dissipative, and non-conservative factors. This gives the planner a single latent state shared by dynamics prediction, reward/value estimation, imagined rollouts, and CEM action search. On four DeepMind Control Suite tasks, HaM-World reaches the highest Avg. AUC (117.9, +9.5%), reduces long-horizon rollout error to 45% of a strong baseline model, and wins 11/12 k in {3,5,7} MSE cells. Under 12 OOD perturbations spanning dynamics shifts, action delay, and observation masking, HaM-World achieves the highest return in every condition, with average OOD-return gains of 10.2% on Finger Spin and 13.6% on Reacher Easy. Mechanism diagnostics further show bounded action-free Hamiltonian-energy drift, structured energy variation under policy rollouts, and coherent control-induced energy transfer, supporting the intended Soft-Hamiltonian dynamics design.
+
+世界模型通过学习的潜在动态实现基于模型的规划，但随着规划范围的增长或动态分布的变化，想象的部署会变得不稳定。我们认为，这种不稳定性反映了面向规划者的潜伏中两个缺失的结构：用于近似马尔可夫完整性的历史条件记忆，以及分离配置、动量和任务语义的几何组织。我们提出了 HaM-World (HMW)，一种结构化世界模型，它将潜在状态分解为规范 (q, p) 子空间和上下文子空间 c，同时使用 Mamba 选择性状态空间记忆作为相同潜在动态的历史条件输入。在这个接口中，(q, p) 通过能量导出的哈密顿向量场加上可学习的残差/控制动力学演化，而 c 捕获语义、耗散和非保守因素。这为规划者提供了一个由动态预测、奖励/价值估计、想象的推出和 CEM 动作搜索共享的单一潜在状态。在四项 DeepMind Control Suite 任务中，HaM-World 达到了最高的平均水平。 AUC（117.9，+9.5%），将长范围推出误差降低至强基线模型的 45%，并在 {3,5,7} MSE 单元中赢得 11/12 k。在涵盖动态变化、动作延迟和观察掩蔽的 12 个 OOD 扰动下，HaM-World 在每种条件下都实现了最高的回报，Finger Spin 上的平均 OOD 回报增益为 10.2%，Reacher Easy 上的平均 OOD 回报增益为 13.6%。机制诊断进一步显示有界无作用哈密顿能量漂移、政策推出下的结构化能量变化以及相干控制引起的能量转移，支持预期的软哈密顿动力学设计。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-07 (10 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-05-07
