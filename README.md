@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-11](papers/2026-05-11.md) - 7 papers
 - [2026-05-09](papers/2026-05-09.md) - 16 papers
 - [2026-05-07](papers/2026-05-07.md) - 6 papers
 - [2026-05-06](papers/2026-05-06.md) - 13 papers
@@ -75,6 +76,134 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-11 (7 papers)</b></summary>
+
+# arXiv Video Papers - 2026-05-11
+
+**Paper Count**: 7
+
+---
+
+## 1. MoCoTalk: Multi-Conditional Diffusion with Adaptive Router for Controllable Talking Head Generation / MoCoTalk：具有自适应路由器的多条件扩散，用于可控头部生成
+
+**Date**: 2026-05-08 | **arXiv**: [2605.08050v1](http://arxiv.org/abs/2605.08050v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.08050v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Talking-head generation requires joint modeling of identity, head pose, facial expression, and mouth dynamics. Existing methods typically address only a subset of these factors, and rely on fixed-weight or heuristic fusion when multiple conditions are involved. We present MoCoTalk, a multi-conditional video diffusion framework that unifies four complementary control signals: a reference image, facial keypoints, 3DMM-rendered shading meshes, and the corresponding speech audio. To resolve destructive interference among heterogeneous conditions, we introduce an Adaptive Multi-Condition Router that computes channel-wise, timestep-aware gating over the four condition streams, allowing the fusion strategy to vary with both feature subspace and noise level. To better capture speech-related facial dynamics, we design a Mouth-Augmented Shading Mesh, a 3DMM-based representation that decouples head motion, mouth motion, expression, and lighting. This design provides a temporally consistent geometric prior and allows flexible recombination of these attributes at inference. We further introduce a lip consistency loss to tighten audio-visual alignment. Extensive experiments show that MoCoTalk achieves state-of-the-art performance on the majority of structural, motion, and perceptual metrics, while offering attribute-level controllability that single-condition methods do not provide.
+
+头部说话的生成需要对身份、头部姿势、面部表情和嘴巴动态进行联合建模。现有方法通常仅解决这些因素的子集，并且在涉及多个条件时依赖于固定权重或启发式融合。我们提出了 MoCoTalk，这是一个多条件视频扩散框架，它统一了四个互补的控制信号：参考图像、面部关键点、3DMM 渲染的着色网格和相应的语音音频。为了解决异构条件之间的破坏性干扰，我们引入了一种自适应多条件路由器，它可以对四个条件流进行通道式、时间步感知的门控，从而允许融合策略随特征子空间和噪声水平而变化。为了更好地捕捉与语音相关的面部动态，我们设计了嘴部增强着色网格，这是一种基于 3DMM 的表示，可解耦头部运动、嘴部运动、表情和照明。这种设计提供了时间上一致的几何先验，并允许在推理时灵活地重新组合这些属性。我们进一步引入唇部一致性损失来加强视听对齐。大量实验表明，MoCoTalk 在大多数结构、运动和感知指标上实现了最先进的性能，同时提供单条件方法无法提供的属性级可控性。
+
+</details>
+
+---
+
+## 2. Semantic-Aware Adaptive Visual Memory for Streaming Video Understanding / 用于流媒体视频理解的语义感知自适应视觉记忆
+
+**Date**: 2026-05-08 | **arXiv**: [2605.07897v1](http://arxiv.org/abs/2605.07897v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.07897v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Online streaming video understanding requires models to process continuous visual inputs and respond to user queries in real time, where the unbounded stream and unpredictable query timing turn memory management into a central challenge. Existing methods typically compress visual tokens via visual similarity heuristics, or augment compression with KV-cache-level retrieval. However, compression decisions rarely incorporate semantic signals, and retrieval is often added after compression is finalized, making the two stages hard to coordinate. We present SAVEMem, a training-free dual-stage framework that brings semantic awareness into memory generation and lets the retrieval scope adapt per query. In Stage~1, SAVEMem builds a three-tier streaming memory online under a constant memory budget. A fixed pseudo-question bank provides a lightweight semantic prior, so that long-term retention is shaped by semantic salience rather than visual similarity alone. In Stage~2, SAVEMem performs query-aware retrieval over this memory. An anchor-conditioned recency gate adapts the retrieval scope from short-term to mid- and long-term memory based on whether the query targets the present or the distant past. Within this scope, late interaction between query and memory tokens selects candidate frames for answering. Applied to Qwen2.5-VL without training, SAVEMem improves the OVO-Bench overall score from 52.27 to 62.69 and yields consistent gains on StreamingBench and ODV-Bench, while reducing peak GPU memory by 48\% at 128 frames over the backbone.
+
+在线流视频理解需要模型能够处理连续的视觉输入并实时响应用户查询，其中无界流和不可预测的查询时序将内存管理变成了一个核心挑战。现有方法通常通过视觉相似性启发法来压缩视觉标记，或者通过 KV 缓存级检索来增强压缩。然而，压缩决策很少包含语义信号，并且通常在压缩完成后添加检索，使得这两个阶段难以协调。我们提出了 SAVEMem，这是一个免训练的双阶段框架，它将语义意识带入内存生成中，并让检索范围适应每个查询。在Stage~1中，SAVEMem在恒定的内存预算下在线构建了三层流式内存。固定的伪问题库提供了轻量级的语义先验，因此长期保留是由语义显着性而不是单独的视觉相似性决定的。在 Stage~2 中，SAVEMem 对此内存执行查询感知检索。锚条件的新近度门根据查询是针对现在还是遥远的过去来调整检索范围从短期记忆到中长期记忆。在此范围内，查询和内存标记之间的后期交互会选择候选帧进行回答。在未经训练的情况下应用于 Qwen2.5-VL，SAVEMem 将 OVO-Bench 总体得分从 52.27 提高到 62.69，并在 StreamingBench 和 ODV-Bench 上获得一致的增益，同时在骨干网上 128 帧时将峰值 GPU 内存减少 48%。
+
+</details>
+
+---
+
+## 3. Video Understanding Reward Modeling: A Robust Benchmark and Performant Reward Models / 视频理解奖励模型：稳健的基准和绩效奖励模型
+
+**Date**: 2026-05-08 | **arXiv**: [2605.07872v1](http://arxiv.org/abs/2605.07872v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.07872v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal reward models have advanced substantially in text and image domains, yet progress in video understanding reward modeling remains severely limited by the lack of robust evaluation benchmarks and high-quality preference data. To address this, we propose a unified framework spanning benchmark design, data construction, and reward model training. We introduce Video Understanding Reward Bench (VURB), a benchmark featuring 2,100 preference pairs with long chain-of-thought reasoning traces (averaging 1,143 tokens) and majority voting evaluation across general, long, and reasoning-oriented video tasks. We further construct Video Understanding Preference Dataset (VUP-35K) via a fully automated pipeline, providing large-scale high-quality supervision for video reward training. Building on the data, we train VideoDRM and VideoGRM, a discriminative and a generative reward model, both achieving state-of-the-art performance on VURB and VideoRewardBench. Further analysis confirms that VUP-35K enhances both reward performance and model reasoning capability, while VideoDRM and VideoGRM yield significant gains under best-of-$N$ test-time scaling.
+
+多模式奖励模型在文本和图像领域取得了长足的进步，但由于缺乏可靠的评估基准和高质量的偏好数据，视频理解奖励模型的进展仍然受到严重限制。为了解决这个问题，我们提出了一个涵盖基准设计、数据构建和奖励模型训练的统一框架。我们引入了视频理解奖励基准（VURB），这是一个基准，具有 2,100 个偏好对，具有长链思维推理轨迹（平均 1,143 个令牌）以及针对一般、长和推理导向的视频任务的多数投票评估。我们通过全自动管道进一步构建视频理解偏好数据集（VUP-35K），为视频奖励训练提供大规模高质量监督。基于这些数据，我们训练了 VideoDRM 和 VideoGRM，这是一种判别性和生成性奖励模型，两者都在 VURB 和 VideoRewardBench 上实现了最先进的性能。进一步的分析证实，VUP-35K 增强了奖励性能和模型推理能力，而 VideoDRM 和 VideoGRM 在 best-of-$N$ 测试时间扩展下产生了显着的收益。
+
+</details>
+
+---
+
+## 4. EyeCue: Driver Cognitive Distraction Detection via Gaze-Empowered Egocentric Video Understanding / EyeCue：通过凝视授权的自我中心视频理解进行驾驶员认知分心检测
+
+**Date**: 2026-05-08 | **arXiv**: [2605.07859v1](http://arxiv.org/abs/2605.07859v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.07859v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/langzhang2000/EyeCue.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Driver cognitive distraction is a major cause of road collisions and remains difficult to detect. Unlike manual or visual distraction, cognitive distraction is diverted by thoughts unrelated to driving, even when the driver appears visually attentive and exhibits no explicit physical movements. In this work, we propose EyeCue, a gaze-empowered egocentric video understanding framework, to detect driver cognitive distraction. A key insight is that cognitive distraction manifests in the interaction between eye gaze and visual context. To capture this interaction, EyeCue integrates eye gaze with egocentric video to enable context-aware modeling of the driver's attention over time. Furthermore, to tackle the limited scale and diversity of existing datasets, we introduce CogDrive, a comprehensive multi-scenario dataset that augments four existing driving datasets with cognitive distraction annotations. Through extensive evaluations on CogDrive, we show that EyeCue achieves the highest accuracy of 74.38%, outperforming 11 baselines from 6 model families by over 7%. Notably, EyeCue can achieve an accuracy of over 70% across various driving scenarios (different road types, times of day, and weather conditions) with strong generalizability. These results highlight the importance of modeling gaze-context interactions and the effectiveness of cross-modal interaction modeling for multimodal cognitive distraction detection. Our codes and CogDrive dataset resources are available at https://github.com/langzhang2000/EyeCue.
+
+驾驶员认知分心是道路碰撞事故的主要原因，而且仍然难以察觉。与手动或视觉分心不同，认知分心会被与驾驶无关的想法所转移，即使驾驶员看起来很专注并且没有表现出明显的身体动作。在这项工作中，我们提出了 EyeCue，一种基于凝视的以自我为中心的视频理解框架，用于检测驾驶员的认知分心。一个关键的见解是，认知干扰体现在眼睛注视和视觉环境之间的相互作用中。为了捕捉这种交互，EyeCue 将眼睛注视与以自我为中心的视频相结合，以实现对驾驶员注意力随时间变化的情境感知建模。此外，为了解决现有数据集的有限规模和多样性问题，我们引入了 CogDrive，这是一个全面的多场景数据集，它通过认知分心注释增强了四个现有驾驶数据集。通过对 CogDrive 的广泛评估，我们表明 EyeCue 的准确率最高达到 74.38%，比 6 个模型系列的 11 个基线高出 7% 以上。值得注意的是，EyeCue在各种驾驶场景（不同道路类型、一天中的时间和天气条件）下都能达到70%以上的准确率，具有很强的通用性。这些结果强调了对注视上下文交互建模的重要性以及跨模态交互建模对于多模态认知分心检测的有效性。我们的代码和 CogDrive 数据集资源可在 https://github.com/langzhang2000/EyeCue 获取。
+
+</details>
+
+---
+
+## 5. SARA: Semantically Adaptive Relational Alignment for Video Diffusion Models / SARA：视频扩散模型的语义自适应关系对齐
+
+**Date**: 2026-05-08 | **arXiv**: [2605.07800v1](http://arxiv.org/abs/2605.07800v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.07800v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent video diffusion models (VDMs) synthesize visually convincing clips, yet still drop entities, mis-bind attributes, and weaken the interactions specified in the prompt. Representation-alignment objectives such as VideoREPA and MoAlign improve fine-grained text following by distilling spatio-temporal token relations from a frozen visual foundation model, but their pairwise supervision budget is allocated by visual or motion cues rather than by how relevant each pair is to the prompt. We present SARA, Semantically Adaptive Relational Alignment, which keeps token-relation distillation (TRD) on a frozen VFM target and adds a text-conditioned saliency that decides which token pairs carry supervision. A lightweight Stage 1 aligner is trained with per-entity SAM 3.1 mask supervision and an InfoNCE regulariser, and its continuous saliency is fused into TRD through a pair-routing operator that assigns each token pair a weight whenever either of its two endpoints is salient, thereby routing supervision toward subject-subject and subject-background pairs and away from background-background ones. In the Wan2.2 continual-training setting, SARA improves both text alignment and motion quality over SFT, VideoREPA, and MoAlign on a 13-dimension VLM rubric, on the public VBench benchmarks, and in a blind user study.
+
+最近的视频扩散模型（VDM）合成了视觉上令人信服的剪辑，但仍然会丢弃实体、错误绑定属性并削弱提示中指定的交互。 VideoREPA 和 MoAlign 等表示对齐目标通过从冻结的视觉基础模型中提取时空标记关系来改进细粒度文本跟踪，但它们的成对监督预算是根据视觉或运动线索分配的，而不是根据每对与提示的相关程度来分配的。我们提出 SARA，语义自适应关系对齐，它将令牌关系蒸馏（TRD）保持在冻结的 VFM 目标上，并添加文本条件显着性来决定哪些令牌对进行监督。轻量级第 1 阶段对齐器使用每个实体 SAM 3.1 掩模监督和 InfoNCE 正则器进行训练，并且其连续显着性通过配对路由运算符融合到 TRD 中，只要每个标记对的两个端点之一显着，该运算符就会为每个标记对分配一个权重，从而将监督路由到主题-主题和主题-背景对，而不是背景-背景对。在 Wan2.2 持续训练设置中，SARA 在 13 维 VLM 规则、公共 VBench 基准测试以及盲用户研究中比 SFT、VideoREPA 和 MoAlign 提高了文本对齐和运动质量。
+
+</details>
+
+---
+
+## 6. OphEdit: Training-Free Text-Guided Editing of Ophthalmic Surgical Videos / OphEdit：无需培训的眼科手术视频文本引导编辑
+
+**Date**: 2026-05-08 | **arXiv**: [2605.07695v1](http://arxiv.org/abs/2605.07695v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.07695v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/ophedit/OphEdit
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+High-fidelity surgical video generation can greatly improve medical training and the development of AI, adapting these generative models for precise video editing remains a formidable challenge. Modifying surgical attributes, such as instrument tissue interactions or procedural phases is challenging due to the strict anatomical and temporal constraints. In this paper, we propose OphEdit, a novel training-free framework for the text-guided editing of ophthalmic surgical videos. Our approach leverages a deterministic second-order ODE inversion pipeline to capture Attention Value (V) tensors from the original video. By selectively injecting these stored tensors into the conditional Classifier-Free Guidance (CFG) branch during the denoising phase, OphEdit rigorously preserves the intricate anatomical geometry of the eye while seamlessly mapping text-driven semantic modifications onto the video stream. Clinical evaluations demonstrates that OphEdit effectively handles complex surgical transformations, such as instrument swaps and procedural variations, with superior structural fidelity and temporal consistency compared to natural-domain video editors. Our work represents the first application of training-free video editing in the ophthalmic surgical domain, offering a scalable solution for generating diverse, annotated medical datasets without the need for exhaustive manual recording or costly model fine-tuning. The code and prompts can be accessed at https://github.com/ophedit/OphEdit
+
+高保真手术视频生成可以极大地改善医疗培训和人工智能的发展，适应这些生成模型进行精确的视频编辑仍然是一个艰巨的挑战。由于严格的解剖学和时间限制，修改手术属性（例如器械组织相互作用或手术阶段）具有挑战性。在本文中，我们提出了 OphEdit，这是一种新颖的免训练框架，用于眼科手术视频的文本引导编辑。我们的方法利用确定性二阶 ODE 反演管道从原始视频中捕获注意力值 (V) 张量。通过在去噪阶段有选择地将这些存储的张量注入到条件无分类器指导 (CFG) 分支中，OphEdit 严格保留了眼睛复杂的解剖几何形状，同时将文本驱动的语义修改无缝映射到视频流上。临床评估表明，与自然域视频编辑器相比，OphEdit 能够有效处理复杂的手术转换，例如器械交换和程序变化，具有卓越的结构保真度和时间一致性。我们的工作代表了免培训视频编辑在眼科手术领域的首次应用，提供了一种可扩展的解决方案，用于生成多样化的带注释的医疗数据集，而无需详尽的手动记录或昂贵的模型微调。代码和提示可以在 https://github.com/ophedit/OphEdit 访问
+
+</details>
+
+---
+
+## 7. Response-G1: Explicit Scene Graph Modeling for Proactive Streaming Video Understanding / Response-G1：用于主动流媒体视频理解的显式场景图建模
+
+**Date**: 2026-05-08 | **arXiv**: [2605.07575v1](http://arxiv.org/abs/2605.07575v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.07575v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Proactive streaming video understanding requires Video-LLMs to decide when to respond as a video unfolds, a task where existing methods often fall short due to their implicit, query-agnostic modeling of visual evidence. We introduce Response-G1, a novel framework that establishes explicit, structured alignment between the accumulated video evidence and the query's expected response conditions via scene graphs. The framework operates in three fine-tuning-free stages: (1) online query-guided scene graph generation from streaming clips; (2) memory-based retrieval of the most semantically relevant historical scene graphs; and (3) retrieval-augmented trigger prompting for per-frame "silence/response" decisions.By grounding both evidence and conditions in a shared graph representation, Response-G1 achieves more interpretable and accurate response timing decisions. Experimental results on established benchmarks demonstrate the superiority of our method in both proactive and reactive tasks, validating the advantage of explicit scene graph modeling and retrieval in streaming video understanding.
+
+主动的流媒体视频理解需要视频法学硕士决定何时在视频展开时做出响应，而现有方法由于其隐式的、与查询无关的视觉证据建模而经常无法完成这项任务。我们引入了 Response-G1，这是一种新颖的框架，它通过场景图在累积的视频证据和查询的预期响应条件之间建立明确的结构化对齐。该框架在三个无需微调的阶段运行：（1）从流剪辑中在线查询引导场景图生成； (2)基于记忆的语义最相关的历史场景图的检索； (3) 检索增强触发提示每帧“沉默/响应”决策。通过将证据和条件建立在共享图形表示中，Response-G1 实现了更可解释和更准确的响应时间决策。已建立基准的实验结果证明了我们的方法在主动和被动任务中的优越性，验证了显式场景图建模和检索在流视频理解中的优势。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-09 (16 papers)</b></summary>
 
 # arXiv Video Papers - 2026-05-09
