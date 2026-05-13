@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-13](papers/2026-05-13.md) - 12 papers
 - [2026-05-12](papers/2026-05-12.md) - 8 papers
 - [2026-05-11](papers/2026-05-11.md) - 1 papers
 - [2026-05-09](papers/2026-05-09.md) - 8 papers
@@ -71,6 +72,216 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-13 (12 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-05-13
+
+**Paper Count**: 12
+
+---
+
+## 1. Reinforcing VLAs in Task-Agnostic World Models / 在与任务无关的世界模型中强化 VLA
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12334v1](http://arxiv.org/abs/2605.12334v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12334v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Post-training Vision-Language-Action (VLA) models via reinforcement learning (RL) in learned world models has emerged as an effective strategy to adapt to new tasks without costly real-world interactions. However, while using imagined trajectories reduces the sample complexity of policy training, existing methods still heavily rely on task-specific data to fine-tune both the world and reward models, fundamentally limiting their scalability to unseen tasks. To overcome this, we argue that world and reward models should capture transferable physical priors that enable zero-shot inference. We propose RAW-Dream (Reinforcing VLAs in task-Agnostic World Dreams), a new paradigm that completely disentangles world model learning from downstream task dependencies. RAW-Dream utilizes a world model pre-trained on diverse task-free behaviors for predicting future rollouts, and an off-the-shelf Vision-Language Model (VLM) for reward generation. Because both components are task-agnostic, VLAs can be readily finetuned for any new task entirely within this zero-shot imagination. Furthermore, to mitigate world model hallucinations, we introduce a dual-noise verification mechanism to filter out unreliable rollouts. Extensive experiments across simulation and real-world settings demonstrate consistent performance gains, proving that generalized physical priors can effectively substitute for costly task-dependent data, offering a highly scalable roadmap for VLA adaptation.
+
+在学习世界模型中通过强化学习 (RL) 进行训练后视觉-语言-动作 (VLA) 模型已成为一种有效的策略，无需昂贵的现实世界交互即可适应新任务。然而，虽然使用想象的轨迹降低了策略训练的样本复杂性，但现有方法仍然严重依赖特定于任务的数据来微调世界模型和奖励模型，从根本上限制了它们对看不见的任务的可扩展性。为了克服这个问题，我们认为世界和奖励模型应该捕获可转移的物理先验，以实现零样本推理。我们提出了 RAW-Dream（在与任务无关的世界梦想中强化 VLA），这是一种新的范例，可以将世界模型学习与下游任务依赖性完全分离。 RAW-Dream 利用针对各种无任务行为预先训练的世界模型来预测未来的推出，并利用现成的视觉语言模型 (VLM) 来生成奖励。由于这两个组件都是与任务无关的，因此 VLA 可以完全在这种零样本想象中轻松地针对任何新任务进行微调。此外，为了减轻世界模型幻觉，我们引入了双噪声验证机制来过滤掉不可靠的推出。跨模拟和现实世界设置的广泛实验证明了一致的性能增益，证明广义物理先验可​​以有效替代昂贵的任务相关数据，为 VLA 适应提供高度可扩展的路线图。
+
+</details>
+
+---
+
+## 2. Transferable Delay-Aware Reinforcement Learning via Implicit Causal Graph Modeling / 通过隐式因果图建模的可转移延迟感知强化学习
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12312v1](http://arxiv.org/abs/2605.12312v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12312v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Random delays weaken the temporal correspondence between actions and subsequent state feedback, making it difficult for agents to identify the true propagation process of action effects. In cross-task scenarios, changes in task objectives and reward formulations further reduce the reusability of previously acquired task knowledge. To address this problem, this paper proposes a transferable delay-aware reinforcement learning method based on implicit causal graph modeling. The proposed method uses a field-node encoder to represent high-dimensional observations as latent states with node-level semantics, and employs a message-passing mechanism to characterize dynamic causal dependencies among nodes, thereby learning transferable structured representations and environment dynamics knowledge. On this basis, imagination-driven behavior learning and planning are incorporated to optimize policies in the latent space, enabling cross-task knowledge transfer and rapid adaptation. Experimental results show that the proposed method outperforms baseline methods on DMC continuous control tasks with random delays. Cross-task transfer experiments further demonstrate that the learned structured representations and dynamics knowledge can be effectively transferred to new tasks and significantly accelerate policy adaptation.
+
+随机延迟削弱了动作与后续状态反馈之间的时间对应关系，使得智能体难以识别动作效果的真实传播过程。在跨任务场景中，任务目标和奖励制定的变化进一步降低了先前获得的任务知识的可重用性。针对这一问题，本文提出了一种基于隐式因果图建模的可迁移延迟感知强化学习方法。该方法使用字段节点编码器将高维观测表示为具有节点级语义的潜在状态，并采用消息传递机制来表征节点之间的动态因果依赖关系，从而学习可转移的结构化表示和环境动态知识。在此基础上，结合想象驱动的行为学习和规划来优化潜在空间中的策略，实现跨任务知识转移和快速适应。实验结果表明，该方法在具有随机延迟的 DMC 连续控制任务上优于基线方法。跨任务迁移实验进一步证明，学习到的结构化表示和动态知识可以有效地迁移到新任务，并显着加速策略适应。
+
+</details>
+
+---
+
+## 3. PriorZero: Bridging Language Priors and World Models for Decision Making / PriorZero：连接语言先验和决策世界模型
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12289v1](http://arxiv.org/abs/2605.12289v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12289v1)
+
+**Categories**: cs.LG, cs.AI
+
+**Code**: https://github.com/opendilab/LightZero.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Leveraging the rich world knowledge of Large Language Models (LLMs) to enhance Reinforcement Learning (RL) agents offers a promising path toward general intelligence. However, a fundamental prior-dynamics mismatch hinders existing approaches: static LLM knowledge cannot directly adapt to the complex transition dynamics of long-horizon tasks. Using LLM priors as fixed policies limits exploration diversity, as the prior is blind to environment-specific dynamics; while end-to-end fine-tuning suffers from optimization instability and credit assignment issues. To bridge this gap, we propose PriorZero, a unified framework that integrates LLM-derived conceptual priors into world-model-based planning through a decoupled rollout-training design. During rollout, a novel root-prior injection mechanism incorporates LLM priors exclusively at the root node of Monte Carlo Tree Search (MCTS), focusing search on semantically promising actions while preserving the world model's deep lookahead capability. During training, PriorZero decouples world-model learning from LLM adaptation: the world model is continuously refined on interaction data to jointly improve its dynamics, policy, and value predictions, its value estimates are then leveraged to provide fine-grained credit assignment signals for stable LLM fine-tuning via alternating optimization. Experiments across diverse benchmarks, including text-based adventure games in Jericho and instruction-following gridworld tasks in BabyAI, demonstrate that PriorZero consistently improves both exploration efficiency and asymptotic performance, establishing a promising framework for LLM-empowered decision-making. Our code is available at https://github.com/opendilab/LightZero.
+
+利用大型语言模型 (LLM) 丰富的世界知识来增强强化学习 (RL) 代理，为通向通用智能提供了一条有希望的道路。然而，一个基本的先验动态不匹配阻碍了现有的方法：静态法学硕士知识无法直接适应长期任务的复杂过渡动态。使用 LLM 先验作为固定策略限制了探索多样性，因为先验对特定环境的动态视而不见；而端到端微调则面临优化不稳定和信用分配问题。为了弥补这一差距，我们提出了 PriorZero，这是一个统一的框架，通过解耦的推出培训设计将法学硕士衍生的概念先验集成到基于世界模型的规划中。在推出期间，一种新颖的根先验注入机制仅在蒙特卡罗树搜索（MCTS）的根节点处合并了 LLM 先验，将搜索重点放在语义上有希望的操作上，同时保留了世界模型的深度前瞻能力。在训练过程中，PriorZero将世界模型学习与LLM适应解耦：世界模型根据交互数据不断完善，以共同改进其动态、政策和价值预测，然后利用其价值估计为稳定的LLM微调提供细粒度的学分分配信号，通过交替优化。跨不同基准的实验，包括 Jericho 中基于文本的冒险游戏和 BabyAI 中的遵循指令的网格世界任务，表明 PriorZero 持续提高探索效率和渐近性能，为 LLM 授权的决策建立一个有前途的框架。我们的代码可在 https://github.com/opendilab/LightZero 获取。
+
+</details>
+
+---
+
+## 4. Why Conclusions Diverge from the Same Observations: Formalizing World-Model Non-Identifiability via an Inference / 为什么结论与相同的观察结果不同：通过推理形式化世界模型的不可识别性
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12255v1](http://arxiv.org/abs/2605.12255v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12255v1)
+
+**Categories**: cs.AI, cs.CY, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+When people share the same documents and observations yet reach different conclusions, the disagreement often shifts into a judgment that the other party is cognitively defective, irrational, or acting in bad faith. This paper argues that such divergence is better described as a form of non-identifiability inherent in inference and learning, rather than as a defect of the other party. We organize the phenomenon into two levels: (i) $θ$-level non-identifiability, where conclusions diverge under the same world model $W$ because inference settings differ; and (ii) $W$-level non-identifiability, where repeated use of an inference setting $θ$ biases data exposure and update rules, causing the learned world model $W$ itself to diverge. We introduce an inference profile $θ= (R, E, S, D)$, consisting of Reference, Exploration, Stabilization, and Horizon, and show how outputs can split even for the same observation $o$ and the same $W$. We further explain why disagreements tend to project onto a small number of bases -- abstract versus concrete, externalizability, and order versus freedom -- as a consequence of general constraints on learning systems: computational, observational, and coordination constraints. Finally, we relate the framework to deep representation learning, including representation hierarchy, latent-state estimation, and regularization-exploration trade-offs, and illustrate the framework through a case study on AI regulation debates.
+
+当人们分享相同的文件和观察结果却得出不同的结论时，分歧往往会转变为判断对方有认知缺陷、不理性或恶意行事。本文认为，这种分歧最好被描述为推理和学习中固有的一种不可识别性，而不是另一方的缺陷。我们将这种现象分为两个层次：（i）$θ$级别的不可识别性，在同一世界模型$W$下，由于推理设置不同，结论会出现分歧； (ii) $W$ 级不可识别性，其中重复使用推理设置 $θ$ 会使数据暴露和更新规则产生偏差，导致学习世界模型 $W$ 本身出现分歧。我们引入了一个推理概要 $θ= (R, E, S, D)$，由参考、探索、稳定和地平线组成，并展示了即使对于相同的观察 $o$ 和相同的 $W$，输出也可以如何分割。我们进一步解释了为什么分歧往往会投射到少数基础上——抽象与具体、可外化性、秩序与自由——这是学习系统一般约束的结果：计算、观察和协调约束。最后，我们将该框架与深度表示学习联系起来，包括表示层次结构、潜在状态估计和正则化探索权衡，并通过人工智能监管辩论的案例研究来说明该框架。
+
+</details>
+
+---
+
+## 5. Do Enterprise Systems Need Learned World Models? The Importance of Context to Infer Dynamics / 企业系统需要学习的世界模型吗？上下文对于推断动态的重要性
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12178v1](http://arxiv.org/abs/2605.12178v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12178v1)
+
+**Categories**: cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models enable agents to anticipate the effects of their actions by internalizing environment dynamics. In enterprise systems, however, these dynamics are often defined by tenant-specific business logic that varies across deployments and evolves over time, making models trained on historical transitions brittle under deployment shift. We ask a question the world-models literature has not addressed: when the rules can be read at inference time, does an agent still need to learn them? We argue, and demonstrate empirically, that in settings where transition dynamics are configurable and readable, runtime discovery complements offline training by grounding predictions in the active system instance. We propose enterprise discovery agents, which recover relevant transition dynamics at runtime by reading the system's configuration rather than relying solely on internalized representations. We introduce CascadeBench, a reasoning-focused benchmark for enterprise cascade prediction that adopts the evaluation methodology of World of Workflows on diverse synthetic environments, and use it together with deployment-shift evaluation to show that offline-trained world models can perform well in-distribution but degrade as dynamics change, whereas discovery-based agents are more robust under shift by grounding their predictions in the current instance. Our findings suggest that, in configurable enterprise environments, agents should not rely solely on fixed internalized dynamics, but should incorporate mechanisms for discovering relevant transition logic at runtime.
+
+世界模型使代理能够通过内化环境动态来预测其行为的影响。然而，在企业系统中，这些动态通常是由特定于租户的业务逻辑定义的，这些业务逻辑随部署的不同而变化，并随着时间的推移而演变，使得根据历史转换训练的模型在部署转变时变得脆弱。我们提出一个世界模型文献尚未解决的问题：当可以在推理时读取规则时，智能体是否仍然需要学习它们？我们认为并凭经验证明，在过渡动态可配置和可读的设置中，运行时发现通过在活动系统实例中建立预测来补充离线训练。我们提出了企业发现代理，它通过读取系统的配置而不是仅仅依赖于内部表示来在运行时恢复相关的转换动态。我们引入了 CascadeBench，这是一个以推理为中心的企业级联预测基准，它采用工作流世界在不同合成环境上的评估方法，并将其与部署转移评估结合使用，以表明离线训练的世界模型可以在分布中表现良好，但会随着动态变化而退化，而基于发现的代理通过将其预测基于当前实例，在转移下更加稳健。我们的研究结果表明，在可配置的企业环境中，代理不应仅仅依赖于固定的内部动态，而应结合在运行时发现相关转换逻辑的机制。
+
+</details>
+
+---
+
+## 6. From Imagined Futures to Executable Actions: Mixture of Latent Actions for Robot Manipulation / 从想象的未来到可执行的动作：机器人操纵的潜在动作的混合
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12167v1](http://arxiv.org/abs/2605.12167v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12167v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation models offer a promising imagination mechanism for robot manipulation by predicting long-horizon future observations, but effectively exploiting these imagined futures for action execution remains challenging. Existing approaches either condition policies on predicted frames or directly decode generated videos into actions, both suffering from a mismatch between visual realism and control relevance. As a result, predicted observations emphasize perceptual fidelity rather than action-centric causes of state transitions, leading to indirect and unstable control. To address this gap, we propose MoLA (Mixture of Latent Actions), a control-oriented interface that transforms imagined future videos into executable representations. Instead of passing predicted frames directly to the policy, MoLA leverages a mixture of pretrained inverse dynamics models to infer a mixture of latent actions implied by generated visual transitions. These modality-aware inverse dynamics models capture complementary semantic, depth, and flow cues, providing a structured and physically grounded action representation that bridges video imagination and policy execution. We evaluate our approach on simulated benchmarks (LIBERO, CALVIN, and LIBERO-Plus) and real-world robot manipulation tasks, achieving consistent gains in task success, temporal consistency, and generalization.
+
+视频生成模型通过预测长期的未来观察结果，为机器人操作提供了一种有前景的想象机制，但有效利用这些想象的未来来执行动作仍然具有挑战性。现有的方法要么在预测帧上设置策略，要么直接将生成的视频解码为动作，这两种方法都受到视觉真实性和控制相关性之间不匹配的影响。因此，预测观察强调感知保真度，而不是状态转换的以行动为中心的原因，从而导致间接和不稳定的控制。为了解决这一差距，我们提出了 MoLA（潜在动作混合），这是一种面向控制的界面，可将想象的未来视频转换为可执行的表示。 MoLA 没有将预测帧直接传递给策略，而是利用预训练的逆动态模型的混合来推断生成的视觉转换所隐含的潜在动作的混合。这些模态感知逆动态模型捕获互补的语义、深度和流程线索，提供结构化且基于物理的动作表示，连接视频想象和政策执行。我们在模拟基准（LIBERO、CALVIN 和 LIBERO-Plus）和现实世界的机器人操作任务上评估我们的方法，在任务成功、时间一致性和泛化方面取得一致的成果。
+
+</details>
+
+---
+
+## 7. World Action Models: The Next Frontier in Embodied AI / 世界行动模型：实体人工智能的下一个前沿
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12090v1](http://arxiv.org/abs/2605.12090v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12090v1)
+
+**Categories**: cs.RO, cs.CL, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language-Action (VLA) models have achieved strong semantic generalization for embodied policy learning, yet they learn reactive observation-to-action mappings without explicitly modeling how the physical world evolves under intervention. A growing body of work addresses this limitation by integrating world models, predictive models of environment dynamics, into the action generation pipeline. We term this emerging paradigm World Action Models (WAMs): embodied foundation models that unify predictive state modeling with action generation, targeting a joint distribution over future states and actions rather than actions alone. However, the literature remains fragmented across architectures, learning objectives, and application scenarios, lacking a unified conceptual framework. We formally define WAMs and disambiguate them from related concepts, and trace the foundations and early integration of VLA and world model research that gave rise to this paradigm. We organize existing methods into a structured taxonomy of Cascaded and Joint WAMs, with further subdivision by generation modality, conditioning mechanism, and action decoding strategy. We systematically analyze the data ecosystem fueling WAMs development, spanning robot teleoperation, portable human demonstrations, simulation, and internet-scale egocentric video, and synthesize emerging evaluation protocols organized around visual fidelity, physical commonsense, and action plausibility. Overall, this survey provides the first systematic account of the WAMs landscape, clarifies key architectural paradigms and their trade-offs, and identifies open challenges and future opportunities for this rapidly evolving field.
+
+视觉-语言-行动（VLA）模型已经为具体政策学习实现了强大的语义泛化，但它们学习反应性观察到行动的映射，而没有明确建模物理世界在干预下如何演变。越来越多的工作通过将世界模型、环境动态的预测模型集成到动作生成管道中来解决这一限制。我们将这种新兴范式称为世界行动模型（WAM）：将预测状态建模与行动生成统一起来的具体基础模型，目标是未来状态和行动的联合分布，而不是单独的行动。然而，文献在架构、学习目标和应用场景方面仍然碎片化，缺乏统一的概念框架。我们正式定义了 WAM 并消除了它们与相关概念的歧义，并追溯了 VLA 和世界模型研究的基础和早期整合，从而产生了这一范式。我们将现有方法组织成级联和联合 WAM 的结构化分类法，并按生成模式、调节机制和动作解码策略进一步细分。我们系统地分析了推动 WAM 开发的数据生态系统，涵盖机器人远程操作、便携式人体演示、模拟和互联网规模的自我中心视频，并综合围绕视觉保真度、物理常识和动作合理性组织的新兴评估协议。总体而言，这项调查首次系统地描述了 WAM 景观，阐明了关键的架构范例及其权衡，并确定了这个快速发展的领域面临的挑战和未来的机遇。
+
+</details>
+
+---
+
+## 8. Closing the Motion Execution Gap: From Semantic Motion Task Constraints to Kinematic Control / 缩小运动执行差距：从语义运动任务约束到运动学控制
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12053v1](http://arxiv.org/abs/2605.12053v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12053v1)
+
+**Categories**: cs.RO
+
+**Code**: https://github.com/cram2/cognitive_robot_abstract_machine.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper addresses the Motion Execution Gap, the disconnect between high-level symbolic task descriptions using semantic constraints and executable robot motions. Motion Statecharts are introduced as an executable symbolic representation for complex motions. They allow the arbitrary arrangement of motion constraints, monitors or nested statecharts in parallel and sequence. World-centric motion specification and generalization across embodiments are enabled through the use of a unified differentiable kinematic world model of both, robots and environments. Motion execution is realized through a lMPC-based implementation of the task-function approach, in which smooth transitions during task switches are ensured using jerk bounds. Cross-platform transferability was demonstrated by deploying the method on eight robot platforms, operating in diverse environments. The proposed framework is called Giskard and is available open source: https://github.com/cram2/cognitive_robot_abstract_machine.
+
+本文解决了运动执行差距，即使用语义约束的高级符号任务描述与可执行机器人运动之间的脱节。运动状态图是作为复杂运动的可执行符号表示而引入的。它们允许并行和顺序地任意排列运动约束、监视器或嵌套状态图。通过使用机器人和环境的统一的可微运动世界模型，可以实现跨实施例的以世界为中心的运动规范和概括。运动执行是通过基于 lMPC 的任务功能方法实现来实现的，其中使用急动范围确保任务切换期间的平滑过渡。通过在八个机器人平台上部署该方法并在不同的环境中运行，证明了跨平台可转移性。所提出的框架称为 Giskard，并且是开源的：https://github.com/cram2/cognitive_robot_abstract_machine。
+
+</details>
+
+---
+
+## 9. HarmoWAM: Harmonizing Generalizable and Precise Manipulation via Adaptive World Action Models / HarmoWAM：通过自适应世界行动模型协调通用和精确的操作
+
+**Date**: 2026-05-11 | **arXiv**: [2605.10942v1](http://arxiv.org/abs/2605.10942v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.10942v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) have emerged as a promising paradigm for robot control by modeling physical dynamics. Current WAMs generally follow two paradigms: the "Imagine-then-Execute" approach, which uses video prediction to infer actions via inverse dynamics, and the "Joint Modeling" approach, which jointly models actions and video representations. Based on systematic experiments, we observe a fundamental trade-off between these paradigms: the former explicitly leverages world models for generalizable transit but lacks interaction precision, whereas the latter enables fine-grained, temporally coherent action generation but is constrained by the exploration space of the training distribution. Motivated by these findings, we propose HarmoWAM, an end-to-end WAM that fully leverages a world model to unify predictive and reactive control, enabling both generalizable transit and precise manipulation. Specifically, the world model provides spatio-temporal physical priors that condition two complementary action experts: a predictive expert that leverages latent dynamics for iterative action generation, and a reactive expert that directly infers actions from predicted visual evolution. To enable adaptive coordination, a Process-Adaptive Gating Mechanism is proposed to automatically determine the timing and location of switching between them. This allows the world model to drive the reactive expert to expand the exploration space and the predictive expert to perform precise interactions across different stages of a task. For evaluation, we construct three training-unseen test environments across six real-world robotic tasks, covering variations in background, position, and object semantics. Notably, HarmoWAM achieves strong zero-shot generalization across these scenarios, significantly outperforming prior state-of-the-art VLA models and WAMs by margins of 33% and 29%, respectively.
+
+世界动作模型（WAM）通过对物理动力学进行建模，已成为机器人控制的一种有前途的范例。当前的WAM通常遵循两种范例：“想象然后执行”方法，它使用视频预测通过逆动态来推断动作；以及“联合建模”方法，它联合建模动作和视频表示。基于系统实验，我们观察到这些范式之间的基本权衡：前者明确利用世界模型进行可推广的传输，但缺乏交互精度，而后者能够生成细粒度、时间连贯的动作，但受到训练分布的探索空间的限制。受这些发现的启发，我们提出了 HarmoWAM，这是一种端到端的 WAM，它充分利用世界模型来统一预测和反应控制，从而实现通用传输和精确操纵。具体来说，世界模型提供了时空物理先验，为两个互补的动作专家提供了条件：一个利用潜在动态生成迭代动作的预测专家，以及一个直接从预测的视觉进化推断动作的反应专家。为了实现自适应协调，提出了一种过程自适应门控机制来自动确定它们之间切换的时间和位置。这使得世界模型能够驱动反应型专家扩展探索空间，并驱动预测型专家在任务的不同阶段执行精确的交互。为了进行评估，我们在六个现实世界的机器人任务中构建了三个训练未见的测试环境，涵盖了背景、位置和对象语义的变化。值得注意的是，HarmoWAM 在这些场景中实现了强大的零样本泛化，明显优于之前最先进的 VLA 模型和 WAM，分别高出 33% 和 29%。
+
+</details>
+
+---
+
+## 10. Is Your Driving World Model an All-Around Player? / 您的驾驶世界模型是全能选手吗？
+
+**Date**: 2026-05-11 | **arXiv**: [2605.10858v1](http://arxiv.org/abs/2605.10858v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.10858v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Today's driving world models can generate remarkably realistic dash-cam videos, yet no single model excels universally. Some generate photorealistic textures but violate basic physics; others maintain geometric consistency but fail when subjected to closed-loop planning. This disconnect exposes a critical gap: the field evaluates how real generated worlds appear, but rarely whether they behave realistically. We introduce WorldLens, a unified benchmark that measures world-model fidelity across the full spectrum, from pixel quality and 4D geometry to closed-loop driving and human perceptual alignment, through five complementary aspects and 24 standardized dimensions. Our evaluation of six representative models reveals that no existing approach dominates across all axes: texture-rich models violate geometry, geometry-aware models lack behavioral fidelity, and even the strongest performers achieve only 2-3 out of 10 on human realism ratings. To bridge algorithmic metrics with human perception, we further contribute WorldLens-26K, a 26,808-entry human-annotated preference dataset pairing numerical scores with textual rationales, and WorldLens-Agent, a vision-language evaluator distilled from these judgments that enables scalable, explainable auto-assessment. Together, the benchmark, dataset, and agent form a unified ecosystem for assessing generated worlds not merely by visual appeal, but by physical and behavioral fidelity.
+
+当今的驾驶世界模型可以生成非常逼真的行车记录仪视频，但没有一个模型能够普遍胜出。有些生成逼真的纹理，但违反了基本物理原理；其他人保持几何一致性，但在进行闭环规划时会失败。这种脱节暴露了一个关键的差距：该领域评估真实生成的世界如何出现，但很少评估它们的行为是否真实。我们推出了 WorldLens，这是一个统一的基准，通过五个互补方面和 24 个标准化维度，在整个范围内测量世界模型保真度，从像素质量和 4D 几何到闭环驾驶和人类感知对齐。我们对六个代表性模型的评估表明，没有任何现有方法能够在所有轴上占据主导地位：纹理丰富的模型违反了几何学，几何感知模型缺乏行为保真度，即使是表现最出色的模型在人类真实性评级中也只能获得 2-3 分（满分 10 分）。为了将算法指标与人类感知联系起来，我们进一步贡献了 WorldLens-26K（一个包含 26,808 个条目的人类注释偏好数据集，将数字分数与文本原理配对）和 WorldLens-Agent（从这些判断中提炼出来的视觉语言评估器，可实现可扩展、可解释的自动评估）。基准、数据集和代理共同形成了一个统一的生态系统，不仅可以通过视觉吸引力，还可以通过物理和行为保真度来评估生成的世界。
+
+</details>
+
+---
+
+## 11. DeepSight: Long-Horizon World Modeling via Latent States Prediction for End-to-End Autonomous Driving / DeepSight：通过端到端自动驾驶的潜在状态预测进行长视野世界建模
+
+**Date**: 2026-05-11 | **arXiv**: [2605.10564v1](http://arxiv.org/abs/2605.10564v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.10564v1)
+
+**Categories**: cs.CV, cs.RO
+
+**Code**: https://github.com/hotdogcheesewhite/DeepSight.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+End-to-end autonomous driving systems are increasingly integrating Vision-Language Model (VLM) architectures, incorporating text reasoning or visual reasoning to enhance the robustness and accuracy of driving decisions. However, the reasoning mechanisms employed in most methods are direct adaptations from general domains, lacking in-depth exploration tailored to autonomous driving scenarios, particularly within visual reasoning modules. In this paper, we propose a driving world model that performs parallel prediction of latent semantic features for consecutive future frames in the bird's-eye-view (BEV) space, thereby enabling long-horizon modeling of future world states. We also introduce an efficient and adaptive text reasoning mechanism that utilizes additional social knowledge and reasoning capabilities to further improve driving performance in challenging long-tail scenarios. We present a novel, efficient, and effective approach that achieves state-of-the-art (SOTA) results on the closed-loop Bench2drive benchmark. Codes are available at: https://github.com/hotdogcheesewhite/DeepSight.
+
+端到端自动驾驶系统越来越多地集成视觉语言模型（VLM）架构，结合文本推理或视觉推理来增强驾驶决策的稳健性和准确性。然而，大多数方法所采用的推理机制都是对一般领域的直接改编，缺乏针对自动驾驶场景的深入探索，特别是在视觉推理模块中。在本文中，我们提出了一种驾驶世界模型，该模型可以对鸟瞰（BEV）空间中连续的未来帧的潜在语义特征进行并行预测，从而实现未来世界状态的长视野建模。我们还引入了一种高效且自适应的文本推理机制，该机制利用额外的社会知识和推理能力来进一步提高在具有挑战性的长尾场景中的驾驶性能。我们提出了一种新颖、高效且​​有效的方法，可在闭环 Bench2drive 基准测试中实现最先进 (SOTA) 的结果。代码位于：https://github.com/hotdogcheesewhite/DeepSight。
+
+</details>
+
+---
+
+## 12. How Mobile World Model Guides GUI Agents? / 移动世界模型如何指导 GUI 代理？
+
+**Date**: 2026-05-11 | **arXiv**: [2605.10347v1](http://arxiv.org/abs/2605.10347v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.10347v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in vision-language models have enabled mobile GUI agents to perceive visual interfaces and execute user instructions, but reliable prediction of action consequences remains critical for long-horizon and high-risk interactions. Existing mobile world models provide either text-based or image-based future states, yet it remains unclear which representation is useful, whether generated rollouts can replace real environments, and how test-time guidance helps agents of different strengths. To answer the above questions, we filter and annotate mobile world-model data, then train world models across four modalities: delta text, full text, diffusion-based images, and renderable code. These models achieve SoTA performance on both MobileWorldBench and Code2WorldBench. Furthermore, by evaluating their downstream utility on AITZ, AndroidControl, and AndroidWorld, we obtain three findings. First, renderable code reconstruction achieves high in-distribution fidelity and provides effective multimodal supervision for data construction, while text-based feedback is more robust for online out-of-distribution (OOD) execution. Second, world-model-generated trajectories can provide transferable interaction experience in the training process and improve agents' end-to-end task performance, although these data do not preserve the original distribution. Last, for overconfident mobile agents with low action entropy, posterior self-reflection provides limited gains, suggesting that world models are more effective as prior perception or training supervision than as universal post-hoc verifiers.
+
+视觉语言模型的最新进展使移动 GUI 代理能够感知视觉界面并执行用户指令，但动作结果的可靠预测对于长期和高风险的交互仍然至关重要。现有的移动世界模型提供基于文本或基于图像的未来状态，但仍不清楚哪种表示有用、生成的部署是否可以取代真实环境，以及测试时指导如何帮助不同优势的代理。为了回答上述问题，我们过滤和注释移动世界模型数据，然后跨四种模式训练世界模型：增量文本、全文、基于扩散的图像和可渲染代码。这些模型在 MobileWorldBench 和 Code2WorldBench 上均实现了 SoTA 性能。此外，通过评估它们在 AITZ、AndroidControl 和 AndroidWorld 上的下游实用程序，我们获得了三项发现。首先，可渲染代码重建实现了高分布内保真度，并为数据构建提供有效的多模式监督，而基于文本的反馈对于在线分布外（OOD）执行来说更加稳健。其次，世界模型生成的轨迹可以在训练过程中提供可转移的交互体验，并提高代理的端到端任务性能，尽管这些数据不保留原始分布。最后，对于行动熵较低的过度自信的移动代理，后验自我反思提供的收益有限，这表明世界模型作为先验感知或训练监督比作为通用事后验证者更有效。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-12 (8 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-05-12
