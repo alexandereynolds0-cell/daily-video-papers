@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-14](papers/2026-05-14.md) - 20 papers
 - [2026-05-13](papers/2026-05-13.md) - 3 papers
 - [2026-05-12](papers/2026-05-12.md) - 5 papers
 - [2026-05-11](papers/2026-05-11.md) - 7 papers
@@ -78,6 +79,342 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-14 (20 papers)</b></summary>
+
+# arXiv Video Papers - 2026-05-14
+
+**Paper Count**: 20
+
+---
+
+## 1. Training Long-Context Vision-Language Models Effectively with Generalization Beyond 128K Context / 通过超过 128K 上下文的泛化有效训练长上下文视觉语言模型
+
+**Date**: 2026-05-13 | **arXiv**: [2605.13831v1](http://arxiv.org/abs/2605.13831v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.13831v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-context modeling is becoming a core capability of modern large vision-language models (LVLMs), enabling sustained context management across long-document understanding, video analysis, and multi-turn tool use in agentic workflows. Yet practical training recipes remain insufficiently explored, particularly for designing and balancing long-context data mixtures. In this work, we present a systematic study of long-context continued pre-training for LVLMs, extending a 7B model from 32K to 128K context with extensive ablations on long-document data. We first show that long-document VQA is substantially more effective than OCR transcription. Building on this observation, our ablations further yield three key findings: i) for sequence-length distribution, balanced data outperforms target-length-focused data (e.g., 128K), suggesting that long-context ability requires generalizable key-information retrieval across various lengths and positions; ii) retrieval remains the primary bottleneck, favoring retrieval-heavy mixtures with modest reasoning data for task diversity; and iii) pure long-document VQA largely preserves short-context capabilities, suggesting that instruction-formatted long data reduces the need for short-data mixing. Based on these findings, we introduce MMProLong, obtained by long-context continued pre-training from Qwen2.5-VL-7B with only a 5B-token budget. MMProLong improves long-document VQA scores by 7.1% and maintains strong performance at 256K and 512K contexts beyond its 128K training window, without additional training. It further generalizes to webpage-based multimodal needle retrieval, long-context vision-text compression, and long-video understanding without task-specific supervision. Overall, our study establishes a practical LongPT recipe and an empirical foundation for advancing long-context vision-language models.
+
+长上下文建模正在成为现代大型视觉语言模型 (LVLM) 的核心功能，支持跨长文档理解、视频分析和代理工作流程中的多轮工具使用的持续上下文管理。然而，实用的训练方法仍未得到充分探索，特别是在设计和平衡长上下文数据混合方面。在这项工作中，我们对 LVLM 的长上下文持续预训练进行了系统研究，将 7B 模型从 32K 上下文扩展到 128K 上下文，并对长文档数据进行了广泛的消融。我们首先证明长文档 VQA 比 OCR 转录更有效。基于这一观察，我们的消融进一步产生了三个关键发现：i）对于序列长度分布，平衡数据优于以目标长度为中心的数据（例如128K），这表明长上下文能力需要跨不同长度和位置的可概括的关键信息检索； ii）检索仍然是主要瓶颈，有利于任务多样性的适度推理数据和检索密集的混合； iii) 纯长文档 VQA 在很大程度上保留了短上下文功能，这表明指令格式的长数据减少了对短数据混合的需求。基于这些发现，我们引入了 MMProLong，它是通过 Qwen2.5-VL-7B 的长上下文持续预训练获得的，仅需要 5B 代币预算。 MMProLong 将长文档 VQA 分数提高了 7.1%，并在超出 128K 训练窗口的 256K 和 512K 上下文中保持强劲性能，无需额外训练。它进一步推广到基于网页的多模式针检索、长上下文视觉文本压缩以及无需特定任务监督的长视频理解。总的来说，我们的研究为推进长上下文视觉语言模型建立了实用的 LongPT 配方和实证基础。
+
+</details>
+
+---
+
+## 2. RoboEvolve: Co-Evolving Planner-Simulator for Robotic Manipulation with Limited Data / RoboEvolve：用于有限数据的机器人操作的协同进化规划器模拟器
+
+**Date**: 2026-05-13 | **arXiv**: [2605.13775v1](http://arxiv.org/abs/2605.13775v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.13775v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The scalability of robotic manipulation is fundamentally bottlenecked by the scarcity of task-aligned physical interaction data. While vision-language models (VLMs) and video generation models (VGMs) hold promise for autonomous data synthesis, they suffer from semantic-spatial misalignment and physical hallucinations, respectively. To bridge this gap, we introduce RoboEvolve, a novel framework that couples a VLM planner and a VGM simulator into a mutually reinforcing co-evolutionary loop. Operating purely on unlabeled seed images, RoboEvolve leverages a cognitive-inspired dual-phase mechanism: (i) daytime exploration fosters physically grounded behavioral discovery through a semantic-controlled multi-granular reward, and (ii) nighttime consolidation mines "near-miss" failures to stabilize policy optimization. Guided by an autonomous progressive curriculum, the system naturally scales from simple atomic actions to complex tasks. Extensive experiments demonstrate that RoboEvolve (I) achieves superior effectiveness, elevating base planners by 30 absolute points and amplifying simulator success by 48% on average; (II) exhibits extreme data efficiency, surpassing fully supervised baselines with merely 500 unlabeled seeds--a 50x reduction; and (III) demonstrates robust continual learning without catastrophic forgetting.
+
+机器人操作的可扩展性从根本上受到任务相关物理交互数据稀缺的瓶颈。虽然视觉语言模型（VLM）和视频生成模型（VGM）有望实现自主数据合成，但它们分别遭受语义空间错位和物理幻觉的困扰。为了弥补这一差距，我们引入了 RoboEvolve，这是一种新颖的框架，它将 VLM 规划器和 VGM 模拟器耦合成一个相互增强的协同进化循环。 RoboEvolve 纯粹基于未标记的种子图像进行操作，利用了认知启发的双阶段机制：(i) 白天探索通过语义控制的多粒度奖励促进物理基础的行为发现，(ii) 夜间整合挖掘“险些发生”的故障以稳定策略优化。在自主渐进课程的指导下，该系统自然地从简单的原子操作扩展到复杂的任务。大量实验表明，RoboEvolve (I) 实现了卓越的有效性，将基地规划者提升了 30 个绝对点，并将模拟器的成功率平均提高了 48%； (II) 表现出极高的数据效率，仅用 500 个未标记的种子就超越了完全监督的基线——减少了 50 倍； (III) 展示了强大的持续学习能力，没有灾难性的遗忘。
+
+</details>
+
+---
+
+## 3. AnyFlow: Any-Step Video Diffusion Model with On-Policy Flow Map Distillation / AnyFlow：具有策略流图蒸馏的任意步骤视频扩散模型
+
+**Date**: 2026-05-13 | **arXiv**: [2605.13724v1](http://arxiv.org/abs/2605.13724v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.13724v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Few-step video generation has been significantly advanced by consistency distillation. However, the performance of consistency-distilled models often degrades as more sampling steps are allocated at test time, limiting their effectiveness for any-step video diffusion. This limitation arises because consistency distillation replaces the original probability-flow ODE trajectory with a consistency-sampling trajectory, weakening the desirable test-time scaling behavior of ODE sampling. To address this limitation, we introduce AnyFlow, the first any-step video diffusion distillation framework based on flow maps. Instead of distilling a model for only a few fixed sampling steps, AnyFlow optimizes the full ODE sampling trajectory. To this end, we shift the distillation target from endpoint consistency mapping $(z_{t}\rightarrow z_{0})$ to flow-map transition learning $(z_{t}\rightarrow z_{r})$ over arbitrary time intervals. We further propose Flow Map Backward Simulation, which decomposes a full Euler rollout into shortcut flow-map transitions, enabling efficient on-policy distillation that reduces test-time errors (i.e., discretization error in few-step sampling and exposure bias in causal generation). Extensive experiments across both bidirectional and causal architectures, at scales ranging from 1.3B to 14B parameters, demonstrate that AnyFlow achieves performance matches or surpasses consistency-based counterparts in the few-step regime, while scaling with sampling step budgets.
+
+通过一致性蒸馏，少步骤视频生成得到了显着改进。然而，随着测试时分配更多采样步骤，一致性蒸馏模型的性能通常会下降，从而限制了它们对任何步骤视频扩散的有效性。出现这种限制是因为一致性蒸馏用一致性采样轨迹取代了原始的概率流 ODE 轨迹，削弱了 ODE 采样所需的测试时间缩放行为。为了解决这个限制，我们引入了 AnyFlow，这是第一个基于流图的任意步骤视频扩散蒸馏框架。 AnyFlow 不是仅针对几个固定采样步骤提炼模型，而是优化完整的 ODE 采样轨迹。为此，我们将蒸馏目标从端点一致性映射 $(z_{t}\rightarrow z_{0})$ 转移到任意时间间隔内的流图转换学习 $(z_{t}\rightarrow z_{r})$。我们进一步提出了流图向后模拟，它将完整的欧拉推出分解为快捷流图转换，从而实现有效的策略蒸馏，从而减少测试时错误（即少步采样中的离散化错误和因果生成中的暴露偏差）。跨双向和因果架构、参数范围从 1.3B 到 14B 参数的广泛实验表明，AnyFlow 在少步机制中实现了性能匹配或超越基于一致性的对应方案，同时通过采样步预算进行扩展。
+
+</details>
+
+---
+
+## 4. Neural Video Compression with Domain Transfer / 具有域传输的神经视频压缩
+
+**Date**: 2026-05-13 | **arXiv**: [2605.13476v1](http://arxiv.org/abs/2605.13476v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.13476v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/SunnyMass/DCVC-DT.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Content-adaptive compression has always been a key direction in neural video coding (NVC), aiming to mitigate the domain gap between training and testing data. Such gaps often arise from distributional discrepancies between training and inference data, which may cause noticeable performance degradation when the testing content differs from the training distribution. To tackle this challenge, we propose DCVC-DT, a domain transfer enhanced neural video compression framework. Specifically, we design a lightweight online domain transfer (DT) mechanism that dynamically adapts the encoded latent representation during inference, effectively bridging the domain gap without modifying the encoder or decoder parameters. In addition, we develop a frame-level dynamic RD (Rate and Distortion) adjustment scheme that actively regulates the ratio of R and D in the loss function based on quality fluctuation, thereby improving rate-distortion performance. Extensive experiments demonstrate that DCVC-DT achieves up to 6.21% bitrate savings over the baseline DCVC-DC, while significantly enhancing generalization to unseen testing data and alleviating error propagation. Our code is available at https://github.com/SunnyMass/DCVC-DT.
+
+内容自适应压缩一直是神经视频编码（NVC）的一个关键方向，旨在缩小训练数据和测试数据之间的域差距。这种差距通常是由训练和推理数据之间的分布差异引起的，当测试内容与训练分布不同时，这可能会导致明显的性能下降。为了应对这一挑战，我们提出了 DCVC-DT，一种域传输增强型神经视频压缩框架。具体来说，我们设计了一种轻量级在线域传输（DT）机制，该机制可以在推理过程中动态调整编码的潜在表示，从而有效地弥合域间隙，而无需修改编码器或解码器参数。此外，我们还开发了帧级动态RD（速率和失真）调整方案，根据质量波动主动调节损失函数中R和D的比例，从而提高速率失真性能。大量实验表明，与基线 DCVC-DC 相比，DCVC-DT 的比特率节省高达 6.21%，同时显着增强了对未见过的测试数据的泛化并减轻了错误传播。我们的代码可在 https://github.com/SunnyMass/DCVC-DT 获取。
+
+</details>
+
+---
+
+## 5. ReTool-Video: Recursive Tool-Using Video Agents with Meta-Augmented Tool Grounding / ReTool-Video：具有元增强工具基础的递归工具使用视频代理
+
+**Date**: 2026-05-13 | **arXiv**: [2605.13228v1](http://arxiv.org/abs/2605.13228v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.13228v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video understanding requires active evidence seeking, motivating tool-augmented video agents for temporal reasoning, cross-modal understanding, and complex question answering. Existing video agents have improved video reasoning with retrieval, memory, frame inspection, and verifier tools, but they still face two limitations: (1) a coarse tool space that lacks fine-grained operations for compositional reasoning; and (2) a flat action space that forces high-level video intents into primitive executable tool calls. In this paper, we address these challenges with two complementary designs. First, we construct a MetaAug-Video Tool Library (MVTL), an extensible tool library with 134 registered tools, including 26 base tools for general multimodal signal processing and 108 meta tools for filtering, aggregation, reranking, formatting, and other intermediate-result operations. MVTL supports dual-level access to both structured video information and raw modal evidence, enabling diverse video reasoning scenarios. Second, we propose ReTool-Video, a recursive tool-using method that grounds high-level video intents into executable tool chains. In ReTool-Video, matched actions are executed directly, while unmatched intents are delegated to a resolver for parameter repair, tool substitution, or decomposition. This allows abstract actions such as temporal merging, cross-modal verification, or repeated-event aggregation to be progressively translated into concrete multimodal operations at runtime. Experiments on MVBench, MLVU, and Video-MME w/o sub. show that ReTool-Video consistently outperforms strong baselines. Further analysis demonstrates that recursive grounding and fine-grained meta tools improve the stability and effectiveness of complex video understanding.
+
+视频理解需要主动寻找证据，激励工具增强视频代理进行时间推理、跨模式理解和复杂问题回答。现有的视频代理通过检索、记忆、帧检查和验证器工具改进了视频推理，但它们仍然面临两个限制：（1）粗糙的工具空间，缺乏用于组合推理的细粒度操作； (2) 平坦的动作空间，将高级视频意图强制转换为原始可执行工具调用。在本文中，我们通过两种互补的设计来应对这些挑战。首先，我们构建了一个 MetaAug-Video 工具库（MVTL），这是一个可扩展的工具库，拥有 134 个注册工具，其中包括 26 个用于通用多模态信号处理的基本工具和 108 个用于过滤、聚合、重新排序、格式化和其他中间结果操作的元工具。 MVTL支持对结构化视频信息和原始模态证据的双层访问，从而实现多样化的视频推理场景。其次，我们提出了 ReTool-Video，一种递归工具使用方法，将高级视频意图融入可执行工具链中。在ReTool-Video中，匹配的动作直接执行，而不匹配的意图则委托给解析器进行参数修复、工具替换或分解。这允许诸如时间合并、跨模式验证或重复事件聚合之类的抽象操作在运行时逐步转换为具体的多模式操作。在 MVBench、MLVU 和 Video-MME（不带子系统）上进行实验。表明 ReTool-Video 始终优于强大的基线。进一步的分析表明，递归基础和细粒度元工具提高了复杂视频理解的稳定性和有效性。
+
+</details>
+
+---
+
+## 6. DiffST: Spatiotemporal-Aware Diffusion for Real-World Space-Time Video Super-Resolution / DiffST：用于真实世界时空视频超分辨率的时空感知扩散
+
+**Date**: 2026-05-13 | **arXiv**: [2605.13182v1](http://arxiv.org/abs/2605.13182v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.13182v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/zhengchen1999/DiffST.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion-based models have shown strong performance in video super-resolution (VSR) and video frame interpolation (VFI). However, their role in the coupled space-time video super-resolution (STVSR) setting remains limited. Existing diffusion-based STVSR approaches suffer from two issues: (1) low inference efficiency and (2) insufficient utilization of spatiotemporal information. These limitations impede deployment. To address these issues, we introduce DiffST, an efficient spatiotemporal-aware video diffusion framework for real-world STVSR. To improve efficiency, we adapt a pre-trained diffusion model for one-step sampling and process the entire video directly rather than operating on individual frames. Furthermore, to enhance spatiotemporal information utilization, we introduce cross-frame context aggregation (CFCA) and video representation guidance (VRG). The CFCA module aggregates information across multiple keyframes to produce intermediate frames. The VRG module extracts video-level global features to guide the diffusion process. Extensive experiments show that DiffST obtains leading results on real-world STVSR tasks. It also maintains high inference efficiency, running about 17$\times$ faster than previous diffusion-based STVSR methods. Code is available at: https://github.com/zhengchen1999/DiffST.
+
+基于扩散的模型在视频超分辨率（VSR）和视频帧插值（VFI）方面表现出了强大的性能。然而，它们在耦合时空视频超分辨率（STVSR）设置中的作用仍然有限。现有的基于扩散的 STVSR 方法存在两个问题：（1）推理效率低；（2）时空信息利用不足。这些限制阻碍了部署。为了解决这些问题，我们引入了 DiffST，一种用于现实世界 STVSR 的高效时空感知视频扩散框架。为了提高效率，我们采用预训练的扩散模型进行一步采样，并直接处理整个视频，而不是对单个帧进行操作。此外，为了增强时空信息利用率，我们引入了跨帧上下文聚合（CFCA）和视频表示指导（VRG）。 CFCA 模块聚合多个关键帧的信息以生成中间帧。 VRG模块提取视频级全局特征来指导扩散过程。大量实验表明，DiffST 在现实世界的 STVSR 任务上取得了领先的结果。它还保持了较高的推理效率，运行速度比之前基于扩散的 STVSR 方法快约 17 倍。代码位于：https://github.com/zhengchen1999/DiffST。
+
+</details>
+
+---
+
+## 7. Pyramid Forcing: Head-Aware Pyramid KV Cache Policy for High-Quality Long Video Generation / Pyramid Forcing：用于高质量长视频生成的头部感知金字塔 KV 缓存策略
+
+**Date**: 2026-05-13 | **arXiv**: [2605.13111v1](http://arxiv.org/abs/2605.13111v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.13111v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive video generation enables streaming and open-ended long video synthesis, but still suffers from long-term degradation caused by accumulated errors. Existing KVCache strategies usually apply unified historical-frame retention, implicitly assuming homogeneous historical dependencies across attention heads. We revisit historical-frame attention and reveal three distinct head types: Anchor Heads require broad long-range context, Wave Heads exhibit periodic temporal dependencies, and Veil Heads focus on initial and adjacent frames. Based on this finding, we propose Pyramid Forcing, a head-aware pyramidal KVCache framework that identifies head types offline, assigns behavior-specific cache policies, and supports heterogeneous cache lengths via efficient ragged-cache attention. Experiments on Self Forcing and Causal Forcing show that Pyramid Forcing consistently improves long-horizon generation quality on VBench-Long, increasing the 60-second Self Forcing score from 77.87 to 81.21 while enhancing motion dynamics, visual fidelity, and semantic consistency. Project: https://if-lab-pku.github.io/Pyramid-Forcing/.
+
+自回归视频生成可以实现流式传输和开放式长视频合成，但仍然会遭受累积错误导致的长期退化。现有的 KVCache 策略通常应用统一的历史帧保留，隐含地假设注意力头之间具有同质的历史依赖关系。我们重新审视历史帧注意力，并揭示了三种不同的头部类型：锚头需要广泛的远程上下文，波头表现出周期性的时间依赖性，而面纱头则专注于初始帧和相邻帧。基于这一发现，我们提出了 Pyramid Forcing，一种头部感知的金字塔 KVCache 框架，可以离线识别头部类型，分配特定于行为的缓存策略，并通过高效的不规则缓存注意力支持异构缓存长度。自强迫和因果强迫实验表明，金字塔强迫持续提高了 VBench-Long 上的长视界生成质量，将 60 秒自强迫得分从 77.87 提高到 81.21，同时增强了运动动态、视觉保真度和语义一致性。项目：https://if-lab-pku.github.io/Pyramid-Forcing/。
+
+</details>
+
+---
+
+## 8. Learning to See What You Need: Gaze Attention for Multimodal Large Language Models / 学会看看你需要什么：关注多模态大语言模型
+
+**Date**: 2026-05-13 | **arXiv**: [2605.13080v1](http://arxiv.org/abs/2605.13080v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.13080v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+When humans describe a visual scene, they do not process the entire image uniformly; instead, they selectively fixate on regions relevant to their intended description. In contrast, current multimodal large language models (MLLMs) attend to all visual tokens at each generation step, leading to diluted focus and unnecessary computational overhead. In this work, we introduce Gaze Attention, a novel mechanism that enables MLLMs to selectively attend to task-relevant visual regions during generation. Specifically, we spatially group visual embeddings-stored as key-value caches-into compact gaze regions, each represented by a lightweight descriptor. At each decoding step, the model dynamically selects the most relevant regions and restricts attention to them, reducing redundant computation while enhancing focus. To mitigate the loss of global context caused by localized attention, we further propose learnable context tokens appended to each image or frame, allowing the model to maintain holistic visual awareness. Extensive experiments on image and video understanding benchmarks demonstrate that Gaze Attention matches or surpasses dense-attention baselines, while using up to 90% fewer visual KV entries in the attention computation.
+
+当人类描述视觉场景时，他们不会统一处理整个图像；相反，他们有选择地关注与其预期描述相关的区域。相比之下，当前的多模态大语言模型（MLLM）在每个生成步骤中都会处理所有视觉标记，从而导致焦点分散和不必要的计算开销。在这项工作中，我们引入了 Gaze Attention，这是一种新颖的机制，使 MLLM 在生成过程中能够选择性地关注与任务相关的视觉区域。具体来说，我们在空间上将视觉嵌入（存储为键值缓存）分组到紧凑的注视区域中，每个区域都由一个轻量级描述符表示。在每个解码步骤中，模型动态选择最相关的区域并将注意力限制在它们上，减少冗余计算，同时增强焦点。为了减轻局部注意力造成的全局上下文丢失，我们进一步提出将可学习的上下文标记附加到每个图像或帧，使模型能够保持整体视觉意识。对图像和视频理解基准的大量实验表明，Gaze Attention 匹配或超过了密集注意力基线，同时在注意力计算中使用的视觉 KV 条目减少了 90%。
+
+</details>
+
+---
+
+## 9. GTA: Advancing Image-to-3D World Generation via Geometry Then Appearance Video Diffusion / GTA：通过几何和外观视频扩散推进图像到 3D 世界的生成
+
+**Date**: 2026-05-13 | **arXiv**: [2605.12957v1](http://arxiv.org/abs/2605.12957v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12957v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent developments in generative models and large-scale datasets have substantially advanced 3D world generation, facilitating a broad range of domains including spatial intelligence, embodied intelligence, and autonomous driving. While achieving remarkable progress, existing approaches to 3D world generation typically prioritize appearance prediction with limited modeling of the underlying geometry, leading to issues such as unreliable scene structure estimation and degraded cross-view consistency. To address these limitations, motivated by the coarse-to-fine nature of human visual perception, we propose GTA, a novel image-to-3D world generation method following a Geometry-Then-Appearance paradigm. Specifically, given a single input image, to improve the structural fidelity of synthesized 3D scenes, GTA adopts a two-stage framework with two dedicated video diffusion models, which first generate coarse geometric structure from novel viewpoints and then synthesize fine-grained appearance conditioned on the predicted geometry. To further enhance cross-view appearance consistency, we introduce a random latent shuffle strategy during the training process, along with a test-time scaling scheme that improves perceptual quality without compromising quantitative performance. Extensive experiments have demonstrated that our proposed method consistently outperforms existing approaches in terms of fidelity, visual quality, and geometric accuracy. Moreover, GTA is shown to be effective as a general enhancement module that further improves the generation quality of existing image-to-3D world pipelines, as well as supporting multiple downstream applications and exhibiting favorable data efficiency during model training, highlighting its versatility and broad applicability. Project page: https://hanxinzhu-lab.github.io/GTA/.
+
+生成模型和大规模数据集的最新发展极大地推进了 3D 世界生成，促进了包括空间智能、实体智能和自动驾驶在内的广泛领域的发展。在取得显着进展的同时，现有的 3D 世界生成方法通常会优先考虑外观预测，而对底层几何的建模有限，从而导致场景结构估计不可靠和跨视图一致性下降等问题。为了解决这些限制，受人类视觉感知从粗到细的本质的启发，我们提出了 GTA，一种遵循几何先外观范式的新颖的图像到 3D 世界生成方法。具体来说，给定单个输入图像，为了提高合成 3D 场景的结构保真度，GTA 采用具有两个专用视频扩散模型的两阶段框架，首先从新的视点生成粗略的几何结构，然后根据预测的几何形状合成细粒度的外观。为了进一步增强跨视图外观一致性，我们在训练过程中引入了随机潜在洗牌策略，以及测试时间缩放方案，可在不影响定量性能的情况下提高感知质量。大量的实验表明，我们提出的方法在保真度、视觉质量和几何精度方面始终优于现有方法。此外，GTA被证明是有效的通用增强模块，可以进一步提高现有图像到3D世界管道的生成质量，并支持多个下游应用程序并在模型训练期间表现出良好的数据效率，凸显了其多功能性和广泛的适用性。项目页面：https://hanxinzhu-lab.github.io/GTA/。
+
+</details>
+
+---
+
+## 10. AdaFocus: Adaptive Relevance-Diversity Sampling with Zero-Cache Look-back for Efficient Long Video Understanding / AdaFocus：具有零缓存回溯功能的自适应相关性多样性采样，可实现高效的长视频理解
+
+**Date**: 2026-05-13 | **arXiv**: [2605.12954v1](http://arxiv.org/abs/2605.12954v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12954v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long video understanding is heavily bottlenecked by a rigid one-shot paradigm: existing methods either densely encode videos at prohibitive memory and latency costs, or aggressively compress them into sparse frame sets that irreversibly discard fine-grained evidence needed for downstream reasoning. Consequently, current models struggle to simultaneously balance temporal coverage, visual details, and computational efficiency.   We propose AdaFocus, an efficient framework that rethinks long-video understanding as progressive evidence acquisition rather than one-pass encoding. AdaFocus relies on two tightly coupled components. First, a Query-Aware Adaptive Relevance-Diversity sampler (AdaRD) produces a compact yet informative video preview, adaptively switching to global clustering when the query lacks reliable local grounding. Second, instead of caching exhaustive frame sequences in memory, AdaFocus introduces an uncertainty-triggered refinement mechanism. It performs targeted look-back only when the model is not confident, retrieving high-resolution evidence directly from disk via a zero-cache I/O design. This turns discarded visual details from an irreversible loss into on-demand recoverable evidence without paying the cost of exhaustive preloading.   Experiments on seven standard long-video benchmarks show that AdaFocus delivers a substantially better efficiency-accuracy trade-off than strong baselines. Compared with conventional dense encoding, AdaFocus achieves improved task performance (e.g., +2.59 accuracy on VideoMME, +8.39 mIoU on Charades-STA over single-pass inference) while reducing visual token consumption by ~33x and eliminating the need for in-memory frame pre-caching through its zero-cache disk retrieval design. These findings suggest that progressive preview combined with zero-cache evidence refinement is a highly effective paradigm for scalable multimedia reasoning.
+
+长视频理解受到严格的一次性范式的严重瓶颈：现有方法要么以令人望而却步的内存和延迟成本对视频进行密集编码，要么将它们积极压缩为稀疏帧集，从而不可逆地丢弃下游推理所需的细粒度证据。因此，当前的模型很难同时平衡时间覆盖、视觉细节和计算效率。   我们提出了 AdaFocus，这是一种有效的框架，它将长视频理解重新视为渐进式证据获取而不是一次性编码。 AdaFocus 依赖于两个紧密耦合的组件。首先，查询感知自适应相关性多样性采样器 (AdaRD) 会生成紧凑但信息丰富的视频预览，当查询缺乏可靠的本地基础时，自适应地切换到全局聚类。其次，AdaFocus 引入了一种不确定性触发的细化机制，而不是在内存中缓存详尽的帧序列。仅当模型不自信时，它才执行有针对性的回溯，通过零缓存 I/O 设计直接从磁盘检索高分辨率证据。这将丢弃的视觉细节从不可逆转的损失转变为按需可恢复的证据，而无需支付详尽的预加载成本。   对七个标准长视频基准的实验表明，AdaFocus 提供了比强基准更好的效率与准确性权衡。与传统的密集编码相比，AdaFocus 实现了更高的任务性能（例如，通过单遍推理，VideoMME 上的准确率 +2.59，Charades-STA 上的 +8.39 mIoU），同时将视觉令牌消耗减少约 33 倍，并通过其零缓存磁盘检索设计消除了内存中帧预缓存的需要。这些发现表明，渐进式预览与零缓存证据细化相结合是可扩展多媒体推理的高效范例。
+
+</details>
+
+---
+
+## 11. CRePE: Curved Ray Expectation Positional Encoding for Unified-Camera-Controlled Video Generation / CRePE：用于统一相机控制视频生成的弯曲光线期望位置编码
+
+**Date**: 2026-05-13 | **arXiv**: [2605.12938v1](http://arxiv.org/abs/2605.12938v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12938v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Camera-conditioned video generation requires positional encoding that remains reliable under changes in camera motion, lens configuration, and scene structure. However, existing attention-level camera encodings either provide ray-only camera signals or rely on pinhole camera geometry, limiting their applicability to general camera control under the Unified Camera Model, including wide-angle and fisheye lenses. To address this limitation, we propose Curved Ray Expectation Positional Encoding (CRePE). CRePE represents each image token as a depth-aware positional distribution along its source ray, providing a Unified Camera Model-compatible positional encoding that captures the projected-path geometry induced by wide-angle and fisheye cameras. CRePE is implemented through a Geometric Attention Adapter added to frozen video DiTs, injecting token-wise scene-distance information into selected attention layers and stabilizing it with pseudo supervision from a monocular geometry foundation model. This design leads to more stable camera control and improves several geometry-aware and perceptual-quality metrics, while remaining competitive on video-quality metrics. Controlled positional-encoding ablations show a better overall average rank than a RayRoPE-style endpoint PE baseline, demonstrating the effectiveness of UCM-aware projected-path integration across diverse camera models. Furthermore, by extending the same positional-encoding pathway to external geometry control through Radial MixForcing, CRePE supports external radial-map control for scene-geometry-conditioned generation and source-video motion transfer beyond camera control.
+
+相机条件视频生成需要位置编码，该编码在相机运动、镜头配置和场景结构发生变化时仍保持可靠。然而，现有的注意力级相机编码要么提供仅射线相机信号，要么依赖针孔相机几何结构，限制了它们在统一相机模型下的一般相机控制（包括广角和鱼眼镜头）的适用性。为了解决这个限制，我们提出了曲线射线期望位置编码（CRePE）。 CRePE 将每个图像标记表示为沿其源光线的深度感知位置分布，提供与统一相机模型兼容的位置编码，捕获由广角和鱼眼相机引起的投影路径几何形状。 CRePE 是通过添加到冻结视频 DiT 中的几何注意力适配器来实现的，将标记式场景距离信息注入到选定的注意力层中，并通过单目几何基础模型的伪监督来稳定它。这种设计可以实现更稳定的摄像机控制，并改进了多个几何感知和感知质量指标，同时在视频质量指标上保持竞争力。受控位置编码烧蚀显示出比 RayRoPE 式端点 PE 基线更好的总体平均排名，证明了跨不同相机模型的 UCM 感知投影路径集成的有效性。此外，通过 Radial MixForcing 将相同的位置编码路径扩展到外部几何控制，CRePE 支持外部径向贴图控制，以实现场景几何条件生成和超出摄像机控制的源视频运动传输。
+
+</details>
+
+---
+
+## 12. Is Video Anomaly Detection Misframed? Evidence from LLM-Based and Multi-Scene Models / 视频异常检测是否错误？来自基于法学硕士和多场景模型的证据
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12725v1](http://arxiv.org/abs/2605.12725v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12725v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent video anomaly detection research has expanded rapidly with an emphasis on general models of normality intended to work across many different scenes. While this focus has led to improvements in scalability and multi-scene generalization, it has also shifted the field away from modeling the scene-specific and context-dependent nature of normal behavior. Contemporary approaches frequently rely on video-level weak supervision and opaque pretrained representations from multi-modal large language models (MLLMs), which encourage models to respond to familiar semantic anomaly categories rather than to deviations from the normal patterns of a particular environment. This trend suppresses spatial localization, introduces semantic bias, and reduces anomaly detection to a form of action recognition. In this paper, we examine whether these prevailing formulations align with the core requirements of real-world VAD, which is typically performed within a single scene where normality is determined by local geometry, semantics, and activity patterns. Through targeted visual analyses and empirical evaluations, we demonstrate the practical consequences of these limitations and show that meaningful progress in VAD requires renewed focus on single-scene, spatially-aware, and explainable formulations that capture the nuanced structure of normality within individual environments.
+
+最近的视频异常检测研究迅速扩展，重点是适用于许多不同场景的通用正常模型。虽然这种关注带来了可扩展性和多场景泛化的改进，但它也使该领域偏离了对正常行为的场景特定和上下文相关性质进行建模。现代方法经常依赖于视频级弱监督和来自多模态大语言模型（MLLM）的不透明预训练表示，这鼓励模型响应熟悉的语义异常类别，而不是响应特定环境正常模式的偏差。这种趋势抑制了空间定位，引入了语义偏差，并将异常检测简化为动作识别的一种形式。在本文中，我们研究了这些流行的公式是否符合现实世界 VAD 的核心要求，VAD 通常在单个场景中执行，其中常态由局部几何、语义和活动模式决定。通过有针对性的视觉分析和实证评估，我们展示了这些限制的实际后果，并表明 VAD 的有意义的进展需要重新关注单场景、空间感知和可解释的公式，以捕捉个体环境中常态的微妙结构。
+
+</details>
+
+---
+
+## 13. TrackCraft3R: Repurposing Video Diffusion Transformers for Dense 3D Tracking / TrackCraft3R：重新利用视频扩散变压器进行密集 3D 跟踪
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12587v1](http://arxiv.org/abs/2605.12587v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12587v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Dense 3D tracking from monocular video is fundamental to dynamic scene understanding. While recent 3D foundation models provide reliable per-frame geometry, recovering object motion in this geometry remains challenging and benefits from strong motion priors learned from real-world videos. Existing 3D trackers either follow iterative paradigms trained from scratch on synthetic data or fine-tune 3D reconstruction models learned from static multi-view images, both lacking real-world motion priors. Pre-trained video diffusion transformers (video DiTs) offer rich spatio-temporal priors from internet-scale videos, making them a promising foundation for 3D tracking. However, their frame-anchored formulation, which generates each frame's content, is fundamentally mismatched with reference-anchored dense 3D tracking, which must follow the same physical points from a reference frame across time. We present TrackCraft3R, the first method to repurpose a video DiT as a feed-forward dense 3D tracker. Given a monocular video and its frame-anchored reconstruction pointmap, TrackCraft3R predicts a reference-anchored tracking pointmap that follows every pixel of the first frame across time in a single forward pass, along with its visibility. We achieve this through two designs: (i) a dual-latent representation that uses per-frame geometry latents and reference-anchored track latents as dense queries, and (ii) temporal RoPE alignment, which specifies the target timestamp of each track latent. Together, these designs convert the per-frame generative paradigm of video DiTs into a reference-anchored tracking formulation with LoRA fine-tuning. TrackCraft3R achieves state-of-the-art performance on standard sparse and dense 3D tracking benchmarks, while running 1.3x faster and using 4.6x less peak memory than the strongest prior method. We further demonstrate robustness to large motions and long videos.
+
+单目视频的密集 3D 跟踪是动态场景理解的基础。虽然最近的 3D 基础模型提供了可靠的每帧几何结构，但恢复该几何结构中的对象运动仍然具有挑战性，并且可以从从现实世界视频中学到的强运动先验中受益。现有的 3D 跟踪器要么遵循在合成数据上从头开始训练的迭代范例，要么微调从静态多视图图像中学习的 3D 重建模型，两者都缺乏真实世界的运动先验。预先训练的视频扩散变压器（视频 DiT）提供来自互联网规模视频的丰富时空先验，使它们成为 3D 跟踪的有希望的基础。然而，他们生成每个帧内容的帧锚定公式从根本上与参考锚定密集 3D 跟踪不匹配，后者必须随时间跟踪来自参考帧的相同物理点。我们提出了 TrackCraft3R，这是第一种将视频 DiT 重新用作前馈密集 3D 跟踪器的方法。给定单目视频及其帧锚定重建点图，TrackCraft3R 会预测一个参考锚定跟踪点图，该点图在单次前向传递中随时间推移跟踪第一帧的每个像素及其可见性。我们通过两种设计实现这一点：（i）双潜在表示，使用每帧几何潜在和参考锚定轨道潜在作为密集查询，以及（ii）时间 RoPE 对齐，它指定每个轨道潜在的目标时间戳。这些设计共同将视频 DiT 的每帧生成范例转换为具有 LoRA 微调的参考锚定跟踪公式。 TrackCraft3R 在标准稀疏和密集 3D 跟踪基准测试中实现了最先进的性能，同时与现有最强方法相比，运行速度提高了 1.3 倍，峰值内存使用量减少了 4.6 倍。我们进一步证明了对大动作和长视频的鲁棒性。
+
+</details>
+
+---
+
+## 14. CausalCine: Real-Time Autoregressive Generation for Multi-Shot Video Narratives / CausalCine：多镜头视频叙事的实时自回归生成
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12496v1](http://arxiv.org/abs/2605.12496v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12496v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive video generation aims at real-time, open-ended synthesis. Yet, cinematic storytelling is not merely the endless extension of a single scene; it requires progressing through evolving events, viewpoint shifts, and discrete shot boundaries. Existing autoregressive models often struggle in this setting. Trained primarily for short-horizon continuation, they treat long sequences as extended single shots, inevitably suffering from motion stagnation and semantic drift during long rollouts. To bridge this gap, we introduce CausalCine, an interactive autoregressive framework that transforms multi-shot video generation into an online directing process. CausalCine generates causally across shot changes, accepts dynamic prompts on the fly, and reuses context without regenerating previous shots. To achieve this, we first train a causal base model on native multi-shot sequences to learn complex shot transitions prior to acceleration. We then propose Content-Aware Memory Routing (CAMR), which dynamically retrieves historical KV entries according to attention-based relevance scores rather than temporal proximity, preserving cross-shot coherence under bounded active memory. Finally, we distill the causal base model into a few-step generator for real-time interactive generation. Extensive experiments demonstrate that CausalCine significantly outperforms autoregressive baselines and approaches the capability of bidirectional models while unlocking the streaming interactivity of causal generation. Demo available at https://yihao-meng.github.io/CausalCine/
+
+自回归视频生成旨在实时、开放式合成。然而，电影叙事并不仅仅是单个场景的无限延伸；而是一个场景的无限延伸。它需要不断发展的事件、视角的转变和离散的镜头边界。现有的自回归模型常常在这种情况下陷入困境。主要针对短视界延续进行训练，他们将长序列视为延长的单镜头，在长时间展示期间不可避免地会遭受运动停滞和语义漂移的困扰。为了弥补这一差距，我们引入了 CausalCine，这是一种交互式自回归框架，可将多镜头视频生成转变为在线导演过程。 CausalCine 在镜头变化中生成因果关系，动态接受动态提示，并重用上下文而无需重新生成以前的镜头。为了实现这一目标，我们首先在本机多镜头序列上训练因果基础模型，以在加速之前学习复杂的镜头过渡。然后，我们提出内容感知内存路由（CAMR），它根据基于注意力的相关性得分而不是时间邻近度动态检索历史 KV 条目，从而在有限的活动内存下保持跨镜头的一致性。最后，我们将因果基础模型提炼成一个用于实时交互生成的几步生成器。大量实验表明，CausalCine 的性能显着优于自回归基线，接近双向模型的能力，同时解锁因果生成的流式交互性。演示地址：https://yihao-meng.github.io/CausalCine/
+
+</details>
+
+---
+
+## 15. OmniNFT: Modality-wise Omni Diffusion Reinforcement for Joint Audio-Video Generation / OmniNFT：用于联合音频-视频生成的模态全向扩散增强
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12480v1](http://arxiv.org/abs/2605.12480v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12480v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in joint audio-video generation have been remarkable, yet real-world applications demand strong per-modality fidelity, cross-modal alignment, and fine-grained synchronization. Reinforcement Learning (RL) offers a promising paradigm, but its extension to multi-objective and multi-modal joint audio-video generation remains unexplored. Notably, our in-depth analysis first reveals that the primary obstacles to applying RL in this stem from: (i) multi-objective advantages inconsistency, where the advantages of multimodal outputs are not always consistent within a group; (ii) multi-modal gradients imbalance, where video-branch gradients leak into shallow audio layers responsible for intra-modal generation; (iii) uniform credit assignment, where fine-grained cross-modal alignment regions fail to get efficient exploration. These shortcomings suggest that vanilla RL fine-tuning strategy with a single global advantage often leads to suboptimal results. To address these challenges, we propose OmniNFT, a novel modality-aware online diffusion RL framework with three key innovations: (1) Modality-wise advantage routing, which routes independent per-reward advantages to their respective modality generation branches. (2) Layer-wise gradient surgery, which selectively detaches video-branch gradients on shallow audio layers while retaining those for cross-modal interaction layers. (3) Region-wise loss reweighting, which modulates policy optimization toward critical regions related to audio-video synchronization and fine-grained alignment. Extensive experiments on JavisBench and VBench with the LTX-2 backbone demonstrate that OmniNFT achieves comprehensive improvements in audio and video perceptual quality, cross-modal alignment, and audio-video synchronization.
+
+联合音频视频生成方面的最新进展非常引人注目，但现实世界的应用需要强大的每种模态保真度、跨模态对齐和细粒度同步。强化学习（RL）提供了一个有前途的范例，但其对多目标和多模式联合音视频生成的扩展仍有待探索。值得注意的是，我们的深入分析首先揭示了应用强化学习的主要障碍源于：（i）多目标优势不一致，即多模态输出的优势在群体内并不总是一致； (ii) 多模态梯度不平衡，其中视频分支梯度泄漏到负责模内生成的浅音频层； (iii) 统一的信用分配，细粒度的跨模式对齐区域无法得到有效的探索。这些缺点表明，具有单一全局优势的普通强化学习微调策略通常会导致次优结果。为了应对这些挑战，我们提出了 OmniNFT，一种新颖的模态感知在线扩散 RL 框架，具有三个关键创新：（1）模态优势路由，它将独立的每个奖励优势路由到各自的模态生成分支。 （2）逐层梯度手术，选择性地分离浅音频层上的视频分支梯度，同时保留跨模式交互层的梯度。 （3）区域损失重新加权，调整与音视频同步和细粒度对齐相关的关键区域的策略优化。在具有 LTX-2 主干的 JavisBench 和 VBench 上进行的大量实验表明，OmniNFT 在音频和视频感知质量、跨模态对齐和音视频同步方面实现了全面改进。
+
+</details>
+
+---
+
+## 16. GaitProtector: Impersonation-Driven Gait De-Identification via Training-Free Diffusion Latent Optimization / GaitProtector：通过免训练扩散潜在优化进行模拟驱动的步态去识别
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12431v1](http://arxiv.org/abs/2605.12431v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12431v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Conventional gait de-identification methods often encounter an inherent trade-off: they either provide insufficient identity suppression or introduce spatiotemporal distortions that impede structure-sensitive downstream applications. We propose GaitProtector, an impersonation-driven gait de-identification framework that formulates privacy protection as a unified objective with two tightly coupled components: (i) obfuscation, which repels the protected gait from the source identity, and (ii) impersonation, which attracts it toward a selected target identity. The target identity serves as a semantic anchor that biases optimization toward structurally plausible gait patterns under the pretrained diffusion prior, helping preserve dominant body shape and motion dynamics. We instantiate this idea through a training-free diffusion latent optimization pipeline. Instead of retraining a generator for each dataset, we invert each input silhouette sequence into the latent trajectory of a pretrained 3D video diffusion model and iteratively optimize latent codes with a differentiable adversarial objective to synthesize protected gaits. Experiments on the CASIA-B dataset show that GaitProtector achieves a 56.7% impersonation success rate under black-box gait recognition and reduces Rank-1 identification accuracy from 89.6% to 15.0%, while maintaining favorable visual and temporal quality. We further evaluate downstream utility on the Scoliosis1K dataset, where diagnostic accuracy decreases only from 91.4% to 74.2%. To the best of our knowledge, this work is the first to leverage pretrained 3D diffusion priors in a training-free manner for silhouette-based gait de-identification.
+
+传统的步态去识别方法经常遇到固有的权衡：它们要么提供不充分的身份抑制，要么引入时空扭曲，从而阻碍结构敏感的下游应用。我们提出了 GaitProtector，一种模拟驱动的步态去识别框架，它将隐私保护制定为具有两个紧密耦合组件的统一目标：（i）混淆，将受保护的步态与源身份相排斥，以及（ii）模拟，将其吸引到选定的目标身份。目标身份充当语义锚，在预训练的扩散先验下将优化偏向于结构上合理的步态模式，有助于保持主要的身体形状和运动动力学。我们通过免训练的扩散潜在优化管道实例化了这个想法。我们没有为每个数据集重新训练生成器，而是将每个输入轮廓序列反转为预训练的 3D 视频扩散模型的潜在轨迹，并使用可微对抗目标迭代优化潜在代码以合成受保护的步态。在 CASIA-B 数据集上的实验表明，GaitProtector 在黑盒步态识别下实现了 56.7% 的模仿成功率，并将 Rank-1 识别准确率从 89.6% 降低到 15.0%，同时保持良好的视觉和时间质量。我们进一步评估 Scoliosis1K 数据集的下游效用，其中诊断准确性仅从 91.4% 下降到 74.2%。据我们所知，这项工作首次以免训练的方式利用预训练的 3D 扩散先验来进行基于轮廓的步态去识别。
+
+</details>
+
+---
+
+## 17. Enhancing Domain Generalization in 3D Human Pose Estimation through Controllable Generative Augmentation / 通过可控生成增强增强 3D 人体姿势估计中的领域泛化
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12198v1](http://arxiv.org/abs/2605.12198v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12198v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pedestrian motion, due to its causal nature, is strongly influenced by domain gaps arising from discrepancies between training and testing data distributions. Focusing on 3D human pose estimation, this work presents a controllable human pose generation framework that synthesizes diverse video data by systematically varying poses, backgrounds, and camera viewpoints. This generative augmentation enriches training datasets, enhances model generalization, and alleviates the limitations of existing methods in handling domain discrepancies. By leveraging both indoor/real-world and outdoor/virtual datasets, we perform cross-domain data fusion and controllable video generation to construct enriched training data, tailored to realistic deployment settings. Extensive experiments show that the augmented datasets significantly improve model performance on unseen scenarios and datasets, validating the effectiveness of the proposed approach.
+
+由于其因果性质，行人运动受到训练和测试数据分布之间差异引起的域间隙的强烈影响。这项工作专注于 3D 人体姿势估计，提出了一种可控的人体姿势生成框架，该框架通过系统地改变姿势、背景和相机视点来合成不同的视频数据。这种生成增强丰富了训练数据集，增强了模型泛化能力，并减轻了现有方法在处理领域差异方面的局限性。通过利用室内/现实世界和室外/虚拟数据集，我们执行跨域数据融合和可控视频生成，以构建丰富的训练数据，适合实际的部署设置。大量实验表明，增强的数据集显着提高了未见过的场景和数据集上的模型性能，验证了所提出方法的有效性。
+
+</details>
+
+---
+
+## 18. Cross-Modal-Domain Generalization Through Semantically Aligned Discrete Representations / 通过语义对齐的离散表示进行跨模态域泛化
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12145v2](http://arxiv.org/abs/2605.12145v2) | **PDF**: [Link](http://arxiv.org/pdf/2605.12145v2)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal learning seeks to integrate information across diverse sensory sources, yet current approaches struggle to balance cross-modal generalizability with modality-specific structure. Continuous (implicit) methods preserve fine-grained priors but render generalization challenging, while discrete (explicit) approaches enforce shared prototypes at the expense of modality specificity. We introduce CoDAAR (Cross-modal Discrete Alignment And Reconstruction), a novel framework that resolves this long-standing trade-off by establishing semantic consensus across modality-specific codebooks through index-level alignment. This design uniquely allows CoDAAR to preserve modality-unique structures while achieving generalizable cross-modal representations within a unified discrete space. CoDAAR combines two complementary mechanisms: Discrete Temporal Alignment (DTA), which enables fine-grained temporal quantization, and Cascading Semantic Alignment (CSA), which promotes progressive cross-modal semantic agreement. Together, they establish a competition-free unified representation space. Trained with self-supervised reconstruction objectives on paired multimodal sequences, CoDAAR demonstrates robust cross-modal and cross-domain generalization. Across Cross-Modal Generalization benchmarks, including event classification, localization, video segmentation, and cross-dataset transfer, CoDAAR achieves state-of-the-art performance, establishing a new paradigm for discrete and generalizable multimodal representation learning.
+
+多模态学习试图整合不同感官来源的信息，但当前的方法很难平衡跨模态普遍性与特定模态结构。连续（隐式）方法保留了细粒度的先验，但使泛化具有挑战性，而离散（显式）方法以牺牲模态特异性为代价强制执行共享原型。我们引入了 CoDAAR（跨模态离散对齐和重构），这是一种新颖的框架，通过索引级对齐在特定模态的码本之间建立语义共识，解决了这一长期存在的权衡问题。这种独特的设计允许 CoDAAR 保留模态独特的结构，同时在统一的离散空间内实现可泛化的跨模态表示。 CoDAAR 结合了两种互补机制：离散时间对齐 (DTA)，可实现细粒度时间量化；级联语义对齐 (CSA)，可促进渐进式跨模态语义一致性。他们共同建立了一个无竞争的统一代表空间。 CoDAAR 通过配对多模态序列的自监督重建目标进行训练，展示了强大的跨模态和跨域泛化能力。在跨模态泛化基准（包括事件分类、定位、视频分割和跨数据集传输）中，CoDAAR 实现了最先进的性能，为离散和可泛化的多模态表示学习建立了新的范例。
+
+</details>
+
+---
+
+## 19. BARISTA: A Multi-Task Egocentric Benchmark for Compositional Visual Understanding / BARISTA：构图视觉理解的多任务自我中心基准
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12074v1](http://arxiv.org/abs/2605.12074v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12074v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scene understanding is central to general physical intelligence, and video is a primary modality for capturing both state and temporal dynamics of a scene. Yet understanding physical processes remains difficult, as models must combine object localization, hand-object interactions, relational parsing, temporal reasoning, and step-level procedural inference. Existing benchmarks usually evaluate these capabilities separately, limiting diagnosis of why models fail on procedural tasks. We introduce BARISTA, a densely annotated egocentric dataset and benchmark of 185 real-world coffee-preparation videos covering fully automatic, portafilter-based, and capsule-based workflows. BARISTA provides verified per-frame scene graphs linking persistent object identities to masks, tracks, boxes, attributes, typed relations, hand-object interactions, activities, and process steps. From these graphs, we derive zero-shot language-based tasks spanning phrase grounding, hand-object interaction recognition, referring, activity recognition, relation extraction, and temporal visual question answering. Experiments reveal strong variation across task families and no consistently dominant model family, positioning BARISTA as a challenging diagnostic benchmark for procedural video understanding. Code and dataset available at https://huggingface.co/datasets/ramblr/BARISTA.
+
+场景理解是一般物理智能的核心，而视频是捕获场景的状态和时间动态的主要方式。然而理解物理过程仍然很困难，因为模型必须结合对象定位、手与对象交互、关系解析、时间推理和步骤级程序推理。现有的基准通常单独评估这些功能，限制了对模型在程序任务上失败原因的诊断。我们介绍 BARISTA，一个带有密集注释的以自我为中心的数据集和 185 个真实世界咖啡准备视频的基准，涵盖全自动、基于手柄和基于胶囊的工作流程。 BARISTA 提供经过验证的每帧场景图，将持久对象身份链接到蒙版、轨迹、框、属性、类型关系、手对象交互、活动和流程步骤。从这些图中，我们推导出基于零样本语言的任务，涵盖短语基础、手物体交互识别、指代、活动识别、关系提取和时间视觉问答。实验揭示了不同任务系列之间的巨大差异，并且没有一致的主导模型系列，这将 BARISTA 定位为程序视频理解的具有挑战性的诊断基准。代码和数据集可在 https://huggingface.co/datasets/ramblr/BARISTA 获取。
+
+</details>
+
+---
+
+## 20. OmniHumanoid: Streaming Cross-Embodiment Video Generation with Paired-Free Adaptation / OmniHumanoid：具有无配对适应的流式跨实施例视频生成
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12038v1](http://arxiv.org/abs/2605.12038v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12038v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cross-embodiment video generation aims to transfer motions across different humanoid embodiments, such as human-to-robot and robot-to-robot, enabling scalable data generation for embodied intelligence. A major challenge in this setting is that motion dynamics are partly transferable across embodiments, whereas appearance and morphology remain embodiment-specific. Existing approaches often entangle these factors, and many require paired data for every target embodiment, which limits scalability to new robots. We present OmniHumanoid, a framework that factorizes transferable motion learning and embodiment-specific adaptation. Our method learns a shared motion transfer model from motion-aligned paired videos spanning multiple embodiments, while adapting to a new embodiment using only unpaired videos through lightweight embodiment-specific adapters. To reduce interference between motion transfer and embodiment adaptation, we further introduce a branch-isolated attention design that separates motion conditioning from embodiment-specific modulation. In addition, we construct a synthetic cross-embodiment dataset with motion-aligned paired videos rendered across diverse humanoid assets, scenes, and viewpoints. Experiments on both synthetic and real-world benchmarks show that OmniHumanoid achieves strong motion fidelity and embodiment consistency, while enabling scalable adaptation to unseen humanoid embodiments without retraining the shared motion model.
+
+跨实体视频生成旨在跨不同的人形实体（例如人到机器人和机器人到机器人）传输运动，从而实现实体智能的可扩展数据生成。这种设置中的主要挑战是运动动力学可以部分地跨实施例转移，而外观和形态仍然是特定于实施例的。现有的方法通常会纠缠这些因素，并且许多方法需要为每个目标实施例提供配对数据，这限制了新机器人的可扩展性。我们提出了 OmniHumanoid，一个分解可转移运动学习和特定于实施例的适应的框架。我们的方法从跨越多个实施例的运动对齐配对视频中学习共享运动转移模型，同时通过轻量级实施例特定适配器仅使用不配对视频来适应新的实施例。为了减少运动转移和实施例适应之间的干扰，我们进一步引入了分支隔离注意力设计，将运动调节与实施例特定的调制分开。此外，我们构建了一个合成的跨实体数据集，其中包含跨不同人形资产、场景和视点渲染的运动对齐配对视频。合成和现实世界基准的实验表明，OmniHumanoid 实现了强大的运动保真度和实施例一致性，同时能够对未见过的人形实施例进行可扩展的适应，而无需重新训练共享运动模型。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-13 (3 papers)</b></summary>
 
 # arXiv Video Papers - 2026-05-13
