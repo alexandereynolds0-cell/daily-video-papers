@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-15](papers/2026-05-15.md) - 9 papers
 - [2026-05-14](papers/2026-05-14.md) - 5 papers
 - [2026-05-13](papers/2026-05-13.md) - 12 papers
 - [2026-05-12](papers/2026-05-12.md) - 8 papers
@@ -73,6 +74,164 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-15 (9 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-05-15
+
+**Paper Count**: 9
+
+---
+
+## 1. Quantitative Video World Model Evaluation for Geometric-Consistency / 几何一致性的定量视频世界模型评估
+
+**Date**: 2026-05-14 | **arXiv**: [2605.15185v1](http://arxiv.org/abs/2605.15185v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.15185v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative video models are increasingly studied as implicit world models, yet evaluating whether they produce physically plausible 3D structure and motion remains challenging. Most existing video evaluation pipelines rely heavily on human judgment or learned graders, which can be subjective and weakly diagnostic for geometric failures. We introduce PDI-Bench (Perspective Distortion Index), a quantitative framework for auditing geometric coherence in generated videos. Given a generated clip, we obtain object-centric observations via segmentation and point tracking (e.g., SAM 2, MegaSaM, and CoTracker3), lift them to 3D world-space coordinates via monocular reconstruction, and compute a set of projective-geometry residuals capturing three failure dimensions: scale-depth alignment, 3D motion consistency, and 3D structural rigidity. To support systematic evaluation, we build PDI-Dataset, covering diverse scenarios designed to stress these geometric constraints. Across state-of-the-art video generators, PDI reveals consistent geometry-specific failure modes that are not captured by common perceptual metrics, and provides a diagnostic signal for progress toward physically grounded video generation and physical world model. Our code and dataset can be found at https://pdi-bench.github.io/.
+
+生成视频模型越来越多地作为隐式世界模型进行研究，但评估它们是否产生物理上合理的 3D 结构和运动仍然具有挑战性。大多数现有的视频评估流程严重依赖于人类判断或学习的分级器，这可能是主观的，并且对几何故障的诊断能力很弱。我们引入 PDI-Bench（透视畸变指数），这是一种用于审核生成视频中几何一致性的定量框架。给定生成的剪辑，我们通过分割和点跟踪（例如 SAM 2、MegaSaM 和 CoTracker3）获得以对象为中心的观察结果，通过单目重建将它们提升到 3D 世界空间坐标，并计算一组捕获三个故障维度的投影几何残差：尺度深度对齐、3D 运动一致性和 3D 结构刚度。为了支持系统评估，我们构建了 PDI 数据集，涵盖旨在强调这些几何约束的各种场景。在最先进的视频生成器中，PDI 揭示了常见感知指标无法捕获的一致的几何特定故障模式，并为物理基础视频生成和物理世界模型的进展提供了诊断信号。我们的代码和数据集可以在 https://pdi-bench.github.io/ 找到。
+
+</details>
+
+---
+
+## 2. Pelican-Unified 1.0: A Unified Embodied Intelligence Model for Understanding, Reasoning, Imagination and Action / Pelican-Unified 1.0：理解、推理、想象力和行动的统一具身智能模型
+
+**Date**: 2026-05-14 | **arXiv**: [2605.15153v1](http://arxiv.org/abs/2605.15153v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.15153v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present Pelican-Unified 1.0, the first embodied foundation model trained according to the principle of unification. Pelican-Unified 1.0 uses a single VLM as a unified understanding module, mapping scenes, instructions, visual contexts, and action histories into a shared semantic space. The same VLM also serves as a unified reasoning module, autoregressively producing task-, action-, and future-oriented chains of thought in a single forward pass and projecting the final hidden state into a dense latent variable. A Unified Future Generator (UFG) then conditions on this latent variable and jointly generates future videos and future actions through two modality-specific output heads within the same denoising process. The language, video, and action losses are all backpropagated into the shared representation, enabling the model to jointly optimize understanding, reasoning, imagination, and action during training, rather than training three isolated expert systems.   Experiments demonstrate that unification does not imply compromise. With a single checkpoint, Pelican-Unified 1.0 achieves strong performance across all three capabilities: 64.7 on eight VLM benchmarks, the best among comparable-scale models; 66.03 on WorldArena, ranking first; and 93.5 on RoboTwin, the second-best average among compared action methods. These results show that the unified paradigm succeeds in preserving specialist strength while bringing understanding, reasoning, imagination, and action into one model.
+
+我们推出 Pelican-Unified 1.0，这是第一个根据统一原则训练的具体基础模型。 Pelican-Unified 1.0 使用单个 VLM 作为统一理解模块，将场景、指令、视觉上下文和动作历史映射到共享语义空间。同一 VLM 还充当统一推理模块，在一次前向传递中自回归产生任务、行动和面向未来的思想链，并将最终的隐藏状态投影到密集的潜在变量中。然后，统一未来生成器（UFG）以该潜在变量为条件，并通过同一去噪过程中的两个特定于模态的输出头联合生成未来视频和未来动作。语言、视频和动作损失都被反向传播到共享表示中，使模型能够在训练过程中共同优化理解、推理、想象力和动作，而不是训练三个孤立的专家系统。   实验表明，统一并不意味着妥协。通过单个检查点，Pelican-Unified 1.0 在所有三个功能上都实现了强大的性能：八个 VLM 基准测试为 64.7，是同类规模模型中最好的； WorldArena 66.03，排名第一； RoboTwin 为 93.5，在比较的动作方法中排名第二。这些结果表明，统一范式成功地保留了专业力量，同时将理解、推理、想象力和行动纳入一个模型。
+
+</details>
+
+---
+
+## 3. Behavioral Data-Driven Optimal Trajectory Generation for Rotary Cranes / 行为数据驱动的旋转式起重机最佳轨迹生成
+
+**Date**: 2026-05-14 | **arXiv**: [2605.14944v1](http://arxiv.org/abs/2605.14944v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.14944v1)
+
+**Categories**: cs.RO, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+With the growth of the construction industry and the global shortage of skilled labor, the automation of crane control has become increasingly important for safe and efficient operations. A central challenge in automatic crane control is the reduction of load oscillations during motion, which is primarily addressed through appropriate slewing trajectories. In this context, classical model-based control methods rely on accurate dynamical models and expert tuning, and often struggle to meet safety and precision requirements, while many learning-based approaches require large data sets and significant computational resources. This paper proposes a behavioral data-driven framework for generating open-loop slewing trajectories for rotary cranes that suppress load sway while reducing operation time and energy consumption. The approach builds on Willems' fundamental lemma and its generalizations, to bypass explicit system modeling and operate directly on measured input-output data. A practical workflow is presented in this paper to reduce the need for expert knowledge. Despite the underactuated nature of the crane dynamics, the method identifies a nonparametric representation of the system behavior and generates smooth, optimal trajectories using limited data and convex optimization. The proposed trajectory generation method is validated on a laboratory crane setup and compared against an established model-based approach, achieving up to 35% reduction in load sway, 43% reduction in tracking error, and 50% reduction in travel time.
+
+随着建筑行业的发展和全球熟练劳动力的短缺，起重机控制自动化对于安全高效的运营变得越来越重要。自动起重机控制的一个核心挑战是减少运动过程中的负载振荡，这主要通过适当的回转轨迹来解决。在这种背景下，经典的基于模型的控制方法依赖于精确的动态模型和专家调优，通常难以满足安全性和精度要求，而许多基于学习的方法需要大量数据集和大量计算资源。本文提出了一种行为数据驱动框架，用于生成旋转起重机的开环回转轨迹，抑制负载摇摆，同时减少操作时间和能耗。该方法建立在威廉斯的基本引理及其概括的基础上，绕过显式系统建模并直接对测量的输入输出数据进行操作。本文提出了一个实用的工作流程，以减少对专业知识的需求。尽管起重机动力学具有欠驱动的性质，但该方法识别了系统行为的非参数表示，并使用有限的数据和凸优化生成平滑的最佳轨迹。所提出的轨迹生成方法在实验室起重机设置上进行了验证，并与已建立的基于模型的方法进行了比较，实现了负载摇摆最多减少 35%，跟踪误差减少 43%，行进时间减少 50%。
+
+</details>
+
+---
+
+## 4. Slot-MPC: Goal-Conditioned Model Predictive Control with Object-Centric Representations / Slot-MPC：具有以对象为中心表示的目标条件模型预测控制
+
+**Date**: 2026-05-14 | **arXiv**: [2605.14937v1](http://arxiv.org/abs/2605.14937v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.14937v1)
+
+**Categories**: cs.LG, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Predictive world models enable agents to model scene dynamics and reason about the consequences of their actions. Inspired by human perception, object-centric world models capture scene dynamics using object-level representations, which can be used for downstream applications such as action planning. However, most object-centric world models and reinforcement learning (RL) approaches learn reactive policies that are fixed at inference time, limiting generalization to novel situations. We propose Slot-MPC, an object-centric world modeling framework that enables planning through Model Predictive Control (MPC). Slot-MPC leverages vision encoders to learn slot-based representations, which encode individual objects in the scene, and uses these structured representations to learn an action-conditioned object-centric dynamics model. At inference time, the learned dynamics model enables action planning via MPC, allowing agents to adapt to previously unseen situations. Since the learned world model is differentiable, we can use gradient-based MPC to directly optimize actions, which is computationally more efficient than relying on gradient-free, sampling-based MPC methods. Experiments on simulated robotic manipulation tasks show that Slot-MPC improves both task performance and planning efficiency compared to non-object-centric world model baselines. In the considered offline setting with limited state-action coverage, we find that gradient-based MPC performs better than gradient-free, sampling-based MPC. Our results demonstrate that explicitly structured, object-centric representations provide a strong inductive bias for controllable and generalizable decision-making. Code and additional results are available at https://slot-mpc.github.io.
+
+预测世界模型使代理能够对场景动态进行建模并推理其行为的后果。受人类感知的启发，以对象为中心的世界模型使用对象级表示捕获场景动态，可用于行动规划等下游应用。然而，大多数以对象为中心的世界模型和强化学习（RL）方法学习在推理时固定的反应性策略，限制了对新情况的泛化。我们提出了 Slot-MPC，这是一种以对象为中心的世界建模框架，可以通过模型预测控制 (MPC) 进行规划。 Slot-MPC 利用视觉编码器来学习基于槽的表示，对场景中的各个对象进行编码，并使用这些结构化表示来学习以动作条件为中心的以对象为中心的动态模型。在推理时，学习到的动力学模型可以通过 MPC 进行行动规划，从而使代理能够适应以前未见过的情况。由于学习到的世界模型是可微的，我们可以使用基于梯度的 MPC 来直接优化动作，这比依赖无梯度、基于采样的 MPC 方法在计算上更加高效。模拟机器人操作任务的实验表明，与非以对象为中心的世界模型基线相比，Slot-MPC 提高了任务性能和规划效率。在考虑到状态动作覆盖范围有限的离线设置中，我们发现基于梯度的 MPC 比无梯度、基于采样的 MPC 表现更好。我们的结果表明，明确结构化、以对象为中心的表示为可控和可概括的决策提供了强大的归纳偏差。代码和其他结果可在 https://slot-mpc.github.io 上找到。
+
+</details>
+
+---
+
+## 5. IFPV: An Integrated Multi-Agent Framework for Generative Operational Planning and High-Fidelity Plan Verification / IFPV：用于生成运营规划和高保真计划验证的集成多代理框架
+
+**Date**: 2026-05-14 | **arXiv**: [2605.14851v1](http://arxiv.org/abs/2605.14851v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.14851v1)
+
+**Categories**: cs.MA, cs.AI
+
+**Code**: https://github.com/zhigao3ks/IFPV.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Operational plan generation and verification are critical for modern complex and rapidly changing battlefield environments, yet traditional generation and verification methods still respectively face the challenges of generation infeasibility and verification insufficiency. To alleviate these limitations, we propose an Integrated Multi-Agent Framework for Generative Operational Planning and High-Fidelity Plan Verification (IFPV). IFPV consists of two tightly coupled modules: Multi-Perspective Hierarchical Agents (MPHA) for generative operational planning and an Adversarial Cognitive Simulation Engine (ACSE) for high-fidelity adversarial plan verification. MPHA decomposes commander intent into executable multi-platform tactical action sequences through the collaboration of Pathfinder, Analyst, and Planner agents. ACSE introduces an opponent equipped with a customized world model, which predicts the future evolution of mission-critical platforms and conducts dynamic counteractions against candidate plans. Simulation experiments in the Asymmetric Combat Tactic Simulator (ACTS) show that IFPV improves mission success by 19.4% and reduces operational cost by 41.7% compared with a single-step large language model (LLM) planning baseline. Compared with a traditional rule-based validator, ACSE increases the average suppression rate by 31.8%, indicating that the proposed verification environment is stricter and more discriminative in revealing the latent vulnerabilities of candidate plans. The code for IFPV can be found at https://github.com/zhigao3ks/IFPV.
+
+作战计划的生成和验证对于现代复杂、快速变化的战场环境至关重要，但传统的生成和验证方法仍然分别面临着生成不可行和验证不足的挑战。为了缓解这些限制，我们提出了一个用于生成运营规划和高保真计划验证（IFPV）的集成多代理框架。 IFPV 由两个紧密耦合的模块组成：用于生成操作规划的多视角分层代理（MPHA）和用于高保真对抗计划验证的对抗认知模拟引擎（ACSE）。 MPHA 通过探路者、分析师和规划者代理的协作，将指挥官意图分解为可执行的多平台战术行动序列。 ACSE 引入了配备定制世界模型的对手，该模型可以预测关键任务平台的未来演变，并对候选计划进行动态反制。非对称作战战术模拟器（ACTS）中的模拟实验表明，与单步大语言模型（LLM）规划基线相比，IFPV 将任务成功率提高了 19.4%，并将运营成本降低了 41.7%。与传统的基于规则的验证器相比，ACSE 的平均抑制率提高了 31.8%，这表明所提出的验证环境在揭示候选计划的潜在漏洞方面更加严格且更具区分性。 IFPV 的代码可以在 https://github.com/zhigao3ks/IFPV 找到。
+
+</details>
+
+---
+
+## 6. Agentifying Patient Dynamics within LLMs through Interacting with Clinical World Model / 通过与临床世界模型的交互来代理法学硕士内的患者动态
+
+**Date**: 2026-05-14 | **arXiv**: [2605.14723v1](http://arxiv.org/abs/2605.14723v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.14723v1)
+
+**Categories**: cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Sepsis management in the ICU requires sequential treatment decisions under rapidly evolving patient physiology. Although large language models (LLMs) encode broad clinical knowledge and can reason over guidelines, they are not inherently grounded in action-conditioned patient dynamics. We introduce SepsisAgent, a world model-augmented LLM agent for sepsis treatment recommendation. SepsisAgent uses a learned Clinical World Model to simulate patient responses under candidate fluid--vasopressor interventions, and follows a propose--simulate--refine workflow before committing to a prescription. We first show that world-model access alone yields inconsistent LLM decision performance, motivating agent-specific training. We then train SepsisAgent through a three-stage curriculum: patient-dynamics supervised fine-tuning, propose--simulate--refine behavior cloning, and world-model-based agentic reinforcement learning. On MIMIC-IV sepsis trajectories, SepsisAgent outperforms all traditional RL and LLM-based baselines in off-policy value while achieving the best safety profile under guideline adherence and unsafe-action metrics. Further analysis shows that repeated interaction with the Clinical World Model enables the agent to learn regularities in patient evolution, which remain useful even when simulator access is removed.
+
+ICU 中的脓毒症管理需要根据快速变化的患者生理状况做出连续的治疗决策。尽管大语言模型 (LLM) 编码了广泛的临床知识，并且可以根据指南进行推理，但它们本质上并不是基于以行动为条件的患者动态。我们介绍 SepsisAgent，这是一种用于脓毒症治疗推荐的世界模型增强 LLM 代理。 SepsisAgent 使用学习的临床世界模型来模拟患者在候选液体-血管加压药干预下的反应，并在提交处方之前遵循建议-模拟-细化工作流程。我们首先表明，仅访问世界模型会产生不一致的 LLM 决策性能，从而激励特定于代理的培训。然后，我们通过三个阶段的课程来训练 SepsisAgent：患者动态监督微调、提议-模拟-细化行为克隆以及基于世界模型的代理强化学习。在 MIMIC-IV 败血症轨迹上，SepsiAgent 在非政策价值方面优于所有传统的基于 RL 和 LLM 的基线，同时在指南遵守和不安全行动指标下实现了最佳安全性。进一步的分析表明，与临床世界模型的重复交互使代理能够了解患者进化的规律，即使在模拟器访问被移除的情况下，这些规律仍然有用。
+
+</details>
+
+---
+
+## 7. Coding Agent Is Good As World Simulator / 编码代理与世界模拟器一样好
+
+**Date**: 2026-05-14 | **arXiv**: [2605.14398v1](http://arxiv.org/abs/2605.14398v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.14398v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models have emerged as a powerful paradigm for building interactive simulation environments, with recent video-based approaches demonstrating impressive progress in generating visually plausible dynamics. However, because these models typically infer dynamics from video and represent them in latent states, they do not explicitly enforce physical constraints. As a result, the generated video rollouts are not physically plausible, exhibiting unstable contacts, distorted shapes, or inconsistent motion. In this paper, we present an agentic framework constructing physics-based world models through executable simulation code. The framework coordinates planning, code generation, visual review, and physics analysis agents. The planning agent converts the natural language prompt into a structured scene plan, the code agent implements it as executable simulation code, and the visual review agent provide visual feedback while the physics analysis agent checks physical consistency. The code is iteratively revised based on the feedback until the simulation matches the prompt reqirements and physical constraints. Experimental results show that our framework outperforms advanced video-based models in physical accuracy, instruction fidelity and visual quality, which could be applied to various scenarios including driving simulation and embodied robot tasks.
+
+世界模型已成为构建交互式模拟环境的强大范例，最近基于视频的方法在生成视觉上合理的动态方面取得了令人印象深刻的进展。然而，由于这些模型通常从视频中推断动态并以潜在状态表示它们，因此它们没有明确强制执行物理约束。因此，生成的视频卷展在物理上不合理，表现出不稳定的接触、扭曲的形状或不一致的运动。在本文中，我们提出了一个通过可执行模拟代码构建基于物理的世界模型的代理框架。该框架协调规划、代码生成、视觉审查和物理分析代理。规划代理将自然语言提示转换为结构化场景计划，代码代理将其实现为可执行模拟代码，视觉审查代理提供视觉反馈，而物理分析代理检查物理一致性。根据反馈迭代修改代码，直到模拟符合提示要求和物理约束。实验结果表明，我们的框架在物理精度、指令保真度和视觉质量方面优于先进的基于视频的模型，可应用于包括驾驶模拟和具体机器人任务在内的各种场景。
+
+</details>
+
+---
+
+## 8. ASH: Agents that Self-Hone via Embodied Learning / ASH：通过具身学习自我磨练的智能体
+
+**Date**: 2026-05-14 | **arXiv**: [2605.14211v1](http://arxiv.org/abs/2605.14211v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.14211v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon embodied tasks remain a fundamental challenge in AI, as current methods rely on hand-engineered rewards or action-labeled demonstrations, neither of which scales. We introduce ASH, an agentic system that learns an embodied policy from unlabeled, noisy internet video, without reward shaping or expert annotation. ASH follows a self-improvement loop; when it gets stuck, ASH learns an Inverse Dynamics Model (IDM) from its own trajectories, and uses its IDM to extract supervision from relevant internet video. ASH uses unsupervised learning to identify key moments from large-scale internet video and retains them as long-term memory -- allowing it to tackle long-horizon problems. We evaluate ASH on two complementary environments demanding multi-hour planning: Pokemon Emerald, a turn-based RPG, and The Legend of Zelda: The Minish Cap, a real-time action-adventure game. In both games, behavioral cloning, retrieval-augmented and zero-shot foundation-model baselines plateau, while ASH sustains progression across our 8-hour evaluation. ASH reaches an average of $11.2/12$ milestones in Pokemon Emerald and $9.9/12$ in Legend of Zelda, while the strongest baseline gets stuck in both environments at an average of $6.5/12$ and $6.0/12$ milestones, respectively. We demonstrate that self-improving agents are a scalable recipe for long-horizon embodied learning.
+
+长期具体任务仍然是人工智能的一个基本挑战，因为当前的方法依赖于手工设计的奖励或带有动作标签的演示，而这两种方法都无法扩展。我们介绍 ASH，这是一种代理系统，可以从未标记的、嘈杂的互联网视频中学习具体策略，无需奖励塑造或专家注释。 ASH 遵循自我完善循环；当它陷入困境时，ASH会从自己的轨迹中学习逆动态模型（IDM），并使用其IDM从相关的互联网视频中提取监督。 ASH 使用无监督学习来识别大规模互联网视频中的关键时刻，并将其保留为长期记忆，从而使其能够解决长期问题。我们在两个需要数小时规划的互补环境中评估 ASH：Pokemon Emerald（一款回合制 RPG）和 The Legend of Zelda: The Minish Cap（一款实时动作冒险游戏）。在这两款游戏中，行为克隆、检索增强和零样本基础模型基线都处于稳定状态，而 ASH 在我们的 8 小时评估中保持进展。 ASH 在《精灵宝可梦翡翠》中平均达到 11.2 美元/12 美元里程碑，在《塞尔达传说》中达到 9.9 美元/12 美元里程碑，而最强基线在这两种环境中分别停留在平均 6.5 美元/12 美元和 6.0 美元/12 美元里程碑。我们证明，自我改进的智能体是长期体现学习的可扩展配方。
+
+</details>
+
+---
+
+## 9. Enhanced and Efficient Reasoning in Large Learning Models / 大型学习模型中增强且高效的推理
+
+**Date**: 2026-05-13 | **arXiv**: [2605.14036v1](http://arxiv.org/abs/2605.14036v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.14036v1)
+
+**Categories**: cs.AI, cs.CC, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In current Large Language Models we can trust the production of smoothly flowing prose on the basis of the principles of machine learning. However, there is no comparably principled basis to justify trust in the content of the text produced. It appears to be conventional wisdom that addressing this issue by adding more principled reasoning is not computationally affordable.   Here we propose a principled method of reasoning that is efficient enough to be practical for large language models. Further, the method allows the retention of much of the currently used software and hardware base. Our method for improving the functioning of large language models consists of a first stage of preprocessing that recodes the data to a Unary Relational Integracode that is more explicit about the relationships among the objects described in the text, followed as a second stage by a standard but possibly streamlined machine learning process that then also learns to predict these relationships.   The method may be viewed as realizing a world model and applying beyond natural language, to vision and actions, for example, where the multiple properties of an object referred to in an input are brought together explicitly, rather than remaining distributed in the various references to it in the input. We articulate its advantages in terms of Robust Logic, a system for performing principled chaining on learned, and hence uncertain, information. We show that this recoding has the surprising and fortuitous property that, while succinct, it makes the task of learning a core subset of relational rules that hold in the world described in the training data polynomial time learnable in a defined sense, the polynomial depending on the complexity of the rule. This gives support for sound reasoning within each single call of the learned classifier as well as between multiple calls.
+
+在当前的大型语言模型中，我们可以信任基于机器学习原理的流畅散文的产生。然而，没有相对的原则基础来证明对所产生文本内容的信任是合理的。传统观点认为，通过添加更多原则性推理来解决这个问题在计算上是无法承受的。   在这里，我们提出了一种原则性的推理方法，该方法足够高效，足以适用于大型语言模型。此外，该方法允许保留许多当前使用的软件和硬件基础。我们改进大型语言模型功能的方法包括第一阶段的预处理，将数据重新编码为一元关系集成代码，该代码更明确地说明文本中描述的对象之间的关系，然后是第二阶段的标准但可能简化的机器学习过程，然后也学习预测这些关系。   该方法可以被视为实现世界模型并超越自然语言应用于视觉和动作，例如，其中输入中引用的对象的多个属性被显式地汇集在一起​​，而不是保持分布在输入中对其的各种引用中。我们用鲁棒逻辑来阐述它的优势，鲁棒逻辑是一种对学习的、因此不确定的信息执行原则性链接的系统。我们证明，这种重新编码具有令人惊讶和偶然的特性，虽然简洁，但它使得学习在训练数据多项式时间内描述的世界中保持的关系规则的核心子集的任务在定义的意义上是可学习的，多项式取决于规则的复杂性。这为学习分类器的每个调用内以及多个调用之间的合理推理提供了支持。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-14 (5 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-05-14
