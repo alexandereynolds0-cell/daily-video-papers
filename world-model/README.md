@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-18](papers/2026-05-18.md) - 5 papers
 - [2026-05-15](papers/2026-05-15.md) - 9 papers
 - [2026-05-14](papers/2026-05-14.md) - 5 papers
 - [2026-05-13](papers/2026-05-13.md) - 12 papers
@@ -74,6 +75,98 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-18 (5 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-05-18
+
+**Paper Count**: 5
+
+---
+
+## 1. Learn Where Outcomes Diverge: Efficient VLA RL via Probabilistic Chunk Masking / 了解结果的分歧之处：通过概率块屏蔽实现高效的 VLA RL
+
+**Date**: 2026-05-15 | **arXiv**: [2605.16154v1](http://arxiv.org/abs/2605.16154v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.16154v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning (RL) allows vision-language-action (VLA) policies to generalize beyond their training distribution by optimizing directly for task success, but post-training is computationally expensive. A natural response has been to speed rollout collection through faster simulators and world models. In GRPO-based VLA RL, we find that the dominant cost lies elsewhere: gradient computation accounts for approximately 78% of wall-clock time per step in our runs, while rollout collection accounts for only 21%. Gradient cost dominates because much of this computation is spent on phases that contribute little to learning. GRPO's learning signal is driven by advantage variance: only phases where successful and failed rollouts diverge produce learning signal. However, GRPO assigns the same advantage to every chunk in a rollout. As a result, actor-update compute is spent uniformly across the trajectory, including phases the policy already handles after pre-training and supervised fine-tuning. This paper presents Probabilistic Chunk Masking (PCM), a drop-in modification to GRPO that allocates gradient computation to a small, probabilistically selected subset of chunks per trajectory. PCM scores semantic phases using success-failure action variance, a rollout-derived proxy for per-phase gradient variance, and samples a fixed chunk budget with online-updated phase-level keep probabilities. We formalize per-phase gradient variance as the quantity determines where gradient computation is useful and show that success-failure action variance provides a measurable proxy for it. PCM requires no reward model or learned critic. On three LIBERO benchmarks, PCM matches the final success rate of standard GRPO while achieving 2.38 times wall-clock speedup, 4.8 times faster gradient updates, and 60% lower peak activation memory, while backpropagating through fewer than 20% of trajectory chunks.
+
+强化学习 (RL) 允许视觉-语言-动作 (VLA) 策略通过直接优化任务成功来超越其训练分布，但训练后的计算成本很高。自然的反应是通过更快的模拟器和世界模型来加速收集。在基于 GRPO 的 VLA RL 中，我们发现主要成本在其他地方：梯度计算约占我们运行中每步挂钟时间的 78%，而 rollout 收集仅占 21%。梯度成本占主导地位，因为大部分计算都花在对学习贡献不大的阶段。 GRPO 的学习信号由优势方差驱动：只有成功和失败的推出出现分歧的阶段才会产生学习信号。然而，GRPO 为部署中的每个块分配相同的优势。因此，参与者更新计算在整个轨迹上统一使用，包括策略在预训练和监督微调后已经处理的阶段。本文提出了概率块掩蔽（PCM），这是对 GRPO 的一种直接修改，它将梯度计算分配给每个轨迹中概率选择的小块子集。 PCM 使用成功-失败动作方差（每阶段梯度方差的推出衍生代理）对语义阶段进行评分，并使用在线更新的阶段级保持概率对固定块预算进行采样。我们将每阶段梯度方差形式化，因为数量决定了梯度计算在哪里有用，并表明成功-失败动作方差为其提供了可测量的代理。 PCM 不需要奖励模型或博学的批评家。在三个 LIBERO 基准测试中，PCM 与标准 GRPO 的最终成功率相匹配，同时实现了 2.38 倍的挂钟加速、4.8 倍的梯度更新速度和 60% 的峰值激活内存降低，同时反向传播的轨迹块少于 20%。
+
+</details>
+
+---
+
+## 2. Mind Dreamer: Untethering Imagination via Active Latent Intervention on Latent Manifolds / 心灵梦想家：通过对潜在流形的主动潜在干预来释放想象力
+
+**Date**: 2026-05-15 | **arXiv**: [2605.16030v1](http://arxiv.org/abs/2605.16030v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.16030v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Model-Based Reinforcement Learning (MBRL) leverages latent imagination for sample efficiency, yet remains constrained by Historical Tethering: imagination is typically initialized from observed states. This creates a learning asymmetry, where the world model's manifold discovery outpaces the policy's sparse-reward optimization. We propose Mind Dreamer (MD), a framework that operationalizes Active Latent Intervention (ALI) to transcend Markovian continuity. MD reformulates discovery as the minimization of a global Relay Manifold Expected Free Energy (R-EFE); by sampling initial states from a learned generator $s_0 \sim p_{gen}(\cdot)$ rather than the historical buffer, MD utilizes an adversarial generator to synthesize non-continuous latent jumps to epistemic blind spots that are physically plausible yet cognitively challenging. To resolve the credit assignment paradox across these spatial ruptures, we derive the Relay Value Function (RVF) and Relay Uncertainty Function (RUF). These potentials treat synthesized anchors as counterfactual intermediary states, propagating pragmatic and epistemic value through a principled Bellman-style formulation. Notably, we prove that uncertainty propagation across discontinuities necessitates a quadratic discount $γ^2$, establishing a formal epistemic horizon. Theoretically, MD approximates a variance-minimizing importance sampler that expands the manifold's spectral gap, reducing the hitting time to critical bottleneck states. Empirically, MD achieves a 1.67$\times$ average speedup over DreamerV3 on DeepMind Control Suite, reaching 8.8$\times$ in sparse-reward tasks.
+
+基于模型的强化学习 (MBRL) 利用潜在想象力来提高样本效率，但仍然受到历史束缚的限制：想象力通常是从观察到的状态初始化的。这造成了学习不对称，世界模型的多种发现超过了策略的稀疏奖励优化。我们提出 Mind Dreamer (MD)，一个可操作主动潜在干预 (ALI) 以超越马尔可夫连续性的框架。 MD 将发现重新表述为全局中继流形预期自由能 (R-EFE) 的最小化；通过从学习生成器 $s_0 \sim p_{gen}(\cdot)$ 而不是历史缓冲区中采样初始状态，MD 利用对抗生成器来合成非连续潜在跳跃到认知盲点，这些盲点在物理上合理但在认知上具有挑战性。为了解决这些空间断裂上的信用分配悖论，我们推导了中继值函数（RVF）和中继不确定性函数（RUF）。这些势将合成锚视为反事实的中间状态，通过有原则的贝尔曼式表述传播实用和认知价值。值得注意的是，我们证明跨不连续性的不确定性传播需要二次折扣 $γ^2$，从而建立正式的认知视野。理论上，MD 近似于方差最小化重要性采样器，它扩大了流形的谱间隙，减少了到达关键瓶颈状态的时间。根据经验，MD 在 DeepMind Control Suite 上比 DreamerV3 平均加速 1.67$\times$，在稀疏奖励任务中达到 8.8$\times$。
+
+</details>
+
+---
+
+## 3. Learning Bilevel Policies over Symbolic World Models for Long-Horizon Planning / 学习符号世界模型的双层政策以进行长期规划
+
+**Date**: 2026-05-15 | **arXiv**: [2605.15975v1](http://arxiv.org/abs/2605.15975v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.15975v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We tackle the challenge of building embodied AI agents that can reliably solve long-horizon planning problems. Imitation learning from demonstrations has shown itself to be effective in training robots to solve a diversity of complex tasks requiring fine motor control and manipulation over low-level (LL), continuous environments. Yet, it remains a difficult endeavour to generate long-horizon plans from imitation learning alone. In contrast, high-level (HL), symbolic abstractions facilitate efficient and interpretable long-horizon planning. We propose to combine the strengths of LL imitation learning for manipulation and control, and HL symbolic abstractions for long-horizon planning. We realise this idea via \emph{bilevel policies} of the form $(π^{\mathrm{hl}}, π^{\mathrm{ll}})$, consisting of a neural policy $π^{\mathrm{ll}}$ learned from LL demonstrations, and an HL symbolic policy $π^{\mathrm{hl}}$ that is constructed from symbolic abstractions of the LL demonstrations combined with inductive generalisation. We implement these ideas in the BISON system. Experiments on extended MetaWorld benchmarks demonstrate that BISON generalises to long horizons and problems with greater numbers of objects than those solved by VLA and end-to-end methods, and is more time and memory efficient in training and inference. Notably, when ignoring LL execution, BISON's HL policies can solve HL problems with 10,000 relevant objects in under a minute. Project page: https://dillonzchen.github.io/bison
+
+我们应对构建能够可靠地解决长期规划问题的具体人工智能代理的挑战。通过演示进行模仿学习已证明可以有效地训练机器人解决各种需要在低级 (LL)、连续环境中进行精细运动控制和操作的复杂任务。然而，仅通过模仿学习来制定长期计划仍然是一项艰巨的任务。相比之下，高层（HL）符号抽象有助于高效且可解释的长期规划。我们建议结合 LL 模仿学习的优势来进行操纵和控制，以及 HL 符号抽象的优势来进行长期规划。我们通过 $(π^{\mathrm{hl}}, π^{\mathrm{ll}})$ 形式的 \emph{bilevelpolicy} 来实现这个想法，它由从 LL 演示中学习到的神经策略 $π^{\mathrm{ll}}$ 和一个 HL 符号策略 $π^{\mathrm{hl}}$ 组成，该策略是根据 LL 演示的符号抽象与归纳概括相结合构建的。我们在 BISON 系统中实现了这些想法。扩展 MetaWorld 基准测试表明，与 VLA 和端到端方法解决的问题相比，BISON 能够泛化到长视野和对象数量更多的问题，并且在训练和推理方面具有更高的时间和内存效率。值得注意的是，当忽略 LL 执行时，BISON 的 HL 策略可以在一分钟内解决 10,000 个相关对象的 HL 问题。项目页面：https://dillonzchen.github.io/bison
+
+</details>
+
+---
+
+## 4. WorldVLN: Autoregressive World Action Model for Aerial Vision-Language Navigation / WorldVLN：航空视觉语言导航的自回归世界行动模型
+
+**Date**: 2026-05-15 | **arXiv**: [2605.15964v1](http://arxiv.org/abs/2605.15964v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.15964v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Aerial vision-language navigation (VLN) requires agents to follow natural-language instructions through closed-loop perception and action in 3D environments. We argue that aerial VLN can be formulated as a prediction-driven world-action problem: the agent should anticipate latent world evolution and act according to the predicted consequences. To this end, we propose WorldVLN, the first autoregressive world action model for aerial VLN. Unlike full-sequence video-generation world models that generate an entire visual clip, WorldVLN adapts a latent autoregressive video backbone to predict short-horizon world-state transitions and directly decodes them into executable waypoint actions. After each action segment is executed, newly received observations are encoded back into the autoregressive context, enabling closed-loop world-action prediction. We further introduce a two-stage training framework that first grounds the video prior in instruction-conditioned navigation dynamics and then develops Action-aware GRPO, the first reinforcement learning method tailored to autoregressive WAMs, to optimize waypoint decisions through their downstream rollout consequences. On public outdoor and indoor benchmarks, WorldVLN consistently outperforms existing Vision-Language-Action baselines with 12\%+ success-rate gains and larger advantages on challenging cases. It further transfers zero-shot to real drone deployment, suggesting that the proposed WorldVLN offers a promising route for spatial action tasks. Demos and code are available at https://embodiedcity.github.io/WorldVLN/.
+
+空中视觉语言导航 (VLN) 要求智能体通过 3D 环境中的闭环感知和行动来遵循自然语言指令。我们认为，空中 VLN 可以表述为预测驱动的世界行动问题：智能体应该预测潜在的世界演化并根据预测的结果采取行动。为此，我们提出了 WorldVLN，这是第一个航空 VLN 的自回归世界行动模型。与生成整个视觉剪辑的全序列视频生成世界模型不同，WorldVLN 采用潜在的自回归视频主干来预测短视界世界状态转换，并将其直接解码为可执行的路点动作。执行每个动作段后，新接收到的观察结果将被编码回自回归上下文中，从而实现闭环世界动作预测。我们进一步引入了一个两阶段训练框架，首先将视频置于指令条件导航动态中，然后开发动作感知 GRPO，这是第一个针对自回归 WAM 定制的强化学习方法，通过其下游推出结果来优化航路点决策。在公共室外和室内基准测试中，WorldVLN 始终优于现有的视觉-语言-行动基准，成功率提高了 12% 以上，并且在具有挑战性的案例中具有更大的优势。它将零射击进一步转移到真正的无人机部署，这表明所提出的 WorldVLN 为空间行动任务提供了一条有前途的途径。演示和代码可在 https://embodiedcity.github.io/WorldVLN/ 获取。
+
+</details>
+
+---
+
+## 5. Imperfect World Models are Exploitable / 不完美的世界模型是可以利用的
+
+**Date**: 2026-05-15 | **arXiv**: [2605.15960v1](http://arxiv.org/abs/2605.15960v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.15960v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We propose a novel definition of model exploitation in reinforcement learning. Informally, a world model is exploitable if it implies that one policy should be strictly preferred over another while the environment's true transition model implies the reverse. We analogize our definition with a prior characterization of reward hacking but show that the associated proof of inevitability does not transfer to exploitation. To overcome this obstruction, we develop a general theory of reward hacking and model exploitation that proves that exploitation is essentially unavoidable on large policy sets and yields the corresponding claim for hacking as a special case. Unfortunately, we also find that the conditions that guarantee unhackability in finite policy sets have no counterpart that precludes exploitation. Consequently, we introduce a relaxed notion of exploitation and derive a safe horizon within which it can be avoided. Taken together, our results establish a formal bridge between reward hacking and model exploitation and elucidate the limits of safe planning in world models.
+
+我们提出了强化学习中模型开发的新定义。非正式地说，如果世界模型意味着一种政策应该严格优先于另一种政策，而环境的真正转型模型意味着相反，那么它就是可利用的。我们将我们的定义与奖励黑客的先前特征进行类比，但表明相关的必然性证明不会转移到剥削。为了克服这一障碍，我们开发了奖励黑客和模型利用的一般理论，证明在大型策略集上利用本质上是不可避免的，并作为特殊情况产生了相应的黑客主张。不幸的是，我们还发现，在有限的策略集中保证不可破解的条件没有对应的条件来阻止利用。因此，我们引入了一种宽松的剥削概念，并得出了可以避免剥削的安全范围。总而言之，我们的结果在奖励黑客和模型利用之间建立了一座正式的桥梁，并阐明了世界模型中安全规划的局限性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-15 (9 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-05-15
