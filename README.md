@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-19](papers/2026-05-19.md) - 20 papers
 - [2026-05-15](papers/2026-05-15.md) - 28 papers
 - [2026-05-14](papers/2026-05-14.md) - 20 papers
 - [2026-05-13](papers/2026-05-13.md) - 3 papers
@@ -80,6 +81,342 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-19 (20 papers)</b></summary>
+
+# arXiv Video Papers - 2026-05-19
+
+**Paper Count**: 20
+
+---
+
+## 1. EgoInteract: Synthetic Egocentric Videos Generation for Interaction Understanding and Anticipation / EgoInteract：生成以自我为中心的合成视频，用于交互理解和预期
+
+**Date**: 2026-05-18 | **arXiv**: [2605.18214v1](http://arxiv.org/abs/2605.18214v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.18214v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Collecting large-scale egocentric video datasets with dense spatial and temporal annotations is costly, slow, and often constrained by environmental biases, privacy constraints, and limited coverage of interaction patterns. While synthetic data has shown strong potential in several vision domains, its use for egocentric perception remains relatively underexplored, especially for tasks requiring temporally coherent human-object interactions. In this work, we introduce EgoInteract, a controllable simulator for egocentric video generation designed to model fine-grained egocentric interactions and their temporal dynamics. The simulator enables precise control over camera, human body and hand motion, object manipulation, and scene composition across diverse environments. Building on this framework, we generate a synthetic egocentric video dataset with dense spatial and temporal annotations for temporal action segmentation, next-active object detection, interaction anticipation, and hand-object interaction detection. We evaluate models trained with simulated data on multiple real-world egocentric benchmarks spanning diverse environments, object categories, and interaction patterns. Results show consistent improvements over strong baselines across tasks and datasets, demonstrating the effectiveness and transferability of our simulation-based approach.
+
+收集具有密集空间和时间注释的大规模以自我为中心的视频数据集成本高昂、速度缓慢，并且通常受到环境偏见、隐私限制和交互模式覆盖范围有限的限制。虽然合成数据在多个视觉领域显示出强大的潜力，但其在以自我为中心的感知中的应用仍然相对未得到充分探索，特别是对于需要时间连贯的人与物体交互的任务。在这项工作中，我们介绍了 EgoInteract，这是一种用于以自我为中心的视频生成的可控模拟器，旨在模拟细粒度的以自我为中心的交互及其时间动态。该模拟器可以在不同的环境中精确控制摄像机、人体和手部运动、对象操纵和场景组合。在此框架的基础上，我们生成了一个合成的以自我为中心的视频数据集，具有密集的空间和时间注释，用于时间动作分割、下一个活动对象检测、交互预期和手部对象交互检测。我们在跨越不同环境、对象类别和交互模式的多个真实世界的以自我为中心的基准上评估使用模拟数据训练的模型。结果显示，跨任务和数据集的强大基线得到了一致的改进，证明了我们基于模拟的方法的有效性和可转移性。
+
+</details>
+
+---
+
+## 2. SPATIOROUTE: Dynamic Prompt Routing for Zero-Shot Spatial Reasoning / SPATIOROUTE：用于零样本空间推理的动态提示路由
+
+**Date**: 2026-05-18 | **arXiv**: [2605.18209v1](http://arxiv.org/abs/2605.18209v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.18209v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Spatial question answering over egocentric video is a challenging task that requires Vision-Language Models (VLMs) to reason about 3D object positions, scene affordances, and directional relationships, particularly in the zero-shot setting where no task-specific fine-tuning is available. We introduce SpatioRoute, a dynamic prompt generation approach that routes each incoming question to a semantically tailored prompt template -- without any additional training, fine-tuning, or 3D sensor input. SpatioRoute operates in two complementary modes: SpatioRoute-R, a rule-based router that deterministically maps question typologies (e.g., What, Is, How, Can, Which) to specialized prompt templates; and SpatioRoute-L, an LLM-driven approach that generates task-specific prompts from the question and situational context alone, with no video input at routing time. We evaluate SpatioRoute on the SQA3D benchmark across VLMs spanning model families. SpatioRoute achieves consistent overall accuracy gains up to 5% over fixed prompt baselines, establishing a new state-of-the-art for zero-shot video-only spatial VQA without requiring 3D point-cloud inputs. As an additional finding, we observe that Chain-of-Thought (CoT) prompting, implemented via the Think it Twice architecture, consistently degrades performance in this setting on Qwen series models, confirming that question-aware routing is more effective than uniform reasoning instructions for spatial video understanding.
+
+对以自我为中心的视频进行空间问答是一项具有挑战性的任务，需要视觉语言模型 (VLM) 来推理 3D 对象位置、场景可供性和方向关系，特别是在无法进行特定于任务的微调的零镜头设置中。我们引入了 SpatioRoute，这是一种动态提示生成方法，可将每个传入问题路由到语义定制的提示模板，无需任何额外的训练、微调或 3D 传感器输入。 SpatioRoute 以两种互补模式运行：SpatioRoute-R，一种基于规则的路由器，可确定性地将问题类型（例如，What、Is、How、Can、Which）映射到专门的提示模板； SpatioRoute-L，一种法学硕士驱动的方法，仅根据问题和情境上下文生成特定于任务的提示，在路由时无需视频输入。我们在跨模型系列的 VLM 的 SQA3D 基准上评估 SpatioRoute。 SpatioRoute 与固定提示基线相比，实现了高达 5% 的一致整体精度增益，为零镜头纯视频空间 VQA 建立了新的最先进技术，无需 3D 点云输入。作为另一个发现，我们观察到通过 Think it Twice 架构实现的思想链 (CoT) 提示在 Qwen 系列模型的这种设置中持续降低性能，这证实了问题感知路由比空间视频理解的统一推理指令更有效。
+
+</details>
+
+---
+
+## 3. Xiaomi EV World Model: A Joint World Model Integrating Reconstruction and Generation for Autonomous Driving / 小米电动车世界模型：自动驾驶重构生成的联合世界模型
+
+**Date**: 2026-05-18 | **arXiv**: [2605.18137v1](http://arxiv.org/abs/2605.18137v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.18137v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This report presents a unified technical system addressing the two core capabilities of world models for autonomous driving: world representation and world generation. For world representation, we propose WorldRec, a feed-forward reconstruction architecture driven by sparse scene queries. WorldRec initializes structured queries in 3D space, leveraging them to aggregate cross-view, cross-temporal features, thereby naturally enforcing spatial consistency across frames and yielding compact yet high-fidelity 3D Gaussian scene representations. For world generation, we propose WorldGen, a two-stage training framework of bidirectional pretraining followed by causal fine-tuning through three progressive stages (Teacher Forcing, ODE distillation, and DMD), enabling high-quality online causal video generation in as few as 4 denoising steps. Building on both modules, we further introduce the JWM, which deeply integrates WorldRec and WorldGen to achieve synergistic gains in generation stability, cross-frame consistency, and visual fidelity, providing a solid foundation for closed-loop simulation, data synthesis, and end-to-end training in autonomous driving.
+
+本报告提出了一个统一的技术体系，解决自动驾驶世界模型的两个核心能力：世界表征和世界生成。对于世界表示，我们提出了 WorldRec，一种由稀疏场景查询驱动的前馈重建架构。 WorldRec 在 3D 空间中初始化结构化查询，利用它们聚合跨视图、跨时间特征，从而自然地强制跨帧的空间一致性，并产生紧凑但高保真的 3D 高斯场景表示。对于世界生成，我们提出了 WorldGen，这是一个双向预训练的两阶段训练框架，然后通过三个渐进阶段（Teacher Forcing、ODE 蒸馏和 DMD）进行因果微调，只需 4 个去噪步骤即可生成高质量的在线因果视频。在这两个模块的基础上，我们进一步引入了JWM，它深度集成了WorldRec和WorldGen，以在生成稳定性、跨帧一致性和视觉保真度方面实现协同增益，为自动驾驶的闭环仿真、数据合成和端到端训练提供坚实的基础。
+
+</details>
+
+---
+
+## 4. OmniSelect: Dynamic Modality-Aware Token Compression for Efficient Omni-modal Large Language Models / OmniSelect：动态模态感知令牌压缩，用于高效的全模态大型语言模型
+
+**Date**: 2026-05-18 | **arXiv**: [2605.18041v1](http://arxiv.org/abs/2605.18041v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.18041v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Omnimodal large language models (OmniLLMs) have recently gained increasing attention for unified audio-video understanding. However, processing long multimodal token sequences introduces substantial computational overhead, making efficient token compression crucial. Existing methods typically rely on fixed, modality-specific guidance, which fails to account for the varying importance of modalities across different queries. To address this limitation, we propose $\textbf{OmniSelect}$, a training-free, modality-adaptive token pruning framework that dynamically selects appropriate compression strategies for multimodal inputs. Specifically, we leverage a lightweight AudioCLIP model to estimate cross-modal relevance and categorize each input into three pruning regimes: Audio-Centric, Video-Centric, and Uniform pruning. Based on these relevance scores, OmniSelect further performs fine-grained token pruning within each temporal group, adaptively allocating pruning ratios to preserve informative tokens across modalities. By explicitly modeling modality preference and enabling dynamic strategy selection, OmniSelect effectively avoids the pitfalls of one-size-fits-all compression. Extensive experiments demonstrate that our method achieves efficient multimodal token reduction while maintaining strong performance, without requiring any additional training.
+
+全模态大语言模型（OmniLLM）最近在统一音视频理解方面受到越来越多的关注。然而，处理长的多模式令牌序列会带来大量的计算开销，因此高效的令牌压缩至关重要。现有方法通常依赖于固定的、特定于模态的指导，这无法考虑不同查询中模态的不同重要性。为了解决这个限制，我们提出了$\textbf{OmniSelect}$，这是一种免训练、模态自适应的令牌修剪框架，可以为多模态输入动态选择适当的压缩策略。具体来说，我们利用轻量级 AudioCLIP 模型来估计跨模式相关性，并将每个输入分类为三种修剪机制：以音频为中心、以视频为中心和统一修剪。基于这些相关性分数，OmniSelect 进一步在每个时间组内执行细粒度的标记修剪，自适应地分配修剪比率以保留跨模态的信息标记。通过显式地建模模态偏好并启用动态策略选择，OmniSelect 有效地避免了一刀切的压缩陷阱。大量的实验表明，我们的方法可以实现高效的多模态标记减少，同时保持强大的性能，而无需任何额外的训练。
+
+</details>
+
+---
+
+## 5. TinySAM 2: Extreme Memory Compression for Efficient Track Anything Model / TinySAM 2：用于高效跟踪任何模型的极端内存压缩
+
+**Date**: 2026-05-18 | **arXiv**: [2605.18013v1](http://arxiv.org/abs/2605.18013v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.18013v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Segment Anything Model 2 (SAM 2) serves as a core foundation model in the field of video segmentation. Building upon the original SAM model, it introduces a memory bank mechanism and demonstrates outstanding performance in tasks such as semi-supervised video object segmentation and tracking anything. However, the complex computational characteristics of SAM 2's multi-stage image encoder and memory module have raised the barrier to the model's deployment in practical applications. To address this issue, we propose TinySAM 2, a lightweight video segmentation model that balances performance and efficiency. First, a memory quality management mechanism is introduced to select and retain high-informative historical frames as the memory. In addition, a joint-spatial-temporal token compression is proposed that reduces the memory storage and computational cost. Specifically, average pooling is employed to first compress redundancy tokens in the spatial domain. In the temporal domain, informative tokens are selected across frames in the memory bank based on token-level similarity measurement. Besides, we take RepViT as the lightweight image encoder, which further reduces the model parameters. Extensive experiments on challenging datasets such as DAVIS and SA-V demonstrate that TinySAM 2 achieves 90% of the performance of SAM 2.1, with only 7% memory tokens and 3% training data. This study effectively alleviates the bottlenecks in parameter count, computational load, and deployment costs associated with SAM 2, providing a resource-efficient solution for the widespread application of video segmentation models on devices.
+
+Segment Anything Model 2（SAM 2）是视频分割领域的核心基础模型。它在原始 SAM 模型的基础上引入了内存库机制，并在半监督视频对象分割和跟踪等任务中展示了出色的性能。然而，SAM 2的多级图像编码器和存储模块的复杂计算特性给模型在实际应用中的部署带来了障碍。为了解决这个问题，我们提出了TinySAM 2，一种平衡性能和效率的轻量级视频分割模型。首先，引入记忆质量管理机制，选择并保留高信息量的历史帧作为记忆。此外，提出了联合时空令牌压缩，以减少内存存储和计算成本。具体来说，采用平均池化首先压缩空间域中的冗余标记。在时域中，基于标记级相似性测量，在存储库中跨帧选择信息标记。此外，我们采用RepViT作为轻量级图像编码器，进一步减少了模型参数。在 DAVIS 和 SA-V 等具有挑战性的数据集上进行的大量实验表明，TinySAM 2 仅需 7% 的内存令牌和 3% 的训练数据即可实现 SAM 2.1 90% 的性能。这项研究有效缓解了与 SAM 2 相关的参数计数、计算负载和部署成本方面的瓶颈，为视频分割模型在设备上的广泛应用提供了资源高效的解决方案。
+
+</details>
+
+---
+
+## 6. AdaptiveLoad: Towards Efficient Video Diffusion Transformer Training / AdaptiveLoad：迈向高效的视频扩散变压器训练
+
+**Date**: 2026-05-18 | **arXiv**: [2605.17923v1](http://arxiv.org/abs/2605.17923v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.17923v1)
+
+**Categories**: cs.DC, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In video generation models, particularly world models, training large-scale video diffusion Transformers (such as DiT and MMDiT) poses significant computational challenges due to the extreme variance in sequence lengths within mixed-mode datasets. Existing bucket-based data loading strategies typically rely on "equal token length" constraints. This approach fails to account for the quadratic complexity of self-attention mechanisms, leading to severe load imbalance and underutilization of GPU resources.   This paper proposes \textit{AdaptiveLoad}, an integrated optimization framework consisting of two core components: (1) A dual-constraint adaptive load balancing system, which eliminates long-sequence bottlenecks by simultaneously limiting memory consumption and computational load ($B \times S^p \le M_{\text{comp}}$); (2) A fused LayerNorm-Modulate CUDA kernel, which utilizes a D-tile coalesced reduction strategy to increase throughput and alleviate memory pressure. Experimental results on the Wan 2.1 world model demonstrate that our method reduces the computational imbalance rate from 39\% to 18.9\%, improves peak VRAM utilization efficiency by 22.7\%, and achieves an overall training throughput increase of 27.2\%.
+
+在视频生成模型中，特别是世界模型中，由于混合模式数据集中序列长度的极大变化，训练大规模视频扩散 Transformer（例如 DiT 和 MMDiT）带来了巨大的计算挑战。 Existing bucket-based data loading strategies typically rely on "equal token length" constraints.这种方法未能考虑自注意力机制的二次复杂度，导致严重的负载不平衡和 GPU 资源的利用不足。   本文提出\textit{AdaptiveLoad}，一个由两个核心组件组成的集成优化框架：（1）双约束自适应负载平衡系统，通过同时限制内存消耗和计算负载（$B \times S^p \le M_{\text{comp}}$）来消除长序列瓶颈； (2) 融合的 LayerNorm-Modulate CUDA 内核，它利用 D-tile 合并缩减策略来提高吞吐量并减轻内存压力。在 Wan 2.1 世界模型上的实验结果表明，我们的方法将计算不平衡率从 39% 降低到 18.9%，峰值 VRAM 使用效率提高了 22.7%，整体训练吞吐量提高了 27.2%。
+
+</details>
+
+---
+
+## 7. An Efficient Streaming Video Understanding Framework with Agentic Control / 一种具有代理控制的高效流媒体视频理解框架
+
+**Date**: 2026-05-18 | **arXiv**: [2605.17921v1](http://arxiv.org/abs/2605.17921v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.17921v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Streaming video requires handling dynamic information density under strict latency budgets. Yet, existing methods typically employ static strategies, such as fixed memory compression or reliance on a single model, forcing a trade-off: fast models fail on complex queries, while always-on heavy models violate real-time constraints and overcomplicate simple queries. Rather than fixing these decisions upfront, we propose R3-Streaming (Remember, Respond, Reason), which formulates streaming video understanding as a cascaded control problem: for each query, the system compresses memory, judges response readiness, and routes computation sequentially, so that each downstream decision builds on progressively refined information states. To optimize this pipeline, we introduce an age-aware forgetting policy for memory compression, as aggressively compressing historical frames can yield substantial performance gains. For compute routing, we propose TB-GRPO, a target-balanced reinforcement learning objective that routes hard queries to a stronger model while preventing mode collapse. Extensive evaluations demonstrate that R3-Streaming achieves state-of-the-art results among streaming MLLMs, reaching 57.92 on OVO-Bench and 76.36 on StreamingBench, while reducing visual token usage by 95 to 96 percent.
+
+Streaming video requires handling dynamic information density under strict latency budgets.然而，现有的方法通常采用静态策略，例如固定内存压缩或依赖单个模型，从而强制进行权衡：快速模型在复杂查询上失败，而始终在线的重型模型违反实时约束并使简单查询过于复杂。我们提出 R3-Streaming（记住、响应、推理），而不是预先修复这些决策，它将流视频理解制定为级联控制问题：对于每个查询，系统压缩内存，判断响应准备情况，并按顺序路由计算，以便每个下游决策都建立在逐步细化的信息状态上。为了优化这个管道，我们引入了一种内存压缩的年龄感知遗忘策略，因为积极压缩历史帧可以带来显着的性能提升。对于计算路由，我们提出了 TB-GRPO，这是一种目标平衡的强化学习目标，可将硬查询路由到更强大的模型，同时防止模式崩溃。广泛的评估表明，R3-Streaming 在流式 MLLM 中取得了最先进的结果，在 OVO-Bench 上达到 57.92，在 StreamingBench 上达到 76.36，同时将视觉令牌使用量减少了 95% 至 96%。
+
+</details>
+
+---
+
+## 8. SurgLQA: Scalable Long-Horizon Surgical Video Question Answering / SurgLQA：可扩展的长视野手术视频问答
+
+**Date**: 2026-05-18 | **arXiv**: [2605.17915v1](http://arxiv.org/abs/2605.17915v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.17915v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/RascalGdd/SurgLQA.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Surgical Video Question Answering (VideoQA) provides a promising paradigm for dynamic intraoperative interpretation, enabling real-time decision support and context-aware retrieval in clinical environments. Nevertheless, existing approaches are predominantly restricted to images or short clips, limiting their ability to model long-range procedural dynamics and causal dependencies across extended surgical workflows. To address this challenge, we propose SurgLQA, a unified long-horizon VideoQA framework for scalable surgical reasoning. This framework incorporates Faithful Temporal Consolidation (FTC), which leverages intrinsic temporal cues to construct compact long-range representations while preserving fine-grained temporal fidelity. Further, we develop Temporally-Grounded Multi-Policy Scaling (TMS), an adaptive test-time inference paradigm that strategically adjusts policy-level reasoning capacity within temporally grounded contexts. To facilitate systematic evaluation, we restructured a long-duration colonoscopy VideoQA benchmark, Colon-LQA, and conducted extensive experiments on Colon-LQA and REAL-Colon-VQA. Experimental results demonstrate that our approach achieves consistent performance gains in long-range reasoning with temporally grounded inference. Code link: https://github.com/RascalGdd/SurgLQA.
+
+手术视频问答 (VideoQA) 为动态术中解释提供了一个有前景的范例，可在临床环境中实现实时决策支持和上下文感知检索。然而，现有的方法主要局限于图像或短片，限制了它们在扩展的手术工作流程中模拟长期程序动态和因果依赖性的能力。为了应对这一挑战，我们提出了 SurgLQA，这是一种用于可扩展手术推理的统一长视野 VideoQA 框架。该框架结合了忠实时间整合（FTC），它利用内在的时间线索来构建紧凑的远程表示，同时保持细粒度的时间保真度。此外，我们开发了临时接地多策略缩放（TMS），这是一种自适应测试时间推理范式，可以在临时接地上下文中战略性地调整策略级推理能力。为了便于系统评估，我们重建了长期结肠镜检查 VideoQA 基准 Colon-LQA，并对 Colon-LQA 和 REAL-Colon-VQA 进行了广泛的实验。实验结果表明，我们的方法在基于时间的推理的远程推理中实现了一致的性能提升。代码链接：https://github.com/RascalGdd/SurgLQA。
+
+</details>
+
+---
+
+## 9. Temporal Aware Pruning for Efficient Diffusion-based Video Generation / 用于高效基于扩散的视频生成的时间感知修剪
+
+**Date**: 2026-05-18 | **arXiv**: [2605.17837v1](http://arxiv.org/abs/2605.17837v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.17837v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video diffusion models have recently enabled high-quality video generation with ViT-based architectures, but remain computationally intensive because generation requires attention computation over long spatiotemporal sequences. Token pruning has proven effective for ViTs and VLMs. However, most prior pruning methods are attention-based and operate per frame, failing to ensure the vital temporal coherence across frames in video generation tasks. In practice, naively adopting attention-only pruning causes noticeable degradation due to worsened background consistency, flickering, and reduced image quality. To address this, we propose TAPE, a training-free Temporal Aware Pruning for Efficient diffusion-based video generation. TAPE (i) applies temporal smoothing to align token-importance across adjacent frames and suppress selection jitter; and (ii) performs token reselection in selected layers to align token pruning with layers' diverse semantic focus and avoid error accumulation in specific areas; it also (iii) adopt a timestep-level budget scheduling that prunes aggressively at early noisy steps and relaxes pruning during fidelity-critical refinement. The experimental results show that TAPE delivers significant speedups while preserving high visual fidelity, outperforming prior token reduction approaches.
+
+视频扩散模型最近已经通过基于 ViT 的架构实现了高质量视频生成，但仍然需要大量计算，因为生成需要对长时空序列进行注意力计算。事实证明，令牌修剪对于 ViT 和 VLM 是有效的。然而，大多数现有的剪枝方法都是基于注意力的，并且按帧进行操作，无法确保视频生成任务中帧间重要的时间一致性。在实践中，天真地采用仅注意修剪会由于背景一致性恶化、闪烁和图像质量下降而导致明显的退化。为了解决这个问题，我们提出了 TAPE，一种无需训练的时间感知修剪，用于高效的基于扩散的视频生成。 TAPE (i) 应用时间平滑来对齐相邻帧之间的标记重要性并抑制选择抖动； (ii) 在选定的层中执行标记重新选择，以使标记修剪与层的不同语义焦点保持一致，并避免特定区域中的错误累积；它还（iii）采用时间步级预算调度，在早期的噪声步骤中进行积极的修剪，并在保真度关键的细化过程中放松修剪。实验结果表明，TAPE 在保持高视觉保真度的同时提供了显着的加速，优于之前的令牌缩减方法。
+
+</details>
+
+---
+
+## 10. MARQUIS: A Three-Stage Pipeline for Video Retrieval-Augmented Generation / MARQUIS：视频检索增强生成的三阶段管道
+
+**Date**: 2026-05-17 | **arXiv**: [2605.17640v1](http://arxiv.org/abs/2605.17640v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.17640v1)
+
+**Categories**: cs.IR, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Retrieval-augmented generation from videos requires systems to retrieve relevant audiovisual evidence from large corpora and synthesize it into coherent, attributed text. Current approaches struggle at both ends: retrieval methods fail on complex, multi-faceted queries that cannot be captured by a single embedding, while generation methods lack the high-level reasoning needed to synthesize across multiple videos and face memory constraints over long, multi-video contexts. We present MARQUIS: a three-stage pipeline that addresses these limitations through (1) query expansion, fusion, and reranking, (2) calibrated structured evidence extraction, and (3) article generation from extracted evidence, optionally controlled by an RLM. On the MAGMaR2026 shared task, we improve retrieval performance from 0.195 to 0.759 (nDCG@10). For article generation, ITER-QA-BASE improves average human score from 3.09 to 3.83 over the CAG baseline, while MARQUIS-RLM achieves a human score of 3.30 and the strongest citation recall among non-QA systems.
+
+视频的检索增强生成要求系统从大型语料库中检索相关的视听证据，并将其合成为连贯的归因文本。当前的方法在两端都存在困难：检索方法无法处理无法通过单个嵌入捕获的复杂、多方面的查询，而生成方法缺乏跨多个视频进行合成所需的高级推理，并且在长的多视频上下文中面临内存限制。我们提出了 MARQUIS：一个三阶段管道，通过 (1) 查询扩展、融合和重新排名，(2) 校准的结构化证据提取，以及 (3) 从提取的证据生成文章（可选地由 RLM 控制）来解决这些限制。在 MAGMaR2026 共享任务上，我们将检索性能从 0.195 提高到 0.759 (nDCG@10)。对于文章生成，ITER-QA-BASE 将 CAG 基线的平均人类得分从 3.09 提高到 3.83，而 MARQUIS-RLM 实现了 3.30 的人类得分，并且是非 QA 系统中最强的引文召回率。
+
+</details>
+
+---
+
+## 11. $\textit{Don't Guess, Just Ask}$: Resolving Ambiguity in Referring Segmentation via Multi-turn Clarification / $\textit{不要猜测，只需询问}$：通过多轮澄清解决引用细分中的歧义
+
+**Date**: 2026-05-17 | **arXiv**: [2605.17531v1](http://arxiv.org/abs/2605.17531v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.17531v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/iSEE-Laboratory/IC-Seg
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Referring segmentation aims to segment the target objects in images or videos based on the textual query. Despite remarkable progress over the past years, existing works always assume that the user-provided queries are already precise and clear. However, this assumption is impractical. In real-world scenarios, it is unrealistic to expect all users to thoroughly review their visual content and carefully ensure their queries are unique and unambiguous. When encountering such cases, existing segmentation models tend to arbitrarily guess the user preferences, often resulting in undesired outcomes. To address this limitation, we propose \textbf{IC-Seg}, a novel agentic framework that proactively clarifies user intent through multi-turn conversation before segmentation. To effectively incentivize this capability, we further introduce \textbf{Hi-GRPO}, a new hierarchical optimization strategy that injects dense and informative supervision signals at the trajectory, turn, and step levels. This strategy encourages efficient intent clarification, effectively eliminating redundant interactions and improving overall dialogue quality. For evaluation, we establish \textbf{Ambi-RVOS}, a referring video object segmentation benchmark with ambiguous user queries. Extensive experiments demonstrate that IC-Seg not only outperforms existing methods by a large margin in resolving ambiguous queries, but also maintains state-of-the-art performance on standard reasoning segmentation benchmarks. Code and data will be released at \url{https://github.com/iSEE-Laboratory/IC-Seg}.
+
+参考分割旨在基于文本查询来分割图像或视频中的目标对象。尽管过去几年取得了显着的进步，但现有的工作总是假设用户提供的查询已经是精确和清晰的。然而，这个假设是不切实际的。在现实场景中，期望所有用户彻底检查他们的视觉内容并仔细确保他们的查询是唯一且明确的是不现实的。当遇到这种情况时，现有的细分模型往往会任意猜测用户的偏好，往往会导致不期望的结果。为了解决这个限制，我们提出了 \textbf{IC-Seg}，这是一种新颖的代理框架，可以在分段之前通过多轮对话主动阐明用户意图。为了有效地激励这种能力，我们进一步引入了 \textbf{Hi-GRPO}，这是一种新的分层优化策略，可以在轨迹、转弯和步骤级别注入密集且信息丰富的监督信号。该策略鼓励有效的意图澄清，有效消除冗余交互并提高整体对话质量。为了进行评估，我们建立了 \textbf{Ambi-RVOS}，这是一个具有模糊用户查询的参考视频对象分割基准。大量实验表明，IC-Seg 不仅在解决模糊查询方面远远优于现有方法，而且在标准推理分割基准上保持了最先进的性能。代码和数据将在\url{https://github.com/iSEE-Laboratory/IC-Seg}发布。
+
+</details>
+
+---
+
+## 12. Omni-Customizer: End-to-End MultiModal Customization for Joint Audio-Video Generation / Omni-Customizer：用于联合音频-视频生成的端到端多模式定制
+
+**Date**: 2026-05-17 | **arXiv**: [2605.17488v1](http://arxiv.org/abs/2605.17488v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.17488v1)
+
+**Categories**: cs.CV, cs.MM, cs.SD
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The landscape of joint audio and video generation has been fundamentally transformed by the advent of powerful foundation models. Despite these strides, achieving cohesive multimodal customization for the simultaneous preservation of visual identities and vocal timbres across multiple interacting subjects remains largely underexplored. To bridge this gap, we present Omni-Customizer, an end-to-end framework targeted at the precise binding and seamless fusion of multimodal identity information. Specifically, we introduce an Omni-Context Fusion (OCF) module that effectively enriches the base textual prompt with dense, multimodal identity cues, along with a Masked TTS Cross-Attention (MTP-CA) mechanism explicitly designed to prevent the severe "speech leakage" problem. Within this architecture, we propose Semantic-Anchored Multimodal RoPE (SA-MRoPE) to anchor visual and audio reference tokens, along with TTS embeddings, to their corresponding semantic descriptions, enabling structured multimodal fusion and robust identity binding. Furthermore, we devise a comprehensive training strategy that incorporates interleaved audio-video scheduling to rapidly adapt the audio branch to multilingual scenarios without degrading foundational priors, and a progressive in-pair to cross-pair curriculum to facilitate the learning of high-level and robust identity features. Extensive experiments demonstrate that Omni-Customizer achieves state-of-the-art performance in dual-modal customized generation, excelling across visual identity similarity, timbre consistency, precise audio-video synchronization, and overall video-audio fidelity.
+
+强大的基础模型的出现从根本上改变了音频和视频联合生成的格局。尽管取得了这些进步，但实现有凝聚力的多模式定制以同时保留多个交互主体的视觉身份和声音音色仍然很大程度上尚未得到充分探索。为了弥补这一差距，我们推出了 Omni-Customizer，这是一个端到端框架，旨在实现多模式身份信息的精确绑定和无缝融合。具体来说，我们引入了全上下文融合（OCF）模块，该模块可以通过密集的多模态身份提示有效地丰富基本文本提示，以及专门设计用于防止严重的“语音泄漏”问题的屏蔽 TTS 交叉注意（MTP-CA）机制。在此架构中，我们提出语义锚定多模态 RoPE (SA-MRoPE) 将视觉和音频参考标记以及 TTS 嵌入锚定到其相应的语义描述，从而实现结构化多模态融合和强大的身份绑定。此外，我们设计了一种全面的培训策略，其中结合了交错的音频-视频调度，以在不降低基础先验的情况下快速使音频分支适应多语言场景，以及渐进的配对到跨配对课程，以促进高级和强大的身份特征的学习。大量实验表明，Omni-Customizer 在双模式定制生成方面实现了最先进的性能，在视觉识别相似性、音色一致性、精确的音视频同步和整体音视频保真度方面表现出色。
+
+</details>
+
+---
+
+## 13. Weighted Reverse Convolution for Feature Upsampling / 用于特征上采样的加权反向卷积
+
+**Date**: 2026-05-17 | **arXiv**: [2605.17472v1](http://arxiv.org/abs/2605.17472v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.17472v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pre-trained vision foundation models (VFMs) provide strong semantic representations, yet their patch-level features are inherently coarse, limiting their effectiveness on tasks requiring fine-grained localization, dense prediction, and point-wise correspondence. In this work, we revisit feature upsampling for VFMs from the perspective of \textbf{\textit{inverse problem}} and propose Weighted Reverse Convolution (WRC), a spatially adaptive inverse operator for densifying high-level visual descriptors. Specifically, we formulate feature upsampling as a weighted Tikhonov-regularized least-squares problem, where spatially varying weights modulate both data fidelity and prior strength at each spatial location. This allows WRC to adapt the reconstruction to spatially varying feature characteristics, thereby preserving critical structures while mitigating over-smoothing. Moreover, WRC retains an efficient, fully differentiable closed-form FFT solution, making it a practical drop-in upsampling operator. Integrated into a lightweight self-supervised densification framework, WRC consistently improves dense feature quality across various downstream benchmarks, including segmentation, depth estimation, video object segmentation, object discovery, and keypoint correspondence, while maintaining high computational efficiency.
+
+预训练的视觉基础模型（VFM）提供了强大的语义表示，但它们的补丁级特征本质上是粗糙的，限制了它们在需要细粒度定位、密集预测和逐点对应的任务上的有效性。在这项工作中，我们从 \textbf{\textit{逆问题}} 的角度重新审视 VFM 的特征上采样，并提出加权反向卷积（WRC），这是一种用于致密化高级视觉描述符的空间自适应逆算子。具体来说，我们将特征上采样制定为加权吉洪诺夫正则化最小二乘问题，其中空间变化的权重调节每个空间位置的数据保真度和先验强度。这使得 WRC 能够使重建适应空间变化的特征特征，从而保留关键结构，同时减轻过度平滑。此外，WRC 保留了高效、完全可微的封闭式 FFT 解决方案，使其成为实用的嵌入式上采样算子。 WRC 集成到轻量级自监督致密化框架中，持续提高各种下游基准的密集特征质量，包括分割、深度估计、视频对象分割、对象发现和关键点对应，同时保持高计算效率。
+
+</details>
+
+---
+
+## 14. DeTrack: A Benchmark and Altitude-Aware Dual World Model for Drone-embodied Tracking / DeTrack：用于无人机跟踪的基准和高度感知的双重世界模型
+
+**Date**: 2026-05-17 | **arXiv**: [2605.17451v1](http://arxiv.org/abs/2605.17451v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.17451v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Aerial object tracking has broad applications in public safety, emergency rescue, wildlife monitoring, and related fields. However, existing aerial tracking benchmarks are mainly based on passive 2D video sequences captured from fixed camera locations or predefined flight paths, where drones are treated as passive cameras rather than embodied agents that actively perceive, interact, and control their motion in dynamic 3D scenes. In this paper, we define a new drone-embodied tracking task, termed DeTrack, which requires a drone to track a target in interactive 3D environments using online egocentric observations and active flight control in a closed loop. We build a large-scale benchmark containing 11,368 target trajectories across diverse scenes, rendering conditions, semantic regions, and moving distractors, together with evaluation metrics for target visibility, tracking accuracy, and trajectory success. We further propose AaDWorlds, an altitude-aware dual world model framework for drone-embodied tracking. AaDWorlds consists of an altitude-aware perception module and dual world models that imagine future states under both high- and low-altitude regimes. By combining pseudo altitude-aware observations and imagined future states, AaDWorlds alleviates the intrinsic altitude-mediated contradiction between target visibility and flight safety. Experiments on the DeTrack benchmark demonstrate that AaDWorlds improves closed-loop tracking performance across all evaluation metrics.
+
+空中目标跟踪在公共安全、应急救援、野生动物监测等相关领域有着广泛的应用。然而，现有的空中跟踪基准主要基于从固定摄像机位置或预定义飞行路径捕获的被动 2D 视频序列，其中无人机被视为被动摄像机，而不是在动态 3D 场景中主动感知、交互和控制其运动的具体代理。在本文中，我们定义了一种新的无人机跟踪任务，称为 DeTrack，它要求无人机使用在线自我中心观察和闭环中的主动飞行控制来跟踪交互式 3D 环境中的目标。我们构建了一个大规模基准测试，其中包含跨不同场景、渲染条件、语义区域和移动干扰因素的 11,368 个目标轨迹，以及目标可见性、跟踪准确性和轨迹成功的评估指标。我们进一步提出了 AaDWorlds，这是一种用于无人机跟踪的高度感知双重世界模型框架。 AaDWorlds 由高度感知感知模块和双重世界模型组成，可以想象高海拔和低海拔地区的未来状态。通过将伪高度感知观测与想象的未来状态相结合，AaDWorlds 缓解了目标可见度与飞行安全之间由高度调节的内在矛盾。 DeTrack 基准测试表明，AaDWorlds 提高了所有评估指标的闭环跟踪性能。
+
+</details>
+
+---
+
+## 15. Soap2Soap: Long Cinematic Video Remaking via Multi-Agent Collaboration / Soap2Soap：通过多代理协作重制长电影视频
+
+**Date**: 2026-05-17 | **arXiv**: [2605.17423v1](http://arxiv.org/abs/2605.17423v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.17423v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We study series-level cinematic remaking, a long-horizon video-to-video generation problem that localizes full episodes or films via stylization or actor replacement while strictly preserving narrative structure, motion choreography, and character identity across hundreds of shots. Existing video generation and editing pipelines often break down in this regime due to compounding identity drift, background mutation, and semantic erosion under large camera motions and viewpoint changes. We propose Soap2Soap, a multi-agent framework that enforces long-term language-visual consistency through a Dual-Bridge Consistency mechanism: a scene-aware JSON screenplay serving as a persistent semantic backbone, and dynamically allocated visual reference anchors at both scene and shot levels. To suppress drift before video synthesis, we introduce batch keyframe consistency, jointly generating multiple keyframes in a shared latent context via a grid-based formulation. A closed-loop verification agent further audits identity, stability, and alignment to trigger selective regeneration. Experiments on SoapBench demonstrate strong improvements over commercial video generation APIs in long-term consistency and narrative fidelity.
+
+我们研究系列级电影重拍，这是一个长期的视频到视频生成问题，通过风格化或演员替换来本地化完整的剧集或电影，同时在数百个镜头中严格保留叙事结构、动作编排和角色身份。由于在大的摄像机运动和视点变化下复合身份漂移、背景突变和语义侵蚀，现有的视频生成和编辑管道经常在这种情况下崩溃。我们提出了 Soap2Soap，这是一个多代理框架，通过双桥一致性机制强制执行长期的语言视觉一致性：场景感知的 JSON 剧本充当持久的语义主干，并在场景和镜头级别动态分配视觉参考锚点。为了在视频合成之前抑制漂移，我们引入了批量关键帧一致性，通过基于网格的公式在共享潜在上下文中联合生成多个关键帧。闭环验证代理进一步审核身份、稳定性和一致性，以触发选择性再生。 SoapBench 上的实验表明，在长期一致性和叙述保真度方面，比商业视频生成 API 有了显着改进。
+
+</details>
+
+---
+
+## 16. LiteFrame: Efficient Vision Encoders Unlock Frame Scaling in Video LLMs / LiteFrame：高效视觉编码器解锁视频 LLM 中的帧缩放
+
+**Date**: 2026-05-17 | **arXiv**: [2605.17260v1](http://arxiv.org/abs/2605.17260v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.17260v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The fundamental challenge in scaling Video Large Language Models (Video LLMs) to long-form video lies in managing the explosion of visual-token context length. Existing strategies predominantly focus on "post-hoc" token reduction -- reducing visual tokens after feature extraction to alleviate the LLM's computational overhead. While these methods effectively reduce the number of visual tokens, we observe that the primary latency bottleneck then shifts from the LLM to the expensive per-frame processing of the vision encoder. To address this, we introduce LiteFrame, a strong, yet highly efficient video encoder backbone for Video LLMs. To train LiteFrame, we propose Compressed Token Distillation (CTD), a novel training framework that teaches a compact student vision encoder to directly predict information-dense, spatio-temporally compressed representations produced by a large teacher vision model, effectively bypassing redundant computation. When coupled with further Language Model Adaptation (LMA), this approach results in a new latency-accuracy Pareto frontier -- compared with InternVL3-8B, LiteFrame provides a 35% reduction in end-to-end latency while processing 8$\times$ more frames and improves average video understanding accuracy across multiple benchmarks. Our results demonstrate a new potential path to unlocking longer-form video understanding under fixed compute budgets.
+
+将视频大语言模型（视频 LLM）扩展到长格式视频的根本挑战在于管理视觉标记上下文长度的爆炸。现有策略主要关注“事后”标记减少——在特征提取后减少视觉标记，以减轻法学硕士的计算开销。虽然这些方法有效地减少了视觉标记的数量，但我们观察到主要的延迟瓶颈从 LLM 转移到了视觉编码器昂贵的每帧处理。为了解决这个问题，我们引入了 LiteFrame，这是一种适用于视频法学硕士的强大而高效的视频编码器骨干。为了训练 LiteFrame，我们提出了压缩令牌蒸馏（CTD），这是一种新颖的训练框架，可教导紧凑的学生视觉编码器直接预测由大型教师视觉模型产生的信息密集、时空压缩的表示，从而有效地绕过冗余计算。当与进一步的语言模型适应 (LMA) 相结合时，这种方法会产生新的延迟精度帕累托前沿 - 与 InternVL3-8B 相比，LiteFrame 可以将端到端延迟减少 35%，同时处理多 8 倍的帧，并提高跨多个基准的平均视频理解准确性。我们的结果展示了在固定计算预算下解锁较长形式视频理解的新潜在途径。
+
+</details>
+
+---
+
+## 17. Image-to-Video Diffusion: From Foundations to Open Frontiers / 图像到视频的传播：从基础到开放前沿
+
+**Date**: 2026-05-17 | **arXiv**: [2605.17248v1](http://arxiv.org/abs/2605.17248v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.17248v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion-based \textit{image-to-video} (I2V) generation has become a central direction in generative models by turning a reference image, with optional conditions, into a temporally coherent video. Compared with broader video generation settings, this task places stricter demands on content consistency, identity preservation, and motion coherence. Although the literature grows rapidly, existing works mostly discuss I2V generation within broader topics and still lack a dedicated taxonomy together with a systematic analysis centered on this field. This work addresses that gap by treating diffusion I2V generation as a standalone subject. It first reviews the task formulation, model architectures, datasets, and evaluation metrics, and then organizes existing methods through a taxonomy based on architecture and training paradigm. It further distills four core designs, namely condition encoding, temporal modeling, noise prior design, and spatial-temporal upsampling, and discusses representative application scenarios together with major open challenges.
+
+基于扩散的图像到视频（I2V）生成已成为生成模型的中心方向，通过将具有可选条件的参考图像转换为时间相干的视频。与更广泛的视频生成设置相比，该任务对内容一致性、身份保存和动作连贯性提出了更严格的要求。尽管文献增长迅速，但现有作品大多在更广泛的主题中讨论 I2V 生成，仍然缺乏专门的分类法以及围绕该领域的系统分析。这项工作通过将扩散 I2V 生成视为一个独立的主题来解决这一差距。它首先回顾任务制定、模型架构、数据集和评估指标，然后通过基于架构和训练范式的分类法组织现有方法。它进一步提炼了四个核心设计，即条件编码、时间建模、噪声先验设计和时空上采样，并讨论了代表性的应用场景和主要的开放挑战。
+
+</details>
+
+---
+
+## 18. Visual Timelines of Police Encounters in Body-Worn Camera Footage: Operational Context and Activity Cataloging for Training and Analysis in OpenBWC / 随身摄像机镜头中警察遭遇的视觉时间线：用于 OpenBWC 中培训和分析的操作背景和活动编目
+
+**Date**: 2026-05-16 | **arXiv**: [2605.17095v1](http://arxiv.org/abs/2605.17095v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.17095v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Law enforcement agencies are accumulating vast amounts of body-worn camera (BWC) footage. However, this remains operationally opaque. That is, analysts and trainers still have to invest considerable time watching full-length videos to pinpoint the start of key encounters and identify the points where activity shifts to something more physically intense. We present an approach to process BWC video into a time-aligned sequence of fixed-length 10-second windows, processed and labeled using a privacy-conscious protocol. Each window is labeled with two dimensions of information: (i) the operational context of the window and (ii) the level of motion intensity within the window, with low-evidence labels for windows for which insufficient evidence exists due to darkness, blur or occlusion. We train models to classify windows based on these two axes using frames sampled from each window encoded using CLIP model and aggregated into a window-level representation. We extract dense optical flow statistics for each window to capture motion intensity. On test windows the best context model achieves 78.75% accuracy, and the best-accuracy activity model achieves 88.33%. We also included integrity audits to show the results and how the visual timeline representations support faster incident review and make the officer training workflow more practical.
+
+执法机构正在积累大量随身摄像机 (BWC) 镜头。然而，这在操作上仍然不透明。也就是说，分析师和培训师仍然需要投入大量时间观看完整视频，以查明关键遭遇的开始，并确定活动转变为更激烈的活动的点。我们提出了一种将 BWC 视频处理为时间对齐的固定长度 10 秒窗口序列的方法，并使用隐私意识协议进行处理和标记。每个窗口都标有两个维度的信息：（i）窗口的操作上下文和（ii）窗口内的运动强度水平，对于由于黑暗、模糊或遮挡而存在不充分证据的窗口，使用低证据标签。我们训练模型根据这两个轴对窗口进行分类，使用从每个窗口采样的帧，使用 CLIP 模型编码并聚合成窗口级表示。我们为每个窗口提取密集的光流统计数据以捕获运动强度。在测试窗口上，最佳上下文模型的准确率达到 78.75%，最准确活动模型的准确率达到 88.33%。我们还包括完整性审计，以显示结果以及可视化时间线表示如何支持更快的事件审查并使军官培训工作流程更加实用。
+
+</details>
+
+---
+
+## 19. StreamingEffect: Real-Time Human-Centric Video Effect Generation / StreamingEffect：实时以人为中心的视频效果生成
+
+**Date**: 2026-05-16 | **arXiv**: [2605.17019v1](http://arxiv.org/abs/2605.17019v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.17019v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Streaming video effect generation is highly desirable for live human-centric applications such as e-commerce streaming, entertainment, and vlogging, yet remains difficult due to the lack of suitable data and deployable editing models. Unlike generic video generation, this task requires real-time video-to-video editing that adds expressive effects while preserving human identity, background content, and temporal consistency. Existing acceleration efforts mainly focus on text-to-video generation, while efficient distillation for video editing remains largely underexplored. In this paper, we present \textbf{StreamingEffect}, a real-time human-centric streaming video effect framework. We adopt an in-context video editing architecture and train a high-quality bidirectional teacher, then distill it into a causal autoregressive student and further reduce sampling from 50 steps to 4 steps. We also introduce keyframe control, allowing reference effect frames to be injected online and propagated through the stream for interactive editing. To address the data bottleneck, we construct \textbf{VideoEffect-130K}, to our knowledge the largest human-centric video effect dataset, containing 70K effect videos and 60K editing videos across 600 effect categories curated from short-video and editing platforms. Experiments show that our method enables real-time, high-quality 720p video editing on a single H200 GPU.
+
+流媒体视频效果生成对于电子商务流媒体、娱乐和视频博客等以人为中心的实时应用程序来说是非常理想的，但由于缺乏合适的数据和可部署的编辑模型，仍然很困难。与通用视频生成不同，此任务需要实时视频到视频编辑，在保留人类身份、背景内容和时间一致性的同时添加表现力效果。现有的加速工作主要集中在文本到视频的生成上，而视频编辑的高效蒸馏在很大程度上仍未得到充分探索。在本文中，我们提出了 \textbf{StreamingEffect}，一个以人为中心的实时流视频效果框架。我们采用上下文视频编辑架构并训练高质量的双向教师，然后将其提炼为因果自回归学生，并进一步将采样从 50 个步骤减少到 4 个步骤。我们还引入了关键帧控制，允许在线注入参考效果帧并通过流传播以进行交互式编辑。为了解决数据瓶颈，我们构建了 \textbf{VideoEffect-130K}，据我们所知，最大的以人为中心的视频效果数据集，包含来自短视频和编辑平台的 600 个效果类别的 70K 效果视频和 60K 编辑视频。实验表明，我们的方法可以在单个 H200 GPU 上实现实时、高质量的 720p 视频编辑。
+
+</details>
+
+---
+
+## 20. DEVIS-GRPO: Unleashing GRPO on Dynamic Extreme View Synthesis / DEVIS-GRPO：在动态极端视图合成中释放 GRPO
+
+**Date**: 2026-05-16 | **arXiv**: [2605.16937v1](http://arxiv.org/abs/2605.16937v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.16937v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Trajectory-controlled video generation has become essential for controllable video generation. While current methods perform well under small-view camera motions, they degrade significantly with large-view motions. Existing solutions for extreme-view synthesis typically require dedicated video pairs, demanding substantial annotation effort. To address these limitations, we propose Dynamic Extreme VIew Synthesis-GRPO (DEVIS-GRPO), a GRPO-based framework for trajectory-controlled video generation, the first online policy gradient method for extreme view video generation. Central to our approach is a novel sampling strategy: Accumulative Dynamic Extreme VIew Synthesis (ADEVIS), which achieves large-view camera motions by progressively accumulating small-view increments. This method delivers two key advantages: 1) enhanced training efficiency, as it eliminates the need to warm-start the policy model by collecting expensive paired large-view videos, and 2) increased sampling diversity, achieved by flexibly varying trajectory configurations. Finally, we designed a multi-level consistency-quality reward function to select high-quality samples for model optimization. Experiments on the Kubric-4D, iPhone, and DL3DV datasets demonstrate our method's superiority. On Kubric-4D, we achieve relative improvements of 21.57% in PSNR and 7.31% in SSIM over the second-best method in non-occlusion areas. On iPhone, LPIPS is reduced by 18.56%.
+
+轨迹控制视频生成已成为可控视频生成的关键。虽然当前的方法在小视图相机运动下表现良好，但在大视图运动下它们的性能会显着下降。现有的极端视图合成解决方案通常需要专用的视频对，需要大量的注释工作。为了解决这些限制，我们提出了动态极端视图合成-GRPO（DEVIS-GRPO），这是一种基于GRPO的轨迹控制视频生成框架，是第一个用于极端视图视频生成的在线策略梯度方法。我们方法的核心是一种新颖的采样策略：累积动态极端视图合成（ADEVIS），它通过逐步累积小视图增量来实现大视图相机运动。该方法具有两个关键优势：1）提高训练效率，因为它无需通过收集昂贵的配对大视图视频来热启动策略模型；2）通过灵活改变轨迹配置来提高采样多样性。最后，我们设计了多级一致性质量奖励函数来选择高质量样本进行模型优化。 Kubric-4D、iPhone 和 DL3DV 数据集上的实验证明了我们方法的优越性。在 Kubric-4D 上，与非遮挡区域的第二最佳方法相比，我们在 PSNR 上实现了 21.57% 的相对改进，在 SSIM 上实现了 7.31% 的相对改进。在 iPhone 上，LPIPS 降低了 18.56%。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-15 (28 papers)</b></summary>
 
 # arXiv Video Papers - 2026-05-15
