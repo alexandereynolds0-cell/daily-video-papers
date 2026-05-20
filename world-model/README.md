@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-20](papers/2026-05-20.md) - 11 papers
 - [2026-05-19](papers/2026-05-19.md) - 9 papers
 - [2026-05-18](papers/2026-05-18.md) - 5 papers
 - [2026-05-15](papers/2026-05-15.md) - 9 papers
@@ -76,6 +77,194 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-20 (11 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-05-20
+
+**Paper Count**: 11
+
+---
+
+## 1. World-Ego Modeling for Long-Horizon Evolution in Hybrid Embodied Tasks / 混合具体任务中长期进化的世界自我建模
+
+**Date**: 2026-05-19 | **arXiv**: [2605.19957v1](http://arxiv.org/abs/2605.19957v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.19957v1)
+
+**Categories**: cs.CV, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models are widely explored in embodied intelligence, yet they typically predict distinct evolutions of the world and the ego within a single stream, where the world captures persistent instruction-agnostic scene regularities and the ego captures robot-centric instruction-conditioned dynamics. This world-ego entanglement leads to a degradation in long-horizon embodied scenarios, particularly in hybrid tasks with interleaved navigation and manipulation behaviors. In this paper, we introduce \emph{World-Ego Modeling}, a new conceptual paradigm that decomposes future evolution into world and ego components. We define the world-ego boundary from three perspectives, i.e., motion-, semantic-, and intention-based views, and analyze three disentanglement strategies with post-, pre-, and full disentanglement. Further, we instantiate this paradigm as the World-Ego Model (WEM), a unified embodied world model that couples an implicit separate world-ego planner with a cascade-parallel mixture-of-experts (CP-MoE) diffusion generator. To enable rigorous evaluation, we further construct HTEWorld, the first benchmark for long-horizon world modeling with hybrid navigation-manipulation tasks, providing 125K video clips (over 4.5M frames) with fine-grained action annotations and 300 multi-turn evaluation trajectories (over 2K instructions). Extensive experiments show that WEM achieves state-of-the-art performance on HTEWorld while remaining competitive on existing manipulation-only benchmarks.
+
+世界模型在具身智能中被广泛探索，但它们通常在单个流中预测世界和自我的不同演化，其中世界捕捉持续的与指令无关的场景规律，而自我捕捉以机器人为中心的指令条件动态。这种世界自我纠缠导致长期具体场景的退化，特别是在具有交错导航和操纵行为的混合任务中。在本文中，我们介绍了 \emph{世界-自我建模}，这是一种新的概念范式，它将未来的进化分解为世界和自我组成部分。我们从运动观、语义观和意图观三个角度定义了世界-自我边界，并分析了后解缠、前解缠和完全解缠的三种解缠策略。此外，我们将这种范式实例化为世界自我模型（WEM），这是一个统一的体现世界模型，它将隐式独立的世界自我规划器与级联并行专家混合（CP-MoE）扩散生成器结合起来。为了实现严格的评估，我们进一步构建了 HTEWorld，这是第一个具有混合导航操作任务的长视界世界建模基准，提供 125K 视频剪辑（超过 450 万帧），带有细粒度的动作注释和 300 个多轮评估轨迹（超过 2K 条指令）。大量实验表明，WEM 在 HTEWorld 上实现了最先进的性能，同时在现有的仅操纵基准上保持竞争力。
+
+</details>
+
+---
+
+## 2. RoHIL: Robust Human-in-the-Loop Robotic Reinforcement Learning Against Illumination Variations / RoHIL：针对照明变化的鲁棒人机循环机器人强化学习
+
+**Date**: 2026-05-19 | **arXiv**: [2605.19924v1](http://arxiv.org/abs/2605.19924v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.19924v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human-in-the-loop reinforcement learning systems achieve near-perfect success on the workstation where they are trained, but collapse when the same robot is moved to a workstation a few meters away due to shifts in the visual input distribution caused by new lamp positions and window light. Re-collecting demonstrations and re-running HIL on every workstation is incompatible with deployment, and naively fine-tuning on shifted-light data triggers catastrophic forgetting of the source workstation. To close this cross-domain gap, we present RoHIL, an offline fine-tuning framework that uses no extra real-robot interaction. RoHIL combines (i) a world-model-based image relighter that re-synthesises the visual stream of source-workstation trajectories under multiple virtual HDRI environments, leaving actions and rewards real; (ii) Illumination-Retention Replay (IRR), a data-level anti-forgetting mechanism that interleaves relit adaptation transitions with original-light retention transitions to preserve source-workstation Bellman coverage; and (iii) an anchored Bellman-actor regulariser that constrains representation and policy drift from the original source-workstation policy. Across four real-robot manipulation tasks under significant cross-workstation illumination variations, RoHIL substantially improves shifted-light performance where standard HIL-RL collapses, while preserving source-workstation performance, eliminating the need to re-collect data and retrain for every new workstation and environment. Project page: https://anonymous4365.github.io/RoHIL/
+
+人机循环强化学习系统在接受训练的工作站上取得了近乎完美的成功，但当同一个机器人被移动到几米外的工作站时，由于新的灯位置和窗户光引起的视觉输入分布的变化，系统就会崩溃。在每个工作站上重新收集演示并重新运行 HIL 与部署不兼容，并且天真地对移位光数据进行微调会引发源工作站的灾难性遗忘。为了缩小这种跨域差距，我们提出了 RoHIL，这是一种离线微调框架，不使用额外的真实机器人交互。 RoHIL 结合了 (i) 基于世界模型的图像重新点亮器，可在多个虚拟 HDRI 环境下重新合成源工作站轨迹的视觉流，使动作和奖励保持真实； (ii) 照明保留重播（IRR），一种数据级防遗忘机制，将重新照明适应转换与原始光保留转换交织在一起，以保留源工作站贝尔曼覆盖范围； (iii) 一个固定的贝尔曼演员正则化器，限制代表和政策偏离原始源工作站政策。在显着的跨工作站照明变化下的四个真实机器人操作任务中，RoHIL 显着提高了标准 HIL-RL 崩溃的光移性能，同时保留了源工作站性能，无需为每个新工作站和环境重新收集数据和重新训练。项目页面：https://anonymous4365.github.io/RoHIL/
+
+</details>
+
+---
+
+## 3. HEAT: Heterogeneous End-to-End Autonomous Driving via Trajectory-Guided World Models / HEAT：通过轨迹引导世界模型实现异构端到端自动驾驶
+
+**Date**: 2026-05-19 | **arXiv**: [2605.19631v1](http://arxiv.org/abs/2605.19631v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.19631v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+End-to-end autonomous driving has emerged as a compelling alternative to traditional modular pipelines by directly mapping raw sensor data to driving actions. While recent approaches achieve strong performance on single-domain datasets, their performance degrades significantly when trained jointly across multiple heterogeneous domains. In practice, however, autonomous systems must operate across diverse environments with heterogeneous distributions, including different cities, sensor configurations, and traffic patterns, without domain-specific retraining. This gap highlights a key challenge in multi-domain learning: domain-specific variations across heterogeneous domains introduce conflicting learning signals, driving models toward compromised solutions that are suboptimal across domains. To address this, we propose a trajectory-driven learning paradigm that organizes training around planning trajectories, enabling the model to capture domain-invariant representations of driving intent. Furthermore, we incorporate a world model that predicts future latent features conditioned on ego actions, improving feature consistency and mitigating domain-induced biases. We evaluate our approach on three benchmarks, nuScenes, NAVSIM, and the Waymo end-to-end dataset, and show substantial improvements over existing methods across all domains. Our results demonstrate that a single unified model can be trained on heterogeneous datasets while maintaining strong performance within each domain, highlighting a step toward scalable real-world deployment. We will make our code publicly available.
+
+通过将原始传感器数据直接映射到驾驶动作，端到端自动驾驶已成为传统模块化管道的引人注目的替代方案。虽然最近的方法在单域数据集上实现了强大的性能，但当跨多个异构域联合训练时，它们的性能会显着下降。然而，在实践中，自治系统必须在异构分布的不同环境中运行，包括不同的城市、传感器配置和交通模式，而无需进行特定领域的再训练。这一差距凸显了多领域学习中的一个关键挑战：异构领域中特定领域的变化引入了相互冲突的学习信号，导致模型走向跨领域的次优解决方案。为了解决这个问题，我们提出了一种轨迹驱动的学习范式，围绕规划轨迹组织训练，使模型能够捕获驾驶意图的域不变表示。此外，我们整合了一个世界模型，可以预测以自我行为为条件的未来潜在特征，提高特征一致性并减轻领域引起的偏差。我们在三个基准测试（nuScenes、NAVSIM 和 Waymo 端到端数据集）上评估了我们的方法，并展示了与所有领域的现有方法相比的重大改进。我们的结果表明，可以在异构数据集上训练单个统一模型，同时在每个域内保持强大的性能，这凸显了朝着可扩展的现实世界部署迈出了一步。我们将公开我们的代码。
+
+</details>
+
+---
+
+## 4. FlyMirage: A Fully Automated Generation Pipeline for Diverse and Scalable UAV Flight Data via Generative World Model / FlyMirage：通过生成世界模型实现多样化且可扩展的无人机飞行数据的全自动生成管道
+
+**Date**: 2026-05-19 | **arXiv**: [2605.19600v1](http://arxiv.org/abs/2605.19600v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.19600v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In the field of Vision-Language Navigation (VLN), aerial datasets remain limited in their ability to combine scale, diversity, and realism, often relying on either costly real-world scenes or visually limited simulations. To address these challenges, we introduce FlyMirage, a highly scalable and fully automated data generation pipeline for aerial VLN. Our approach leverages large language models (LLM) as an environment designer to promote scene diversity, paired with a generative world model that instantiates these designs into high-fidelity 3D Gaussian Splatting (3DGS) scenes. To substantially reduce human labor and ensure the feasibility of flight data, FlyMirage automates scene exploration and semantic information acquisition, and further integrates a dynamically feasible planner for uncrewed aerial vehicle (UAV) trajectory generation. Utilizing this toolchain, we generate a large-scale, diverse, and photorealistic aerial VLN dataset, with dynamically feasible flying trajectories, designed to support the development of next-generation embodied navigation models.
+
+在视觉语言导航（VLN）领域，航空数据集在结合规模、多样性和真实性方面的能力仍然有限，通常依赖于昂贵的现实世界场景或视觉上有限的模拟。为了应对这些挑战，我们推出了 FlyMirage，这是一种用于航空 VLN 的高度可扩展且完全自动化的数据生成管道。我们的方法利用大型语言模型 (LLM) 作为环境设计师来促进场景多样性，并与生成世界模型相结合，将这些设计实例化为高保真 3D 高斯泼溅 (3DGS) 场景。为了大幅减少人力并确保飞行数据的可行性，FlyMirage实现了场景探索和语义信息获取的自动化，并进一步集成了用于无人飞行器（UAV）轨迹生成的动态可行规划器。利用该工具链，我们生成了大规模、多样化且逼真的航空 VLN 数据集，具有动态可行的飞行轨迹，旨在支持下一代实体导航模型的开发。
+
+</details>
+
+---
+
+## 5. Sampling-Based Safe Reinforcement Learning / 基于采样的安全强化学习
+
+**Date**: 2026-05-19 | **arXiv**: [2605.19469v1](http://arxiv.org/abs/2605.19469v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.19469v1)
+
+**Categories**: cs.LG, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Safe exploration remains a fundamental challenge in reinforcement learning (RL), limiting the deployment of RL agents in the real world. We propose Sampling-Based Safe Reinforcement Learning (SBSRL), a model-based RL algorithm that maintains safety throughout the learning process by enforcing constraints jointly across a finite set of dynamics samples. This formulation approximates an intractable worst-case optimization over uncertain dynamics and enables practical safety guarantees in continuous domains. We further introduce an exploration strategy based on constraining epistemic uncertainty, eliminating the need for explicit exploration bonuses. Under regularity conditions, we derive high-probability guarantees of safety throughout learning and a finite-time sample complexity bound for recovering a near-optimal policy. Empirically, SBSRL achieves safe and efficient exploration both in simulation and in real robotic hardware, and readily extends to practical deep-ensemble implementations that scale to high-dimensional continuous control problems.
+
+安全探索仍然是强化学习 (RL) 的一个基本挑战，限制了 RL 代理在现实世界中的部署。我们提出了基于采样的安全强化学习（SBSRL），这是一种基于模型的强化学习算法，通过在一组有限的动态样本上联合强制执行约束来保持整个学习过程的安全性。该公式近似于不确定动态的棘手的最坏情况优化，并在连续域中实现实际的安全保证。我们进一步引入了一种基于约束认知不确定性的探索策略，消除了对显式探索奖励的需要。在规律性条件下，我们得出了整个学习过程中安全性的高概率保证以及恢复接近最优策略的有限时间样本复杂性界限。根据经验，SBSRL 在模拟和真实机器人硬件中都实现了安全高效的探索，并且很容易扩展到可扩展到高维连续控制问题的实际深度集成实现。
+
+</details>
+
+---
+
+## 6. HalluWorld: A Controlled Benchmark for Hallucination via Reference World Models / HalluWorld：通过参考世界模型进行幻觉的受控基准
+
+**Date**: 2026-05-19 | **arXiv**: [2605.19341v1](http://arxiv.org/abs/2605.19341v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.19341v1)
+
+**Categories**: cs.CL, cs.AI, cs.LG, stat.ML
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Hallucination remains a central failure mode of large language models, but existing benchmarks operationalize it inconsistently across summarization, question answering, retrieval-augmented generation, and agentic interaction. This fragmentation makes it unclear whether a mitigation that works in one setting reduces hallucinations across contexts. Current benchmarks either require human annotation and fixed references that may be memorized, or rely on observations in settings that are difficult to reproduce. To study root causes, we introduce HalluWorld, an extensible benchmark grounded in an explicit reference-world formulation: a model hallucinates when it produces an observable claim that is false with respect to this world. Building on this view, we construct synthetic and semi-synthetic environments in which the reference world is fully specified, the model's view is controlled, and hallucination labels are generated automatically. HalluWorld spans gridworlds, chess, and realistic terminal tasks, enabling controlled variation of world complexity, observability, temporal change, and source-conflict policy, and disentangling hallucinations into fine-grained error categories. We evaluate frontier and open-weight language models across these settings and find consistent patterns: perceptual hallucination on directly observed information is near-solved for frontier models, while multi-step state tracking and causal forward simulation remain difficult and are not generally solved by extended thinking. In the terminal setting, models also struggle with when to abstain. The uneven profile of failures across probe types and domains suggests that hallucinations arise from distinct failure modes rather than a single capability. Our results suggest that controlled reference worlds offer a scalable and reproducible path toward measuring and reducing hallucinations in modern language models.
+
+幻觉仍然是大型语言模型的主要故障模式，但现有基准在摘要、问答、检索增强生成和代理交互方面对其操作不一致。这种碎片化使得人们不清楚在一种环境下有效的缓解措施是否可以减少跨环境的幻觉。当前的基准要么需要人工注释和可以记忆的固定参考，要么依赖于难以重现的设置中的观察。为了研究根本原因，我们引入了 HalluWorld，这是一个基于明确的参考世界公式的可扩展基准：当模型产生相对于这个世界而言是错误的可观察声明时，模型就会产生幻觉。在此视图的基础上，我们构建了合成和半合成环境，其中参考世界是完全指定的，模型的视图是受控的，并且幻觉标签是自动生成的。 HalluWorld 跨越网格世界、国际象棋和现实终端任务，实现世界复杂性、可观察性、时间变化和源冲突策略的受控变化，并将幻觉分解为细粒度的错误类别。我们在这些设置中评估前沿和开放权重语言模型，并找到一致的模式：前沿模型几乎解决了直接观察到的信息的知觉幻觉，而多步状态跟踪和因果前向模拟仍然很困难，通常不能通过扩展思维来解决。在临终场景中，模特们也在纠结何时弃权。不同探测类型和领域的故障分布不均匀表明幻觉是由不同的故障模式而不是单一功能引起的。我们的结果表明，受控参考世界为测量和减少现代语言模型中的幻觉提供了一条可扩展且可重复的路径。
+
+</details>
+
+---
+
+## 7. PhyWorld: Physics-Faithful World Model for Video Generation / PhyWorld：用于视频生成的物理忠实世界模型
+
+**Date**: 2026-05-19 | **arXiv**: [2605.19242v1](http://arxiv.org/abs/2605.19242v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.19242v1)
+
+**Categories**: cs.CV, cs.AI, cs.ET, cs.LG, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World simulators can provide safe and scalable environments for training Physical AI systems before real-world deployment. Large video generation models are emerging as a promising basis for such simulators because they can generate diverse and realistic visual futures. However, using them as world simulators requires physically faithful video continuations, namely, generated videos that preserve the physical state implied by the conditioning input, and evolve in ways consistent with basic physical principles. We propose PhyWorld, a video generation world model designed to produce temporally coherent and physically faithful scene continuations through two-stage post-training. In the first stage, we improve video-to-video continuation with flow matching fine-tuning, encouraging stable visual attributes and coherent motion dynamics across frames. In the second stage, we align generated dynamics with physical principles using Direct Preference Optimization (DPO) over physics preference pairs, guiding the model toward outputs with higher physical plausibility. To evaluate PhyWorld, we use both standard video-quality benchmarks and a dedicated physical-faithfulness benchmark with per-law scoring. Experiments show that PhyWorld improves video consistency, achieving an average score of 0.769 on VBench compared with 0.756 or below for state-of-the-art baselines. PhyWorld also improves physical plausibility, reaching an average score of 3.09 on our physical-faithfulness benchmark compared with 2.99 for the strongest baseline. These results suggest that post-training large video generation models with continuation and physics-preference signals can make them more effective world simulators for Physical AI.
+
+世界模拟器可以提供安全且可扩展的环境，用于在实际部署之前训练物理人工智能系统。大型视频生成模型正在成为此类模拟器的有前途的基础，因为它们可以生成多样化且逼真的视觉未来。然而，将它们用作世界模拟器需要物理上忠实的视频连续，即生成的视频保留调节输入所暗示的物理状态，并以符合基本物理原理的方式演变。我们提出了 PhyWorld，这是一种视频生成世界模型，旨在通过两阶段后训练产生时间连贯且物理忠实的场景延续。在第一阶段，我们通过流匹配微调来改进视频到视频的连续性，鼓励稳定的视觉属性和跨帧的连贯运动动态。在第二阶段，我们使用物理偏好对上的直接偏好优化（DPO）将生成的动力学与物理原理结合起来，引导模型获得具有更高物理合理性的输出。为了评估 PhyWorld，我们使用标准视频质量基准和具有符合法律评分的专用物理忠实度基准。实验表明，PhyWorld 提高了视频一致性，在 VBench 上获得了 0.769 的平均得分，而最先进的基准得分为 0.756 或更低。 PhyWorld 还提高了物理可信度，在我们的物理忠实度基准上平均得分达到 3.09，而最强基线的平均得分为 2.99。这些结果表明，使用连续信号和物理偏好信号对大型视频生成模型进行后期训练可以使它们成为物理 AI 更有效的世界模拟器。
+
+</details>
+
+---
+
+## 8. Distributionally Robust Control via Stein Variational Inference for Contact-Rich Manipulation / 通过 Stein 变分推理进行分布鲁棒控制，实现接触丰富的操作
+
+**Date**: 2026-05-18 | **arXiv**: [2605.19029v1](http://arxiv.org/abs/2605.19029v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.19029v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reliable robotic manipulation requires control policies that can accurately represent and adapt to uncertainty arising from contact-rich interactions. Modern data-driven methods mitigate uncertainty through large-scale training and computation, and degrade significantly in performance with limited number of training samples. By contrast, classical model-based controllers are computationally efficient and reliable, but their limited ability to represent task-relevant uncertainty can hinder performance in contact-rich interactions.   In this work, we propose to expand the capabilities of model-based manipulation control through more flexible uncertainty modeling that retains performance while exactly adapting to uncertainty. Our approach casts the manipulation problem as a distributionally robust control optimization and proposes a novel deterministic formulation based on Stein variational inference that preserves performance while explicitly modeling task-sensitive parameter uncertainty. As a result, the derived controllers are more aware of task sensitivities to uncertainty, yielding high reliability without compromising performance. Experimental results demonstrate up to 3$\times$ improved robustness across a range of contact-rich manipulation tasks under broad parametric uncertainty, outperforming existing model-based control methods.
+
+可靠的机器人操纵需要能够准确表示和适应因接触丰富的交互而产生的不确定性的控制策略。现代数据驱动方法通过大规模训练和计算来减轻不确定性，并在训练样本数量有限的情况下显着降低性能。相比之下，基于经典模型的控制器在计算上高效且可靠，但其表示任务相关不确定性的能力有限，可能会阻碍接触丰富的交互中的性能。   在这项工作中，我们建议通过更灵活的不确定性建模来扩展基于模型的操纵控制的能力，该建模在保留性能的同时准确适应不确定性。我们的方法将操纵问题视为分布式鲁棒控制优化，并提出了一种基于 Stein 变分推理的新颖确定性公式，该公式在显式建模任务敏感参数不确定性的同时保持性能。因此，派生控制器更加了解任务对不确定性的敏感性，从而在不影响性能的情况下产生高可靠性。实验结果表明，在广泛的参数不确定性下，一系列接触丰富的操作任务的鲁棒性提高了 3 倍，优于现有的基于模型的控制方法。
+
+</details>
+
+---
+
+## 9. Robo-Cortex: A Self-Evolving Embodied Agent via Dual-Grain Cognitive Memory and Autonomous Knowledge Induction / Robo-Cortex：通过双粒认知记忆和自主知识归纳实现自我进化的体现代理
+
+**Date**: 2026-05-18 | **arXiv**: [2605.18729v1](http://arxiv.org/abs/2605.18729v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.18729v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The ability to navigate and interact with complex environments is central to real-world embodied agents, yet navigation in unseen environments remains challenging due to "experiential amnesia," where existing trajectory-driven or reactive policies fail to synthesize generalizable strategies from past interactions. We propose Robo-Cortex, a self-evolving framework that enables robots to autonomously induce navigation heuristics and refine cognitive strategies through a continuous reflection-adaptation loop. By abstracting success patterns and failure pitfalls into natural-language heuristics, Robo-Cortex enables a transition from passive execution to active strategy evolution. Our core innovation is an Autonomous Knowledge Induction (AKI) mechanism that distills multimodal trajectories into a structured Navigation Heuristic Library for knowledge generalization. The architecture further incorporates a Dual-Grain Cognitive Memory system, comprising a Short-term Reflective Memory (SRM) for real-time local progress analysis, and a Long-term Principle Memory (LPM) that abstracts past trajectories into reusable guiding and cautionary principles. To ensure robust decision-making, we introduce a multimodal Imagine-then-Verify loop, where a world model simulates potential outcomes and a VLM-based evaluator validates action plans. Extensive evaluations on IGNav, AR, and AEQA show that Robo-Cortex consistently outperforms strong baselines in both task success and exploration efficiency, with gains of up to +4.16% SPL over the strongest prior method and up to +15.30% SPL under heuristic transfer to unseen environments. Preliminary real-world robotic experiments further support the effectiveness of Robo-Cortex in physical settings.
+
+导航和与复杂环境交互的能力是现实世界实体代理的核心，但由于“经验失忆症”，在看不见的环境中导航仍然具有挑战性，即现有的轨迹驱动或反应性策略无法从过去的交互中综合出可推广的策略。我们提出了 Robo-Cortex，这是一种自我进化的框架，使机器人能够自主诱导导航启发法，并通过连续的反射适应循环来完善认知策略。通过将成功模式和失败陷阱抽象为自然语言启发法，Robo-Cortex 实现了从被动执行到主动策略演化的转变。我们的核心创新是自主知识归纳（AKI）机制，该机制将多模态轨迹提炼成结构化导航启发式库以实现知识泛化。该架构进一步整合了双粒认知记忆系统，包括用于实时本地进度分析的短期反射记忆（SRM）和将过去的轨迹抽象为可重用的指导和警示原则的长期原则记忆（LPM）。为了确保稳健的决策，我们引入了多模式“想象然后验证”循环，其中世界模型模拟潜在结果，基于 VLM 的评估器验证行动计划。对 IGNav、AR 和 AEQA 的广泛评估表明，Robo-Cortex 在任务成功率和探索效率方面始终优于强大的基线，与最强的先验方法相比，SPL 提高高达 +4.16%，在启发式转移到未见过的环境下，SPL 提高高达 +15.30%。初步的现实世界机器人实验进一步支持了 Robo-Cortex 在物理环境中的有效性。
+
+</details>
+
+---
+
+## 10. What's Holding Back Latent Visual Reasoning? / 是什么阻碍了潜在的视觉推理？
+
+**Date**: 2026-05-18 | **arXiv**: [2605.18445v2](http://arxiv.org/abs/2605.18445v2) | **PDF**: [Link](http://arxiv.org/pdf/2605.18445v2)
+
+**Categories**: cs.CV, cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Humans can approach complex visual problems by mentally simulating intermediate visual steps, rather than reasoning through language alone. Inspired by this, several works on Vision-Language Models have recently explored chain-of-thought reasoning with continuous latent tokens as intermediate visual imagination steps. In this work, we investigate how recent models leverage such latent tokens. Surprisingly, we find that model accuracy is unaffected when latent tokens are replaced by uninformative dummy tokens. This indicates that latent tokens play a minimal causal role in the model's final prediction. To better understand this phenomenon, we analyze both the training signal provided by oracle latent representations and the quality of the latent tokens generated at inference time. Our experiments reveal two crucial issues holding back latent visual reasoning: First, in most existing datasets, oracle latent tokens provide limited additional information beyond the original image and do not substantially simplify the task, leading models to ignore them during training and effectively bypassing them at inference time. When fine-tuned on a diagnostic dataset, in which latent tokens provide sufficient support for the final prediction, we show that models can causally rely on them. Second, the latent tokens produced at inference time deviate from their corresponding oracle representations, collapsing to a narrow region and preventing benefits even when the model relies on them. Overall, our findings suggest that future progress in latent visual reasoning depends on two key pillars: high-quality datasets with informative intermediate steps and more precise latent token prediction.
+
+人类可以通过在心理上模拟中间视觉步骤来解决复杂的视觉问题，而不是仅仅通过语言进行推理。受此启发，一些关于视觉语言模型的作品最近探索了以连续潜在标记作为中间视觉想象步骤的思想链推理。在这项工作中，我们研究了最新的模型如何利用此类潜在令牌。令人惊讶的是，我们发现当潜在标记被无信息的虚拟标记替换时，模型准确性不受影响。这表明潜在标记在模型的最终预测中起着最小的因果作用。为了更好地理解这种现象，我们分析了预言机潜在表示提供的训练信号和推理时生成的潜在标记的质量。我们的实验揭示了阻碍潜在视觉推理的两个关键问题：首先，在大多数现有数据集中，预言机潜在标记提供了原始图像之外的有限附加信息，并且没有实质上简化任务，导致模型在训练期间忽略它们，并在推理时有效绕过它们。当对诊断数据集进行微调时，其中潜在标记为最终预测提供了足够的支持，我们表明模型可以因果地依赖它们。其次，在推理时产生的潜在令牌偏离了相应的预言表示，从而崩溃到一个狭窄的区域，并且即使模型依赖它们，也无法获得好处。总的来说，我们的研究结果表明，潜在视觉推理的未来进展取决于两个关键支柱：具有信息丰富的中间步骤的高质量数据集和更精确的潜在标记预测。
+
+</details>
+
+---
+
+## 11. PH-Dreamer: A Physics-Driven World Model via Port-Hamiltonian Generative Dynamics / PH-Dreamer：通过哈密尔顿港生成动力学构建的物理驱动世界模型
+
+**Date**: 2026-05-18 | **arXiv**: [2605.18303v1](http://arxiv.org/abs/2605.18303v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.18303v1)
+
+**Categories**: cs.LG, cs.AI, cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models built on recurrent state space architectures enable efficient latent imagination, yet remain physically unstructured, producing dynamics that violate conservation and dissipative principles. We introduce a unified Port-Hamiltonian framework that remedies this through three synergistic mechanisms. First, we embed implicit physical priors into recurrent transitions by modeling projected latent evolution as action controlled energy routing governed by flow and dissipation, biasing the projected PH phase space toward a more compact and physically structured representation. Second, we develop a kinematics aware energy world model that estimates the Hamiltonian and power balance from proprioceptive observations, providing an explicit physical signal for thermodynamic reasoning. Third, leveraging these energy gradients, we establish an energy guided Actor-Critic that uses Lagrangian multipliers to regularize policy optimization toward lower energy and smoother control. Across visual control benchmarks, this paradigm not only attains superior asymptotic returns but also elevates internal simulator fidelity by establishing a tighter, lower variance alignment between imagined and real rewards, all while reducing latent phase space volume by 4.18-8.41%, energy consumption by up to 7.80%, and mean squared jerk by up to 9.38%.
+
+基于循环状态空间架构构建的世界模型可以实现高效的潜在想象力，但在物理上仍然是非结构化的，从而产生违反守恒定律和耗散原理的动态。我们引入了一个统一的哈密尔顿港框架，通过三种协同机制来解决这个问题。首先，我们通过将预计的潜在演化建模为由流动和耗散控制的动作控制的能量路由，将隐式物理先验嵌入到循环转换中，从而将预计的 PH 相空间偏向更紧凑和物理结构的表示。其次，我们开发了一个运动学感知的能量世界模型，该模型根据本体感受观测估计哈密顿量和功率平衡，为热力学推理提供明确的物理信号。第三，利用这些能量梯度，我们建立了一个能量引导的 Actor-Critic，它使用拉格朗日乘数来规范策略优化，以实现更低的能量和更平滑的控制。在视觉控制基准中，这种范式不仅获得了卓越的渐近回报，而且还通过在想象和真实奖励之间建立更紧密、更低的方差对齐来提高内部模拟器的保真度，同时将潜在相空间体积减少 4.18-8.41%，能耗最多减少 7.80%，均方加加速度最多减少 9.38%。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-19 (9 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-05-19
