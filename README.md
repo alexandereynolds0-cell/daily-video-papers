@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-21](papers/2026-05-21.md) - 19 papers
 - [2026-05-20](papers/2026-05-20.md) - 29 papers
 - [2026-05-19](papers/2026-05-19.md) - 20 papers
 - [2026-05-15](papers/2026-05-15.md) - 28 papers
@@ -82,6 +83,328 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-21 (19 papers)</b></summary>
+
+# arXiv Video Papers - 2026-05-21
+
+**Paper Count**: 19
+
+---
+
+## 1. StreamGVE: Training-Free Video Editing via Few-Step Streaming Video Generation / StreamGVE：通过几步流视频生成进行免培训视频编辑
+
+**Date**: 2026-05-20 | **arXiv**: [2605.21466v1](http://arxiv.org/abs/2605.21466v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21466v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Although existing video editing methods are generally feasible, they often require many costly iterations and still struggle to deliver high-quality yet satisfying editing results. We attribute this limitation to the prevalent data-to-data paradigm, which is less compatible with modern generative models than noise-to-data generation. To address this gap, we revisit video editing from a noise-to-data perspective and propose Streaming-Generation-based Video Editing (StreamGVE), which preserves few-step sampling while seamlessly injecting source-video conditions. Built on pre-trained streaming generation models, StreamGVE introduces dual-branch fast sampling with a self-attention bridge and cross-attention grounding/boosting to satisfy both sampling and conditioning requirements. We further propose source-oriented guidance to improve target-generation quality, and a visual prompting strategy to enhance editing flexibility and practicality. The method is effective, robust, and generalizable across different models. Extensive experiments on diverse video editing tasks show that StreamGVE consistently outperforms existing approaches, even in few-step settings with minimal time cost.
+
+尽管现有的视频编辑方法通常是可行的，但它们通常需要许多昂贵的迭代，并且仍然难以提供高质量且令人满意的编辑结果。我们将这种限制归因于流行的数据到数据范式，与噪声到数据生成相比，它与现代生成模型的兼容性较差。为了解决这一差距，我们从噪声到数据的角度重新审视视频编辑，并提出基于流生成的视频编辑（StreamGVE），它保留了几步采样，同时无缝注入源视频条件。 StreamGVE 基于预先训练的流生成模型而构建，引入了具有自注意力桥和交叉注意力接地/增强的双分支快速采样，以满足采样和调节要求。我们进一步提出以源为导向的指导以提高目标生成质量，以及视觉提示策略以增强编辑灵活性和实用性。该方法有效、稳健且可推广到不同模型。对各种视频编辑任务的广泛实验表明，即使在时间成本极低的几个步骤设置中，StreamGVE 始终优于现有方法。
+
+</details>
+
+---
+
+## 2. iTryOn: Mastering Interactive Video Virtual Try-On with Spatial-Semantic Guidance / iTryOn：通过空间语义指导掌握交互式视频虚拟试戴
+
+**Date**: 2026-05-20 | **arXiv**: [2605.21431v1](http://arxiv.org/abs/2605.21431v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21431v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video Virtual Try-On (VVT) aims to seamlessly replace a garment on a person in a video with a new one. While existing methods have made significant strides in maintaining temporal consistency, they are predominantly confined to non-interactive scenarios where models merely showcase garments. This limitation overlooks a crucial aspect of real-world apparel presentation: active human-garment interaction. To bridge this gap, we introduce and formalize a new challenging task: Interactive Video Virtual Try-On (Interactive VVT), where subjects in the video actively engage with their clothing. This task introduces unique challenges beyond simple texture preservation, including: (1) resolving the semantic ambiguity of interactions from standard pose information, and (2) learning complex garment deformations from video where interactive moments are sparse and brief. To address these challenges, we propose iTryOn, a novel framework built upon a large-scale video diffusion Transformer. iTryOn pioneers a multi-level interaction injection mechanism to guide the generation of complex dynamics. At the spatial level, we introduce a garment-agnostic 3D hand prior to provide fine-grained guidance for precise hand-garment contact, effectively resolving spatial ambiguity. At the semantic level, iTryOn leverages global captions for overall context and time-stamped action captions for localized interactions, synchronized via our novel Action-aware Rotational Position Embedding (A-RoPE). Extensive experiments demonstrate that iTryOn not only achieves state-of-the-art performance on traditional VVT benchmarks but also establishes a commanding lead in the new interactive setting, marking a significant step towards more dynamic and controllable virtual try-on experiences.
+
+视频虚拟试穿 (VVT) 旨在将视频中某人身上的衣服无缝替换为新衣服。虽然现有方法在保持时间一致性方面取得了重大进展，但它们主要局限于模型仅展示服装的非交互式场景。这种限制忽略了现实世界服装展示的一个重要方面：主动的人与服装互动。为了弥补这一差距，我们引入并正式确定了一项新的具有挑战性的任务：交互式视频虚拟试穿（交互式 VVT），其中视频中的主体积极地与他们的衣服互动。该任务引入了简单纹理保留之外的独特挑战，包括：（1）解决标准姿势信息中交互的语义模糊性，以及（2）从交互时刻稀疏且简短的视频中学习复杂的服装变形。为了应对这些挑战，我们提出了 iTryOn，这是一种基于大规模视频扩散 Transformer 构建的新颖框架。 iTryOn首创了多级交互注入机制来指导复杂动态的生成。在空间层面，我们引入了与服装无关的 3D 手，为精确的手与服装接触提供细粒度的指导，有效解决了空间模糊性。在语义层面，iTryOn 利用全局字幕来实现整体上下文，并利用带时间戳的动作字幕来实现本地化交互，并通过我们新颖的动作感知旋转位置嵌入 (A-RoPE) 进行同步。大量实验表明，iTryOn不仅在传统VVT基准测试中实现了最先进的性能，而且在新的交互环境中建立了领先优势，标志着向更加动态和可控的虚拟试穿体验迈出了重要一步。
+
+</details>
+
+---
+
+## 3. RoadTones: Tone Controllable Text Generation from Road Event Videos / RoadTones：从道路活动视频生成音调可控文本
+
+**Date**: 2026-05-20 | **arXiv**: [2605.21411v1](http://arxiv.org/abs/2605.21411v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21411v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing video-language models can generate factual descriptions of road events but lack control over how these events are expressed: their tone, urgency, or style. This limits deployment in communication-critical settings where the effectiveness of a message depends on both content and presentation, not just factual accuracy. To mitigate this, we introduce a comprehensive dataset-model-evaluation suite for tone-controllable road video captioning. Our human-validated data generation pipeline expands road-video corpora with diverse tonal annotations and multi-tone captions, yielding the RoadTones-51K dataset. We propose RoadTones-VL-CoT, a controllable video-to-text model that also generates tone-conditioned Chain-of-Thought intermediate drafts for interpretability. We also introduce RoadTones-Eval, a new evaluation suite that jointly measures factual consistency and tone adherence. In addition, we conducted a user study whose results validate caption quality, tone control, and factual consistency. Together, these contributions lay the foundation for context-sensitive tone-controllable video captioning.
+
+现有的视频语言模型可以生成道路事件的事实描述，但无法控制这些事件的表达方式：它们的语气、紧迫性或风格。这限制了在通信关键环境中的部署，在这些环境中，消息的有效性取决于内容和表示，而不仅仅是事实的准确性。为了缓解这个问题，我们引入了一个全面的数据集模型评估套件，用于音调可控的道路视频字幕。我们经过人工验证的数据生成管道通过不同的色调注释和多色调字幕扩展了道路视频语料库，生成了 RoadTones-51K 数据集。我们提出了 RoadTones-VL-CoT，这是一种可控的视频到文本模型，它还可以生成音调条件的思想链中间草稿以实现可解释性。我们还推出了 RoadTones-Eval，这是一个新的评估套件，可以联合衡量事实一致性和语气遵守情况。此外，我们还进行了一项用户研究，其结果验证了字幕质量、语气控制和事实一致性。这些贡献共同为上下文敏感的音调可控视频字幕奠定了基础。
+
+</details>
+
+---
+
+## 4. VDFP: Video Deflickering with Flicker-banding Priors / VDFP：使用闪烁带先验进行视频去闪烁
+
+**Date**: 2026-05-20 | **arXiv**: [2605.21079v1](http://arxiv.org/abs/2605.21079v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21079v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/ZhiyiZZhou/VDFP.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Capturing digital screens with smartphones frequently induces severe banding due to hardware synchronization mismatches. Existing video restoration methods struggle with these structured, periodic luminance fluctuations, often resulting in residual artifacts or over-smoothed textures. We firstly construct DeViD, a real-world dataset in various scenes to deal with the lack of available datasets.Then we propose VDFP (Video Deflickering with Flicker-banding Priors), a novel perception-guided generation framework. First, we introduce a Degradation Field Modeling Based on Rolling Shutter Mechanism (DFM) capable of synthesizing complex multi-banding scenarios. Second, we present a spatial-temporal continuous prior perception (CPP). Unlike traditional binary segmentation, this module is optimized via a Flicker-Aware Mean Squared Error (FA-MSE) to capture the luminance transitions. By zero-initializing an augmented input layer, our model preserves pre-trained generative priors as well as spatial-temporal prior perception. Extensive experiments demonstrate that VDFP significantly outperforms other methods, eliminating complex banding with high-fidelity spatial details and temporal consistency. Our dataset and code will be released at~ https://github.com/ZhiyiZZhou/VDFP.
+
+由于硬件同步不匹配，使用智能手机捕获数字屏幕经常会导致严重的条带现象。现有的视频恢复方法难以应对这些结构化的周期性亮度波动，通常会导致残留伪影或过度平滑的纹理。我们首先构建了 DeViD，一个各种场景下的真实数据集，以解决可用数据集的缺乏。然后我们提出了 VDFP（带有闪烁带先验的视频去闪烁），一种新颖的感知引导生成框架。首先，我们介绍一种基于滚动快门机制（DFM）的退化场建模，能够合成复杂的多波段场景。其次，我们提出了时空连续先验感知（CPP）。与传统的二进制分割不同，该模块通过闪烁感知均方误差 (FA-MSE) 进行优化，以捕获亮度过渡。通过对增强输入层进行零初始化，我们的模型保留了预先训练的生成先验以及时空先验感知。大量实验表明，VDFP 显着优于其他方法，消除了具有高保真空间细节和时间一致性的复杂条带。我们的数据集和代码将发布在〜https://github.com/ZhiyiZZhou/VDFP。
+
+</details>
+
+---
+
+## 5. Q-ARVD: Quantizing Autoregressive Video Diffusion Models / Q-ARVD：量化自回归视频扩散模型
+
+**Date**: 2026-05-20 | **arXiv**: [2605.21072v1](http://arxiv.org/abs/2605.21072v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21072v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive video diffusion models (ARVDs) have emerged as a promising architecture for streaming video generation, paving the way for real-time interactive video generation and world modeling. Despite their potential, the substantial inference cost of ARVDs remains a major obstacle to practical deployment, making model quantization a natural direction for improving efficiency. However, quantization for ARVDs remains largely unexplored. Our empirical analysis shows that directly applying existing quantization schemes developed for standard diffusion transformers to ARVDs leads to suboptimal performance, revealing quantization behaviors that differ from those observed in bidirectional diffusion models. In this paper, we identify two critical challenges in quantizing ARVDs: (C1) Highly unbalanced frame-wise quantization sensitivity. Error accumulation during autoregressive generation can induce severely skewed quantization sensitivity across frames, following an exponential-like decay pattern. (C2) Prominent and heterogeneous outlier patterns in weights. Weight distributions exhibit pronounced outlier channels, whose patterns vary substantially across layer types and block depths. To address these issues, we propose Q-ARVD, a novel framework for accurate ARVD quantization. (S1) To tackle the highly unbalanced frame-wise sensitivity, Q-ARVD incorporates a final-quality aware frame-weighting mechanism into the quantization objective. (S2) To prevent heterogeneous outliers from degrading performance, Q-ARVD introduces an outlier-aware adaptive dual-scale quantization, which automatically detects the presence and quantity of outlier channels for an arbitrary layer, and isolates them to protect normal channels. Extensive experiments demonstrate the superiority of Q-ARVD.
+
+自回归视频扩散模型（ARVD）已成为流视频生成的一种有前途的架构，为实时交互式视频生成和世界建模铺平了道路。尽管 ARVD 具有潜力，但其巨大的推理成本仍然是实际部署的主要障碍，这使得模型量化成为提高效率的自然方向。然而，ARVD 的量化在很大程度上仍未得到探索。我们的实证分析表明，直接将为标准扩散变压器开发的现有量化方案应用于 ARVD 会导致性能不佳，从而揭示出与双向扩散模型中观察到的量化行为不同的量化行为。在本文中，我们确定了量化 ARVD 的两个关键挑战：（C1）高度不平衡的逐帧量化灵敏度。自回归生成过程中的误差累积会导致跨帧的量化灵敏度严重偏斜，遵循指数式衰减模式。 (C2) 权重中突出且异质的异常值模式。权重分布表现出明显的离群通道，其模式在层类型和块深度上有很大差异。为了解决这些问题，我们提出了 Q-ARVD，这是一种用于精确 ARVD 量化的新颖框架。 (S1) 为了解决高度不平衡的帧级灵敏度，Q-ARVD 将最终质量感知帧加权机制纳入量化目标。 (S2) 为了防止异构异常值降低性能，Q-ARVD 引入了异常值感知自适应双尺度量化，它自动检测任意层异常值通道的存在和数量，并将它们隔离以保护正常通道。大量实验证明了 Q-ARVD 的优越性。
+
+</details>
+
+---
+
+## 6. Dynamic Video Generation: Shaping Video Generation Across Time and Space / 动态视频生成：跨越时间和空间塑造视频生成
+
+**Date**: 2026-05-20 | **arXiv**: [2605.21042v1](http://arxiv.org/abs/2605.21042v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21042v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion models have achieved impressive performance in video generation, but their iterative denoising process remains computationally expensive due to the large number of tokens processed at each timestep. Recently, progressive resolution sampling has emerged as a promising acceleration approach by reducing latent resolution in early stages. However, scaling this idea to video generation remains challenging, as the additional temporal dimension introduces diverse spatio-temporal demands across different videos, and compressing only a single dimension often leads to limited acceleration or degraded quality. Therefore, we propose DVG, a Dynamic Video Generation framework that jointly allocates computation across time and space, automatically selecting content-aware acceleration strategies without manual tuning or retraining. DVG achieves near-lossless acceleration across models and tasks, reaching up to 7 times speedup on HunyuanVideo and HunyuanVideo-1.5, and 18 times when combined with distillation, demonstrating its potential as a key component in today's large-scale efficient video generation systems. Our code is in supplementary material and will be released on Github.
+
+扩散模型在视频生成方面取得了令人印象深刻的性能，但由于每个时间步处理大量标记，因此其迭代去噪过程的计算成本仍然很高。最近，渐进分辨率采样通过降低早期阶段的潜在分辨率而成为一种有前途的加速方法。然而，将这一想法扩展到视频生成仍然具有挑战性，因为额外的时间维度在不同视频中引入了不同的时空需求，并且仅压缩单个维度通常会导致加速有限或质量下降。因此，我们提出了 DVG，一种动态视频生成框架，它可以跨时间和空间联合分配计算，自动选择内容感知加速策略，无需手动调整或重新训练。 DVG 在模型和任务上实现了近乎无损的加速，在 HunyuanVideo 和 HunyuanVideo-1.5 上实现了高达 7 倍的加速，与蒸馏结合时达到了 18 倍，展示了其作为当今大规模高效视频生成系统关键组件的潜力。我们的代码位于补充材料中，并将在 Github 上发布。
+
+</details>
+
+---
+
+## 7. DySink: Dynamic Frame Sinks for Autoregressive Long Video Generation / DySink：用于自回归长视频生成的动态帧接收器
+
+**Date**: 2026-05-20 | **arXiv**: [2605.21028v1](http://arxiv.org/abs/2605.21028v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21028v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/yebo0216best/DySink.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive long video generation often adopts bounded-memory streaming for efficiency, typically combining local windows for short-term continuity with static early-frame sinks as long-range anchors. However, this fixed allocation keeps early frames cached even when the current visual state has substantially diverged from them, while discarding potentially more relevant intermediate history. As a result, the retained long-range context may become less adaptive and bias generation toward outdated cues; in severe cases, RoPE-induced phase re-alignment can homogenize inter-head attention and cause sink collapse, where content regresses toward sink frames. We propose DySink, a retrieval-based framework that maintains a compact memory bank and selects visually relevant historical frames as dynamic frame sinks. DySink couples adaptive retrieval with a sink anomaly gate, which detects excessive inter-head consensus over retrieved context and suppresses collapse-prone context. Experiments on minute-long videos show that DySink consistently improves dynamic degree over strong baselines while also achieving higher temporal quality. The code and model weights will be released at https://github.com/yebo0216best/DySink.
+
+自回归长视频生成通常采用有限内存流来提高效率，通常将本地窗口与静态早期帧接收器作为远程锚点相结合以实现短期连续性。然而，这种固定分配会保留早期帧，即使当前视觉状态与早期帧有很大偏差，同时丢弃可能更相关的中间历史记录。因此，保留的远程上下文可能会变得适应性较差，并且会产生对过时线索的偏见；在严重的情况下，RoPE 引起的相位重新对齐可以使头部间的注意力均匀化并导致接收器崩溃，即内容向接收器框架回归。我们提出了 DySink，一种基于检索的框架，它维护紧凑的内存库并选择视觉相关的历史帧作为动态帧接收器。 DySink 将自适应检索与接收器异常门结合起来，该门可以检测检索到的上下文中过多的头间共识并抑制容易崩溃的上下文。对一分钟长的视频进行的实验表明，DySink 在强基线上持续提高了动态程度，同时还实现了更高的时间质量。代码和模型权重将在 https://github.com/yebo0216best/DySink 发布。
+
+</details>
+
+---
+
+## 8. Preserve, Reveal, Expand: Faithful 4D Video Editing with Region-Aware Conditioning / 保留、显示、扩展：通过区域感知调节进行忠实的 4D 视频编辑
+
+**Date**: 2026-05-20 | **arXiv**: [2605.20961v1](http://arxiv.org/abs/2605.20961v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.20961v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing 4D-driven video diffusion models primarily target plausible generation, but faithful 4D editing requires preserving source-observed regions while synthesizing disoccluded or out-of-view content. We identify Evidence-Role Mismatch: reliable source-backed evidence, unreliable rendered cues, and unsupported regions are entangled in a single conditioning signal, causing preservation drift, ghosting, and unstable extrapolation. We propose PREX (Preserve, Reveal, Expand), a region-aware framework that decomposes the target spatiotemporal volume into Preserve, Reveal, and Expand roles according to observation support and scene extent. PREX builds observation-backed appearance cues with calibrated confidence and injects them into a frozen video diffusion backbone through a region-aware adapter, trained with proxy tasks without requiring paired edited videos. We further introduce PREBench, a diagnostic benchmark with curated edits, region-role masks, and human-aligned metrics that complement global video-quality and 4D-control evaluations. Experiments show that PREX reduces region-structured failures while maintaining strong visual quality and 4D edit control capability. Project Page: https://ricepastem.github.io/PREX-Open
+
+现有的 4D 驱动视频扩散模型主要针对合理的生成，但忠实的 4D 编辑需要保留源观察区域，同时合成不遮挡或视图外的内容。我们确定了证据-角色不匹配：可靠的源支持证据、不可靠的渲染线索和不受支持的区域纠缠在单个条件信号中，导致保存漂移、重影和不稳定的外推。我们提出了 PREX（Preserve、Reveal、Expand），这是一种区域感知框架，可根据观测支持和场景范围将目标时空体积分解为 Preserve、Reveal 和 Expand 角色。 PREX 构建具有校准置信度的观察支持的外观线索，并通过区域感知适配器将它们注入冻结的视频扩散主干，通过代理任务进行训练，无需配对编辑视频。我们进一步介绍了 PREBench，这是一种诊断基准，具有精心策划的编辑、区域角色掩码和人性化指标，可补充全球视频质量和 4D 控制评估。实验表明，PREX 减少了区域结构故障，同时保持了强大的视觉质量和 4D 编辑控制能力。项目页面：https://ricepastem.github.io/PREX-Open
+
+</details>
+
+---
+
+## 9. FlowLong: Inference-time Long Video Generation via Manifold-constrained Tweedie Matching / FlowLong：通过流形约束 Tweedie 匹配生成推理时间长视频
+
+**Date**: 2026-05-20 | **arXiv**: [2605.20910v1](http://arxiv.org/abs/2605.20910v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.20910v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Extending the generation horizon of video diffusion models to long sequences remains a long-standing and important challenge. Existing training-free approaches fall into two categories: extensions of bidirectional models, which are tightly coupled to specific architectures and suffer from quality degradation over long horizons, and autoregressive models, which accumulate drift errors due to exposure bias and tend to produce repetitive motion patterns. To address these issues, we propose a novel but simple inference-time approach for long video generation that is architecture-agnostic and requires no additional training. Our method generates long videos via overlapping sliding windows, where predicted clean samples from adjacent windows are blended via \emph{Tweedie matching} to enforce both \textbf{manifold constraint and temporal consistency} across overlap regions. \emph{Stochastic early-phase sampling} then synchronizes per-window trajectories by injecting fresh noise after each Tweedie matching correction in the high-noise phase, before transitioning to deterministic ODE sampling to preserve fine-grained visual fidelity. Applied to various video generation models, our method generates videos several times longer than the native window length while outperforming both training-free and autoregressive baselines in temporal consistency and visual quality, and further extends to audio-video joint generation and text-to-3DGS without any fine-tuning.
+
+将视频扩散模型的生成范围扩展到长序列仍然是一个长期存在的重要挑战。现有的免训练方法分为两类：双向模型的扩展，它与特定架构紧密耦合，并且在长期范围内会遭受质量下降；以及自回归模型，它会由于曝光偏差而累积漂移误差，并倾向于产生重复的运动模式。为了解决这些问题，我们提出了一种新颖但简单的长视频生成推理时间方法，该方法与架构无关，不需要额外的训练。我们的方法通过重叠滑动窗口生成长视频，其中来自相邻窗口的预测干净样本通过 \emph{Tweedie 匹配} 进行混合，以在重叠区域之间强制执行 \textbf{流形约束和时间一致性}。 \emph{随机早期阶段采样}然后通过在高噪声阶段的每次 Tweedie 匹配校正后注入新噪声来同步每个窗口的轨迹，然后过渡到确定性 ODE 采样以保持细粒度的视觉保真度。应用于各种视频生成模型，我们的方法生成的视频比原生窗口长度长几倍，同时在时间一致性和视觉质量方面优于免训练和自回归基线，并进一步扩展到音视频联合生成和文本到 3DGS，无需任何微调。
+
+</details>
+
+---
+
+## 10. USV: Towards Understanding the User-generated Short-form Videos / USV：了解用户生成的短视频
+
+**Date**: 2026-05-20 | **arXiv**: [2605.20838v1](http://arxiv.org/abs/2605.20838v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.20838v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Several large-scale video datasets have been published these years and have advanced the area of video understanding. However, the newly emerged user-generated short-form videos have rarely been studied. This paper presents USV, the User-generated Short-form Video dataset for high-level semantic video understanding. The dataset contains around 224K videos collected from UGC platforms by label queries without extra manual verification and trimming. Although video understanding has achieved plausible improvement these years, most works focus on instance-level recognition, which is not sufficient for learning the representation of the high-level semantic information of videos. Therefore, we further establish two tasks: topic recognition and video-text retrieval on USV. We propose two unified and effective baseline methods Multi-Modality Fusion Network (MMF-Net) and Video-Text Contrastive Learning (VTCL), to tackle the topic recognition task and video-text retrieval respectively, and carry out comprehensive benchmarks to facilitate future research. Our project page is https://usvdataset.github.io.
+
+近年来已经发布了几个大型视频数据集，并推进了视频理解领域。然而，新出现的用户生成的短视频却很少被研究。本文介绍了 USV，即用于高级语义视频理解的用户生成的短视频数据集。该数据集包含通过标签查询从 UGC 平台收集的约 224K 视频，无需额外的手动验证和修剪。尽管近年来视频理解取得了明显的进步，但大多数工作都集中在实例级识别上，这不足以学习视频高级语义信息的表示。因此，我们进一步在USV上建立了两个任务：主题识别和视频文本检索。我们提出了两种统一有效的基准方法多模态融合网络（MMF-Net）和视频文本对比学习（VTCL），分别处理主题识别任务和视频文本检索，并进行全面的基准测试以促进未来的研究。我们的项目页面是 https://usvdataset.github.io。
+
+</details>
+
+---
+
+## 11. What Semantics Survive the Connector? Diagnosing VLM-to-DiT Alignment in Video Editing / 连接器中存在哪些语义？诊断视频编辑中的 VLM 到 DiT 对齐情况
+
+**Date**: 2026-05-20 | **arXiv**: [2605.20795v1](http://arxiv.org/abs/2605.20795v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.20795v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Flow matching based video generative models have been increasingly relying on prepended Vision-Language Models (VLMs) to handle complex, instruction-based video editing. The prevailing assumption underlying this paradigm is that a connector module can seamlessly align the VLM's rich multi-modal reasoning with the original text embedding space of DiTs. However, we hypothesize that this alignment acts as a severe semantic bottleneck, degrading fine-grained structural variables. Verifying this is challenging, as end-to-end evaluations conflate alignment failures with generation errors, and natural datasets lack disentangled annotations. To rigorously investigate this, we propose a controlled data processing pipeline based on video composition that results in TRACE-Edit, a diagnostic dataset focusing on relation-based editing. Leveraging this dataset, we propose a comprehensive diagnostic protocol to analyze two important designs of meta-query and connector in the existing video editing models. Systematic evaluation of four representative model cases reveals that fine-grained structural semantics can be severely degraded during alignment. Our findings overturn the assumption of lossless semantic transfer, identifying the VLM-to-DiT alignment as a major bottleneck and providing a new diagnostic foundation for future multi-modal alignment architectures.
+
+基于流匹配的视频生成模型越来越依赖预置的视觉语言模型 (VLM) 来处理复杂的、基于指令的视频编辑。该范式背后的普遍假设是连接器模块可以将 VLM 丰富的多模态推理与 DiT 的原始文本嵌入空间无缝地对齐。然而，我们假设这种对齐是一个严重的语义瓶颈，降低了细粒度结构变量的性能。验证这一点具有挑战性，因为端到端评估将对齐失败与生成错误混为一谈，并且自然数据集缺乏解开的注释。为了严格研究这一点，我们提出了一种基于视频合成的受控数据处理管道，从而产生了 TRACE-Edit，这是一个专注于基于关系的编辑的诊断数据集。利用该数据集，我们提出了一种全面的诊断协议来分析现有视频编辑模型中元查询和连接器的两个重要设计。对四个代表性模型案例的系统评估表明，细粒度结构语义在对齐过程中可能会严重退化。我们的研究结果推翻了无损语义传输的假设，将 VLM 到 DiT 对齐确定为主要瓶颈，并为未来的多模态对齐架构提供了新的诊断基础。
+
+</details>
+
+---
+
+## 12. RoPeSLR: 3D RoPE-driven Sparse-LowRank Attention for Efficient Diffusion Transformers / RoPeSLR：3D RoPE 驱动的稀疏低阶注意力，实现高效扩散变压器
+
+**Date**: 2026-05-20 | **arXiv**: [2605.20659v1](http://arxiv.org/abs/2605.20659v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.20659v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion Transformers (DiTs) have revolutionized high-fidelity video generation, yet their $\mathcal{O}(L^2)$ attention complexity poses a formidable bottleneck for long-sequence synthesis. While recent sparse-linear attention hybrids aim to mitigate this, their performance severely degrades at extreme sparsity due to the "RoPE Dilemma": standard linear attention fails to preserve the orthogonal relative-position structure of 3D Rotary Position Embeddings (RoPE), neutralizing vital distance awareness. To address this, we propose \textbf{RoPeSLR}, a 3D RoPE-guided Sparse-LowRank attention framework. We establish that under empirically validated assumptions, the DiT attention manifold admits a decoupling into a high-frequency semantic spike set (bounded by $\mathcal{O}(L^{3/2})$ sparsity) and an extreme low-rank ($\mathcal{O}(d_h \log L)$) background continuum. Guided by this structural prior, RoPeSLR eschews standard linear attention for a head-wise low-rank parameterization equipped with a learnable 3D Absolute Positional Embedding (PE) injection, seamlessly synthesizing long-range relative distance decay. By guaranteeing sub-quadratic sparsity and sub-linear rank growth, RoPeSLR is exceptionally suited for scaling to ultra-long video inference. Extensive evaluations validate this scalable superiority: at 90\% sparsity, RoPeSLR achieves up to $10\times$ fewer FLOPs on Wan2.1-1.3B and delivers a $2.26\times$ end-to-end inference speedup on the ultra-long 100K+ token sequences of HunyuanVideo-13B, all while maintaining near-lossless generation fidelity (less than 1.3\% average VBench degradation).
+
+扩散变压器（DiT）彻底改变了高保真视频生成，但它们的 $\mathcal{O}(L^2)$ 注意力复杂性给长序列合成带来了巨大的瓶颈。虽然最近的稀疏线性注意力混合体旨在缓解这一问题，但由于“RoPE 困境”，它们的性能在极度稀疏的情况下严重下降：标准线性注意力无法保留 3D 旋转位置嵌入 (RoPE) 的正交相对位置结构，从而抵消了重要的距离感知。为了解决这个问题，我们提出了 \textbf{RoPeSLR}，一种 3D RoPE 引导的稀疏低阶注意力框架。我们确定，在经过经验验证的假设下，DiT 注意力流形允许解耦为高频语义尖峰集（以 $\mathcal{O}(L^{3/2})$ 稀疏性为界）和极低秩 ($\mathcal{O}(d_h \log L)$) 背景连续体。在此结构先验的指导下，RoPeSLR 避开了标准线性注意力，采用配备可学​​习 3D 绝对位置嵌入 (PE) 注入的头部低秩参数化，无缝合成长程相对距离衰减。通过保证次二次稀疏性和次线性排名增长，RoPeSLR 特别适合扩展到超长视频推理。广泛的评估验证了这种可扩展的优势：在 90% 的稀疏度下，RoPeSLR 在 Wan2.1-1.3B 上实现了高达 $10\times$ 的 FLOP 减少，并在 HunyuanVideo-13B 的超长 100K+ 令牌序列上实现了 $2.26\times$ 的端到端推理加速，同时保持近乎无损的生成保真度（低于1.3\% 平均 VBench 性能下降）。
+
+</details>
+
+---
+
+## 13. Seeing Through Fog: Towards Fog-Invariant Action Recognition / 透视雾：迈向雾不变动作识别
+
+**Date**: 2026-05-20 | **arXiv**: [2605.20645v1](http://arxiv.org/abs/2605.20645v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.20645v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Foggy conditions are commonly encountered in real-world applications; however, existing action recognition approaches typically assume favorable weather and high-quality video inputs. On foggy days, unpredictable visibility degradation and reduced contrast obstruct the extraction of semantic cues, posing significant challenges for current action recognition methods. In this paper, we mitigate the issues faced in action recognition under foggy conditions by employing two strategies. First, we present FogAct, the first benchmark dataset for foggy action recognition, consisting of paired clean and foggy videos captured with a stereo camera system. The dataset spans 10 scenes and 55 action categories, comprising nearly 10,000 video clips. Second, we propose FogNet, a two-stream CLIP model that discovers fog-invariant semantic information hidden behind the degraded videos. FogNet learns robust representations of foggy videos with guidance from clean videos, effectively capturing shared structural and motion cues between clean and foggy videos. Extensive experiments on FogAct and three other popular datasets demonstrate that our method achieves competitive performance compared with state-of-the-art (SOTA) approaches. Our FogAct and FogNet are given in our project page.
+
+实际应用中经常会遇到有雾的情况；然而，现有的动作识别方法通常假设有利的天气和高质量的视频输入。在雾天，不可预测的能见度下降和对比度降低阻碍了语义线索的提取，给当前的动作识别方法带来了重大挑战。在本文中，我们通过采用两种策略来缓解雾条件下动作识别所面临的问题。首先，我们介绍 FogAct，这是第一个用于雾状动作识别的基准数据集，由立体摄像系统捕获的成对的干净和雾状视频组成。该数据集涵盖 10 个场景和 55 个动作类别，包括近 10,000 个视频剪辑。其次，我们提出了 FogNet，一种双流 CLIP 模型，可以发现隐藏在降级视频背后的雾不变语义信息。 FogNet 在干净视频的指导下学习有雾视频的鲁棒表示，有效捕获干净视频和有雾视频之间共享的结构和运动线索。对 FogAct 和其他三个流行数据集的大量实验表明，与最先进的 (SOTA) 方法相比，我们的方法实现了具有竞争力的性能。我们的 FogAct 和 FogNet 在我们的项目页面中给出。
+
+</details>
+
+---
+
+## 14. Accelerating Video Inverse Problem Solvers with Autoregressive Diffusion Models / 使用自回归扩散模型加速视频逆问题求解器
+
+**Date**: 2026-05-20 | **arXiv**: [2605.20624v1](http://arxiv.org/abs/2605.20624v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.20624v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion models provide powerful priors for zero-shot video inverse problems, but their real-time deployment is hindered by two inefficiencies: high initial latency caused by holistic video restoration, and low throughput resulting from multiple VAE passes to enforce measurement consistency in pixel space. To overcome these limitations, we propose Autoregressive Video Inverse problem Solver (AVIS). The AVIS framework leverages autoregressive video diffusion models to restore videos in a streaming manner, naturally eliminating latency bottlenecks. Specifically, AVIS initializes reverse diffusion with a measurement-consistent estimate, reducing the required sampling steps. Compared to leading non-autoregressive solvers, AVIS drastically reduces initial latency from 114s to 4s and increases throughput from 0.71 to 1.18 FPS while achieving superior restoration quality. We further introduce a highly accelerated variant, dubbed AVIS Flash, that enforces measurement consistency solely on the first chunk. AVIS Flash substantially boosts throughput to 5.91 FPS on a single RTX 4090 GPU while maintaining competitive performance and achieving a favorable efficiency-performance trade-off, paving the way toward real-time deployment.
+
+扩散模型为零镜头视频逆问题提供了强大的先验，但其实时部署受到两个低效率的阻碍：整体视频恢复导致的高初始延迟，以及为增强像素空间中的测量一致性而进行的多个 VAE 传递导致的低吞吐量。为了克服这些限制，我们提出了自回归视频逆问题求解器（AVIS）。 AVIS框架利用自回归视频扩散模型以流式传输方式恢复视频，自然消除了延迟瓶颈。具体来说，AVIS 使用测量一致的估计来初始化反向扩散，从而减少所需的采样步骤。与领先的非自回归求解器相比，AVIS 将初始延迟从 114 秒大幅减少到 4 秒，并将吞吐量从 0.71 FPS 提高到 1.18 FPS，同时实现卓越的恢复质量。我们进一步引入了一种高度加速的变体，称为 AVIS Flash，它仅在第一个块上强制执行测量一致性。 AVIS Flash 将单个 RTX 4090 GPU 上的吞吐量大幅提升至 5.91 FPS，同时保持有竞争力的性能并实现有利的效率与性能权衡，为实时部署铺平了道路。
+
+</details>
+
+---
+
+## 15. $Δ$ynamics: Language-Based Representation for Inferring Rigid-Body Dynamics From Videos / $Δ$ynamics：用于从视频推断刚体动力学的基于语言的表示
+
+**Date**: 2026-05-20 | **arXiv**: [2605.20576v1](http://arxiv.org/abs/2605.20576v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.20576v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Inferring rigid-body physical states and properties from monocular videos is a fundamental step toward physics-based perception and simulation. Existing approaches assume specific underlying physical systems, object types, and camera poses, making them unable to generalize to complex real-world settings. We introduce $Δ$YNAMICS, a vision-language framework that uses language as a unified representation of rigid-body dynamics. Instead of directly predicting parameters, $Δ$YNAMICS generates scene configurations in a structured text format for physics simulation. We enhance the model's generalization by integrating natural language motion reasoning and leveraging optical flow as a semantic-agnostic input. On the CLEVRER dataset, $Δ$YNAMICS achieves a segmentation IoU of 0.30, a 7x improvement over leading VLMs (InternVL3-8B, Qwen2.5-VL-7B and Claude-4-Sonnet). Additionally, test-time sampling and evolutionary search further boost performance by 27% and 120% in segmentation IoU, respectively. Finally, we demonstrate strong transfer to a new dataset of 235 real-world rigid-body videos, highlighting the potential of language-driven physics inference for bridging perception and simulation.
+
+从单目视频推断刚体物理状态和属性是迈向基于物理的感知和模拟的基本一步。现有方法假设特定的底层物理系统、对象类型和相机姿势，使得它们无法推广到复杂的现实世界设置。我们引入$Δ$YNAMICS，一个视觉语言框架，它使用语言作为刚体动力学的统一表示。 $Δ$YNAMICS 不是直接预测参数，而是以结构化文本格式生成场景配置以进行物理模拟。我们通过集成自然语言运动推理并利用光流作为语义不可知的输入来增强模型的泛化能力。在 CLEVER 数据集上，$Δ$YNAMICS 的分割 IoU 为 0.30，比领先的 VLM（InternVL3-8B、Qwen2.5-VL-7B 和 Claude-4-Sonnet）提高了 7 倍。此外，测试时采样和进化搜索在分割 IoU 方面的性能分别进一步提高了 27% 和 120%。最后，我们展示了向包含 235 个真实世界刚体视频的新数据集的强大迁移，强调了语言驱动的物理推理在连接感知和模拟方面的潜力。
+
+</details>
+
+---
+
+## 16. End-to-End Unmixing with Material Prompts for Hyperspectral Object Tracking / 端到端分解与高光谱物体跟踪的材质提示
+
+**Date**: 2026-05-20 | **arXiv**: [2605.20569v1](http://arxiv.org/abs/2605.20569v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.20569v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/han030927/E2EMPT.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Hyperspectral imagery encodes rich material properties that can improve tracking robustness under appearance ambiguity, illumination change, and background clutter. However, due to the limited availability of hyperspectral video data, many existing methods adapt pretrained RGB trackers via spatial or channel fusion strategies, largely neglecting the intrinsic material information in hyperspectral imagery. Moreover, the few material-aware approaches typically rely on external spectral unmixing pipelines that are decoupled from the tracking objective, limiting effective optimization of material representations for target localization. To address these limitations, we formulate hyperspectral object tracking as a joint optimization problem of material decomposition and target localization, coupling the two tasks via a weighted target-oriented unmixing loss that explicitly aligns material representations with localization accuracy. Specifically, we propose a material representation decomposition module for deep learning-based spectral unmixing with adaptive frequency decomposition. Building on the decomposed material representations, we further introduce a dual-branch wavelet-enhanced material prompt module that learns low- and high-frequency material prompts through efficient spatial-material interactions in the frequency domain. The framework is model-agnostic and can be seamlessly generalized to different unmixing backbones. Extensive experiments on standard hyperspectral tracking benchmarks demonstrate state-of-the-art performance and validate the effectiveness of the proposed end-to-end material-aware tracking framework. Code is available at https://github.com/han030927/E2EMPT.
+
+高光谱图像编码丰富的材料属性，可以提高在外观模糊、照明变化和背景杂乱情况下的跟踪鲁棒性。然而，由于高光谱视频数据的可用性有限，许多现有方法通过空间或通道融合策略来适应预训练的 RGB 跟踪器，很大程度上忽略了高光谱图像中的内在材料信息。此外，少数材料感知方法通常依赖于与跟踪目标分离的外部光谱解混合管道，限制了目标定位材料表示的有效优化。为了解决这些限制，我们将高光谱对象跟踪制定为材料分解和目标定位的联合优化问题，通过加权的面向目标的解混合损失将这两个任务耦合起来，该损失明确地将材料表示与定位精度对齐。具体来说，我们提出了一种材料表示分解模块，用于基于深度学习的频谱分解和自适应频率分解。在分解的材料表示的基础上，我们进一步引入了双分支小波增强材料提示模块，该模块通过频域中有效的空间材料相互作用来学习低频和高频材料提示。该框架与模型无关，可以无缝推广到不同的分解主干。标准高光谱跟踪基准的大量实验证明了最先进的性能，并验证了所提出的端到端材料感知跟踪框架的有效性。代码可在 https://github.com/han030927/E2EMPT 获取。
+
+</details>
+
+---
+
+## 17. Goodbye Drift: Anchored Tree Sampling for Long-Horizon Video-to-Video Generation / 再见漂移：用于长视野视频到视频生成的锚定树采样
+
+**Date**: 2026-05-19 | **arXiv**: [2605.20476v1](http://arxiv.org/abs/2605.20476v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.20476v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon video generation suffers from two intertwined issues. First, there is drift, where video quality degrades over time. Second, there are continuity issues which manifest as object permanence issues, or improperly rendering transient content (e.g., an object that appears in non-consecutive frames changing color/style). Recent work has focused on autoregressive distillation techniques that attack both problems simultaneously. We instead choose to focus on drift directly and introduce \textbf{Anchored Tree Sampling (ATS)}: a training-free inference-time scheduler that replaces left-to-right rollout with sparse-to-dense, anchor-bounded imputation organized as a tree. A root call produces sparse anchors over the full horizon, recursive refinement generates intermediate anchors, and final leaf spans are synthesized between neighboring anchors. This reduces the critical path from $K$ sequential rollout steps to $L+1$ tree-hierarchical steps and converts horizon-compounding drift into anchor-bounded drift. We focus on V2V generation in the \emph{static-camera} regime, where sparse anchors over the horizon are well approximated by the dense conditioning signal, and the base model can produce them without retraining. We evaluate ATS against two contemporary autoregressive baselines on Wan $2.1$ $+$ VACE, across five conditioning modalities (inpainting, outpainting, edge, pose, depth). We show that ATS outperforms both competitors in overall quality, as well as in drift prevention. We additionally demonstrate stable $\geq 40$-minute generation on LTX-$2.3$ across the same five modalities. We conclude by proposing a path forward to extend ATS to arbitrarily long T2V generation, as well as the dynamic-camera and multi-shot regimes.
+
+长视距视频生成面临两个相互交织的问题。首先，存在漂移，视频质量随着时间的推移而下降。其次，存在连续性问题，表现为对象持久性问题，或不正确地渲染瞬态内容（例如，出现在非连续帧中的对象改变颜色/样式）。最近的工作重点是同时解决这两个问题的自回归蒸馏技术。相反，我们选择直接关注漂移并引入\textbf{锚定树采样（ATS）}：一种免训练的推理时间调度程序，用稀疏到密集的、以树形式组织的锚定边界插补代替从左到右的推出。根调用在整个范围内生成稀疏锚点，递归细化生成中间锚点，最终叶跨度在相邻锚点之间合成。这将关键路径从 $K$ 顺序推出步骤减少到 $L+1$ 树分层步骤，并将水平复合漂移转换为锚定边界漂移。我们专注于 emph{static-camera} 状态下的 V2V 生成，其中地平线上的稀疏锚点可以很好地近似于密集的条件信号，并且基本模型可以在无需重新训练的情况下生成它们。我们根据 Wan $2.1$ $+$ VACE 上的两个当代自回归基线，通过五种调节模式（修复、修复、边缘、姿势、深度）来评估 ATS。我们表明，ATS 在整体质量以及漂移预防方面均优于竞争对手。我们还展示了在相同的五种模式下，LTX-$2.3$ 上稳定的 $\geq 40$ 分钟生成。最后，我们提出了将 ATS 扩展到任意长的 T2V 生成以及动态相机和多重拍摄机制的前进路径。
+
+</details>
+
+---
+
+## 18. ParaVT: Taming the Tool Prior Paradox for Parallel Tool Use in Agentic Video Reinforcement Learning / ParaVT：克服代理视频强化学习中并行工具使用的工具先验悖论
+
+**Date**: 2026-05-19 | **arXiv**: [2605.20342v1](http://arxiv.org/abs/2605.20342v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.20342v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Training large multimodal models (LMMs) via reinforcement learning (RL) to natively invoke video-processing tools (e.g., cropping) has become a promising route to long-video understanding. However, existing native-RL methods dispatch tool calls sequentially (i.e., one per turn): a single wrong crop propagates errors without peer correction, multi-turn tool calls corrupt context, and inference cost scales linearly with the number of turns. We introduce ParaVT, the first multi-agent end-to-end RL-trained framework for Parallel Video Tool calling, dispatching multiple time-window crops in a single turn for cleaner context and better fault tolerance. Yet applying standard RL to ParaVT reveals an obstacle we term the Tool Prior Paradox: the pretrained tool priors that enable tool exploration also destabilize cold-started structural format and expose the skip-tool reward shortcut under temperature sampling. A cross-model contrast on a weaker-prior LMM supports this claim: format stays stable but RL elicits zero tool calls, indicating that prior strength is the shared driver of both format collapse and tool exploration. We propose PARA-GRPO (Parseability-Anchored and Ratio-gAted GRPO), which augments standard RL with two complementary mechanisms: (i) a targeted format reward applied only at the structural-token positions most prone to collapse, and (ii) a per-prompt frame-budget randomization that creates training prompts where calling the tool yields a measurable reward signal over skipping it. Across six long-video understanding benchmarks, ParaVT improves over the Qwen3-VL baseline by +7.9% on average, with PARA-GRPO lifting training-time format compliance from 0.13 to 0.64. As tool capabilities become increasingly internalized in modern LMMs, RL must cooperate with the resulting priors, and ParaVT offers a general recipe for agentic RL. Code, data, and model weights are publicly available.
+
+通过强化学习 (RL) 训练大型多模态模型 (LMM) 以原生调用视频处理工具（例如裁剪）已成为理解长视频的一条有前途的途径。然而，现有的原生 RL 方法按顺序调度工具调用（即每轮一次）：单个错误裁剪会传播错误而无需对等校正，多轮工具调用损坏的上下文，并且推理成本随轮数线性缩放。我们引入了 ParaVT，这是第一个用于并行视频工具调用的多代理端到端 RL 训练框架，可在单轮中调度多个时间窗口作物，以实现更清晰的上下文和更好的容错能力。然而，将标准强化学习应用于 ParaVT 揭示了一个障碍，我们称之为工具先验悖论：支持工具探索的预训练工具先验也会破坏冷启动结构格式的稳定性，并暴露温度采样下的跳过工具奖励捷径。对较弱先验 LMM 的跨模型对比支持了这一说法：格式保持稳定，但 RL 引发零工具调用，表明先验强度是格式崩溃和工具探索的共同驱动因素。我们提出了 PARA-GRPO（Parseability-Anchored and Ratio-gAted GRPO），它通过两种互补机制增强了标准 RL：（i）仅在最容易崩溃的结构标记位置应用目标格式奖励，以及（ii）按提示帧预算随机化，创建训练提示，在调用该工具时会产生一个可测量的奖励信号而不是跳过它。在六个长视频理解基准中，ParaVT 比 Qwen3-VL 基线平均提高了 7.9%，PARA-GRPO 将训练时间格式合规性从 0.13 提升到 0.64。随着现代 LMM 中工具功能的日益内化，强化学习必须与由此产生的先验进行合作，而 ParaVT 为代理强化学习提供了通用方法。代码、数据和模型权重都是公开的。
+
+</details>
+
+---
+
+## 19. Tiny-Engram: Trigger-Indexed Concept Tables for Generative Vision / Tiny-Engram：用于生成视觉的触发器索引概念表
+
+**Date**: 2026-05-19 | **arXiv**: [2605.20309v1](http://arxiv.org/abs/2605.20309v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.20309v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current personalization methods for generative vision models typically encode new concepts through continuous adapters or weight updates, yet provide limited control over whether and when a concept should be retrieved. In this work, we introduce Tiny-Engram, a compact trigger-indexed concept table that gives visual memories an explicit lexical address and activation boundary inside frozen image and video generators. Tiny-Engram parameterizes each concept as a small set of memory entries indexed by registered n-gram matches, which modulate text-encoder hidden states only within the matched trigger region. Outside this lexical support, the conditioning pathway is identical to that of the frozen base model. Across both single-encoder latent diffusion and multi-encoder diffusion-transformer backbones, this formulation binds a rare trigger phrase to a target identity while preserving compositional control from the surrounding prompt. We further evaluate the same table-based memory in a text-conditioned video generation setting, where the trigger path reliably alters the generated subject but fine-grained identity persistence across held-out video prompts remains limited. Taken together, these results suggest that small, explicitly addressed concept tables are a practical route to modular visual personalization, with strongest evidence in image generation. For video diffusion, the remaining gap points to a broader requirement: temporally stable identity likely depends on tighter coupling between text-side memory and the evolving visual state, motivating future work on memory injection beyond the text-conditioning interface.
+
+当前生成视觉模型的个性化方法通常通过连续适配器或权重更新来编码新概念，但对是否以及何时应检索概念提供有限的控制。在这项工作中，我们引入了 Tiny-Engram，这是一个紧凑的触发器索引概念表，它为视觉记忆提供了明确的词汇地址和冻结图像和视频生成器内的激活边界。 Tiny-Engram 将每个概念参数化为一小组由注册的 n-gram 匹配索引的内存条目，这些条目仅在匹配的触发区域内调制文本编码器隐藏状态。在这个词汇支持之外，调节路径与冻结基础模型的相同。在单编码器潜在扩散和多编码器扩散变压器主干中，该公式将罕见的触发短语与目标身份绑定，同时保留周围提示的成分控制。我们进一步在文本条件视频生成设置中评估相同的基于表的内存，其中触发路径可靠地改变生成的主题，但跨保留视频提示的细粒度身份持久性仍然有限。总而言之，这些结果表明，小型、明确解决的概念表是模块化视觉个性化的实用途径，在图像生成方面拥有最有力的证据。对于视频扩散来说，剩下的差距指向了更广泛的要求：时间稳定的身份可能取决于文本侧记忆和不断发展的视觉状态之间更紧密的耦合，从而激发了未来在文本调节接口之外的记忆注入方面的工作。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-20 (29 papers)</b></summary>
 
 # arXiv Video Papers - 2026-05-20
