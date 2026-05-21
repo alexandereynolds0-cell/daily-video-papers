@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-21](papers/2026-05-21.md) - 5 papers
 - [2026-05-20](papers/2026-05-20.md) - 11 papers
 - [2026-05-19](papers/2026-05-19.md) - 9 papers
 - [2026-05-18](papers/2026-05-18.md) - 5 papers
@@ -77,6 +78,98 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-21 (5 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-05-21
+
+**Paper Count**: 5
+
+---
+
+## 1. Distill to Think, Foresee to Act: Cognitive-Physical Reinforcement Learning for Autonomous Driving / 提炼思考，预见行动：自动驾驶的认知物理强化学习
+
+**Date**: 2026-05-20 | **arXiv**: [2605.21139v1](http://arxiv.org/abs/2605.21139v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21139v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current end-to-end autonomous driving models are fundamentally constrained by the behavioral cloning ceiling of imitation learning. While reinforcement learning offers a path to smarter autonomy, it demands two missing pieces of infrastructure: (1) a cognitive foundation that understands traffic semantics and driving intent, and (2) a foresighted physical environment that can anticipate the consequences of candidate actions. To this end, we propose CoPhy, a CognitivePhysical reinforcement learning framework for autonomous driving. To distill to think, we distill VLM knowledge into the BEV encoder and then discard the VLM entirely, retaining cognitive ability at zero inference cost while releasing the cognitive channel as a pluggable interface for optional human language commands. To foresee to act, we build an auto-regressive BEV world model that explicitly predicts future semantic maps conditioned on candidate actions, serving as an interpretable physical sandbox from which safety metrics are directly derived. Built upon this dual infrastructure, we optimize the driving policy via GRPO with a novel dual-reward mechanism: a physical reward derived from BEV rollouts enforces hard safety constraints, while a cognitive reward from a language-aligned scorer ensures intent compliance. Extensive experiments demonstrate that CoPhy not only achieves state-of-the-art results on NAVSIM v1 and v2 benchmarks, but also enables safer driving via cognitively informed scene compliance and flexible intent control through user-defined language instructions.
+
+当前的端到端自动驾驶模型从根本上受到模仿学习行为克隆天花板的限制。虽然强化学习提供了一条通往更智能自主的道路，但它需要两个缺失的基础设施：（1）理解交通语义和驾驶意图的认知基础，以及（2）可以预测候选人行为后果的有远见的物理环境。为此，我们提出了CoPhy，一个用于自动驾驶的认知物理强化学习框架。为了提炼思考，我们将 VLM 知识提炼到 BEV 编码器中，然后完全丢弃 VLM，以零推理成本保留认知能力，同时将认知通道释放为可选人类语言命令的可插拔接口。为了预见行动，我们构建了一个自回归 BEV 世界模型，该模型明确预测以候选行动为条件的未来语义图，充当可解释的物理沙箱，从中直接导出安全指标。在此双重基础设施的基础上，我们通过 GRPO 和一种新颖的双重奖励机制优化驾驶策略：来自 BEV 推出的物理奖励强制执行严格的安全约束，而来自语言一致评分器的认知奖励则确保意图合规性。大量实验表明，CoPhy 不仅在 NAVSIM v1 和 v2 基准上取得了最先进的结果，而且还通过用户定义的语言指令实现认知场景合规性和灵活的意图控制，从而实现更安全的驾驶。
+
+</details>
+
+---
+
+## 2. Anomaly-Informed Confidence Calibration for Vision-Based Safety Prediction / 基于视觉的安全预测的异常通知置信度校准
+
+**Date**: 2026-05-20 | **arXiv**: [2605.21109v1](http://arxiv.org/abs/2605.21109v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21109v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reliable confidence estimates are important for safely deploying vision-based controllers in autonomous racing, where safety predictions must be derived from camera images, yet modern predictors become dangerously overconfident under test-time distribution shifts. We identify a critical perception-dynamics gap in existing anomaly signals: widely used scores, such as autoencoder reconstruction error, capture visual corruptions but miss dynamics anomalies (e.g., actuation bias, latency), where images remain plausible while the trajectory degrades. To address this, we propose an Anomaly-Informed Online Calibration approach that, without retraining any model component, fuses two complementary anomaly scores extracted from a world model: a perceptual score from reconstruction error and a dynamics score from epistemic uncertainty and control-stream statistics. Based on these fused scores, a lightweight temperature-scaling calibrator leverages test-time augmentation to selectively reduce overconfidence under shift while preserving nominal-condition performance. Experiments on a physical DonkeyCar under four real-world anomaly protocols unseen during training (darkness, blur, actuation bias, processing latency) reduce average expected calibration error from 0.184 to 0.116, a 37% improvement over the best baseline, without modifying the base safety predictor.
+
+可靠的置信度估计对于在自动驾驶赛车中安全部署基于视觉的控制器非常重要，其中安全预测必须从摄像机图像中得出，但现代预测器在测试时间分布变化的情况下变得危险地过度自信。我们在现有异常信号中发现了一个关键的感知动态差距：广泛使用的分数，例如自动编码器重建误差，捕获视觉损坏，但错过动态异常（例如，驱动偏差、延迟），其中图像在轨迹退化时仍然合理。为了解决这个问题，我们提出了一种异常通知在线校准方法，无需重新训练任何模型组件，融合从世界模型中提取的两个互补的异常分数：来自重建误差的感知分数和来自认知不确定性和控制流统计的动态分数。基于这些融合分数，轻量级温度缩放校准器利用测试时间增强来选择性地减少班次下的过度自信，同时保持标称条件性能。在训练期间未见的四种现实世界异常协议（黑暗、模糊、驱动偏差、处理延迟）下对物理 DonkeyCar 进行的实验将平均预期校准误差从 0.184 降低到 0.116，比最佳基线提高了 37%，而无需修改基本安全预测器。
+
+</details>
+
+---
+
+## 3. Demo-JEPA: Joint-Embedding Predictive Architecture for One-shot Cross-Embodiment Imitation / Demo-JEPA：用于一次性跨实施例模仿的联合嵌入预测架构
+
+**Date**: 2026-05-20 | **arXiv**: [2605.20811v1](http://arxiv.org/abs/2605.20811v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.20811v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robotic imitation learning is often treated as reproducing demonstrated actions, but actions are inherently embodiment-specific. When demonstrations come from humans or robots with different morphology, kinematics, or action spaces, this action-centric view requires shared action spaces, heuristic retargeting, or large-scale multi-embodiment co-training. We instead view demonstrations as implicit specifications of future goals: the target agent should infer what state the demonstrator is trying to realize, rather than how the demonstrator executes it. We propose Demo-JEPA, a cross-embodiment imitation framework that decouples demonstration intent from embodiment-specific execution. Built on a JEPA-based world model, Demo-JEPA translates source visual demonstrations into target-compatible future latent trajectories in a shared predictive representation space. The target agent then uses these latent trajectories as subgoals and realizes them through planning under its own learned forward dynamics. Because Demo-JEPA avoids action-level correspondence and requires only visual demonstrations plus the target agent's own interaction experience, it supports flexible imitation across heterogeneous embodiments. Experiments on RLBench and real-world manipulation tasks show that Demo-JEPA matches specialized in-domain planners and generalizes to unseen tasks and embodiment configurations where prior methods fail.
+
+机器人模仿学习通常被视为复制演示的动作，但动作本质上是特定于具体实施例的。当演示来自具有不同形态、运动学或动作空间的人类或机器人时，这种以动作为中心的视图需要共享动作空间、启发式重定向或大规模多实施例协同训练。相反，我们将演示视为未来目标的隐式规范：目标代理应该推断演示者试图实现的状态，而不是演示者如何执行它。我们提出了 Demo-JEPA，这是一个跨实施例的模仿框架，它将演示意图与特定于实施例的执行分离。 Demo-JEPA 基于基于 JEPA 的世界模型构建，将源视觉演示转换为共享预测表示空间中与目标兼容的未来潜在轨迹。然后，目标代理使用这些潜在轨迹作为子目标，并通过在其自己学习的前向动态下进行规划来实现它们。由于Demo-JEPA避免了动作级别的对应，只需要视觉演示加上目标代理自己的交互体验，因此它支持跨异构实施例的灵活模仿。 RLBench 和现实世界操作任务的实验表明，Demo-JEPA 与专门的域内规划器相匹配，并可推广到以前方法失败的未见过的任务和实施例配置。
+
+</details>
+
+---
+
+## 4. GaussianDream: A Feed-Forward 3D Gaussian World Model for Robotic Manipulation / GaussianDream：用于机器人操作的前馈 3D 高斯世界模型
+
+**Date**: 2026-05-20 | **arXiv**: [2605.20752v1](http://arxiv.org/abs/2605.20752v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.20752v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language-action (VLA) policies have advanced language-conditioned robotic manipulation by transferring semantic priors from pretrained vision-language models to action generation. Yet, standard action-imitation training often provides limited explicit supervision for 3D geometry, dense visual structure, and short-horizon environment evolution, which are critical for physically precise manipulation. We introduce \textbf{GaussianDream}, a feed-forward 3D Gaussian world-model plug-in that turns robot trajectories into structured spatial-temporal supervision. The key idea is to couple current Gaussian reconstruction with horizon-conditioned future Gaussian prediction during training, forcing a compact spatio-temporal prefix to be decodable into renderable 3D Gaussian states. This enables dense RGB rendering, depth, and pseudo 3D scene-flow supervision without requiring test-time Gaussian decoding. At inference, GaussianDream discards all auxiliary decoding heads and retains only the learned prefix to condition action generation, avoiding rendering, video rollout, or additional planning during closed-loop control. Experiments on LIBERO, RoboCasa Human-50, and real-robot tasks demonstrate strong and highly competitive performance, achieving \textbf{98.4\%} average success on LIBERO, \textbf{52.6\%} on RoboCasa Human-50, and \textbf{50.0\%} in real-world evaluation.
+
+视觉语言动作（VLA）策略通过将语义先验从预训练的视觉语言模型转移到动作生成来实现先进的语言条件机器人操作。然而，标准的动作模仿训练通常为 3D 几何、密集视觉结构和短视环境演化提供有限的显式监督，而这对于物理精确操作至关重要。我们引入了 \textbf{GaussianDream}，一个前馈 3D 高斯世界模型插件，可将机器人轨迹转化为结构化时空监督。关键思想是在训练期间将当前高斯重建与水平条件未来高斯预测相结合，迫使紧凑的时空前缀可解码为可渲染的 3D 高斯状态。这可以实现密集的 RGB 渲染、深度和伪 3D 场景流监控，而无需测试时高斯解码。在推理时，GaussianDream 会丢弃所有辅助解码头，仅保留学习到的前缀来生成条件动作，从而避免在闭环控制期间进行渲染、视频推出或额外规划。在 LIBERO、RoboCasa Human-50 和真实机器人任务上的实验表现出强大且极具竞争力的性能，在 LIBERO 上实现了 \textbf{98.4\%} 平均成功，在 RoboCasa Human-50 上实现了 \textbf{52.6\%} 成功，在实际评估中实现了 \textbf{50.0\%} 成功。
+
+</details>
+
+---
+
+## 5. Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents / Auto-Dreamer：学习语言代理的离线记忆整合
+
+**Date**: 2026-05-20 | **arXiv**: [2605.20616v1](http://arxiv.org/abs/2605.20616v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.20616v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Language agents increasingly operate over streams of related tasks, yet existing memory systems struggle to convert accumulated experience into reusable knowledge. Retrieval-augmented and structured memory methods record per-session observations effectively, but often couple acquisition and consolidation into a single online process, leaving the agent without a global view across sessions to discover recurring patterns, abstract shared procedures, or prune redundant entries. Inspired by complementary learning systems theory, we propose Auto-Dreamer, a learned offline consolidator for language-agent memory. Auto-Dreamer decouples fast per-session memory acquisition from slow cross-session consolidation. Given a selected working region of a typed memory bank, the consolidator treats the region as read-only evidence, performs bounded tool-use to inspect entries and provenance-linked source trajectories, and synthesizes a fresh compact replacement set that abstracts across sessions and supersedes the original region. We train Auto-Dreamer via GRPO, using end-to-end agent performance as the reward signal to learn how to consolidate memories acquired through fast online experience. Trained on ScienceWorld trajectories alone, Auto-Dreamer outperforms fixed, RL-trained, and prompted memory baselines on ScienceWorld by 7 points while using an active memory bank 12$\times$ smaller than the strongest baseline, and continues to lead on held-out ALFWorld and WebArena without retraining -- using 6$\times$ less memory than the strongest baseline on ALFWorld.
+
+语言代理越来越多地对相关任务流进行操作，但现有的记忆系统很难将积累的经验转化为可重用的知识。检索增强和结构化记忆方法可以有效地记录每个会话的观察结果，但通常将获取和整合结合到单个在线过程中，使代理无法跨会话进行全局视图来发现重复出现的模式、抽象共享过程或修剪冗余条目。受互补学习系统理论的启发，我们提出了 Auto-Dreamer，一种用于语言代理记忆的学习离线巩固器。 Auto-Dreamer 将快速的每会话内存获取与缓慢的跨会话整合分开。给定类型化内存库的选定工作区域，合并器将该区域视为只读证据，执行有界工具使用来检查条目和与出处相关的源轨迹，并合成一个新的紧凑替换集，该替换集跨会话抽象并取代原始区域。我们通过 GRPO 训练 Auto-Dreamer，使用端到端代理性能作为奖励信号，学习如何巩固通过快速在线体验获得的记忆。仅在 ScienceWorld 轨迹上进行训练，Auto-Dreamer 的性能比 ScienceWorld 上的固定、强化学习和提示记忆基线高出 7 个点，同时使用比最强基线小 12$\times$ 的活动记忆库，并且在不进行重新训练的情况下继续在保留的 ALFWorld 和 WebArena 上领先 - 使用比 ALFWorld 上最强基线少 6$\times$ 的内存。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-20 (11 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-05-20
