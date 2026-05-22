@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-22](papers/2026-05-22.md) - 7 papers
 - [2026-05-21](papers/2026-05-21.md) - 5 papers
 - [2026-05-20](papers/2026-05-20.md) - 11 papers
 - [2026-05-19](papers/2026-05-19.md) - 9 papers
@@ -78,6 +79,130 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-22 (7 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-05-22
+
+**Paper Count**: 7
+
+---
+
+## 1. Steins;Gate Drive: Semantic Safety Arbitration over Structured Futures for Latency-Decoupled LLM Planning / Steins;Gate Drive：针对延迟解耦 LLM 规划的结构化期货的语义安全仲裁
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22456v1](http://arxiv.org/abs/2605.22456v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22456v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cloud-hosted LLM driver agents provide useful semantic judgments, but their inference latency exceeds stepwise vehicle-control windows. Learned world models predict futures, but they usually keep future generation and action selection inside large coupled loops. We present SteinsGateDrive, a latency-decoupled planner-runtime architecture in which the worldline metaphor from the eponymous story names one plausible consequence of an intervention: the LLM selects counterfactual driving futures before the final control instant, and a runtime reuses the selected forecast only while safety contracts remain valid. The generator builds three world-line roles: alpha nominal ego-conditioned futures, beta interaction counterfactuals around nearby vehicles, and gamma hazard-stress futures such as braking, cut-ins, or blocked corridors. The selected branch becomes a typed StrategicForecast with horizon, validity/abort conditions, fallback, and authority. On a within-subject, matched-seed normal-highway protocol with 10 seeds and 20 steps, GPT-5.4 mini reduces effective lag from +3.07 s at 1-second horizon to -0.01 s at 4-second horizon while preserving the measured no-collision safety boundary. The architecture's safety contribution comes from the atom-predicate runtime check, not from the drift score, which functions as a refresh-frequency knob.
+
+云托管的 LLM 驱动程序代理提供有用的语义判断，但它们的推理延迟超过了逐步车辆控制窗口。学习的世界模型可以预测未来，但它们通常将未来的生成和行动选择保留在大型耦合循环内。我们提出了 SteinsGateDrive，一种延迟解耦的规划器运行时架构，其中来自同名故事的世界隐喻命名了干预的一个合理后果：法学硕士在最终控制时刻之前选择反事实驾驶未来，并且运行时仅在安全合同仍然有效时重用所选的预测。该生成器构建了三个世界线角色：α 名义自我调节未来，β 附近车辆周围的交互反事实，以及伽玛危险压力未来，例如制动、切入或堵塞走廊。选定的分支将成为具有范围、有效性/中止条件、后备和权限的类型化战略预测。在具有 10 个种子和 20 个步骤的受试者内匹配种子正常高速公路协议中，GPT-5.4 mini 将有效滞后从 1 秒水平的 +3.07 秒减少到 4 秒水平的 -0.01 秒，同时保留测量的无碰撞安全边界。该架构的安全贡献来自原子谓词运行时检查，而不是来自漂移分数，漂移分数充当刷新频率旋钮。
+
+</details>
+
+---
+
+## 2. Pre-VLA: Preemptive Runtime Verification for Reliable Vision-Language-Action and World-Model Rollouts / Pre-VLA：先发制人的运行时验证，实现可靠的视觉-语言-动作和世界模型的推出
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22446v1](http://arxiv.org/abs/2605.22446v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22446v1)
+
+**Categories**: cs.CV, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While large vision-language-action (VLA) models and generative world models (WM) have advanced long-horizon embodied intelligence, their practical deployment remains challenged by uncertainty in learning-based action generation. Low-quality actions may cause physical failures during execution or lead to misleading world-model rollouts with redundant rendering costs. To address this issue, we propose Pre-VLA, a unified runtime verification architecture that performs preemptive action validity assessment before physical execution or world-model imagination. Pre-VLA leverages an efficient multimodal backbone with modality-aware pooling and a lightweight dual-branch head to predict both safety confidence and critic-derived advantage scores for candidate action chunks. To handle severe class imbalance and unstable boundary decisions, we train Pre-VLA with a multi-task objective combining Focal classification, advantage regression, and soft-threshold calibration. During deployment, a dual-mode preemptive resampling scheduler filters low-quality actions and triggers adaptive resampling under a limited computation budget. Experiments on the LIBERO benchmark show that Pre-VLA improves the average closed-loop success rate across four suites from 30.79\% to 37.62\% over RynnVLA-002, reduces task execution steps, achieves 183.9 ms average forward verification time per action chunk, and mitigates error accumulation in world-model rollouts.
+
+虽然大型视觉语言动作（VLA）模型和生成世界模型（WM）具有先进的长视野体现智能，但它们的实际部署仍然受到基于学习的动作生成的不确定性的挑战。低质量的操作可能会在执行过程中导致物理故障，或者导致误导性的世界模型推出以及冗余的渲染成本。为了解决这个问题，我们提出了 Pre-VLA，这是一种统一的运行时验证架构，可以在物理执行或世界模型想象之前执行先发制人的动作有效性评估。 Pre-VLA 利用高效的多模态主干和模态感知池和轻量级双分支头来预测候选动作块的安全置信度和评论家得出的优势分数。为了处理严重的类别不平衡和不稳定的边界决策，我们使用结合焦点分类、优势回归和软阈值校准的多任务目标来训练 Pre-VLA。在部署过程中，双模式抢占式重采样调度程序会过滤低质量的操作，并在有限的计算预算下触发自适应重采样。 LIBERO 基准测试表明，与 RynnVLA-002 相比，Pre-VLA 将四个套件的平均闭环成功率从 30.79% 提高到 37.62%，减少了任务执行步骤，实现每个操作块的平均前向验证时间为 183.9 毫秒，并减少了世界模型部署中的错误累积。
+
+</details>
+
+---
+
+## 3. Beyond Euclidean Proximity: Repairing Latent World Models with Horizon-Matched Trajectory Reachability Metrics / 超越欧几里德邻近度：使用地平线匹配轨迹可达性指标修复潜在世界模型
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22164v1](http://arxiv.org/abs/2605.22164v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22164v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models can contain the state needed for control, yet their terminal-cost interface can expose the planner to the wrong decision-relevant information. In common latent MPC, candidate sequences are ranked by Euclidean distance between predicted terminal and goal latent states; this assumes that raw latent distance weights reachability-relevant variables correctly. We propose trajectory reachability metrics (TRM), a post-hoc terminal-ranking method for fixed latent world models. TRM trains a small pairwise head from logged trajectory structure and uses it as a replacement or hybrid cost; the encoder, dynamics, sampler, optimizer, and evaluation manifests remain fixed. The key design choice is horizon-aware supervision: the metric is trained on broad, balanced temporal separations to match the long-horizon terminal candidate ranking problem. On a hard TwoRoom benchmark, raw latent planning with LeWorldModel (LeWM) reaches 7.0% success, while full-horizon TRM reaches 97.0%; shuffled temporal-label controls stay at 0.0%. The same recipe improves a PLDM baseline from 32.7% to 84.0% across three seeds, and a short-horizon TRM variant reaches only 35.0% with the 100,000 pair budget. In TwoRoom, we provide mechanistic evidence for why TRM works: XY position is linearly decodable (R^2=0.998), yet raw latent MSE misranks candidates; the XY-probe rowspace accounts for less than 1% of terminal-goal latent MSE but carries most candidate-quality signal; and SCSA audits show that TRM improves the ordering and selected endpoint seen by the planner. On PushT go50/go75, TRM-style task-state metrics improve SCSA ranking and selected final distance more cleanly than closed-loop success, motivating auxiliary hybrid costs in continuous manipulation. TRM is the planner-facing repair, and audits explain when terminal reachability metrics should replace or augment raw latent proximity.
+
+潜在世界模型可以包含控制所需的状态，但它们的终端成本接口可能会让规划者暴露于错误的决策相关信息。在常见的潜在MPC中，候选序列通过预测终端和目标潜在状态之间的欧几里得距离进行排序；这假设原始潜在距离正确地对可达性相关变量进行加权。我们提出了轨迹可达性度量（TRM），这是一种用于固定潜在世界模型的事后终端排名方法。 TRM 根据记录的轨迹结构训练一个小的成对头，并将其用作替换或混合成本；编码器、动态、采样器、优化器和评估清单保持不变。关键的设计选择是视野感知监督：该度量在广泛、平衡的时间间隔上进行训练，以匹配长视野终端候选排序问题。在 TwoRoom 硬基准上，LeWorldModel (LeWM) 的原始潜在规划成功率达到 7.0%，而全视野 TRM 达到 97.0%；打乱的时间标签控件保持在 0.0%。同样的配方将三个种子的 PLDM 基线从 32.7% 提高到 84.0%，而短视野 TRM 变体在 100,000 对预算下仅达到 35.0%。在 TwoRoom 中，我们提供了 TRM 工作原理的机制证据：XY 位置是线性可解码的 (R^2=0.998)，但原始潜在 MSE 会对候选者进行错误排名； XY 探针行空间占最终目标潜在 MSE 的不到 1%，但携带了大多数候选质量信号； SCSA 审计表明，TRM 改进了规划者看到的排序和选择端点。在 PushT go50/go75 上，TRM 风格的任务状态指标提高了 SCSA 排名，并比闭环成功更干净地选择了最终距离，从而激发了连续操作中的辅助混合成本。 TRM 是面向规划者的修复，审计解释了终端可达性指标何时应取代或增强原始潜在接近度。
+
+</details>
+
+---
+
+## 4. Efficient Agentic Reasoning Through Self-Regulated Simulative Planning / 通过自我调节模拟规划进行高效代理推理
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22138v1](http://arxiv.org/abs/2605.22138v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22138v1)
+
+**Categories**: cs.AI, cs.CL, cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+How should an agent decide when and how to plan? A dominant approach builds agents as reactive policies with adaptive computation (e.g., chain-of-thought), trained end-to-end expecting planning to emerge implicitly. Without control over the presence, structure, or horizon of planning, these systems dramatically increase reasoning length, yielding inefficient token use without reliable accuracy gains. We argue efficient agentic reasoning benefits from decomposing decision-making into three systems: simulative reasoning (System II) grounding deliberation in future-state prediction via a world model; self-regulation (System III) deciding when and how deeply to plan via a learned configurator; and reactive execution (System I) handling fine-grained action. Simulative reasoning provides unified planning across diverse tasks without per-domain engineering, while self-regulation ensures the planner is invoked only when needed. To test this, we develop SR$^2$AM (Self-Regulated Simulative Reasoning Agentic LLM), realizing both as distinct stages within an LLM's chain-of-thought, with the LLM as world model. We explore two instantiations: recording decisions from a prompted multi-module system (v0.1) and reconstructing structured plans from traces of pretrained reasoning LLMs (v1.0), trained via supervised then reinforcement learning (RL). Across math, science, tabular analysis, and web information seeking, v0.1-8B and v1.0-30B achieve Pass@1 competitive with 120-355B and 685B-1T parameter systems respectively, while v1.0-30B uses 25.8-95.3% fewer reasoning tokens than comparable agentic LLMs. RL increases average planning horizon by 22.8% while planning frequency grows only 2.0%, showing it learns to plan further ahead rather than more often. More broadly, learned self-regulation instantiates a principle we expect to extend beyond planning to how agents govern their own learning and adaptation.
+
+代理人应该如何决定何时以及如何计划？一种主导方法将代理构建为具有自适应计算（例如思想链）的反应性策略，经过训练的端到端期望计划隐式出现。如果不控制计划的存在、结构或范围，这些系统会极大地增加推理长度，导致令牌使用效率低下，而没有可靠的准确性增益。我们认为，有效的代理推理受益于将决策分解为三个系统：模拟推理（系统 II）通过世界模型对未来状态预测进行深思熟虑；自我调节（系统 III）通过学习的配置器决定何时以及多深地进行计划；反应式执行（系统 I）处理细粒度的操作。模拟推理提供跨不同任务的统一规划，无需按领域进行工程，而自我调节可确保仅在需要时调用规划器。为了测试这一点，我们开发了 SR$^2$AM（自我调节模拟推理代理法学硕士），将这两个阶段实现为法学硕士思想链中的不同阶段，并以法学硕士作为世界模型。我们探索了两个实例：记录来自提示多模块系统（v0.1）的决策，并根据预训练推理 LLM（v1.0）的痕迹重建结构化计划，通过监督强化学习（RL）进行训练。在数学、科学、表格分析和网络信息搜索方面，v0.1-8B 和 v1.0-30B 分别与 120-355B 和 685B-1T 参数系统相比，达到了 Pass@1 的水平，而 v1.0-30B 比同类代理 LLM 少使用了 25.8-95.3% 的推理标记。 RL 将平均规划范围提高了 22.8%，而规划频率仅增长了 2.0%，这表明它学会了提前规划而不是更频繁地规划。更广泛地说，习得性自我调节体现了一个原则，我们希望将其扩展到代理人如何管理自己的学习和适应方面。
+
+</details>
+
+---
+
+## 5. ChronoMedicalWorld: A Medical World Model for Learning Patient Trajectories from Longitudinal Care Data / ChronoMedicalWorld：从纵向护理数据中学习患者轨迹的医学世界模型
+
+**Date**: 2026-05-21 | **arXiv**: [2605.21963v1](http://arxiv.org/abs/2605.21963v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21963v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon clinical simulation -- predicting how a patient's physiology evolves over years under specified interventions -- is central to chronic-disease care, yet existing electronic health record (EHR) models are predominantly discriminative, and general-purpose large language models drift under repeated interventions. We propose the \textbf{ChronoMedicalWorld Model (CMWM)}, an action-conditioned latent world-model framework for learning patient trajectories from longitudinal care data. CMWM couples a joint-embedding state encoder with a wide action encoder that admits both structured intervention indicators and free-text communication embeddings, and trains a recurrent latent transition module under a six-term objective: next-observation supervision, next-latent prediction, SIGReg latent regularisation, and three physiology-aware shape priors (slope, continuity, large-jump penalty). A closed-loop rollout-prefix protocol matches training to deployment, so the model is optimised against the same multi-step error it exhibits at inference. As a concrete case study, we instantiate CMWM for annual estimated glomerular filtration rate (eGFR) trajectory forecasting in chronic kidney disease (CKD). On a 2{,}232-patient nephrology cohort, the CKD instantiation achieves a dynamic-50\% history rollout test mean absolute error (MAE) of 7.384 and root-mean-square error (RMSE) of 10.256, against 7.964 and 11.069 for a tuned GPT-5.5 structured-prompting baseline ($-7.28\%$ MAE, $-7.35\%$ RMSE), with the gain dominated by the dialogue portion of patient--health-coach communication. The framework is not CKD-specific: its architecture, loss design, and training protocol apply to any chronic condition that can be cast as periodic clinical state interleaved with structured and conversational interventions.
+
+长期临床模拟——预测患者的生理机能在特定干预措施下多年来如何演变——是慢性病护理的核心，但现有的电子健康记录 (EHR) 模型主要是歧视性的，通用大型语言模型在重复干预下会发生漂移。我们提出了 \textbf{ChronoMedicalWorld 模型（CMWM）}，这是一种动作条件潜在世界模型框架，用于从纵向护理数据中学习患者轨迹。 CMWM 将联合嵌入状态编码器与宽动作编码器相结合，允许结构化干预指标和自由文本通信嵌入，并在六项目标下训练循环潜在转换模块：下一个观察监督、下一个潜在预测、SIGReg 潜在正则化和三个生理感知形状先验（斜率、连续性、大跳跃惩罚）。闭环推出前缀协议将训练与部署相匹配，因此模型针对推理时表现出的相同多步错误进行了优化。作为一个具体案例研究，我们实例化了 CMWM，用于慢性肾病 (CKD) 的年度估计肾小球滤过率 (eGFR) 轨迹预测。在 2{,}232 名肾病患者队列中，CKD 实例化实现动态 50\% 历史推出测试平均绝对误差 (MAE) 为 7.384，均方根误差 (RMSE) 为 10.256，而调整后的 GPT-5.5 结构化提示基线则为 7.964 和 11.069（$-7.28\%$ MAE， $-7.35\%$ RMSE)，增益主要由患者与健康教练沟通的对话部分决定。该框架不是 CKD 特有的：其架构、损失设计和训练协议适用于任何慢性病，这些慢性病可以被视为周期性临床状态，并与结构化和对话性干预措施交织在一起。
+
+</details>
+
+---
+
+## 6. stable-worldmodel: A Platform for Reproducible World Modeling Research and Evaluation / stable-worldmodel：可再现世界建模研究和评估平台
+
+**Date**: 2026-05-20 | **arXiv**: [2605.21800v1](http://arxiv.org/abs/2605.21800v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21800v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models are central to building agents that can reason, plan, and generalize beyond their training data. However, research on world models is currently fragmented, with disparate codebases, data pipelines, and evaluation protocols hindering reproducibility and fair comparison. Current practice is further limited by three key bottlenecks: fragile one-off codebases, slow video data loading, and the lack of standardized generalization benchmarks. We present stable-worldmodel (swm), an open-source platform for standardized and reproducible world modeling research and evaluation. It delivers (1) a high-performance Lance-based data layer with native support and conversion tools for MP4, HDF5, and LeRobot datasets, (2) clean, well-tested implementations of modern world model baselines and planning solvers, and (3) a broad suite of environments and tasks extended with controllable visual, geometric, and physical factors of variation for systematic in-silico evaluation of dynamics understanding, control performance, representation quality, and out-of-distribution generalization. By unifying the full pipeline under a single, scalable framework, \texttt{swm} dramatically reduces research overhead and accelerates trustworthy progress toward reliable world models.
+
+世界模型对于构建能够在训练数据之外进行推理、规划和概括的智能体至关重要。然而，目前对世界模型的研究是分散的，不同的代码库、数据管道和评估协议阻碍了可重复性和公平比较。目前的实践进一步受到三个关键瓶颈的限制：脆弱的一次性代码库、缓慢的视频数据加载以及缺乏标准化的泛化基准。我们提出了稳定世界模型（swm），这是一个用于标准化和可重复世界建模研究和评估的开源平台。它提供了 (1) 一个基于 Lance 的高性能数据层，具有适用于 MP4、HDF5 和 LeRobot 数据集的本机支持和转换工具，(2) 现代世界模型基线和规划求解器的干净、经过充分测试的实现，以及 (3) 通过可控视觉、几何和物理变化因素扩展的广泛环境和任务，用于对动态理解、控制性能、表示质量和分布外泛化进行系统的计算机模拟评估。通过将整个流程统一在一个可扩展的框架下，\texttt{swm} 极大地减少了研究开销，并加速了向可靠的世界模型迈进的值得信赖的进展。
+
+</details>
+
+---
+
+## 7. Closed-Loop Sim-to-Real Reinforcement Learning for Deformable Microfiber Shape Control / 用于可变形微纤维形状控制的闭环模拟到真实强化学习
+
+**Date**: 2026-05-20 | **arXiv**: [2605.21688v1](http://arxiv.org/abs/2605.21688v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21688v1)
+
+**Categories**: cs.RO, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous contact-based micromanipulation is challenging because surface and interfacial interactions at the microscale are difficult to model accurately, limiting the use of conventional model-based control and sim-to-real learning. We present a closed-loop sim-to-real reinforcement learning (RL) approach for microfiber shape control on a surface. The central idea is to train geometric shape regulation in a simplified frictionless simulator and rely on real-time visual feedback during deployment to iteratively correct the observed effects of unmodeled surface interactions. An RL policy trained entirely in simulation is transferred directly to a physical dual-gripper micromanipulation system operating at 40 Hz, without retraining or domain adaptation. Using silk microfibers as a testbed, the policy achieves a mean point-wise shape error of 270 $\pm$ 80 $μ$m across twenty-four diverse initial configurations. Across nine specimens covering all combinations of three fiber diameters (50, 80, and 120 $μ$m) and three manipulated lengths (10 mm, 15mm, and 20 mm), the same policy achieves sub-millimeter final shape error without any retraining or retuning. These results show that a policy learned in a simplified simulator can achieve repeatable real-world microfiber shape regulation under surface contact, provided that the task-relevant effects of the sim-to-real mismatch remain observable and correctable within the closed feedback loop.
+
+基于接触的自主微操作具有挑战性，因为微尺度的表面和界面相互作用很难精确建模，限制了传统基于模型的控制和模拟到真实学习的使用。我们提出了一种闭环模拟到真实强化学习（RL）方法，用于表面上的微纤维形状控制。其中心思想是在简化的无摩擦模拟器中训练几何形状调节，并在部署过程中依靠实时视觉反馈来迭代纠正未建模表面相互作用的观察到的效果。完全在模拟中训练的强化学习策略会直接转移到以 40 Hz 运行的物理双夹具微操作系统，无需重新训练或域适应。使用丝微纤维作为测试平台，该策略在 24 种不同的初始配置中实现了 270 $\pm$ 80 $μ$m 的平均逐点形状误差。在涵盖三种纤维直径（50、80 和 120 $μ$m）和三种操纵长度（10 毫米、15 毫米和 20 毫米）所有组合的九个样本中，相同的策略实现了亚毫米级最终形状误差，而无需任何重新训练或重新调整。这些结果表明，在简化模拟器中学习的策略可以在表面接触下实现可重复的现实世界微纤维形状调节，前提是模拟与真实不匹配的任务相关影响在闭合反馈环内保持可观察和可纠正。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-21 (5 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-05-21
