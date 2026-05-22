@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-22](papers/2026-05-22.md) - 1 papers
 - [2026-05-21](papers/2026-05-21.md) - 19 papers
 - [2026-05-20](papers/2026-05-20.md) - 29 papers
 - [2026-05-19](papers/2026-05-19.md) - 20 papers
@@ -83,6 +84,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-22 (1 papers)</b></summary>
+
+# arXiv Video Papers - 2026-05-22
+
+**Paper Count**: 1
+
+---
+
+## 1. Decoupling Ego-Motion from Target Dynamics via Dual-Interval Motion Cues for UAV Detection / 通过用于无人机检测的双间隔运动线索将自我运动与目标动力学解耦
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22605v1](http://arxiv.org/abs/2605.22605v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22605v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Object detection from Unmanned Aerial Vehicles (UAVs) is challenged by severe ego-motion, camera jitter, and large scale variations. While modern detectors perform well on static images, their direct application to UAV video often fails, particularly for small objects in dynamic scenes. Existing motion-based methods either rely on computationally expensive optical flow or use single-interval differencing, which is sensitive to jitter and limited in capturing diverse motion patterns. We propose a vision-only motion-guided detection framework that decouples target motion from camera-induced disturbances. A homography-based Global Motion Compensation (GMC) first aligns adjacent frames. We then introduce a Dual-Interval Motion Extraction strategy that captures both short-term and long-term motion cues. To integrate these cues, a lightweight Motion-Guided Attention (MGA) module enhances feature representations within a Feature Pyramid Network. Experiments on the VisDrone-VID dataset demonstrate consistent improvements over a strong YOLOv8 baseline under severe ego-motion. Ablation studies further confirm the effectiveness of the dual-interval design and the proposed motion-guided attention mechanism.
+
+无人机 (UAV) 的物体检测面临严重的自我运动、相机抖动和大规模变化的挑战。虽然现代探测器在静态图像上表现良好，但它们直接应用于无人机视频常常会失败，特别是对于动态场景中的小物体。现有的基于运动的方法要么依赖于计算成本昂贵的光流，要么使用单间隔差分，这对抖动敏感并且在捕获不同的运动模式方面受到限制。我们提出了一种仅视觉运动引导的检测框架，该框架将目标运动与相机引起的干扰分离开来。基于单应性的全局运动补偿 (GMC) 首先对齐相邻帧。然后，我们引入了双间隔运动提取策略，该策略可捕获短期和长期运动线索。为了整合这些线索，轻量级运动引导注意力（MGA）模块增强了特征金字塔网络中的特征表示。 VisDrone-VID 数据集上的实验表明，在严重的自我运动下，与强大的 YOLOv8 基线相比，得到了一致的改进。消融研究进一步证实了双间隔设计和所提出的运动引导注意机制的有效性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-21 (19 papers)</b></summary>
 
 # arXiv Video Papers - 2026-05-21
