@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-23](papers/2026-05-23.md) - 1 papers
 - [2026-05-22](papers/2026-05-22.md) - 7 papers
 - [2026-05-21](papers/2026-05-21.md) - 5 papers
 - [2026-05-20](papers/2026-05-20.md) - 11 papers
@@ -79,6 +80,34 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-23 (1 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-05-23
+
+**Paper Count**: 1
+
+---
+
+## 1. LVDrive: Latent Visual Representation Enhanced Vision-Language-Action Autonomous Driving Model / LVDrive：潜在视觉表示增强视觉-语言-动作自动驾驶模型
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22089v1](http://arxiv.org/abs/2605.22089v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22089v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language-Action (VLA) models have emerged as a promising framework for end-to-end autonomous driving. However, existing VLAs typically rely on sparse action supervision, which underutilizes their powerful scene understanding and reasoning capabilities. Recent attempts to incorporate dense visual supervision via world modeling often overemphasize pixel-level image reconstruction, neglecting semantically meaningful scene representation learning. In this work, we propose LVDrive, a Latent Visual representation enhanced VLA framework for autonomous driving. LVDrive introduces a future scene prediction task into the VLA paradigm, where future representations are learned entirely in a high-level latent space under auxiliary supervision from a pretrained vision backbone. Departing from inefficient autoregressive generation, we jointly model future scene and motion prediction within a unified embedding space, processed in a single forward pass to conduct the future-aware reasoning. We further design a two-stage trajectory decoding strategy that explicitly leverages the learned latent future representations to refine trajectory generation. Extensive experiments on the challenging Bench2Drive benchmark demonstrate that LVDrive achieves significant improvements in closed-loop driving performance, outperforming both action supervised methods and image-reconstruction-based world model approaches.
+
+视觉-语言-动作（VLA）模型已成为端到端自动驾驶的一个有前景的框架。然而，现有的 VLA 通常依赖于稀疏的动作监督，这没有充分利用其强大的场景理解和推理能力。最近通过世界建模整合密集视觉监督的尝试往往过分强调像素级图像重建，而忽略了语义上有意义的场景表示学习。在这项工作中，我们提出了 LVDrive，一种用于自动驾驶的潜在视觉表示增强的 VLA 框架。 LVDrive 在 VLA 范式中引入了未来场景预测任务，其中未来表示完全在预训练视觉主干的辅助监督下在高级潜在空间中学习。与低效的自回归生成不同，我们在统一的嵌入空间内对未来场景和运动预测进行联合建模，并在单个前向传递中进行处理以进行未来感知推理。我们进一步设计了一个两阶段轨迹解码策略，该策略明确地利用学习到的潜在未来表示来完善轨迹生成。对具有挑战性的 Bench2Drive 基准进行的大量实验表明，LVDrive 在闭环驾驶性能方面取得了显着改进，优于动作监督方法和基于图像重建的世界模型方法。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-22 (7 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-05-22
