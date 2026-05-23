@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-23](papers/2026-05-23.md) - 24 papers
 - [2026-05-22](papers/2026-05-22.md) - 1 papers
 - [2026-05-21](papers/2026-05-21.md) - 19 papers
 - [2026-05-20](papers/2026-05-20.md) - 29 papers
@@ -84,6 +85,412 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-23 (24 papers)</b></summary>
+
+# arXiv Video Papers - 2026-05-23
+
+**Paper Count**: 24
+
+---
+
+## 1. Which Way Did It Move? Diagnosing and Overcoming Directional Motion Blindness in Video-LLMs / 它向哪个方向移动了？诊断和克服视频法学硕士中的定向运动失明
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22823v1](http://arxiv.org/abs/2605.22823v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22823v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/KHU-VLL/DeltaDirect
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video Large Language Models (Video-LLMs) have made rapid progress on temporal video understanding, yet many fail at a basic perceptual primitive: signed image-plane motion direction. On simple videos of a single object moving left, right, up, or down, most Video-LLMs perform near chance, with above-chance cases largely attributable to prediction biases rather than genuine direction understanding. We call this failure directional motion blindness. We localize the failure by tracing motion direction information through the Video-LLM pipeline. Motion direction remains linearly accessible from the vision encoder, projector, and LLM hidden states, but the readout fails to bind this signal to the correct verbal answer option, revealing a direction binding gap. Although synthetic motion direction instruction tuning reduces this gap on the source domain, motion direction concept vector analysis shows that visual complexity weakens the signal magnitude and limits out-of-domain generalization. We introduce MoDirect, a dataset family for motion direction instruction tuning and evaluation, and DeltaDirect, a diagnosis-driven, projector-level objective that predicts normalized 2-D motion vectors from adjacent-frame feature deltas. On MoDirect-SynBench, instruction tuning with DeltaDirect improves motion direction accuracy from 25.9% to 85.4%. On MoDirect-RealBench, DeltaDirect improves real-world motion direction accuracy by 21.9 points over the vanilla baseline without real-world tuning data, while preserving standard video-understanding performance. Code: https://github.com/KHU-VLL/DeltaDirect
+
+视频大语言模型（Video-LLM）在时间视频理解方面取得了快速进展，但许多模型在基本的感知原语上失败了：有符号的图像平面运动方向。在单个物体向左、向右、向上或向下移动的简单视频中，大多数视频法学硕士的表现接近偶然，而高于偶然的情况很大程度上归因于预测偏差，而不是真正的方向理解。我们将这种故障称为定向运动失明。我们通过 Video-LLM 管道跟踪运动方向信息来定位故障。运动方向仍然可以从视觉编码器、投影仪和 LLM 隐藏状态线性访问，但读出无法将此信号绑定到正确的口头答案选项，从而揭示了方向绑定间隙。尽管合成运动方向指令调整减少了源域上的这种差距，但运动方向概念向量分析表明视觉复杂性削弱了信号幅度并限制了域外泛化。我们引入了 MoDirect，一个用于运动方向指令调整和评估的数据集系列，以及 DeltaDirect，一个诊断驱动的投影仪级目标，可根据相邻帧特征增量预测归一化的二维运动向量。在 MoDirect-SynBench 上，使用 DeltaDirect 进行指令调整将运动方向精度从 25.9% 提高到 85.4%。在 MoDirect-RealBench 上，DeltaDirect 在没有实际调整数据的情况下将实际运动方向精度比普通基线提高了 21.9 个点，同时保留了标准视频理解性能。代码：https://github.com/KHU-VLL/DeltaDirect
+
+</details>
+
+---
+
+## 2. Cambrian-P: Pose-Grounded Video Understanding / Cambrian-P：基于姿势的视频理解
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22819v1](http://arxiv.org/abs/2605.22819v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22819v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Camera pose matters. The position and orientation of each viewpoint define a shared spatial coordinate frame that relates observations across video frames. Yet this signal is largely absent from multimodal LLMs (MLLMs) for video understanding, which process frames as isolated 2D snapshots, instead of the persistent scene humans perceive. We revisit pose as a lightweight supervisory signal and introduce Cambrian-P, a video MLLM augmented with per-frame learnable camera tokens and a pose regression head. With a carefully designed sampling scheme, the model achieves substantial gains of 4.5-6.5% on spatial reasoning benchmarks such as VSI-Bench, generalizes across eight additional spatial and general video QA benchmarks, and, as a byproduct, achieves state of the art streaming pose estimation on ScanNet. Surprisingly, training on pseudo-annotated poses from in-the-wild video further improves general video QA benchmarks, showing pose helps beyond spatial reasoning. Together, these results position camera pose as a fundamental signal for video models that reason about the physical world.
+
+相机姿势很重要。每个视点的位置和方向定义了一个共享的空间坐标系，该坐标系将跨视频帧的观察结果联系起来。然而，用于视频理解的多模态 LLM (MLLM) 基本上不存在这种信号，它将帧处理为孤立的 2D 快照，而不是人类感知的持久场景。我们重新审视姿势作为轻量级监督信号，并引入 Cambrian-P，这是一种视频 MLLM，增强了每帧可学习的相机标记和姿势回归头。通过精心设计的采样方案，该模型在 VSI-Bench 等空间推理基准上实现了 4.5-6.5% 的大幅提升，概括了八个额外的空间和通用视频 QA 基准，并且作为副产品，在 ScanNet 上实现了最先进的流式姿态估计。令人惊讶的是，对野外视频中的伪注释姿势进行训练进一步改善了一般视频 QA 基准，表明姿势有助于超越空间推理。总之，这些结果将相机位置作为推理物理世界的视频模型的基本信号。
+
+</details>
+
+---
+
+## 3. MotiMotion: Motion-Controlled Video Generation with Visual Reasoning / MotiMotion：利用视觉推理生成运动控制视频
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22818v1](http://arxiv.org/abs/2605.22818v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22818v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current motion-controlled image-to-video generation models rigidly follow user-provided trajectories that are often sparse, imprecise, and causally incomplete. Such reliance often yields unnatural or implausible outcomes, especially by missing secondary causal consequences. To address this, we introduce MotiMotion, a novel framework that reformulates motion control as a reasoning-then-generation problem. To encourage causally grounded and commonsense-consistent interactions, we leverage a training-free vision-language reasoner to refine image-space coordinates of primary trajectories and to hallucinate plausible secondary motions. To further improve motion naturalness, we propose a confidence-aware control scheme that modulates guidance strength, enabling the model to closely follow high-confidence plans while correcting artifacts under low-confidence inputs with its internal generative priors. To support systematic evaluation, we curate a new image-to-video benchmark, MotiBench, consisting of interaction-centric scenes where new events are triggered by motion. Both VLM-based evaluation and a human study on MotiBench demonstrate that MotiMotion produces videos with more plausible object behaviors and interaction, and is preferred over existing approaches.
+
+当前的运动控制图像到视频生成模型严格遵循用户提供的轨迹，这些轨迹通常稀疏、不精确且因果不完整。这种依赖常常会产生不自然或难以置信的结果，特别是由于忽略了次要因果后果。为了解决这个问题，我们引入了 MotiMotion，这是一种新颖的框架，它将运动控制重新表述为推理然后生成的问题。为了鼓励基于因果关系和常识一致的交互，我们利用免训练的视觉语言推理器来细化主要轨迹的图像空间坐标并产生可信的次要运动。为了进一步提高运动自然度，我们提出了一种可调节引导强度的置信感知控制方案，使模型能够紧密遵循高置信度计划，同时利用其内部生成先验纠正低置信度输入下的伪影。为了支持系统评估，我们策划了一个新的图像到视频基准 MotiBench，它由以交互为中心的场景组成，其中新事件由运动触发。基于 VLM 的评估和 MotiBench 上的人体研究都表明，MotiMotion 生成的视频具有更合理的对象行为和交互，并且比现有方法更受青睐。
+
+</details>
+
+---
+
+## 4. WorldKV: Efficient World Memory with World Retrieval and Compression / WorldKV：具有世界检索和压缩功能的高效世界内存
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22718v1](http://arxiv.org/abs/2605.22718v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22718v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive video diffusion models have enabled real-time, action-conditioned world generation. However, sustaining a persistent world, where revisiting a previously seen viewpoint yields consistent content, remains an open problem. Full KV-cache attention preserves this consistency but breaks real-time constraints: memory footprint and attention cost grow linearly with rollout length. Sliding window inference restores throughput but discards long-term consistency. We propose WorldKV, a training-free framework with two components: World Retrieval and World Compression. World Retrieval stores evicted KV-cache chunks in GPU/CPU memory and selectively retrieves scene-relevant chunks via camera/ action correspondence, inserting them back into the native attention window without re-encoding. World Compression prunes redundant tokens within each chunk via key-key similarity to an anchor frame, halving per-chunk storage to fit 2x more history under a fixed budget. On Matrix-Game-2.0 and LingBot- World-Fast, WorldKV matches or exceeds full-KV memory fidelity at roughly 2x the throughput, and is competitive with memory-trained baselines without any fine-tuning. Project Page: https://cvlab-kaist.github.io/WorldKV/
+
+自回归视频扩散模型实现了实时的、以动作为条件的世界生成。然而，维持一个持久的世界，重新审视以前的观点会产生一致的内容，仍然是一个悬而未决的问题。完整的 KV 缓存注意力保留了这种一致性，但打破了实时限制：内存占用和注意力成本随着推出长度线性增长。滑动窗口推理恢复了吞吐量，但放弃了长期一致性。我们提出了 WorldKV，一个免训练的框架，包含两个组件：世界检索和世界压缩。 World Retrieval 将被逐出的 KV 缓存块存储在 GPU/CPU 内存中，并通过相机/动作对应选择性地检索场景相关块，将它们插入到本机注意力窗口中而不需要重新编码。世界压缩通过与锚帧的键-键相似性来修剪每个块内的冗余令牌，将每个块的存储量减半，以在固定预算下容纳两倍的历史记录。在 Matrix-Game-2.0 和 LingBot-World-Fast 上，WorldKV 以大约 2 倍的吞吐量匹配或超过全 KV 内存保真度，并且无需任何微调即可与内存训练基线竞争。项目页面：https://cvlab-kaist.github.io/WorldKV/
+
+</details>
+
+---
+
+## 5. Improving Viewpoint-Invariance and Temporal Consistency for Action Detection / 提高动作检测的视点不变性和时间一致性
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22695v1](http://arxiv.org/abs/2605.22695v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22695v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Viewpoint change invariance and action temporal consistency are critical aspects for the effective deployment of human action detection of untrimmed videos. Existing appearance-based video detection methods often struggle with limited viewpoint diversity during training, while motion-based detection approaches frequently fail to model fine-grained temporal relationships across consecutive motion windows. This paper introduces a novel two-stage action detection approach designed to improve both view-invariance and global temporal coherence properties. In the first stage, we extract motion features from augmented virtual viewpoints, solely used at training. Then, the second stage introduces a new view-invariant, multi-scale temporal encoder based on selective state-space sequence modelling to aggregate information across viewpoints and time scales. Experiments on PKU-MMD and BABEL benchmarks demonstrate that this approach significantly outperforms state-of-the-art methods in all considered splits. Code and trained models are available at: https://icb-vision-ai.github.io/HydraView-TAD
+
+观点变化不变性和动作时间一致性是有效部署未修剪视频的人体动作检测的关键方面。现有的基于外观的视频检测方法在训练期间通常会遇到有限的视点多样性问题，而基于运动的检测方法经常无法对连续运动窗口之间的细粒度时间关系进行建模。本文介绍了一种新颖的两阶段动作检测方法，旨在提高视图不变性和全局时间相干性。在第一阶段，我们从增强虚拟视点提取运动特征，仅用于训练。然后，第二阶段引入了一种基于选择性状态空间序列建模的新的视图不变、多尺度时间编码器，以聚合跨视点和时间尺度的信息。 PKU-MMD 和 BABEL 基准测试的实验表明，这种方法在所有考虑的分割中都显着优于最先进的方法。代码和训练模型可在以下位置获取：https://icb-vision-ai.github.io/HydraView-TAD
+
+</details>
+
+---
+
+## 6. Swift Sampling: Selecting Temporal Surprises via Taylor Series / 快速采样：通过泰勒级数选择时间惊喜
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22678v1](http://arxiv.org/abs/2605.22678v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22678v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While most frames in long-form video are redundant, the critical information resides in temporal surprises: moments where the actual visual features deviate from their predicted evolution. Inspired by the human brain's predictive coding, we introduce Swift Sampling, an elegant, training-free frame selection algorithm that automatically identifies high-information moments in a video. Specifically, we model a video as a differentiable trajectory in the visual latent space and compute the velocity and acceleration of its features. Then, we apply Taylor expansion to project the expected path of subsequent frames. Frames that diverge sharply from this predicted manifold are identified as temporally surprising frames and selected for sampling. Unlike prior training-free methods that rely on auxiliary networks or video-specific hyperparameter tuning, Swift Sampling is incredibly lightweight, adding only 0.02x additional computational cost over baseline making it 30x cheaper overhead than leading baselines. Across three long-video question answering benchmarks and 10 different downstream tasks, Swift Sampling outperforms uniform sampling and prior query-agnostic baselines. It is especially powerful for long videos with limited frame budgets improving accuracy by up to +12.5 points.
+
+虽然长视频中的大多数帧都是冗余的，但关键信息存在于时间意外中：实际视觉特征偏离其预测演变的时刻。受人脑预测编码的启发，我们引入了 Swift Sampling，这是一种优雅的、免训练的帧选择算法，可以自动识别视频中的高信息时刻。具体来说，我们将视频建模为视觉潜在空间中的可微轨迹，并计算其特征的速度和加速度。然后，我们应用泰勒展开来投影后续帧的预期路径。与该预测流形急剧偏离的帧被识别为时间上令人惊讶的帧并被选择进行采样。与之前依赖辅助网络或视频特定超参数调整的免训练方法不同，Swift 采样非常轻量，仅比基线增加 0.02 倍的额外计算成本，使其开销比领先基线便宜 30 倍。在三个长视频问答基准和 10 个不同的下游任务中，快速采样优于统一采样和先前的查询不可知基准。它对于帧预算有限的长视频尤其强大，可将准确度提高高达 +12.5 点。
+
+</details>
+
+---
+
+## 7. H-Flow: Self-supervised Human Scene Flow via Physics-inspired Joint Multi-modal Learning / H-Flow：通过物理启发的联合多模态学习实现自我监督的人体场景流
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22629v1](http://arxiv.org/abs/2605.22629v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22629v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Parametric human models capture global pose but cannot represent the non-rigid surface dynamics of clothing and soft tissue. Generic scene flow estimates dense motion but breaks down on articulated bodies, where pixel-level supervision is also intractable to acquire. We introduce H-Flow, a dense human scene flow that captures both skeletal kinematics and surface deformation. A unified multi-head transformer estimates flow from monocular video, jointly predicting pose and depth as companion outputs. The challenge lies in the lack of supervision. In place of unattainable labels, we anchor the network in the physics of human motion, encoding geometric, structural, and biomechanical priors as cross-modal training objectives. We further introduce DynAct4D, a high-fidelity synthetic benchmark providing dense flow annotations across diverse subjects, garments, and motions. On standard benchmarks, H-Flow outperforms scene-flow and parametric baselines, and generalizes zero-shot to in-the-wild video. Code, models, and the DynAct4D benchmark will be released upon publication
+
+参数化人体模型捕获全局姿势，但无法表示衣服和软组织的非刚性表面动力学。通用场景流可以估计密集的运动，但在关节体上会崩溃，而像素级的监督也很难获取。我们引入了 H-Flow，一种密集的人体场景流，可以捕获骨骼运动学和表面变形。统一的多头变压器估计单目视频的流量，联合预测姿态和深度作为伴随输出。挑战在于缺乏监管。我们将网络锚定在人体运动物理学中，将几何、结构和生物力学先验编码为跨模式训练目标，以取代难以实现的标签。我们进一步介绍了 DynAct4D，这是一种高保真合成基准，可提供跨不同主题、服装和动作的密集流注释。在标准基准测试中，H-Flow 的性能优于场景流和参数基线，并将零镜头推广到野外视频。代码、模型和 DynAct4D 基准测试将在发布后发布
+
+</details>
+
+---
+
+## 8. VGenST-Bench: A Benchmark for Spatio-Temporal Reasoning via Active Video Synthesis / VGenST-Bench：通过主动视频合成进行时空推理的基准
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22570v1](http://arxiv.org/abs/2605.22570v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22570v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Spatio-temporal reasoning is a core capability for Multimodal Large Language Models (MLLMs) operating in the real world. As such, evaluating it precisely has become an essential challenge. However, existing spatio-temporal reasoning benchmark datasets primarily rely on static image sets or passively curated video data, which limits the evaluation of fine-grained reasoning capabilities. In this paper, we introduce VGenST-Bench, a video benchmark that employs generative models to actively synthesize highly controlled and diverse evaluation scenarios. To construct VGenST-Bench, we propose a multi-agent pipeline incorporating a human quality control stage, ensuring the quality of all generated videos and QA pairs. We establish a comprehensive 3x2x2 video taxonomy, encompassing Spatial Scale, Perspective, and Scene Dynamics to span diverse scenarios. Furthermore, we design a hierarchical task suite that decouples low-level visual perception from high-level spatio-temporal reasoning. By shifting the paradigm from passive curation to active synthesis, VGenST-Bench enables fine-grained diagnosis of spatio-temporal understanding in MLLMs.
+
+时空推理是现实世界中运行的多模态大型语言模型 (MLLM) 的核心功能。因此，对其进行精确评估已成为一项重要挑战。然而，现有的时空推理基准数据集主要依赖于静态图像集或被动策划的视频数据，这限制了细粒度推理能力的评估。在本文中，我们介绍了 VGenST-Bench，这是一种视频基准测试，它采用生成模型来主动合成高度受控和多样化的评估场景。为了构建 VGenST-Bench，我们提出了一个包含人工质量控制阶段的多智能体管道，确保所有生成的视频和 QA 对的质量。我们建立了全面的 3x2x2 视频分类法，包括空间尺度、视角和场景动态，以跨越不同的场景。此外，我们设计了一个分层任务套件，将低级视觉感知与高级时空推理分离。通过将范式从被动管理转变为主动合成，VGenST-Bench 能够对 MLLM 中的时空理解进行细粒度诊断。
+
+</details>
+
+---
+
+## 9. Cell Phantom Video Generation in Elliptical Fourier Descriptor Domain / 椭圆傅里叶描述符域中的细胞幻影视频生成
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22563v1](http://arxiv.org/abs/2605.22563v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22563v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/FrancescoBenedetto99/efd-cell-video-gen.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Training Deep Neural Networks for tracking individual cells in biomedical videos requires a large amount of annotated data. The annotation of videos for cell tracking is very time consuming and often requires domain expertise; this explains the limited availability of public annotated data to address important medical problems like tissue repair or cancer treatment. Generating synthetic videos along with their Ground Truth annotations is a promising solution that relies, as a foundational first step, on the synthesis of single cell annotations (or phantoms). Phantoms need to be time consistent, as they have to replicate biological processes that are specific to the cell types. In this work, we propose a novel framework for generating videos of cell phantoms in the Elliptical Fourier Descriptors (EFDs) domain, a compact and geometrically interpretable representation for 2D closed contours. We represent the cell phantom evolution as a multivariate time series of EFD coefficients, introducing a strong prior for cell morphology and enabling the efficient generation of sequences that evolve coherently in time. Our experimental validation proves that modelling the temporal evolution in EFD space enables the generation of biologically plausible phantom videos. Our method can be used in generative pipelines for synthesizing annotated data for cell tracking, thus strongly mitigating the annotation effort for creating new datasets. Our code is available for download here: https://github.com/FrancescoBenedetto99/efd-cell-video-gen.
+
+训练深度神经网络来跟踪生物医学视频中的单个细胞需要大量带注释的数据。用于细胞追踪的视频注释非常耗时，并且通常需要领域专业知识；这解释了解决组织修复或癌症治疗等重要医疗问题的公共注释数据的可用性有限。生成合成视频及其地面实况注释是一种很有前途的解决方案，作为基础的第一步，它依赖于单细胞注释（或模型）的合成。模型需要时间一致，因为它们必须复制特定于细胞类型的生物过程。在这项工作中，我们提出了一种新的框架，用于在椭圆傅里叶描述符（EFD）域中生成细胞模型的视频，这是一种紧凑且可几何解释的二维闭合轮廓表示。我们将细胞模型演化表示为 EFD 系数的多元时间序列，为细胞形态引入强大的先验，并能够有效生成随时间连贯演化的序列。我们的实验验证证明，对 EFD 空间中的时间演化进行建模能够生成生物学上合理的幻影视频。我们的方法可用于生成管道来合成用于细胞跟踪的注释数据，从而大大减轻创建新数据集的注释工作。我们的代码可以在这里下载：https://github.com/FrancescoBenedetto99/efd-cell-video-gen。
+
+</details>
+
+---
+
+## 10. MOTOR: A Multimodal Dataset for Two-Wheeler Rider Behavior Understanding / MOTOR：用于理解两轮车驾驶者行为的多模式数据集
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22550v1](http://arxiv.org/abs/2605.22550v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22550v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Two-wheelers account for a disproportionately high share of road fatalities in the Global South. Research on two-wheeler rider behavior, however, lags far behind four-wheelers, where multimodal datasets have driven major advances in Advanced Driver Assistance Systems (ADAS). To address this gap, we present the MOtorized TwO-wheeler Rider (MOTOR) dataset, the first large-scale, multi-view, multimodal resource dedicated to two-wheelers in dense, unstructured traffic. MOTOR comprises 1,629 sequences (25+ hours of video data) collected from 16 riders and integrates synchronized front, rear, and helmet videos, rider eye-gaze from wearable trackers, on-road audio, and telemetry (GPS, accelerometer, gyroscope). Rich annotations capture traffic context, rider state, 12 riding maneuvers spanning conventional and unconventional behaviors, and legality labels (Legal, Illegal, Unspecified). We benchmark rider behavior recognition and maneuver legality classification using state-of-the-art video action recognition backbones (CNN and Transformer-based), extended with multimodal fusion, and find that combining RGB, gaze, and telemetry consistently yields the best performance. MOTOR thus provides a unique foundation for advancing safety-critical understanding of two-wheeler riding. It offers the research community a benchmark to develop and evaluate models for behavior analysis, legality-aware prediction, and intelligent transportation systems. Dataset and code is available at https: //varuniiith.github.io/MOTOR-Dataset/
+
+在南半球国家，两轮车在道路死亡人数中所占比例极高。然而，对两轮车驾驶者行为的研究远远落后于四轮车，四轮车的多模式数据集推动了高级驾驶员辅助系统 (ADAS) 的重大进步。为了解决这一差距，我们提出了机动两轮车骑手 (MOTOR) 数据集，这是第一个专门针对密集、非结构化交通中的两轮车的大规模、多视图、多模式资源。 MOTOR 包含从 16 名骑手收集的 1,629 个序列（25 小时以上的视频数据），并集成了同步的前部、后部和头盔视频、来自可穿戴跟踪器的骑手眼睛注视、路上音频和遥测（GPS、加速计、陀螺仪）。丰富的注释可捕捉交通背景、骑手状态、涵盖传统和非常规行为的 12 种骑行动作以及合法性标签（合法、非法、未指定）。我们使用最先进的视频动作识别主干（基于 CNN 和 Transformer）对骑手行为识别和操纵合法性分类进行基准测试，并通过多模态融合进行扩展，并发现结合 RGB、凝视和遥测技术始终能产生最佳性能。因此，MOTOR 为推进对两轮车骑行的安全关键理解提供了独特的基础。它为研究界提供了开发和评估行为分析、合法性预测和智能交通系统模型的基准。数据集和代码可在 https://varuniiith.github.io/MOTOR-Dataset/ 获取
+
+</details>
+
+---
+
+## 11. Segment Anything with Motion, Geometry, and Semantic Adaptation for Complex Nonlinear Visual Object Tracking / 通过运动、几何和语义适应来分割任何物体，以实现复杂的非线性视觉对象跟踪
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22538v1](http://arxiv.org/abs/2605.22538v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22538v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/DurYi/SAMOSA.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Traditional visual object tracking (VOT) methods typically rely on task-specific supervised training, limiting their generalization to unseen objects and challenging scenarios with distractors, occlusion, and nonlinear motion. Recent vision foundation models, exemplified by SAM 2, learn strong video understanding priors from large-scale pretraining and offer a promising foundation for building more robust and generalizable trackers. However, directly applying SAM 2 to VOT remains suboptimal, as it does not explicitly model target motion dynamics or enforce geometric and semantic consistency across frames, both of which are essential for reliable tracking. To address this issue, we propose SAMOSA, a new tracking framework that adapts SAM 2 to complex VOT scenarios by explicitly leveraging motion, geometry, and semantic cues. Specifically, we introduce a lightweight nonlinear motion predictor to model target dynamics and guide mask selection as well as memory filtering. We further exploit semantic cues to detect target shifts and recover from tracking failures, while geometric cues are incorporated as structural constraints to improve tracking stability. In this way, SAMOSA bridges the gap between the implicit video understanding prior of SAM 2 and explicit tracking-oriented modeling. Extensive experiments show that SAMOSA consistently outperforms state-of-the-art SAM 2--based approaches on general benchmarks, demonstrates stronger generalization than supervised VOT methods, and achieves substantial gains on anti-UAV datasets, which typify complex nonlinear motion scenarios. Our code is available at https://github.com/DurYi/SAMOSA.
+
+传统的视觉对象跟踪（VOT）方法通常依赖于特定于任务的监督训练，这限制了它们对看不见的对象以及具有干扰物、遮挡和非线性运动的挑战性场景的泛化。最近的视觉基础模型（以 SAM 2 为代表）从大规模预训练中学习了强大的视频理解先验知识，并为构建更强大和更通用的跟踪器提供了有前途的基础。然而，直接将 SAM 2 应用于 VOT 仍然不是最理想的，因为它没有明确地模拟目标运动动力学或强制跨帧的几何和语义一致性，而这两者对于可靠跟踪都是至关重要的。为了解决这个问题，我们提出了 SAMOSA，这是一种新的跟踪框架，通过明确地利用运动、几何和语义线索，使 SAM 2 适应复杂的 VOT 场景。具体来说，我们引入了一种轻量级非线性运动预测器来对目标动态进行建模并指导掩模选择以及内存过滤。我们进一步利用语义线索来检测目标移动并从跟踪失败中恢复，同时将几何线索纳入结构约束以提高跟踪稳定性。通过这种方式，SAMOSA 弥补了 SAM 2 的隐式视频理解先验与显式跟踪导向建模之间的差距。大量实验表明，SAMOSA 在一般基准测试中始终优于最先进的基于 SAM 2 的方法，表现出比监督 VOT 方法更强的泛化能力，并在代表复杂非线性运动场景的反无人机数据集上取得了显着的成果。我们的代码可在 https://github.com/DurYi/SAMOSA 获取。
+
+</details>
+
+---
+
+## 12. Bernini: Latent Semantic Planning for Video Diffusion / Bernini：视频传播的潜在语义规划
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22344v1](http://arxiv.org/abs/2605.22344v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22344v1)
+
+**Categories**: cs.CV, cs.AI, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal large language models (MLLMs) and diffusion models have each reached remarkable maturity: MLLMs excel at reasoning over heterogeneous multimodal inputs with strong semantic grounding, while diffusion models synthesize images and videos with photorealistic fidelity. We argue that these two families can be unified through a simple division of labor: MLLMs perform semantic planning, while diffusion models render pixels from high-level semantic guidance and low-level visual features. Building on this idea, we propose Bernini, a unified framework for video generation and editing. An MLLM-based planner predicts the target semantic representation directly in the ViT embedding space, and a DiT-based renderer synthesizes pixels conditioned on this plan, augmented by text features and, for editing, source VAE features for detail preservation. Because semantics serve as the interface, the planner and renderer can be trained separately and only lightly co-trained, preserving the pretrained strengths of both components while keeping training efficient. To better handle multiple visual inputs, we introduce Segment-Aware 3D Rotary Positional Embedding (SA-3D RoPE), and further incorporate chain-of-thought reasoning in the planner to better transfer understanding into generation. Bernini achieves state-of-the-art performance across a wide range of video generation and editing benchmarks, with the MLLM's pretrained understanding translating into strong generalization on challenging editing tasks.
+
+多模态大语言模型 (MLLM) 和扩散模型均已达到显着的成熟度：MLLM 擅长对具有强大语义基础的异构多模态输入进行推理，而扩散模型则以逼真的保真度合成图像和视频。我们认为这两个系列可以通过简单的分工来统一：MLLM 执行语义规划，而扩散模型则根据高级语义指导和低级视觉特征渲染像素。基于这个想法，我们提出了 Bernini，一个用于视频生成和编辑的统一框架。基于 MLLM 的规划器直接在 ViT 嵌入空间中预测目标语义表示，基于 DiT 的渲染器合成以此规划为条件的像素，并通过文本特征进行增强，并通过编辑源 VAE 特征来保留细节。由于语义充当接口，因此规划器和渲染器可以单独训练，并且仅进行轻微的联合训练，从而保留两个组件的预训练优势，同时保持训练效率。为了更好地处理多个视觉输入，我们引入了分段感知 3D 旋转位置嵌入 (SA-3D RoPE)，并进一步将思想链推理纳入规划器中，以更好地将理解转化为生成。 Bernini 在各种视频生成和编辑基准中实现了最先进的性能，MLLM 的预训练理解转化为对具有挑战性的编辑任务的强大概括。
+
+</details>
+
+---
+
+## 13. MuKV: Multi-Grained KV Cache Compression for Long Streaming Video Question-Answering / MuKV：用于长流视频问答的多粒度 KV 缓存压缩
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22269v1](http://arxiv.org/abs/2605.22269v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22269v1)
+
+**Categories**: cs.CV, cs.AI, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long streaming video QA remains challenging due to growing visual tokens and limited reasoning length of large language models (LLMs). KV-caching stores the Key-Value (KV) of the historical tokens via LLM prefill and enables more efficient streaming QA. However, existing methods cache every one or two frames, causing redundant memory usage and losing fine-grained spatial details within frame or temporal contexts across frames. This paper proposes MuKV, a method that features a multi-grained KV cache compression module and a semi-hierarchical retrieval approach to improve both efficiency and accuracy for long streaming VideoQA. For the offline KV cache, MuKV extracts visual representations at patch-, frame-, and segment-levels. The multiple levels of granularity preserve both local cues and global temporal context, while maintaining efficiency with a dual signal token compression mechanism guided by self-attention and frequency. For online QA, MuKV designs a semi-hierarchical retrieval method to retrieve relevant KV caches for answer generation. Experiments on long-streaming VideoQA benchmarks show that MuKV significantly improves answer accuracy, without sacrificing memory and online QA efficiency. Moreover, our compression mechanism alone brings consistent benefits across answer accuracy, memory, and QA efficiency over baselines, showcasing highly effective contribution.
+
+由于视觉标记的不断增长和大型语言模型 (LLM) 的推理长度有限，长流视频 QA 仍然具有挑战性。 KV 缓存通过 LLM 预填充存储历史令牌的键值 (KV)，并实现更高效的流式 QA。然而，现有的方法每隔一帧或两帧进行缓存，导致冗余的内存使用，并丢失帧内的细粒度空间细节或跨帧的时间上下文。本文提出了 MuKV，一种采用多粒度 KV 缓存压缩模块和半分层检索方法的方法，可提高长流视频质量检查的效率和准确性。对于离线 KV 缓存，MuKV 提取补丁级、帧级和段级的视觉表示。多个粒度级别保留了局部线索和全局时间上下文，同时通过自注意力和频率引导的双信号令牌压缩机制保持了效率。对于在线 QA，MuKV 设计了一种半分层检索方法来检索相关的 KV 缓存以生成答案。长流 VideoQA 基准测试表明，MuKV 显着提高了答案准确性，而无需牺牲内存和在线 QA 效率。此外，我们的压缩机制本身就在答案准确性、记忆力和 QA 效率方面带来了与基线相比一致的优势，展示了高效的贡献。
+
+</details>
+
+---
+
+## 14. Zero-Shot Temporal Action Localization Through Textual Guidance / 通过文本指导进行零样本时间动作本地化
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22201v1](http://arxiv.org/abs/2605.22201v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22201v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Zero-shot temporal action localization (ZS-TAL) consists of classifying and localizing actions in untrimmed videos, where action classes are unseen at training time. Existing work uses Vision and Language Models (VLMs), taking advantage of their strong zero-shot transfer capabilities. Yet, these models face evident challenges with fine-grained action classification, making it difficult to directly use them to distinguish between the presence and absence of an action. Most current methods for ZS-TAL address these challenges by training models on large-scale video datasets, which require annotated data and often result in limited generalization performance. Recently, approaches discarding the use of labeled data have emerged as an alternative. Following this direction, we propose a novel approach, ``Textual Guidance for finer localization of actions in videos'' (TEGU), that compensates for the lack of supervision from training data by exploiting rich textual information derived from large language models and structured text extracted from captions. This additional linguistic context can improve fine-grained discrimination by providing richer cues about fine-grained action differences within videos. We validate the effectiveness of the proposed method by conducting experiments on the THUMOS14 and the ActivityNet-v1.3 datasets. Our results show that, by exploiting rich textual information for improved action localization, TEGU outperforms state-of-the-art ZS-TAL approaches that do not involve training
+
+零镜头时间动作定位（ZS-TAL）包括对未修剪视频中的动作进行分类和定位，其中动作类在训练时是看不见的。现有工作使用视觉和语言模型（VLM），利用其强大的零样本传输能力。然而，这些模型在细粒度的动作分类方面面临着明显的挑战，因此很难直接使用它们来区分动作的存在和不存在。当前大多数 ZS-TAL 方法通过在大规模视频数据集上训练模型来解决这些挑战，这需要带注释的数据，并且通常会导致泛化性能有限。最近，放弃使用标记数据的方法已经作为替代方案出现。沿着这个方向，我们提出了一种新颖的方法，“视频中动作精细定位的文本指导”（TEGU），它通过利用从大型语言模型导出的丰富文本信息和从字幕中提取的结构化文本来弥补训练数据监督的缺乏。这种额外的语言环境可以通过提供有关视频中细粒度动作差异的更丰富线索来改善细粒度辨别。我们通过在 THUMOS14 和 ActivityNet-v1.3 数据集上进行实验来验证所提出方法的有效性。我们的结果表明，通过利用丰富的文本信息来改进动作定位，TEGU 的性能优于不涉及训练的最先进的 ZS-TAL 方法
+
+</details>
+
+---
+
+## 15. No Pose, No Problem in 4D: Feed-Forward Dynamic Gaussians from Unposed Multi-View Videos / 无姿势，4D 中没有问题：来自未摆姿势的多视图视频的前馈动态高斯
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22190v1](http://arxiv.org/abs/2605.22190v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22190v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent feed-forward 3D gaussian splatting methods have made dramatic progress on individual aspects of 3D scene reconstruction, but no existing method jointly addresses dynamic content, multi-view input, and unknown camera poses in a single feed-forward pass. Methods that handle dynamics either require accurate camera poses or accept only monocular input; pose-free multi-view methods address only static scenes; and per-scene optimization methods bridge some of these gaps but at minutes-to-hours cost per scene. We introduce NoPo4D, the first feed-forward system that addresses this empty quadrant. Building on a pretrained geometry backbone and recent 4D Gaussian frameworks, NoPo4D introduces a velocity decomposition that splits Gaussian motion into per-pixel image-plane shifts and depth changes, allowing direct supervision from pseudo ground-truth optical flow on the 2D component. This sidesteps both the differentiable rendering that couples prior posed methods to pose accuracy and the 3D motion ground truth that prior pose-free methods require. The system is rounded out by a bidirectional motion encoder for cross-view and cross-frame feature aggregation, and view-dependent opacity that mitigates cross-view and cross-timestep Gaussian misalignments. On four multi-view dynamic benchmarks, NoPo4D consistently outperforms prior feed-forward baselines, and with an optional post-optimization stage surpasses per-scene optimization methods, while running orders of magnitude faster.
+
+最近的前馈 3D 高斯喷射方法在 3D 场景重建的各个方面取得了巨大进展，但现有的方法还没有在单次前馈过程中联合解决动态内容、多视图输入和未知相机姿势的问题。处理动力学的方法要么需要准确的相机姿势，要么只接受单眼输入；无姿态多视图方法仅适用于静态场景；每个场景的优化方法弥补了其中一些差距，但每个场景的成本为几分钟到几小时。我们推出了 NoPo4D，这是第一个解决这个空象限的前馈系统。 NoPo4D 基于预训练的几何主干和最新的 4D 高斯框架，引入了速度分解，将高斯运动分解为每像素图像平面移位和深度变化，从而允许从 2D 组件上的伪地面实况光流进行直接监督。这回避了将先前的姿势方法与姿势精度结合起来的可微渲染，以及先前的无姿势方法所需的 3D 运动地面实况。该系统由用于跨视图和跨帧特征聚合的双向运动编码器以及可减轻跨视图和跨时间步高斯未对准的视图相关不透明度组成。在四个多视图动态基准测试中，NoPo4D 始终优于先前的前馈基线，并且通过可选的后优化阶段超越了每个场景的优化方法，同时运行速度更快了几个数量级。
+
+</details>
+
+---
+
+## 16. ST-SimDiff: Balancing Spatiotemporal Similarity and Difference for Efficient Video Understanding with MLLMs / ST-SimDiff：平衡时空相似性和差异，利用 MLLM 实现高效视频理解
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22158v1](http://arxiv.org/abs/2605.22158v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22158v1)
+
+**Categories**: cs.AI, cs.CV
+
+**Code**: https://github.com/bingjunluo/ST-SimDiff.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal Large Language Models (MLLMs) face significant computational overhead when processing long videos due to the massive number of visual tokens required. To improve efficiency, existing methods primarily reduce redundancy by pruning or merging tokens based on importance or similarity. However, these approaches largely overlook a critical dimension of video content, i.e., changes and turning points, and they lack a collaborative model for spatio-temporal relationships. To address this, we propose a new perspective: similarity is for identifying redundancy, while difference is for capturing key events. Based on this, we designed a training-free framework named ST-SimDiff. We first construct a spatio-temporal graph from the visual tokens to uniformly model their complex associations. Subsequently, we employ a parallel dual-selection strategy: 1) similarity-based selection uses community detection to retain representative tokens, compressing static information; 2) temporal difference-based selection precisely locates content-changing points to preserve tokens that capture key dynamic shifts. This allows it to preserve both static and dynamic content with a minimal number of tokens. Extensive experiments show our method significantly outperforms state-of-the-art approaches while substantially reducing computational costs. Our code is available in https://github.com/bingjunluo/ST-SimDiff.
+
+由于需要大量视觉标记，多模态大型语言模型 (MLLM) 在处理长视频时面临巨大的计算开销。为了提高效率，现有方法主要通过根据重要性或相似性修剪或合并标记来减少冗余。然而，这些方法在很大程度上忽视了视频内容的一个关键维度，即变化和转折点，并且它们缺乏时空关系的协作模型。为了解决这个问题，我们提出了一个新的视角：相似性是为了识别冗余，而差异性是为了捕捉关键事件。基于此，我们设计了一个免训练框架ST-SimDiff。我们首先从视觉标记构建一个时空图，以统一建模它们的复杂关联。随后，我们采用并行双选择策略：1）基于相似性的选择使用社区检测来保留代表性标记，压缩静态信息； 2）基于时间差异的选择精确定位内容变化点，以保留捕获关键动态变化的标记。这使得它能够用最少数量的令牌保留静态和动态内容。大量的实验表明，我们的方法显着优于最先进的方法，同时大大降低了计算成本。我们的代码可以在 https://github.com/bingjunluo/ST-SimDiff 中找到。
+
+</details>
+
+---
+
+## 17. One Sentence, One Drama: Personalized Short-Form Drama Generation via Multi-Agent Systems / 一句话一剧：通过多智能体系统生成个性化短剧
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22144v1](http://arxiv.org/abs/2605.22144v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22144v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing approaches for digital short-drama production typically rely on one-shot LLM generated scripts and loosely coupled pipelines, which fail to satisfy three key requirements of short-drama generation: (1) narrative pacing, resulting in weak hooks, insufficient escalation, and unattractive endings; (2) spatial consistency, leading to drifting scene layouts and inconsistent character positions across clips; and (3) production-level quality control, requiring extensive manual review and correction across script and visual stages. We present One Sentence, One Drama, a hierarchical multi-agent framework that transforms a user's single-sentence idea into a fully produced short drama through structured intermediate modules and iterative refinement. Our approach is built upon three key components: (1) a multi-agent debate-based story generation module that enforces short-drama pacing and narrative coherence; (2) a 3D-grounded first-frame generation mechanism that establishes a shared spatial reference for consistent character positioning and scene layout across clips; and (3) multi-stage reviewer loops that perform comprehensive error detection and targeted revision across script, visual, and video generation stages. We also introduce scene-level BGM matching and scene transition planning to improve the audience's immersive experience. To systematically evaluate this task, we introduce Short-Drama-Bench, a benchmark that extends standard video quality metrics with short-drama-specific criteria. Experimental results demonstrate that our method significantly outperforms existing pipelines in narrative quality, cross-clip consistency, and overall viewing experience.
+
+现有的数字短剧制作方法通常依赖于LLM一次性生成的脚本和松散耦合的流程，无法满足短剧生成的三个关键要求：（1）叙事节奏，导致挂钩薄弱、升级不足、结局不吸引人； (2) 空间一致性，导致场景布局漂移和剪辑中角色位置不一致； (3) 制作级质量控制，需要在脚本和视觉阶段进行大量的人工审查和纠正。我们提出了One Sentence, One Drama，一种分层多智能体框架，通过结构化的中间模块和迭代细化，将用户的单句想法转化为完整制作的短剧。我们的方法建立在三个关键组成部分之上：（1）基于多智能体辩论的故事生成模块，可增强短剧节奏和叙事连贯性； (2) 基于 3D 的第一帧生成机制，为跨剪辑的一致角色定位和场景布局建立共享空间参考； (3) 多阶段审阅者循环，在脚本、视觉和视频生成阶段执行全面的错误检测和有针对性的修订。我们还引入场景级BGM匹配和场景转场规划，提升观众的沉浸式体验。为了系统地评估这项任务，我们引入了 Short-Drama-Bench，这是一个用短剧特定标准扩展标准视频质量指标的基准。实验结果表明，我们的方法在叙事质量、跨剪辑一致性和整体观看体验方面显着优于现有的流程。
+
+</details>
+
+---
+
+## 18. Enhancing Visual Token Representations for Video Large Language Models via Training-Free Spatial-Temporal Pooling and Gridding / 通过免训练的时空池化和网格化增强视频大语言模型的视觉标记表示
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22078v1](http://arxiv.org/abs/2605.22078v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22078v1)
+
+**Categories**: cs.AI, cs.CV
+
+**Code**: https://github.com/bingjunluo/ST-GridPool.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in Multimodal Large Language Models (MLLMs) have significantly advanced video understanding tasks, yet challenges remain in efficiently compressing visual tokens while preserving spatiotemporal interactions. Existing methods, such as LLaVA family, utilize simplistic pooling or interpolation techniques that overlook the intricate dynamics of visual tokens. To bridge this gap, we propose ST-GridPool, a novel training-free visual token enhancement method designed specifically for Video LLMs. Our approach integrates Pyramid Temporal Gridding (PTG), which captures multi-grained spatiotemporal interactions through hierarchical temporal gridding, and Norm-based Spatial Pooling (NSP), which preserves high-information visual regions by leveraging the correlation between token norms and semantic richness. Extensive experiments on various benchmarks demonstrate that ST-GridPool consistently enhances performance of Video LLMs without requiring costly retraining. Our method offers an efficient and plug-and-play solution for improving visual token representations. Our code is available in https://github.com/bingjunluo/ST-GridPool.
+
+多模态大语言模型（MLLM）的最新进展显着推进了视频理解任务，但在有效压缩视觉标记同时保留时空交互方面仍然存在挑战。现有的方法，例如 LLaVA 系列，利用简单的池化或插值技术，忽略了视觉标记的复杂动态。为了弥补这一差距，我们提出了 ST-GridPool，这是一种专为视频法学硕士设计的新型免训练视觉标记增强方法。我们的方法集成了金字塔时间网格（PTG）和基于规范的空间池（NSP），前者通过分层时间网格捕获多粒度的时空交互，后者通过利用令牌规范和语义丰富度之间的相关性来保留高信息视觉区域。对各种基准的大量实验表明，ST-GridPool 能够持续增强视频 LLM 的性能，而无需进行昂贵的再培训。我们的方法提供了一种高效且即插即用的解决方案，用于改进视觉标记表示。我们的代码可以在 https://github.com/bingjunluo/ST-GridPool 中找到。
+
+</details>
+
+---
+
+## 19. ORBIS: Output-Guided Token Reduction with Distribution-Aware Matching for Video Diffusion Acceleration / ORBIS：输出引导的令牌减少与分布感知匹配以实现视频传播加速
+
+**Date**: 2026-05-21 | **arXiv**: [2605.22015v1](http://arxiv.org/abs/2605.22015v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22015v1)
+
+**Categories**: cs.CV, cs.AR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion Transformer (DiT) has emerged as a powerful model architecture for generating high-quality images and videos. In the case of video DiT, 3D Spatio-Temporal Attention increases token length in proportion to the number of frames, sharply increasing computational cost. Token reduction methods mitigate this cost by exploiting spatial redundancy, but existing approaches rely on inaccurate similarity estimates and lightweight matching algorithms, resulting in poor matching quality and only marginal acceleration.   To overcome these limitations, we propose ORBIS, an SW-HW co-designed accelerator for video DiT. ORBIS leverages the output activation from the previous timestep to obtain more accurate inter-token similarity, substantially improving matching quality and enabling a higher token reduction ratio. We further introduce a Distribution-Aware Token Matching (DATM) algorithm that captures global token distribution and explicitly minimizes token-pair loss for additional gains. To fully hide DATM latency, we design specialized, deeply pipelined hardware and minimize its hardware cost through quantization, occupying only 2.4% of total area with negligible accuracy loss. Extensive experiments show that ORBIS achieves about 2x higher token reduction ratio than the state-of-the-art approach, AsymRnR, while delivering up to 4.5x speedup and 79.3% energy reduction compared to an NVIDIA A100 GPU.
+
+Diffusion Transformer (DiT) 已成为生成高质量图像和视频的强大模型架构。在视频 DiT 的情况下，3D 时空注意力会根据帧数按比例增加标记长度，从而急剧增加计算成本。令牌减少方法通过利用空间冗余来减轻这种成本，但现有方法依赖于不准确的相似性估计和轻量级匹配算法，导致匹配质量较差且仅有边际加速。   为了克服这些限制，我们提出了 ORBIS，这是一款软件与硬件共同设计的视频 DiT 加速器。 ORBIS 利用前一个时间步的输出激活来获得更准确的令牌间相似度，从而显着提高匹配质量并实现更高的令牌缩减率。我们进一步引入了分布感知令牌匹配（DATM）算法，该算法捕获全局令牌分布并显式最小化令牌对损失以获得额外收益。为了完全隐藏 DATM 延迟，我们设计了专门的深度流水线硬件，并通过量化最大限度地降低其硬件成本，仅占用总面积的 2.4%，精度损失可以忽略不计。大量实验表明，与最先进的方法 AsymRnR 相比，ORBIS 的令牌减少率提高了约 2 倍，同时与 NVIDIA A100 GPU 相比，加速速度提高了 4.5 倍，能耗降低了 79.3%。
+
+</details>
+
+---
+
+## 20. Foresee-to-Ground: From Predictive Temporal Perception to Evidence-Driven Reasoning for Video Temporal Grounding / 预见到地面：从预测时间感知到视频时间地面的证据驱动推理
+
+**Date**: 2026-05-21 | **arXiv**: [2605.21973v1](http://arxiv.org/abs/2605.21973v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21973v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current Video-LLM approaches for Video Temporal Grounding (VTG) typically rely on direct timestamp generation from an unstructured visual-token stream, often leading to brittle numerics and inconsistent boundaries. To address this, we propose Foresee-to-Ground (F2G), a framework that reformulates VTG as a verifiable Identify-then-Measure problem. F2G integrates Predictive Temporal Perception with Evidence-Driven Reasoning: it learns boundary-sensitive temporal representations to build a video-wide evidence pool of candidate event segments, and exposes these segments to the LLM as citable evidence units that bind boundary prediction to explicit event hypotheses. By decoupling event identification from precise boundary measurement, F2G stabilizes grounding and makes predictions verifiable. Extensive experiments demonstrate that F2G consistently improves grounding accuracy across diverse benchmarks, transfers robustly across different Video-LLM backbones, and preserves general video understanding capabilities.
+
+当前用于视频时间接地 (VTG) 的视频 LLM 方法通常依赖于从非结构化视觉令牌流直接生成时间戳，这通常会导致脆弱的数字和不一致的边界。为了解决这个问题，我们提出了 Foresee-to-Ground (F2G)，这是一个将 VTG 重新表述为可验证的识别然后测量问题的框架。 F2G 将预测时间感知与证据驱动推理相结合：它学习边界敏感时间表示来构建候选事件片段的视频范围证据池，并将这些片段作为可引用的证据单元暴露给 LLM，将边界预测与显式事件假设绑定起来。通过将事件识别与精确边界测量分离，F2G 可以稳定基础并使预测可验证。大量实验表明，F2G 在不同的基准测试中持续提高了接地精度，在不同的 Video-LLM 主干网之间稳健地传输，并保留了一般视频理解能力。
+
+</details>
+
+---
+
+## 21. EvoVid: Temporal-Centric Self-Evolution for Video Large Language Models / EvoVid：视频大语言模型的以时间为中心的自我进化
+
+**Date**: 2026-05-21 | **arXiv**: [2605.21931v1](http://arxiv.org/abs/2605.21931v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21931v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent Video Large Language Models (Video-LLMs) have demonstrated strong capabilities in video reasoning through reinforcement learning (RL). However, existing RL pipelines rely heavily on human-annotated tasks and solutions, making them costly to scale and fundamentally constrained by human expertise. Self-evolving frameworks have recently emerged as a promising alternative through autonomous Questioner-Solver self-play. Unfortunately, these approaches are primarily designed for static modalities such as text and images, fundamentally failing to capture the temporal dynamics that are central to video reasoning. In this work, we propose $\textbf{EvoVid}$, a temporal-centric self-evolving framework that enables Video-LLMs to improve directly from raw, unannotated videos. Specifically, we introduce two complementary temporal-centric rewards: a temporal-aware Questioner reward that encourages temporally dependent question generation through temporal perturbation sensitivity, and a temporal-grounded Solver reward that provides automatic temporal supervision via inherent video segment localization. Extensive experiments across four base models and six benchmarks demonstrate consistent improvements over both base models and existing self-evolving baselines, achieving competitive performance with supervised methods. These results highlight temporal-centric self-evolution as an effective and scalable paradigm for video understanding and reasoning.
+
+最近的视频大语言模型（Video-LLM）通过强化学习（RL）展示了强大的视频推理能力。然而，现有的强化学习管道严重依赖人工注释的任务和解决方案，这使得它们的扩展成本高昂，并且从根本上受到人类专业知识的限制。最近，通过自主提问者-解决者自我博弈，自我进化框架成为一种有前途的替代方案。不幸的是，这些方法主要是针对静态模式（例如文本和图像）而设计的，从根本上无法捕获视频推理核心的时间动态。在这项工作中，我们提出了 $\textbf{EvoVid}$，一个以时间为中心的自我进化框架，使视频法学硕士能够直接从原始的、未注释的视频中进行改进。具体来说，我们引入了两种互补的以时间为中心的奖励：一个时间感知的提问者奖励，通过时间扰动敏感性鼓励时间相关的问题生成，以及一个基于时间的求解器奖励，通过固有的视频片段定位提供自动时间监督。跨越四个基本模型和六个基准的广泛实验表明，基本模型和现有的自我进化基线都得到了一致的改进，通过监督方法实现了有竞争力的性能。这些结果凸显了以时间为中心的自我进化作为视频理解和推理的有效且可扩展的范例。
+
+</details>
+
+---
+
+## 22. Seizure-Semiology-Suite (S3): A Clinically Multimodal Dataset, Benchmark, and Models for Seizure Semiology Understanding / 癫痫症状学套件 (S3)：用于理解癫痫症状学的临床多模态数据集、基准和模型
+
+**Date**: 2026-05-21 | **arXiv**: [2605.21852v1](http://arxiv.org/abs/2605.21852v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21852v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While Multimodal Large Language Models (MLLMs) have demonstrated remarkable proficiency in general video understanding, their capacity to interpret involuntary, and spatio-temporally evolving pathologic motor behaviors such as seizure semiology remains largely untested. To address this gap, we introduce Seizure-Semiology-Suite, a clinically grounded dataset and benchmark for fine-grained, structured seizure semiology understanding. The dataset includes 438 seizure videos annotated with over 35,000 dense labels covering 20 ILAE-defined semiological features. Building on this dataset, we propose a seven-task hierarchical benchmark that systematically evaluates MLLMs from low-level visual perception to temporal sequencing, narrative report generation, and seizure diagnosis. To enable clinically meaningful evaluation of generated reports, we further introduce the Report Quality Index for Seizure Semiology (Seizure-RQI). Extensive baselines across 11 open-weight MLLMs reveal systematic weaknesses in laterality reasoning, temporal localization, symptom sequencing, and clinically faithful reporting. We show that seizure-specific fine-tuning substantially improves performance across tasks, and that a two-stage neuro-symbolic framework achieves an F1 score of 0.96 on epileptic versus non-epileptic seizure classification. Seizure-Semiology-Suite establishes a rigorous benchmark for evaluating multimodal models in safety-critical medical video understanding and guides the development of clinically reliable, domain-adaptive multimodal intelligence.
+
+虽然多模态大语言模型（MLLM）在一般视频理解方面表现出了卓越的熟练程度，但它们解释非自愿和时空演变的病理运动行为（例如癫痫症状学）的能力在很大程度上尚未经过测试。为了解决这一差距，我们引入了 Seizure-Semiology-Suite，这是一个基于临床的数据集和细粒度、结构化癫痫症状学理解的基准。该数据集包括 438 个癫痫发作视频，注释有超过 35,000 个密集标签，涵盖 20 个 ILAE 定义的符号学特征。在此数据集的基础上，我们提出了一个七任务分层基准，系统地评估从低级视觉感知到时间排序、叙述报告生成和癫痫诊断的 MLLM。为了对生成的报告进行具有临床意义的评估，我们进一步引入了癫痫症状学报告质量指数 (Seizure-RQI)。 11 个开放权重 MLLM 的广泛基线揭示了偏侧推理、时间定位、症状排序和临床忠实报告方面的系统性弱点。我们表明，针对癫痫发作的微调可显着提高跨任务的性能，并且两阶段神经符号框架在癫痫发作与非癫痫发作分类上的 F1 得分为 0.96。 Seizure-Semiology-Suite 为评估安全关键型医疗视频理解中的多模态模型建立了严格的基准，并指导临床可靠、领域自适应多模态智能的开发。
+
+</details>
+
+---
+
+## 23. BodyReLux: Temporally Consistent Full-Body Video Relighting / BodyReLux：时间一致的全身视频重新照明
+
+**Date**: 2026-05-20 | **arXiv**: [2605.21766v1](http://arxiv.org/abs/2605.21766v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21766v1)
+
+**Categories**: cs.CV, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Being able to relight human performance is a fundamental task for post production and content creation. We present BodyReLux, a subject-specific video diffusion-based framework for relighting full-body human performances in a temporally consistent way. Our model is trained on a hybrid dataset of pixel-aligned video relighting pairs, covering a diverse combination of lighting conditions, performances and viewpoints. To acquire such dataset, we combine traditional static One-Light-at-a-Time (OLAT) capture and a novel dynamic performance capture in which two smoothly varying lighting sequences are rapidly interleaved. Because the lighting operates above the human flicker-fusion threshold, the interleaving does not appear to strobe. We train our video relighting model from a pretrained text-to-video model to fully leverage the generative priors for producing high quality videos. To achieve accurate lighting control, we introduce a new lighting conditioning method that represents each light source as a token. We further condition on sequences of lighting using masked attention to support dynamic lighting control. Together with a carefully designed data augmentation pipeline, we achieve photorealistic, robust, and temporally consistent video relighting of subject-specific human performances.
+
+能够重新点燃人类的表现是后期制作和内容创作的一项基本任务。我们提出了 BodyReLux，一个基于特定主题的视频扩散框架，用于以时间一致的方式重新照亮全身人类表演。我们的模型在像素对齐视频重新照明对的混合数据集上进行训练，涵盖照明条件、性能和视点的多种组合。为了获取这样的数据集，我们结合了传统的静态一次一灯（OLAT）捕获和一种新颖的动态性能捕获，其中两个平滑变化的照明序列快速交错。由于照明工作在人类闪烁融合阈值之上，因此交错不会出现频闪。我们从预先训练的文本到视频模型来训练我们的视频重新点亮模型，以充分利用生成先验来生成高质量的视频。为了实现精确的照明控制，我们引入了一种新的照明调节方法，将每个光源表示为令牌。我们使用屏蔽注意力进一步调节照明序列以支持动态照明控制。结合精心设计的数据增强管道，我们实现了对特定主题的人类表演的逼真、稳健且时间一致的视频重新照明。
+
+</details>
+
+---
+
+## 24. Flat-Pack Bench: Evaluating Spatio-Temporal Understanding in Large Vision-Language Models through Furniture Assembly / 平板工作台：通过家具组装评估大型视觉语言模型的时空理解
+
+**Date**: 2026-05-20 | **arXiv**: [2605.21625v1](http://arxiv.org/abs/2605.21625v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.21625v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The emergence of Large Vision-Language Models (LVLMs) has significantly advanced video understanding capabilities. However, existing benchmarks focus predominantly on coarse-grained tasks such as action segmentation, classification, captioning, and retrieval. Furthermore, these benchmarks often rely on entities that can be easily identified verbally, like household objects, animals, human subjects, etc., limiting their applicability to complex, in-the-wild video scenarios. But, many applications such as furniture assembly, cooking, etc., require step-by-step fine-grained spatio-temporal understanding of the video, which is not sufficiently evaluated in current benchmarks. To address this gap, we introduce Flat-Pack Bench, a novel benchmark centered on furniture assembly tasks. Our benchmark evaluates LVLMs on nuanced tasks, including temporal ordering of assembly actions, temporal localization of assembly state, understanding part mating, and tracking, using multiple-choice questions paired with visual prompts highlighting relevant parts as references for fine-grained questions. Our experiments reveal that state-of-the-art LVLMs struggle significantly with fine-grained spatio-temporal reasoning, highlighting their limitations in effectively leveraging temporal information from videos, limited tracking ability, and understanding of spatial interactions like physical contact.
+
+大视觉语言模型（LVLM）的出现显着提高了视频理解能力。然而，现有的基准主要关注粗粒度任务，例如动作分割、分类、字幕和检索。此外，这些基准通常依赖于可以轻松口头识别的实体，例如家用物品、动物、人类受试者等，限制了它们对复杂的野外视频场景的适用性。但是，许多应用（例如家具组装、烹饪等）需要对视频进行逐步的细粒度时空理解，而当前的基准测试对此没有进行充分的评估。为了解决这一差距，我们推出了 Flat-Pack Bench，这是一种以家具组装任务为中心的新颖基准。我们的基准测试在细致入微的任务上评估 LVLM，包括装配动作的时间顺序、装配状态的时间定位、理解零件配合和跟踪，使用多项选择问题与突出显示相关零件的视觉提示作为细粒度问题的参考。我们的实验表明，最先进的 LVLM 在细粒度时空推理方面存在很大困难，凸显了它们在有效利用视频中的时间信息、有限的跟踪能力以及对物理接触等空间交互的理解方面的局限性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-22 (1 papers)</b></summary>
 
 # arXiv Video Papers - 2026-05-22
