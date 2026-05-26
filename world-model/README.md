@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-26](papers/2026-05-26.md) - 3 papers
 - [2026-05-23](papers/2026-05-23.md) - 1 papers
 - [2026-05-22](papers/2026-05-22.md) - 7 papers
 - [2026-05-21](papers/2026-05-21.md) - 5 papers
@@ -80,6 +81,66 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-26 (3 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-05-26
+
+**Paper Count**: 3
+
+---
+
+## 1. UWM-JEPA: Predictive World Models That Imagine in Belief Space / UWM-JEPA：在置信空间中想象的预测世界模型
+
+**Date**: 2026-05-25 | **arXiv**: [2605.25313v1](http://arxiv.org/abs/2605.25313v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.25313v1)
+
+**Categories**: cs.LG, cs.AI, cs.RO, stat.ML
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models for partially observed environments must imagine multiple compatible hidden futures and steer between them under counterfactual actions. Joint Embedding Predictive Architectures (JEPAs) do this in latent space, but a vector-valued latent has no internal structure for carrying the belief over hidden continuations through blind rollout. We introduce the Unitary World Model JEPA (UWM-JEPA), a JEPA world model with a density-matrix latent on a joint system-environment space and a learned unitary predictor. The construction preserves the joint-state spectrum exactly during rollout, so the predictor itself cannot dissipate the represented uncertainty.   On a hidden-velocity indicator task requiring five-step forward simulation under a given action sequence with the target observation masked, UWM-JEPA reaches 0.77 accuracy and degrades monotonically as actions are perturbed; a parameter-matched LSTM-JEPA trained under the same counterfactual-target objective and action head collapses to majority-class accuracy (0.53) under every action condition. Under blind rollout, UWM-JEPA loses fewer than ten points of probe R^2 at short horizons while vector-latent baselines lose forty-one and sixty-eight; both nevertheless tie on a held-out context probe, locating the separation in the predictor rather than the encoder. Action sensitivity itself requires training against counterfactual rather than teacher-forced targets, a finding that applies beyond the unitary parameterisation. For JEPA world models to imagine under partial observability, latent geometry and predictor dynamics matter, not frozen context-encoding capacity alone.
+
+部分观察环境的世界模型必须想象多个兼容的隐藏未来，并在反事实行动下在它们之间进行引导。联合嵌入预测架构（JEPA）在潜在空间中执行此操作，但向量值潜在没有内部结构来通过盲目推出来承载对隐藏延续的信念。我们介绍了酉世界模型 JEPA (UWM-JEPA)，这是一种 JEPA 世界模型，具有隐藏在联合系统环境空间上的密度矩阵和学习的酉预测器。该构造在推出期间准确地保留了联合状态谱，因此预测器本身无法消除所表示的不确定性。   在隐藏速度指示器任务中，需要在给定的动作序列下进行五步前向模拟，并且目标观察被屏蔽，UWM-JEPA 的准确度达到 0.77，并且随着动作受到扰动而单调降级；在相同的反事实目标目标和动作头下训练的参数匹配的 LSTM-JEPA 在每种动作条件下都会崩溃到多数类精度 (0.53)。在盲推出下，UWM-JEPA 在短视野内丢失探测 R^2 的不到 10 个点，而矢量潜在基线丢失 41 和 68；然而，两者都依赖于保留的上下文探测，在预测器而不是编码器中定位分离。动作敏感性本身需要针对反事实目标而不是教师强制目标进行训练，这一发现超出了单一参数化的范围。对于在部分可观测性下想象的 JEPA 世界模型来说，潜在几何和预测动力学很重要，而不仅仅是冻结上下文编码能力。
+
+</details>
+
+---
+
+## 2. Grow-Prune-Freeze Networks: Adaptive & Continual Learning Technique for Olfactory Navigation / 生长-修剪-冻结网络：嗅觉导航的自适应和持续学习技术
+
+**Date**: 2026-05-24 | **arXiv**: [2605.25170v1](http://arxiv.org/abs/2605.25170v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.25170v1)
+
+**Categories**: cs.LG, cs.AI, cs.ET, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Training data for olfaction is scattered through disparate, non-standardized datasets that limit the ability to build representative world models. Olfactory navigation is a highly dynamic and non-stationary task that benefits from real-time continual learning. We introduce an adaptive framework called Grow-Prune-Freeze (GPF) networks that enable an agent to continually learn through growing, pruning, and freezing early layers of its policy in response to world complexity. Grounding GPFs in non-linear random matrix theory, we show that the work of Pennington & Worth (2017) can be extended from single hidden layers to n-layer continual-learning models, and that eigenvalue composition of network weights is preserved as successive layers are added. We show that GPFs based on Expected SARSA achieve a 94% success rate on turbulent plume navigation - a partially observable, non-stationary task representative of the "big world" challenges that motivate adaptive learning in robotics - and provide supporting methodology for applying GPFs in other world models. Further experiments amount evidence that GPFs may generalize well to other machine learning tasks such as reinforcement learning in Atari, image classification, and autoregressive language models. We open source all code and data to encourage improvements on and more research in olfactory robotics.
+
+嗅觉训练数据分散在不同的非标准化数据集中，这限制了构建代表性世界模型的能力。嗅觉导航是一项高度动态且非静态的任务，受益于实时持续学习。我们引入了一种称为“增长-修剪-冻结”（GPF）网络的自适应框架，该框架使代理能够通过增长、修剪和冻结其策略的早期层来不断学习，以应对世界的复杂性。以非线性随机矩阵理论为基础的 GPF，我们表明 Pennington & Worth (2017) 的工作可以从单个隐藏层扩展到 n 层连续学习模型，并且随着连续层的添加，网络权重的特征值组成得以保留。我们表明，基于预期 SARSA 的 GPF 在湍流羽流导航（一种部分可观察的非平稳任务，代表激励机器人自适应学习的“大世界”挑战）上实现了 94% 的成功率，并为在其他世界模型中应用 GPF 提供了支持方法。进一步的实验证据表明，GPF 可以很好地推广到其他机器学习任务，例如 Atari 中的强化学习、图像分类和自回归语言模型。我们开源所有代码和数据，以鼓励嗅觉机器人技术的改进和更多研究。
+
+</details>
+
+---
+
+## 3. Reinforcement Learning for Laser Additive Manufacturing Scan-Order Optimisation: A Bilevel Proxy--FEA Diagnostic Framework for Reward and World-Model Diagnosis / 激光增材制造扫描顺序优化的强化学习：双层代理——用于奖励和世界模型诊断的 FEA 诊断框架
+
+**Date**: 2026-05-24 | **arXiv**: [2605.25063v1](http://arxiv.org/abs/2605.25063v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.25063v1)
+
+**Categories**: cs.LG, cond-mat.mtrl-sci
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning offers a promising approach for scan-order optimisation in laser additive manufacturing, where sequential scan decisions critically influence thermal accumulation, residual stress, distortion, and final part quality. A central challenge in applying RL to this domain lies in reward and world-model fidelity: full finite-element analysis is computationally prohibitive for dense in-the-loop evaluation, while cheap thermo-inspired proxy metrics, though efficient, may capture only partial aspects of the true thermo-mechanical objectives. This paper investigates a bilevel Proxy--FEA diagnostic framework for reward and world-model diagnosis in reinforcement-learning-guided scan-order optimisation. The lower level employs lightweight scan-path and thermo-inspired proxies for rapid candidate generation and preliminary policy-side screening, while the upper level utilises sparse Abaqus FEA simulations to provide simulation-based reference labels. The framework is examined on a simplified whole-track heating LDED32 stripe benchmark comprising ten representative scan strategies. Final-cooling residual Mises stress, U3 vertical distortion, and PEEQ plasticity metrics reveal an observed stress--distortion trade-off rather than a single monotonic quality objective. Within the evaluated set, the center_out strategy emerges as a robust compromise candidate, while raster_left_to_right and edge_in form opposing endpoints of the trade-off. Proxy--FEA alignment analysis shows that current cheap path-based metrics predominantly capture distortion-related (U3) behaviour and exhibit only weak correlation with the sparse FEA reference labels. These findings highlight that proxy-only reward designs risk misalignment in future RL training and underscore the value of sparse FEA reference signals for diagnostic-guided reward and world-model refinement prior to large-scale policy optimisation.
+
+强化学习为激光增材制造中的扫描顺序优化提供了一种有前途的方法，其中顺序扫描决策严重影响热积累、残余应力、变形和最终零件质量。将强化学习应用于该领域的一个核心挑战在于奖励和世界模型保真度：完整的有限元分析在计算上无法进行密集的循环评估，而廉价的热启发代理指标虽然有效，但可能只能捕获真实热机械目标的部分方面。本文研究了强化学习引导的扫描顺序优化中用于奖励和世界模型诊断的双层代理 - FEA 诊断框架。下层采用轻量级扫描路径和热启发代理来快速生成候选者和初步政策面筛选，而上层利用稀疏 Abaqus FEA 模拟来提供基于模拟的参考标签。该框架在简化的全轨加热 LDED32 条带基准上进行了检查，该基准包括十种代表性的扫描策略。最终冷却残余米塞斯应力、U3 垂直变形和 PEEQ 塑性指标揭示了观察到的应力-变形权衡，而不是单一的单调质量目标。在评估集中，center_out 策略成为稳健的折衷候选方案，而 raster_left_to_right 和 edge_in 形成权衡的相反端点。代理-FEA 对齐分析表明，当前廉价的基于路径的指标主要捕获与失真相关的 (U3) 行为，并且仅表现出与稀疏 FEA 参考标签的弱相关性。这些发现凸显了仅代理奖励设计在未来强化学习训练中存在错位的风险，并强调了稀疏 FEA 参考信号对于大规模政策优化之前诊断引导奖励和世界模型细化的价值。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-23 (1 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-05-23
