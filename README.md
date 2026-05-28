@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-28](papers/2026-05-28.md) - 9 papers
 - [2026-05-27](papers/2026-05-27.md) - 29 papers
 - [2026-05-23](papers/2026-05-23.md) - 24 papers
 - [2026-05-22](papers/2026-05-22.md) - 1 papers
@@ -86,6 +87,166 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-28 (9 papers)</b></summary>
+
+# arXiv Video Papers - 2026-05-28
+
+**Paper Count**: 9
+
+---
+
+## 1. Proprio: Latent Self-Scoring and Inference-Time Refinement for Physically Plausible Video Generation / Proprio：潜在的自我评分和推理时间细化，用于生成物理上合理的视频
+
+**Date**: 2026-05-27 | **arXiv**: [2605.28230v1](http://arxiv.org/abs/2605.28230v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.28230v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern video generative models produce visually impressive results, yet frequently violate basic physical principles. We propose Proprio, a training-free framework that enables a frozen video generator to assess and improve the physical plausibility of its own outputs. Inspired by proprioception, the biological sense of one's own movement, Proprio treats the model's flow residual under controlled latent perturbations as a self-scoring signal. Samples that are better explained by the generator's learned dynamics induce smaller and more stable residuals. We aggregate this signal across timesteps and perturbations, focus it on motion-relevant regions with a dynamic spatiotemporal mask, and use it for best-of-N search, gradient-based self-refinement, or both. Across text-to-video and image-to-video benchmarks, Proprio consistently improves physical plausibility, outperforming VLM-based scoring, and external world-model baselines in several settings. With TurboWan2.2, Proprio improves Physics-IQ from 32.2 to 37.5 (+16.5%) and VideoPhy2-hard physical commonsense from 45.6 to 55.0 (+20.6%). Human evaluation further shows that raters prefer Proprio-selected or refined videos for physical plausibility in roughly two-thirds of comparisons. These results suggest that frozen video generators contain actionable internal signals for evaluating and improving the physical plausibility of their own outputs.
+
+现代视频生成模型产生令人印象深刻的视觉结果，但经常违反基本的物理原理。我们提出了 Proprio，一种免训练框架，使冻结视频生成器能够评估和提高其自身输出的物理合理性。受到本体感觉（对自身运动的生物感觉）的启发，Proprio 将模型在受控潜在扰动下的血流残差视为自评分信号。通过生成器学习的动力学更好地解释的样本会产生更小且更稳定的残差。我们跨时间步长和扰动聚合该信号，将其集中在具有动态时空掩模的运动相关区域，并将其用于最佳 N 搜索、基于梯度的自细化或两者。在文本到视频和图像到视频基准测试中，Proprio 不断提高物理合理性，在多种设置中优于基于 VLM 的评分和外部世界模型基线。借助 TurboWan2.2，Proprio 将Physics-IQ 从 32.2 提高到 37.5 (+16.5%)，将 VideoPhy2-hard 物理常识从 45.6 提高到 55.0 (+20.6%)。人类评估进一步表明，在大约三分之二的比较中，评估者更喜欢 Proprio 选择或精炼的视频，以实现物理合理性。这些结果表明，冻结视频生成器包含可操作的内部信号，用于评估和提高其自身输出的物理合理性。
+
+</details>
+
+---
+
+## 2. VidPrism: Heterogeneous Mixture of Experts for Image-to-Video Transfer / VidPrism：图像到视频传输专家的异构组合
+
+**Date**: 2026-05-27 | **arXiv**: [2605.28229v1](http://arxiv.org/abs/2605.28229v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.28229v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/Lrrrr549/VidPrism.git
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+With the rapid development of pre-training technologies, adapting large-scale Vision-Language Models (VLMs) for video understanding \emph{\ie} image-to-video transfer learning has become a dominant paradigm. To achieve superior performance, it raises as an effective strategy among recent advances to employ Mixture-of-Experts (MoE) to enhance VLMs' temporal modeling capabilities. However, conventional MoE designs suffer from expert homogenization, where all experts act as identical generalists, inefficiently learning spatio-temporal features from undifferentiated video streams. To overcome this problem, we propose VidPrism, a novel heterogeneous temporal Mixture-of-Experts framework. VidPrism pioneers a division of labor by deploying functionally specialized experts, each assuming a role ranging from spatial understanding to temporal modeling. To feed these specialists appropriately, we introduce a content-aware, multi-rate sampling module that dynamically generates streams ranging from semantically rich to motion-focused representations, providing specialized inputs for experts. Furthermore, a dynamic, bidirectional fusion mechanism enables synergistic information exchange between these pathways, leading to a comprehensive video representation. Extensive experiments on various video recognition benchmarks demonstrate that VidPrism achieves state-of-the-art performance and effectively fosters expert specialization. Our source code is available at \href{https://github.com/Lrrrr549/VidPrism.git}{https://github.com/Lrrrr549/VidPrism.git}.
+
+随着预训练技术的快速发展，采用大规模视觉语言模型（VLM）进行视频理解\emph{\ie}图像到视频的迁移学习已成为主导范例。为了实现卓越的性能，最近的进展中提出了一种有效策略，即采用专家混合 (MoE) 来增强 VLM 的时间建模能力。然而，传统的 MoE 设计面临专家同质化的问题，所有专家都充当相同的通才，从无差别的视频流中学习时空特征的效率低下。为了克服这个问题，我们提出了 VidPrism，一种新颖的异构时间专家混合框架。 VidPrism 通过部署功能专业的专家开创了劳动分工，每个专家都承担从空间理解到时间建模的角色。为了适当地满足这些专家的需求，我们引入了一个内容感知、多速率采样模块，该模块动态生成从丰富语义到以运动为中心的表示的流，为专家提供专门的输入。此外，动态的双向融合机制可以实现这些路径之间的协同信息交换，从而实现全面的视频表示。对各种视频识别基准的大量实验表明，VidPrism 实现了最先进的性能，并有效地培养了专家的专业化。我们的源代码位于 \href{https://github.com/Lrrrr549/VidPrism.git}{https://github.com/Lrrrr549/VidPrism.git}。
+
+</details>
+
+---
+
+## 3. Which Pretraining Paradigm Better Serves Spatial Intelligence? An Empirical Comparison of Vision-Language and Video Generation Models / 哪种预训练范式更好地服务于空间智能？视觉语言和视频生成模型的实证比较
+
+**Date**: 2026-05-27 | **arXiv**: [2605.28132v1](http://arxiv.org/abs/2605.28132v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.28132v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/om-ai-lab/Probing-VLM-VGM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Spatial intelligence requires visual representations that capture both semantic objects and geometric structure in the physical world. To support this, two major pre-training schemes are now widely used as foundation backbones: Vision-Language Models (VLMs), which use language supervision to align visual observations with semantic concepts, and Video Generation Models (VGMs), which learn from temporally evolving visual worlds. However, it still remains unclear which pre-training scheme provides a better representation substrate for spatial intelligence. In this paper, we present the first systematic frozen-feature probing study of VLMs and VGMs across three representative axes of spatial intelligence: semantic tagging, instance grouping, and 3D geometry prediction. Using the lightweight probe, our framework enables a controlled comparison of what information is already encoded in frozen representations from two model families. Experimental results reveal a clear complementarity: VLMs are stronger at semantic tagging and instance grouping, while VGMs provide more accessible signals for dense geometry and camera motion. Moreover, a naive fusion of the two already yields a representation that excels at both geometry and semantics, suggesting a promising direction for building stronger spatial-intelligence backbones by effectively integrating features from both model families. Our code is available at \href{https://github.com/om-ai-lab/Probing-VLM-VGM}{https://github.com/om-ai-lab/Probing-VLM-VGM}.
+
+空间智能需要视觉表示来捕获物理世界中的语义对象和几何结构。为了支持这一点，现在广泛使用两种主要的预训练方案作为基础支柱：视觉语言模型（VLM）和视频生成模型（VGM），前者使用语言监督使视觉观察与语义概念保持一致，后者从随时间变化的视觉世界中学习。然而，目前仍不清楚哪种预训练方案为空间智能提供了更好的表示基础。在本文中，我们提出了第一个针对空间智能的三个代表轴的 VLM 和 VGM 的系统冻结特征探测研究：语义标记、实例分组和 3D 几何预测。使用轻量级探针，我们的框架可以对两个模型系列的冻结表示中已编码的信息进行受控比较。实验结果揭示了明显的互补性：VLM 在语义标记和实例分组方面更强，而 VGM 为密集几何和相机运动提供了更容易访问的信号。此外，两者的简单融合已经产生了一种在几何和语义方面都表现出色的表示，这表明通过有效集成两个模型系列的特征来构建更强大的空间智能骨干的有前途的方向。我们的代码可在 \href{https://github.com/om-ai-lab/Probing-VLM-VGM}{https://github.com/om-ai-lab/Probing-VLM-VGM} 获取。
+
+</details>
+
+---
+
+## 4. CogPortrait: Fine-Grained Eye-Region Control in Portrait Animation via Hierarchical Agent Planning / CogPortrait：通过分层代理规划在肖像动画中进行细粒度的眼部区域控制
+
+**Date**: 2026-05-27 | **arXiv**: [2605.28056v1](http://arxiv.org/abs/2605.28056v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.28056v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Portrait animation methods have achieved substantial visual quality and lip synchronization, but fine-grained manipulation of the eye region still faces a trade-off between input granularity and motion accuracy. Existing methods using emotion labels or coarse text prompts are insufficient for describing subtle ocular dynamics, whereas approaches based on Action Units or driving videos provide higher fidelity at the cost of a heavier input burden. These limitations are still restrictive for beyond-emotion states (e.g., thinking) and drowsiness. In light of the above, we propose CogPortrait, a two-stage framework that generates portrait animations from high-level labels. In the first stage, three chain-of-thought Multimodal Large Language Models (MLLMs) agents compile high-level labels into facial keypoints through temporal event planning, prototype retrieval, and composition from a real-behavior library, and semantic-physiological constraint enforcement. In the second stage, a DiT-based video generation backbone synthesizes the final animation conditioned on the keypoints, reference portrait, audio, and text prompt, enhanced by a dynamic classifier-free guidance strategy with eye-region-aware reweighting and KTO-based refinement for boundary cases. We further introduce the EMH benchmark covering diverse emotions and beyond-emotion categories with two AU-level metrics for evaluating fine-grained eye-region and head-motion control. Extensive experiments on HDTF and the EMH benchmark demonstrate that CogPortrait achieves more precise eye-region control than existing methods while maintaining supe- rior visual quality and identity consistency
+
+肖像动画方法已经实现了显着的视觉质量和唇形同步，但是眼睛区域的细粒度操纵仍然面临输入粒度和运动精度之间的权衡。使用情感标签或粗略文本提示的现有方法不足以描述微妙的视觉动态，而基于动作单元或驾驶视频的方法以较重的输入负担为代价提供了更高的保真度。这些限制对于超情绪状态（例如思考）和困倦仍然具有限制性。鉴于上述情况，我们提出了 CogPortrait，这是一个两阶段框架，可从高级标签生成肖像动画。在第一阶段，三个思想链多模态大语言模型（MLLM）智能体通过时间事件规划、原型检索和真实行为库的组合以及语义生理约束执行，将高级标签编译成面部关键点。在第二阶段，基于 DiT 的视频生成主干根据关键点、参考肖像、音频和文本提示合成最终动画，并通过动态无分类器指导策略（具有眼睛区域感知重新加权和基于 KTO 的边界情况细化）来增强。我们进一步介绍了 EMH 基准，涵盖不同的情感和超越情感类别，并具有两个 AU 级指标，用于评估细粒度的眼部区域和头部运动控制。对 HDTF 和 EMH 基准的大量实验表明，CogPortrait 比现有方法实现了更精确的眼部区域控制，同时保持了卓越的视觉质量和身份一致性
+
+</details>
+
+---
+
+## 5. VCap: Hypergeometric Rewards for Weak-to-Strong Visual Captioning / VCap：弱到强视觉字幕的超几何奖励
+
+**Date**: 2026-05-27 | **arXiv**: [2605.28023v1](http://arxiv.org/abs/2605.28023v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.28023v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual captioning requires models to capture visual content faithfully while minimizing both omission and hallucination. As the dominant paradigm for captioning, MLLMs have achieved strong performance through scaling and high-quality data. Recently, RL has emerged as a key route to driving MLLMs toward higher precision and broader coverage, however, existing reward designs for captioning fail to provide fine-grained and reliable signals for factual verification, limiting their effectiveness. To address this, we propose VCap, a Witness-Adjudicator reward that pairs the reference caption (a witness) with the visual signal (an adjudicator). By explicitly verifying factual consistency between the reference and policy-generated captions grounded in the visual signal, VCap delivers a reward signal with hypergeometric-distribution-level precision for caption quality verification. This design enables effective learning even from imperfect references, facilitating weak-to-strong generalization in RL training. In our experiments, an 8B model trained with VCap outperforms open- and closed-source SOTA models on multiple image and video captioning benchmarks. Human evaluation further confirms its strong alignment with factual correctness. Additionally, VCap improves MLLM perceptual capability, generalizes across tasks, and surpasses best-of-N distillation, challenging prior assumptions about RLVR.
+
+视觉字幕要求模型忠实地捕捉视觉内容，同时最大限度地减少遗漏和幻觉。作为字幕的主导范式，MLLM 通过扩展和高质量数据实现了强大的性能。最近，强化学习已成为推动 MLLM 实现更高精度和更广泛覆盖范围的关键途径，然而，现有的字幕奖励设计无法为事实验证提供细粒度和可靠的信号，限制了其有效性。为了解决这个问题，我们提出了 VCap，一种见证人-裁决者奖励，它将参考标题（见证人）与视觉信号（裁决者）配对。通过明确验证基于视觉信号的参考字幕和策略生成的字幕之间的事实一致性，VCap 提供具有超几何分布级精度的奖励信号，用于字幕质量验证。这种设计甚至可以从不完美的参考中进行有效的学习，从而促进强化学习训练中从弱到强的泛化。在我们的实验中，使用 VCap 训练的 8B 模型在多个图像和视频字幕基准测试中优于开源和闭源 SOTA 模型。人类评估进一步证实了其与事实正确性的强烈一致性。此外，VCap 提高了 MLLM 感知能力，跨任务泛化，并超越了 N 最佳蒸馏，挑战了关于 RLVR 的先前假设。
+
+</details>
+
+---
+
+## 6. SmartDirector: Keyframe-Conditioned Cinematic Video Generation with Narrative Pacing Control / SmartDirector：具有叙事节奏控制的关键帧条件电影视频生成
+
+**Date**: 2026-05-27 | **arXiv**: [2605.27891v1](http://arxiv.org/abs/2605.27891v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27891v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The narrative quality of a video fundamentally determines its perceptual value. Although existing video generation methods can produce visually appealing content, they predominantly rely on sparse conditioning signals such as text prompts or first/last frames, which limits precise control over narrative structure and temporal pacing. In this paper, we propose SmartDirector, a framework that enhances the narrative capacity of video generation models through multiple keyframes. SmartDirector supports flexible generation scenarios including single-shot generation, multi-shot narrative synthesis, and video extension. The framework operates in two stages: Director-Gen generates a low-resolution video conditioned on the provided keyframes, and Director-SR refines the output by exploiting high-resolution keyframes as semantic anchors to recover fine-grained details. To enable robust multi-keyframe training, we construct a data pipeline that curates single-shot and multi-shot sequences from movies. Extensive experiments demonstrate that SmartDirector substantially outperforms existing state-of-the-art approaches. We will release the code to facilitate further research.
+
+视频的叙事质量从根本上决定了其感知价值。尽管现有的视频生成方法可以产生视觉上吸引人的内容，但它们主要依赖于稀疏条件信号，例如文本提示或第一/最后一帧，这限制了对叙事结构和时间节奏的精确控制。在本文中，我们提出了 SmartDirector，一个通过多个关键帧增强视频生成模型的叙事能力的框架。 SmartDirector支持灵活的生成场景，包括单镜头生成、多镜头叙事合成、视频扩展。该框架分两个阶段运行：Director-Gen 根据提供的关键帧生成低分辨率视频，Director-SR 通过利用高分辨率关键帧作为语义锚来恢复细粒度细节来细化输出。为了实现强大的多关键帧训练，我们构建了一个数据管道来管理电影中的单镜头和多镜头序列。大量实验表明，SmartDirector 的性能大大优于现有的最先进方法。我们将发布代码以方便进一步的研究。
+
+</details>
+
+---
+
+## 7. Reflective Dialogue between Teacher and Solver Agents for Video Question Answering / 教师和求解器代理之间的视频问答反思对话
+
+**Date**: 2026-05-27 | **arXiv**: [2605.27885v1](http://arxiv.org/abs/2605.27885v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27885v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Various approaches have been proposed to adapt Vision-Language Models (VLMs) to specialized domains for Video Question Answering, including fine-tuning and in-context learning. However, acquiring task-specific knowledge at the inference phase from only a small labeled support set without fine-tuning remains a challenge. In this paper, we propose a method that achieves adaptation solely through inference-time context injection. Our method first constructs a Reflective Dialogue (RD) -- a multi-turn conversation between two agents, in which Teacher poses each support question and delivers correctness feedback, and Solver answers and provides visual grounding explanations (or reflections) for both correct and incorrect answers. This dialogue history is then used as context at the inference phase. Experiments on the EgoCross benchmark demonstrate that our method outperforms both a baseline zero-shot setting and a standard in-context learning approach that passes support set examples directly, achieving 3rd place in the Open-source Track of the 1st Cross-Domain EgoCross Challenge at the CVPR 2026 EgoVis Workshop, for which this paper also serves as a technical report.
+
+人们提出了各种方法来使视觉语言模型（VLM）适应视频问答的专门领域，包括微调和上下文学习。然而，在推理阶段仅从小型标记支持集获取特定于任务的知识而不进行微调仍然是一个挑战。在本文中，我们提出了一种仅通过推理时上下文注入来实现自适应的方法。我们的方法首先构建一个反思性对话（RD）——两个智能体之间的多轮对话，其中教师提出每个支持问题并提供正确性反馈，求解器回答并为正确和错误答案提供视觉基础解释（或反思）。然后，该对话历史将用作推理阶段的上下文。 EgoCross 基准测试表明，我们的方法优于基线零样本设置和直接传递支持集示例的标准上下文学习方法，在 CVPR 2026 EgoVis 研讨会上的第一届跨域 EgoCross 挑战赛的开源赛道中获得第三名，本文也作为该研讨会的技术报告。
+
+</details>
+
+---
+
+## 8. Tensor Memory: Fixed-Size Recurrent State for Long-Horizon Transformers / 张量内存：长视野 Transformer 的固定大小循环状态
+
+**Date**: 2026-05-26 | **arXiv**: [2605.27686v1](http://arxiv.org/abs/2605.27686v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27686v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Transformers process images and videos by flattening space and time into long token sequences. While attention and KV caching preserve past features, their memory grows with sequence length and they lack an explicit, persistent spatial state, making long-horizon video understanding and occlusion-sensitive reasoning difficult. We propose Tensor Memory, a lightweight module that augments Transformer blocks with a fixed-size recurrent 3D memory tensor: tokens write into a voxel grid via a differentiable soft write that deposits content as a Gaussian-weighted volume around a predicted continuous 3D location, the memory is updated with an efficient local interaction operator and gated recurrent dynamics, and tokens read back context via continuous sampling with gated residual fusion. Because the memory tensor has a constant size, Tensor Memory decouples state capacity from input length while preserving a spatial inductive bias. We evaluate the module on standard language, image, and video benchmarks and on a controlled toy diagnostic suite designed to isolate when persistent state is beneficial; it integrates with standard Transformer training pipelines and can be attached to or removed from existing blocks without other architectural changes.
+
+变形金刚通过将空间和时间扁平化为长令牌序列来处理图像和视频。虽然注意力和 KV 缓存保留了过去的特征，但它们的记忆随着序列长度的增加而增长，并且缺乏明确、持久的空间状态，使得长视域视频理解和遮挡敏感推理变得困难。我们提出了 Tensor Memory，这是一个轻量级模块，它通过固定大小的循环 3D 内存张量来增强 Transformer 块：令牌通过可微分软写入写入体素网格，将内容作为高斯加权体积存储在预测的连续 3D 位置周围，内存通过高效的局部交互算子和门控循环动态进行更新，令牌通过门控残差融合的连续采样读回上下文。由于内存张量具有恒定的大小，因此张量内存将状态容量与输入长度解耦，同时保留空间归纳偏差。我们根据标准语言、图像和视频基准以及旨在隔离持久状态何时有益的受控玩具诊断套件来评估该模块；它与标准 Transformer 训练管道集成，可以附加到现有块或从现有块中删除，而无需进行其他架构更改。
+
+</details>
+
+---
+
+## 9. What-If World: A Causal Benchmark for General World Models in Embodied Scenarios / 假设世界：具体场景中一般世界模型的因果基准
+
+**Date**: 2026-05-26 | **arXiv**: [2605.27589v1](http://arxiv.org/abs/2605.27589v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27589v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation models are increasingly used as world simulators for tasks like driving and robotic manipulation. What matters in these settings is not whether a single video looks right, but whether the model's output changes when its input changes. We test this by giving a model two prompts describing the same scene with one physical detail varied, and checking whether the two videos diverge the way physics predicts. The wording difference between the prompts is small by design, since only one variable is changed, but the correct physical difference is not. A model that misses this can still produce two videos that each look plausible individually, and existing benchmarks score videos one at a time and cannot detect this failure. We introduce What-If World, 319 such prompt pairs built on real frames from nuScenes and DROID, organized by a taxonomy of six physical variables shared across driving and manipulation. Each pair is scored with APEO, a four-part rubric checking whether each video follows its prompt (Adherence), is physically consistent (Physics), preserves the shared scene (Environment), and ends in the correct difference (Outcome). Across nine state-of-the-art models, no system exceeds 52% on the paired score, and open-source models cluster near 28%. Every model tested fails on a large fraction of causal interventions, indicating substantial room before these models can reliably support action-conditioned simulation or model-based planning. Where models do score well, performance appears to track the visual prominence of the intervention rather than the tractability of its underlying physics. Some visually subtle interventions score as low as 14.2%, while visually pronounced ones reach 40.4%.
+
+视频生成模型越来越多地用作驾驶和机器人操作等任务的世界模拟器。在这些设置中，重要的不是单个视频看起来是否正确，而是当输入发生变化时模型的输出是否会发生变化。我们通过向模型提供两个描述同一场景但一个物理细节有所不同的提示来测试这一点，并检查两个视频是否与物理预测的方式存在差异。提示之间的措辞差异在设计上很小，因为只更改了一个变量，但正确的物理差异却没有。错过这一点的模型仍然可以生成两个视频，每个视频看起来都很合理，而现有的基准测试一次对一个视频进行评分，无法检测到这种失败。我们引入了 What-If World，319 个这样的提示对构建在 nuScenes 和 DROID 的真实框架上，按照驾驶和操作过程中共享的六个物理变量的分类法进行组织。每对都用 APEO 进行评分，这是一个由四部分组成的评分标准，检查每个视频是否遵循其提示（遵守）、物理一致（物理）、保留共享场景（环境），并以正确的差异结束（结果）。在 9 个最先进的模型中，没有系统的配对分数超过 52%，开源模型集群接近 28%。每个测试的模型在很大一部分因果干预上都失败了，这表明这些模型在可靠地支持行动条件模拟或基于模型的规划之前还有很大的空间。在模型得分较高的情况下，性能似乎会跟踪干预的视觉突出性，而不是其基础物理的易处理性。一些视觉上微妙的干预措施得分低至 14.2%，而视觉上明显的干预措施得分高达 40.4%。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-27 (29 papers)</b></summary>
 
 # arXiv Video Papers - 2026-05-27
