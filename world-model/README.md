@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-31](papers/2026-05-31.md) - 1 papers
 - [2026-05-29](papers/2026-05-29.md) - 3 papers
 - [2026-05-27](papers/2026-05-27.md) - 3 papers
 - [2026-05-26](papers/2026-05-26.md) - 3 papers
@@ -83,6 +84,34 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-31 (1 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-05-31
+
+**Paper Count**: 1
+
+---
+
+## 1. Toward AI Systems That Understand Self and Others: A Multi-Phase Inference Framework for Human Cognitive Diversity and World-Model Alignment / 走向理解自我和他人的人工智能系统：人类认知多样性和世界模型对齐的多阶段推理框架
+
+**Date**: 2026-05-28 | **arXiv**: [2605.29930v1](http://arxiv.org/abs/2605.29930v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.29930v1)
+
+**Categories**: cs.AI, cs.CY, cs.HC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Mutual misunderstanding in contemporary society does not arise merely because people hold different opinions or values. Even under the same observations, different subjects may form different inferential targets, state representations, prediction errors, and update priorities. This paper proposes a multi-phase inference framework and defines its core internal mechanism as the Multi-Phase Inference Mechanism (MIM). MIM formalizes how heterogeneous world models arise through a phase-formation space, a foregrounding field, subject-specific profile states, and alignment maps between state representations. On this basis, the paper reframes world-model alignment as the problem of making heterogeneous representations mutually processable, rather than forcing agreement or convergence to a single value system. It further connects this formalism to philosophical disagreements, cognitive typology, social fragmentation, and AI alignment. The aim is to provide a constructive vocabulary for AI systems that can help humans understand self and others by making differences in meaning, value, and prediction error visible, comparable, and transformable.
+
+当代社会的相互误解并不仅仅因为人们持有不同的观点或价值观而产生。即使在相同的观察下，不同的主体也可能形成不同的推理目标、状态表征、预测误差和更新优先级。本文提出了一种多阶段推理框架，并将其核心内部机制定义为多阶段推理机制（MIM）。 MIM 形式化了异质世界模型如何通过相形成空间、前景场、特定主题的轮廓状态以及状态表示之间的对齐图产生。在此基础上，本文将世界模型对齐重新定义为使异构表示可相互处理的问题，而不是强迫达成一致或收敛到单一价值体系。它将这种形式主义与哲学分歧、认知类型学、社会碎片化和人工智能联盟进一步联系起来。其目的是为人工智能系统提供一个建设性的词汇表，通过使意义、价值和预测误差的差异变得可见、可比较和可转换，帮助人类理解自我和他人。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-29 (3 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-05-29
