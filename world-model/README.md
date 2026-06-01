@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-01](papers/2026-06-01.md) - 5 papers
 - [2026-05-31](papers/2026-05-31.md) - 1 papers
 - [2026-05-29](papers/2026-05-29.md) - 3 papers
 - [2026-05-27](papers/2026-05-27.md) - 3 papers
@@ -84,6 +85,98 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-01 (5 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-06-01
+
+**Paper Count**: 5
+
+---
+
+## 1. Positional versus Symbolic Attention Heads: Learning Dynamics, RoPE Geometry, and Length Generalization / 位置注意力头与符号注意力头：学习动态、RoPE 几何和长度泛化
+
+**Date**: 2026-05-29 | **arXiv**: [2605.31558v1](http://arxiv.org/abs/2605.31558v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.31558v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Transformer-based language models are widespread in today's society. As such, understanding the mechanisms by which they solve structured tasks and predicting how they may behave in novel scenarios is of great importance for safe deployment. We study the learning dynamics of attention heads in a controlled setting by training a decoder-only Transformer (GPT-J) on two structurally equivalent multi-hop reasoning tasks: a number task requiring positional reasoning and a letter task requiring symbolic reasoning. Using a recently introduced metric that classifies attention-head behavior as positional or symbolic for a given prompt, we show that successful learning is associated with the emergence of pure heads, i.e., heads that express themselves as either positional or symbolic. Despite the tasks' structural equivalence, they impose different mechanistic demands: the number task requires both positional and symbolic heads, whereas the letter task requires only symbolic heads. We then identify the computational roles of these heads, characterize the basic functions they implement, and give theoretical constructions showing how single-layer RoPE-based attention can realize these functions through geometrically interpretable query, key, and value operations. This analysis yields a quantitative separation between positional and symbolic mechanisms in their robustness to longer sequences, formalized through a novel notion of discrepancy. We empirically validate the resulting predictions in both controlled and real-world models, showing that symbolic mechanisms extrapolate more reliably to longer sequences while positional mechanisms face sharper limitations.
+
+基于 Transformer 的语言模型在当今社会中广泛存在。因此，了解它们解决结构化任务的机制并预测它们在新场景中的表现对于安全部署非常重要。我们通过在两个结构等效的多跳推理任务上训练仅解码器变压器（GPT-J）来研究受控环境中注意力头的学习动态：需要位置推理的数字任务和需要符号推理的字母任务。使用最近引入的指标，将注意力头行为分类为给定提示的位置或符号，我们表明成功的学习与纯头的出现相关，即，将自己表达为位置或符号的头。尽管任务的结构相同，但它们提出了不同的机械要求：数字任务需要位置和符号头，而字母任务只需要符号头。然后，我们确定这些头的计算角色，描述它们实现的基本功能，并给出理论结构，展示基于单层 RoPE 的注意力如何通过几何可解释的查询、键和值操作来实现这些功能。该分析在位置机制和符号机制对较长序列的鲁棒性方面产生了定量分离，并通过新颖的差异概念形式化。我们在受控模型和现实世界模型中凭经验验证了所得预测，表明符号机制可以更可靠地推断更长的序列，而位置机制面临更尖锐的限制。
+
+</details>
+
+---
+
+## 2. IDOL: Inverse-Dynamics-Guided Future Prediction for End-to-End Autonomous Driving / IDOL：逆动力学引导的端到端自动驾驶未来预测
+
+**Date**: 2026-05-29 | **arXiv**: [2605.31476v1](http://arxiv.org/abs/2605.31476v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.31476v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+End-to-end autonomous driving has emerged as a compelling paradigm for learning planning directly from sensor observations, while recent world-model-based approaches further enrich this paradigm by enabling explicit reasoning about how the scene may evolve in the future. Yet future prediction alone does not guarantee better planning unless the predicted evolution can be converted into planning-relevant trajectory updates. Many current methods still forecast future scene states without explicitly decoding the motion implications hidden in state transitions. As a result, future reasoning often remains descriptively useful but only weakly coupled to executable motion generation. To address this limitation, we propose \mathbf{IDOL}, an inverse-dynamics-guided future prediction framework for world-model-based end-to-end planning in latent BEV space, where inverse dynamics serves as the key bridge between future prediction and trajectory optimization. IDOL first predicts multiple future latent scene states with a BEV world model, then applies an inverse dynamics model to adjacent latent futures to decode transition-aware trajectory features and recover planning-relevant motion deltas that explain how the latent world evolves over time. These inverse-dynamics-derived signals are used to optimize the planned trajectory, turning future forecasting from passive scene anticipation into actionable planning guidance. A lightweight closed-loop refinement module further improves long-horizon consistency by reusing the optimized trajectory for another round of future-aware reasoning. By introducing inverse dynamics into latent future reasoning, IDOL tightens the coupling between world modeling and planning. Extensive experiments on the NAVSIM v1 and NAVSIM v2 benchmarks show that IDOL achieves state-of-the-art performance among comparable methods.
+
+端到端自动驾驶已成为直接从传感器观察中学习规划的引人注目的范例，而最近基于世界模型的方法通过支持对未来场景如何演变的明确推理，进一步丰富了这一范例。然而，仅未来预测并不能保证更好的规划，除非预测的演变可以转换为与规划相关的轨迹更新。当前的许多方法仍然预测未来的场景状态，而没有显式解码隐藏在状态转换中的运动含义。因此，未来的推理通常仍然具有描述性作用，但与可执行运动生成的耦合程度很弱。为了解决这个限制，我们提出了 \mathbf{IDOL}，一种逆动力学引导的未来预测框架，用于潜在 BEV 空间中基于世界模型的端到端规划，其中逆动力学充当未来预测和轨迹优化之间的关键桥梁。 IDOL 首先使用 BEV 世界模型预测多个未来的潜在场景状态，然后将逆动力学模型应用于相邻的潜在未来，以解码转换感知轨迹特征并恢复与规划相关的运动增量，以解释潜在世界如何随时间演变。这些逆动力学信号用于优化计划轨迹，将未来预测从被动场景预期转变为可操作的规划指导。轻量级闭环细化模块通过重用优化轨迹进行另一轮未来感知推理，进一步提高长期一致性。通过将逆动态引入潜在的未来推理，IDOL 加强了世界建模和规划之间的耦合。对 NAVSIM v1 和 NAVSIM v2 基准的大量实验表明，IDOL 在同类方法中实现了最先进的性能。
+
+</details>
+
+---
+
+## 3. Dreaming Of Others: Latent Teammate Modeling In World Models For Multi-Agent Reinforcement Learning / 梦想他人：多智能体强化学习世界模型中的潜在队友建模
+
+**Date**: 2026-05-29 | **arXiv**: [2605.31361v1](http://arxiv.org/abs/2605.31361v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.31361v1)
+
+**Categories**: cs.MA, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In cooperative multi-agent reinforcement learning (MARL), agents must coordinate with partners whose internal policies and intentions are not directly observable. While world models such as Dreamer have demonstrated strong generalization and sample efficiency in single-agent settings, their application to MARL remains limited by an inability to handle teammate-induced uncertainty. We propose a new perspective: treat teammates as structured, learnable components within the agent's world model. We introduce an architecture that factorizes the latent state of a Dreamer-style recurrent state-space model (RSSM) into environment and teammate components, and learns an auxiliary Theory-of-Mind (ToM) head to infer latent embeddings of partner behavior such as character, intent, and predicted actions from partial trajectories. These teammate latents condition the actor and critic, enabling the agent to imagine and adapt to diverse collaborators. We outline how this approach can support zero-shot and few-shot coordination in partially observable settings and propose a set of benchmarks and evaluation protocols to assess its impact. This work positions world models as not only predictors of environmental dynamics, but as simulators of social behavior, opening new directions for generalizable, human-compatible AI.
+
+在合作多智能体强化学习（MARL）中，智能体必须与内部政策和意图无法直接观察到的合作伙伴进行协调。虽然像 Dreamer 这样的世界模型在单智能体环境中表现出了强大的泛化能力和样本效率，但它们在 MARL 中的应用仍然受到无法处理队友引起的不确定性的限制。我们提出了一个新的视角：将队友视为智能体世界模型中结构化的、可学习的组件。我们引入了一种架构，将梦想家风格的循环状态空间模型（RSSM）的潜在状态分解为环境和队友组件，并学习辅助心理理论（ToM）头来推断伙伴行为的潜在嵌入，例如性格、意图和来自部分轨迹的预测动作。这些队友潜伏条件影响着行动者和评论家，使代理人能够想象并适应不同的合作者。我们概述了这种方法如何在部分可观察的环境中支持零样本和少样本协调，并提出了一组基准和评估协议来评估其影响。这项工作将世界模型不仅定位为环境动态的预测器，而且定位为社会行为的模拟器，为通用的、人类兼容的人工智能开辟了新的方向。
+
+</details>
+
+---
+
+## 4. AR Forcing: Towards Long-Horizon Robot Navigation World Model / AR 强迫：迈向长视野机器人导航世界模型
+
+**Date**: 2026-05-29 | **arXiv**: [2605.31314v1](http://arxiv.org/abs/2605.31314v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.31314v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The diffusion based robot navigation world models are typically trained using parallel supervision, while autoregressive inference is employed during path planning. This results in a distribution shift between training and inference, which destabilizes the performance over long-horizon prediction. We propose AR Forcing, an autoregressive training strategy, which integrates the standard diffusion loss into the autoregressive training loop. At each step, the model uses its own predictions to update the context and optimize the single step noise prediction objective, thereby explicitly exposing the model to the inference state distribution during training. Our method does not require additional discriminators or distribution-matching losses, retains the original diffusion framework and sampler, and is easy to integrate. Experiments on multi-domain navigation datasets (RECON, SCAND, HuRoN, TartanDrive) show that compared with strong baselines, AR Forcing improved the consistency of generated images during long-horizon navigation and the accuracy of predicted trajectories, enhancing robustness of the model in complex known and unknown environments. We will release the code soon.
+
+基于扩散的机器人导航世界模型通常使用并行监督进行训练，而在路径规划期间采用自回归推理。这会导致训练和推理之间的分布变化，从而破坏长期预测性能的稳定性。我们提出 AR Forcing，一种自回归训练策略，它将标准扩散损失集成到自回归训练循环中。在每一步中，模型都会使用自己的预测来更新上下文并优化单步噪声预测目标，从而在训练期间将模型明确暴露于推理状态分布。我们的方法不需要额外的判别器或分布匹配损失，保留了原始的扩散框架和采样器，并且易于集成。在多域导航数据集（RECON、SCAND、HuRoN、TartanDrive）上的实验表明，与强基线相比，AR Forcing提高了长视域导航时生成图像的一致性和预测轨迹的准确性，增强了模型在复杂的已知和未知环境中的鲁棒性。我们将很快发布代码。
+
+</details>
+
+---
+
+## 5. Light Interaction: Training-Free Inference Acceleration for Interactive Video World Models / 轻交互：交互式视频世界模型的免训练推理加速
+
+**Date**: 2026-05-29 | **arXiv**: [2605.31158v1](http://arxiv.org/abs/2605.31158v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.31158v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Interactive video world models generate video chunk by chunk in response to user-controlled camera movements, enabling applications such as real-time game simulation, virtual scene navigation, and embodied AI training. However, scaling to long interactive trajectories is prohibitively expensive due to growing context memory, quadratic attention complexity, and repeated denoising steps. We present Light Interaction, a training-free inference acceleration framework for interactive video world models. Our key insight is that interaction naturally enables trajectory-dependent adaptive computation: retrieved spatial memory can be discarded during novel exploration, temporal context can be adjusted according to local latent dynamics, and early-step model outputs can be reused when the camera revisits familiar regions. Based on this insight, Light Interaction combines adaptive context management, denoising cache acceleration, and hardware-software co-designed 3D block sparse attention with fused Triton kernels. Evaluated on HY-WorldPlay and Matrix-Game-3.0, Light Interaction achieves up to 2.59x speedup without model retraining while maintaining competitive visual quality.
+
+交互式视频世界模型响应用户控制的摄像机移动，逐块生成视频，从而支持实时游戏模拟、虚拟场景导航和具体人工智能训练等应用。然而，由于不断增长的上下文记忆、二次注意力复杂性和重复的去噪步骤，扩展到长交互轨迹的成本过高。我们推出了 Light Interaction，这是一种用于交互式视频世界模型的免训练推理加速框架。我们的主要见解是，交互自然地实现了轨迹相关的自适应计算：在新颖的探索过程中可以丢弃检索到的空间记忆，可以根据局部潜在动态调整时间上下文，并且当相机重新访问熟悉的区域时可以重用早期模型输出。基于这一见解，Light Interaction 将自适应上下文管理、去噪缓存加速以及软硬件联合设计的 3D 块稀疏注意力与融合 Triton 内核相结合。在 HY-WorldPlay 和 Matrix-Game-3.0 上进行评估，Light Interaction 在无需模型重新训练的情况下实现了高达 2.59 倍的加速，同时保持了有竞争力的视觉质量。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-31 (1 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-05-31
