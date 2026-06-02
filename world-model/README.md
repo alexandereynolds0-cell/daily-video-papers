@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-02](papers/2026-06-02.md) - 14 papers
 - [2026-06-01](papers/2026-06-01.md) - 5 papers
 - [2026-05-31](papers/2026-05-31.md) - 1 papers
 - [2026-05-29](papers/2026-05-29.md) - 3 papers
@@ -85,6 +86,246 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-02 (14 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-06-02
+
+**Paper Count**: 14
+
+---
+
+## 1. World-Task Factorization for Robot Learning / 机器人学习的世界任务分解
+
+**Date**: 2026-06-01 | **arXiv**: [2606.02027v1](http://arxiv.org/abs/2606.02027v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.02027v1)
+
+**Categories**: cs.RO, cs.LG, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robot learning must produce policies that generalize to new combinations of constraints, teammates, and environments. To achieve this, we must structurally factor the policy, which is a choice that dictates what generalizes, what requires retraining, and what remains entangled. Existing methods span a wide spectrum, from expecting structure to emerge from data scaling, to hand-designing it via hierarchies, skill libraries or learned specializations. In this paper, we study what we argue is the most fundamental factorization in robotics: separating the world from the task. We investigate the conditions under which this factorization is principled. World factors are properties of the embodied system and the environment; they exist independently of intent. Task factors are defined by the task's logic over what the world admits. We formalize this asymmetry through Bayesian model evidence: it aligns with the data-generating process, maintains high likelihood through an analytical world model, and reduces the Occam razor's penalty on task parameters. We instantiate this factorization by pairing AICON, a differentiable graph of recursive estimators and interconnections that is compositional, operates without task-specific data, and propagates cost gradients to actuators, with a compact, learned policy that modulates gradient paths. Gradients serve as the interface between the two factors: they carry world structure through the graph and task structure through costs, enabling low-dimensional learning while preserving structural generalization. We test the world/task factorization across three problems that encompass heterogeneous robots, environments, task logic and sensorimotor modalities. Our framework outperforms end-to-end baselines and analytical heuristics in all settings, generalizes zero-shot to out-of-distribution configurations, and transfers to real hardware without retraining.
+
+机器人学习必须产生能够推广到约束、队友和环境的新组合的策略。为了实现这一目标，我们必须从结构上考虑政策，这是一种选择，决定什么是概括性的、什么需要再培训以及什么仍然是纠缠在一起的。现有的方法涵盖范围很广，从期望数据扩展中出现的结构，到通过层次结构、技能库或学习的专业知识手动设计结构。在本文中，我们研究了机器人技术中最基本的因素：将世界与任务分开。我们研究了这种因式分解原理的条件。世界因素是具体系统和环境的属性；它们的存在独立于意图。任务因素是由任务的逻辑相对于世界所承认的内容来定义的。我们通过贝叶斯模型证据形式化这种不对称性：它与数据生成过程保持一致，通过分析世界模型保持高可能性，并减少奥卡姆剃刀对任务参数的惩罚。我们通过将 AICON 配对来实例化这种因式分解，AICON 是递归估计器和互连的可微分图，它是组合的，无需特定于任务的数据即可运行，并将成本梯度传播到执行器，并具有调节梯度路径的紧凑的学习策略。梯度作为两个因素之间的接口：它们通过图来承载世界结构，通过成本来承载任务结构，从而在保持结构泛化的同时实现低维学习。我们测试了三个问题的世界/任务分解，包括异构机器人、环境、任务逻辑和感觉运动模式。我们的框架在所有设置中都优于端到端基线和分析启发法，将零样本推广到分布外配置，并且无需重新训练即可转移到真实硬件。
+
+</details>
+
+---
+
+## 2. Scaling Agentic Capabilities via Grounded Interaction Synthesis / 通过接地交互综合扩展代理能力
+
+**Date**: 2026-06-01 | **arXiv**: [2606.02001v1](http://arxiv.org/abs/2606.02001v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.02001v1)
+
+**Categories**: cs.CL
+
+**Code**: https://github.com/Eric8932/GAIS.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+General agentic intelligence hinges on the ability to interact with diverse real-world tools to complete complex tasks, a capability fundamentally tied to the quality of interaction data. To bypass the prohibitive costs of human annotation, prevailing paradigms depend entirely on Large Language Models (LLMs) to scale the synthesis of agentic environments and tasks. However, such unconstrained generation often degenerates into biased random sampling of LLMs' internal priors, failing to capture the diversity and difficulty of real-world domains or construct high-fidelity, long-horizon tasks. In this work, we introduce Grounded Agentic Interaction Synthesis (GAIS), a framework that automates the scalable construction of diverse environments and complex tasks via a two-phase grounding mechanism. Specifically, we construct protocol-anchored environments derived from real-world Model Context Protocol (MCP) servers to ensure functional diversity and difficulty. Subsequently, we employ structure-guided planning to navigate these environments, actively enforcing logical dependencies and adversarial policies to generate complex tasks. Experiments on BFCL, $τ^2$-Bench, and ACEBench demonstrate that GAIS-synthesized data significantly outperforms state-of-the-art baselines, enabling base models to match or even surpass their official instruction-tuned counterparts. Furthermore, GAIS exhibits superior data efficiency and scalability, achieving exceptional capabilities with significantly less data while maintaining continuous growth where baselines stagnate. Our code and dataset are publicly available at https://github.com/Eric8932/GAIS.
+
+通用代理智能取决于与各种现实世界工具交互以完成复杂任务的能力，这种能力从根本上与交互数据的质量相关。为了绕过人工注释的高昂成本，流行的范式完全依赖于大型语言模型（LLM）来扩展代理环境和任务的综合。然而，这种不受约束的生成往往会退化为法学硕士内部先验的有偏差的随机抽样，无法捕捉现实世界领域的多样性和难度，也无法构建高保真、长期的任务。在这项工作中，我们引入了扎根代理交互综合（GAIS），这是一个通过两阶段扎根机制自动构建不同环境和复杂任务的可扩展框架。具体来说，我们构建源自现实世界模型上下文协议（MCP）服务器的协议锚定环境，以确保功能多样性和难度。随后，我们采用结构引导的规划来导航这些环境，积极执行逻辑依赖性和对抗性策略来生成复杂的任务。在 BFCL、$τ^2$-Bench 和 ACEBench 上进行的实验表明，GAIS 合成的数据显着优于最先进的基线，使基本模型能够匹配甚至超越官方指令调整的对应模型。此外，GAIS 展现出卓越的数据效率和可扩展性，能够以显着减少的数据实现卓越的功能，同时在基线停滞的情况下保持持续增长。我们的代码和数据集可在 https://github.com/Eric8932/GAIS 上公开获取。
+
+</details>
+
+---
+
+## 3. SafeMCP: Proactive Power Regulation for LLM Agent Defense via Environment-Grounded Look-Ahead Reasoning / SafeMCP：通过基于环境的前瞻推理对 LLM 代理防御进行主动功率调节
+
+**Date**: 2026-06-01 | **arXiv**: [2606.01991v1](http://arxiv.org/abs/2606.01991v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.01991v1)
+
+**Categories**: cs.AI, cs.CL, cs.CY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As Large Language Model (LLM) agents increasingly leverage the Model Context Protocol (MCP) to operate in complex environments, the expansion of their action spaces offers agents unsafe capabilities and underscores the risk of power-seeking. While broad action space and greater environment influence are essential for task fulfillment, they create a fragile risk surface where minor errors or hallucinations are magnified into catastrophic failures. In response, we propose SafeMCP, a {server-side} defense plugin that constrains tool acquisition via predictive reasoning regarding future safety risks. SafeMCP utilizes an internal world model for look-ahead reasoning to implement a two-tier defense: proactive tool filtering to constrain hazardous power expansion and immediate intervention as a fail-safe. To train SafeMCP, we introduce a three-stage pipeline comprising environmental dynamic grounding, safe policy initialization, and reinforcement learning (RL) with dual verifiable rewards. Experiments on PowerSeeking Bench, ToolEmu, and AgentHarm show that SafeMCP achieves a safe equilibrium, effectively mitigating risks while preserving agent utility.
+
+随着大型语言模型 (LLM) 代理越来越多地利用模型上下文协议 (MCP) 在复杂环境中运行，其操作空间的扩展为代理提供了不安全的功能，并强调了权力寻求的风险。虽然广阔的行动空间和更大的环境影响对于完成任务至关重要，但它们创造了脆弱的风险面，轻微的错误或幻觉会被放大为灾难性的失败。作为回应，我们提出了 SafeMCP，这是一个{服务器端}防御插件，通过对未来安全风险的预测推理来限制工具的获取。 SafeMCP 利用内部世界模型进行前瞻推理来实施两层防御：主动工具过滤以限制危险功率扩展，并立即干预作为故障保护。为了训练 SafeMCP，我们引入了一个三阶段管道，包括环境动态接地、安全策略初始化和具有双重可验证奖励的强化学习 (RL)。在PowerSeeking Bench、ToolEmu和AgentHarm上的实验表明，SafeMCP实现了安全平衡，有效降低了风险，同时保留了代理效用。
+
+</details>
+
+---
+
+## 4. Learning Action-Conditional and Object-Centric Gaussian Splatting World Models for Rigid Objects / 学习刚性物体的动作条件和以对象为中心的高斯泼溅世界模型
+
+**Date**: 2026-06-01 | **arXiv**: [2606.01950v1](http://arxiv.org/abs/2606.01950v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.01950v1)
+
+**Categories**: cs.RO, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models enable intelligent agents to predict the consequences of their actions on the environment. In this paper, we propose Multi Rigid Object Gaussian World Model (MRO-GWM), a novel model that learns action-conditional dynamics of rigid objects in 3D. By representing the scene by object-centric Gaussians, we can represent arbitrary object shapes and multi-object scenes. We develop a novel spatio-temporal transformer architecture that predicts future rigid body motion from a history of object Gaussians and future actions. Objects are represented by their Gaussians in a canonical frame, which allows for describing object motion as rigid body transformation. Our model is trained on reconstructions from multiple viewpoints, which requires the model to handle partial observations of objects due to occlusions. We analyze prediction performance of our approach on synthetic datasets composed of typical household objects with multi-object dynamics and interactions by a robot end effector. We also evaluate our model in model-predictive control for non-prehensile manipulation in simulation.
+
+世界模型使智能体能够预测其行为对环境的影响。在本文中，我们提出了多刚性物体高斯世界模型（MRO-GWM），这是一种学习 3D 刚性物体的动作条件动力学的新颖模型。通过以对象为中心的高斯表示场景，我们可以表示任意对象形状和多对象场景。我们开发了一种新颖的时空变换器架构，可以根据对象高斯的历史和未来的动作来预测未来的刚体运动。对象由规范框架中的高斯表示，这允许将对象运动描述为刚体变换。我们的模型接受来自多个视点的重建训练，这要求模型能够处理由于遮挡而对对象进行的部分观察。我们分析了我们的方法对由具有多对象动力学和机器人末端执行器交互的典型家庭对象组成的合成数据集的预测性能。我们还在模拟中的非综合操作的模型预测控制中评估我们的模型。
+
+</details>
+
+---
+
+## 5. IMWM: Intuition Models Complement World Models for Latent Planning / IMWM：直觉模型补充潜在规划的世界模型
+
+**Date**: 2026-06-01 | **arXiv**: [2606.01626v1](http://arxiv.org/abs/2606.01626v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.01626v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Planning with a learned latent world model is a promising route to control from raw pixels, but a strong world model alone is not enough. We show this experimentally: even with a perfect world model (operationalized by replacing the learned forward predictor with an idealized rollout of the true environment dynamics), a finite-budget sample-based planner still fails on some tasks, indicating that the bottleneck can lie in search rather than in world-model accuracy. Motivated by this gap, we propose IMWM (Intuition Model + World Model), which pairs the world model with an intuition model trained from demonstrations to recognize promising actions. The two models collaborate through three lightweight components: (i) Retrieval Initialization, which initializes the planner's action proposal from a retrieved demonstration; (ii) Hybrid Cost, which combines the intuition score with the world-model rollout cost; and (iii) a Reliability Gate, which adjusts how much the planner trusts intuition in each setting. Across four pixel-based goal-reaching tasks (Two-Room, Reacher, Push-T, and OGBench-Cube), IMWM has higher mean success than the world-model-only planner on all four, with the largest gains on Two-Room (99.2%, +11.5 percentage points) and OGBench-Cube (94.7%, +28.5 percentage points).
+
+使用学习的潜在世界模型进行规划是一种从原始像素进行控制的有前途的途径，但仅靠强大的世界模型是不够的。我们通过实验证明了这一点：即使使用完美的世界模型（通过用真实环境动态的理想化展示替换学习的前向预测器来操作），基于有限预算样本的规划器仍然无法完成某些任务，这表明瓶颈可能在于搜索而不是世界模型的准确性。受这一差距的启发，我们提出了 IMWM（直觉模型 + 世界模型），它将世界模型与通过演示训练的直觉模型配对，以识别有希望的行动。这两个模型通过三个轻量级组件进行协作：（i）检索初始化，它从检索到的演示中初始化规划者的行动建议； (ii) 混合成本，将直觉得分与世界模型推出成本相结合； (iii) 可靠性门，用于调整规划者在每种情况下对直觉的信任程度。在四个基于像素的目标达成任务（Two-Room、Reacher、Push-T 和 OGBench-Cube）中，IMWM 在所有四个任务上的平均成功率都高于仅使用世界模型的规划器，其中 Two-Room（99.2%，+11.5 个百分点）和 OGBench-Cube（94.7%，+28.5 个百分点）的收益最大。
+
+</details>
+
+---
+
+## 6. RoboTrustBench: Benchmarking the Trustworthiness of Video World Models for Robotic Manipulation / RoboTrustBench：对机器人操作视频世界模型的可信度进行基准测试
+
+**Date**: 2026-06-01 | **arXiv**: [2606.01600v1](http://arxiv.org/abs/2606.01600v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.01600v1)
+
+**Categories**: cs.CV, cs.CL, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video world models are increasingly used in robotic manipulation, yet existing benchmarks mostly evaluate them under valid, feasible, and safe instructions. We introduce RoboTrustBench, a benchmark for evaluating the trustworthiness of video world models under four scenarios: Normal, Constraint-Sensitive, Counterfactual, and Adversarial. Built from real-world DROID episodes, RoboTrustBench contains 1,207 expert-validated instruction-image pairs and a six-dimensional evaluation protocol with 13 fine-grained criteria. Evaluating seven representative video world models with human and MLLM assessment, we find that current models often generate visually coherent videos, but struggle with constraint reasoning, counterfactual grounding, physical interaction, and unsafe-instruction suppression. These results show that visual quality and surface-level instruction following are insufficient for trustworthy robotic video world modeling.
+
+视频世界模型越来越多地用于机器人操作，但现有的基准大多在有效、可行和安全的指令下对其进行评估。我们引入了 RoboTrustBench，这是一个评估视频世界模型在四种场景下可信度的基准：正常、约束敏感、反事实和对抗。 RoboTrustBench 基于现实世界的 DROID 片段构建，包含 1,207 个经过专家验证的指令图像对和具有 13 个细粒度标准的六维评估协议。通过人类和 MLLM 评估来评估七个具有代表性的视频世界模型，我们发现当前的模型通常会生成视觉上连贯的视频，但在约束推理、反事实基础、物理交互和不安全指令抑制方面遇到困难。这些结果表明，视觉质量和表面级指令跟踪不足以建立值得信赖的机器人视频世界建模。
+
+</details>
+
+---
+
+## 7. TERRA: Task-Embedded Reasoning and Representation Architecture for Cross-Domain Applications / TERRA：跨域应用程序的任务嵌入式推理和表示架构
+
+**Date**: 2026-06-01 | **arXiv**: [2606.01520v1](http://arxiv.org/abs/2606.01520v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.01520v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A single action-conditioned latent predictive architecture can in principle be trained on the structured state of a driving scene, a robot workspace, or a financial order book. The ingredients for doing so within any one domain already exist and are individually validated: masked-latent prediction, action-conditioned latent world models, discrete action tokenization, and joint-embedding prediction on voxelized state. What is not established, and what TERRA addresses, is the transfer question: when does a representation or predictor learned in one structured-state domain carry over to a structurally analogous but otherwise unrelated domain, and by how much. We give this question a formal treatment. We model each domain as a controlled Markov process on a graded latent grid, factor any instantiation into thin domain adapters and a shared domain-invariant core, and identify a cross-domain correspondence with an approximate Markov decision process homomorphism whose quality is measured by a lax bisimulation discrepancy and, for domains lacking a shared coordinate system, by a Gromov-Wasserstein distance between their action-conditioned transition operators. Under a Lipschitz predictor we derive a transfer bound that separates source-model error from structural mismatch, grows geometrically in the prediction horizon, and is certified from below by the Gromov-Wasserstein distance; we then connect latent error to decision regret through the Lipschitz value property of bisimulation metrics. The resulting Structured-State Transfer Hypothesis is stated as a falsifiable claim with a preregistered experimental program, centered on a transfer test from driving scenes to order books, including conditions under which it is refuted. We present no empirical results: this is a research proposal that converts a widely repeated intuition into testable theory.
+
+原则上，单个动作条件潜在预测架构可以在驾驶场景、机器人工作空间或财务订单簿的结构化状态上进行训练。在任何一个领域中这样做的要素都已经存在并且经过单独验证：掩蔽潜在预测、动作条件潜在世界模型、离散动作标记化和体素化状态的联合嵌入预测。 TERRA 尚未确定的问题是迁移问题：在一个结构化状态域中学习到的表示或预测因子何时迁移到结构类似但在其他方面不相关的域，以及迁移多少。我们对这个问题进行正式的处理。我们将每个域建模为分级潜在网格上的受控马尔可夫过程，将任何实例化为薄域适配器和共享域不变核心，并识别与近似马尔可夫决策过程同态的跨域对应，其质量通过宽松的互模拟差异来衡量，对于缺乏共享坐标系的域，通过其动作条件转移算子之间的 Gromov-Wasserstein 距离来衡量。在 Lipschitz 预测器下，我们推导出一个传递界限，它将源模型误差与结构失配分开，在预测范围内呈几何增长，并通过 Gromov-Wasserstein 距离从下面进行证明；然后，我们通过互模拟指标的 Lipschitz 值属性将潜在错误与决策后悔联系起来。由此产生的结构化状态转移假说被描述为具有预先注册的实验程序的可证伪的主张，其中心是从驾驶场景到订单簿的转移测试，包括被反驳的条件。我们不提供实证结果：这是一项将广泛重复的直觉转化为可检验理论的研究提案。
+
+</details>
+
+---
+
+## 8. Self-Revising Discovery Systems for Science: A Categorical Framework for Agentic Artificial Intelligence / 科学的自我修正发现系统：代理人工智能的分类框架
+
+**Date**: 2026-05-31 | **arXiv**: [2606.01444v1](http://arxiv.org/abs/2606.01444v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.01444v1)
+
+**Categories**: cs.AI, cond-mat.mtrl-sci, cs.CL, cs.LG, math.CT
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scientific discovery is not only answer generation but revision of the representational regime in which evidence, artifacts, operations, and verifiers are typed. We develop a category-theoretic account of agentic discovery for materials science. In a fixed regime b with schema category S_b, the system state is a copresheaf I_t: S_b -> Set, and provenance is the category of elements \int_{S_b} I_t. Fixed-regime operation is an update on such states, endofunctorial only when provenance-preserving refinements are specified and preserved. Discovery is instead a verified regime transition u: S_b -> S_b': old artifacts are preserved, transported by the left Kan extension Lan_u I_t, and compared with the post-transition state to identify residual content beyond functorial transport. This separates retrieval, search, and discovery without subjective novelty. We instantiate the framework in two systems. In Builder/Breaker, a protein-mechanics world model is revised under a Minimum Description Length gate; the accepted law expresses within-chain flexibility as all-mode elastic compliance conditioned by slow collective-mode participation, or mode-conditioned compliance. In CategoryScienceClaw, typed skills, artifacts, open needs, workflow mutation, gates, stress tests, and public discourse become a proof-carrying knowledge-computation graph. A fiber-network example records candidate models, rejected alternatives, an AIC gate, perturbation tests, and an accepted orientation-tensor anisotropic stiffness surrogate over an isotropic fiber-count descriptor. Together, the cases show how category theory can be both a mathematical language for discovery and an engineering specification for self-revising AI discovery systems.
+
+科学发现不仅是答案的生成，而且是对证据、人工制品、操作和验证者被分类的表征制度的修订。我们开发了材料科学代理发现的范畴论解释。在具有模式类别 S_b 的固定机制 b 中，系统状态是一个 copresheaf I_t：S_b -> Set，来源是元素类别 \int_{S_b} I_t。固定机制操作是对此类状态的更新，仅当指定并保留起源保留细化时才为功能内操作。相反，发现是经过验证的政权转换 u: S_b -> S_b'：旧的工件被保留，由左 Kan 扩展 Lan_u I_t 传输，并与转换后状态进行比较，以识别功能传输之外的剩余内容。这将检索、搜索和发现分开，没有主观新颖性。我们在两个系统中实例化该框架。在 Builder/Breaker 中，蛋白质力学世界模型在最小描述长度门下进行了修改；公认的法律将链内灵活性表达为以缓慢的集体模式参与为条件的全模式弹性合规性，或以模式为条件的合规性。在 CategoryScienceClaw 中，类型化技能、工件、开放需求、工作流程突变、门、压力测试和公共话语成为一个承载证明的知识计算图。光纤网络示例记录了候选模型、被拒绝的替代方案、AIC 门、扰动测试以及各向同性纤维计数描述符上可接受的方向张量各向异性刚度替代项。这些案例共同展示了范畴论如何既是一种用于发现的数学语言，又是一种自我修正人工智能发现系统的工程规范。
+
+</details>
+
+---
+
+## 9. BRo-JEPA: Learning Modular Arithmetic in Latent Space / BRo-JEPA：在潜在空间中学习模块化算术
+
+**Date**: 2026-05-31 | **arXiv**: [2606.01372v1](http://arxiv.org/abs/2606.01372v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.01372v1)
+
+**Categories**: cs.LG, cs.AI, cs.CV
+
+**Code**: https://github.com/DL-World-Models/mnist-math
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Can neural networks learn abstract algebraic rules, or do they merely memorize training patterns? We investigate this using MNIST digits as states and modular arithmetic operations as actions in a JEPA-style latent world model. Standard supervised baselines and JEPA models with additive operation embeddings fit seen operations but fail to extrapolate reliably to unseen ones. To bridge this gap, we introduce a block-rotation predictor that imposes the circular structure of modulo-10 arithmetic in latent space. This enables strong zero-shot generalization, with the best ResNet-based JEPA block-rotation model achieving 99.46\% zero-shot and 99.46\% rollout accuracy. Our results suggest that latent world models can learn symbolic transformation rules when architecture matches the structure of the problem. Our code can be \href{https://github.com/DL-World-Models/mnist-math}{accessed here}.
+
+神经网络可以学习抽象的代数规则，还是仅仅记住训练模式？我们使用 MNIST 数字作为状态，使用模块化算术运算作为 JEPA 风格的潜在世界模型中的动作来研究这一问题。标准监督基线和具有附加操作嵌入的 JEPA 模型适合已见的操作，但无法可靠地推断出未见的操作。为了弥补这一差距，我们引入了一个块旋转预测器，它在潜在空间中强加了模 10 算术的循环结构。这实现了强大的零样本泛化，基于 ResNet 的最佳 JEPA 块旋转模型实现了 99.46% 的零样本和 99.46% 的推出精度。我们的结果表明，当架构与问题的结构相匹配时，潜在世界模型可以学习符号转换规则。我们的代码可以是 \href{https://github.com/DL-World-Models/mnist-math}{在此处访问}。
+
+</details>
+
+---
+
+## 10. All Models are Wrong, Knowing Where is Useful: On Model Uncertainty in Reinforcement Learning / 所有模型都是错的，知道哪里有用：论强化学习中的模型不确定性
+
+**Date**: 2026-05-31 | **arXiv**: [2606.01363v1](http://arxiv.org/abs/2606.01363v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.01363v1)
+
+**Categories**: cs.LG, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Model-based reinforcement learning (MBRL) infers information about the environment from a learned dynamics model and bears the potential to address open problems such as data efficient and safe learning in robotics. However, inaccuracies of the learned dynamics model are typically exploited by the agent, substantially hampering the capabilities of MBRL methods. We present a framework for dealing with inaccuracies of probabilistic models through targeted handling of uncertainty that effectively mitigates model exploitation. We present recent successes in learning directly on hardware and safe exploration, and discuss future directions for uncertainty-aware MBRL.
+
+基于模型的强化学习（MBRL）从学习的动力学模型中推断出有关环境的信息，并具有解决机器人技术中的数据高效和安全学习等开放问题的潜力。然而，学习到的动力学模型的不准确性通常会被智能体利用，从而极大地阻碍了 MBRL 方法的能力。我们提出了一个框架，通过有针对性地处理不确定性来处理概率模型的不准确性，从而有效地减少模型利用。我们展示了最近在硬件直接学习和安全探索方面取得的成功，并讨论了不确定性感知 MBRL 的未来方向。
+
+</details>
+
+---
+
+## 11. Recognize Your Orchestrator: An Entropy Dynamics Perspective for LLM Multi-Agent Systems / 认识你的协调器：法学硕士多代理系统的熵动力学视角
+
+**Date**: 2026-05-31 | **arXiv**: [2606.01351v1](http://arxiv.org/abs/2606.01351v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.01351v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The transition from single-turn models to Multi-Agent Systems (MAS) promises enhanced problem-solving capabilities, yet the centralized orchestration topology remains a critical point of fragility. To analyze this, we propose a Mean-Field Entropy Dynamics framework, modeling the orchestration process as a system governed by the competing forces of task resolution and cumulative context loading. To facilitate validation, we introduce Inverse Workflow Generation (IWG), a multi-agent pipeline that synthesizes process-verifiable, high-complexity benchmarks with dense intermediate checkpoints. We demonstrate that our entropy dynamics model fits empirical trajectories, providing physically interpretable parameters that quantify system stability and performance collapse. Crucially, our analysis uncovers a ``Reasoning Trap": while reasoning-heavy models excel in isolated tasks, they frequently fail as orchestrators due to context squeezing. Elucidating the physical mechanisms underlying the Orchestrator and quantifying systemic uncertainty offers insights for the MASs' architectural design.
+
+从单轮模型到多代理系统（MAS）的转变有望增强解决问题的能力，但集中式编排拓扑仍然是一个关键的脆弱点。为了分析这一点，我们提出了一个平均场熵动力学框架，将编排过程建模为一个由任务解析和累积上下文加载的竞争力量控制的系统。为了促进验证，我们引入了逆向工作流生成（IWG），这是一种多代理管道，可通过密集的中间检查点合成可过程验证的高复杂性基准。我们证明了我们的熵动力学模型符合经验轨迹，提供了量化系统稳定性和性能崩溃的物理可解释参数。至关重要的是，我们的分析揭示了一个“推理陷阱”：虽然大量推理的模型在孤立的任务中表现出色，但由于上下文挤压，它们经常在协调器方面失败。阐明协调器背后的物理机制并量化系统不确定性为 MAS 的架构设计提供了见解。
+
+</details>
+
+---
+
+## 12. Science Earth: Towards A Planet-Scale Operating System for AI-Native Scientific Discovery / 科学地球：为人工智能原生科学发现打造行星级操作系统
+
+**Date**: 2026-05-31 | **arXiv**: [2606.01316v1](http://arxiv.org/abs/2606.01316v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.01316v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scientific discovery demands intelligence, perseverance, and serendipity   across vast search spaces. Today, top scientific capabilities remain   siloed--one AI system for biological analysis, another for clinical   reasoning, mathematical derivation, or materials simulation--and no   pre-designed team can anticipate every skill a question will need.   Science Earth is a planet-scale scientific runtime in which any   capability--a simulation cluster, a wet-lab robot, a proof engine, a   single-cell pipeline--can connect to any other, with collaboration   structure emerging from the question itself. Its underlying EACN protocol   lets capabilities discover one another, negotiate task ownership, and   adjudicate across incompatible evidentiary standards without prior   knowledge of who will meet whom. This shifts the organizing challenge from   workflow design to open-ended connectivity. Two runs validate this under   structurally distinct conditions. In a trans-Pacific higher-order Kuramoto   synchronization study, agents identified and corrected a closure-ratio   assumption in Ott-Antonsen analytic theory that fails outside the   Lorentzian limit, within thirty minutes. In an eight-agent single-cell run   on the 4.88M-cell Kang 2024 pan-cancer atlas, heterogeneous capabilities   coupled over a 64.9-hour window with one structural external instruction,   producing three new result layers and anchoring findings against an   independent wet-lab study on an adjacent CCR8- TIGIT+ Treg subset. These   cases are a first empirical reading, not a benchmark sweep. They show that   when AI capabilities are truly connectable and coordination emerges from   the problem, scientific reasoning becomes a distributed, self-correcting   process--a step towards scaling AI-native discovery to the planet.
+
+科学发现需要在广阔的搜索空间中发挥智慧、毅力和偶然性。如今，顶尖的科学能力仍然是孤立的——一个用于生物分析的人工智能系统，另一个用于临床推理、数学推导或材料模拟——并且没有预先设计的团队能够预测问题所需的每一项技能。   Science Earth 是一个行星规模的科学运行时，其中任何功能（模拟集群、湿实验室机器人、验证引擎、单细胞管道）都可以连接到任何其他功能，协作结构从问题本身中产生。其底层 EACN 协议让功能能够相互发现、协商任务所有权，并在不兼容的证据标准上进行裁决，而无需事先知道谁将与谁会面。这将组织挑战从工作流程设计转变为开放式连接。两次运行在结构不同的条件下验证了这一点。在一项跨太平洋高阶 Kuramoto 同步研究中，智能体在 30 分钟内识别并纠正了奥特-安东森分析理论中的闭合比假设，该假设在洛伦兹极限之外失败。在 4.88M 细胞 Kang 2024 泛癌图谱上运行的八代理单细胞中，异质能力在 64.9 小时的窗口内与一个结构性外部指令相结合，产生了三个新的结果层，并将结果锚定于对相邻 CCR8-TIGIT+ Treg 子集的独立湿实验室研究。这些案例是初步的实证解读，而不是基准扫描。他们表明，当人工智能能力真正可连接并且协调从问题中出现时，科学推理就变成了一个分布式的、自我纠正的过程——这是将人工智能原生发现扩展到地球的一步。
+
+</details>
+
+---
+
+## 13. ImagineUAV: Aerial Vision-Language Navigation via World-Action Modeling and Kinodynamic Planning / ImagineUAV：通过世界动作建模和运动动力学规划进行空中视觉语言导航
+
+**Date**: 2026-05-31 | **arXiv**: [2606.01205v1](http://arxiv.org/abs/2606.01205v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.01205v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language navigation (VLN) for UAVs demands grounding free-form instructions into 6-DoF flight under partial observability. While Vision-Language-Action (VLA) models excel at semantic reasoning, they suffer from brittleness due to geometric inconsistency and dynamics mismatch. To address this, we propose ImagineUAV, an imagination-driven framework leveraging cascaded world-action modeling. Instead of direct regression, ImagineUAV employs a latent video diffusion model to generate instruction-conditioned future observations, explicitly imagining environmental evolution, from which 6-DoF motions are inferred via an action extractor. A kinodynamic planner then refines these estimates into collision-free trajectories. Additionally, a step-distilled inference pipeline ensures real-time execution. With only 1.3B parameters, ImagineUAV outperforms prior VLN and VLA baselines on benchmarks and real-world flights, validating the practicality of imagination-driven aerial navigation.
+
+无人机的视觉语言导航 (VLN) 要求在部分可观测的情况下将自由格式指令植入 6 自由度飞行中。虽然视觉-语言-动作（VLA）模型擅长语义推理，但由于几何不一致和动态不匹配，它们存在脆弱性。为了解决这个问题，我们提出了 ImagineUAV，这是一种利用级联世界动作建模的想象力驱动框架。 ImagineUAV 没有采用直接回归，而是采用潜在视频扩散模型来生成以指令为条件的未来观察结果，明确地想象环境演化，并通过动作提取器从中推断出 6-DoF 运动。然后，运动动力学规划器将这些估计细化为无碰撞轨迹。此外，逐步提炼的推理管道可确保实时执行。 ImagineUAV 仅具有 1.3B 参数，在基准测试和实际飞行中优于先前的 VLN 和 VLA 基线，验证了想象驱动航空导航的实用性。
+
+</details>
+
+---
+
+## 14. $τ_0$-WM: A Unified Video-Action World Model for Robotic Manipulation / $τ_0$-WM：用于机器人操作的统一视频动作世界模型
+
+**Date**: 2026-05-31 | **arXiv**: [2606.01027v1](http://arxiv.org/abs/2606.01027v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.01027v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robotic manipulation requires models that generate executable actions while anticipating and evaluating their future consequences before physical execution. We present $τ_0$-World Model ($τ_0$-WM), a unified video-action world model that integrates policy learning, video prediction, and action evaluation within a single future-predictive framework. Built on a shared video diffusion backbone, $τ_0$-WM provides two complementary interfaces. First, a video action model jointly predicts future visual latents and continuous action chunks from multi-view observations, language instructions, and robot state. Second, an action-conditioned video simulator rolls out candidate action chunks into multi-view futures and predicts dense task-progress scores. The model is trained on approximately $27{,}300$ hours of real-robot teleoperation, UMI-style interaction, egocentric human videos, and rollout or failure trajectories using modality-specific supervision masks. At inference time, $τ_0$-WM uses test-time computation to sample action candidates, rank them with re-denoising consistency, and invoke simulator-based rectification for low-quality candidates. On challenging long-horizon and fine-grained robotic manipulation tasks, $τ_0$-WM shows superior performance over other relevant baselines.
+
+机器人操作需要模型能够生成可执行的动作，同时在物理执行之前预测和评估其未来的后果。我们提出了$τ_0$-世界模型（$τ_0$-WM），这是一个统一的视频动作世界模型，它将政策学习、视频预测和动作评估集成在一个未来预测框架内。 $τ_0$-WM 建立在共享视频传播主干之上，提供两个互补的接口。首先，视频动作模型根据多视图观察、语言指令和机器人状态联合预测未来的视觉潜伏和连续动作块。其次，动作条件视频模拟器将候选动作块推出到多视图未来中，并预测密集的任务进度分数。该模型接受了大约 27{,}300 美元小时的真实机器人远程操作、UMI 式交互、以自我为中心的人类视频以及使用特定模态监督掩模的推出或失败轨迹的训练。在推理时，$τ_0$-WM 使用测试时计算对候选动作进行采样，以重新去噪一致性对它们进行排名，并对低质量候选调用基于模拟器的校正。在具有挑战性的长视野和细粒度机器人操作任务中，$τ_0$-WM 显示出优于其他相关基线的性能。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-01 (5 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-06-01
