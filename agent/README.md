@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-03](papers/2026-06-03.md) - 4 papers
 - [2026-06-02](papers/2026-06-02.md) - 56 papers
 - [2026-06-01](papers/2026-06-01.md) - 14 papers
 - [2026-05-31](papers/2026-05-31.md) - 14 papers
@@ -92,6 +93,82 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-03 (4 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-06-03
+
+**Paper Count**: 4
+
+---
+
+## 1. Self-Refining Agentic Reinforcement Learning for Vision-Conditioned UAV Navigation / 用于视觉条件无人机导航的自我完善代理强化学习
+
+**Date**: 2026-06-02 | **arXiv**: [2606.03963v1](http://arxiv.org/abs/2606.03963v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.03963v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Deep reinforcement learning has shown strong potential for enabling autonomous robots to learn complex navigational tasks. However, its practical use still depends heavily on human designed reward functions and repeated manual fine tuning, which is time consuming and does not guarantee high success in the desired task. This paper presents AgenticRL, agent guided reinforcement learning framework that increases autonomy in reward design, policy refinement, and real world deployment for unmanned aerial vehicles (UAV) navigation tasks. AgenticRL uses a multimodal generative pre-trained tansformer (GPT) agent to interpret task information and visual scene observations, generate task specific reward functions, train policies using Proximal Policy Optimization (PPO) algorithm, and then act as a critic by evaluating the trained policy through diagnosis packets to generate feedback. Based on this feedback, the agent identifies failure modes and refines the reward function in a closed loop self improvement process. To further leverage the multimodal GPT agent during inference, AgenticRL uses real world images and natural language task information to automatically identify the active scenario and select the appropriate trained policy for execution. The framework is evaluated on multiple navigational tasks, including gate traversal, obstacle avoidance, wall barrier crossing with landing, trajectory following, and motion behavior learning. Experimental results show that the closed loop refinement process improves policy behavior compared with initial rewards by 71%. We also demonstrate sim-to-real transfer of the proposed framework, achieving a real world success rate of 91% and a sim-to-real accuracy of 94%.
+
+深度强化学习已显示出使自主机器人学习复杂导航任务的强大潜力。然而，它的实际使用仍然在很大程度上依赖于人类设计的奖励函数和重复的手动微调，这非常耗时，并且不能保证在期望的任务中取得很高的成功。本文提出了 AgenticRL，这是一种代理引导的强化学习框架，可提高无人机 (UAV) 导航任务的奖励设计、策略细化和现实世界部署的自主性。 AgenticRL 使用多模态生成预训练变换器 (GPT) 代理来解释任务信息和视觉场景观察，生成特定于任务的奖励函数，使用近端策略优化 (PPO) 算法训练策略，然后通过诊断数据包评估训练的策略以生成反馈，从而充当批评者。根据此反馈，代理识别故障模式并在闭环自我改进过程中完善奖励函数。为了在推理过程中进一步利用多模态 GPT 代理，AgenticRL 使用现实世界图像和自然语言任务信息来自动识别活动场景并选择适当的训练策略来执行。该框架针对多种导航任务进行了评估，包括穿越大门、避障、穿越墙壁障碍物着陆、轨迹跟踪和运动行为学习。实验结果表明，与初始奖励相比，闭环细化过程将策略行为改善了 71%。我们还演示了所提出的框架的模拟到现实的迁移，实现了 91% 的现实世界成功率和 94% 的模拟到现实准确度。
+
+</details>
+
+---
+
+## 2. On dynamic multi-agent pathfinding methods: review, simulations and modifications / 动态多智能体寻路方法：回顾、模拟和修改
+
+**Date**: 2026-06-02 | **arXiv**: [2606.03735v1](http://arxiv.org/abs/2606.03735v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.03735v1)
+
+**Categories**: nlin.CD, cs.MA, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper presents a systematic study of pathfinding algorithms in the context of Dynamic Multi-Agent Pathfinding (D-MAPF), a setting that combines dynamic obstacles, partial observability, and inter-agent conflicts. We evaluate six representative algorithms: Dijkstra, D* Lite, Space-Time A*, WHCA*, M*, and a novel method denoted as A** within a unified simulation framework. The proposed A** algorithm introduces a template-based approach that decouples offline geometric path generation from online temporal adaptation. By precomputing multiple diverse candidate paths and dynamically reconnecting to them using space-time planning, A** improves solution quality in environments with frequent changes and limited sensing
+
+本文对动态多智能体寻路（D-MAPF）背景下的寻路算法进行了系统研究，该设置结合了动态障碍、部分可观测性和智能体间冲突。我们评估了六种代表性算法：Dijkstra、D* Lite、Space-Time A*、WHCA*、M*，以及在统一模拟框架内表示为 A** 的新颖方法。所提出的 A** 算法引入了一种基于模板的方法，该方法将离线几何路径生成与在线时间适应解耦。通过预先计算多个不同的候选路径并使用时空规划动态地重新连接到它们，A** 提高了在频繁变化和有限感知的环境中的解决方案质量
+
+</details>
+
+---
+
+## 3. Network Distributed Multi-Agent Reinforcement Learning for Consensus Control of Quadcopters / 用于四轴飞行器共识控制的网络分布式多智能体强化学习
+
+**Date**: 2026-06-01 | **arXiv**: [2606.02107v1](http://arxiv.org/abs/2606.02107v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.02107v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper proposes a Network Distributed Multi-Agent Reinforcement Learning (ND-MARL) framework for quadcopter consensus control. Compared to conventional multi-agent MARL formulations that rely on centralized planning or fully decentralized execution, ND-MARL incorporates the swarm communication graph into the decision process. Under a 2-Neighbor communication topology, each agent observes information of only two neighbors and outputs an action through a distributed policy. A high-level distributed consensus planner is trained using Multi-Agent Soft Actor-Critic (MASAC) and embedded in a hierarchical stack to generate reference target positions tracked by a low-level quadcopter controller. Results demonstrate smooth consensus trajectories and planner-tracker integration when compared to a centralized MARL controller. Most notably, the learned controller exhibits zero-shot scalability, as policies trained on a three-agent system are deployed to swarms of up to 250 agents under the same 2-Neighbor communication topology without retraining or fine-tuning, achieving consistent convergence with increasing steady-state spread at large team sizes due to sparse information propagation. These findings highlight ND-MARL as a stable framework for distributed, communication-aware quadcopter consensus control.
+
+本文提出了一种用于四轴飞行器共识控制的网络分布式多智能体强化学习（ND-MARL）框架。与依赖集中式规划或完全分散式执行的传统多智能体 MARL 公式相比，ND-MARL 将群体通信图纳入决策过程。在 2-Neighbor 通信拓扑下，每个代理仅观察两个邻居的信息，并通过分布式策略输出操作。高级分布式共识规划器使用多代理软演员评论家 (MASAC) 进行训练，并嵌入分层堆栈中，以生成由低级四轴飞行器控制器跟踪的参考目标位置。结果表明，与集中式 MARL 控制器相比，具有平滑的一致轨迹和规划器-跟踪器集成。最值得注意的是，学习控制器表现出零样本可扩展性，因为在三智能体系统上训练的策略被部署到同一 2-Neighbor 通信拓扑下多达 250 个智能体的集群，而无需重新训练或微调，由于稀疏信息传播，在大型团队规模下通过增加稳态传播实现一致的收敛。这些发现凸显了 ND-MARL 作为分布式、通信感知的四轴飞行器共识控制的稳定框架。
+
+</details>
+
+---
+
+## 4. CARVE: Certified Affordable Repair of Vetoed Maneuvers via Envelopes for Interactive Driving / CARVE：通过交互式驾驶信封对被否决的操作进行经过认证且经济实惠的维修
+
+**Date**: 2026-05-31 | **arXiv**: [2606.02641v1](http://arxiv.org/abs/2606.02641v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.02641v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Interactive driving exposes a failure mode that is easy to miss in rule-aware autonomous-driving stacks: a hard-rule margin can be negative for an ego candidate even though a small lawful accommodation by a non-priority agent would restore feasibility. Existing rulebooks, shields, and reachability filters are strong at vetoing unsafe actions, while prediction-based planners model likely responses. Neither returns a runtime proof object that states which bounded multi-agent edit repairs the maneuver, who owns the edit, whether the request is right-of-way affordable, and what ego fallback remains if the request is not observed. We formulate this missing object as *interactive repair certification* and introduce *CARVE*, a prediction-free certificate layer over a finite lattice of ego-owned and agent-owned tactical operators. Agent-owned requests are admissible only inside \(B_j(s) = β(π_j)α_j^{\max}(s)\), a cooperation envelope that separates kinematic reachability from normative priority. The resulting certificate records the binding rule, repair category, repair set, responsibility-weighted cost split, and fallback. On 589 Lanelet2-geometry-grounded INTERACTION replay episodes, CARVE-Greedy accepts 98.64% of initially vetoed maneuvers and recovers 370/378 human-resolved false vetoes, while preserving 589/589 right-of-way respect, zero priority-agent false positives, and 400/400 negative-stress vetoes. We prove certificate soundness, structural right-of-way respect, exact finite-lattice minimality, fallback contingency, and blame-consistency conditions. CARVE does not predict or require another driver's compliance; it certifies whether a proposed interaction is bounded, attributable, and normatively admissible under declared assumptions.
+
+交互式驾驶暴露了一种在规则感知的自动驾驶堆栈中很容易被忽视的故障模式：硬规则裕度对于自我候选者来说可能是负的，即使非优先代理的少量合法调整会恢复可行性。现有的规则手册、防护罩和可达性过滤器非常擅长否决不安全的行为，而基于预测的规划器则可以对可能的响应进行建模。两者都不会返回一个运行时证明对象，该对象说明哪个有界多代理编辑修复了该操作、谁拥有该编辑、该请求是否具有可承受的通行权，以及如果未遵守该请求，那么自我回退仍然存在。我们将这个缺失的对象表述为“交互式修复认证”，并引入“CARVE”，这是一个在自我拥有和代理拥有的战术操作员的有限网格上的无预测证书层。代理拥有的请求仅在 \(B_j(s) = β(π_j)α_j^{\max}(s)\) 内才被允许，这是一个将运动学可达性与规范优先级分开的合作信封。生成的证书记录了绑定规则、维修类别、维修集、责任加权成本分割和后备。在 589 个以 Lanelet2 几何为基础的交互重放事件中，CARVE-Greedy 接受了 98.64% 的最初被否决的操作，并恢复了 370/378 个人类解决的错误否决，同时保留了 589/589 个优先通行权尊重、零优先代理误报和 400/400 个负压力否决。我们证明了证书的健全性、结构性的通行权尊重、精确的有限格极小性、后备偶然性和责备一致性条件。 CARVE 不预测或要求其他驾驶员遵守规定；它证明拟议的相互作用在声明的假设下是否有界、可归因和规范上可接受。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-02 (56 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-06-02
