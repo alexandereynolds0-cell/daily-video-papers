@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-04](papers/2026-06-04.md) - 4 papers
 - [2026-06-03](papers/2026-06-03.md) - 9 papers
 - [2026-06-02](papers/2026-06-02.md) - 14 papers
 - [2026-06-01](papers/2026-06-01.md) - 5 papers
@@ -87,6 +88,84 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-04 (4 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-06-04
+
+**Paper Count**: 4
+
+---
+
+## 1. Explainably Safe Reinforcement Learning / 可解释的安全强化学习
+
+**Date**: 2026-06-03 | **arXiv**: [2606.04634v1](http://arxiv.org/abs/2606.04634v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.04634v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Trust in a decision-making system requires both safety guarantees and the ability to interpret and understand its behavior. This is particularly important for learned systems, whose decision-making processes are often highly opaque. Shielding is a prominent model-based technique for enforcing safety in reinforcement learning. However, because shields are automatically synthesized using rigorous formal methods, their decisions are often similarly difficult for humans to interpret. Recently, decision trees became customary to represent controllers and policies. However, since shields are inherently non-deterministic, their decision tree representations become too large to be explainable in practice. To address this challenge, we propose a novel approach for explainable safe RL that enhances trust by providing human-interpretable explanations of the shield's decisions. Our method represents the shielding policy as a hierarchy of decision trees, offering top-down, case-based explanations. At design time, we use a world model to analyze the safety risks of executing actions in given states. Based on this analysis, we construct both the shield and a high-level decision tree that classifies states into risk categories (safe, critical, dangerous, unsafe), explaining why a situation may be safety-critical. At runtime, we generate localized decision trees that explain which actions are allowed and why others are deemed unsafe. Our method facilitates explainability of the safety aspect in safe-by-shielding reinforcement learning, requires no additional information beyond what is already used for shielding, incurs minimal overhead, and integrates readily into existing shielded RL pipelines. In our experiments, we compute explanations using decision trees that are several orders of magnitude smaller than the original shield.
+
+对决策系统的信任既需要安全保证，又需要解释和理解其行为的能力。这对于学习系统尤其重要，因为其决策过程通常非常不透明。屏蔽是一种重要的基于模型的技术，用于增强强化学习中的安全性。然而，由于护盾是使用严格的形式方法自动合成的，因此它们的决定通常同样难以让人类解释。最近，决策树习惯于表示控制器和策略。然而，由于屏蔽本质上是不确定的，它们的决策树表示变得太大而无法在实践中解释。为了应对这一挑战，我们提出了一种可解释的安全强化学习的新方法，通过提供人类可解释的盾牌决策解释来增强信任。我们的方法将屏蔽策略表示为决策树的层次结构，提供自上而下、基于案例的解释。在设计时，我们使用世界模型来分析在给定状态下执行操作的安全风险。基于此分析，我们构建了防护罩和高级决策树，将状态分为风险类别（安全、关键、危险、不安全），解释为什么某种情况可能是安全关键的。在运行时，我们生成本地化决策树，解释哪些操作是允许的以及为什么其他操作被认为是不安全的。我们的方法促进了屏蔽强化学习中安全方面的可解释性，除了已经用于屏蔽的信息之外不需要额外的信息，产生的开销最小，并且可以轻松集成到现有的屏蔽 RL 管道中。在我们的实验中，我们使用比原始屏蔽小几个数量级的决策树来计算解释。
+
+</details>
+
+---
+
+## 2. MIRAGE: Mobile Agents with Implicit Reasoning and Generative World Models / MIRAGE：具有隐式推理和生成世界模型的移动代理
+
+**Date**: 2026-06-03 | **arXiv**: [2606.04627v1](http://arxiv.org/abs/2606.04627v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.04627v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Mobile agents are increasingly expected to operate everyday applications from screenshots and language goals, where reliable control requires reasoning over screen affordances, multi-step navigation, and future state changes. However, many agents externalize this computation as long textual chains of thought, which slows interaction, increases supervision cost, and complicates deployment. We introduce MIRAGE, a framework that learns continuous latent reasoning representations from visible textual reasoning traces. MIRAGE transfers explicit reasoning into compact hidden states, enabling the agent to reason internally without decoding long rationales. It also incorporates a generative world-model objective: latent reasoning vectors are aligned with future screenshots, encouraging the agent to anticipate upcoming interface states before acting. This turns hidden computation into both a compressed thought representation and a forward-looking model of environment dynamics. At inference time, MIRAGE reasons in continuous latent space, reducing token generation while improving execution efficiency. On AndroidWorld, MIRAGE matches explicit chain-of-thought supervised fine-tuning in the 4B ablation with a 3-5x lower decoded-token budget and improves a comparable instruction-tuned baseline by 10.2 points; on AndroidControl, it improves action grounding while generating over 75% fewer tokens.
+
+人们越来越期望移动代理能够通过屏幕截图和语言目标来操作日常应用程序，其中可靠的控制需要对屏幕可供性、多步导航和未来状态变化进行推理。然而，许多代理将这种计算外部化为长文本思想链，这减慢了交互，增加了监督成本并使部署复杂化。我们引入了 MIRAGE，一个从可见文本推理痕迹中学习连续潜在推理表示的框架。 MIRAGE 将显式推理转换为紧凑的隐藏状态，使代理能够在内部进行推理，而无需解码长的基本原理。它还包含一个生成世界模型目标：潜在推理向量与未来的屏幕截图保持一致，鼓励代理在行动之前预测即将到来的界面状态。这将隐藏计算转变为压缩的思维表征和环境动态的前瞻性模型。在推理时，MIRAGE 在连续潜在空间中进行推理，减少 token 生成，同时提高执行效率。在 AndroidWorld 上，MIRAGE 在 4B 消融中匹配了明确的思想链监督微调，解码令牌预算降低了 3-5 倍，并将可比较的指令调整基线提高了 10.2 个点；在 AndroidControl 上，它改进了操作基础，同时生成的令牌减少了 75% 以上。
+
+</details>
+
+---
+
+## 3. World Models Meet Language Models: On the Complementarity of Concrete and Abstract Reasoning / 世界模型遇上语言模型：论具体推理和抽象推理的互补性
+
+**Date**: 2026-06-02 | **arXiv**: [2606.03603v1](http://arxiv.org/abs/2606.03603v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.03603v1)
+
+**Categories**: cs.CV, cs.CL
+
+**Code**: https://github.com/yczhou001/PF-OPSD.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models and multimodal large language models (MLLMs) provide complementary capabilities for predicting future outcomes from static visual observations. World models can generate concrete visual rollouts of possible futures, while MLLMs can reason abstractly over questions, goals, and rules. However, generated rollouts are stochastic and may be visually plausible but task-incorrect, making it necessary to determine when visual simulation is useful, whether a rollout is credible, and how it should influence the final answer. We formulate this problem as controlled concrete reasoning, where a model learns to invoke, verify, and integrate visual future simulation alongside abstract reasoning. To study this setting, we construct two human-verified benchmarks, VRQABench for controllable spatial lookahead and OpenWorldQA for open-domain physical prediction, and propose Privileged-Future On-Policy Self-Distillation (PF-OPSD). During training, PF-OPSD uses ground-truth future videos and answers only as teacher-side privileged context to evaluate on-policy concrete-reasoning trajectories, while the deployable student never observes true futures at test time. Experimental results show that PF-OPSD outperforms baseline by 10.6% and 10.9% on VRQABench and OpenWorldQA, respectively, while increasing robustness to noisy or conflicting rollouts. Our code and dataset are available at https://github.com/yczhou001/PF-OPSD.
+
+世界模型和多模态大语言模型 (MLLM) 提供了根据静态视觉观察预测未来结果的互补功能。世界模型可以生成可能的未来的具体视觉展示，而 MLLM 可以对问题、目标和规则进行抽象推理。然而，生成的推出是随机的，并且可能在视觉上看似合理，但任务不正确，因此有必要确定视觉模拟何时有用、推出是否可信以及它应如何影响最终答案。我们将这个问题表述为受控具体推理，其中模型学习调用、验证并将视觉未来模拟与抽象推理相结合。为了研究这种设置，我们构建了两个经过人类验证的基准，用于可控空间前瞻的 VRQABench 和用于开放域物理预测的 OpenWorldQA，并提出了特权未来按策略自蒸馏 (PF-OPSD)。在训练期间，PF-OPSD 仅使用真实的未来视频和答案作为教师端特权上下文来评估符合政策的具体推理轨迹，而可部署的学生在测试时永远不会观察到真实的未来。实验结果表明，PF-OPSD 在 VRQABench 和 OpenWorldQA 上的性能分别优于基线 10.6% 和 10.9%，同时提高了对噪声或冲突推出的鲁棒性。我们的代码和数据集可在 https://github.com/yczhou001/PF-OPSD 获取。
+
+</details>
+
+---
+
+## 4. See, Infer, Intervene: Proactive World Modeling for Goal-Oriented Social Intelligence / 查看、推断、干预：面向目标的社交智能的主动世界建模
+
+**Date**: 2026-06-02 | **arXiv**: [2606.03371v1](http://arxiv.org/abs/2606.03371v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.03371v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal retail agents should not only recognize what a customer is doing, but also decide whether and how to assist before an explicit request is made. We study this setting through the See--Infer--Intervene (SII) framework, where a device must see pre-interaction behavior, infer latent customer intent, and act by selecting an appropriate service intervention or choosing to wait. We instantiate SII with the Proactive Intent World Model (PIWM), which represents customer state with AIDA (Attention, Interest, Desire, Action) purchasing phases and BDI (belief, desire, intention) psychological fields, predicts action-conditioned intent transitions, and selects from five response classes: Greet, Elicit, Inform, Recommend, and Hold. We further construct GuidanceSalesBench, a smart-retail benchmark containing state manifests, pre-interaction videos, candidate responses, action-conditioned outcomes, and best-action labels. When conditioned on ground-truth customer state to isolate action selection, PIWM achieves 0.641 macro F1 on 30 held-out target videos, outperforming a zero-shot Qwen2.5-VL-7B baseline and training variants without balanced action supervision; end-to-end video-only selection drops to 0.295, below the 5-class balanced random baseline of 0.414, identifying video-to-state grounding as the dominant deployment-time bottleneck. A preliminary staged real-store pilot (recorded with paid participants performing scripted customer behaviors) reaches 0.579 action macro F1 on 20 fully annotated videos, with 10 additional accessible videos released with index-level labels.
+
+多式联运零售代理商不仅应该了解客户在做什么，还应该在提出明确请求之前决定是否以及如何提供帮助。我们通过“查看-推断-干预”(SII) 框架来研究此设置，其中设备必须查看交互前的行为，推断潜在的客户意图，并通过选择适当的服务干预或选择等待来采取行动。我们使用主动意图世界模型 (PIWM) 实例化 SII，该模型用 AIDA（注意、兴趣、欲望、行动）购买阶段和 BDI（信念、欲望、意图）心理场来表示客户状态，预测以行动为条件的意图转换，并从五个响应类别中进行选择：问候、引出、通知、推荐和保留。我们进一步构建了 GuidanceSalesBench，这是一个智能零售基准，包含状态清单、交互前视频、候选人响应、行动条件结果和最佳行动标签。当以真实客户状态为条件来隔离动作选择时，PIWM 在 30 个保留的目标视频上实现了 0.641 宏 F1，优于零样本 Qwen2.5-VL-7B 基线和没有平衡动作监督的训练变体；端到端仅视频选择下降至 0.295，低于 0.414 的 5 类平衡随机基线，将视频到状态接地确定为主要的部署时间瓶颈。初步上演的真实商店试点（由付费参与者执行脚本化客户行为记录）在 20 个完全注释的视频上达到 0.579 动作宏 F1，并发布了 10 个带有索引级标签的附加可访问视频。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-03 (9 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-06-03
