@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-05](papers/2026-06-05.md) - 8 papers
 - [2026-06-04](papers/2026-06-04.md) - 50 papers
 - [2026-06-03](papers/2026-06-03.md) - 4 papers
 - [2026-06-02](papers/2026-06-02.md) - 56 papers
@@ -94,6 +95,146 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-05 (8 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-06-05
+
+**Paper Count**: 8
+
+---
+
+## 1. HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers / HANDOFF：通过精炼的补充教师进行人形代理任务空间全身控制
+
+**Date**: 2026-06-04 | **arXiv**: [2606.06493v1](http://arxiv.org/abs/2606.06493v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.06493v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+For a humanoid robot to be deployed in the real world, the choice of command space (i.e., the interface between task planning and whole-body control) is crucial. Existing whole-body controllers typically demand dense kinematic or spatial references that planners struggle to synthesize from task semantics. We instead propose a compact, explicit interface that is intuitive, general, modular, and expressive enough for diverse manipulation skills. To this end, we introduce HANDOFF, a single humanoid whole-body controller that follows this interface and is distilled via multi-teacher KL distillation under a context-conditioned gating scheme into a mixture-of-experts student from three complementary specialists: whole-body motion tracking with safety-filtered data, locomotion, and fall-recovery. On the Unitree G1, HANDOFF matches state-of-the-art velocity tracking and offers one of the largest robust manipulation workspaces. We further demonstrate hardware feasibility through multiple natural-language-driven task roll-outs, powered by a VLM-driven agentic planner with no task-specific data or controller fine-tuning.
+
+对于在现实世界中部署的人形机器人来说，命令空间（即任务规划和全身控制之间的接口）的选择至关重要。现有的全身控制器通常需要密集的运动学或空间参考，规划人员很难从任务语义中合成这些参考。相反，我们提出了一个紧凑、明确的界面，该界面直观、通用、模块化且具有足够的表现力，可以满足不同的操作技能。为此，我们引入了 HANDOFF，这是一个遵循此界面的单一人形全身控制器，并在上下文条件门控方案下通过多教师 KL 蒸馏提炼成来自三个互补专家的专家混合学生：具有安全过滤数据的全身运动跟踪、运动和跌倒恢复。在 Unitree G1 上，HANDOFF 与最先进的速度跟踪相匹配，并提供最大的稳健操作工作空间之一。我们通过多个自然语言驱动的任务部署进一步证明了硬件的可行性，这些任务由 VLM 驱动的代理规划器提供支持，无需特定于任务的数据或控制器微调。
+
+</details>
+
+---
+
+## 2. Flow-based Policy Adaptation without Policy Updates / 基于流的策略适配，无需策略更新
+
+**Date**: 2026-06-04 | **arXiv**: [2606.06461v1](http://arxiv.org/abs/2606.06461v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.06461v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Leveraging prior knowledge from pretrained policies, foundation models, or human operators offers an efficient alternative to learning robot skills from scratch. However, these agents often provide actions that are suboptimal, noisy, or misaligned with task-specific expert behavior. We propose GLOVES, a family of flow-based adaptation methods that correct non-expert actions by transporting them toward an expert action distribution. Rather than replacing agentic control with full autonomy, GLOVES performs selective action-level adaptation, improving task success while preserving agent intent. The learned flow also provides a natural in-distribution scoring mechanism through reverse flow evaluation. We use this signal as an intervention gate: actions that appear consistent with the expert distribution are passed through unchanged, while anomalous or out-of-distribution (OOD) actions are corrected. In this way, assistance is only provided when necessary. GLOVES requires only limited expert supervision, using a small number of demonstrations or reusable successful skill segments. By learning local expert action patterns and stitching them during execution, GLOVES provides a lightweight shared-control module for robust action adaptation across tasks and environments. Code and demos are available at ripl.github.io/GLOVES_web.
+
+利用预先训练的策略、基础模型或人类操作员的先验知识，为从头开始学习机器人技能提供了一种有效的替代方案。然而，这些代理通常提供次优、嘈杂或与特定任务的专家行为不一致的操作。我们提出了 GLOVES，这是一系列基于流的适应方法，通过将非专家行为传输到专家行为分布来纠正非专家行为。手套不是用完全自主取代代理控制，而是执行选择性的动作级别适应，提高任务成功率，同时保留代理意图。学习流还通过反向流评估提供了自然的分布内评分机制。我们使用这个信号作为干预门：看起来与专家分布一致的动作不改变地通过，而异常或分布外（OOD）动作则被纠正。这样，只有在必要时才提供帮助。手套仅需要有限的专家监督，使用少量的演示或可重复使用的成功技能片段。通过学习本地专家的动作模式并在执行过程中缝合它们，GLOVES 提供了一个轻量级的共享控制模块，可实现跨任务和环境的稳健动作适应。代码和演示可在 ripl.github.io/GLOVES_web 上获取。
+
+</details>
+
+---
+
+## 3. RiskFlow: Fast and Faithful Safety-Critical Traffic Scenario Generation / RiskFlow：快速、忠实地生成安全关键型交通场景
+
+**Date**: 2026-06-04 | **arXiv**: [2606.06423v1](http://arxiv.org/abs/2606.06423v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.06423v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Safety-critical traffic scenario generation is essential for evaluating autonomous driving systems under rare but high-risk interactions. Existing diffusion-based methods offer strong controllability in closed-loop generation, but their iterative denoising process is computationally expensive and may accumulate sampling and guidance errors over long rollouts, causing unrealistic motion artifacts such as jitter, abnormal acceleration, and off-road behavior. To address these issues, we propose RiskFlow, a closed-loop safety-critical multi-agent traffic generation framework that formulates future trajectory generation as transport in the action space. Instead of relying on iterative denoising, RiskFlow learns an average velocity field over a finite interval to transform Gaussian action sequences into future acceleration and yaw-rate commands with a single forward pass, using a JVP-based objective for efficient and stable training. At test time, RiskFlow applies output-space guidance to the generated actions, steering selected critical agents toward risky interactions while regularizing off-road behavior, and reconstructs physically feasible trajectories through vehicle dynamics. Experiments on nuScenes with tbsim closed-loop evaluation show that RiskFlow achieves a strong adversariality-realism trade-off across multi-agent and long-horizon settings. Compared with representative baselines, RiskFlow consistently improves realism while maintaining competitive safety-critical generation capability, and substantially reduces inference time for evaluation.
+
+安全关键的交通场景生成对于评估罕见但高风险交互下的自动驾驶系统至关重要。现有的基于扩散的方法在闭环生成中提供了很强的可控性，但其迭代去噪过程的计算成本很高，并且可能会在长时间的推出过程中积累采样和引导误差，从而导致不切实际的运动伪影，例如抖动、异常加速和越野行为。为了解决这些问题，我们提出了RiskFlow，这是一种闭环安全关键型多智能体流量生成框架，它将未来的轨迹生成制定为行动空间中的运输。 RiskFlow 不依赖迭代降噪，而是在有限间隔内学习平均速度场，通过一次前向传递将高斯动作序列转换为未来的加速度和偏航率命令，使用基于 JVP 的目标进行高效稳定的训练。在测试时，RiskFlow 将输出空间指导应用于生成的动作，引导选定的关键代理进行危险交互，同时规范越野行为，并通过车辆动力学重建物理上可行的轨迹。使用 tbsim 闭环评估在 nuScenes 上进行的实验表明，RiskFlow 在多智能体和长视野设置中实现了强大的对抗性与现实主义权衡。与代表性基线相比，RiskFlow 不断提高真实性，同时保持具有竞争力的安全关键生成能力，并大幅缩短评估的推理时间。
+
+</details>
+
+---
+
+## 4. Merging model-based control with multi-agent reinforcement learning for multi-agent cooperative teaming strategies / 将基于模型的控制与多智能体强化学习相结合，实现多智能体协作团队策略
+
+**Date**: 2026-06-04 | **arXiv**: [2606.06011v1](http://arxiv.org/abs/2606.06011v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.06011v1)
+
+**Categories**: cs.RO, cs.LG, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In this work, we propose a framework that combines multi-agent reinforcement learning (MARL) with model-based control to achieve safe, dynamically feasible actions in cooperative multi-agent tasks. Multi-agent reinforcement learning provides the advantage of learning cooperative policies for multi-agent teams from discrete non-differentiable rewards in a long planning horizon. Model-predictive control is robust and offers safe, dynamically feasible actions in a fast replanning framework for short horizons. We propose an algorithm that extends actor-critic model predictive control for MARL which we refer to as multi-agent actor-critic model predictive control (MA-AC-MPC). We demonstrate the capabilities of this algorithm by applying it to a multi-agent pursuit-evasion scenario. Specifically, we compare the evader team's strategy using the MA-AC-MPC model and a multi-layer perceptron model (MA-AC-MLP). The pursuer team uses augmented proportional navigation as it is accepted as an advanced adversarial control law. We also provide an example with a heterogeneous environment where a drone and omni-wheeled rover cooperate to achieve repeatable and successful landing with 100% success rate in hardware for MA-AC-MPC compared to 60% for MA-AC-MLP. We demonstrate the robustness of the proposed MA-AC-MPC algorithm in hardware for both environments.
+
+在这项工作中，我们提出了一个框架，将多智能体强化学习（MARL）与基于模型的控制相结合，以在协作多智能体任务中实现安全、动态可行的动作。多智能体强化学习提供了在长期规划范围内从离散的不可微分奖励中学习多智能体团队合作策略的优势。模型预测控制非常强大，可在短期内快速重新规划框架中提供安全、动态可行的操作。我们提出了一种扩展 MARL 的 Actor-Critic 模型预测控制的算法，我们将其称为多代理 Actor-Critic 模型预测控制（MA-AC-MPC）。我们通过将其应用于多智能体追逃场景来展示该算法的功能。具体来说，我们使用 MA-AC-MPC 模型和多层感知器模型 (MA-AC-MLP) 来比较逃避者团队的策略。追击者团队使用增强比例导航，因为它被认为是先进的对抗性控制法。我们还提供了一个异构环境的示例，其中无人机和全轮流动站合作实现可重复且成功的着陆，MA-AC-MPC 的硬件成功率为 100%，而 MA-AC-MLP 的硬件成功率为 60%。我们在两种环境的硬件中证明了所提出的 MA-AC-MPC 算法的鲁棒性。
+
+</details>
+
+---
+
+## 5. Learning of Robot Safety Policies via Adversarial Synthetic Scenarios / 通过对抗性综合场景学习机器人安全策略
+
+**Date**: 2026-06-04 | **arXiv**: [2606.05952v1](http://arxiv.org/abs/2606.05952v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05952v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In this work, we propose an agentic gamification framework for hazard-informed learning of robot safety policies through synthetic scenarios. We model scenario generation as an adversarial game between two agents: a Red Team that explores the space of potential failures by constructing hazardous situations, and a Blue Team that incrementally refines safety policies to prevent them. This iterative process enables efficient discovery of high-risk edge cases that are unlikely to be captured through random simulation or manual enumeration. By combining classical risk modeling with adversarial scenario generation and modern learning paradigms, this work provides a scalable pathway for embedding safety into Physical AI systems operating in complex real-world environments. The paper describes ongoing work. The contribution is a problem formulation and a proposed solution architecture.
+
+在这项工作中，我们提出了一种代理游戏化框架，用于通过合成场景对机器人安全策略进行危险告知学习。我们将场景生成建模为两个代理之间的对抗性游戏：红队通过构建危险情况来探索潜在故障的空间，蓝队逐步完善安全策略以防止故障发生。这种迭代过程可以有效地发现不太可能通过随机模拟或手动枚举捕获的高风险边缘情况。通过将经典风险建模与对抗场景生成和现代学习范例相结合，这项工作提供了一种可扩展的途径，将安全性嵌入到在复杂的现实环境中运行的物理人工智能系统中。该文件描述了正在进行的工作。贡献是问题表述和建议的解决方案架构。
+
+</details>
+
+---
+
+## 6. DexFuture: Hierarchical Future-State Visuomotor Targeting for Bimanual Dexterous Tool Use / DexFuture：用于双手灵巧工具使用的分层未来状态视觉运动目标
+
+**Date**: 2026-06-04 | **arXiv**: [2606.05699v1](http://arxiv.org/abs/2606.05699v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05699v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Bimanual dexterous tool use remains challenging for robots due to high-dimensional hand configurations and complex hand-tool-object dynamics and contact. Most existing control policies depend on future configuration references provided from demonstrations, while future action-conditioned world models require slow online planning over high-dimensional action sequences. A significant challenge is generating a dynamically consistent future reference trajectory without relying on privileged states from demonstrations or slow counterfactual planning. We propose DexFuture, a hierarchical system that couples a high-level Future-State Visuomotor Target Predictor with a low-level Target-Conditioned Structured Dexterous Policy. Conditioned on egocentric RGB, proprioceptive and geometric history, the high-level predictor constructs structured hand-tool-object visuomotor embeddings and uses a horizon-conditioned transformer to generate a multi-step future target trajectory. Then, the low-level policy tracks them with a target-conditioned per-link transformer. This hierarchy decouples coarse future reference generation from fine-grained action control, and slow long-horizon semantic prediction from high-frequency execution. On OakInk2 bimanual tool-use tasks, DexFuture achieves 90% of the privileged-oracle performance, compared to 7% for a no-reference policy. DexFuture operates at 60 Hz, approximately 250 times faster than DexWM-style Cross-Entropy Method (CEM) planning with a future action-conditioned world model.
+
+由于高维手配置和复杂的手工具-物体动力学和接触，双手灵巧工具的使用对于机器人来说仍然具有挑战性。大多数现有的控制策略依赖于演示提供的未来配置参考，而未来的动作条件世界模型需要对高维动作序列进行缓慢的在线规划。一个重大挑战是在不依赖示威或缓慢的反事实规划中的特权状态的情况下生成动态一致的未来参考轨迹。我们提出了 DexFuture，一个分层系统，它将高级未来状态视觉运动目标预测器与低级目标条件结构化灵巧策略结合起来。以自我中心 RGB、本体感受和几何历史为条件，高级预测器构建结构化的手动工具-对象视觉运动嵌入，并使用水平条件变换器生成多步未来目标轨迹。然后，低级策略使用目标条件的每链路变压器来跟踪它们。这种层次结构将粗略的未来参考生成与细粒度的动作控制解耦，并将缓慢的长期语义预测与高频执行解耦。在 OakInk2 双手工具使用任务中，DexFuture 实现了 90% 的特权预言机性能，而无参考策略的性能仅为 7%。 DexFuture 的运行频率为 60 Hz，比采用未来动作条件世界模型的 DexWM 式交叉熵方法 (CEM) 规划快约 250 倍。
+
+</details>
+
+---
+
+## 7. Dynamic Multi-Agent Pickup and Delivery in Robotic Cellular Warehousing Systems / 机器人蜂窝仓储系统中的动态多代理拾取和交付
+
+**Date**: 2026-06-04 | **arXiv**: [2606.05669v1](http://arxiv.org/abs/2606.05669v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05669v1)
+
+**Categories**: cs.RO, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robotic Cellular Warehousing Systems (RCWS) give rise to multi-agent pickup and delivery (MAPD) processes in which robots sequentially collect multiple stock-keeping units (SKUs) for each order. Unlike classical MAPD formulations that assume static tasks, real warehouse operations often involve dynamic order evolution, where new SKUs may be appended to an order while it is being executed. Motivated by this practical requirement, this letter formulates the Dynamic Multi-Agent Pickup and Delivery problem considering internal order evolution for the first time. Building on the token passing paradigm, we propose two event-triggered online replanning algorithms. The first, Dynamic Token Passing, performs localized replanning upon order updates through add-order decomposition and priority-based token scheduling while preserving collision-free execution. The second, Cooperative Token Passing, further enables idle robots to opportunistically assist newly added pickups, improving system-level efficiency. Simulation results in RCWS environments demonstrate that the proposed methods significantly reduce order flowtime compared with static and non-cooperative baselines.
+
+机器人蜂窝仓储系统 (RCWS) 引发了多代理取货和交付 (MAPD)​​ 流程，其中机器人按顺序收集每个订单的多个库存单位 (SKU)。与假设静态任务的经典 MAPD 公式不同，实际仓库操作通常涉及动态订单演变，其中新的 SKU 可能会在订单执行时附加到订单中。受这一实际​​需求的启发，这封信首次提出了考虑内部订单演化的动态多代理取货和配送问题。基于令牌传递范例，我们提出了两种事件触发的在线重新规划算法。第一个是动态令牌传递，通过加序分解和基于优先级的令牌调度在订单更新时执行本地化重新规划，同时保持无冲突执行。第二个是合作令牌传递，进一步使闲置机器人能够伺机协助新添加的皮卡，从而提高系统级效率。 RCWS 环境中的仿真结果表明，与静态和非合作基线相比，所提出的方法显着减少了订单流转时间。
+
+</details>
+
+---
+
+## 8. AgenticRL: Self-Refining Agentic Reinforcement Learning for Vision-Conditioned UAV Navigation / AgenticRL：用于视觉条件无人机导航的自我完善代理强化学习
+
+**Date**: 2026-06-02 | **arXiv**: [2606.03963v2](http://arxiv.org/abs/2606.03963v2) | **PDF**: [Link](http://arxiv.org/pdf/2606.03963v2)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Deep reinforcement learning has shown strong potential for enabling autonomous robots to learn complex navigational tasks. However, its practical use still depends heavily on human designed reward functions and repeated manual fine tuning, which is time consuming and does not guarantee high success in the desired task. This paper presents AgenticRL, agent guided reinforcement learning framework that increases autonomy in reward design, policy refinement, and real world deployment for unmanned aerial vehicles (UAV) navigation tasks. AgenticRL uses a multimodal generative pre-trained tansformer (GPT) agent to interpret task information and visual scene observations, generate task specific reward functions, train policies using Proximal Policy Optimization (PPO) algorithm, and then act as a critic by evaluating the trained policy through diagnosis packets to generate feedback. Based on this feedback, the agent identifies failure modes and refines the reward function in a closed loop self improvement process. To further leverage the multimodal GPT agent during inference, AgenticRL uses real world images and natural language task information to automatically identify the active scenario and select the appropriate trained policy for execution. The framework is evaluated on multiple navigational tasks, including gate traversal, obstacle avoidance, wall barrier crossing with landing, trajectory following, and motion behavior learning. Experimental results show that the closed loop refinement process improves policy behavior compared with initial rewards by 71%. We also demonstrate sim-to-real transfer of the proposed framework, achieving a real world success rate of 91% and a sim-to-real accuracy of 94%.
+
+深度强化学习已显示出使自主机器人学习复杂导航任务的强大潜力。然而，它的实际使用仍然在很大程度上依赖于人类设计的奖励函数和重复的手动微调，这非常耗时，并且不能保证在期望的任务中取得很高的成功。本文提出了 AgenticRL，这是一种代理引导的强化学习框架，可提高无人机 (UAV) 导航任务的奖励设计、策略细化和现实世界部署的自主性。 AgenticRL 使用多模态生成预训练变换器 (GPT) 代理来解释任务信息和视觉场景观察，生成特定于任务的奖励函数，使用近端策略优化 (PPO) 算法训练策略，然后通过诊断数据包评估训练的策略以生成反馈，从而充当批评者。根据此反馈，代理识别故障模式并在闭环自我改进过程中完善奖励函数。为了在推理过程中进一步利用多模态 GPT 代理，AgenticRL 使用现实世界图像和自然语言任务信息来自动识别活动场景并选择适当的训练策略来执行。该框架针对多种导航任务进行了评估，包括穿越大门、避障、穿越墙壁障碍物着陆、轨迹跟踪和运动行为学习。实验结果表明，与初始奖励相比，闭环细化过程将策略行为改善了 71%。我们还演示了所提出的框架的模拟到现实的迁移，实现了 91% 的现实世界成功率和 94% 的模拟到现实准确度。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-04 (50 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-06-04
