@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-06](papers/2026-06-06.md) - 4 papers
 - [2026-06-05](papers/2026-06-05.md) - 13 papers
 - [2026-06-04](papers/2026-06-04.md) - 4 papers
 - [2026-06-03](papers/2026-06-03.md) - 9 papers
@@ -89,6 +90,82 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-06 (4 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-06-06
+
+**Paper Count**: 4
+
+---
+
+## 1. WorldFly: A World-Model-Based Vision-Language-Action Model for UAV Navigation / WorldFly：基于世界模型的无人机导航视觉-语言-动作模型
+
+**Date**: 2026-06-04 | **arXiv**: [2606.06147v1](http://arxiv.org/abs/2606.06147v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.06147v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+End-to-end Vision-Language-Action (VLA) models have shown promise in UAV navigation. However, existing approaches typically rely on historical observations to directly predict actions, often struggling in dense urban environments where severe occlusions and sharp turns result in drastic viewpoint transitions. We argue that the ability to "imagine" future states -- inherent in World Models -- is critical for robust decision-making under such partial observability. To address this, we construct a challenging Urban Canyon Traversal Benchmark, specifically designed to evaluate spatial understanding in scenarios characterized by severe occlusions and drastic viewpoint transitions. To this end, we propose WorldFly, a novel world-model-based VLA framework that employs a dual-branch coupled flow matching mechanism to jointly generate future video predictions and navigation actions, thereby explicitly guiding the agent's policy via spatial imagination. Extensive evaluations on our benchmark demonstrate that WorldFly outperforms other baselines, particularly in unseen environments, validating the effectiveness of integrating world models into embodied aerial agents.
+
+端到端视觉-语言-动作 (VLA) 模型在无人机导航中显示出了前景。然而，现有的方法通常依赖于历史观察来直接预测行为，通常在密集的城市环境中举步维艰，在这些环境中，严重的遮挡和急转弯会导致剧烈的视点转换。我们认为，“想象”未来状态的能力（世界模型所固有的）对于在这种部分可观察性下做出稳健的决策至关重要。为了解决这个问题，我们构建了一个具有挑战性的城市峡谷穿越基准，专门用于评估以严重遮挡和剧烈视点转换为特征的场景中的空间理解。为此，我们提出了WorldFly，一种新颖的基于世界模型的VLA框架，它采用双分支耦合流匹配机制来共同生成未来的视频预测和导航动作，从而通过空间想象明确地指导代理的策略。对我们基准的广泛评估表明，WorldFly 优于其他基准，特别是在看不见的环境中，验证了将世界模型集成到具体航空代理中的有效性。
+
+</details>
+
+---
+
+## 2. Towards World Models in Biomedical Research / 迈向生物医学研究的世界模式
+
+**Date**: 2026-06-04 | **arXiv**: [2606.05925v1](http://arxiv.org/abs/2606.05925v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05925v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A central goal of biomedicine is to understand, predict and ultimately control the dynamic mechanisms by which biological systems respond to perturbations, disease progression and therapeutic intervention. Although foundation models and large language models have accelerated biomedical data interpretation, most current systems remain focused on static pattern recognition rather than prospective simulation of biological futures. Here we propose biomedical world models as a paradigm for AI-driven discovery. These models learn latent representations of molecular, cellular, tissue and clinical states, together with intervention-conditioned dynamics that allow future trajectories to be simulated before actions are taken. We discuss how biomedical world models could function as data engines, environment simulators and scientific planning substrates across applications including virtual cells, organoids, virtual patients and surgical simulation. We outline the data infrastructure, evaluation benchmarks, safety constraints and governance frameworks required. Biomedical world models may provide a foundation for simulation-guided, closed-loop and experimentally actionable biomedical discovery.
+
+生物医学的中心目标是理解、预测并最终控制生物系统响应扰动、疾病进展和治疗干预的动态机制。尽管基础模型和大型语言模型加速了生物医学数据的解释，但大多数当前系统仍然专注于静态模式识别，而不是生物未来的前瞻性模拟。在这里，我们提出生物医学世界模型作为人工智能驱动发现的范例。这些模型学习分子、细胞、组织和临床状态的潜在表示，以及干预条件动力学，允许在采取行动之前模拟未来的轨迹。我们讨论生物医学世界模型如何在虚拟细胞、类器官、虚拟患者和手术模拟等应用中充当数据引擎、环境模拟器和科学规划基础。我们概述了所需的数据基础设施、评估基准、安全约束和治理框架。生物医学世界模型可以为模拟引导、闭环和实验上可操作的生物医学发现提供基础。
+
+</details>
+
+---
+
+## 3. Autoregressive Diffusion World Models for Off-Policy Evaluation of LLM Agents / LLM 代理离策略评估的自回归扩散世界模型
+
+**Date**: 2026-06-04 | **arXiv**: [2606.05558v1](http://arxiv.org/abs/2606.05558v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05558v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Evaluating large language model (LLM) agents in multi-turn interactive environments is expensive and risky, as it requires online environment interaction. We propose ADWM (Autoregressive Diffusion World Model), an evaluation framework that estimates the performance of a new LLM agent policy purely from pre-collected trajectories. The core idea is to learn a latent diffusion world model that simulates how the environment responds to the evaluation policy, without ever executing it in the real environment. Existing diffusion-based OPE methods guide full trajectories in a single pass by jointly diffusing states and actions, an assumption that breaks down for LLM agents whose actions are discrete text that must be sampled from the policy after observing the environment. Unlike autoregressive world models that suffer from compounding errors, ADWM models each transition as an independent denoising process, enabling reliable step-by-step rollouts where the world model and agent alternate in causal order. Crucially, the LLM agent under evaluation directly guides the diffusion generation at each step via a policy-conditioned score function, ensuring that simulated trajectories accurately reflect its decision-making patterns. Empirically, ADWM achieves accurate value estimates and evaluation reliability across diverse multi-turn agent tasks, demonstrating its promise as a practical framework for offline LLM agent evaluation.
+
+在多轮交互环境中评估大型语言模型（LLM）代理是昂贵且有风险的，因为它需要在线环境交互。我们提出 ADWM（自回归扩散世界模型），这是一种评估框架，纯粹根据预先收集的轨迹来估计新的 LLM 代理策略的性能。核心思想是学习一个潜在扩散世界模型，该模型模拟环境如何响应评估策略，而无需在真实环境中执行它。现有的基于扩散的 OPE 方法通过联合扩散状态和动作，在一次传递中引导完整的轨迹，对于 LLM 代理来说，这种假设是不成立的，因为 LLM 代理的行为是离散文本，必须在观察环境后从策略中采样。与遭受复合误差的自回归世界模型不同，ADWM 将每次转换建模为独立的去噪过程，从而实现可靠的逐步推出，其中世界模型和智能体按因果顺序交替。至关重要的是，接受评估的 LLM 代理通过策略条件评分函数直接指导每一步的扩散生成，确保模拟轨迹准确反映其决策模式。根据经验，ADWM 在不同的多轮代理任务中实现了准确的价值估计和评估可靠性，证明了其作为离线 LLM 代理评估的实用框架的前景。
+
+</details>
+
+---
+
+## 4. Representation Learning Enables Scalable Multitask Deep Reinforcement Learning / 表征学习实现可扩展的多任务深度强化学习
+
+**Date**: 2026-06-04 | **arXiv**: [2606.05555v1](http://arxiv.org/abs/2606.05555v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05555v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scaling reinforcement learning (RL) to diverse multitask settings remains a central challenge. While recent advances in model-based RL achieve strong performance, they rely on planning and complex training pipelines, making it unclear which components are essential for scalability. We revisit this question and argue that the primary driver of scalable multitask RL is not model-based control, but \emph{representation learning}. In particular, we show that combining predictive, model-based representations with high-capacity value function approximation is sufficient to achieve strong performance, even without planning. We evaluate a simple model-free algorithm, MR.Q, coupled with auxiliary predictive objectives into a scalable actor-critic architecture. This approach outperforms a recent world-model-based method and a range of deep RL baselines across a diverse suite of multitask continuous control tasks, while significantly reducing computational overhead and improving wall-clock efficiency. We observe consistent improvements with increased model capacity and show through ablations that predictive representation learning is critical for performance.
+
+将强化学习（RL）扩展到不同的多任务环境仍然是一个核心挑战。虽然基于模型的强化学习的最新进展取得了强劲的性能，但它们依赖于规划和复杂的训练管道，因此不清楚哪些组件对于可扩展性至关重要。我们重新审视这个问题，并认为可扩展多任务强化学习的主要驱动力不是基于模型的控制，而是\emph{表示学习}。特别是，我们表明，即使没有规划，将基于模型的预测表示与高容量价值函数近似相结合也足以实现强大的性能。我们评估了一个简单的无模型算法 MR.Q，加上辅助预测目标，形成了一个可扩展的行动者-评论家架构。这种方法优于最新的基于世界模型的方法和一系列跨多种多任务连续控制任务的深度强化学习基线，同时显着减少了计算开销并提高了挂钟效率。我们观察到随着模型容量的增加而得到的持续改进，并通过消融表明预测表示学习对于性能至关重要。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-05 (13 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-06-05
