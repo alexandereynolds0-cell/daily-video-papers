@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-06](papers/2026-06-06.md) - 19 papers
 - [2026-06-04](papers/2026-06-04.md) - 3 papers
 - [2026-06-02](papers/2026-06-02.md) - 33 papers
 - [2026-06-01](papers/2026-06-01.md) - 6 papers
@@ -92,6 +93,328 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-06 (19 papers)</b></summary>
+
+# arXiv Video Papers - 2026-06-06
+
+**Paper Count**: 19
+
+---
+
+## 1. Physics in 2-Steps: Locking Motion Priors Before Visual Refinement Erases Them / 物理分两步：在视觉细化擦除运动先验之前锁定它们
+
+**Date**: 2026-06-04 | **arXiv**: [2606.06361v1](http://arxiv.org/abs/2606.06361v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.06361v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Image-to-Video diffusion models leverage input images to generate visually stunning content, yet frequently produce motion that violates physical laws. We reveal a surprising finding: a 2-step generation often exhibits better physical consistency than a 50-step output from the same model. Through spectral analysis, we trace this to phase erosion during denoising; the phase degrades significantly (dropping by $\approx 18\%$ from step 2 to step 50), whereas the magnitude remains relatively stable. Building on this insight, we propose PhaseLock, a training-free framework that preserves the valid motion priors from few-step inference throughout the denoising trajectory. Rather than relying on full-step inference for physical consistency, PhaseLock extracts a motion prior from just 2 steps and enforces it onto high-fidelity generation via Latent Delta Guidance. Our approach effectively mitigates phase degradation, improving physical consistency by an average of 6.2 points across diverse models while largely maintaining visual fidelity, with negligible overhead ($1.06\times$ time, $1.02\times$ memory) and reduced reliance on expensive external guidance methods ($\sim5\times$ time).
+
+图像到视频的扩散模型利用输入图像来生成视觉上令人惊叹的内容，但经常产生违反物理定律的运动。我们揭示了一个令人惊讶的发现：2 步生成通常比同一模型的 50 步输出表现出更好的物理一致性。通过频谱分析，我们将其追溯到去噪过程中的相位侵蚀；相位显着下降（从步骤 2 到步骤 50 下降 $\approx 18\%$），而幅度保持相对稳定。基于这一见解，我们提出了 PhaseLock，这是一种免训练框架，可在整个去噪轨迹中保留来自几步推理的有效运动先验。 PhaseLock 不依赖全步推理来实现物理一致性，而是仅从 2 步中提取先验运动，并通过潜在增量指导将其强制执行高保真生成。我们的方法有效地减轻了相位退化，将不同模型的物理一致性平均提高了 6.2 个点，同时在很大程度上保持了视觉保真度，开销可以忽略不计（$1.06\times$ 时间，$1.02\times$ 内存），并减少了对昂贵的外部引导方法的依赖（$\sim5\times$ 时间）。
+
+</details>
+
+---
+
+## 2. StoryVideoQA: Scaling Deep Video Understanding with a Large-Scale, Multi-Genre and Auto-Generated Dataset / StoryVideoQA：通过大规模、多流派和自动生成的数据集扩展深度视频理解
+
+**Date**: 2026-06-04 | **arXiv**: [2606.06338v1](http://arxiv.org/abs/2606.06338v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.06338v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/nercms-mmap/StoryVideoQA/
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video question answering (VideoQA) aims to answer questions about given videos. While existing approaches excel on factoid VideoQA, they struggle with deep video understanding (DVU), which requires the comprehension of complex storylines. This challenge arises from the inherent long-range video content, multi-faceted question types, and instance-level story elements, all of which constrain the scale and diversity of manually constructed DVU datasets. These difficulties constrain the scale and diversity of manually-constructed DVU dataset. To address these, we previously introduced StoryMind to automatically construct DVU datasets with balanced fine-grained topics. Though it can generate high-quality question-answer pairs (QAs) for TV series, it suffers significant performance degradation when handling longer and more complex movies. In this paper, we further design StoryMindv2, an enhanced multi-agent collaboration framework to generate high-quality DVU datasets for both TV series and movies. By integrating a novel supervisor-guided generation mechanism and a refined multi-reviewer voting strategy, the framework is utilized to construct StoryVideoQA, the largest DVU dataset to date, featuring over 363K QAs on 393.2 hours diverse story videos including TV series (avg. 1,635 seconds) and movies (avg. 7,878 seconds). Comprehensive evaluations of 20 state-of-the-art VideoQA methods on this large-scale benchmark reveal that they cannot fully maintain long-range character associations or construct a coherent understanding of complex storylines. To bridge this gap, we propose PlotTree, a novel video understanding agent, re-organizing long-range video content into a hierarchical plot structure, enabling efficient storyline reasoning on StoryVideoQA. Project page: https://github.com/nercms-mmap/StoryVideoQA/
+
+视频问答（VideoQA）旨在回答有关给定视频的问题。虽然现有方法在事实视频质量检查方面表现出色，但它们在深度视频理解 (DVU) 方面遇到了困难，这需要理解复杂的故事情节。这一挑战源于固有的远程视频内容、多方面的问题类型和实例级故事元素，所有这些都限制了手动构建的 DVU 数据集的规模和多样性。这些困难限制了手动构建的 DVU 数据集的规模和多样性。为了解决这些问题，我们之前引入了 StoryMind 来自动构建具有平衡细粒度主题的 DVU 数据集。尽管它可以为电视剧生成高质量的问答对 (QA)，但在处理更长、更复杂的电影时，它的性能会显着下降。在本文中，我们进一步设计了 StoryMindv2，这是一个增强的多智能体协作框架，可为电视剧和电影生成高质量的 DVU 数据集。通过集成新颖的监督引导生成机制和完善的多审稿人投票策略，该框架用于构建迄今为止最大的 DVU 数据集 StoryVideoQA，对 393.2 小时的不同故事视频（包括电视剧（平均 1,635 秒）和电影（平均 7,878 秒））进行了超过 363K 的 QA。在这个大规模基准上对 20 种最先进的 VideoQA 方法进行的综合评估表明，它们无法完全维持远程角色关联或对复杂故事情节构建连贯的理解。为了弥补这一差距，我们提出了 PlotTree，一种新颖的视频理解代理，它将远程视频内容重新组织成分层情节结构，从而在 StoryVideoQA 上实现高效的故事情节推理。项目页面：https://github.com/nercms-mmap/StoryVideoQA/
+
+</details>
+
+---
+
+## 3. RhymeFlow: Training-Free Acceleration for Video Generation with Asynchronous Denoising Flow Scheduling / RhymeFlow：通过异步去噪流调度实现视频生成的免训练加速
+
+**Date**: 2026-06-04 | **arXiv**: [2606.06309v1](http://arxiv.org/abs/2606.06309v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.06309v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation models based on Diffusion Transformers (DiTs) have achieved remarkable performance in video synthesis, yet they suffer from high inference latency and computational costs due to the quadratic complexity of 3D attention. Existing acceleration methods primarily reduce computational complexity within each individual denoising steps through techniques such as sparse attention and KV-caching. However, they rigidly adhere to the inherent constraint of the standard diffusion pipeline: every frame in the target video sequence must be subjected to a complete, dense denoising process across all diffusion timesteps. We observe that due to the corresponding contents and motions among adjacent frames, when keyframes with critical semantic transitions are anchored, the intermediate states of others often follow more predictable trajectories, which indicates that such uniform, dense denoising process is inherently redundant for natural video data. To this end, we introduce \textbf{RhymeFlow}, a training-free framework that decouples the denoising trajectories of different frames. Specifically, we first identify a sparse set of pivotal key frames that dominate the latent semantic evolution. Then, only these keyframes undergo dense, step-by-step denoising to ensure structural integrity, while non-keyframes progressively skip denoising steps to minimize computational cost. Since skipped intermediate states of non-keyframes break the temporal coherence in keyframe denoising steps, leading to visual degradation, we further introduce a latent trajectory projection module, which enables keyframes to interact with a complete and temporally consistent sequence representation. Extensive experiments on current DiT-based video generation models demonstrate our method outperforms existing baselines with higher inference speed and better visual quality.
+
+基于扩散变压器 (DiT) 的视频生成模型在视频合成方面取得了显着的性能，但由于 3D 注意力的二次复杂度，它们存在较高的推理延迟和计算成本。现有的加速方法主要通过稀疏注意力和 KV 缓存等技术来降低每个单独去噪步骤中的计算复杂性。然而，它们严格遵守标准扩散管道的固有约束：目标视频序列中的每一帧都必须在所有扩散时间步长上经历完整、密集的去噪过程。我们观察到，由于相邻帧之间相应的内容和运动，当锚定具有关键语义转换的关键帧时，其他帧的中间状态通常遵循更可预测的轨迹，这表明这种均匀、密集的去噪过程对于自然视频数据来说本质上是多余的。为此，我们引入了 \textbf{RhymeFlow}，一个免训练的框架，可以解耦不同帧的去噪轨迹。具体来说，我们首先确定一组稀疏的关键关键帧，它们主导潜在的语义演化。然后，只有这些关键帧经过密集的、逐步的去噪以确保结构完整性，而非关键帧则逐步跳过去噪步骤以最小化计算成本。由于跳过的非关键帧的中间状态破坏了关键帧去噪步骤中的时间连贯性，导致视觉退化，因此我们进一步引入了潜在轨迹投影模块，该模块使关键帧能够与完整且时间一致的序列表示进行交互。对当前基于 DiT 的视频生成模型的大量实验表明，我们的方法优于现有基线，具有更高的推理速度和更好的视觉质量。
+
+</details>
+
+---
+
+## 4. LoomVideo: Unifying Multimodal Inputs into Video Generation and Editing / LoomVideo：将多模态输入统一到视频生成和编辑中
+
+**Date**: 2026-06-04 | **arXiv**: [2606.06042v1](http://arxiv.org/abs/2606.06042v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.06042v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Developing unified video generation and editing models capable of interpreting interleaved multimodal inputs is a promising yet challenging frontier field. Existing unified frameworks predominantly rely on massive models (typically 13B parameters or more) and incorporate source video conditions for editing by concatenating sequence tokens. This concatenation inevitably doubles the sequence length, quadrupling the computational complexity of the self-attention mechanism and introducing prohibitive overhead. To address these bottlenecks, we present LoomVideo, a highly efficient 5B-parameter unified architecture for both video generation and editing. LoomVideo replaces the standard text encoder with a Multimodal Large Language Model (MLLM) and employs Deepstack injection mechanism to align multi-layer MLLM features with the Diffusion Transformer (DiT). Crucially, we introduce a zero-overhead Scale-and-Add conditioning approach for video editing. By scaling and directly adding the clean source video latent to the noised target latent, this elegant design eliminates the need for token concatenation, drastically reducing computational cost while maintaining robust capabilities for complex, non-rigid edits. Furthermore, a Negative Temporal RoPE strategy is seamlessly integrated to handle multiple reference images. Extensive experiments demonstrate that our compact 5B model achieves state-of-the-art or highly competitive performance across comprehensive benchmarks, exhibiting exceptional superiority in e-commerce and fashion generation scenarios. Benefiting from the zero-overhead conditioning mechanism, LoomVideo achieves at least a 5.41x acceleration in inference speed compared to models of similar capabilities, paving the way for highly practical and efficient video foundation models.
+
+开发能够解释交错多模态输入的统一视频生成和编辑模型是一个充满希望但又充满挑战的前沿领域。现有的统一框架主要依赖于大规模模型（通常为 13B 参数或更多），并通过连接序列标记合并源视频条件进行编辑。这种串联不可避免地使序列长度加倍，使自注意力机制的计算复杂度增加四倍，并引入令人望而却步的开销。为了解决这些瓶颈，我们推出了 LoomVideo，这是一种用于视频生成和编辑的高效 5B 参数统一架构。 LoomVideo 用多模态大语言模型 (MLLM) 取代标准文本编码器，并采用 Deepstack 注入机制将多层 MLLM 功能与扩散变压器 (DiT) 对齐。至关重要的是，我们引入了一种用于视频编辑的零开销缩放和添加调节方法。通过缩放并直接将干净的源视频潜在值添加到噪声目标潜在值中，这种优雅的设计消除了令牌串联的需要，大大降低了计算成本，同时保持了复杂、非刚性编辑的强大功能。此外，无缝集成负时间 RoPE 策略来处理多个参考图像。大量实验表明，我们的紧凑型 5B 模型在综合基准测试中实现了最先进或极具竞争力的性能，在电子商务和时尚生成场景中展现出非凡的优势。受益于零开销调节机制，与类似功能的模型相比，LoomVideo 的推理速度至少提高了 5.41 倍，为高度实用且高效的视频基础模型铺平了道路。
+
+</details>
+
+---
+
+## 5. MemoryCard: Topic-Aware Multi-Modal Clue Compression for Long-Video Question Answering / MemoryCard：用于长视频问答的主题感知多模态线索压缩
+
+**Date**: 2026-06-04 | **arXiv**: [2606.05917v1](http://arxiv.org/abs/2606.05917v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05917v1)
+
+**Categories**: cs.CV, cs.CL
+
+**Code**: https://github.com/NEUIR/MemoryCard.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-video question answering remains challenging for Vision-Language Models (VLMs), as answer-relevant evidence is often sparse, transient, and temporally dispersed across lengthy video contexts. Existing frame-centric approaches improve efficiency through uniform sampling, query-aware frame selection, visual-token compression, and adaptive resolution strategies. However, they still rely on isolated and fragmented frames as the fundamental evidence units, limiting VLMs' ability to effectively capture coherent event-level semantics. To address this limitation, we propose MemoryCard, a video-memory-based augmentation framework that organizes long videos into self-contained Memory Cards. Specifically, MemoryCard first performs a self-reading process over videos and aligned utterances to segment the video into semantically coherent units, each corresponding to a distinct topic or event. For each unit, it generates an event-level video gist and selects representative visual moments, which are then rendered into unified Memory Cards for retrieval and question answering. Experimental results demonstrate that MemoryCard consistently improves long-video QA performance under comparable visual-token budgets, achieving up to a 21.8% relative improvement in accuracy. All code is available at https://github.com/NEUIR/MemoryCard.
+
+长视频问答对于视觉语言模型（VLM）来说仍然具有挑战性，因为与答案相关的证据通常是稀疏的、短暂的，并且在时间上分散在长视频上下文中。现有的以帧为中心的方法通过统一采样、查询感知帧选择、视觉令牌压缩和自适应分辨率策略来提高效率。然而，它们仍然依赖孤立和碎片化的帧​​作为基本证据单元，限制了 VLM 有效捕获连贯事件级语义的能力。为了解决这个限制，我们提出了 MemoryCard，这是一种基于视频内存的增强框架，可以将长视频组织到独立的存储卡中。具体来说，MemoryCard 首先对视频和对齐的话语执行自读取过程，将视频分割成语义连贯的单元，每个单元对应一个不同的主题或事件。对于每个单元，它生成一个事件级视频要点并选择代表性的视觉时刻，然后将其渲染到统一的存储卡中以供检索和回答问题。实验结果表明，MemoryCard 在可比较的视觉令牌预算下持续提高长视频 QA 性能，准确度相对提高高达 21.8%。所有代码均可在 https://github.com/NEUIR/MemoryCard 获取。
+
+</details>
+
+---
+
+## 6. Resonant Minds: Closed-Loop Social Avatars with Theory of Mind / 共鸣心灵：具有心理理论的闭环社交化身
+
+**Date**: 2026-06-04 | **arXiv**: [2606.05896v1](http://arxiv.org/abs/2606.05896v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05896v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Creating lifelike digital humans with genuine social intelligence requires unifying cognitive reasoning and multimodal generation within a coherent framework. Current approaches treat these as separate tasks: Large Language Models excel at dialogue but lack embodied expression, while diffusion-based talking head models achieve visual fidelity but ignore social cognition. To bridge this gap, we propose a closed-loop dual-agent framework integrating perception, social reasoning, and expression into a continuous interaction cycle. The perception module analyzes partners' multimodal behaviors from video, while the social reasoning module infers hidden mental states through Theory of Mind and selects responses via an ensemble mechanism. The expression module then generates emotion-controllable dual-agent videos synthesizing both speaker speech and expression alongside listener reactive behaviors, capturing bidirectional dynamics absent in prior work. We construct a hierarchical Persona-Scenario dataset with psychologically grounded personas and private social goals to support evaluation under information asymmetry. Experiments on this dataset demonstrate competitive or superior performance on both dialogue quality and video generation metrics. Notably, our method surpasses even the full-information Script mode on key dialogue quality dimensions, suggesting that explicit mental state inference under uncertainty can elicit more thoughtful dialogue than unrestricted information access.
+
+创建具有真正社交智能的逼真数字人类需要在一个连贯的框架内统一认知推理和多模式生成。当前的方法将这些视为单独的任务：大型语言模型擅长对话，但缺乏具体表达，而基于扩散的头部说话模型实现了视觉保真度，但忽略了社会认知。为了弥补这一差距，我们提出了一个闭环双代理框架，将感知、社会推理和表达整合到一个连续的交互周期中。感知模块通过视频分析伴侣的多模态行为，而社交推理模块通过心理理论推断隐藏的心理状态，并通过集成机制选择响应。然后，表达模块生成情感可控的双代理视频，合成说话者的语音和表达以及听众的反应行为，捕获先前工作中缺乏的双向动态。我们构建了一个分层的角色场景数据集，其中包含基于心理的角色和私人社会目标，以支持信息不对称下的评估。该数据集的实验证明了在对话质量和视频生成指标方面具有竞争力或优越的性能。值得注意的是，我们的方法在关键对话质量维度上甚至超越了全信息脚本模式，这表明不确定性下的明确心理状态推断可以比不受限制的信息访问引发更深思熟虑的对话。
+
+</details>
+
+---
+
+## 7. PiL-World: A Chunk-Wise World Model for VLA Policy-in-the-Loop Evaluation / PiL-World：用于 VLA 策略在环评估的分块世界模型
+
+**Date**: 2026-06-04 | **arXiv**: [2606.05773v1](http://arxiv.org/abs/2606.05773v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05773v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language-action (VLA) policies operate in a closed loop in real-world robot tasks: a robot observes the scene, executes an action chunk, and conditions its next decision on the resulting observation. However, most existing world models for robot action evaluation are limited to open-loop prediction along pre-collected action trajectories. This prevents them from supporting closed-loop VLA evaluation, where each action chunk must be conditioned on the observation generated by the previous execution. To address this gap, we propose PiL-World, a chunk-wise world model designed for policy-in-the-loop VLA evaluation. Given the current observation and the action trajectory rolled out by a VLA policy, PiL-World generates multi-view future observations that are consistent with the VLA rollout and match the image inputs required by the policy. By alternating between VLA inference and world-model prediction, PiL-World enables closed-loop evaluation without real robot execution at every step. To improve rollout fidelity, PiL-World conditions video generation on action-derived visual control from head-view robot motion and latent histories that encode task execution context, while jointly predicting complementary multi-view observations. Beyond successful teleoperated demonstrations, it also learns from failed execution trajectories, helping the imagined rollouts better match the distribution of real policy executions. We evaluate PiL-World on three real dual-arm manipulation tasks. PiL-World generates imagined rollouts that are highly consistent with real robot executions. More importantly, compared with the baseline, it reduces the error between VLA success rates measured in real-world rollouts and those estimated through closed-loop world-model evaluation from 63.2% to 12.0%.
+
+视觉-语言-动作（VLA）策略在现实世界的机器人任务中以闭环方式运行：机器人观察场景，执行动作块，并根据观察结果做出下一个决策。然而，大多数现有的机器人动作评估世界模型仅限于沿着预先收集的动作轨迹进行开环预测。这使得它们无法支持闭环 VLA 评估，其中每个操作块必须以先前执行生成的观察结果为条件。为了解决这一差距，我们提出了 PiL-World，这是一种专为策略循环 VLA 评估而设计的分块世界模型。给定 VLA 策略推出的当前观察结果和行动轨迹，PiL-World 会生成与 VLA 策略推出一致的多视图未来观察结果，并与策略所需的图像输入相匹配。通过交替使用 VLA 推理和世界模型预测，PiL-World 可以实现闭环评估，而无需在每一步执行真正的机器人执行。为了提高推出保真度，PiL-World 根据头视机器人运动的动作衍生视觉控制和编码任务执行上下文的潜在历史来调节视频生成，同时联合预测互补的多视图观察。除了成功的远程操作演示之外，它还从失败的执行轨迹中学习，帮助想象的部署更好地匹配实际政策执行的分布。我们在三个真实的双臂操作任务上评估 PiL-World。 PiL-World 生成与真实机器人执行高度一致的想象部署。更重要的是，与基线相比，它将现实世界中测量的 VLA 成功率与通过闭环世界模型评估估计的 VLA 成功率之间的误差从 63.2% 减少到 12.0%。
+
+</details>
+
+---
+
+## 8. LongSpace: Exploring Long-Horizon Spatial Memory from Perception to Recall in Video / LongSpace：探索视频中从感知到回忆的长视空间记忆
+
+**Date**: 2026-06-04 | **arXiv**: [2606.05677v1](http://arxiv.org/abs/2606.05677v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05677v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal Large Language Models (MLLMs) have advanced image and video understanding and can increasingly handle longer visual inputs. Long-horizon tasks such as autonomous driving and robotic navigation require more than recognizing the current view, as models must remember and retrieve previously observed spatial layouts, routes, viewpoint changes, and object states. To evaluate this capability, we introduce LongSpace-Bench, a room-tour video benchmark for long-horizon spatial memory, covering scene perception, spatial relations, and spatial memory. In this work, we further propose LongSpace, a memory framework for long-video spatial reasoning. LongSpace models long videos as sequential chunks, incorporates 3D structural cues into early decoder layers, and constructs layer-aware memory for question-guided retrieval. Experiments on multiple spatial reasoning benchmarks show that LongSpace improves long-video spatial understanding, further demonstrating explicit spatial memory as a key capability for long-horizon video MLLMs.
+
+多模态大语言模型 (MLLM) 具有先进的图像和视频理解能力，并且可以越来越多地处理更长的视觉输入。自动驾驶和机器人导航等长视野任务需要的不仅仅是识别当前视图，因为模型必须记住并检索之前观察到的空间布局、路线、视点变化和对象状态。为了评估这种能力，我们引入了 LongSpace-Bench，这是一种用于长视野空间记忆的房间游览视频基准，涵盖场景感知、空间关系和空间记忆。在这项工作中，我们进一步提出了LongSpace，一种用于长视频空间推理的记忆框架。 LongSpace 将长视频建模为连续块，将 3D 结构线索合并到早期解码器层中，并构建用于问题引导检索的层感知内存。多个空间推理基准的实验表明，LongSpace 提高了长视频空间理解，进一步证明显式空间记忆是长视距视频 MLLM 的关键功能。
+
+</details>
+
+---
+
+## 9. V2V-Bench: A Comprehensive Benchmark for Video-to-Video Generation Evaluation / V2V-Bench：视频到视频生成评估的综合基准
+
+**Date**: 2026-06-04 | **arXiv**: [2606.05665v1](http://arxiv.org/abs/2606.05665v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05665v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video-to-video (V2V) generation is difficult to evaluate because outputs must both follow editing instructions and preserve frame-level correspondence with the source video, which existing T2V and I2V metrics do not capture. We introduce V2V-Bench, a 11-dimension benchmark organized into five categories: temporal alignment, structural fidelity, transformation quality, video quality, and semantic alignment. V2V-Bench pairs diverse source videos with challenging editing tasks and evaluates two commercial models, Grok Imagine and Gemini Veo3, and one open-source model, Open Sora 2. Results show complementary model strengths: Grok performs better on editing fidelity, while Veo3 achieves stronger visual quality. On six V2V-specific dimensions, V2V-Bench reaches a Spearman correlation of 0.905 with human judgments.
+
+视频到视频 (V2V) 的生成很难评估，因为输出必须遵循编辑指令并保留与源视频的帧级对应关系，而现有的 T2V 和 I2V 指标无法捕获这些对应关系。我们引入了 V2V-Bench，这是一个 11 维基准测试，分为五个类别：时间对齐、结构保真度、转换质量、视频质量和语义对齐。 V2V-Bench 将不同的源视频与具有挑战性的编辑任务配对，并评估了两种商业模型（Grok Imagine 和 Gemini Veo3）以及一种开源模型（Open Sora 2）。结果显示了互补的模型优势：Grok 在编辑保真度方面表现更好，而 Veo3 实现了更强的视觉质量。在六个 V2V 特定维度上，V2V-Bench 与人类判断的 Spearman 相关性达到 0.905。
+
+</details>
+
+---
+
+## 10. Horse Eye Blink Detection and Classification for Equine Affective State Assessment / 用于马情感状态评估的马眼眨眼检测和分类
+
+**Date**: 2026-06-03 | **arXiv**: [2606.05458v1](http://arxiv.org/abs/2606.05458v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05458v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Automated detection of equine facial action units (AUs) is a promising yet under-explored avenue for pain and affective state assessment in horses. Half and full-blink movements are recognised indicators of pain and stress, but as micro-expressions, their subtle, fine-grained nature makes them easily missed by the naked eye and only discernible through frame-by-frame video inspection, making reliable automated detection from video a particularly demanding task. We develop and evaluate three methods for automated blink classification from horse videos: a frame-based YOLOv12 detector, an optical flow magnitude thresholding approach, and a fine-tuned VideoMAE model, tested on a publicly available dataset. We achieve a macro-F1 score of 0.898 when doing blink classification and 0.926 on binary blink detection. Our results highlight both the potential and the inherent challenges of fine-grained AU detection for equine welfare monitoring.
+
+马面部动作单位（AU）的自动检测是评估马的疼痛和情感状态的一种有前途但尚未充分探索的途径。半眨眼和全眨眼动作被认为是疼痛和压力的指标，但作为微表情，其微妙、细粒度的性质使肉眼很容易错过它们，只能通过逐帧视频检查才能辨别，这使得从视频中进行可靠的自动检测成为一项特别艰巨的任务。我们开发并评估了三种对马视频进行自动眨眼分类的方法：基于帧的 YOLOv12 检测器、光流幅度阈值方法和微调的 VideoMAE 模型，并在公开数据集上进行了测试。我们在进行眨眼分类时获得了 0.898 的宏观 F1 分数，在二进制眨眼检测中获得了 0.926 的宏观 F1 分数。我们的结果凸显了用于马福利监测的细粒度 AU 检测的潜力和固有挑战。
+
+</details>
+
+---
+
+## 11. The Invisible Hand of Physics: When Video Diffusion Models Know More Than They Show / 物理学看不见的手：当视频扩散模型知道的比它们显示的更多时
+
+**Date**: 2026-06-03 | **arXiv**: [2606.05328v1](http://arxiv.org/abs/2606.05328v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05328v1)
+
+**Categories**: cs.GR, cs.AI, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern video diffusion models generate increasingly realistic and temporally coherent videos, motivating their use as candidate world simulators. Yet it remains unclear whether these models internally encode physical structure, or merely reproduce motion patterns seen during training. We study this question by probing video diffusion models along latent trajectories corresponding to real videos with known physical plausibility. To obtain such trajectories, we approximately invert the deterministic sampling process by integrating the learned velocity field backward from a clean video latent to noise, giving access to the model's intermediate states and attention maps. Using these recovered trajectories, we show that physical plausibility is linearly decodable from diffusion transformer states across IntPhys and InfLevel, reaching around 81.27% average accuracy and outperforming dedicated representation-learning baselines such as V-JEPA and VideoMAE. Surprisingly, this signal is absent from the VAE latent input and emerges inside the denoising transformer itself, despite the model not being trained with a self-supervised predictive objective. These findings suggest that physically meaningful representations can arise as a byproduct of generative denoising.
+
+现代视频扩散模型生成越来越真实且时间连贯的视频，促使它们用作候选世界模拟器。然而，目前尚不清楚这些模型是在内部编码物理结构，还是仅仅再现训练期间看到的运动模式。我们通过沿着与已知物理合理性的真实视频相对应的潜在轨迹探索视频扩散模型来研究这个问题。为了获得这样的轨迹，我们通过将学习到的速度场从潜在的干净视频向后积分到噪声来近似反转确定性采样过程，从而可以访问模型的中间状态和注意力图。使用这些恢复的轨迹，我们表明物理合理性可以从 IntPhys 和 InfLevel 的扩散变压器状态线性解码，平均准确度达到 81.27% 左右，并且优于 V-JEPA 和 VideoMAE 等专用表示学习基线。令人惊讶的是，尽管该模型没有经过自我监督预测目标的训练，但该信号在 VAE 潜在输入中并不存在，而是出现在去噪变压器本身内部。这些发现表明，具有物理意义的表示可以作为生成去噪的副产品而出现。
+
+</details>
+
+---
+
+## 12. Do Models Share Safety Representations? Cross-Model Steering for Safe Visual Generation / 模型共享安全表示吗？用于安全视觉生成的跨模型转向
+
+**Date**: 2026-06-03 | **arXiv**: [2606.05290v1](http://arxiv.org/abs/2606.05290v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05290v1)
+
+**Categories**: cs.CV, cs.AI, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent progress in generative modeling has made safety control a central challenge, yet existing approaches remain largely model-specific, requiring retraining or tailored interventions for each new architecture. In this work, we ask whether safety can be represented as a portable latent direction, learned once and reused across heterogeneous generators. We introduce the first framework for cross-model safety steering, in which a safety direction is estimated in a source LLM from paired safe-unsafe prompts, transported to a target generator through a lightweight alignment fitted on benign data alone, and applied at inference time. Crucially, our pipeline never accesses unsafe data on the target side, isolating whether safety can be transferred through shared representation geometry. Beyond a single global direction, we also identify a multi-vector extension that captures category-specific safety behaviors, enabling more selective control. We evaluate our approach in text-to-image and text-to-video generation across diverse source-target model pairs. Across models, transferred safety directions achieve ASR reduction and CLIP-Score/FID trade-offs comparable to directions learned natively on the target model using unsafe data, while requiring no target-side unsafe data. This indicates that safety improvements do not come at the expense of generation quality. Our results point to a modular view of safety: safety-relevant behavior is not purely model-local, but can be controlled through latent directions that persist across models. This suggests a new path toward lightweight, reusable safety mechanisms that do not require target-side unsafe data.
+
+生成建模的最新进展使安全控制成为一个核心挑战，但现有方法在很大程度上仍然是特定于模型的，需要对每个新架构进行再培训或量身定制的干预措施。在这项工作中，我们询问安全性是否可以表示为可移植的潜在方向，学习一次并在异构生成器中重用。我们引入了第一个跨模型安全引导框架，其中在源 LLM 中根据配对的安全-不安全提示估计安全方向，通过仅适合良性数据的轻量级对齐传输到目标生成器，并在推理时应用。至关重要的是，我们的管道永远不会访问目标端的不安全数据，从而隔离是否可以通过共享表示几何体传输安全性。除了单一的全局方向之外，我们还确定了一个多向量扩展，可以捕获特定类别的安全行为，从而实现更具选择性的控制。我们评估了跨不同源-目标模型对的文本到图像和文本到视频生成的方法。在模型中，转移的安全方向可实现 ASR 减少和 CLIP-Score/FID 权衡，与使用不安全数据在目标模型上本地学习的方向相当，同时不需要目标端不安全数据。这表明安全性的提高不会以牺牲发电质量为代价。我们的结果指出了安全的模块化观点：与安全相关的行为并不纯粹是模型本地的，而是可以通过跨模型持续存在的潜在方向来控制。这为不需要目标端不安全数据的轻量级、可重用安全机制提供了一条新途径。
+
+</details>
+
+---
+
+## 13. VideoKR: Towards Knowledge- and Reasoning-Intensive Video Understanding / VideoKR：迈向知识和推理密集型视频理解
+
+**Date**: 2026-06-03 | **arXiv**: [2606.05259v1](http://arxiv.org/abs/2606.05259v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05259v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce VideoKR, the first large-scale training corpus specifically designed to strengthen knowledge- and reasoning-intensive video understanding. It comprises 315K video reasoning examples over 145K newly collected, CC-licensed, expert-domain videos. We develop a human-in-the-loop, skill-oriented example generation pipeline that targets progressively deeper video reasoning capabilities while ensuring the difficulty, diversity, and reliability of both the examples and their CoT rationales. We also curate VideoKR-Eval, a new expert-annotated benchmark where questions require genuine video understanding and knowledge-intensive reasoning rather than textual shortcuts. Our experiments show that, under a standard SFT$\rightarrow$GRPO pipeline, models post-trained on VideoKR outperform prior post-training approaches on knowledge-intensive video reasoning while remaining competitive on general video reasoning, highlighting data design as a key driver of progress in video reasoning. We further conduct comprehensive ablations to isolate the contributions of VideoKR, providing actionable insights for future work.
+
+我们推出VideoKR，这是第一个专门用于加强知识和推理密集型视频理解的大型训练语料库。它包含 315K 个视频推理示例，超过 145K 个新收集的 CC 许可的专家领域视频。我们开发了一个以人为本、以技能为导向的示例生成管道，其目标是逐步加深视频推理能力，同时确保示例及其 CoT 原理的难度、多样性和可靠性。我们还策划了 VideoKR-Eval，这是一个新的专家注释基准，其中的问题需要真正的视频理解和知识密集型推理，而不是文本快捷方式。我们的实验表明，在标准 SFT$\rightarrow$GRPO 管道下，在 VideoKR 上进行后训练的模型在知识密集型视频推理方面优于先前的后训练方法，同时在一般视频推理方面保持竞争力，这凸显了数据设计是视频推理进展的关键驱动力。我们进一步进行全面的消融，以隔离 VideoKR 的贡献，为未来的工作提供可操作的见解。
+
+</details>
+
+---
+
+## 14. Controllable Dynamic 3D Shape Generation via 3D Trajectories and Text / 通过 3D 轨迹和文本生成可控动态 3D 形状
+
+**Date**: 2026-06-03 | **arXiv**: [2606.05162v1](http://arxiv.org/abs/2606.05162v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05162v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce T2Mo, a feed-forward framework for controllable dynamic 3D shape generation conditioned on 3D trajectories and text. Due to the inherent ambiguity of language, generating precisely intended motions using text alone remains challenging. To address this, we adopt 3D trajectories as controllable spatial guidance, specifying the exact paths along which selected points should move. By combining both, T2Mo generates object motions that spatially adhere to the given trajectories while globally reflecting the text semantics. To robustly handle trajectory inputs with arbitrary configurations, ranging from dense to sparse and unevenly distributed, we further propose a shape-grounded trajectory embedding that maps an input trajectory set into a shape-aware token set covering the entire object. We conduct extensive comparisons against text-based baselines and cascaded video-based baselines that combine trajectory-guided video generation with video-to-dynamic mesh generation. Quantitative and qualitative evaluations, along with user studies, demonstrate that our approach produces motions that more faithfully follow the given prompts with higher expressiveness while preserving motion quality.
+
+我们介绍了 T2Mo，这是一种基于 3D 轨迹和文本的可控动态 3D 形状生成的前馈框架。由于语言固有的模糊性，仅使用文本生成精确的预期动作仍然具有挑战性。为了解决这个问题，我们采用 3D 轨迹作为可控空间引导，指定所选点应移动的确切路径。通过将两者结合起来，T2Mo 生成的对象运动在空间上遵循给定的轨迹，同时全局反映文本语义。为了稳健地处理具有任意配置（从密集到稀疏和不均匀分布）的轨迹输入，我们进一步提出了一种基于形状的轨迹嵌入，将输入轨迹集映射到覆盖整个对象的形状感知标记集。我们对基于文本的基线和基于级联视频的基线进行了广泛的比较，这些基线将轨迹引导视频生成与视频到动态网格生成相结合。定量和定性评估以及用户研究表明，我们的方法产生的动作能够更忠实地遵循给定的提示，具有更高的表现力，同时保持动作质量。
+
+</details>
+
+---
+
+## 15. GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors / GRAIL：从 3D 资产和视频先验生成人形机器人操作
+
+**Date**: 2026-06-03 | **arXiv**: [2606.05160v1](http://arxiv.org/abs/2606.05160v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.05160v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scaling humanoid loco-manipulation requires robot-compatible demonstrations across diverse objects, whole-body motions, and scene geometries, but teleoperation and motion capture are difficult to scale because each collection depends on physical setups, instrumented actors, and robot operation. We present GRAIL, a digital generation pipeline that remains fully virtual until deployment: it composes 3D assets, simulator-ready scenes, and priors from video foundation models (VFMs) to synthesize interactions without rebuilding physical environments or teleoperating the robot. Rather than reconstructing unconstrained in-the-wild videos, GRAIL starts from fully specified 3D configurations in which object geometry, camera parameters, metric scale, environment depth, and a robot-proportioned character are known before video generation and reused during reconstruction. This privileged setup better conditions 4D recovery, allowing model-based object tracking, human motion estimation, and interaction-aware optimization to reconstruct metric 4D human-object interaction (HOI) trajectories with reduced depth ambiguity and morphology mismatch. We retarget the recovered motions to a humanoid robot and train complementary task-general trackers: an object-aware latent adaptor for manipulation and a scene-aware tracker for terrain traversal. GRAIL produces over 20,000 sequences spanning pick-up, object manipulation, sitting, and terrain traversal. Using only GRAIL-generated data, we train egocentric visual policies through a sim-to-real pipeline and deploy them on a Unitree G1 humanoid, achieving 84\% real-world success on diverse object pick-up and 90\% success on stair-climbing.
+
+扩展人形机器人操纵需要在不同的物体、全身运动和场景几何形状上进行与机器人兼容的演示，但远程操作和动作捕捉很难扩展，因为每个集合都依赖于物理设置、仪器化演员和机器人操作。我们推出了 GRAIL，这是一种在部署之前保持完全虚拟的数字生成管道：它由 3D 资产、模拟器就绪场景和视频基础模型 (VFM) 的先验组成，以合成交互，而无需重建物理环境或远程操作机器人。 GRAIL 不是重建不受约束的野外视频，而是从完全指定的 3D 配置开始，其中对象几何形状、相机参数、公制比例、环境深度和机器人比例角色在视频生成之前已知，并在重建过程中重复使用。这种特权设置为 4D 恢复提供了更好的条件，允许基于模型的对象跟踪、人体运动估计和交互感知优化来重建度量 4D 人机交互 (HOI) 轨迹，并减少深度模糊性和形态失配。我们将恢复的运动重新定位到人形机器人，并训练互补的通用任务跟踪器：用于操纵的对象感知潜在适配器和用于地形遍历的场景感知跟踪器。 GRAIL 生成超过 20,000 个序列，涵盖拾取、物体操作、坐下和地形穿越。仅使用 GRAIL 生成的数据，我们通过模拟到真实的管道训练以自我为中心的视觉策略，并将其部署在 Unitree G1 人形机器人上，在不同物体拾取方面实现了 84% 的现实世界成功率，在爬楼梯方面取得了 90% 的成功率。
+
+</details>
+
+---
+
+## 16. Scene-Centric Unsupervised Video Panoptic Segmentation / 以场景为中心的无监督视频全景分割
+
+**Date**: 2026-06-03 | **arXiv**: [2606.04925v1](http://arxiv.org/abs/2606.04925v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.04925v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video panoptic segmentation (VPS) aims to jointly detect, segment, and track all objects while partitioning the video into semantically consistent regions. We introduce the task setting of unsupervised VPS, omitting any human supervision. Existing unsupervised scene understanding works mainly focused on image segmentation tasks; the video domain remains underexplored. We propose VideoCUPS, the first unsupervised VPS approach. VideoCUPS generates temporally consistent panoptic video pseudo-labels from scene-centric videos by exploiting unsupervised depth, motion, and visual cues. Training on these pseudo-labels using a novel Video DropLoss yields an accurate, unsupervised VPS model. To benchmark progress, we introduce a comprehensive evaluation protocol and four competitive baselines, extending state-of-the-art unsupervised panoptic image and instance video segmentation models to VPS. VideoCUPS outperforms all baselines and demonstrates strong label-efficient learning. With VideoCUPS, our evaluation protocol, and baselines, we provide a strong foundation for future research on unsupervised VPS.
+
+视频全景分割（VPS）旨在联合检测、分割和跟踪所有对象，同时将视频划分为语义一致的区域。我们引入无监督VPS的任务设置，省略任何人工监督。现有的无监督场景理解工作主要集中在图像分割任务上；视频领域仍未得到充分探索。我们提出了 VideoCUPS，这是第一个无监督的 VPS 方法。 VideoCUPS 通过利用无监督的深度、运动和视觉线索，从以场景为中心的视频生成时间一致的全景视频伪标签。使用新颖的 Video DropLoss 对这些伪标签进行训练，可以生成准确的、无监督的 VPS 模型。为了衡量进展情况，我们引入了全面的评估协议和四个竞争基线，将最先进的无监督全景图像和实例视频分割模型扩展到 VPS。 VideoCUPS 的性能优于所有基线，并展示出强大的标签高效学习能力。借助 VideoCUPS、我们的评估协议和基线，我们为未来无监督 VPS 的研究奠定了坚实的基础。
+
+</details>
+
+---
+
+## 17. Dream.exe: Can Video Generation Models Dream Executable Robot Manipulation? / Dream.exe：视频生成模型可以梦想可执行的机器人操作吗？
+
+**Date**: 2026-06-03 | **arXiv**: [2606.04811v2](http://arxiv.org/abs/2606.04811v2) | **PDF**: [Link](http://arxiv.org/pdf/2606.04811v2)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/showlab/Dream.exe.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation models have made impressive strides in synthesizing visually compelling content, yet their outputs remain confined to the virtual domain. A natural question follows: how well do these models reflect the physical world when their generated videos leave the screen and enter reality? We propose robotic manipulation as a concrete, measurable window onto this question: if a model has truly internalized physical laws, the motion it depicts should translate into executable robot behavior. We introduce Dream$.$exe, an evaluation framework that operationalizes this criterion through a video-to-execution pipeline. Given a scene image and a task description, Dream$.$exe synthesizes a manipulation video, converts the generated motion into robot trajectories, and executes them in a physics simulator, yielding a grounding signal that purely visual metrics cannot offer. Using this pipeline, we evaluate 8 models spanning frontier closed-source generators, open-source generators, and robot-specific models. Our benchmark covers 101 manually curated manipulation tasks at three levels of physical complexity, measured across visual quality, trajectory fidelity, and execution success. Encouragingly, several models achieve measurable execution success, suggesting that generative priors learned from internet-scale data already encode meaningful physical knowledge. Yet visual quality proves a poor predictor of executability, exposing a dimension of model capability that standard visual evaluations do not capture. Dream$.$exe will be open-sourced at https://github.com/showlab/Dream.exe.
+
+视频生成模型在合成视觉上引人注目的内容方面取得了令人印象深刻的进步，但其输出仍然局限于虚拟领域。一个自然的问题随之而来：当这些模型生成的视频离开屏幕并进入现实时，这些模型如何反映物理世界？我们提出机器人操纵作为解决这个问题的一个具体的、可测量的窗口：如果一个模型真正具有内化的物理定律，那么它所描述的运动应该转化为可执行的机器人行为。我们引入了 Dream$.$exe，这是一个评估框架，可通过视频到执行管道来实施此标准。给定场景图像和任务描述，Dream$.$exe 合成操作视频，将生成的运动转换为机器人轨迹，并在物理模拟器中执行它们，产生纯视觉指标无法提供的基础信号。使用此流程，我们评估了涵盖前沿闭源生成器、开源生成器和机器人特定模型的 8 个模型。我们的基准测试涵盖了三个物理复杂程度的 101 个手动策划的操作任务，从视觉质量、轨迹保真度和执行成功度进行衡量。令人鼓舞的是，一些模型取得了可衡量的执行成功，这表明从互联网规模的数据中学习的生成先验已经编码了有意义的物理知识。然而，事实证明，视觉质量对可执行性的预测效果很差，暴露了标准视觉评估无法捕获的模型功能维度。 Dream$.$exe 将在 https://github.com/showlab/Dream.exe 开源。
+
+</details>
+
+---
+
+## 18. NextMotionQA: Benchmarking and Judging Human Motion Understanding with Vision-Language Models / NextMotionQA：使用视觉语言模型对人体运动理解进行基准测试和判断
+
+**Date**: 2026-06-03 | **arXiv**: [2606.04773v1](http://arxiv.org/abs/2606.04773v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.04773v1)
+
+**Categories**: cs.CV, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reliable evaluation of human motion understanding is fundamental to advancing embodied AI, robotics, and animation. However, existing benchmarks suffer from coarse semantic granularity, undifferentiated difficulty, limited annotation quality, and pervasive answer ambiguity, leaving them unable to diagnose where current models fail. To bridge this gap, we introduce NextMotionQA, a comprehensive benchmark that leverages vision-language models (VLMs) for semi-automated, expert-verified dataset. NextMotionQA features three complementary tasks: multiple-choice question answering, video captioning, and fine-grained error correction. Each task is systematically structured across three core semantic axes and stratified into three task complexity levels. Our extensive evaluation of twelve representative VLMs uncovers critical capability gaps and weakness that remain invisible under conventional, single-task evaluations. In a complementary direction, recent work has begun using VLMs as judges for text-to-motion evaluation; we ask whether they show the same degradation under harder tasks. We find that VLMs align strongly with expert ratings on coarse criteria (Cohen's κ=0.70) but break down on fine-grained, part-level judgment (κ=0.10), validating the paradigm in its strong regime while clarifying its limits.
+
+对人类运动理解的可靠评估是推进具体人工智能、机器人和动画的基础。然而，现有的基准测试存在语义粒度粗糙、难度无差别、注释质量有限以及普遍存在的答案模糊性等问题，导致它们无法诊断当前模型的失败之处。为了弥补这一差距，我们引入了 NextMotionQA，这是一个综合基准测试，利用视觉语言模型 (VLM) 来实现半自动化、专家验证的数据集。 NextMotionQA 具有三个互补的任务：多项选择题回答、视频字幕和细粒度纠错。每个任务都系统地构建在三个核心语义轴上，并分为三个任务复杂性级别。我们对 12 个代表性 VLM 进行了广泛的评估，发现了在传统的单任务评估中仍然看不见的关键能力差距和弱点。在一个互补的方向上，最近的工作已经开始使用 VLM 作为文本到动作评估的法官；我们询问他们在更艰巨的任务下是否表现出同样的退化。我们发现 VLM 与粗略标准的专家评级高度一致（科恩的 κ = 0.70），但在细粒度、部分级别的判断（κ = 0.10）上却崩溃了，在其强大的体系中验证了范式，同时澄清了其局限性。
+
+</details>
+
+---
+
+## 19. Physics-Informed Video Generation via Mixture-of-Experts Latent Alignment / 通过混合专家潜在对齐生成物理信息视频
+
+**Date**: 2026-06-03 | **arXiv**: [2606.04737v1](http://arxiv.org/abs/2606.04737v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.04737v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large-scale video generation models have made remarkable progress in semantic consistency and visual quality, producing videos that are increasingly coherent and visually convincing. Nevertheless, the dynamics induced by pixel-level fitting do not naturally accommodate the regularities that govern real-world motion and interaction, resulting in persistent shortcomings in physical plausibility. To address this limitation, we propose \textbf{PILA} (Physics-Informed Latent Alignment), a framework that injects physics-structured latent guidance into the frozen flow-matching dynamics of pretrained video models. Specifically, PILA first employs anchored field estimation to map frozen-generator latents into an operational physical attribute bank organized by field-proxy slots, using observable motion as a kinematic anchor for constructing less directly observed proxies. To handle the heterogeneity of real-world dynamics, PILA adopts a mixture-of-experts design over physical categories. Label-prior masked expert routing selects category-specific operator experts, whose refinements are regularized by operational residuals abstracted from physical relations. Finally, the refined proxies are fused into the physical attribute bank and decoded into a correction to the flow-matching vector field, injecting physics-aware guidance while preserving the visual prior of the pretrained backbone. With staged adapter training on Wan 2.1-1.3B and direct transfer of the learned adapter to Wan 2.2-14B, PILA achieves state-of-the-art results on VBench-2.0, VideoPhy-2, and PhyGenBench in both visual quality and benchmark-measured physical plausibility.
+
+大规模视频生成模型在语义一致性和视觉质量方面取得了显着进步，生成的视频越来越连贯且视觉上令人信服。然而，像素级拟合引起的动力学并不能自然地适应控制现实世界运动和交互的规律，导致物理合理性方面持续存在缺陷。为了解决这个限制，我们提出了 \textbf{PILA} （Physics-Informed Latent Alignment），这是一个将物理结构的潜在指导注入到预训练视频模型的冻结流匹配动力学中的框架。具体来说，PILA 首先采用锚定场估计将冻结的生成器潜伏映射到由场代理槽组织的操作物理属性库中，使用可观察的运动作为运动学锚来构建较少直接观察到的代理。为了处理现实世界动态的异质性，PILA 在物理类别上采用了专家混合设计。标签优先屏蔽专家路由选择特定类别的算子专家，其细化通过从物理关系中抽象的操作残差进行正则化。最后，精炼后的代理被融合到物理属性库中，并解码为对流匹配向量场的校正，注入物理感知指导，同时保留预训练主干的视觉先验。通过在 Wan 2.1-1.3B 上进行分阶段适配器训练以及将学习到的适配器直接转移到 Wan 2.2-14B，PILA 在 VBench-2.0、VideoPhy-2 和 PhyGenBench 上的视觉质量和基准测量的物理合理性方面均取得了最先进的结果。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-04 (3 papers)</b></summary>
 
 # arXiv Video Papers - 2026-06-04
