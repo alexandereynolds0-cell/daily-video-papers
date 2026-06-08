@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-08](papers/2026-06-08.md) - 5 papers
 - [2026-06-06](papers/2026-06-06.md) - 19 papers
 - [2026-06-04](papers/2026-06-04.md) - 3 papers
 - [2026-06-02](papers/2026-06-02.md) - 33 papers
@@ -93,6 +94,100 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-08 (5 papers)</b></summary>
+
+# arXiv Video Papers - 2026-06-08
+
+**Paper Count**: 5
+
+---
+
+## 1. MemDreamer: Decoupling Perception and Reasoning for Long Video Understanding via Hierarchical Graph Memory and Agentic Retrieval Mechanism / MemDreamer：通过分层图内存和代理检索机制解耦长视频理解的感知和推理
+
+**Date**: 2026-06-05 | **arXiv**: [2606.07512v1](http://arxiv.org/abs/2606.07512v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.07512v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current Vision-Language Models struggle with hours-long videos because processing full-length visual sequences induces prohibitive token explosion and attention dilution. To overcome this, we introduce MemDreamer to decouple perception and reasoning, shifting long-video understanding into an agentic exploration process. As a plug-and-play framework, it incrementally streams videos to construct a Hierarchical Graph Memory, a top-down three-tier architecture for semantic abstraction, anchored by a foundational graph capturing spatiotemporal and causal relations. During inference, the reasoning model employs agentic tool-augmented retrieval, navigating hierarchies, searching nodes, and traversing logical edges via an Observation-Reason-Action loop. Experiments show MemDreamer achieves SOTA results across four mainstream benchmarks, narrowing the gap with human experts to only 3.7 points. It constrains the reasoning context window to merely 2% of full-context ingestion while delivering a 12.5 point absolute accuracy gain. Furthermore, statistical analysis uncovers a strong positive linear correlation between an VLM's performance on logic reasoning and long-video understanding benchmarks, establishing agentic capability scaling as a new paradigm for multimodal comprehension.
+
+当前的视觉语言模型很难处理长达数小时的视频，因为处理全长视觉序列会导致令人望而却步的令牌爆炸和注意力稀释。为了克服这个问题，我们引入 MemDreamer 来解耦感知和推理，将长视频理解转变为代理探索过程。作为一个即插即用的框架，它增量地传输视频以构建分层图存储器，这是一种用于语义抽象的自上而下的三层架构，以捕获时空和因果关系的基础图为锚定。在推理过程中，推理模型采用代理工具增强检索、导航层次结构、搜索节点以及通过观察-推理-行动循环遍历逻辑边。实验表明，MemDreamer 在四个主流基准测试中均取得了 SOTA 成绩，将与人类专家的差距缩小至仅 3.7 分。它将推理上下文窗口限制为仅完整上下文摄取的 2%，同时提供 12.5 个点的绝对准确度增益。此外，统计分析揭示了 VLM 的逻辑推理性能与长视频理解基准之间存在很强的正线性相关性，从而将代理能力扩展建立为多模态理解的新范例。
+
+</details>
+
+---
+
+## 2. Streaming Video Generation with Streaming Force Control / 通过流力控制生成流视频
+
+**Date**: 2026-06-05 | **arXiv**: [2606.07508v1](http://arxiv.org/abs/2606.07508v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.07508v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce StreamForce, a streaming video generation framework that enables physically grounded control through continuous force inputs. Unlike prior video models that train separate models for different force types, assume fixed forces, or rely on non-causal processing, StreamForce is a causal and unified model that responds instantly and coherently to both local and global, time-varying forces. To achieve this, we design a unified force representation as a control signal and develop a distillation pipeline for force-controllable video generation. Our model combines autoregressive efficiency with force responsiveness, sustaining stable photometric and dynamic realism. StreamForce runs at up to 16.6 FPS on a single GPU, achieving state-of-the-art performance in both force adherence and motion realism. Project website: https://neu-vi.github.io/StreamForce/
+
+我们引入了 StreamForce，这是一种流视频生成框架，可通过连续的力输入实现物理接地控制。与之前针对不同力类型训练单独模型、假设固定力或依赖非因果处理的视频模型不同，StreamForce 是一种因果且统一的模型，可以对局部和全局时变力做出即时、连贯的响应。为了实现这一目标，我们设计了一个统一的力表示作为控制信号，并开发了一个用于力可控视频生成的蒸馏管道。我们的模型将自回归效率与力响应性相结合，保持稳定的光度和动态真实感。 StreamForce 在单个 GPU 上的运行速度高达 16.6 FPS，在力依从性和运动真实感方面实现了最先进的性能。项目网站：https://neu-vi.github.io/StreamForce/
+
+</details>
+
+---
+
+## 3. Watch, Remember, Reason: Human-View Video Understanding with MLLMs / 观看、记住、推理：使用 MLLM 进行人眼视频理解
+
+**Date**: 2026-06-05 | **arXiv**: [2606.07433v1](http://arxiv.org/abs/2606.07433v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.07433v1)
+
+**Categories**: cs.CV, cs.AI, cs.MM
+
+**Code**: https://github.com/marinero4972/Awesome-HumanView-VideoUnderstanding.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video understanding is being rapidly transformed by multimodal large language models (MLLMs), as research moves from short clips to long, multimodal, and knowledge-intensive video scenarios. These scenarios require models to handle sparse evidence, long-range dependencies, multimodal alignment, and reliable inference under limited computational budgets. This work presents a human-view perspective on LLM-based video understanding, organized around three functional abilities: watching, remembering, and reasoning. Rather than treating video tasks as isolated benchmarks, this view provides a unified structure for analyzing how video MLLMs acquire evidence, preserve context, and produce grounded outputs. We introduce a formulation that characterizes video understanding systems by their perceptual representations, memory states, reasoning traces, and final predictions. Based on this formulation, we identify challenges in spatio-temporal perception, efficient long-video processing, memory modeling, streaming understanding, and faithful reasoning. Representative methods are organized by their roles in video MLLM systems. Watching covers fine-grained, comprehensive, audio-visual, and efficient perception. Remembering includes offline and streaming memory, while reasoning covers text-only reasoning and thinking with videos. We further examine application domains such as egocentric, sports, instructional, medical, and narrative videos, and cover training datasets and evaluation benchmarks across task types, supervision formats, modalities, and capability dimensions. Finally, we outline open problems and future directions for scalable, memory-aware, and evidence-grounded video intelligence. Related works will be continuously traced at https://github.com/marinero4972/Awesome-HumanView-VideoUnderstanding.
+
+随着研究从短片转向长、多模态和知识密集型视频场景，多模态大语言模型 (MLLM) 正在迅速改变视频理解。这些场景需要模型能够处理稀疏证据、远程依赖性、多模态对齐以及在有限计算预算下的可靠推理。这项工作提出了基于法学硕士的视频理解的人性化视角，围绕三种功能能力进行组织：观看、记忆和推理。该视图没有将视频任务视为孤立的基准，而是提供了一个统一的结构，用于分析视频 MLLM 如何获取证据、保留上下文和生成接地输出。我们引入了一种公式，通过感知表示、记忆状态、推理轨迹和最终预测来表征视频理解系统。基于这个公式，我们确定了时空感知、高效长视频处理、内存建模、流式理解和忠实推理方面的挑战。代表性方法按其在视频 MLLM 系统中的角色进行组织。观看涵盖细粒度、全面性、视听性、高效感知。记忆包括离线记忆和流式记忆，推理包括纯文本推理和视频思考。我们进一步研究了以自我为中心、体育、教学、医疗和叙事视频等应用领域，并涵盖了跨任务类型、监督格式、模式和能力维度的训练数据集和评估基准。最后，我们概述了可扩展、内存感知和基于证据的视频智能的开放问题和未来方向。相关作品将持续追踪https://github.com/marinero4972/Awesome-HumanView-VideoUnderstanding。
+
+</details>
+
+---
+
+## 4. Mind the Gap: Disentangling Performance Bottlenecks in Video Instance Segmentation / 注意差距：消除视频实例分割中的性能瓶颈
+
+**Date**: 2026-06-05 | **arXiv**: [2606.07394v1](http://arxiv.org/abs/2606.07394v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.07394v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In Video Instance Segmentation (VIS), classification, segmentation, and tracking objectives are jointly evaluated, but their individual contributions to performance loss remain opaque. We introduce a diagnostic framework that formulates identity and class assignment as an Integer Linear Program (ILP), yielding a model-agnostic oracle that hierarchically isolates each error source. Applied to seven VIS methods spanning online and offline paradigms across YouTube-VIS 2019/2021 and a diagnostic subset of OVIS, our analysis reveals a consistent picture. Tracking instability is a critical bottleneck for online methods, with gaps exceeding 20 AP under heavy occlusion, and grows sharply with video length and instance density. While semantic classification contributes meaningfully on standard benchmarks, its impact becomes negligible where tracking fails most. Although stronger backbones substantially lift default scores, they leave AP tracking gaps largely intact, confirming that temporal fragility is algorithmic rather than purely representational. To complement the oracle, we introduce TrackLens, a visual tool that translates gap magnitude into observable, query-level failure modes. Together, these tools provide a systematic foundation for targeting VIS's core challenge: robust long-term temporal association.
+
+在视频实例分割（VIS）中，分类、分割和跟踪目标被联合评估，但它们各自对性能损失的贡献仍然不透明。我们引入了一个诊断框架，该框架将身份和类分配制定为整数线性程序（ILP），从而产生一个与模型无关的预言机，该预言机可以分层隔离每个错误源。应用于 YouTube-VIS 2019/2021 中跨越在线和离线范式的七种 VIS 方法以及 OVIS 的诊断子集，我们的分析揭示了一致的情况。跟踪不稳定性是在线方法的一个关键瓶颈，在严重遮挡的情况下，间隙超过 20 AP，并且随着视频长度和实例密度的增加而急剧增长。虽然语义分类对标准基准做出了有意义的贡献，但在跟踪最失败的情况下，其影响可以忽略不计。尽管更强大的骨干网大大提高了默认分数，但它们使 AP 跟踪差距基本完好无损，这证实了时间脆弱性是算法性的，而不是纯粹表征性的。为了补充预言机，我们引入了 TrackLens，这是一种可视化工具，可将间隙大小转换为可观察的查询级故障模式。这些工具共同为应对 VIS 的核心挑战提供了系统基础：强大的长期时间关联。
+
+</details>
+
+---
+
+## 5. CULTURESCORE: Evaluating Cultural Faithfulness in Video Generation Models / CULTURESCORE：评估视频生成模型中的文化忠诚度
+
+**Date**: 2026-06-05 | **arXiv**: [2606.07311v1](http://arxiv.org/abs/2606.07311v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.07311v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As video generation models like Veo 3.1 and LTX-2 advance, their ability to accurately represent diverse global cultures remains a critical yet understudied frontier. Current metrics, such as VideoScore, only measure visual quality but offer no mechanism for assessing cultural faithfulness. Consequently, a model that replaces a Namaste with a handshake receives the same score as one that generates the gesture correctly. We propose CultureScore, a compositional evaluation framework that decomposes cultural faithfulness into three granular dimensions: Identity (who is represented), Context (culturally localized background), and Behavior (normative gestures and interactions). We operationalize this framework through an evaluation suite spanning 10 countries, yielding 6,180 generated videos across three state-of-the-art models. Our evaluation reveals that no current model achieves culturally faithful video generation: the best-performing model reaches only 56.8\% overall CultureScore, with Behavior the most challenging dimension, which remains below 52\% across all models. Furthermore, human preference rankings align directionally with CultureScore but are inverted relative to VideoScore; the highest-scoring model on visual quality was ranked last by annotators, underscoring that cultural faithfulness is an essential criterion for equitable video generation.
+
+随着 Veo 3.1 和 LTX-2 等视频生成模型的进步，它们准确代表不同全球文化的能力仍然是一个关键但尚未得到充分研究的前沿领域。当前的指标（例如 VideoScore）仅衡量视觉质量，但没有提供评估文化忠诚度的机制。因此，用握手代替合十礼的模型获得的分数与正确生成手势的模型相同。我们提出了 CultureScore，一个构成评估框架，它将文化忠诚度分解为三个粒度维度：身份（代表谁）、语境（文化本地化背景）和行为（规范手势和互动）。我们通过覆盖 10 个国家/地区的评估套件来实施该框架，在三种最先进的模型中生成了 6,180 个生成的视频。我们的评估表明，当前没有一个模型能够实现文化忠实的视频生成：表现最好的模型总体文化得分仅达到 56.8%，而行为是最具挑战性的维度，在所有模型中仍低于 52%。此外，人类偏好排名与 CultureScore 方向一致，但相对于 VideoScore 则相反；视觉质量得分最高的模型被注释者排名最后，这强调了文化忠诚度是公平视频生成的基本标准。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-06 (19 papers)</b></summary>
 
 # arXiv Video Papers - 2026-06-06
