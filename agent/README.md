@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-08](papers/2026-06-08.md) - 6 papers
 - [2026-06-06](papers/2026-06-06.md) - 39 papers
 - [2026-06-05](papers/2026-06-05.md) - 8 papers
 - [2026-06-04](papers/2026-06-04.md) - 50 papers
@@ -96,6 +97,116 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-08 (6 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-06-08
+
+**Paper Count**: 6
+
+---
+
+## 1. Agentopia: Long-Term Life Simulation and Learning in Agent Societies / Agentopia：智能体社会中的长期生活模拟和学习
+
+**Date**: 2026-06-05 | **arXiv**: [2606.07513v1](http://arxiv.org/abs/2606.07513v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.07513v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Humans learn from social life. Simulating this process with LLM-powered agents represents a promising research direction, raising a natural question: whether LLMs can learn from such simulated social experience to better understand and replicate human behavior. However, prior agent society simulations typically operate at the scale of days, limiting the depth of social interactions and long-term growth. In this paper, we study long-term life simulation and LLM learning in agent societies, with two goals: (1) investigating social behaviors that emerge from life-long simulation, and (2) developing anthropomorphic capabilities in LLMs, particularly intelligence in social life, through years of simulated social experience. Specifically, we present Agentopia, a comprehensive framework for long-term life simulation in multi-agent societies, where 100 agents autonomously pursue personal growth, develop social relationships, and fulfill their needs and goals over 10 simulated years. We define life reward to mirror human well-being, and leverage this reward to train LLMs via rejection sampling. Extensive experiments show that agents exhibit rich emergent social behaviors. Furthermore, life reward training effectively enhances the underlying LLM, which leads to improved agent well-being in simulation, and generalizes to downstream role-playing benchmarks with +15.6% improvement.
+
+人类从社会生活中学习。使用法学硕士驱动的代理来模拟这一过程代表了一个有前途的研究方向，自然而然地提出了一个问题：法学硕士是否可以从这种模拟的社会经验中学习，以更好地理解和复制人类行为。然而，之前的智能体社会模拟通常以天为单位进行，限制了社会互动的深度和长期增长。在本文中，我们研究代理社会中的长期生活模拟和法学硕士学习，有两个目标：（1）研究终身模拟中出现的社会行为，（2）通过多年的模拟社会经验发展法学硕士的拟人化能力，特别是社会生活中的智力。具体来说，我们提出了 Agentopia，这是一个在多智能体社会中进行长期生活模拟的综合框架，其中 100 个智能体在 10 个模拟年中自主地追求个人成长、发展社会关系并满足他们的需求和目标。我们定义生活奖励来反映人类福祉，并利用这种奖励通过拒绝抽样来培训法学硕士。大量实验表明，智能体表现出丰富的新兴社会行为。此外，生命奖励培训有效地增强了基础 LLM，从而改善了模拟中的代理福祉，并推广到下游角色扮演基准，提高了 15.6%。
+
+</details>
+
+---
+
+## 2. MemDreamer: Decoupling Perception and Reasoning for Long Video Understanding via Hierarchical Graph Memory and Agentic Retrieval Mechanism / MemDreamer：通过分层图内存和代理检索机制解耦长视频理解的感知和推理
+
+**Date**: 2026-06-05 | **arXiv**: [2606.07512v1](http://arxiv.org/abs/2606.07512v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.07512v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current Vision-Language Models struggle with hours-long videos because processing full-length visual sequences induces prohibitive token explosion and attention dilution. To overcome this, we introduce MemDreamer to decouple perception and reasoning, shifting long-video understanding into an agentic exploration process. As a plug-and-play framework, it incrementally streams videos to construct a Hierarchical Graph Memory, a top-down three-tier architecture for semantic abstraction, anchored by a foundational graph capturing spatiotemporal and causal relations. During inference, the reasoning model employs agentic tool-augmented retrieval, navigating hierarchies, searching nodes, and traversing logical edges via an Observation-Reason-Action loop. Experiments show MemDreamer achieves SOTA results across four mainstream benchmarks, narrowing the gap with human experts to only 3.7 points. It constrains the reasoning context window to merely 2% of full-context ingestion while delivering a 12.5 point absolute accuracy gain. Furthermore, statistical analysis uncovers a strong positive linear correlation between an VLM's performance on logic reasoning and long-video understanding benchmarks, establishing agentic capability scaling as a new paradigm for multimodal comprehension.
+
+当前的视觉语言模型很难处理长达数小时的视频，因为处理全长视觉序列会导致令人望而却步的令牌爆炸和注意力稀释。为了克服这个问题，我们引入 MemDreamer 来解耦感知和推理，将长视频理解转变为代理探索过程。作为一个即插即用的框架，它增量地传输视频以构建分层图存储器，这是一种用于语义抽象的自上而下的三层架构，以捕获时空和因果关系的基础图为锚定。在推理过程中，推理模型采用代理工具增强检索、导航层次结构、搜索节点以及通过观察-推理-行动循环遍历逻辑边。实验表明，MemDreamer 在四个主流基准测试中均取得了 SOTA 成绩，将与人类专家的差距缩小至仅 3.7 分。它将推理上下文窗口限制为仅完整上下文摄取的 2%，同时提供 12.5 个点的绝对准确度增益。此外，统计分析揭示了 VLM 的逻辑推理性能与长视频理解基准之间存在很强的正线性相关性，从而将代理能力扩展建立为多模态理解的新范例。
+
+</details>
+
+---
+
+## 3. Act As a Real Researcher: A Suite of Benchmarks Evaluating Frontier LLMs and Agentic Harnesses in Research Lifecycle / 作为真正的研究人员：评估研究生命周期中的前沿法学硕士和代理工具的一套基准
+
+**Date**: 2026-06-05 | **arXiv**: [2606.07462v1](http://arxiv.org/abs/2606.07462v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.07462v1)
+
+**Categories**: cs.AI
+
+**Code**: https://github.com/AARR-bench/AARRI-bench.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As foundation models advance and agent scaffolding becomes increasingly sophisticated, agents have demonstrated remarkable proficiency in complex, long-horizon coding tasks and even autonomous experiment execution. Despite their evolution from research assistants into autonomous research agents, these systems still exhibit significant limitations in field sensitivity, research ethics, and nuanced scientific judgment. Consequently, frontier agents remain unable to fully replace human researchers. To bridge this gap, we conceptualize the AARR (Act As a Real Researcher) benchmark series. Unlike existing benchmarks that primarily assess macro-level execution capabilities, AARR focuses on whether agents can emulate the professionalism, thoroughness, and nuanced reasoning that characterize human researchers in granular research scenarios. In this work, we propose AARRI-Bench (Act As a Real Research Intern), the first benchmark in this series. We conduct extensive experiments across frontier models and agentic systems, revealing that even the best-performing configuration (Mini-SWE-Agent with Claude Opus 4.7) achieves only 68.3\% success rate, frequently overlooking subtle yet critical details that are obvious to real human researchers. Our results indicate that developing researcher-like AI requires further exploration of research behavior, rather than merely complex scaffolding. Our data is released at https://github.com/AARR-bench/AARRI-bench.
+
+随着基础模型的进步和智能体支架变得越来越复杂，智能体在复杂、长期的编码任务甚至自主实验执行方面表现出了非凡的熟练程度。尽管它们从研究助理演变为自主研究代理人，但这些系统在领域敏感性、研究伦理和细致入微的科学判断方面仍然表现出显着的局限性。因此，前沿特工仍然无法完全取代人类研究人员。为了弥补这一差距，我们概念化了 AARR（作为真正的研究人员）基准测试系列。与主要评估宏观执行能力的现有基准不同，AARR 重点关注智能体是否能够模仿人类研究人员在精细研究场景中的专业性、彻底性和细致入微的推理能力。在这项工作中，我们提出了 AARRI-Bench（充当真正的研究实习生），这是本系列中的第一个基准。我们对前沿模型和代理系统进行了广泛的实验，结果表明，即使是性能最好的配置（带有 Claude Opus 4.7 的 Mini-SWE-Agent）也只能达到 68.3% 的成功率，经常忽略对真正的人类研究人员来说显而易见的微妙但关键的细节。我们的结果表明，开发类似研究人员的人工智能需要进一步探索研究行为，而不仅仅是复杂的脚手架。我们的数据发布于 https://github.com/AARR-bench/AARRI-bench。
+
+</details>
+
+---
+
+## 4. DuMate-DeepResearch: An Auditable Multi-Agent System with Recursive Search and Rubric-Grounded Reasoning / DuMate-DeepResearch：具有递归搜索和基于规则的推理的可审计多代理系统
+
+**Date**: 2026-06-05 | **arXiv**: [2606.07299v1](http://arxiv.org/abs/2606.07299v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.07299v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Deep Research (DR) has emerged as a new agentic paradigm to tackle complex, open-ended research tasks, demanding systems that can iteratively frame problems, acquire evidence, verify sources, and synthesize long-form reports. In practice, however, current DR systems are constrained by four interrelated limitations: long-horizon planning over an underspecified scope, the bottleneck of decomposing and scheduling such tasks within a single agent, hallucination risk in long-form synthesis, and limited process auditability. This technical report presents DuMate-DeepResearch, a multi-agent DR framework built on the Qianfan Agent Foundry. The framework decouples the Agent Core, which handles task understanding, planning, and scheduling, from an extensible Tool Ecosystem for retrieval, evidence acquisition, and report rendering, making every intermediate decision and tool invocation explicitly traceable. Building on this infrastructure, DuMate-DeepResearch further introduces three mechanisms: (i) a graph-based dynamic planning strategy expands the research roadmap coarse-to-fine and continuously revises it through reflection, re-planning, backtracking, and parallel branching; (ii) a recursive two-level execution design delegates each complex search sub-task to an inner Search Agent that runs its own planning loop, isolating noisy retrieval and stabilizing long-horizon execution; (iii) a rubric-based test-time optimization mechanism dynamically generates task-specific quality criteria and uses them as live reasoning scaffolds for evidence-grounded synthesis and adaptive stopping. Across two deep research benchmarks, DuMate-DeepResearch establishes new state-of-the-art results: the best overall score (58.03%) on DeepResearch Bench, and the best overall score (61.95%) on DeepResearch Bench II while ranking first in information recall and analysis.
+
+深度研究 (DR) 已成为一种新的代理范式，用于解决复杂的、开放式的研究任务，要求系统能够迭代地构建问题、获取证据、验证来源并合成长篇报告。然而，在实践中，当前的灾难恢复系统受到四个相互关联的限制：未指定范围内的长期规划、在单个代理内分解和调度此类任务的瓶颈、长格式合成中的幻觉风险以及有限的过程可审计性。本技术报告介绍了DuMate-DeepResearch，这是一个基于Qianfan Agent Foundry构建的多代理灾难恢复框架。该框架将处理任务理解、规划和调度的代理核心与用于检索、证据获取和报告呈现的可扩展工具生态系统解耦，使每个中间决策和工具调用都明确可追溯。在此基础设施的基础上，DuMate-DeepResearch进一步引入了三种机制：（i）基于图的动态规划策略将研究路线图从粗到细扩展，并通过反思、重新规划、回溯和并行分支不断对其进行修改； (ii) 递归两级执行设计将每个复杂的搜索子任务委托给内部搜索代理，该代理运行自己的规划循环，隔离嘈杂的检索并稳定长期执行； （iii）基于标题的测试时间优化机制动态生成特定于任务的质量标准，并将其用作基于证据的合成和自适应停止的实时推理支架。在两项深度研究基准测试中，DuMate-DeepResearch 建立了新的最先进结果：在 DeepResearch Bench 上获得最佳总分（58.03%），在 DeepResearch Bench II 上获得最佳总分（61.95%），同时在信息召回和分析方面排名第一。
+
+</details>
+
+---
+
+## 5. SWE-Explore: Benchmarking How Coding Agents Explore Repositories / SWE-Explore：对编码代理如何探索存储库进行基准测试
+
+**Date**: 2026-06-05 | **arXiv**: [2606.07297v1](http://arxiv.org/abs/2606.07297v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.07297v1)
+
+**Categories**: cs.SE, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Repository-level coding benchmarks such as SWE-bench have driven a rapid surge in the capabilities of coding agents. Yet they usually treat coding tasks as a holistic, binary prediction problem (e.g., resolved or unresolved), neglecting fine-grained agent capabilities such as repository understanding, context retrieval, code localization, and bug diagnosis. In this paper, we introduce SWE-Explore, a benchmark that isolates the evaluation of repository exploration, a critical capability of coding agents. Given a repository and an issue, SWE-Explore asks an explorer to return a ranked list of relevant code regions under a fixed line budget. SWE-Explore covers 848 issues across 10 programming languages and 203 open-source repositories. For each instance, we derive line-level ground truth from independent agent trajectories that successfully solved the same issue, distilling the specific code regions their solution paths actually consulted. We evaluate exploration along coverage, ranking, and context-efficiency dimensions, showing that these metrics strongly track downstream repair behavior. Across a broad set of retrieval methods, general coding agents, and specialized localizers, we find that agentic explorers form a clear tier above classical retrieval. While file-level localization is already strong for modern methods, line-level coverage and efficient ranking remain the key axes differentiating state-of-the-art explorers.
+
+SWE-bench 等存储库级编码基准推动了编码代理能力的快速提升。然而，他们通常将编码任务视为整体的二元预测问题（例如，已解决或未解决），而忽略了细粒度​​的代理功能，例如存储库理解、上下文检索、代码本地化和错误诊断。在本文中，我们介绍了 SWE-Explore，这是一个隔离存储库探索评估的基准，这是编码代理的一项关键功能。给定一个存储库和一个问题，SWE-Explore 要求浏览器返回固定行预算下相关代码区域的排名列表。 SWE-Explore 涵盖 10 种编程语言和 203 个开源存储库的 848 个问题。对于每个实例，我们从成功解决同一问题的独立代理轨迹中得出行级基本事实，提取​​其解决方案路径实际参考的特定代码区域。我们根据覆盖率、排名和上下文效率维度评估探索，表明这些指标强烈跟踪下游修复行为。在广泛的检索方法、通用编码代理和专门的定位器中，我们发现代理探索器形成了高于经典检索的清晰层次。虽然文件级本地化对于现代方法来说已经很强大，但行级覆盖和高效排名仍然是区分最先进的浏览器的关键轴。
+
+</details>
+
+---
+
+## 6. From Privacy to Workflow Integrity: Communication-Graph Metadata in Autonomous Agent Interoperability / 从隐私到工作流程完整性：自治代理互操作性中的通信图元数据
+
+**Date**: 2026-06-05 | **arXiv**: [2606.07150v1](http://arxiv.org/abs/2606.07150v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.07150v1)
+
+**Categories**: cs.CR, cs.AI, cs.MA, cs.NI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agent-interoperability protocols such as A2A and MCP standardize what agents say to one another, but assume address-based transport over HTTP(S). Such transports protect message content, increasingly with end-to-end encryption. What they leave in the clear is the communication graph: which agent contacts which, when, and how often. In agent systems this graph is more consequential than a privacy framing suggests. Endpoints are often capability-labeled, workflows are structured and chained, and interactions are coupled to real actions, so an observer recovers more than past relationships. It can infer the pending workflow, the task being assembled and the action likely to follow. At machine speed, it can act on that inference before the workflow completes. The threat is therefore one of workflow integrity, not privacy alone: predictive leverage over autonomous action. We give a threat model for the agent communication graph; identify what makes agent metadata distinctively revealing (semanticity, prospectivity, actuation); define transport- and bootstrap-layer privacy properties and weigh candidate transports (SimpleX/SMP, Tor, mixnets) against them; and present an A2A case study in which a metadata-protecting binding is expressible but surfaces the protocol's identity assumptions. We test these on a generative model anchored to a real A2A capture. From passive metadata alone, with no payloads, a classifier recovers a task's class well above chance, from only the workflow's opening; applied together, the properties drive that recovery sharply back toward chance. Beyond what an observer can recover, we measure the leverage of acting on the leak: from a workflow's opening and under a fixed budget, an adversary choosing which workflows to act on realizes in this model most of a clairvoyant attacker's advantage over a metadata-blind one, and the same properties suppress it.
+
+A2A 和 MCP 等代理互操作协议标准化了代理之间的对话内容，但假定通过 HTTP(S) 进行基于地址的传输。此类传输越来越多地通过端到端加密来保护消息内容。他们清楚地留下了沟通图：哪个代理联系哪个、何时以及多久联系一次。在代理系统中，该图比隐私框架所暗示的更为重要。端点通常带有功能标签，工作流程是结构化和链式的，交互与实际操作耦合，因此观察者可以恢复比过去的关系更多的内容。它可以推断待处理的工作流程、正在组装的任务以及可能遵循的操作。以机器速度，它可以在工作流程完成之前根据该推理采取行动。因此，威胁之一是工作流程的完整性，而不仅仅是隐私：对自主行动的预测杠杆。我们给出了代理通信图的威胁模型；确定代理元数据具有独特揭示性的因素（语义、前景、驱动）；定义传输层和引导层隐私属性，并根据它们权衡候选传输（SimpleX/SMP、Tor、mixnets）；并提出一个 A2A 案例研究，其中元数据保护绑定是可表达的，但浮现了协议的身份假设。我们在基于真实 A2A 捕获的生成模型上测试这些。仅从被动元数据，没有有效负载，分类器仅从工作流的打开即可恢复任务的类，远远高于偶然性；综合运用，这些特性将推动经济复苏急剧回归机遇。除了观察者可以恢复的范围之外，我们还衡量了对泄漏采取行动的影响力：从工作流的开放和固定预算下，选择要采取行动的工作流的对手在此模型中实现了洞察力攻击者相对于元数据盲攻击者的大部分优势，并且相同的属性抑制了这种优势。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-06 (39 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-06-06
