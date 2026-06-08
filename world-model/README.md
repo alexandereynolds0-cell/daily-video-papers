@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-08](papers/2026-06-08.md) - 1 papers
 - [2026-06-06](papers/2026-06-06.md) - 4 papers
 - [2026-06-05](papers/2026-06-05.md) - 13 papers
 - [2026-06-04](papers/2026-06-04.md) - 4 papers
@@ -90,6 +91,34 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-08 (1 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-06-08
+
+**Paper Count**: 1
+
+---
+
+## 1. Bootstrap Theory of Representational Emergence: Explanatory Insufficiency as a Driver of Representation Learning and World Models / 表征涌现的引导理论：解释性不足作为表征学习和世界模型的驱动力
+
+**Date**: 2026-06-05 | **arXiv**: [2606.07303v1](http://arxiv.org/abs/2606.07303v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.07303v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Representation learning is central to modern machine learning, enabling transitions from handcrafted features to learned embeddings, latent spaces, foundation models, world models, and digital twins. Yet most research examines how representations are optimized after a representational framework has been selected, while less attention is given to when a new level of representation becomes necessary. We introduce the Bootstrap Theory of Representational Emergence (TBER), a framework describing how new representations arise when existing ones become explanatorily insufficient. In this view, representational innovation is not only driven by more data, larger models, or greater computational power, but also by persistent explanatory gaps: situations in which a representation can still describe observations but can no longer make their organization or transformations intelligible. TBER identifies explanatory insufficiency as a positive signal for representational transition. A representation becomes insufficient not because it is necessarily false, but because its explanatory domain has been exceeded. The bootstrap dynamic follows a recursive sequence: observations reveal anomalies; anomalies expose insufficiencies; insufficiencies motivate new representations; and these new representations generate further observations and possible new insufficiencies.We formalize this process through five stages: stabilized observation, anomaly detection, recognition of explanatory insufficiency, representational emergence, and provisional stabilization. We discuss applications to representation learning, latent spaces, foundation models, world models, digital twins, adaptive biological systems, and scientific discovery. TBER suggests that future AI systems may benefit from mechanisms for detecting the explanatory limits of their own internal representations.
+
+表示学习是现代机器学习的核心，它能够实现从手工特征到学习嵌入、潜在空间、基础模型、世界模型和数字孪生的转变。然而，大多数研究研究在选择表征框架后如何优化表征，而很少关注何时需要新级别的表征。我们引入了表征涌现的引导理论（TBER），这是一个框架，描述当现有表征变得解释性不足时新表征如何出现。在这种观点中，表征创新不仅是由更多的数据、更大的模型或更强的计算能力驱动的，而且还受到持续的解释性差距的驱动：在这种情况下，表征仍然可以描述观察结果，但不再能够使它们的组织或转换变得可理解。 TBER 将解释性不足视为代表性转变的积极信号。一种表述变得不充分，并不是因为它一定是错误的，而是因为它的解释范围已经被超出了。自举动态遵循递归序列：观察揭示异常；异常现象暴露出不足；不足之处激发新的代表；这些新的表征会产生进一步的观察和可能的新的不足。我们通过五个阶段将这一过程正式化：稳定观察、异常检测、识别解释性不足、表征出现和临时稳定。我们讨论表示学习、潜在空间、基础模型、世界模型、数字孪生、自适应生物系统和科学发现的应用。 TBER 表明，未来的人工智能系统可能会受益于检测其自身内部表示的解释性限制的机制。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-06 (4 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-06-06
