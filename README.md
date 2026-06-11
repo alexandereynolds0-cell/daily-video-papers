@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-11](papers/2026-06-11.md) - 17 papers
 - [2026-06-10](papers/2026-06-10.md) - 29 papers
 - [2026-06-08](papers/2026-06-08.md) - 5 papers
 - [2026-06-06](papers/2026-06-06.md) - 19 papers
@@ -95,6 +96,292 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-11 (17 papers)</b></summary>
+
+# arXiv Video Papers - 2026-06-11
+
+**Paper Count**: 17
+
+---
+
+## 1. Findings of the MAGMaR 2026 Shared Task / MAGMaR 2026 共享任务的调查结果
+
+**Date**: 2026-06-10 | **arXiv**: [2606.12295v1](http://arxiv.org/abs/2606.12295v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.12295v1)
+
+**Categories**: cs.CV, cs.CL, cs.IR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This overview paper presents the results of the shared task for the second workshop on Multimodal Augmented Generation via Multimodal Retrieval (MAGMaR). In this shared task participants submitted systems focused on either (i) video retrieval or (ii) grounded generation of articles given retrieved videos. Teams could submit to either task. For the retrieval task, we had 2 participating teams that submitted a total of 17 systems -- all of which beat a baseline derived from the winner of last year's shared task. On the generation side, we had 4 teams submit 16 systems. All teams had at least one generated report that was labeled the best by a human annotator.
+
+这篇概述论文介绍了第二届“通过多模态检索实现多模态增强生成”(MAGMaR) 研讨会的共享任务的结果。在此共享任务中，参与者提交的系统侧重于（i）视频检索或（ii）根据检索到的视频生成文章的基础。团队可以提交任意一项任务。对于检索任务，我们有 2 个参与团队，总共提交了 17 个系统——所有这些系统都超过了去年共享任务获胜者得出的基线。在生成方面，我们有 4 个团队提交了 16 个系统。所有团队都至少生成了一份被人工注释者标记为最佳的报告。
+
+</details>
+
+---
+
+## 2. Making Foresight Actionable: Repurposing Representation Alignment in World Action Models / 使远见可行：重新调整世界行动模型中的表征一致性
+
+**Date**: 2026-06-10 | **arXiv**: [2606.12217v1](http://arxiv.org/abs/2606.12217v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.12217v1)
+
+**Categories**: cs.CV, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) offer a promising route for robot manipulation by using video generation models to model future scene evolution before producing control actions. However, our empirical observations reveal a phenomenon: generating plausible visual futures does not always guarantee the extraction of accurate actions. To diagnose this failure, we conduct action-head attention analysis and causal interventions. We find that the action decoder fails to focus on task-relevant interaction regions and remains sensitive to perturbations in task-irrelevant areas. This reveals a representation mismatch: hidden states optimized for visual reconstruction are not inherently organized in a form useful for low-level action control. In this paper, we propose AGRA, an Action-Grounded Representation Alignment objective that regularizes the world-action interface by aligning intermediate video diffusion features with spatially coherent semantic representations from a foundation visual encoder. We evaluate AGRA on real-world manipulation tasks. Experiments show that AGRA makes world model representations more action-grounded: by focusing the action decoder on the correct interaction regions, it improves object localization accuracy and affordance understanding, and makes the policy more robust to perturbations in task-irrelevant regions. As a result, AGRA consistently improves both in-distribution performance and out-of-distribution generalization over the baseline world action model.
+
+世界动作模型（WAM）通过使用视频生成模型在产生控制动作之前对未来场景演化进行建模，为机器人操纵提供了一条有前途的途径。然而，我们的经验观察揭示了一个现象：生成合理的视觉未来并不总是保证提取准确的动作。为了诊断这种失败，我们进行了行动头注意力分析和因果干预。我们发现动作解码器无法关注与任务相关的交互区域，并且对与任务无关的区域的扰动仍然敏感。这揭示了表示不匹配：针对视觉重建优化的隐藏状态本质上并不是以对低级动作控制有用的形式组织的。在本文中，我们提出了 AGRA，一种基于动作的表示对齐目标，它通过将中间视频扩散特征与来自基础视觉编码器的空间连贯语义表示对齐来规范世界动作界面。我们在现实世界的操作任务上评估 AGRA。实验表明，AGRA 使世界模型表示更加以动作为基础：通过将动作解码器集中在正确的交互区域，它提高了对象定位的准确性和可供性理解，并使策略对任务无关区域的扰动更加鲁棒。因此，AGRA 相对于基线世界行动模型不断提高分布内性能和分布外泛化能力。
+
+</details>
+
+---
+
+## 3. InternVideo3: Agentify Foundation Models with Multimodal Contextual Reasoning / InternVideo3：利用多模态上下文推理代理基础模型
+
+**Date**: 2026-06-10 | **arXiv**: [2606.12195v1](http://arxiv.org/abs/2606.12195v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.12195v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent progress in foundation models has shifted toward agentic behavior involving multi-step reasoning and tool use. However, open-source efforts largely focus on text-dominant settings, leaving long-horizon multimodal tasks underexplored. This gap is evident in video tasks requiring sustained temporal understanding and iterative interaction. We present InternVideo3, a framework enhancing these capabilities via Multimodal Contextual Reasoning (MCR). MCR treats understanding as a closed-loop process over a shared, evolving context containing observations, instructions, reasoning, tool actions, and memory. This frames long-video understanding as evidence accumulation and verification. To ensure efficiency, we introduce Multimodal Multi-head Latent Attention (M^2LA), a token-preserving reparameterization compressing KV-cache states while retaining the full token stream. Our staged training includes continued pretraining, short-to-long supervised fine-tuning, rule-based reinforcement learning, and on-policy distillation. Experiments show InternVideo3 achieves strong performance on benchmarks like Video-MME, MLVU, and EgoSchema. We further instantiate the model as a video agent with retrieval tools, demonstrating robust evidence-grounded behavior. Our results suggest that efficient context handling and closed-loop reasoning are vital for adapting open multimodal models toward long-horizon visually grounded agency.
+
+基础模型的最新进展已转向涉及多步骤推理和工具使用的代理行为。然而，开源工作主要集中在以文本为主的设置上，而长期多模式任务尚未得到充分探索。这种差距在需要持续时间理解和迭代交互的视频任务中很明显。我们提出了 InternVideo3，这是一个通过多模态上下文推理 (MCR) 增强这些功能的框架。 MCR 将理解视为一个共享的、不断发展的上下文中的闭环过程，其中包含观察、指令、推理、工具操作和记忆。这将长视频理解定义为证据积累和验证。为了确保效率，我们引入了多模态多头潜在注意力（M^2LA），这是一种保留令牌的重新参数化，压缩 KV 缓存状态，同时保留完整的令牌流。我们的分阶段训练包括持续预训练、短到长的监督微调、基于规则的强化学习和策略蒸馏。实验表明，InternVideo3 在 Video-MME、MLVU 和 EgoSchema 等基准测试中实现了强大的性能。我们进一步将该模型实例化为具有检索工具的视频代理，展示了强大的基于证据的行为。我们的结果表明，高效的上下文处理和闭环推理对于将开放多模态模型调整为长期视觉基础的代理至关重要。
+
+</details>
+
+---
+
+## 4. Q-Fold: Query-Aware Focus-Context Spatio-Temporal Folding for Long Video Understanding / Q-Fold：用于长视频理解的查询感知焦点上下文时空折叠
+
+**Date**: 2026-06-10 | **arXiv**: [2606.12125v1](http://arxiv.org/abs/2606.12125v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.12125v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-video understanding remains challenging for multimodal large language models, because temporally extended videos often contain thousands of frames and are therefore expensive to process exhaustively. Existing methods usually construct compact visual inputs from long videos under a limited visual budget. However, most of them still follow a frame-centric paradigm and apply similar representations to retained content regardless of its importance. This makes it difficult to preserve both high-fidelity visual evidence and broad temporal coverage. To address this issue, we propose Q-Fold, a training-free input construction framework for long-video understanding. Instead of treating isolated frames as the basic modeling unit, Q-Fold operates on contiguous temporal segments and constructs a heterogeneous Focus--Context representation under query guidance. Query-relevant segments are preserved as high-fidelity Focus Frames, while less relevant segments are folded into chronology-preserving contextual layouts. In this way, Q-Fold preserves critical visual evidence and broad temporal coverage, while better maintaining local temporal continuity within short segments. Experiments on four long-video benchmarks with multiple Video-MLLMs show that Q-Fold consistently improves performance without increasing the input budget. Notably, it achieves gains of up to 9.1 percentage points on an ultra-long video benchmark. Code will be made publicly available.
+
+对于多模态大型语言模型来说，长视频理解仍然具有挑战性，因为时间扩展的视频通常包含数千帧，因此详尽处理的成本很高。现有的方法通常在有限的视觉预算下从长视频构建紧凑的视觉输入。然而，它们中的大多数仍然遵循以框架为中心的范式，并将类似的表示应用于保留的内容，无论其重要性如何。这使得很难同时保留高保真视觉证据和广泛的时间覆盖范围。为了解决这个问题，我们提出了 Q-Fold，一种用于长视频理解的免训练输入构建框架。 Q-Fold 没有将孤立的帧视为基本建模单元，而是对连续的时间段进行操作，并在查询指导下构建异构的焦点-上下文表示。与查询相关的片段被保留为高保真焦点框架，而不太相关的片段则被折叠到保留时间顺序的上下文布局中。通过这种方式，Q-Fold 保留了关键的视觉证据和广泛的时间覆盖范围，同时更好地保持短片段内的局部时间连续性。使用多个视频 MLLM 对四个长视频基准进行的实验表明，Q-Fold 在不增加输入预算的情况下持续提高性能。值得注意的是，它在超长视频基准测试中实现了高达 9.1 个百分点的提升。代码将公开。
+
+</details>
+
+---
+
+## 5. World Model Self-Distillation: Training World Models to Solve General Tasks / 世界模型自蒸馏：训练世界模型来解决一般任务
+
+**Date**: 2026-06-10 | **arXiv**: [2606.12072v1](http://arxiv.org/abs/2606.12072v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.12072v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pretrained video generators are promising visual world models that exhibit emergent task-solving abilities; however, their reliance on detailed textual descriptions limits their direct use for planning and decision-making. Existing approaches either outsource this reasoning to language or vision-language models, or rely on supervised fine-tuning with paired task-execution videos, which are costly to collect and difficult to scale. We propose a scalable framework that elicits task-solving ability in such models by combining self-distillation with reinforcement learning. Given an unlabeled scene image, a vision-language model generates a candidate task and a detailed step-by-step solution. The solution conditions a pretrained video diffusion model, the Demonstrator; we distill its behavior into an Executor conditioned only on the image and a short task prompt. This transfers execution knowledge from caption-guided generation to instruction-conditioned task solving without curated task-video supervision. We further improve the Executor with reinforcement learning from VLM feedback, exploiting the asymmetry between judging whether a sampled video satisfies a task and generating the solution. Experiments on our proposed WorldTasks-Benchmark and the DreamGen robotics benchmark show that the Executor surpasses the Demonstrator under our VLM-based evaluation protocol and transfers competitively to robotic tasks.
+
+预训练的视频生成器是有前景的视觉世界模型，具有突发任务解决能力；然而，它们对详细文本描述的依赖限制了它们直接用于规划和决策。现有的方法要么将这种推理外包给语言或视觉语言模型，要么依赖于配对任务执行视频的监督微调，这些视频的收集成本高昂且难以扩展。我们提出了一个可扩展的框架，通过将自我蒸馏与强化学习相结合，在此类模型中激发任务解决能力。给定未标记的场景图像，视觉语言模型会生成候选任务和详细的分步解决方案。该解决方案以预先训练的视频扩散模型（演示器）为条件；我们将其行为提炼为仅以图像和简短任务提示为条件的执行器。这将执行知识从字幕引导生成转移到指令条件任务解决，而无需策划任务视频监督。我们通过 VLM 反馈的强化学习进一步改进执行器，利用判断采样视频是否满足任务和生成解决方案之间的不对称性。我们提出的 WorldTasks-Benchmark 和 DreamGen 机器人基准测试表明，在我们基于 VLM 的评估协议下，执行器超越了演示器，并且有竞争力地转移到机器人任务。
+
+</details>
+
+---
+
+## 6. Metadata-Aware Multi-Prompt Reasoning for Zero-Shot Accident Understanding / 用于零次事故理解的元数据感知多提示推理
+
+**Date**: 2026-06-10 | **arXiv**: [2606.12047v1](http://arxiv.org/abs/2606.12047v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.12047v1)
+
+**Categories**: cs.CV, cs.AI, stat.ML
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In this paper, we address the problem of zero-shot understanding of accidents from surveillance videos by identifying when an impact event occurs, what type of impact it is, and where in the frame it occurs using natural language. We propose a three-stage pipeline that decomposes the accident understanding into when, what, and where. The first stage extracts a short temporal window around the impact using vision-language similarity. In the second stage, we perform metadata-driven multi-prompt reasoning with five complementary views (baseline, motion, geometry, contrast, and tiebreaker) and resolve disagreement via an entropy-gated pairwise adjudicator. Finally, we localize the impact of an open-vocabulary detector queried on the predicted accident type and scene layout, and aggregate detections across keyframes using a score-weighted centroid. Our pipeline achieves a substantial improvement in the harmonic-mean score over a centre-of-frame baseline on the zero-shot ACCIDENT @ CVPR benchmark. We show that decomposing zero-shot video understanding into temporal localization, semantic classification, and spatial grounding enable more reliable reasoning with vision-language models than direct prompting alone.
+
+在本文中，我们通过使用自然语言识别撞击事件发生的时间、撞击的类型以及撞击发生在画面中的位置，解决了对监控视频中的事故进行零镜头理解的问题。我们提出了一个三阶段管道，将事故理解分解为时间、事件和地点。第一阶段利用视觉语言相似性提取影响周围的短时间窗口。在第二阶段，我们使用五个互补视图（基线、运动、几何、对比度和决胜局）执行元数据驱动的多提示推理，并通过熵门控成对裁决器解决分歧。最后，我们定位了查询的开放词汇检测器对预测事故类型和场景布局的影响，并使用分数加权质心聚合跨关键帧的检测。我们的流程在零样本事故 @ CVPR 基准上的调和平均得分比帧中心基线有了显着提高。我们表明，将零样本视频理解分解为时间定位、语义分类和空间基础，可以使用视觉语言模型进行比单独直接提示更可靠的推理。
+
+</details>
+
+---
+
+## 7. SpikeTAD: Spiking Neural Networks for End-to-End Temporal Action Detection / SpikeTAD：用于端到端时间动作检测的尖峰神经网络
+
+**Date**: 2026-06-10 | **arXiv**: [2606.12033v1](http://arxiv.org/abs/2606.12033v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.12033v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/MCG-NJU/SpikeTAD.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video understanding is a crucial part of computer vision, with numerous application scenarios. With the increasing popularity of mobile devices, an increasing number of efforts are trying to deploy video understanding models on them. However, existing video understanding models are difficult to deploy due to their large size and prohibitive power consumption. Spiking Neural Networks (SNNs) have shown bioplausibility and low power advantages over Artificial Neural Networks (ANNs), especially on neuromorphic chips which are regarded as essential components of future mobile devices. However, excessively long conversion time-steps and severe performance degradation problems limit their application. To solve the problems above, we explore the application of SNNs on temporal action detection (TAD), which is an important task in video understanding, and propose the first SNN-based end-to-end TAD architecture coined as SpikeTAD. While maintaining extremely low power consumption, SpikeTAD achieves an average mAP of 67.2% in THUMOS14 and 37.42% in ActivityNet-1.3, demonstrating the feasibility of a low-power TAD model. Our code is available at https://github.com/MCG-NJU/SpikeTAD.
+
+视频理解是计算机视觉的重要组成部分，有着众多的应用场景。随着移动设备的日益普及，越来越多的努力尝试在移动设备上部署视频理解模型。然而，现有的视频理解模型由于尺寸大且功耗过高而难以部署。与人工神经网络 (ANN) 相比，尖峰神经网络 (SNN) 已显示出生物合理性和低功耗优势，尤其是在被视为未来移动设备重要组件的神经形态芯片上。然而，过长的转换时间步长和严重的性能下降问题限制了它们的应用。为了解决上述问题，我们探索了 SNN 在时间动作检测（TAD）上的应用，这是视频理解中的一项重要任务，并提出了第一个基于 SNN 的端到端 TAD 架构，称为 SpikeTAD。在保持极低功耗的同时，SpikeTAD在THUMOS14中实现了67.2%的平均mAP，在ActivityNet-1.3中实现了37.42%的平均mAP，证明了低功耗TAD模型的可行性。我们的代码可在 https://github.com/MCG-NJU/SpikeTAD 获取。
+
+</details>
+
+---
+
+## 8. VICX: Generalizable Robot Manipulation via Video Generation and In-Context Operator Network / VICX：通过视频生成和上下文操作网络进行通用机器人操作
+
+**Date**: 2026-06-10 | **arXiv**: [2606.12028v1](http://arxiv.org/abs/2606.12028v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.12028v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generalizable robot manipulation requires not only task-level reasoning over unseen scenes, but also reliable grounding of visual plans into embodiment-specific execution. To bridge this gap, we propose VICX (Video generation and In-Context eXecution), a decoupled closed-loop manipulation framework. In VICX, a frozen video generation model produces vision-language-conditioned high-level visual plans, while a Video-to-Trajectory In-Context Operator Network (V2T-ICON) serves as the task-agnostic interface that grounds these plans into executable robot-state trajectories. To improve execution generalization, V2T-ICON operates on segmentation-extracted arm-only frame observations and uses retrieved image-state pairs as in-context prompts, allowing a robust and generalizable visual-to-state mapping at inference time without parameter updates. Experiments on Meta-World show that VICX supports cross-task generalization, closed-loop self-correction, and cross-embodiment transfer, demonstrating dual generalization across both task semantics and robot execution. The project webpage can be found here: https://scaling-group.github.io/vicx/.
+
+可推广的机器人操作不仅需要对未见过的场景进行任务级推理，还需要将视觉计划可靠地融入到具体实施例的执行中。为了弥补这一差距，我们提出了 VICX（视频生成和上下文执行），一种解耦的闭环操作框架。在 VICX 中，冻结视频生成模型生成以视觉语言为条件的高级视觉计划，而视频到轨迹上下文操作网络 (V2T-ICON) 则充当与任务无关的接口，将这些计划转化为可执行的机器人状态轨迹。为了提高执行泛化性，V2T-ICON 对分段提取的仅手臂帧观察进行操作，并使用检索到的图像状态对作为上下文提示，从而在推理时实现稳健且可泛化的视觉到状态映射，而无需更新参数。 Meta-World 上的实验表明，VICX 支持跨任务泛化、闭环自校​​正和跨实体迁移，展示了任务语义和机器人执行的双重泛化。项目网页可以在这里找到：https://scaling-group.github.io/vicx/。
+
+</details>
+
+---
+
+## 9. SpecLoR: Spectral Lookahead Rectification for Motion-Coherent Text-to-Video Generation / SpecLoR：用于运动相干文本到视频生成的频谱前瞻校正
+
+**Date**: 2026-06-10 | **arXiv**: [2606.11969v1](http://arxiv.org/abs/2606.11969v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.11969v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Flow Matching has enabled robust text-to-video generation via latent ODE sampling. However, velocity approximation and numerical discretization errors inevitably accumulate, causing sampling trajectories to drift. Consequently, generated videos often suffer from severe spatiotemporal inconsistencies. Nevertheless, directly correcting these drifted, noisy latents is challenging: (i) timestep-dependent noise obscures reliable structural cues; (ii) spatial interventions risk disrupting intricate local geometry while incurring heavy computational costs. To address this, we propose Spectral Lookahead Rectification (SpecLoR), a plug-and-play inference method that bypasses noise via lookahead prediction, and circumvents spatiotemporal entanglement by shifting corrections to the frequency domain, where universal statistical priors of natural videos are readily available. First, during early sampling stages, SpecLoR looks ahead to estimate the clean latent $z_{t,0}$ and computes its 3D spatiotemporal spectrum. Next, SpecLoR rectifies the amplitude spectrum to match the prior, leaving the phase intact. Finally, the corrected state is re-noised to resume ODE integration. Experiments on Wan2.2 demonstrate that SpecLoR significantly reduces physical artifacts and enhances motion coherence across multiple benchmarks with minimal computational overhead (4 additional NFEs).
+
+流匹配通过潜在 ODE 采样实现了强大的文本到视频生成。然而，速度近似和数值离散误差不可避免地会累积，导致采样轨迹漂移。因此，生成的视频经常出现严重的时空不一致。然而，直接纠正这些漂移的、有噪声的潜在特征是具有挑战性的：（i）时间步长相关的噪声掩盖了可靠的结构线索； (ii) 空间干预可能会破坏复杂的局部几何形状，同时产生大量的计算成本。为了解决这个问题，我们提出了频谱前瞻校正（SpecLoR），这是一种即插即用的推理方法，通过前瞻预测绕过噪声，并通过将校正转移到频域来规避时空纠缠，在频域中可以轻松获得自然视频的通用统计先验。首先，在早期采样阶段，SpecLoR 会向前估计干净的潜在 $z_{t,0}$ 并计算其 3D 时空频谱。接下来，SpecLoR 校正幅度谱以匹配先前的幅度谱，保持相位不变。最后，对校正后的状态重新进行噪声处理以恢复 ODE 积分。 Wan2.2 上的实验表明，SpecLoR 显着减少了物理伪影，并以最小的计算开销（4 个额外的 NFE）增强了跨多个基准的运动一致性。
+
+</details>
+
+---
+
+## 10. From Content to Knowledge: Lightning Fast Long-Video Understanding with Neural Knowledge Representations / 从内容到知识：利用神经知识表示快速理解长视频
+
+**Date**: 2026-06-10 | **arXiv**: [2606.11913v1](http://arxiv.org/abs/2606.11913v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.11913v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We propose a new paradigm for long video understanding by treating a long video as a Neural Knowledge Representation (NKR). NKR represents video contents neither as a stream of tokens nor pre-organized databases, but as an individual small portion of network weights attached to the VLM backbone. The NKR weights are optimized to encapsulate the video's semantic content via a novel Agentic Knowledge Distillation (AKD) process, where an agent automatically synthesizes dense descriptions and question-answer pairs to distill the video's knowledge into the NKR. While AKD serves as a comprehensive, one-time encoding phase, the resulting NKR transforms the video into a portable, reusable asset. At inference, the lightweight NKR is mounted onto a frozen Vision-Language Model (VLM), enabling direct, query-based understanding without reloading or re-encoding the original video. This approach decouples video length from inference cost, offering high amortized efficiency for multi-turn video understanding. Experiments on the LVBench benchmark show our method achieves performance comparable to state-of-the-art approaches while reducing end-to-end latency by over two orders of magnitude, opening new possibilities for interactive long-video understanding.
+
+我们通过将长视频视为神经知识表示（NKR），提出了一种新的长视频理解范例。 NKR 既不是将视频内容表示为令牌流，也不是预先组织的数据库，而是将其表示为附加到 VLM 主干网络权重的一小部分。 NKR 权重经过优化，通过新颖的代理知识蒸馏 (AKD) 过程封装视频的语义内容，其中代理自动合成密集的描述和问答对，将视频的知识提取到 NKR 中。虽然 AKD 充当全面的一次性编码阶段，但生成的 NKR 将视频转换为便携式、可重复使用的资产。在推理时，轻量级 NKR 被安装到冻结的视觉语言模型 (VLM) 上，从而实现基于查询的直接理解，而无需重新加载或重新编码原始视频。这种方法将视频长度与推理成本解耦，为多轮视频理解提供高摊余效率。 LVBench 基准测试表明，我们的方法实现了与最先进方法相当的性能，同时将端到端延迟减少了两个数量级以上，为交互式长视频理解开辟了新的可能性。
+
+</details>
+
+---
+
+## 11. Plan-and-Verify Video Reward Reasoning with Spatio-Temporal Scene Graph Grounding / 使用时空场景图基础来规划和验证视频奖励推理
+
+**Date**: 2026-06-10 | **arXiv**: [2606.11838v1](http://arxiv.org/abs/2606.11838v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.11838v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reward models for text-to-video (T2V) generation guide post-training but often fail at fine-grained semantic alignment. We trace this to two structural weaknesses in existing reasoning-based reward models: they do not systematically verify every condition described in the prompt, and the visual evidence supporting each judgment remains implicit in their free-form reasoning. We propose SG-PVR, a video reward model that addresses these limitations through plan-and-verify reasoning grounded in spatio-temporal scene graphs. The verification plan decomposes the prompt into atomic claims, ensuring every requirement is checked. The spatio-temporal scene graph, encoding entities, attributes, and temporally-grounded relations, is extracted from the video and maintained as a persistent structured visual reference throughout reasoning. Each claim is verified against both the video and the scene graph, anchoring judgments in explicit visual evidence. SG-PVR achieves strong performance on semantic alignment, including fine-grained temporal semantics. As a test-time reranker, it further enhances compositional alignment in T2V generation.
+
+用于文本到视频 (T2V) 生成的奖励模型可以指导训练后，但在细粒度语义对齐方面常常失败。我们将其追溯到现有基于推理的奖励模型中的两个结构性弱点：它们没有系统地验证提示中描述的每个条件，并且支持每个判断的视觉证据仍然隐含在其自由形式推理中。我们提出了 SG-PVR，这是一种视频奖励模型，通过基于时空场景图的计划和验证推理来解决这些限制。验证计划将提示分解为原子声明，确保检查每个要求。从视频中提取时空场景图、编码实体、属性和基于时间的关系，并在整个推理过程中作为持久的结构化视觉参考进行维护。每个主张都根据视频和场景图进行验证，将判断锚定在明确的视觉证据中。 SG-PVR 在语义对齐方面实现了强大的性能，包括细粒度的时间语义。作为测试时重新排序器，它进一步增强了 T2V 生成中的成分对齐。
+
+</details>
+
+---
+
+## 12. MultiToP: Learning to Patch Visual Tokens to Mitigate Hallucinations in Video Large Multimodal Models / MultiToP：学习修补视觉标记以减轻视频大型多模态模型中的幻觉
+
+**Date**: 2026-06-10 | **arXiv**: [2606.11792v1](http://arxiv.org/abs/2606.11792v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.11792v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video Large Multimodal Models have achieved remarkable progress in video understanding, yet they remain prone to hallucinations, where generated responses are not faithfully supported by the input video. In this paper, we propose MultiToP, a multimodal-context-aware visual token patching framework that mitigates hallucinations by refining unreliable visual tokens before language generation. MultiToP introduces a lightweight Visual Token Patcher to predict token-level replacement distributions and selectively substitute unreliable visual tokens with a dynamic global patch token. To train the patcher effectively, we further propose information-guided rank calibration, which uses answer-conditioned frame-level information cues derived from the backbone to guide token replacement. Combined with ground-truth answer supervision and sparsity regularization, MultiToP enables localized visual evidence refinement without modifying the original model. Extensive experiments demonstrate that MultiToP effectively reduces hallucinations on Vript-HAL with negligible inference overhead, improving the F1 scores of Qwen3-VL-4B-Instruct by 50.60% over the vanilla model. Meanwhile, MultiToP preserves general video understanding ability, yielding an 18.58% relative accuracy gain on ActivityNet-QA for Video-LLaVA-7B.
+
+视频大型多模态模型在视频理解方面取得了显着的进步，但它们仍然容易产生幻觉，即输入视频不能忠实地支持生成的响应。在本文中，我们提出了 MultiToP，一种多模态上下文感知的视觉标记修补框架，它通过在语言生成之前精炼不可靠的视觉标记来减轻幻觉。 MultiToP 引入了一个轻量级的视觉令牌修补程序来预测令牌级别的替换分布，并有选择地用动态全局补丁令牌替换不可靠的视觉令牌。为了有效地训练修补程序，我们进一步提出了信息引导的排名校准，它使用从骨干网派生的答案条件帧级信息线索来指导令牌替换。结合真实答案监督和稀疏正则化，MultiToP 可以在不修改原始模型的情况下实现局部视觉证据细化。大量实验表明，MultiToP 可以有效减少 Vript-HAL 上的幻觉，而推理开销可以忽略不计，与普通模型相比，Qwen3-VL-4B-Instruct 的 F1 分数提高了 50.60%。同时，MultiToP 保留了一般视频理解能力，使 Video-LLaVA-7B 的 ActivityNet-QA 相对准确度提高了 18.58%。
+
+</details>
+
+---
+
+## 13. A Comprehensive Ecosystem for Open-Domain Customized Video Generation / 用于开放域定制视频生成的综合生态系统
+
+**Date**: 2026-06-10 | **arXiv**: [2606.11783v1](http://arxiv.org/abs/2606.11783v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.11783v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent progress in video generation has shown impressive visual synthesis capabilities. However, open-domain customized video generation remains limited by the lack of large-scale, annotated datasets capturing diverse identity-specific attributes. To address this, we introduce PexelsCustom-1M, the first publicly available million-scale dataset for identity-preserving video generation, containing one million curated <identity, text, video> triplets across 8,000+ categories. Leveraging this, we propose CustoMDiT, a parameter-efficient framework that adapts a pretrained multimodal Diffusion Transformer into a customized video generator with only 8% additional learnable parameters. Our method surpasses prior state-of-the-art. However, benchmarks such as DreamBooth cover only 100 classes, which is insufficient for real-world applications. To overcome this, we construct OpenCustom, a new benchmark with 1,000+ categories, created via cross-dataset knowledge fusion from ImageNet and MS-COCO. Extensive experiments confirm the advantages of both our dataset and model. We will open-source the entire ecosystem--including dataset, pipeline, benchmark, and implementations--to support further research.
+
+视频生成领域的最新进展显示了令人印象深刻的视觉合成能力。然而，由于缺乏捕获不同身份特定属性的大规模带注释数据集，开放域定制视频生成仍然受到限制。为了解决这个问题，我们推出了 PexelsCustom-1M，这是第一个用于身份保留视频生成的公开可用的百万级数据集，包含 8,000 多个类别的 100 万个精选的<身份、文本、视频>三元组。利用这一点，我们提出了 CustoMDiT，这是一种参数高效的框架，它将预训练的多模态扩散变压器调整为定制的视频生成器，仅需要 8% 的额外可学习参数。我们的方法超越了现有技术水平。然而，DreamBooth 等基准测试仅涵盖 100 个类，这对于实际应用程序来说是不够的。为了克服这个问题，我们构建了 OpenCustom，这是一个包含 1,000 多个类别的新基准，是通过 ImageNet 和 MS-COCO 的跨数据集知识融合创建的。大量的实验证实了我们的数据集和模型的优势。我们将开源整个生态系统——包括数据集、管道、基准和实施——以支持进一步的研究。
+
+</details>
+
+---
+
+## 14. ARGUS: Stacked Multi-View Identity Mosaic Injection for Subject-Preserving Video Generation / ARGUS：用于生成主题保留视频的堆叠多视图身份马赛克注入
+
+**Date**: 2026-06-10 | **arXiv**: [2606.11670v1](http://arxiv.org/abs/2606.11670v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.11670v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Subject-preserving video generation is not solved by frontal-face similarity alone: a generated person must remain recognizable across motion, large viewpoint changes, expression shifts, occlusion, scale variation, and conflicts among text, first-frame, and identity references. We argue that the central bottleneck is the point-reference paradigm, which collapses identity into a single static observation entangled with pose, accessories, lighting, background, and camera statistics. We introduce Argus, a Wan-based framework centered on Stacked Multi-View Identity Mosaic Injection (SMII). SMII converts MLLM-selected image/video identity evidence into a 3*3 stacked mosaic, synchronizes the mosaic with the current diffusion time, and injects it as negative-time read-only memory in Wan's native token space. This turns identity from an external clean adapter or a single reference image into a compact dynamic distribution. Around SMII, an MLLM Identity Director selects informative identity moments and resolves condition conflicts, while no-cross-pair counterfactual training, Temporal Identity Annealing, and Adaptive Self-Likeness Guidance improve robustness without paired subject-video supervision. We further release HardID-Celeb, a public-figure identity-stress benchmark, and introduce YawScore and OccScore to probe large-yaw and first-frame-occlusion robustness. Argus achieves state-of-the-art results on OpenS2V-Eval Human-Domain, reaching 64.38 Total Score, 71.86 FaceSim, 51.62 NexusScore, and 79.14 NaturalScore. On HardID-Celeb, Argus obtains 76.80 FaceSim and improves YawScore and OccScore by 12.60 and 15.10 points over the strongest baselines, demonstrating that dynamic identity memory and large-scale counterfactual self-supervision are highly effective for subject-preserving video generation.
+
+保留主题的视频生成不能仅通过正面相似性来解决：生成的人物必须在运动、大视点变化、表情变化、遮挡、尺度变化以及文本、第一帧和身份参考之间的冲突中保持可识别性。我们认为，核心瓶颈是点参考范式，它将身份分解为与姿势、配件、照明、背景和相机统计数据纠缠在一起的单个静态观察。我们介绍 Argus，一个基于 Wan 的框架，以堆叠多视图身份马赛克注入 (SMII) 为中心。 SMII将MLLM选择的图像/视频身份证据转换为3*3堆叠的马赛克，将马赛克与当前扩散时间同步，并将其作为负时间只读存储器注入到Wan的原生令牌空间中。这将身份从外部干净适配器或单个参考图像转变为紧凑的动态分布。围绕 SMII，MLLM 身份总监选择信息丰富的身份时刻并解决条件冲突，而无交叉配对反事实训练、时间身份退火和自适应自相似指导则在没有配对主题视频监督的情况下提高了鲁棒性。我们进一步发布了 HardID-Celeb，一个公众人物身份压力基准，并引入了 YawScore 和 OccScore 来探测大偏航和第一帧遮挡的鲁棒性。 Argus 在 OpenS2V-Eval Human-Domain 上取得了最先进的成绩，总分达到 64.38、FaceSim 71.86、NexusScore 51.62 和 NaturalScore 79.14。在 HardID-Celeb 上，Argus 获得了 76.80 FaceSim，并将 YawScore 和 OccScore 比最强基线提高了 12.60 和 15.10 分，这表明动态身份记忆和大规模反事实自我监督对于主题保留视频生成非常有效。
+
+</details>
+
+---
+
+## 15. Motion Reinforces Appearance: RGB-Skeleton Gated Residual Fusion for Micro-Gesture Online Recognition / 运动增强外观：用于微手势在线识别的 RGB 骨架门控残差融合
+
+**Date**: 2026-06-10 | **arXiv**: [2606.11645v1](http://arxiv.org/abs/2606.11645v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.11645v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Micro-gesture analysis attracts increasing attention for inferring spontaneous emotion from subtle body movements. Micro-gesture online recognition, which localizes and classifies each gesture instance in untrimmed videos, is a core task in the 4th EI-MiGA-IJCAI Challenge. Compared with typical temporal action detection, MGR emphasizes the localization and classification of actions, requiring the model to output the start time, end time, and category of each micro-gesture. Moreover, since micro-gestures are highly spontaneous, relying solely on a single modality makes it difficult to capture the complete and accurate multi-modal cues. In this work, we propose DyFADet+, which extends DyFADet into a dual-stream RGB-skeleton framework. In our model, both modalities are projected into shared multi-scale temporal embeddings and fused through a gated residual module, which adaptively injects skeleton motion into the RGB representation rather than using naive concatenation. Finally, these fused features are decoded by a Dynamic TAD head for online classification and boundary regression. On the SMG dataset, our method achieves an F1 score of 40.88, ranking 2nd in the Micro-gesture Online Recognition track.
+
+微手势分析因从微妙的身体动作推断自发情绪而受到越来越多的关注。微手势在线识别对未修剪视频中的每个手势实例进行本地化和分类，是第四届 EI-MiGA-IJCAI 挑战赛的核心任务。与典型的时间动作检测相比，MGR强调动作的定位和分类，要求模型输出每个微手势的开始时间、结束时间和类别。此外，由于微手势具有高度自发性，仅依靠单一模态很难捕获完整且准确的多模态线索。在这项工作中，我们提出了 DyFADet+，它将 DyFADet 扩展为双流 RGB 骨架框架。在我们的模型中，两种模态都被投影到共享的多尺度时间嵌入中，并通过门控残差模块进行融合，该模块自适应地将骨架运动注入 RGB 表示中，而不是使用朴素的串联。最后，这些融合特征由动态 TAD 头解码，用于在线分类和边界回归。在 SMG 数据集上，我们的方法取得了 40.88 的 F1 分数，在微手势在线识别赛道中排名第二。
+
+</details>
+
+---
+
+## 16. SCAIL-2: Unifying Controlled Character Animation with End-to-end In-Context Conditioning / SCAIL-2：将受控角色动画与端到端上下文条件统一起来
+
+**Date**: 2026-06-09 | **arXiv**: [2606.10804v2](http://arxiv.org/abs/2606.10804v2) | **PDF**: [Link](http://arxiv.org/pdf/2606.10804v2)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Controlled character animation requires transferring motion from a driving sequence to a reference character. Prior works heavily rely on intermediate representations, including pose skeletons to represent motion or masked background to represent environment, which inevitably leads to information loss. To address this, we present SCAIL-2, a framework that bypasses those intermediates and achieves \textbf{end-to-end} character animation. By directly concatenating driving videos to the sequence, the model can obtain all the required visual information from the input video. To address the lack of end-to-end data, we unify sub-tasks of character animation with decoupled conditions and then curate a pipeline to synthesize MotionPair-60K, an end-to-end motion transfer dataset containing heterogeneous tasks of character animation. To achieve the unification, we utilize in-context mask conditioning and mode-specific RoPE as soft guidance beyond textual instructions and raw visual information. To address synthetic discrepancy in detailed regions, we propose Bias-Aware DPO to construct preference items to mitigate the errors. Extensive experiments demonstrate that our method substantially outperforms existing state-of-the-art approaches in various character animation tasks. A large subset of synthetic data as well as model weights will be released at our project page: https://teal024.github.io/SCAIL-2/.
+
+受控角色动画需要将运动从驱动序列转移到参考角色。先前的工作严重依赖于中间表示，包括姿势骨架来表示运动或蒙版背景来表示环境，这不可避免地导致信息丢失。为了解决这个问题，我们提出了 SCAIL-2，一个绕过这些中间过程并实现 \textbf{end-to-end} 角色动画的框架。通过直接将驾驶视频连接到序列中，模型可以从输入视频中获取所有所需的视觉信息。为了解决缺乏端到端数据的问题，我们将角色动画的子任务与解耦条件统一起来，然后策划一个管道来合成 MotionPair-60K，这是一个包含角色动画异构任务的端到端运动传输数据集。为了实现统一，我们利用上下文掩模调节和特定于模式的 RoPE 作为文本指令和原始视觉信息之外的软指导。为了解决详细区域中的综合差异，我们建议使用 Bias-Aware DPO 来构建偏好项来减轻错误。大量的实验表明，我们的方法在各种角色动画任务中远远优于现有的最先进的方法。大量合成数据以及模型权重将在我们的项目页面上发布：https://teal024.github.io/SCAIL-2/。
+
+</details>
+
+---
+
+## 17. Efficient-WAM: A 1B-Parameter World-Action Model with Low-Cost Future Imagination / Efficient-WAM：具有低成本未来想象力的 1B 参数世界行动模型
+
+**Date**: 2026-06-08 | **arXiv**: [2606.10040v2](http://arxiv.org/abs/2606.10040v2) | **PDF**: [Link](http://arxiv.org/pdf/2606.10040v2)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World-Action Models (WAMs) have emerged as a promising paradigm for embodied control by coupling future visual prediction with action generation. However, most existing WAMs rely on photorealistic future prediction, which incurs high inference latency and makes real-time robot deployment difficult. This motivates a more efficient WAM design that preserves the control benefits of future visual prediction while reducing its inference cost. We introduce Efficient-WAM, a World-Action Model that reduces the cost of future imagination while preserving its control benefit. Efficient-WAM improves inference efficiency via a compact video expert transferred from WAN-2.2-5B, token-sparse video latents, and asymmetric video-action denoising that allocates fewer sampling steps to video than to actions. Instead of optimizing the future branch for visual fidelity, Efficient-WAM treats future video prediction as a compact guidance signal for action generation. Comprehensive experiments on RoboTwin 2.0 and real-world manipulation tasks show that Efficient-WAM maintains strong action performance despite visibly coarse future predictions. While maintaining competitive control capabilities, our 1B-parameter model can reduce per-chunk latency to around 100 ms during physical deployment, achieving a 30x speedup over existing WAMs.
+
+通过将未来视觉预测与动作生成相结合，世界动作模型（WAM）已成为一种有前景的体现控制范式。然而，大多数现有的 WAM 依赖于逼真的未来预测，这会导致较高的推理延迟，并使实时机器人部署变得困难。这激发了更高效的 WAM 设计，保留未来视觉预测的控制优势，同时降低其推理成本。我们引入了 Efficient-WAM，这是一种世界行动模型，可以降低未来想象的成本，同时保留其控制优势。 Efficient-WAM 通过从 WAN-2.2-5B 传输的紧凑视频专家、令牌稀疏视频潜伏以及为视频分配比动作更少的采样步骤的非对称视频动作去噪来提高推理效率。 Efficient-WAM 不是为了视觉保真度而优化未来分支，而是将未来视频预测视为用于动作生成的紧凑指导信号。对 RoboTwin 2.0 和现实世界操作任务的综合实验表明，尽管未来预测明显粗糙，Efficient-WAM 仍保持强大的动作性能。在保持有竞争力的控制能力的同时，我们的 1B 参数模型可以在物理部署期间将每个块的延迟减少到 100 毫秒左右，实现比现有 WAM 提高 30 倍的速度。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-10 (29 papers)</b></summary>
 
 # arXiv Video Papers - 2026-06-10
