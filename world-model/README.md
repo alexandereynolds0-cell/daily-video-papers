@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-11](papers/2026-06-11.md) - 7 papers
 - [2026-06-10](papers/2026-06-10.md) - 12 papers
 - [2026-06-09](papers/2026-06-09.md) - 8 papers
 - [2026-06-08](papers/2026-06-08.md) - 1 papers
@@ -93,6 +94,130 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-11 (7 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-06-11
+
+**Paper Count**: 7
+
+---
+
+## 1. World Pilot: Steering Vision-Language-Action Models with World-Action Priors / 世界飞行员：用世界行动先验指导视觉-语言-行动模型
+
+**Date**: 2026-06-10 | **arXiv**: [2606.12403v1](http://arxiv.org/abs/2606.12403v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.12403v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language-Action (VLA) models inherit semantic grounding from large-scale pretraining and perform competently across in-distribution manipulation tasks. This grounding, however, is built on static image-text pairs, whereas manipulation is a continuous, contact-rich process whose dynamics this pretraining cannot capture. We present World Pilot, a VLA framework that augments the policy with priors from a World-Action Model (WAM), routed into the decision chain through two complementary pathways. Latent Steering conditions the perception layer on a scene-evolution latent, and Action Steering supplies an anticipated trajectory as a motion prior to the action generator. Together the two priors equip the VLA with an anticipated view of the scene and a trajectory-level motion hint alongside its semantic conditioning, and the scene-evolution prior remains effective even when supplied by a video-pretrained world model that has not been action-post-trained. World Pilot attains a state-of-the-art Total success rate of 84.7% on the LIBERO-Plus zero-shot OOD benchmark and the highest success rate on every real-robot setting across four manipulation tasks, with the largest margins under shifts in viewpoint, geometry, deformable state, and pose. Project Website: https://world-pilot.github.io/
+
+视觉-语言-动作 (VLA) 模型继承了大规模预训练的语义基础，并且能够胜任分布内操作任务。然而，这种基础是建立在静态图像-文本对的基础上的，而操纵是一个连续的、接触丰富的过程，其动态是预训练无法捕获的。我们提出了 World Pilot，这是一个 VLA 框架，它利用世界行动模型 (WAM) 的先验知识来增强政策，并通过两条互补的路径进入决策链。潜在转向将感知层置于场景演化潜在状态上，而动作转向则在动作生成器之前提供预期轨迹作为运动。这两个先验一起为 VLA 配备了场景的预期视图和轨迹级运动提示以及语义调节，并且即使由未经动作后训练的视频预训练世界模型提供，场景进化先验仍然有效。 World Pilot 在 LIBERO-Plus 零样本 OOD 基准上获得了最先进的 84.7% 的总成功率，并且在四个操纵任务的每个真实机器人设置中获得了最高的成功率，在视点、几何形状、可变形状态和姿势的变化下具有最大的成功率。项目网站：https://world-pilot.github.io/
+
+</details>
+
+---
+
+## 2. Making Foresight Actionable: Repurposing Representation Alignment in World Action Models / 使远见可行：重新调整世界行动模型中的表征一致性
+
+**Date**: 2026-06-10 | **arXiv**: [2606.12217v1](http://arxiv.org/abs/2606.12217v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.12217v1)
+
+**Categories**: cs.CV, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) offer a promising route for robot manipulation by using video generation models to model future scene evolution before producing control actions. However, our empirical observations reveal a phenomenon: generating plausible visual futures does not always guarantee the extraction of accurate actions. To diagnose this failure, we conduct action-head attention analysis and causal interventions. We find that the action decoder fails to focus on task-relevant interaction regions and remains sensitive to perturbations in task-irrelevant areas. This reveals a representation mismatch: hidden states optimized for visual reconstruction are not inherently organized in a form useful for low-level action control. In this paper, we propose AGRA, an Action-Grounded Representation Alignment objective that regularizes the world-action interface by aligning intermediate video diffusion features with spatially coherent semantic representations from a foundation visual encoder. We evaluate AGRA on real-world manipulation tasks. Experiments show that AGRA makes world model representations more action-grounded: by focusing the action decoder on the correct interaction regions, it improves object localization accuracy and affordance understanding, and makes the policy more robust to perturbations in task-irrelevant regions. As a result, AGRA consistently improves both in-distribution performance and out-of-distribution generalization over the baseline world action model.
+
+世界动作模型（WAM）通过使用视频生成模型在产生控制动作之前对未来场景演化进行建模，为机器人操纵提供了一条有前途的途径。然而，我们的经验观察揭示了一个现象：生成合理的视觉未来并不总是保证提取准确的动作。为了诊断这种失败，我们进行了行动头注意力分析和因果干预。我们发现动作解码器无法关注与任务相关的交互区域，并且对与任务无关的区域的扰动仍然敏感。这揭示了表示不匹配：针对视觉重建优化的隐藏状态本质上并不是以对低级动作控制有用的形式组织的。在本文中，我们提出了 AGRA，一种基于动作的表示对齐目标，它通过将中间视频扩散特征与来自基础视觉编码器的空间连贯语义表示对齐来规范世界动作界面。我们在现实世界的操作任务上评估 AGRA。实验表明，AGRA 使世界模型表示更加以动作为基础：通过将动作解码器集中在正确的交互区域，它提高了对象定位的准确性和可供性理解，并使策略对任务无关区域的扰动更加鲁棒。因此，AGRA 相对于基线世界行动模型不断提高分布内性能和分布外泛化能力。
+
+</details>
+
+---
+
+## 3. Machine-learning clustering of close-in exoplanet populations: links to pebble accretion / 近距离系外行星种群的机器学习聚类：与卵石吸积的联系
+
+**Date**: 2026-06-10 | **arXiv**: [2606.11737v1](http://arxiv.org/abs/2606.11737v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.11737v1)
+
+**Categories**: astro-ph.EP, astro-ph.IM, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Close-in exoplanets exhibit a wide range of orbital architectures and physical properties shaped by both formation conditions and migration processes. Although population-synthesis models predict distinct planetary populations, establishing a quantitative connection between observed exoplanets and synthetic populations remains challenging. We investigate the intrinsic organisation of close-in exoplanets using physically motivated dynamical parameters and connect the resulting populations to pebble-accretion formation pathways. A two-stage Gaussian mixture model (GMM) is applied to an observed sample of close-in exoplanets, performing unsupervised probabilistic clustering in a feature space dominated by dynamical descriptors of planet-star interactions. The resulting clusters are mapped onto a pebble-accretion synthetic population within a statistically motivated three-dimensional parameter space. Formation-related quantities, including gas availability, gas fraction, and ice-rock mass ratio, are then used to interpret the mapped populations. We identify statistically supported sub-populations without imposing predefined classification boundaries, including very-massive gas giants, hot giants, warm-Jupiter-dominated systems, and lower-mass giants. The mapped synthetic populations reveal systematic differences in formation timing, gas accretion, and solid growth histories. In particular, very-massive gas giants are preferentially associated with earlier formation epochs than hot-giant and warm-Jupiter-dominated populations. These results demonstrate that physically motivated machine-learning approaches can provide a statistically robust framework for linking observed exoplanet populations to theoretical planet formation pathways.
+
+近距离系外行星表现出多种由形成条件和迁移过程决定的轨道结构和物理特性。尽管种群综合模型预测了不同的行星种群，但在观测到的系外行星和合成种群之间建立定量联系仍然具有挑战性。我们使用物理驱动的动力学参数研究近距离系外行星的内在组织，并将所得的种群与卵石吸积形成路径联系起来。将两阶段高斯混合模型 (GMM) 应用于观察到的近距离系外行星样本，在以行星-恒星相互作用的动态描述符为主的特征空间中执行无监督概率聚类。所得簇被映射到统计驱动的三维参数空间内的卵石吸积合成群体上。然后使用与地层相关的量，包括天然气可用性、气体分数和冰岩质量比来解释绘制的总体。我们在不施加预定义分类边界的情况下确定了统计支持的子群，包括超大质量气态巨星、热巨星、热木星主导的系统和低质量巨星。绘制的合成种群揭示了形成时间、气体吸积和固体生长历史方面的系统差异。特别是，与热巨星和暖木星主导的星群相比，超大质量气态巨星优先与更早的形成时代相关。这些结果表明，物理驱动的机器学习方法可以提供一个统计上稳健的框架，将观测到的系外行星种群与理论行星形成路径联系起来。
+
+</details>
+
+---
+
+## 4. Building Social World Models with Large Language Models / 使用大型语言模型构建社交世界模型
+
+**Date**: 2026-06-09 | **arXiv**: [2606.11482v1](http://arxiv.org/abs/2606.11482v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.11482v1)
+
+**Categories**: cs.SI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Understanding and predicting how social beliefs evolve in response to events -- from policy changes to scientific breakthroughs -- remains a fundamental challenge in social science. Given LLMs' commonsense knowledge and social intelligence, we ask: Can LLMs model the dynamics of social beliefs following social events? In this work, we introduce the concept of the Social World Model (SWM), a general framework designed to capture how social beliefs evolve in response to major events. SWM learns state-transition functions for social beliefs by mining temporal patterns in social data and optimizing the evidence lower bound, without the need for explicit human annotations linking events to belief shifts, or for expensive census data. To evaluate SWM, we introduce a benchmark, SWM-bench, derived from real-world prediction markets, specifically Kalshi and Polymarket. SWM-bench includes over 12k data points for social belief prediction tasks spanning diverse domains such as politics, finance, and cryptocurrency. Our experimental results show that SWM significantly outperforms time-series foundation models, achieving state-of-the-art results on Kalshi data and demonstrating competitive performance on Polymarket data, while offering interpretable insights into the underlying mechanisms of social belief dynamics.
+
+理解和预测社会信仰如何响应事件而演变——从政策变化到科学突破——仍然是社会科学的一个基本挑战。鉴于法学硕士的常识知识和社交智力，我们问：法学硕士能否模拟社会事件后社会信仰的动态？在这项工作中，我们介绍了社会世界模型（SWM）的概念，这是一个通用框架，旨在捕获社会信仰如何响应重大事件而演变。 SWM 通过挖掘社会数据中的时间模式并优化证据下限来学习社会信仰的状态转换函数，而不需要将事件与信仰转变联系起来的明确的人工注释，也不需要昂贵的人口普查数据。为了评估 SWM，我们引入了一个基准 SWM-bench，它源自现实世界的预测市场，特别是 Kalshi 和 Polymarket。 SWM-bench 包含超过 12k 个数据点，用于跨越政治、金融和加密货币等不同领域的社会信仰预测任务。我们的实验结果表明，SWM 显着优于时间序列基础模型，在 Kalshi 数据上取得了最先进的结果，并在 Polymarket 数据上展示了竞争性能，同时提供了对社会信仰动态的潜在机制的可解释的见解。
+
+</details>
+
+---
+
+## 5. Signed Compression Progress on a Sealed Audit is Goodhart-Resistant / 密封审计上签名的压缩进度具有古德哈特抗性
+
+**Date**: 2026-06-09 | **arXiv**: [2606.11417v1](http://arxiv.org/abs/2606.11417v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.11417v1)
+
+**Categories**: cs.LG, cs.AI, stat.ML
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Compression progress is a long-standing proposal for intrinsic motivation: reward an agent when its world model becomes better at predicting or compressing experience. The folk claim is that this reward is "credible" because it is paid only for learning. We make this precise and prove it. If intrinsic reward is the signed decrease of a fixed sealed-audit loss, r_t = E(theta_{t-1}) - E(theta_t), then cumulative reward telescopes exactly to endpoint audit improvement, so no policy can push reward up indefinitely while true audit performance stagnates or degrades. For finite audit panels the same result holds with a sharp false-positive budget: cumulative empirical reward is at most true audit improvement plus 2 Delta_n(F, delta), the uniform audit deviation of the model class. This is horizon-free: adaptivity over time costs nothing once the sealed panel uniformly controls the class.   The theorem also identifies the failure modes: the guarantee disappears if progress is clipped, scored on the agent's own stream, exposed to a high-capacity model on a reusable panel, or applied to a neural class that makes Delta_n vacuous. We give a Lean 4 mechanization of the structural core (telescoping, the finite-audit bound, finite Gibbs, and the entropy floor) and an experiment suite on ARC-TGI grid-transformation generators with adaptive holdout attacks. Experiments confirm the theory: finite-audit deviation scales as n^{-0.527}; signed progress resists clip-farming, stream leakage, and noisy-TV curiosity; naive reusable audits are exploitable by black-box scalar feedback, while standard release defenses keep the attack below the 2 Delta_n threshold. Signed compression progress on a sealed audit is an accounting signal of genuine improvement.
+
+压缩进度是一个关于内在动机的长期提议：当代理的世界模型在预测或压缩经验方面变得更好时，奖励代理。民间声称这种奖励是“可信的”，因为它只是为了学习而支付的。我们使这一点变得精确并证明了这一点。如果内在奖励是固定密封审计损失的有符号减少，r_t = E(theta_{t-1}) - E(theta_t)，那么累积奖励会精确地缩小到端点审计改进，因此没有任何策略可以无限期地推高奖励，而真正的审计绩效会停滞或下降。对于有限的审计小组，同样的结果适用于严重的假阳性预算：累积经验奖励至多是真实的审计改进加上 2 Delta_n(F, delta)，即模型类的统一审计偏差。这是无视野的：一旦密封面板统一控制类别，随着时间的推移，适应性就不需要任何成本。   该定理还确定了失败模式：如果进度被剪裁、在代理自己的流上评分、暴露于可重用面板上的高容量模型或应用于使 Delta_n 为空的神经类，则保证消失。我们给出了结构核心的精益 4 机械化（伸缩、有限审计界限、有限吉布斯和熵底）以及带有自适应抵抗攻击的 ARC-TGI 网格转换生成器的实验套件。实验证实了该理论：有限审计偏差尺度为 n^{-0.527}；已签名的进度可以抵抗剪辑耕作、流泄漏和嘈杂的电视好奇心；幼稚的可重用审计可通过黑盒标量反馈来利用，而标准发布防御将攻击保持在 2 Delta_n 阈值以下。在密封审计中签署的压缩进度是真正改进的会计信号。
+
+</details>
+
+---
+
+## 6. PLUME: Probabilistic Latent Unified World Modeling and Parameter Estimation for Multi-Finger Manipulation / PLUME：多手指操作的概率潜在统一世界建模和参数估计
+
+**Date**: 2026-06-09 | **arXiv**: [2606.11396v1](http://arxiv.org/abs/2606.11396v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.11396v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Dexterous manipulation with multi-finger hands can be sensitive to physical parameters such as object shape, pose, and friction coefficients. While simulation enables large-scale data collection with known parameter values, simulation-trained policies must still handle uncertainty at deployment, where the true parameters and therefore the true dynamics are unknown. Standard domain randomization strategies may be insufficient for precise tasks like screwdriver turning, as manipulation strategies may need to change depending on specific parameter values. To address this, we propose Probabilistic Latent Unified world Modeling and parameter Estimation (PLUME), a world model that jointly learns to evolve a belief over parameter values as well as the system dynamics conditioned on those parameters. We learn a latent space to jointly represent multiple qualitatively different physical parameters along with rewards, themselves functions of partially-observable variables, to inform planning. Our novel learning framework leads to efficient alignment of the world model to true dynamics through online parameter inference as opposed to re-training or fine-tuning. We evaluate our method on simulated screwdriver turning, valve turning, bucket lifting, and disk flicking tasks, as well as a hardware screwdriver turning task, where we achieve successful zero-shot transfer of our simulation-trained policy and outperform state-of-the-art offline reinforcement learning and world-model-augmented behavior cloning baselines. Please see our website at https://plume-world-model.github.io for videos.
+
+多指手的灵巧操作可能对物体形状、姿势和摩擦系数等物理参数敏感。虽然仿真可以使用已知参数值进行大规模数据收集，但经过仿真训练的策略仍必须处理部署时的不确定性，其中真实参数和真实动态都是未知的。标准域随机化策略可能不足以完成螺丝刀转动等精确任务，因为操作策略可能需要根据特定参数值进行更改。为了解决这个问题，我们提出了概率潜在统一世界建模和参数估计（PLUME），这是一种世界模型，可以共同学习进化对参数值的信念以及以这些参数为条件的系统动力学。我们学习一个潜在空间来共同表示多个性质不同的物理参数以及奖励，它们本身是部分可观察变量的函数，以便为规划提供信息。我们新颖的学习框架通过在线参数推断（而不是重新训练或微调）实现世界模型与真实动态的有效对齐。我们在模拟螺丝刀转动、阀门转动、铲斗提升和磁盘弹动任务以及硬件螺丝刀转动任务上评估我们的方法，其中我们成功实现了模拟训练策略的零样本迁移，并超越了最先进的离线强化学习和世界模型增强行为克隆基线。请访问我们的网站 https://plume-world-model.github.io 查看视频。
+
+</details>
+
+---
+
+## 7. Efficient-WAM: A 1B-Parameter World-Action Model with Low-Cost Future Imagination / Efficient-WAM：具有低成本未来想象力的 1B 参数世界行动模型
+
+**Date**: 2026-06-08 | **arXiv**: [2606.10040v2](http://arxiv.org/abs/2606.10040v2) | **PDF**: [Link](http://arxiv.org/pdf/2606.10040v2)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World-Action Models (WAMs) have emerged as a promising paradigm for embodied control by coupling future visual prediction with action generation. However, most existing WAMs rely on photorealistic future prediction, which incurs high inference latency and makes real-time robot deployment difficult. This motivates a more efficient WAM design that preserves the control benefits of future visual prediction while reducing its inference cost. We introduce Efficient-WAM, a World-Action Model that reduces the cost of future imagination while preserving its control benefit. Efficient-WAM improves inference efficiency via a compact video expert transferred from WAN-2.2-5B, token-sparse video latents, and asymmetric video-action denoising that allocates fewer sampling steps to video than to actions. Instead of optimizing the future branch for visual fidelity, Efficient-WAM treats future video prediction as a compact guidance signal for action generation. Comprehensive experiments on RoboTwin 2.0 and real-world manipulation tasks show that Efficient-WAM maintains strong action performance despite visibly coarse future predictions. While maintaining competitive control capabilities, our 1B-parameter model can reduce per-chunk latency to around 100 ms during physical deployment, achieving a 30x speedup over existing WAMs.
+
+通过将未来视觉预测与动作生成相结合，世界动作模型（WAM）已成为一种有前景的体现控制范式。然而，大多数现有的 WAM 依赖于逼真的未来预测，这会导致较高的推理延迟，并使实时机器人部署变得困难。这激发了更高效的 WAM 设计，保留未来视觉预测的控制优势，同时降低其推理成本。我们引入了 Efficient-WAM，这是一种世界行动模型，可以降低未来想象的成本，同时保留其控制优势。 Efficient-WAM 通过从 WAN-2.2-5B 传输的紧凑视频专家、令牌稀疏视频潜伏以及为视频分配比动作更少的采样步骤的非对称视频动作去噪来提高推理效率。 Efficient-WAM 不是为了视觉保真度而优化未来分支，而是将未来视频预测视为用于动作生成的紧凑指导信号。对 RoboTwin 2.0 和现实世界操作任务的综合实验表明，尽管未来预测明显粗糙，Efficient-WAM 仍保持强大的动作性能。在保持有竞争力的控制能力的同时，我们的 1B 参数模型可以在物理部署期间将每个块的延迟减少到 100 毫秒左右，实现比现有 WAM 提高 30 倍的速度。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-10 (12 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-06-10
