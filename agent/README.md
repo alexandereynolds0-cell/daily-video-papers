@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-13](papers/2026-06-13.md) - 1 papers
 - [2026-06-12](papers/2026-06-12.md) - 46 papers
 - [2026-06-11](papers/2026-06-11.md) - 37 papers
 - [2026-06-10](papers/2026-06-10.md) - 39 papers
@@ -101,6 +102,34 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-13 (1 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-06-13
+
+**Paper Count**: 1
+
+---
+
+## 1. SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning / SpatialClaw：重新思考代理空间推理的动作界面
+
+**Date**: 2026-06-11 | **arXiv**: [2606.13673v1](http://arxiv.org/abs/2606.13673v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.13673v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Spatial reasoning, the ability to determine where objects are, how they relate, and how they move in 3D, remains a fundamental challenge for vision-language models (VLMs). Tool-augmented agents attempt to address this by augmenting VLMs with specialist perception modules, yet their effectiveness is bounded by the action interface through which those tools are invoked. In this work, we study how the design of this interface shapes the agent's capacity for open-ended spatial reasoning. Existing spatial agents either employ single-pass code execution, which commits to a full analysis strategy before any intermediate result is observed, or rely on a structured tool-call interface that often offers less flexibility for freely composing operations or tailoring the analysis to each task. Both designs offer limited flexibility for open-ended, complex 3D/4D spatial reasoning. We therefore propose SpatialClaw, a training-free framework for spatial reasoning that adopts code as the action interface. SpatialClaw maintains a stateful Python kernel pre-loaded with input frames and a suite of perception and geometry primitives, letting a VLM-backed agent write one executable cell per step conditioned on all prior outputs, enabling the agent to flexibly compose and manipulate perception results and adapt its analysis to both intermediate text and visual observations and the demands of each problem. Evaluated across 20 spatial reasoning benchmarks spanning a broad range of static and dynamic 3D/4D spatial reasoning tasks, SpatialClaw achieves 59.9% average accuracy, outperforming the recent spatial agent by +11.2 points, with consistent gains across six VLM backbones from two model families without any benchmark- or model-specific adaptation.
+
+空间推理、确定对象的位置、它们之间的关系以及它们如何在 3D 中移动的能力，仍然是视觉语言模型 (VLM) 的基本挑战。工具增强代理试图通过用专业感知模块增强 VLM 来解决这个问题，但它们的有效性受到调用这些工具的操作界面的限制。在这项工作中，我们研究了该界面的设计如何塑造代理的开放式空间推理能力。现有的空间代理要么采用单遍代码执行，在观察任何中间结果之前致力于完整的分析策略，要么依赖结构化的工具调用接口，该接口通常为自由组合操作或针对每个任务定制分析提供较低的灵活性。这两种设计都为开放式、复杂的 3D/4D 空间推理提供了有限的灵活性。因此，我们提出了 SpatialClaw，一种无需训练的空间推理框架，采用代码作为动作接口。 SpatialClaw 维护一个预加载输入帧以及一套感知和几何基元的有状态 Python 内核，让 VLM 支持的代理根据所有先前的输出每一步编写一个可执行单元，使代理能够灵活地组合和操作感知结果，并使其分析适应中间文本和视觉观察以及每个问题的需求。通过涵盖广泛的静态和动态 3D/4D 空间推理任务的 20 个空间推理基准进行评估，SpatialClaw 实现了 59.9% 的平均准确度，比最新的空间代理高出 11.2 个点，并且在两个模型系列的 6 个 VLM 主干上获得了一致的增益，无需任何基准或模型特定的调整。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-12 (46 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-06-12
