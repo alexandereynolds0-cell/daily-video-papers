@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-17](papers/2026-06-17.md) - 6 papers
 - [2026-06-16](papers/2026-06-16.md) - 13 papers
 - [2026-06-15](papers/2026-06-15.md) - 2 papers
 - [2026-06-13](papers/2026-06-13.md) - 1 papers
@@ -98,6 +99,114 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-17 (6 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-06-17
+
+**Paper Count**: 6
+
+---
+
+## 1. Looped World Models / 循环世界模型
+
+**Date**: 2026-06-16 | **arXiv**: [2606.18208v1](http://arxiv.org/abs/2606.18208v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.18208v1)
+
+**Categories**: cs.LG, cs.AI, cs.CL, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current world models face a fundamental tension: faithful long-horizon simulation demands deep computation, but deeper models are expensive to deploy and prone to compounding errors. We resolve this by introducing Looped World Models (LoopWM), which are the first looped architectures for world modelling. Our method iteratively refines latent environment states through a parameter-shared transformer block. This yield up to 100x parameter efficiency over conventional approaches with adaptive computation that automatically scales depth to match the complexity of each prediction step. Orthogonal to scaling model size and training data, LoopWM establishes iterative latent depth as a new scaling axis for world simulation, which might significantly push the community forward.
+
+当前的世界模型面临着根本性的紧张：忠实的长期模拟需要深度计算，但更深的模型部署成本高昂，并且容易出现复合错误。我们通过引入循环世界模型（LoopWM）来解决这个问题，这是第一个用于世界建模的循环架构。我们的方法通过参数共享变压器块迭代地细化潜在环境状态。与采用自适应计算的传统方法相比，参数效率高达 100 倍，自适应计算可自动缩放深度以匹配每个预测步骤的复杂性。与缩放模型大小和训练数据正交，LoopWM 将迭代潜在深度建立为世界模拟的新缩放轴，这可能会显着推动社区向前发展。
+
+</details>
+
+---
+
+## 2. Beyond Failure Recovery: An Engagement-Aware Human-in-the-loop Framework for Robotic Systems / 超越故障恢复：机器人系统的参与感知人机循环框架
+
+**Date**: 2026-06-16 | **arXiv**: [2606.18189v1](http://arxiv.org/abs/2606.18189v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.18189v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Conventional human-in-the-loop approaches typically involve users only when a robot encounters failure or uncertainty, treating humans primarily as tools for improving robot performance. However, in many human-centered robotics settings, interaction should support engagement by keeping users involved in decision-making rather than limiting them to failure-driven interventions. This is particularly compelling in physical caregiving, where mobility limitations can reduce users' ability to intervene or modulate the robot's behavior in the moment. As a result, failure-driven interaction policies may relegate users to passive observers for long stretches of the task. For example, a user with mobility limitations may feel less engaged when being continuously and passively fed by a robot. At the same time, overly frequent interaction can be tiring and increase the user's workload.   To address this trade-off, we propose Engagement-aware MPC (E-MPC), a user-engagement-aware method that plans interaction to maintain engagement while respecting a workload constraint. E-MPC leverages a user interaction dynamics model that captures how user engagement evolves as a function of both the frequency and type of interaction. Rather than requesting input only when difficulties arise during task execution, the robot proactively considers the user's preferred level of engagement throughout the task, balancing autonomy and interaction while ensuring task success. We evaluate E-MPC in simulation with several ablations and baseline comparisons. Results demonstrate the effectiveness of our approach across diverse user personas. In addition, we conduct a real-world user study with participants with emulated mobility limitations on a robot-assisted bite acquisition system, showing that E-MPC improves user experience while maintaining task success.
+
+传统的人机交互方法通常仅在机器人遇到故障或不确定性时才让用户参与，主要将人类视为提高机器人性能的工具。然而，在许多以人为中心的机器人环境中，交互应该通过让用户参与决策来支持参与，而不是限制他们进行失败驱动的干预。这在身体护理中尤其引人注目，其中移动性限制可能会降低用户当下干预或调节机器人行为的能力。因此，故障驱动的交互策略可能会使用户在长时间的任务中沦为被动观察者。例如，行动不便的用户在被机器人持续被动地喂食时可能会感觉不太投入。同时，过于频繁的交互也会让人感到疲劳，增加用户的工作负担。   为了解决这种权衡问题，我们提出了参与度感知 MPC (E-MPC)，这是一种用户参与度感知方法，可规划交互以保持参与度，同时尊重工作负载约束。 E-MPC 利用用户交互动态模型，捕捉用户参与度如何随着交互频率和类型的变化而变化。机器人不是仅在任务执行过程中出现困难时才请求输入，而是主动考虑用户在整个任务过程中的首选参与程度，在确保任务成功的同时平衡自主性和交互性。我们通过多次消融和基线比较来评估模拟中的 E-MPC。结果证明了我们的方法在不同用户角色中的有效性。此外，我们还对机器人辅助咬合采集系统上模拟移动受限的参与者进行了真实世界的用户研究，结果表明 E-MPC 在保持任务成功的同时改善了用户体验。
+
+</details>
+
+---
+
+## 3. PearlVLA: Progressive Embodied Action-Plan Refinement in Latent Space / PearlVLA：潜在空间中渐进的具体行动计划细化
+
+**Date**: 2026-06-16 | **arXiv**: [2606.17924v1](http://arxiv.org/abs/2606.17924v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.17924v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current Vision-Language-Action (VLA) models face a trade-off between efficient action generation and explicit deliberation. Directly decoding actions from vision-language backbone representations enables low-latency control, whereas explicit reasoning through textual chains, pixel-level subgoals, or action search can improve planning but incurs substantial latency and computational cost. We propose PearlVLA, a VLA framework that moves deliberation into the latent space of a vision-language model (VLM). PearlVLA separates VLM meta-query representations into a fixed visual grounding branch and an iterative latent plan branch. At each refinement round, a plan-conditioned world query probes a lightweight frozen latent world model for an action-free future observation latent, which is fed back to guide plan refinement. A future-guided RefineNet then applies scheduled residual updates to progressively refine a coarse semantic draft into a fine-grained latent action plan. The refined plan after K rounds is then decoded in parallel into an action chunk for low-latency execution. We further introduce Causal Refinement-Grouped Process-Reward RL to optimize the latent refinement process with rewards from longer-horizon imagined futures induced by latent plan edits. Empirical evaluations on the LIBERO benchmark demonstrate that PearlVLA achieves state-of-the-art performance among existing methods.
+
+当前的视觉-语言-行动（VLA）模型面临着高效行动生成和明确审议之间的权衡。直接从视觉语言骨干表示中解码动作可以实现低延迟控制，而通过文本链、像素级子目标或动作搜索进行显式推理可以改进规划，但会产生大量延迟和计算成本。我们提出了 PearlVLA，这是一个 VLA 框架，可将审议转移到视觉语言模型 (VLM) 的潜在空间。 PearlVLA 将 VLM 元查询表示分离为固定视觉基础分支和迭代潜在计划分支。在每一轮细化中，计划条件的世界查询都会探测轻量级的冻结潜在世界模型，以实现无动作的未来观察潜伏，并将其反馈以指导计划细化。然后，面向未来的 RefineNet 应用预定的残差更新，逐步将粗略的语义草案细化为细粒度的潜在行动计划。 K 轮后的细化计划随后被并行解码为动作块，以实现低延迟执行。我们进一步引入因果细化-分组过程-奖励强化学习，通过潜在计划编辑引起的长期想象未来的奖励来优化潜在细化过程。对 LIBERO 基准的实证评估表明，PearlVLA 在现有方法中实现了最先进的性能。
+
+</details>
+
+---
+
+## 4. WAM-RL: World-Action Model Reinforcement Learning with Reconstruction Rewards and Online Video SFT / WAM-RL：具有重建奖励和在线视频 SFT 的世界行动模型强化学习
+
+**Date**: 2026-06-16 | **arXiv**: [2606.17906v1](http://arxiv.org/abs/2606.17906v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.17906v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent World-Action (WA) models demonstrate strong generalization ability and data efficiency, but they typically rely on expert trajectories for training. This reliance limits their ability to acquire fine-grained manipulation skills beyond the demonstration distribution and prevents them from continuously improving through real-world interaction. To address these limitations, we propose WAM-RL, a reinforcement learning framework that enables joint optimization of the world model and the action model through online interaction with the environment. By allowing the two components to co-evolve, our approach enhances fine-grained control and adaptability. Specifically, a WA model consists of a world model and an actor. We design a tailored reinforcement learning method with hierarchical optimization to coordinate their improvement. On the methodological side, we systematically investigate the effects of applying reinforcement learning to the action model, as well as online training of the world model within an RL setting. Our experiments reveal a key insight: optimizing only the actor yields improvements on short-horizon tasks, but fails to provide significant gains on long-horizon tasks. In contrast, jointly optimizing both the world model and the actor is critical for achieving strong performance in long-horizon settings. Our work is the first to introduce reinforcement learning into the World-Action paradigm, and provides insights into how online optimization of both the action head and the world model impacts overall performance.
+
+最近的世界行动（WA）模型表现出强大的泛化能力和数据效率，但它们通常依赖于专家轨迹进行训练。这种依赖限制了他们获得演示分布之外的细粒度操作技能的能力，并阻止他们通过现实世界的交互不断改进。为了解决这些限制，我们提出了 WAM-RL，这是一种强化学习框架，可以通过与环境的在线交互来联合优化世界模型和动作模型。通过允许两个组件共同进化，我们的方法增强了细粒度的控制和适应性。具体来说，WA模型由世界模型和演员组成。我们设计了一种具有分层优化的定制强化学习方法来协调它们的改进。在方法论方面，我们系统地研究了将强化学习应用于动作模型的效果，以及在强化学习环境中对世界模型进行在线训练的效果。我们的实验揭示了一个关键的见解：仅优化参与者可以在短期任务上带来改进，但无法在长期任务上提供显着的收益。相比之下，联合优化世界模型和演员对于在长期环境中实现出色的性能至关重要。我们的工作是第一个将强化学习引入世界动作范式的工作，并提供了关于动作头和世界模型的在线优化如何影响整体性能的见解。
+
+</details>
+
+---
+
+## 5. OmniDrive: An LLM-Choreographed Multi-Agent World Model with Unified Latent Co-Compression for Multi-View Driving Video Generation / OmniDrive：法学硕士精心设计的多智能体世界模型，具有用于多视图驾驶视频生成的统一潜在协同压缩
+
+**Date**: 2026-06-16 | **arXiv**: [2606.17536v1](http://arxiv.org/abs/2606.17536v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.17536v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative world models for autonomous driving face two unresolved tensions: heterogeneous control injection, where free-form language, HD-maps, trajectories, and camera poses reside in incompatible representational spaces, and post-hoc cross-view fusion, where per-camera latents fail to encode global 3-D geometry. We trace both to a single root cause: the absence of a shared symbolic interlingua aligning language, geometry, and pixels at the latent-token level. We present DRIVE-CHOREO, an LLM-choreographed multi-agent world model that recasts controllable multi-view video generation as latent choreography. Three Qwen2.5-VL agents - a Director parsing user intent into a structured WorldScript, a Cartographer grounding it into spatially-anchored layout tokens, and an Auditor feeding cross-view critiques back as auxiliary supervision - jointly author a single position-aware token sequence. This sequence is co-compressed with the multi-view video via a view-time permutation that enforces inter-camera geometry within the convolutional receptive field of a 3-D VAE. On nuScenes, DRIVE-CHOREO sets new state-of-the-art multi-view consistency and BEV mAP (21.6) with competitive FVD (45.7); a detector trained purely on our synthetic data gains +2.4 NDS on the real validation split, validating downstream utility.
+
+自动驾驶的生成世界模型面临两个未解决的紧张局势：异构控制注入，其中自由形式语言、高清地图、轨迹和相机姿势驻留在不兼容的表示空间中，以及事后交叉视图融合，其中每个相机的潜在特征无法编码全局 3D 几何。我们将两者追溯到一个根本原因：缺乏在潜在标记级别上对齐语言、几何和像素的共享符号国际语。我们提出了 DRIVE-CHOREO，这是一个法学硕士编排的多智能体世界模型，它将可控多视图视频生成重新定义为潜在的编排。三个 Qwen2.5-VL 代理（一个将用户意图解析为结构化 WorldScript 的总监，一个将其转化为空间锚定布局标记的制图师，以及一个反馈跨视图批评作为辅助监督的审计员）共同创作了一个位置感知标记序列。该序列通过视图时间排列与多视图视频共同压缩，该排列在 3-D VAE 的卷积感受野内强制实施摄像机间几何结构。在 nuScenes 上，DRIVE-CHOREO 设定了新的最先进的多视图一致性和 BEV mAP (21.6) 以及具有竞争力的 FVD (45.7)；纯粹根据我们的合成数据训练的检测器在真实验证分割上获得+2.4 NDS，验证下游效用。
+
+</details>
+
+---
+
+## 6. NarrativeWorldBench: A Frontier-Saturated Benchmark and a Latent World Model for Long-Horizon Co-Creative Audio Drama / NarrativeWorldBench：长视域共创音频剧的前沿饱和基准和潜在世界模型
+
+**Date**: 2026-06-16 | **arXiv**: [2606.17391v1](http://arxiv.org/abs/2606.17391v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.17391v1)
+
+**Categories**: cs.CL, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-form serialized audio drama, with arcs that run for 200 to 800 episodes, is a major creative medium and a setting where frontier large language models (LLMs) fail. We benchmark 21 models, spanning classical, fine-tuned, open-frontier, closed-frontier, and reasoning tiers, on a uniform set of structural narrative metrics. All closed-frontier systems saturate at a plot-beat F1 in the band [0.78, 0.81] and collapse by about -0.20 F1 at horizon h=200. We introduce NarrativeWorldBench, an open benchmark of nine narrative-structure metrics evaluated across horizons h in {10, 20, 50, 100, 200}, with cross-lingual evaluation across four Indic languages (Hindi, Tamil, Telugu, Marathi). We introduce N-VSSM, a Narrative Variational State-Space Model that maintains a structured 256-dimensional latent world state over more than 200 episodes via a Mamba-2 backbone with an event-conditioned posterior and an 8B decoder. N-VSSM holds plot-beat F1 >= 0.84 across all horizons at 4x lower compute than the closed-frontier band. A learned Cultural Transfer Function lifts cross-language fidelity by +0.20 to +0.23 Likert points. In a within-subjects writer study (n = 12 professional authors, 240 trials), N-VSSM is preferred over Claude Opus 4.5 on long-arc consistency 71% of the time and rated +1.3 Likert points higher on controllability.
+
+长篇连载音频剧的剧情长达 200 至 800 集，是一种主要的创意媒介，也是前沿大语言模型 (LLM) 失败的环境。我们在一组统一的结构性叙事指标上对 21 个模型进行了基准测试，涵盖经典、微调、开放前沿、封闭前沿和推理层。所有封闭边界系统在带 [0.78, 0.81] 中的情节节拍 F1 处饱和，并在地平线 h=200 时崩溃约 -0.20 F1。我们引入了 NarrativeWorldBench，这是一个开放基准，包含在 {10, 20, 50, 100, 200} 范围内评估的九个叙事结构指标，并对四种印度语言（印地语、泰米尔语、泰卢固语、马拉地语）进行跨语言评估。我们引入了 N-VSSM，一种叙事变分状态空间模型，它通过具有事件条件后验和 8B 解码器的 Mamba-2 主干在 200 多个情节中维持结构化的 256 维潜在世界状态。 N-VSSM 在所有范围内保持绘图节拍 F1 >= 0.84，计算量比封闭边界带低 4 倍。学习的文化传递函数将跨语言保真度提升了 +0.20 到 +0.23 Likert 点。在一项受试者内部作者研究（n = 12 名专业作者，240 次试验）中，N-VSSM 在 71% 的情况下在长弧一致性方面优于 Claude Opus 4.5，并且在可控性方面评分高出 +1.3 Likert 分。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-16 (13 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-06-16
