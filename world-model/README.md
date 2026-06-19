@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-19](papers/2026-06-19.md) - 8 papers
 - [2026-06-18](papers/2026-06-18.md) - 10 papers
 - [2026-06-17](papers/2026-06-17.md) - 6 papers
 - [2026-06-16](papers/2026-06-16.md) - 13 papers
@@ -100,6 +101,146 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-19 (8 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-06-19
+
+**Paper Count**: 8
+
+---
+
+## 1. Sensorimotor World Models: Perception for Action via Inverse Dynamics / 感觉运动世界模型：通过逆动力学感知行动
+
+**Date**: 2026-06-18 | **arXiv**: [2606.20104v1](http://arxiv.org/abs/2606.20104v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.20104v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Perception for action suggests that representations of the world should be shaped not by visual fidelity alone, but by their relevance for actions. At the same time, latent JEPA-style world models advocate learning compact predictive states from high-dimensional observations to facilitate the prediction of future states, but end-to-end training of these models is nontrivial because representations may collapse if our only goal is to construct a latent state that is easy to predict. We introduce a sensorimotor world model (SMWM): a latent world model trained end-to-end with inverse dynamics regularization. This single regularizer addresses both issues: it prevents representation collapse and induces action-aligned representations. By forcing latent states to preserve information about the action underlying a transition, it biases the model toward the controllable degrees of freedom of the environment while discarding uncontrollable distractors. This yields stable latent world models trained from offline, reward-free trajectories, without frozen encoders, exponential moving averages, or complex latent regularizers. Empirically, SMWM learns compact, interpretable latent spaces and enables competitive planning performance across simple 2D and 3D control tasks.
+
+对行动的感知表明，对世界的表征不应仅由视觉保真度来塑造，而应由其与行动的相关性来塑造。与此同时，潜在的 JEPA 式世界模型主张从高维观察中学习紧凑的预测状态，以促进对未来状态的预测，但这些模型的端到端训练并非易事，因为如果我们的唯一目标是构建易于预测的潜在状态，表示可能会崩溃。我们引入了感觉运动世界模型（SMWM）：通过逆动态正则化进行端到端训练的潜在世界模型。这个单一的正则化器解决了这两个问题：它防止表示崩溃并引起动作对齐的表示。通过强制潜在状态保留有关转换背后的动作的信息，它使模型偏向于环境的可控自由度，同时丢弃不可控的干扰因素。这会产生从离线、无奖励轨迹训练的稳定的潜在世界模型，无需冻结编码器、指数移动平均值或复杂的潜在正则化器。根据经验，SMWM 学习紧凑、可解释的潜在空间，并在简单的 2D 和 3D 控制任务中实现有竞争力的规划性能。
+
+</details>
+
+---
+
+## 2. Reward as An Agent for Embodied World Models / 作为具体世界模型代理的奖励
+
+**Date**: 2026-06-18 | **arXiv**: [2606.19990v1](http://arxiv.org/abs/2606.19990v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.19990v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While RL has become a promising tool for refining world models, existing methods largely rely on conservative rollouts near the training distribution, limiting exploration, behavioral diversity, and richer dynamic discovery. In this work, we challenge this conservative paradigm. We argue that the core limitation is not exploration itself, but the lack of reliable verification strategies to support broader exploration. Without reliable verification, expanded exploration becomes highly susceptible to reward hacking, where policies exploit imperfect rewards without achieving genuine improvement. To evaluate this motivation, we instantiate our method in embodied world models, where physical plausibility, and task completion provide a rigorous testbed for scalable RL under complex dynamics. On the verification side, we introduce Reward as an Agent, an agentic reward framework that actively evaluates generated behaviors to provide robust reward signals and mitigate reward hacking under distribution shifts. On the exploration side, we introduce Dynamic-Aware Rollout Diversification through DynDiff-GRPO, which explicitly expands action-space exploration to diversify trajectories, broaden state-action coverage, and encourage richer embodied behaviors beyond conservative rollout regimes. By unifying Reward as an Agent with DynDiff-GRPO, we enable RL on a more reliable reward foundation with substantially diversified sampling, effectively mitigating reward hacking while yielding significant accuracy gains across multiple open-source world models, thereby demonstrating that broader exploration can scale successfully when grounded in robust verification.
+
+虽然强化学习已成为完善世界模型的有前途的工具，但现有方法很大程度上依赖于训练分布附近的保守推出，限制了探索、行为多样性和更丰富的动态发现。在这项工作中，我们挑战了这种保守的范式。我们认为，核心限制不是探索本身，而是缺乏可靠的验证策略来支持更广泛的探索。如果没有可靠的验证，扩大的探索很容易受到奖励黑客攻击，其中政策利用不完美的奖励而没有实现真正的改进。为了评估这种动机，我们在具体世界模型中实例化了我们的方法，其中物理合理性和任务完成为复杂动态下的可扩展强化学习提供了严格的测试平台。在验证方面，我们引入了 Reward as an Agent，这是一种代理奖励框架，可主动评估生成的行为，以提供强大的奖励信号并减轻分配变化下的奖励黑客行为。在探索方面，我们通过 DynDiff-GRPO 引入动态感知推出多样化，它明确扩展了行动空间探索，以实现轨迹多样化、扩大状态行动覆盖范围，并鼓励超越保守的推出制度的更丰富的具体行为。通过将奖励作为代理与 DynDiff-GRPO 相结合，我们使 RL 能够建立在更可靠的奖励基础上，并具有大幅多样化的采样，有效地减少奖励黑客攻击，同时在多个开源世界模型中产生显着的准确性增益，从而证明在基于稳健验证的情况下，更广泛的探索可以成功扩展。
+
+</details>
+
+---
+
+## 3. SWAP: Symmetric Equivariant World-Model for Agile Robot Parkour / SWAP：敏捷机器人跑酷的对称等变世界模型
+
+**Date**: 2026-06-18 | **arXiv**: [2606.19928v1](http://arxiv.org/abs/2606.19928v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.19928v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While latent world models enable the proactive predictions required for extreme parkour, their purely data-driven nature forces them to redundantly encode left-right symmetric interactions as independent patterns. This inflates the learning burden and hinders the capture of geometric regularities, restricting the latent space's efficiency for downstream policies. To address this, we propose SWAP, an end-to-end equivariant symmetric world model. This framework embeds symmetry directly into both the world model and the actor-critic networks. In real-world tests, the robot leaps across a 2.13 m gap and climbs a 1.63 m platform, breaking records for quadruped parkour. Furthermore, the framework exhibits robust geometric generalization to unseen mirrored terrains and exceptional zero-shot transferability across diverse outdoor environments. These results demonstrate that symmetry equivariance is an effective structural prior for pushing the physical boundaries of learned legged locomotion.
+
+虽然潜在世界模型能够实现极限跑酷所需的主动预测，但其纯粹的数据驱动性质迫使它们将左右对称交互冗余编码为独立模式。这增加了学习负担，阻碍了几何规律的捕捉，限制了下游政策潜在空间的效率。为了解决这个问题，我们提出了 SWAP，一种端到端等变对称世界模型。该框架将对称性直接嵌入到世界模型和演员评论家网络中。在实际测试中，机器人跨越2.13 m的间隙并爬上1.63 m的平台，打破了四足跑酷的记录。此外，该框架对看不见的镜像地形表现出强大的几何泛化能力，并在不同的室外环境中具有出色的零镜头可转移性。这些结果表明，对称等变性是推动学习腿部运动物理极限的有效结构先验。
+
+</details>
+
+---
+
+## 4. TerraMARS: A Domain-Adapted Small-Language-Model Pipeline for Mars Terraforming Literature / TerraMARS：火星地形改造文献的领域适应小语言模型管道
+
+**Date**: 2026-06-18 | **arXiv**: [2606.19700v1](http://arxiv.org/abs/2606.19700v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.19700v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Researchers are interested in learning about Mars so that it may eventually become habitable for humans. To achieve this, there is a need for comprehensive knowledge of the planet's atmosphere, hydrology, surface chemistry, radiation environment, and spatial features through the scientific literature. These contain valuable information and meaningful quantitative constraints that can be used in other models and studies, such as habitability assessment and future terraforming studies. We present TerraMARS, an end-to-end information extraction pipeline that combines a domain-adapted Small Language Model to answer Mars terraforming-related questions and convert unstructured Mars science text into machine-readable structured outputs in JavaScript Object Notation (JSON) format. A corpus of open-access papers is collected and processed using a multistage retrieval and chunking framework. Google Gemma 3 1B was adapted to the domain using Quantized Low-Rank Adaptation (QLoRA) fine-tuning on Mars-specific question-answering and information extraction datasets. The resulting pipeline generates both types of output and provides a foundation for integrating knowledge from scientific literature into downstream applications like digital twins and habitability modeling for Mars. The output from this pipeline looks promising, but further improvements are needed to increase extraction accuracy and factual consistency.
+
+研究人员有兴趣了解火星，以便它最终可能适合人类居住。为了实现这一目标，需要通过科学文献全面了解地球的大气、水文学、表面化学、辐射环境和空间特征。这些包含有价值的信息和有意义的定量约束，可用于其他模型和研究，例如宜居性评估和未来的地形改造研究。我们推出了 TerraMARS，这是一种端到端信息提取管道，它结合了适应领域的小语言模型来回答与火星地形改造相关的问题，并将非结构化火星科学文本转换为 JavaScript 对象表示法 (JSON) 格式的机器可读结构化输出。使用多级检索和分块框架收集和处理开放获取论文的语料库。 Google Gemma 3 1B 使用量化低阶适应 (QLoRA) 对火星特定问答和信息提取数据集进行微调来适应该领域。由此产生的管道会生成两种类型的输出，并为将科学文献中的知识整合到数字孪生和火星宜居性建模等下游应用中提供基础。该管道的输出看起来很有希望，但需要进一步改进以提高提取准确性和事实一致性。
+
+</details>
+
+---
+
+## 5. ImageWAM: Do World Action Models Really Need Video Generation, or Just Image Editing? / ImageWAM：世界动作模型真的需要视频生成，还是只需要图像编辑？
+
+**Date**: 2026-06-17 | **arXiv**: [2606.19531v1](http://arxiv.org/abs/2606.19531v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.19531v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) commonly rely on video generation to bridge visual world modeling and robot control. However, video-based WAMs face three coupled limitations: dense multi-frame future tokens make inference costly, full video prediction spends capacity on action-irrelevant temporal and appearance details, and long-horizon future imagination may introduce errors that mislead action prediction. These issues raise a simple question: Does world action model really need video generation? We propose ImageWAM, a simple WAM framework that repurposes pretrained image editing models for robot action prediction. In contrast to video generation, image editing provides a better-matched prior: it only needs to model a target-frame transformation, focuses on action-relevant current-to-target visual differences, and grounds task instructions to localized visual changes through edit pretraining. In practice, ImageWAM does not decode the target frame at inference time; instead, it conditions a flow-matching action expert on the KV caches produced by image-editing denoising, using them as a compact world-action context. ImageWAM outperforms standard VLA baselines and matching competitive WAMs without additional policy pretraining across different simulator and real-world experiments. It also reduces FLOPs to 1/6 and latency to 1/4 of video-based WAMs. Attention analysis further shows that editing caches focus on task-relevant change regions, supporting image editing as an effective alternative to video-based world-action modeling.
+
+世界动作模型 (WAM) 通常依靠视频生成来连接视觉世界建模和机器人控制。然而，基于视频的 WAM 面临三个耦合限制：密集的多帧未来令牌使推理成本高昂，完整的视频预测将容量花费在与动作无关的时间和外观细节上，以及长期的未来想象可能会引入误导动作预测的错误。这些问题提出了一个简单的问题：世界行动模型真的需要视频生成吗？我们提出了 ImageWAM，这是一个简单的 WAM 框架，它将预训练的图像编辑模型重新用于机器人动作预测。与视频生成相比，图像编辑提供了更好的匹配先验：它只需要对目标帧转换进行建模，专注于与动作相关的当前到目标的视觉差异，并通过编辑预训练将任务指令基于局部视觉变化。实际上，ImageWAM 在推理时不会解码目标帧；相反，它在图像编辑去噪生成的 KV 缓存上为流匹配动作专家提供条件，将它们用作紧凑的世界动作上下文。 ImageWAM 的性能优于标准 VLA 基线，并且可以与竞争性 WAM 相匹配，无需在不同的模拟器和现实世界实验中进行额外的策略预训练。与基于视频的 WAM 相比，它还将 FLOP 降低至 1/6，延迟降低至 1/4。注意力分析进一步表明，编辑缓存专注于与任务相关的变化区域，支持图像编辑作为基于视频的世界动作建模的有效替代方案。
+
+</details>
+
+---
+
+## 6. Can In-Context Learning Support Intrinsic Curiosity? / 情境学习能否支持内在的好奇心？
+
+**Date**: 2026-06-17 | **arXiv**: [2606.19476v1](http://arxiv.org/abs/2606.19476v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.19476v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Effective machine learning depends not only on how we model data, but also on what data we choose to collect. While large sequence models have revolutionized data modeling, the problem of automated data selection, or "intrinsic curiosity", remains a significant challenge. Classic approaches incentivize exploration by rewarding an agent based on its "learning progress", which measures how much a newly acquired observation improves a world model's predictive ability. However, evaluating these rewards traditionally requires expensive inner loops of gradient descent updates within each trajectory, rendering them computationally impractical at scale. In this work, we investigate whether the emergent in-context learning (ICL) capabilities of sequence models can eliminate this bottleneck by serving as immediate, update-free world models. Specifically, we evaluate whether an exploration policy can be trained to maximize learning progress, using solely the prediction errors and counterfactual context manipulations of an in-context learner. We first prove that in general Markov decision processes, this is in fact impossible in an unbiased way: the resulting intrinsic rewards either suffer from nuisance terms that bias their estimation of true learning progress, or they cannot be implemented using an in-context learner's prediction errors. Conversely, we prove a positive result for a broad subclass of non-temporal settings, encompassing active learning and Bayesian Experimental Design: here, ICL-derived rewards successfully bound and asymptotically converge to the true learning progress. We corroborate our theory with controlled experiments across continuous and symbolic environments, demonstrating that our ICL-driven framework successfully trains curious data-collection policies that explore optimally.
+
+有效的机器学习不仅取决于我们如何建模数据，还取决于我们选择收集哪些数据。虽然大型序列模型彻底改变了数据建模，但自动数据选择或“内在好奇心”的问题仍然是一个重大挑战。经典方法通过根据智能体的“学习进度”奖励其来激励探索，“学习进度”衡量新获得的观察对世界模型预测能力的提高程度。然而，传统上评估这些奖励需要在每个轨迹内进行昂贵的梯度下降更新内循环，这使得它们在大规模计算上不切实际。在这项工作中，我们研究了序列模型的新兴上下文学习（ICL）功能是否可以通过充当即时、免更新的世界模型来消除这一瓶颈。具体来说，我们评估是否可以仅使用上下文学习者的预测误差和反事实上下文操作来训练探索策略以最大化学习进度。我们首先证明，在一般的马尔可夫决策过程中，这实际上以一种公正的方式是不可能的：由此产生的内在奖励要么受到干扰项的影响，这些项会影响他们对真实学习进度的估计，要么无法使用上下文学习者的预测错误来实现。相反，我们证明了非时间设置的广泛子类的积极结果，包括主动学习和贝叶斯实验设计：在这里，ICL 派生的奖励成功绑定并渐近收敛于真实的学习进度。我们通过连续和符号环境中的受控实验证实了我们的理论，证明我们的 ICL 驱动框架成功地训练了可优化探索的好奇数据收集策略。
+
+</details>
+
+---
+
+## 7. FlexLAM: Resolving the Bottleneck Trade-off in Latent Action Learning / FlexLAM：解决潜在行动学习中的瓶颈权衡
+
+**Date**: 2026-06-17 | **arXiv**: [2606.19408v1](http://arxiv.org/abs/2606.19408v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.19408v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent actions provide a compact interface between action-free video and downstream decision-making, yet existing Latent Action Models (LAMs) force every transition through a fixed-capacity bottleneck. We identify a bottleneck trade-off: overly tight codes can discard transition cues needed for action alignment, while overly loose codes preserve additional transition variation that must be resolved when alignment labels are scarce or narrowly distributed. FlexLAM replaces this fixed capacity with variable-length latent actions trained by nested dropout, yielding prefix-valid codes that capture compact transition structure first and add detail only when needed, without new architectures or losses. A single FlexLAM matches or surpasses separately trained fixed-capacity LAMs at every evaluated token budget under standard scarce-label supervision and under a low-return single-task alignment stress test, indicating that FlexLAM is not merely adjustable at inference time but learns a better latent-action interface at the same token budgets. The same model supports inference-time token-budget adjustment without retraining, and FlexLAM improves Ego4D transition reconstruction. These results suggest that variable-length latent actions are an architecture-free, drop-in upgrade to the fixed-capacity bottleneck in latent action models, latent-action world models, and video-pretrained action interfaces.
+
+潜在动作在无动作视频和下游决策之间提供了一个紧凑的接口，但现有的潜在动作模型 (LAM) 迫使每次转换都通过固定容量瓶颈。我们确定了一个瓶颈权衡：过于严格的代码可能会丢弃动作对齐所需的转换线索，而过于宽松的代码则保留额外的转换变化，当对齐标签稀缺或分布狭窄时，必须解决这些变化。 FlexLAM 将这种固定容量替换为由嵌套 dropout 训练的可变长度潜在动作，生成前缀有效的代码，首先捕获紧凑的转换结构，仅在需要时添加细节，而不会产生新的架构或损失。在标准稀缺标签监督和低回报单任务对齐压力测试下，单个 FlexLAM 在每个评估的代币预算上都匹配或超过单独训练的固定容量 LAM，这表明 FlexLAM 不仅可以在推理时进行调整，而且可以在相同的代币预算下学习更好的潜在操作接口。同一模型支持推理时间令牌预算调整而无需重新训练，并且 FlexLAM 改进了 Ego4D 转换重建。这些结果表明，可变长度潜在动作是对潜在动作模型、潜在动作世界模型和视频预训练动作接口中固定容量瓶颈的无架构、直接升级。
+
+</details>
+
+---
+
+## 8. Mem-World: Memory-Augmented Action-Conditioned World Models for Persistent Robot Manipulation / Mem-World：用于持久机器人操作的记忆增强动作条件世界模型
+
+**Date**: 2026-06-17 | **arXiv**: [2606.18960v2](http://arxiv.org/abs/2606.18960v2) | **PDF**: [Link](http://arxiv.org/pdf/2606.18960v2)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Action-conditioned world models have emerged as a promising paradigm for robot learning, offering a scalable alternative to costly real-world experimentation by generating action-consistent video rollouts. However, persistent world modeling remains challenging in manipulation: frequent end-effector occlusions and rapid wrist-camera motion make the current observation insufficient for predicting future views, causing models to forget or hallucinate scene details seen in earlier frames. Existing memory retrieval strategies often fail to identify informative history in dynamic manipulation scenarios. To address this limitation, we propose Mem-World, a memory-augmented multi-view action-conditioned world model. At its core, we present W-VMem, a 4D wrist-view-centered surfel-indexed memory that anchors historical observations to temporally evolving surface elements. By explicitly modeling when and where scene elements are observed, W-VMem enables geometry-aware retrieval of relevant history frames conditioned on future actions. During generation, relevant history frames are selected via surfel-based rendering and scoring, providing informative and non-redundant context for prediction. Extensive experiments show that Mem-World generates persistent rollouts in complex manipulation scenarios, enables more reliable policy evaluation than Ctrl-World, improving the Pearson correlation with real-world performance by 14.5\%, and supports effective policy improvement through synthetic data generation, increasing success rates from 58\% to 72\% on long-horizon tasks.
+
+动作条件世界模型已经成为机器人学习的一个有前途的范例，通过生成动作一致的视频展示，为昂贵的现实世界实验提供了一种可扩展的替代方案。然而，持久世界建模在操作方面仍然具有挑战性：频繁的末端执行器遮挡和快速的手腕相机运动使得当前的观察不足以预测未来的视图，导致模型忘记或产生在早期帧中看到的场景细节。现有的记忆检索策略通常无法识别动态操作场景中的信息历史。为了解决这个限制，我们提出了 Mem-World，一种记忆增强的多视图动作条件世界模型。其核心是，我们提出了 W-VMem，一种以 4D 手腕视图为中心的面元索引存储器，它将历史观察结果锚定到随时间变化的表面元素。通过显式建模观察场景元素的时间和地点，W-VMem 能够以几何感知方式检索以未来动作为条件的相关历史帧。在生成过程中，通过基于面元的渲染和评分选择相关历史帧，为预测提供信息丰富且非冗余的上下文。大量实验表明，Mem-World 在复杂的操作场景中生成持久的推出，实现比 Ctrl-World 更可靠的策略评估，将 Pearson 与现实世界性能的相关性提高 14.5%，并通过合成数据生成支持有效的策略改进，将长期任务的成功率从 58% 提高到 72%。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-18 (10 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-06-18
