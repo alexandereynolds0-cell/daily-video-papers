@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-23](papers/2026-06-23.md) - 11 papers
 - [2026-06-19](papers/2026-06-19.md) - 18 papers
 - [2026-06-18](papers/2026-06-18.md) - 10 papers
 - [2026-06-17](papers/2026-06-17.md) - 18 papers
@@ -102,6 +103,196 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-23 (11 papers)</b></summary>
+
+# arXiv Video Papers - 2026-06-23
+
+**Paper Count**: 11
+
+---
+
+## 1. Training-Free Semantic Correction for Autoregressive Visual Models / 自回归视觉模型的免训练语义校正
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22550v1](http://arxiv.org/abs/2606.22550v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22550v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive visual models (AVMs) based on next-scale prediction have emerged as a prominent paradigm for image and video synthesis. However, decomposing the generation process into discrete scales with varying granularities in AVM makes semantic errors difficult to identify and correct, thereby undermining the quality of the final output. Prior efforts to enhance AVM can be categorized into training-based and training-free approaches. Although training-based efforts to enhance AVM generation quality come at substantial computational cost, existing training-free methods neglect intermediate generation states, leaving semantic errors undiagnosed and allowing them to accumulate into the final output. In this paper, we focus on training-free paradigms and propose Gazer, a framework that integrates multimodal large language model feedback into the AVM sampling loop for in-generation semantic correction. Concretely, Gazer operates via two cooperating stages: the Reflective Diagnosis stage diagnoses semantic errors from intermediate states, while the Semantic Correction stage rewinds and rectifies the generation trajectory to realign with the target prompt. Experiments on compositional image and video benchmarks demonstrate that Gazer improves semantic alignment and compositional accuracy across multiple AVMs without additional training.
+
+基于下一代预测的自回归视觉模型（AVM）已成为图像和视频合成的重要范例。然而，在 AVM 中将生成过程分解为具有不同粒度的离散尺度使得语义错误难以识别和纠正，从而损害了最终输出的质量。先前增强 AVM 的努力可以分为基于训练的方法和无训练的方法。尽管基于训练来提高 AVM 生成质量的努力需要大量的计算成本，但现有的免训练方法忽略了中间生成状态，导致语义错误无法诊断并允许它们累积到最终输出中。在本文中，我们专注于免训练范式，并提出了 Gazer，这是一个将多模态大语言模型反馈集成到 AVM 采样循环中以进行代内语义校正的框架。具体来说，Gazer 通过两个协作阶段进行操作：反思诊断阶段从中间状态诊断语义错误，而语义纠正阶段则倒回并纠正生成轨迹以与目标提示重新对齐。组合图像和视频基准测试表明，Gazer 无需额外训练即可提高跨多个 AVM 的语义对齐和组合准确性。
+
+</details>
+
+---
+
+## 2. Gen2Balance: Generative Balancing for Long-Tailed Video Action Recognition / Gen2Balance：长尾视频动作识别的生成平衡
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22416v1](http://arxiv.org/abs/2606.22416v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22416v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We address the problem of training on long-tailed data for video action recognition. We propose to augment the training set using a text-to-video generative model, conditioned on diverse text prompts grounded in action profiles and training exemplars. Our approach, called Gen2Balance, converts an imbalanced training set into a balanced combination of real and generated video clips. To effectively learn from such data, we employ a two-stage training strategy that mitigates domain shift and yields significant improvements. We evaluate on long-tailed versions of standard benchmarks: UCF-101 (UCF-LT) and a 100-class subset of Kinetics (K100-LT) selected to prioritise temporally challenging actions. Gen2Balance improves accuracy over the strongest baselines for long-tailed learning by 5.1% and 7.0% on the respective datasets. On rare actions from the RareAct dataset (e.g., cut keyboard), Gen2Balance improves accuracy by 31.9%, demonstrating effectiveness for scarce actions. By varying the amount of synthetic data added, we show that partial balancing already achieves 79% of the performance gains at 27% of the compute cost on K100-LT, highlighting the practical scalability of Gen2Balance.
+
+我们解决了视频动作识别的长尾数据训练问题。我们建议使用文本到视频生成模型来增强训练集，该模型以基于动作配置文件和训练示例的不同文本提示为条件。我们的方法称为 Gen2Balance，将不平衡的训练集转换为真实视频剪辑和生成视频剪辑的平衡组合。为了有效地从这些数据中学习，我们采用了两阶段训练策略，可以减轻领域转移并产生显着的改进。我们评估标准基准的长尾版本：UCF-101 (UCF-LT) 和动力学的 100 类子集 (K100-LT)，选择用于优先考虑暂时具有挑战性的操作。 Gen2Balance 在各自的数据集上将长尾学习的最强基线的准确性提高了 5.1% 和 7.0%。对于 RareAct 数据集中的稀有动作（例如，剪切键盘），Gen2Balance 将准确性提高了 31.9%，证明了稀有动作的有效性。通过改变添加的合成数据量，我们表明部分平衡已经在 K100-LT 上以 27% 的计算成本实现了 79% 的性能增益，凸显了 Gen2Balance 的实际可扩展性。
+
+</details>
+
+---
+
+## 3. ZeroGVC: Zero-Shot Generative Video Compression with Autoregressive Diffusion Priors / ZeroGVC：具有自回归扩散先验的零样本生成视频压缩
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22371v1](http://arxiv.org/abs/2606.22371v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22371v1)
+
+**Categories**: eess.IV, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent generative video compression methods leverage powerful generative priors to achieve perceptually pleasing reconstructions. However, most existing approaches require additional training to adapt generative models to produce realistic reconstructions from compact representations. In this paper, we propose ZeroGVC, a zero-shot generative video compression framework that leverages pretrained autoregressive diffusion priors for low-delay video reconstruction. ZeroGVC encodes the first frame of each group of pictures (GOP) with an image codec and represents subsequent P-frames through Codebook-Guided Autoregressive Latent Compression. This design is motivated by our observation that the compression scheme of denoising diffusion codebook models is effective in few-step consistency sampling. By selecting compact combinations of reproducible codebook noise vectors, ZeroGVC steers the latent denoising trajectory toward the target P-frame while allowing the decoder to reproduce the same trajectory in only a few denoising steps. In addition, we design an optional bidirectional reference mode that mitigates error propagation by leveraging the next I-frame context without introducing any additional bitrate overhead. Extensive experiments on standard video compression benchmarks demonstrate that ZeroGVC achieves superior perceptual reconstruction quality at ultra-low bitrates without any additional training.
+
+最近的生成视频压缩方法利用强大的生成先验来实现令人愉悦的重建。然而，大多数现有方法需要额外的训练来适应生成模型，以从紧凑的表示中产生真实的重建。在本文中，我们提出了 ZeroGVC，一种零样本生成视频压缩框架，利用预训练的自回归扩散先验进行低延迟视频重建。 ZeroGVC 使用图像编解码器对每组图片 (GOP) 的第一帧进行编码，并通过 Codebook 引导的自回归潜在压缩表示后续的 P 帧。这种设计的动机是我们观察到去噪扩散码本模型的压缩方案在少步一致性采样中是有效的。通过选择可再现码本噪声向量的紧凑组合，ZeroGVC 将潜在去噪轨迹引导至目标 P 帧，同时允许解码器仅在几个去噪步骤中再现相同的轨迹。此外，我们设计了一种可选的双向参考模式，通过利用下一个 I 帧上下文来减轻错误传播，而不会引入任何额外的比特率开销。标准视频压缩基准的大量实验表明，ZeroGVC 无需任何额外训练即可以超低比特率实现卓越的感知重建质量。
+
+</details>
+
+---
+
+## 4. Towards Error-Free Long Video Generation / 迈向无错误的长视频生成
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22370v1](http://arxiv.org/abs/2606.22370v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22370v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in video generation have made minute-level synthesis possible; however, generating long videos remains challenging due to error accumulation, attribute drift, and the limited availability of long video data. In this paper, we introduce an infinite-length video generation framework that focusing on addressing these issues and produces high-quality, dynamic, and identity-consistent single-shot long videos. We first finetune a diffusion model as a video extension model on large-scale short video data to autoregressively generate temporally coherent clips. Inspired by the success of large language models (LLMs), we adopt causal attention computation between clips to further finetune this model on long video data. In this way, the tokens in one clip (short video) are computed by bidirectional attention while tokens among clips are computed by unidirectional attention. This design leverages the strengths of modern diffusion models while preserving long-term context information, effectively mitigating error accumulation and attribute drift. To achieve memory efficiency during inference, we adopt a key-value (KV) caching mechanism to maintain a constant KV memory. Furthermore, we introduce truncation-rectified flow (T-RFlow) technique to further suppress error accumulation. Experimental results demonstrate the effectiveness of our method. Our framework establishes a new benchmark for realistic and coherent minute-level video synthesis.
+
+视频生成领域的最新进展使得分钟级合成成为可能；然而，由于错误累积、属性漂移和长视频数据的有限可用性，生成长视频仍然具有挑战性。在本文中，我们介绍了一种无限长视频生成框架，专注于解决这些问题并生成高质量、动态且身份一致的单镜头长视频。我们首先将扩散模型微调为大规模短视频数据上的视频扩展模型，以自回归生成时间相干的剪辑。受到大型语言模型（LLM）成功的启发，我们在剪辑之间采用因果注意计算，以进一步在长视频数据上微调该模型。这样，一个剪辑（短视频）中的 token 是通过双向注意力计算的，而剪辑之间的 token 是通过单向注意力计算的。这种设计利用了现代扩散模型的优势，同时保留了长期上下文信息，有效地减轻了错误累积和属性漂移。为了在推理过程中实现内存效率，我们采用键值（KV）缓存机制来维持恒定的KV内存。此外，我们引入截断校正流（T-RFlow）技术来进一步抑制误差累积。实验结果证明了我们方法的有效性。我们的框架为逼真且连贯的分钟级视频合成建立了新的基准。
+
+</details>
+
+---
+
+## 5. Reference-Free Assessment of Physical Consistency in World Model-based Video Generation / 基于世界模型的视频生成中物理一致性的无参考评估
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22363v1](http://arxiv.org/abs/2606.22363v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22363v1)
+
+**Categories**: cs.AI, cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce reference-free measures for evaluating the physical consistency of generated videos, combining relative and absolute approaches to assess fidelity. Although tools like WorldGym or WorldEval enable robotic simulation via video generation, physical fidelity gaps often prevent these environments from accurately reproducing real-world task success rates of VLA models. Unlike existing evaluation methods, which require costly human voting (Elo) or unavailable ground-truth references (FVD), our approach utilizes DROID-SLAM and SEA-RAFT to quantify physical inconsistencies, motivated by WorldScore. Videos filtered using our relative consistency assessment show an improvement in task success rates of over 8%, effectively narrowing the simulation-to-reality gap. Furthermore, our absolute assessment enables spatio-temporal localization, providing visualization of when and where physical artifacts occur.
+
+我们引入了无参考测量来评估生成视频的物理一致性，结合相对和绝对方法来评估保真度。尽管 WorldGym 或 WorldEval 等工具可以通过视频生成实现机器人模拟，但物理保真度差距通常会阻止这些环境准确再现 VLA 模型的真实任务成功率。现有的评估方法需要昂贵的人工投票 (Elo) 或无法获得的真实参考 (FVD)，与此不同，我们的方法在 WorldScore 的推动下，利用 DROID-SLAM 和 SEA-RAFT 来量化物理不一致性。使用我们的相对一致性评估过滤的视频显示任务成功率提高了 8% 以上，有效缩小了模拟与现实的差距。此外，我们的绝对评估可以实现时空定位，提供物理伪影发生时间和地点的可视化。
+
+</details>
+
+---
+
+## 6. Customizing Video Portraits via Identity-ActionDecoupling / 通过身份-动作解耦定制视频肖像
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22347v1](http://arxiv.org/abs/2606.22347v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22347v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Identity-Preserving Text-to-Video Generation (IPT2V) seeks to synthesize a temporally coherent video from a reference image and a textual description, while simultaneously preserving the subject's identity and allowing fine-grained control over facial dynamics. Although recent methods such as ID-Animator and ConsisID inject identity features only at inference time, they ignored the ID-irrelevant information contained in Facial embedding, leading to monotonous or inaccurate facial movements that poorly follow the prompt. We introduce Identity-Action Decoupling (IaD) framework as well as two loss function Identity Decoupling Loss and Text Alignment Loss to solve this problem. Without any subject-specific fine-tuning, IaD yields videos that (1) maintain cross-temporal identity consistency and (2) exhibit rich, controllable expressions and scene variations that closely match the input text.
+
+身份保留文本到视频生成 (IPT2V) 旨在从参考图像和文本描述合成时间连贯的视频，同时保留主体的身份并允许对面部动态进行细粒度控制。尽管ID-Animator和ConsisID等最近的方法仅在推理时注入身份特征，但它们忽略了面部嵌入中包含的与ID无关的信息，导致面部动作单调或不准确，无法遵循提示。我们引入 Identity-Action Decoupling (IaD) 框架以及两个损失函数 Identity Decoupling Loss 和 Text Alignment Loss 来解决这个问题。在没有任何针对特定主题的微调的情况下，IaD 生成的视频能够 (1) 保持跨时间的身份一致性；(2) 表现出丰富、可控的表情和场景变化，与输入文本紧密匹配。
+
+</details>
+
+---
+
+## 7. Towards Accurate and Robust Surveillance Roadside IVD via Trackletized Audio-Visual Reasoning / 通过 Trackletized 视听推理实现准确、稳健的路边 IVD 监控
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22299v1](http://arxiv.org/abs/2606.22299v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22299v1)
+
+**Categories**: cs.CV, eess.AS
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Idling Vehicle Detection (IVD) seeks to determine, at the final frame of a video clip, whether any vehicle is idling, meaning the vehicle is stationary with its engine running, using synchronized video from a remote surveillance camera and multichannel audio captured by spatially distributed wireless microphones along the roadside. Prior full-image, clip-level fusion approaches tend to overfit scene background and full-frame context, produce unstable temporal decisions, and lack an explicit spatial prior to align vehicles with microphones, which makes them brittle under domain shift and data inefficient. Instead, we introduce TAVR-IVD, an audio-visual framework guided by multi-object tracking. Our method detects vehicles, links detections into tracklets, and classifies each vehicle by operating on its tracklet. This design raises the effective signal-to-noise ratio, stabilizes temporal decisions through tracklets, enforces an explicit spatial prior to align vehicles with microphones, and adapts across domains with limited calibration annotations while remaining detector agnostic and efficient. To evaluate deployment robustness, we further curate two evaluation extensions, AVIVD-LT and AVIVD-M, covering inter-day and cross-site shifts.
+
+空转车辆检测 (IVD) 旨在使用远程监控摄像头的同步视频和路边空间分布的无线麦克风捕获的多通道音频，在视频剪辑的最后一帧确定是否有任何车辆空转，这意味着车辆在发动机运转时处于静止状态。先前的全图像、剪辑级融合方法往往会过度拟合场景背景和全帧上下文，产生不稳定的时间决策，并且在将车辆与麦克风对齐之前缺乏明确的空间，这使得它们在域转移和数据效率低下时变得脆弱。相反，我们引入了 TAVR-IVD，一种由多目标跟踪引导的视听框架。我们的方法检测车辆，将检测链接到轨迹中，并通过对其轨迹进行操作来对每辆车进行分类。这种设计提高了有效的信噪比，通过轨迹稳定时间决策，在将车辆与麦克风对齐之前强制执行明确的空间，并通过有限的校准注释跨域进行适应，同时保持检测器不可知和高效。为了评估部署的稳健性，我们进一步策划了两个评估扩展：AVIVD-LT 和 AVIVD-M，涵盖日间和跨站点的转变。
+
+</details>
+
+---
+
+## 8. Feed-forward Motion In-betweening for Any 4D / 适用于任何 4D 的前馈运动中间
+
+**Date**: 2026-06-20 | **arXiv**: [2606.22131v1](http://arxiv.org/abs/2606.22131v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22131v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+4D dynamics (3D geometry evolving over time) is a fundamental representation of the physical world and plays a crucial role in world modeling (e.g., animation and games). Owing to the scarcity of large-scale, long-horizon 4D mesh data with arbitrary shapes, early text-to-4D methods rely on distillation or test-time optimization from video diffusion priors, making inference prohibitively slow. Recent feed-forward generators greatly reduce inference cost but offer limited spatiotemporal controllability, and short-horizon generation often leads to error accumulation in long-horizon sequences. We propose a novel feed-forward in-betweening framework for arbitrary 4D meshes with keyframe conditioning. Building on universal mesh-animation latents, we introduce a frame-wise mesh VAE that encodes each frame into topology-agnostic latent tokens anchored by a reference mesh for keyframe conditioning. We further introduce a keyframe-conditioned rectified flow model with an MMDiT backbone that synthesizes non-keyframe frames conditioned on sparse keyframes. Experiments show strong performance and improved controllability on both DyMesh16 and DyMesh32 benchmarks.
+
+4D 动力学（随时间演变的 3D 几何）是物理世界的基本表示，在世界建模（例如动画和游戏）中发挥着至关重要的作用。由于缺乏具有任意形状的大规模、长视野 4D 网格数据，早期的文本到 4D 方法依赖于视频扩散先验的蒸馏或测试时间优化，使得推理速度极其缓慢。最近的前馈生成器极大地降低了推理成本，但提供了有限的时空可控性，并且短视野生成通常会导致长视野序列中的错误累积。我们提出了一种新颖的前馈中间框架，用于具有关键帧调节的任意 4D 网格。基于通用网格动画潜在特征，我们引入了逐帧网格 VAE，它将每个帧编码为拓扑不可知的潜在标记，由用于关键帧调节的参考网格锚定。我们进一步引入了一种具有 MMDiT 主干的关键帧条件修正流模型，该模型可合成以稀疏关键帧为条件的非关键帧帧。实验表明，DyMesh16 和 DyMesh32 基准测试均具有强大的性能和改进的可控性。
+
+</details>
+
+---
+
+## 9. Surgical Anatomy Recognition with Context Learning using Foundation Representations / 使用基础表示进行上下文学习的外科解剖识别
+
+**Date**: 2026-06-20 | **arXiv**: [2606.22124v1](http://arxiv.org/abs/2606.22124v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22124v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/TimJaspers0801/ATLAS.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Accurate recognition of anatomical structures is essential for safe and effective minimally invasive surgery (MIS), yet it remains underexplored in surgical computer vision due to limited annotated data and methods tailored primarily to natural scenes. In this work, we present a combined dataset and model framework to advance anatomy-aware perception in MIS. First, we introduce ATLAS-120k, a large-scale clip-level semantic segmentation dataset comprising over 120,000 annotated frames from 100 surgical videos spanning 14 procedures and multiple modalities, including laparoscopic and robot-assisted surgery. The dataset captures substantial procedural variability and was created using a scalable annotation pipeline that integrates expert manual labeling, automated propagation, iterative refinement, and surgeon verification to ensure high-quality annotations. Second, we propose ATLAS (Anatomy Recognition with Context Learning using Foundation Representations), a video semantic segmentation model specifically designed for surgical anatomy recognition. Unlike conventional approaches that emphasize object tracking, ATLAS leverages foundation-model embeddings together with lightweight temporal reasoning to incorporate contextual cues such as procedure type, surgical phase, and short-term visual memory. This design enables temporally consistent and accurate predictions while maintaining real-time feasibility. Together, the dataset and model establish a practical foundation for robust surgical scene understanding and support the development of clinically applicable guidance systems for minimally invasive surgery. The models, dataset annotations and annotation platform are publicly available at: https://github.com/TimJaspers0801/ATLAS.
+
+准确识别解剖结构对于安全有效的微创手术 (MIS) 至关重要，但由于主要针对自然场景定制的注释数据和方法有限，因此在外科计算机视觉中仍然没有得到充分探索。在这项工作中，我们提出了一个组合的数据集和模型框架，以推进 MIS 中的解剖感知感知。首先，我们介绍 ATLAS-120k，这是一个大规模剪辑级语义分割数据集，包含来自 100 个手术视频的 120,000 多个带注释的帧，涵盖 14 个程序和多种模式，包括腹腔镜手术和机器人辅助手术。该数据集捕获了大量的程序变异性，并使用可扩展的注释管道创建，该管道集成了专家手动标记、自动传播、迭代细化和外科医生验证，以确保高质量的注释。其次，我们提出了 ATLAS（使用基础表示进行上下文学习的解剖识别），这是一种专门为外科解剖识别设计的视频语义分割模型。与强调对象跟踪的传统方法不同，ATLAS 利用基础模型嵌入和轻量级时间推理来合并手术类型、手术阶段和短期视觉记忆等上下文线索。这种设计可以实现时间上一致且准确的预测，同时保持实时可行性。数据集和模型共同为强大的手术场景理解奠定了实践基础，并支持开发临床适用的微创手术引导系统。模型、数据集注释和注释平台可公开获取：https://github.com/TimJaspers0801/ATLAS。
+
+</details>
+
+---
+
+## 10. IDAG-Edit: Multi-Object Video Editing via Instance-Decoupled Attention and Guidance / IDAG-Edit：通过实例解耦注意力和指导进行多对象视频编辑
+
+**Date**: 2026-06-20 | **arXiv**: [2606.22042v1](http://arxiv.org/abs/2606.22042v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22042v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion-based video editing has made significant progress; however, achieving precise and temporally consistent object-level control, especially in multi-object scenarios, remains challenging due to attention leakage, identity drift, and unstable temporal dynamics. In this work, we propose IDAGEdit, a training-free framework for fine-grained multi-object video editing with strong temporal consistency. The framework adopts Layout-guided Attention Modulation to facilitate coherent multi-object editing, while Instance-level Masks are introduced to preserve individual object identity and enforce localized attention within each object region, thereby enabling fine-grained, object-level editing. Extensive qualitative and quantitative evaluations demonstrate that our method improves temporal stability and multi-object controllability over state-of-the-art video editing approaches.
+
+基于扩散的视频编辑取得了重大进展；然而，由于注意力泄漏、身份漂移和不稳定的时间动态，实现精确且时间一致的对象级控制，尤其是在多对象场景中，仍然具有挑战性。在这项工作中，我们提出了 IDAGEdit，这是一种无需训练的框架，用于具有强时间一致性的细粒度多对象视频编辑。该框架采用布局引导注意力调制来促进连贯的多对象编辑，同时引入实例级掩模来保留单个对象身份并在每个对象区域内强制执行局部注意力，从而实现细粒度的对象级编辑。广泛的定性和定量评估表明，我们的方法比最先进的视频编辑方法提高了时间稳定性和多对象可控性。
+
+</details>
+
+---
+
+## 11. CoDMD: Copula-aware Distribution Matching Distillation for Fast Video Generation / CoDMD：用于快速视频生成的 Copula 感知分布匹配蒸馏
+
+**Date**: 2026-06-20 | **arXiv**: [2606.21982v1](http://arxiv.org/abs/2606.21982v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.21982v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Few-step distillation for video diffusion models has attracted significant attention, driven by the urgent demand for efficient deployment in real-world scenarios. However, Distribution Matching Distillation (DMD), a leading paradigm, tends to degrade under limited NFE budgets, manifesting in video generation as layout instability, oversaturation, and broken motion dynamics. We trace this failure to a structural limitation: standard DMD is an intra-sample distribution-matching objective with coordinate-wise gradients, and thus imposes no explicit constraint on the relational geometry across batch elements or temporal frames, leaving the underlying copula largely unregulated. Combined with the mode-seeking tendency of its reverse-KL objective, this absence of relational guidance makes DMD prone to collapsing into local optima in the few-step regime. Motivated by this insight, we propose Copula-aware DMD (CoDMD), a lightweight relational regularizer that reuses score estimates already produced by the frozen teacher and the online fake model to construct pairwise relation matrices across samples and frames. These are matched through a supplementary distributional objective that requires no additional networks, datasets, or sampling trajectories. On the Wan-2.1-T2V model series at 1.3B & 14B scales, CoDMD distills 50-step teachers into 4-step students, achieving an approximate 25$\times$ speed-up while attaining VBench scores of 84.46 & 84.87, outperforming prior trajectory-based (rCM 82.81 & 84.05) and distribution-based (DMD 83.38 & 83.81) methods.
+
+由于现实场景中高效部署的迫切需求，视频扩散模型的少步蒸馏引起了广泛关注。然而，分布匹配蒸馏 (DMD) 作为一种领先范例，在有限的 NFE 预算下往往会退化，在视频生成中表现为布局不稳定、过饱和和运动动力学损坏。我们将这一失败归因于结构限制：标准 DMD 是具有坐标梯度的样本内分布匹配目标，因此对跨批元素或时间帧的关系几何没有明确的约束，从而使底层的 copula 在很大程度上不受监管。结合其反向 KL 目标的模式寻求倾向，缺乏关系指导使得 DMD 很容易在少步机制中陷入局部最优。受这一见解的启发，我们提出了 Copula-aware DMD (CoDMD)，这是一种轻量级关系正则化器，它重用由冻结教师和在线假模型已经生成的分数估计来构建跨样本和帧的成对关系矩阵。这些通过补充分布目标进行匹配，不需要额外的网络、数据集或采样轨迹。在 1.3B 和 14B 尺度的 Wan-2.1-T2V 模型系列上，CoDMD 将 50 步教师提炼为 4 步学生，实现了大约 25$\times$ 加速，同时获得 84.46 和 84.87 的 VBench 分数，优于先前基于轨迹的（rCM 82.81 和 84.05）和基于分布的（DMD） 83.38 和 83.81) 方法。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-19 (18 papers)</b></summary>
 
 # arXiv Video Papers - 2026-06-19
