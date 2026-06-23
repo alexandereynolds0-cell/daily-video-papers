@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-23](papers/2026-06-23.md) - 8 papers
 - [2026-06-19](papers/2026-06-19.md) - 8 papers
 - [2026-06-18](papers/2026-06-18.md) - 10 papers
 - [2026-06-17](papers/2026-06-17.md) - 6 papers
@@ -101,6 +102,146 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-23 (8 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-06-23
+
+**Paper Count**: 8
+
+---
+
+## 1. Imagine to Ensure Safety in Hierarchical Reinforcement Learning / 想象一下确保分层强化学习的安全性
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22509v1](http://arxiv.org/abs/2606.22509v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22509v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This work investigates the safe exploration problem in reinforcement learning, where an agent must maximize cumulative performance while simultaneously satisfying safety constraints. This challenge becomes even more pronounced in long-horizon tasks, where existing safe methods face fundamental limitations due to compounding estimation errors and restricted exploration capabilities. To address this problem, we propose a method that combines a learnable world model with two complementary policies a high-level policy and a low-level policy to promote safety at both hierarchical levels. The high-level policy generates intermediate subgoals that bias exploration toward safe regions, while the low-level policy uses imagined rollouts in the learned world model to reduce unsafe behaviors when reaching these subgoals. The proposed method was evaluated on challenging long-horizon navigation and manipulation tasks with high-dimensional action spaces, where it significantly outperforms existing Safe RL baselines in both success rate and strong empirical constraint satisfaction, consistently meeting the prescribed safety budget across seeds, while prior approaches fail to effectively solve these complex long-horizon scenarios.
+
+这项工作研究了强化学习中的安全探索问题，其中代理必须最大化累积性能，同时满足安全约束。这一挑战在长期任务中变得更加明显，其中现有的安全方法由于复合估计误差和有限的探索能力而面临根本限制。为了解决这个问题，我们提出了一种方法，将可学习的世界模型与两种补充政策（高级政策和低级政策）相结合，以促进两个层次的安全。高层策略生成中间子目标，使探索偏向安全区域，而低层策略则使用学习世界模型中的想象推出来减少达到这些子目标时的不安全行为。所提出的方法在具有高维动作空间的具有挑战性的长视野导航和操纵任务上进行了评估，它在成功率和强经验约束满意度方面都显着优于现有的安全强化学习基线，始终满足种子之间规定的安全预算，而先前的方法无法有效解决这些复杂的长视野场景。
+
+</details>
+
+---
+
+## 2. Self-Evolving Cognitive Framework via Causal World Modeling for Embodied Scientific Intelligence / 通过因果世界建模实现科学智能的自我进化认知框架
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22449v1](http://arxiv.org/abs/2606.22449v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22449v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current embodied world models are primarily optimized for predictive objectives, limiting their ability to generalize under distribution shifts and reason systematically about unseen situations and hypothetical interventions. We argue that embodied intelligence should move beyond predictive world modeling toward self-evolving cognitive systems that continually construct and refine internal causal representations through interaction with the environment. To this end, we propose a self-evolving cognitive framework via causal world modeling for embodied scientific intelligence, which integrates three complementary components: causal world modeling, intervention-driven causal reasoning, and continual cognitive refinement. The proposed framework continuously revises and expands its internal causal world model through causal discovery, intervention-driven feedback, and counterfactual reasoning, supporting continual cognitive refinement and enabling cognition itself to evolve over time. Furthermore, we reinterpret embodied interaction not merely as a means of trajectory optimization, but as an epistemic process for causal hypothesis generation, intervention-driven experimentation, and continual knowledge acquisition. This work provides a conceptual and theoretical foundation for a transition from predictive intelligence toward epistemic intelligence, in which intelligence emerges through the continual construction, revision, and refinement of causal world models via interaction with the environment. Accordingly, an intervention-driven causal-epistemic benchmarking paradigm is suggested for evaluating self-evolving embodied scientific intelligence.
+
+当前的具体世界模型主要针对预测目标进行了优化，限制了它们在分布变化下进行概括的能力以及对未见情况和假设干预进行系统推理的能力。我们认为，具身智能应该超越预测世界模型，转向自我进化的认知系统，通过与环境的交互不断构建和完善内部因果表征。为此，我们通过因果世界建模提出了一个自我进化的认知框架，以体现科学智能，该框架集成了三个互补的组成部分：因果世界建模、干预驱动的因果推理和持续的认知细化。所提出的框架通过因果发现、干预驱动的反馈和反事实推理不断修改和扩展其内部因果世界模型，支持持续的认知细化并使认知本身随着时间的推移而发展。此外，我们将体现交互重新解释为不仅是轨迹优化的一种手段，而且是因果假设生成、干预驱动的实验和持续知识获取的认知过程。这项工作为从预测智能向认知智能的转变提供了概念和理论基础，其中智能是通过与环境的交互不断构建、修订和完善因果世界模型而出现的。因此，建议采用干预驱动的因果认知基准范式来评估自我进化的具体科学智能。
+
+</details>
+
+---
+
+## 3. Words as Difference Makers: How Large Language Models Determine Causal Structure in Text / 单词作为差异制造者：大型语言模型如何确定文本中的因果结构
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22430v1](http://arxiv.org/abs/2606.22430v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22430v1)
+
+**Categories**: cs.CL, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Because large language models (LLMs) are impressively successful in predicting text, it appears that they must have access to a 'world model' representing causal and definitional structure. However, the dominant formalisms of modern causal inference -- Judea Pearl's interventionist approach and the Neyman-Rubin potential outcomes framework -- struggle to illuminate how LLMs learn causal structure. I resolve this puzzle by arguing that LLMs employ a specific inductive approach based on a difference-making logic -- sometimes called variational induction. I demonstrate how central aspects of this logic are realized during training, where LLMs require enormous amounts of text data from a wide range of contexts to identify difference- and indifference-makers within word sequences. Furthermore, I analyze specific architectural features of LLMs -- such as token embeddings and self-attention -- to determine their roles in variational induction. The difference-making logic of LLMs fundamentally parallels the experimental method, where causal relations are derived by systematically varying individual circumstances to determine their influence on a phenomenon.
+
+由于大型语言模型 (LLM) 在预测文本方面取得了令人印象深刻的成功，因此它们似乎必须能够访问表示因果和定义结构的“世界模型”。然而，现代因果推理的主要形式主义——Judea Pearl 的干预主义方法和内曼-鲁宾潜在结果框架——很难阐明法学硕士如何学习因果结构。我通过论证法学硕士采用基于差异化逻辑（有时称为变分归纳法）的特定归纳方法来解决这个难题。我演示了如何在训练期间实现这种逻辑的核心方面，法学硕士需要来自各种上下文的大量文本数据来识别单词序列中的差异和冷漠制造者。此外，我还分析了法学硕士的具体架构特征（例如令牌嵌入和自注意力），以确定它们在变分归纳中的作用。法学硕士的差异化逻辑从根本上与实验方法相似，其中因果关系是通过系统地改变个体情况来确定其对现象的影响而得出的。
+
+</details>
+
+---
+
+## 4. Reference-Free Assessment of Physical Consistency in World Model-based Video Generation / 基于世界模型的视频生成中物理一致性的无参考评估
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22363v1](http://arxiv.org/abs/2606.22363v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22363v1)
+
+**Categories**: cs.AI, cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce reference-free measures for evaluating the physical consistency of generated videos, combining relative and absolute approaches to assess fidelity. Although tools like WorldGym or WorldEval enable robotic simulation via video generation, physical fidelity gaps often prevent these environments from accurately reproducing real-world task success rates of VLA models. Unlike existing evaluation methods, which require costly human voting (Elo) or unavailable ground-truth references (FVD), our approach utilizes DROID-SLAM and SEA-RAFT to quantify physical inconsistencies, motivated by WorldScore. Videos filtered using our relative consistency assessment show an improvement in task success rates of over 8%, effectively narrowing the simulation-to-reality gap. Furthermore, our absolute assessment enables spatio-temporal localization, providing visualization of when and where physical artifacts occur.
+
+我们引入了无参考测量来评估生成视频的物理一致性，结合相对和绝对方法来评估保真度。尽管 WorldGym 或 WorldEval 等工具可以通过视频生成实现机器人模拟，但物理保真度差距通常会阻止这些环境准确再现 VLA 模型的真实任务成功率。现有的评估方法需要昂贵的人工投票 (Elo) 或无法获得的真实参考 (FVD)，与此不同，我们的方法在 WorldScore 的推动下，利用 DROID-SLAM 和 SEA-RAFT 来量化物理不一致性。使用我们的相对一致性评估过滤的视频显示任务成功率提高了 8% 以上，有效缩小了模拟与现实的差距。此外，我们的绝对评估可以实现时空定位，提供物理伪影发生时间和地点的可视化。
+
+</details>
+
+---
+
+## 5. Learning a Normal World Model for Few-Shot Boundary-Calibrated Abnormality Detection / 学习用于少样本边界校准异常检测的正常世界模型
+
+**Date**: 2026-06-20 | **arXiv**: [2606.22261v1](http://arxiv.org/abs/2606.22261v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22261v1)
+
+**Categories**: cs.LG, cs.GT
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Abnormality detection in complex systems faces two practical barriers: abnormal labels are scarce, and binary labels do not quantify how far an event has departed from normal behavior. We study a normal-world modeling formulation for this setting. Instead of learning a large and incomplete space of abnormal classes, the model learns the normal world from abundant normal events and uses a few abnormal examples only to calibrate the boundary of normality. We instantiate this idea as a Hypergraph Entropic Normal-World Model. The model represents multivariate sensor windows as context-conditioned hypergraphs, where hyperedges capture high-order relations among groups of variables. It then defines abnormality by an entropy-aware normal-world energy that combines temporal prediction surprise, hypergraph consistency surprise, and latent normal-manifold departure. On the NASA C-MAPSS turbofan degradation benchmark, the proposed full energy achieves strong zero-shot and few-shot performance across all four subsets and reaches AUROC 0.9983 on FD004, the most complex setting with multiple operating conditions and fault modes. Beyond standard detection metrics, we introduce mechanistic validation tests to probe whether the energy encodes normal-world structure rather than a superficial input-output mapping. The learned energy accepts unseen healthy engines, increases along degradation trajectories, and sharply penalizes context-mismatched cross-variable coupling breaks. These results suggest that normal-world energy can serve as an anomaly score, a graded risk measure, and a testable representation of normal system behavior under severe abnormal-label scarcity.
+
+复杂系统中的异常检测面临两个实际障碍：异常标签稀缺，二元标签无法量化事件与正常行为的偏离程度。我们研究了这种情况下的正常世界建模公式。该模型不是学习大量且不完整的异常类空间，而是从丰富的正常事件中学习正常世界，并仅使用一些异常示例来校准正常边界。我们将这个想法实例化为超图熵正常世界模型。该模型将多元传感器窗口表示为上下文条件超图，其中超边捕获变量组之间的高阶关系。然后，它通过结合了时间预测意外、超图一致性意外和潜在正常流形偏离的熵感知正常世界能量来定义异常。在 NASA C-MAPSS 涡轮风扇退化基准上，所提出的全能量在所有四个子集中实现了强大的零射击和少射击性能，并在 FD004（具有多种操作条件和故障模式的最复杂设置）上达到 AUROC 0.9983。除了标准检测指标之外，我们还引入了机械验证测试来探测能量是否编码正常世界结构而不是表面的输入输出映射。学习到的能量接受看不见的健康引擎，沿着退化轨迹增加，并严厉惩罚上下文不匹配的跨变量耦合中断。这些结果表明，正常世界的能量可以作为异常评分、分级风险度量以及严重异常标签稀缺下正常系统行为的可测试表示。
+
+</details>
+
+---
+
+## 6. Wh0: Generative World Models as Scalable Sources of Egocentric Human Hand Manipulation Data / WH0 ：生成世界模型作为以自我为中心的人手操纵数据的可扩展来源
+
+**Date**: 2026-06-20 | **arXiv**: [2606.22136v1](http://arxiv.org/abs/2606.22136v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22136v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scaling dexterous manipulation requires generalization across objects, scenes, and tasks, yet existing data sources face a trade-off between scale and scene/embodiment alignment: teleoperation data is well aligned with robot deployment but expensive to collect; simulation is scalable but limited by the sim-to-real gap; and real egocentric videos scale effectively but remain misaligned with robot deployment. We propose Wh0, a framework that uses generative video world models as scalable and controllable sources of egocentric human-hand manipulation data to unlock the manipulation capabilities of pretrained dexterous VLA models. Conditioned on language, objects, and scenes, Wh0 uses a generative world model to produce WM-H, a 50k-episode dataset of egocentric human-object interaction videos. Wh0 then converts the generated videos into robot-trainable supervision through hand motion reconstruction and visual editing. Co-trained with a limited amount of real robot data, WM-H adapts pretrained VLA models to dexterous manipulation deployment. Across 18 real-world dexterous manipulation tasks, compared with a model post-trained only on robot data, Wh0 improves zero-shot success on unseen tasks from 8.3% to 38.9%. Ablation studies further show that scalable generation and scene/embodiment alignment are key drivers of performance gains. Videos and open-source code can be found on our project website: https://chenyt31.github.io/wh0.github.io/.
+
+扩展灵巧操作需要跨对象、场景和任务进行泛化，但现有数据源面临着规模和场景/实施例对齐之间的权衡：远程操作数据与机器人部署很好地对齐，但收集成本昂贵；模拟具有可扩展性，但受到模拟与真实差距的限制；真实的以自我为中心的视频可以有效扩展，但与机器人部署仍然不一致。我们提出了 Wh0，一个框架，它使用生成视频世界模型作为以自我为中心的人手操作数据的可扩展且可控的来源，以解锁预先训练的灵巧 VLA 模型的操作能力。以语言、物体和场景为条件，Wh0 使用生成世界模型来生成 WM-H，这是一个 5 万集的以自我为中心的人与物体交互视频的数据集。然后，Wh0 通过手部动作重建和视觉编辑将生成的视频转换为机器人可训练的监督。 WM-H 与有限数量的真实机器人数据进行联合训练，使预训练的 VLA 模型适应灵巧的操作部署。在 18 个现实世界的灵巧操作任务中，与仅在机器人数据上进行后训练的模型相比，Wh0 将未见过的任务的零样本成功率从 8.3% 提高到 38.9%。消融研究进一步表明，可扩展的生成和场景/实施例对齐是性能提升的关键驱动因素。视频和开源代码可以在我们的项目网站上找到：https://chenyt31.github.io/wh0.github.io/。
+
+</details>
+
+---
+
+## 7. Deep RL- Tuned Mo del-Free Adaptive Control for Lower-Limb Exoskeletons During Sit-to-Stand Transitions / 在从坐到站的转换过程中，针对下肢外骨骼进行深度 RL 调整的无模型自适应控制
+
+**Date**: 2026-06-20 | **arXiv**: [2606.22040v1](http://arxiv.org/abs/2606.22040v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22040v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Sit-to-stand (STS) transitions impose significant joint-loading demands on elderly individuals, making them a primary target for lower-limb exoskeleton assistance. However, accurate trajectory tracking during STS is challenging due to complex, time-varying human exoskeleton interaction dynamics and inter-subject variability that render model-based control approaches difficult to apply in practice. This paper presents an intelligent model free adaptive backstepping control strategy for a bilateral lower-limb exoskeleton during STS motion. The proposed controller design uses an ultra-local second-order model to avoid explicit system identification, while a Gaussian radial basis function (RBF) neural network estimates the unknown lumped dynamics online. To further improve phase-aware tracking performance, a Twin Delayed Deep Deterministic Policy Gradient (TD3) reinforcement learning agent is integrated as a supervisory gain scheduler that adaptively adjusts controller gains across the distinct phases of STS motion. The proposed controller is evaluated through co-simulation in MATLAB/Simulink and Simscape Multibody using OpenSim-derived reference trajectories and benchmarked against state-of-the-art controllers. Results demonstrate that the proposed controller achieves the lowest average RMSE of 0.078 degree across all joints, representing improvements of 60.2%, 54.4%, 48.7%, and 42.6% over proportional integral derivative (PID), model-free adaptive control (MFAC), linear quadratic regulator (LQR), and sliding-mode control (SMC), respectively. TD3 integration further reduces tracking error by 35%, 33%, and 79% at the hip, knee, and ankle joints compared to the standalone RBF-MFAC baseline. These results demonstrate the effectiveness and robustness of the proposed controller design for assistive exoskeleton control during STS transitions.
+
+从坐到站（STS）的转换对老年人提出了巨大的关节负荷要求，使他们成为下肢外骨骼辅助的主要目标。然而，由于复杂的、时变的人类外骨骼交互动力学和主体间的可变性，使得基于模型的控制方法难以在实践中应用，因此 STS 期间的准确轨迹跟踪具有挑战性。本文提出了一种用于 STS 运动期间双侧下肢外骨骼的智能无模型自适应反步控制策略。所提出的控制器设计使用超局部二阶模型来避免显式系统识别，而高斯径向基函数（RBF）神经网络则在线估计未知的集总动态。为了进一步提高阶段感知跟踪性能，集成了双延迟深度确定性策略梯度 (TD3) 强化学习代理作为监督增益调度程序，可在 STS 运动的不同阶段自适应调整控制器增益。使用 OpenSim 派生的参考轨迹，通过 MATLAB/Simulink 和 Simscape Multibody 中的联合仿真来评估所提出的控制器，并针对最先进的控制器进行基准测试。结果表明，所提出的控制器在所有关节上实现了 0.078 度的最低平均 RMSE，分别比比例积分微分 (PID)、无模型自适应控制 (MFAC)、线性二次调节器 (LQR) 和滑模控制 (SMC) 提高了 60.2%、54.4%、48.7% 和 42.6%。与独立的 RBF-MFAC 基线相比，TD3 集成进一步将髋关节、膝关节和踝关节的跟踪误差降低了 35%、33% 和 79%。这些结果证明了所提出的控制器设计在 STS 转换期间辅助外骨骼控制的有效性和鲁棒性。
+
+</details>
+
+---
+
+## 8. Nous: A Predictive World Model for Long-Term Agent Memory / Nous：长期代理记忆的预测世界模型
+
+**Date**: 2026-06-20 | **arXiv**: [2606.22030v1](http://arxiv.org/abs/2606.22030v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22030v1)
+
+**Categories**: cs.AI, cs.CL, cs.IR, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present Nous, a novel agent memory architecture grounded in the principle that knowledge is prediction, not storage. Rather than persisting facts as database records, vector embeddings, or knowledge-graph triples, Nous maintains a predictive world model: a collection of categorical probability distributions, called dimensions, one per entity-attribute pair observed in conversation. Each incoming observation is scored by its information-theoretic surprise S = -log2 P(obs | D), and the distribution is updated via a closed-form Bayesian posterior. The primary stored artifact is the delta, a record of the shift from prior to posterior belief, rather than the fact itself. Forgetting emerges naturally as entropy decay toward the uniform distribution, and identity resolution is handled through mutual information between entity dimension sets. Evaluated on the LoCoMo long-term conversational memory benchmark across ten conversations (1,540 questions) using GPT-4o-mini as backbone, Nous achieves F1 of 63.50 (single-hop), 55.32 (multi-hop), 58.57 (temporal), and 62.50 (open-domain). Against A-MEM's self-reported GPT-4o-mini numbers, Nous shows substantial gains in three of four categories, though we note that independent citations of A-MEM's results disagree with each other on category assignment, a reproducibility issue we discuss openly rather than resolve unilaterally. We additionally compare against BeliefMem, a concurrently developed system built on the same core premise of belief-based rather than deterministic memory; on the same benchmark and backbone, Nous's self-reported numbers exceed BeliefMem's self-reported numbers on all four categories, though we flag several uncontrolled differences between the two evaluation pipelines that prevent this from being a fully controlled comparison. Nous requires no external vector database or graph engine.
+
+我们提出了 Nous，一种新颖的智能体记忆架构，其原则是知识是预测，而不是存储。 Nous 不是将事实持久化为数据库记录、向量嵌入或知识图三元组，而是维护一个预测世界模型：一组分类概率分布（称为维度），在对话中观察到的每个实体属性对都有一个。每个传入的观测值都根据其信息论惊喜 S = -log2 P(obs | D) 进行评分，并且分布通过封闭式贝叶斯后验进行更新。主要存储的工件是增量，即从先验信念到后验信念转变的记录，而不是事实本身。随着熵朝着均匀分布方向衰减，遗忘自然出现，而身份解析是通过实体维度集之间的互信息来处理的。使用 GPT-4o-mini 作为主干，在 LoCoMo 长期会话记忆基准上对 10 个对话（1,540 个问题）进行评估，Nous 的 F1 达到 63.50（单跳）、55.32（多跳）、58.57（时间）和 62.50（开放域）。与 A-MEM 自我报告的 GPT-4o-mini 数据相比，Nous 在四个类别中的三个类别中显示出实质性进展，尽管我们注意到 A-MEM 结果的独立引用在类别分配上彼此不一致，这是我们公开讨论而不是单方面解决的可重复性问题。我们还与 BeliefMem 进行比较，BeliefMem 是一个同时开发的系统，建立在基于信念的记忆而非确定性记忆的相同核心前提之上；在相同的基准和主干上，Nous 的自我报告数字在所有四个类别上都超过了 BeliefMem 的自我报告数字，尽管我们标记了两个评估管道之间的一些不受控制的差异，从而阻止了完全受控的比较。 Nous 不需要外部矢量数据库或图形引擎。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-19 (8 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-06-19
