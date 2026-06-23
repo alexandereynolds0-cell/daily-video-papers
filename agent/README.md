@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-23](papers/2026-06-23.md) - 11 papers
 - [2026-06-19](papers/2026-06-19.md) - 48 papers
 - [2026-06-18](papers/2026-06-18.md) - 32 papers
 - [2026-06-17](papers/2026-06-17.md) - 40 papers
@@ -107,6 +108,200 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-23 (11 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-06-23
+
+**Paper Count**: 11
+
+---
+
+## 1. PaperClaw: Harnessing Agents for Autonomous Research and Human-in-the-Loop Refinement / PaperClaw：利用代理进行自主研究和人在环优化
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22610v1](http://arxiv.org/abs/2606.22610v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22610v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models have become capable reasoners and tool users that write and run code and search the literature, which makes automating the research process itself a realistic goal. We present PAPERCLAW, a harnessed multi-agent system that carries a project autonomously, from a field of study to a finished paper. PAPERCLAW curates a domain from a field's live literature, datasets, and code; brainstorms it into an idea with a pre-registered main-result contract; and drives a stoppable hypothesis map through an iterative propose, test, reflect loop that grows only from measured verdicts and halts once the evidence supports the idea, at which point it writes a venue-compliant paper. A full-lifecycle memory keeps each stage in a single living record, so a long run can be paused, inspected, and resumed without losing context. At the centre is an in-cycle research assistant with research tools and skills: it can drive the whole pipeline on its own, while the same interface lets a person step in at any stage, turning a first autonomous draft into a stronger paper through human-in-the-loop refinement. Throughout, PAPERCLAW keeps its output grounded and checkable, citing only references validated against open scholarly indexes and reporting results that genuinely ran. An evaluation with an LLM judge finds that PAPERCLAW produces strong papers both fully autonomously and with human-in-the-loop refinement.
+
+大型语言模型已经成为有能力的推理者和工具用户，可以编写和运行代码以及搜索文献，这使得研究过程本身的自动化成为一个现实的目标。我们推出了 PAPERCLAW，这是一种利用多智能体系统，可以自主地开展项目，从研究领域到完成论文。 PAPERCLAW 从某个领域的实时文献、数据集和代码中策划一个领域；通过预先注册的主要结果合同，集思广益，形成一个想法；并通过迭代的提议、测试、反映循环来驱动可停止的假设图，该循环仅根据测量的结论而增长，并在证据支持该想法时停止，此时它会撰写符合场地要求的论文。全生命周期内存将每个阶段保存在单个活动记录中，因此可以暂停、检查和恢复长时间运行，而不会丢失上下文。中心是一个具有研究工具和技能的循环研究助理：它可以自行驱动整个流程，而相同的界面可以让人们在任何阶段介入，通过人机交互的改进将第一份自主草稿变成更强大的论文。自始至终，PAPERCLAW 都保持其输出的基础和可检查性，仅引用根据开放学术索引验证的参考文献并报告真正运行的结果。法学硕士评委的评估发现，PAPERCLAW 能够完全自主地并通过人机交互改进来生成出色的论文。
+
+</details>
+
+---
+
+## 2. Stationary Robust Mean-Field Games under Model Mismatches / 模型失配下的平稳鲁棒平均场博弈
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22579v1](http://arxiv.org/abs/2606.22579v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22579v1)
+
+**Categories**: cs.LG, cs.GT
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Deploying multi-agent reinforcement learning (MARL) in the real world is often limited by model mismatches between the training simulators and the true environment, which could be further amplified through strategic interactions and result in severe performance degradation upon deployment. Distributional robustness offers a principled response by optimizing policies against worst-case transition models drawn from an uncertainty set, but standard robust MARL frameworks become increasingly intractable as the number of agents grows. This paper develops an infinite-horizon, stationary mean-field game framework that incorporates distributional model uncertainty directly into the population-coupled dynamics. We establish a robust dynamic programming principle with a contractive Bellman operator and prove the existence of a stationary robust mean-field equilibrium via a fixed-point argument. We further develop the first concrete algorithm with convergence guarantees. We then connect the mean-field solution to a finite-population robust game whose ambiguity sets depend on the empirical distribution, showing that the mean-field equilibrium policy induces approximate equilibrium behavior as the population size increases. Under a contractive robust-dynamics regime, we further obtain explicit non-asymptotic error bounds. Numerical experiments further illustrate the qualitative and quantitative impact of robustness under multiple uncertainty models, validating our theoretical findings.
+
+在现实世界中部署多智能体强化学习（MARL）通常会受到训练模拟器与真实环境之间模型不匹配的限制，这种不匹配可能会通过策略交互进一步放大，并导致部署后性能严重下降。分布稳健性通过针对从不确定性集中得出的最坏情况转换模型优化策略，提供了原则性的响应，但随着智能体数量的增长，标准稳健的 MARL 框架变得越来越棘手。本文开发了一种无限视野、固定平均场博弈框架，将分布模型不确定性直接纳入人口耦合动态中。我们用收缩贝尔曼算子建立了鲁棒动态规划原理，并通过定点参数证明了平稳鲁棒平均场平衡的存在。我们进一步开发了第一个具有收敛保证的具体算法。然后，我们将平均场解与有限总体稳健博弈联系起来，该博弈的模糊集取决于经验分布，表明平均场均衡策略会随着总体规模的增加而产生近似均衡行为。在收缩鲁棒动力学机制下，我们进一步获得显式的非渐近误差界。数值实验进一步说明了多种不确定性模型下鲁棒性的定性和定量影响，验证了我们的理论发现。
+
+</details>
+
+---
+
+## 3. Grounded Scaling: Why Agentic AI Needs Deterministic Environments / 扎根扩展：为什么代理人工智能需要确定性环境
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22495v1](http://arxiv.org/abs/2606.22495v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22495v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-chain agent execution fails exponentially in environments designed for human tolerance: with per-step determinism $δ< 1$, $k$-step chain success degrades as $δ^k$. The AGI-to-ASI scaling debate (Genewein et al., 2026) has so far framed progress as a race between compute growth and a list of frictions (data wall, abstraction barrier, embodied bottleneck, multi-agent trust); we argue that environment determinism is a complementary binding axis cutting across all four, for the broad class of agentic AI tasks whose outcomes are verifiable economically, physically, or through multi-party settlement. Three formal results pin down the regime: a Determinism-Efficiency Bound on chain-task success, a Verifier-Goodharting Floor on flywheel ceilings under imperfect rewards, and a convergence condition for environment-side skill evolution. We operationalise the framework as a Supply Certainty Index (SCI) over five measurable properties, a five-level Determinism Maturity Model (DMM) as adoption ladder, and a falsifiable open-question programme (OQ1-OQ5) with explicit null results that would force retraction. The position is platform-agnostic. We engage three competing positions: sim-to-real sufficiency, alignment sufficiency, and AI-as-normal-technology.
+
+在为人类容忍而设计的环境中，长链代理执行会呈指数级失败：在每步确定性 $δ< 1$ 的情况下，$k$ 步链的成功率会降低为 $δ^k$。迄今为止，AGI 到 ASI 扩展的争论（Genewein 等人，2026）将进展视为计算增长与一系列摩擦（数据墙、抽象障碍、具体瓶颈、多代理信任）之间的竞赛；我们认为，对于其结果可以在经济上、物理上或通过多方解决进行验证的广泛的代理人工智能任务而言，环境决定论是贯穿这四个方面的互补约束轴。三个正式结果确定了该制度：链任务成功的确定性效率界限、不完美奖励下飞轮天花板上的验证者古德哈廷地板，以及环境侧技能进化的收敛条件。我们将该框架运作为涵盖五个可衡量属性的供应确定性指数（SCI）、作为采用阶梯的五级确定性成熟度模型（DMM）以及可证伪的开放问题计划（OQ1-OQ5），其具有将强制撤回的明确无效结果。该位置与平台无关。我们采取三个相互竞争的立场：模拟到真实的充分性、对齐充分性和人工智能作为正常技术。
+
+</details>
+
+---
+
+## 4. VADAOrchestra: Neurosymbolic Orchestration of Adaptive Reasoning Workflows / VADAOrchestra：自适应推理工作流程的神经符号编排
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22485v1](http://arxiv.org/abs/2606.22485v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22485v1)
+
+**Categories**: cs.AI, cs.CL, cs.DB, cs.LO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Decision-making in real-world settings rarely follows a fixed script. Instead, it unfolds as a dynamic reasoning process in which the appropriate course of action evolves as new context and data become available. Traditional Business Process Management systems provide rigor, determinism, and auditability, yet they generally struggle to adapt their execution at runtime. Conversely, agentic systems based on Large Language Models (LLMs) bring flexibility to decision-making, but they are inherently opaque, often unreliable, and suffer from significant scalability constraints when operating over large datasets. To combine these complementary paradigms, we introduce VADAOrchestra, a neurosymbolic framework that models complex workflows as evolving reasoning processes. The framework adopts a hybrid approach: given a user query and a collection of data sources, an LLM-based orchestrator incrementally plans and adapts the workflow. This is encoded as a logic program in a fragment of Datalog+/- where predicates correspond to tool invocations and rules represent both predefined domain dependencies and logic constructs synthesized on demand to manipulate intermediate results. All logical inference tasks are then executed by a state-of-the-art Datalog+/- symbolic engine. This approach provides a verifiable reasoning trace, supporting the auditability and reproducibility of the entire process. Furthermore, by decoupling high-level orchestration from symbolic inference, it addresses scalability concerns, enabling complex reasoning over large datasets through targeted data querying. We evaluate VADAOrchestra on real-world financial use cases, demonstrating faithfulness, scalability, and explainability compared to standard agentic architectures.
+
+现实世界中的决策很少遵循固定的脚本。相反，它以动态推理过程的形式展开，其中适当的行动方案随着新的背景和数据的出现而演变。传统的业务流程管理系统提供严格性、确定性和可审计性，但它们通常难以在运行时调整其执行。相反，基于大型语言模型 (LLM) 的代理系统为决策带来了灵活性，但它们本质上是不透明的，通常不可靠，并且在大型数据集上运行时会受到严重的可扩展性限制。为了结合这些互补的范式，我们引入了 VADAOrchestra，这是一个神经符号框架，它将复杂的工作流程建模为不断发展的推理过程。该框架采用混合方法：给定用户查询和数据源集合，基于 LLM 的编排器逐步规划和调整工作流程。它被编码为 Datalog+/- 片段中的逻辑程序，其中谓词对应于工具调用，规则表示预定义的域依赖关系和按需合成的逻辑结构以操纵中间结果。然后，所有逻辑推理任务均由最先进的 Datalog+/- 符号引擎执行。这种方法提供了可验证的推理跟踪，支持整个过程的可审核性和可重复性。此外，通过将高级编排与符号推理解耦，它解决了可扩展性问题，通过有针对性的数据查询实现对大型数据集的复杂推理。我们根据现实世界的金融用例评估 VADAOrchestra，与标准代理架构相比，展示了其忠实性、可扩展性和可解释性。
+
+</details>
+
+---
+
+## 5. Knowledge-Graph Grounding Helps LLMs Only for Out-of-Training Knowledge: A Controlled Study on Clinical Question Answering / 知识图基础仅帮助法学硕士获得训练外的知识：临床问答的对照研究
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22419v1](http://arxiv.org/abs/2606.22419v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22419v1)
+
+**Categories**: cs.CL, cs.DB
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A recent Nature Medicine study reports that general-purpose frontier LLMs outperform specialized retrieval-augmented clinical tools on medical benchmarks, and that retrieval can hurt strong models. We ask the natural follow-up: does structured knowledge-graph (KG) grounding change this, and when does grounding help at all? We contribute two results. First, a reproduction: the study's headline HealthBench score (~88) is the Consensus variant, not full HealthBench, where frontier models and ideal completions both score ~46-47 under a physician-calibrated grader (agreement 82.5%); we reproduce GPT-5.2 Consensus =90.9 and flag a score-deflating grader bug. Second, a knowledge-boundary result. Using a graph+vector engine (samyama-graph) over the public biomedical KG PrimeKG, neither naive triple retrieval nor an agentic natural-language-to-Cypher loop (82% successful queries) improves MedQA across a weak-to-strong model ladder (all |Delta| <= 3.4). On a synthetic counterfactual KG, and on a hybrid benchmark mixing known and novel facts, the identical pipeline lifts out-of-training accuracy from chance to ~100% (+68 to +79) while adding nothing on known facts (a no-LLM arm answers both). Across three regimes (no-knowledge, graph-aided, hybrid), grounding helps only insofar as the decisive fact lies outside the model's training -- public-KG facts are redundant, private and novel data are where it pays -- matching the study's institutional-data caveat.
+
+《自然医学》最近的一项研究报告称，在医学基准方面，通用前沿法学硕士的表现优于专门的检索增强临床工具，并且检索可能会损害强大的模型。我们自然会问：结构化知识图（KG）基础是否会改变这一点，以及什么时候基础有帮助？我们贡献了两个结果。首先，再现：该研究的标题 HealthBench 分数（约 88）是共识变体，而不是完整的 HealthBench，其中前沿模型和理想完成度在医生校准的评分器下的得分均为约 46-47（一致性为 82.5%）；我们重现了 GPT-5.2 共识 =90.9 并标记了一个导致分数下降的评分错误。第二，知识边界结果。在公共生物医学 KG PrimeKG 上使用图+向量引擎（samyama-graph），无论是朴素的三重检索还是代理的自然语言到 Cypher 循环（82% 成功的查询）都改善了弱到强模型阶梯的 MedQA（所有 |Delta| <= 3.4）。在合成反事实 KG 上，以及在混合已知事实和新颖事实的混合基准上，相同的管道将训练外的准确率从偶然性提高到约 100%（+68 到 +79），同时不添加任何已知事实（非 LLM 手臂同时回答了这两个问题）。在三种制度（无知识、图形辅助、混合）中，只有当决定性事实位于模型训练之外时，接地才有帮助——公共知识图谱事实是多余的，私人和新颖的数据才是有价值的——与研究的机构数据警告相匹配。
+
+</details>
+
+---
+
+## 6. Code Isn't Memory: A Structural Codebase Index Inside a Coding Agent / 代码不是内存：编码代理内部的结构代码库索引
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22417v1](http://arxiv.org/abs/2606.22417v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22417v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Coding agents now interleave LLMs with retrieval over the working repository, and retrieval implementations vary widely across deployed harnesses. Inside a fixed coding-agent harness on a fixed model, does adding a structural codebase index actually change cost or resolve? We ran three arms (the harness with the index, the same harness without it, and an agentic-grep comparator) on SWE-PolyBench Verified and SWE-bench Pro with Claude Opus 4.7 held fixed throughout, across three seeds, inside a leak-audited per-task sandbox. The within-harness ablation produces a large localization gain and a statistically separated resolve gain, with no cost penalty per cell and lower cost per solve. The cross-harness check shows that the index does not regress against an agentic-grep baseline on resolve or localization, again at no cost penalty. We release the per-cell exclusion ledger, the leak-audit script, the localization extractor, and the results database. The deployment question for a structural codebase index is thus not whether it is too expensive to run (across seeds, the index lands at a lower $/solved than agentic grep) but whether the workload includes multi-file changes where structural ranking pays off.
+
+编码代理现在将 LLM 与工作存储库上的检索交织在一起，并且检索实现在部署的工具之间存在很大差异。在固定模型上的固定编码代理工具内，添加结构代码库索引实际上会改变成本或解决方案吗？我们在 SWE-PolyBench Verified 和 SWE-bench Pro 上运行了三个臂（带索引的线束、不带索引的同一线束和 agentic-grep 比较器），Claude Opus 4.7 始终固定在三个种子上，在泄漏审计的每个任务沙箱内。线束内消融产生较大的定位增益和统计上分离的解析增益，每个单元没有成本损失，并且每个解析的成本较低。交叉线束检查表明，该索引不会在解析或本地化方面相对于 agentic-grep 基线回归，同样没有任何成本损失。我们发布了每个单元排除分类账、泄漏审计脚本、本地化提取器和结果数据库。因此，结构代码库索引的部署问题不在于它的运行成本是否太高（在种子中，该索引的解决成本比代理 grep 更低），而在于工作负载是否包括结构排名带来回报的多文件更改。
+
+</details>
+
+---
+
+## 7. PlanBench-XL: Evaluating Long-Horizon Planning of LLM Tool-Use Agents in Large-Scale Tool Ecosystems / PlanBench-XL：评估大规模工具生态系统中 LLM 工具使用代理的长期规划
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22388v1](http://arxiv.org/abs/2606.22388v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22388v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM agents increasingly operate in large tool ecosystems, where real-world tasks require discovering relevant tools, inferring implicit sub-goals, and adapting to dynamic environments over long horizons. However, existing benchmarks rarely evaluate planning under retrieval-limited tool visibility. To address this gap, we introduce PlanBench-XL, an interactive benchmark of 327 retail tasks over 1,665 tools that tests whether agents can iteratively retrieve usable tools, invoke them to uncover intermediate evidence for subsequent calls toward the final goal. PlanBench-XL further features an optional blocking mechanism that simulates real-world unpredictability through missing, failing, or distracting tool functions, forcing agents to detect disrupted paths and adapt at runtime. Experiments on ten leading LLMs show that massive-tool planning remains challenging: while GPT-5.4 achieves 51.90% accuracy in block-free settings, it collapses to 11.36% under the most severe blocking condition. Further analysis shows that agents are especially vulnerable when failures lack explicit error signals or when recovery requires longer alternative tool-use paths. These results establish PlanBench-XL as a testbed for diagnosing agentic planning failures and highlight the need for robust adaptive planning in long-horizon tasks with large, imperfect tool environments.
+
+LLM 代理越来越多地在大型工具生态系统中运行，其中现实世界的任务需要发现相关工具、推断隐含的子目标并适应长期的动态环境。然而，现有的基准很少在检索有限的工具可见性下评估规划。为了解决这一差距，我们引入了 PlanBench-XL，这是一个包含 1,665 种工具的 327 项零售任务的交互式基准测试，用于测试代理是否可以迭代地检索可用工具，调用它们来发现后续调用实现最终目标的中间证据。 PlanBench-XL 还具有可选的阻塞机制，通过丢失、失败或分散工具功能来模拟现实世界的不可预测性，迫使代理检测中断的路径并在运行时进行调整。对十个领先的法学硕士进行的实验表明，大规模工具规划仍然具有挑战性：虽然 GPT-5.4 在无阻塞设置中实现了 51.90% 的准确率，但在最严重的阻塞条件下，它的准确率下降到 11.36%。进一步的分析表明，当故障缺乏明确的错误信号或恢复需要更长的替代工具使用路径时，代理尤其容易受到攻击。这些结果将 PlanBench-XL 确立为诊断代理规划失败的测试平台，并强调在具有大型、不完善工具环境的长期任务中需要稳健的自适应规划。
+
+</details>
+
+---
+
+## 8. BabelJudge: Measuring LLM-as-a-Judge Reliability Across Languages and Agent Trajectories / BabelJudge：衡量法学硕士作为法官跨语言和代理轨迹的可靠性
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22329v1](http://arxiv.org/abs/2606.22329v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22329v1)
+
+**Categories**: cs.CL, cs.AI
+
+**Code**: https://github.com/Shreyaskc/BabelJudge
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM-as-a-judge has become the dominant approach to scalable evaluation in NLP pipelines, yet judges themselves carry systematic biases that raw accuracy hides: they favor responses placed in slot A (position bias), they prefer longer responses regardless of quality (verbosity bias), and their reliability degrades sharply in lower-resource languages. We introduce BabelJudge, an open-source benchmark and reliability audit framework that measures all four failure modes -- position bias, verbosity bias, order inconsistency, and cross-lingual degradation -- on any judge model, without requiring human preference labels. The key insight is gold-labelling by degradation: starting from a high-quality reference response and applying a controlled perturbation yields a pairwise item whose gold label is known by construction, eliminating annotation cost. We evaluate Qwen2.5-7B-Instruct-4bit across English, Hindi, Arabic, and Swahili and find that our composite bias-penalised reliability score drops from 0.714 in Hindi to 0.550 in Swahili, a gap that raw accuracy (0.835 vs. 0.660) understates. Swahili order consistency collapses to 0.480, meaning judge verdicts are near-random under slot-order swaps -- a failure mode invisible to accuracy alone. We further extend the framework to agentic evaluation via nine trajectory-level perturbations (argument corruption, tool swaps, hallucinated calls, missing steps) and three new metrics: tool accuracy, hallucination detection rate, and trajectory-length bias. BabelJudge is released as a Python package supporting 11 judge backends. Code: https://github.com/Shreyaskc/BabelJudge
+
+LLM 作为法官已成为 NLP 流程中可扩展评估的主要方法，但法官本身带有原始准确性隐藏的系统性偏差：他们偏向于放置在 A 槽中的响应（位置偏差），无论质量如何，他们更喜欢较长的响应（冗长偏差），并且在资源较低的语言中，其可靠性急剧下降。我们引入 BabelJudge，一个开源基准和可靠性审计框架，它可以在任何法官模型上测量所有四种失败模式——位置偏差、冗长偏差、顺序不一致和跨语言退化，而不需要人类偏好标签。关键的见解是通过降解进行金标签：从高质量的参考响应开始并应用受控扰动产生一个成对的项目，其金标签通过构造而已知，从而消除了注释成本。我们对英语、印地语、阿拉伯语和斯瓦希里语的 Qwen2.5-7B-Instruct-4bit 进行了评估，发现我们的综合偏差惩罚可靠性得分从印地语的 0.714 下降到斯瓦希里语的 0.550，这一差距被原始准确率（0.835 与 0.660）低估了。斯瓦希里语顺序一致性下降至 0.480，这意味着在槽位顺序交换下，法官的判决几乎是随机的——这是一种仅凭准确性无法察觉的故障模式。我们通过九个轨迹级扰动（参数损坏、工具交换、幻觉调用、缺失步骤）和三个新指标进一步将框架扩展到代理评估：工具准确性、幻觉检测率和轨迹长度偏差。 BabelJudge 作为 Python 包发布，支持 11 个法官后端。代码：https://github.com/Shreyaskc/BabelJudge
+
+</details>
+
+---
+
+## 9. Revelio: Cost-Efficient Agentic Memory Safety Vulnerability Detection For Repository-Scale Codebases / Revelio：针对存储库规模代码库的经济高效的代理内存安全漏洞检测
+
+**Date**: 2026-06-20 | **arXiv**: [2606.22263v1](http://arxiv.org/abs/2606.22263v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22263v1)
+
+**Categories**: cs.CR, cs.AI, cs.MA, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Memory safety vulnerabilities remain a significant threat even for projects with extensive fuzzing and manual auditing. Recent results suggest that large language models hold great promise for detecting such vulnerabilities, but they are unreliable, at risk of hallucination, and challenging to scale to repository-size codebases. This paper presents Revelio, a cost-efficient end-to-end agentic framework for memory-safety vulnerability discovery. Revelio addresses the problem of hallucination by generating an executable Proof-of-Vulnerability, which is checked with a deterministic sanitizer. It reduces cost using inexpensive LLMs and lightweight static analysis to help generate and rank vulnerability hypotheses, reporting vulnerabilities only when they can be reproduced and confirmed by a sanitizer. We evaluated Revelio on seven production-quality projects that had been continuously fuzzed for five to eight years, as well as on 100 randomly selected Arvo projects from the CyberGym benchmark. With around one hour per project and a total cost of $300, Revelio discovered 19 previously unknown memory-safety vulnerabilities. On benchmarks, Revelio outperformed frontier coding agents across diverse backbone models at comparable token costs. Our results suggest that Revelio enables scalable and trustworthy end-to-end LLM-based memory-safety vulnerability detection.
+
+即使对于具有广泛模糊测试和手动审核的项目来说，内存安全漏洞仍然是一个重大威胁。最近的结果表明，大型语言模型对于检测此类漏洞具有很大的希望，但它们不可靠，存在产生幻觉的风险，并且难以扩展到存储库大小的代码库。本文介绍了 Revelio，一种用于内存安全漏洞发现的经济高效的端到端代理框架。 Revelio 通过生成可执行的漏洞证明来解决幻觉问题，并使用确定性清理程序对其进行检查。它使用廉价的法学硕士和轻量级静态分析来帮助生成和排名漏洞假设，从而降低成本，仅在可以通过清理程序重现和确认漏洞时才报告漏洞。我们在 7 个连续模糊测试五到八年的生产质量项目以及从 Cyber​​Gym 基准测试中随机选择的 100 个 Arvo 项目上对 Revelio 进行了评估。每个项目大约需要一小时，总成本为 300 美元，Revelio 发现了 19 个以前未知的内存安全漏洞。在基准测试中，Revelio 在不同的骨干模型上以相当的代币成本超越了前沿编码代理。我们的结果表明，Revelio 能够实现可扩展且值得信赖的基于 LLM 的端到端内存安全漏洞检测。
+
+</details>
+
+---
+
+## 10. TraceView: Interactive Visualization of Agentic Program Repair Trajectories / TraceView：代理程序修复轨迹的交互式可视化
+
+**Date**: 2026-06-20 | **arXiv**: [2606.22110v1](http://arxiv.org/abs/2606.22110v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22110v1)
+
+**Categories**: cs.SE, cs.AI, cs.HC
+
+**Code**: https://github.com/SOAR-Lab/agent-traj-visualization.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM-based automated program repair (APR) agents generate patches to fix software bugs with minimal human intervention. These agents often produce long trajectories of reasoning, tool use, and feedback to produce candidate patches. Final patch outcomes show whether a repair attempt succeeded or failed, but they do not show how the agent reached that outcome, or where the process became repetitive or misaligned with the task. This makes agentic repair failures difficult to diagnose, reproduce, and prevent. To help developers address these challenges, we present TraceView, an interactive tool for labeling and visualizing repair trajectories from APR systems. TraceView organizes raw and pre-labeled agentic runs with Thought, Action, and Result components to support semantic relation labeling and diagnosis, and renders the resulting trajectory as graph views. Furthermore, TraceView provides relation filters, patch outcome summaries, metrics, and node-level evidence panels to help users inspect how reasoning, actions, and feedback connect across the various steps of an agentic repair attempt. We evaluate TraceView with five researchers through a survey-based user study. Participants reported that TraceView made trajectories easier to scan and that its overview-to-detail workflow helped them better understand repair behavior. The TraceView source code is available at https://github.com/SOAR-Lab/agent-traj-visualization. A screencast of TraceView is available at https://youtu.be/9ZCh7Ifj2AQ.
+
+基于 LLM 的自动程序修复 (APR) 代理会生成补丁，以最少的人工干预来修复软件错误。这些代理通常会产生长的推理轨迹、工具使用和反馈来产生候选补丁。最终的补丁结果显示修复尝试是成功还是失败，但它们不显示代理如何达到该结果，或者过程在哪里变得重复或与任务不一致。这使得代理修复故障难以诊断、重现和预防。为了帮助开发人员应对这些挑战，我们推出了 TraceView，这是一种交互式工具，用于标记和可视化 APR 系统的修复轨迹。 TraceView 使用思想、操作和结果组件组织原始和预标记的代理运行，以支持语义关系标记和诊断，并将生成的轨迹呈现为图形视图。此外，TraceView 还提供关系过滤器、补丁结果摘要、指标和节点级证据面板，以帮助用户检查推理、操作和反馈如何在代理修复尝试的各个步骤之间进行连接。我们通过基于调查的用户研究与五位研究人员一起评估了 TraceView。参与者报告说，TraceView 使轨迹更容易扫描，其从概述到细节的工作流程帮助他们更好地了解修复行为。 TraceView 源代码可从 https://github.com/SOAR-Lab/agent-traj-visualization 获取。 TraceView 的截屏视频可在 https://youtu.be/9ZCh7Ifj2AQ 上获取。
+
+</details>
+
+---
+
+## 11. CodeTeam: An LLM-Powered Multi-Agent Framework for Repository-Level Code Generation / CodeTeam：LLM 支持的用于存储库级代码生成的多代理框架
+
+**Date**: 2026-06-20 | **arXiv**: [2606.22082v1](http://arxiv.org/abs/2606.22082v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22082v1)
+
+**Categories**: cs.SE, cs.AI
+
+**Code**: https://github.com/WhitenWhiten/CodeTeam
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Natural language to repository generation (NL2Repo) requires a system to construct an entire software repository from a natural-language requirements document. Compared with function-level code generation, this task demands longer planning horizons, stable interfaces across files, and iterative debugging of cross-file inconsistencies. To address these challenges, we propose CodeTeam, an LLM-based multi-agent framework that separates planning, decision making, and implementation into distinct, coordinated stages. In the planning stage, multiple Architect agents draft competing software design sketches (SDS), optionally grounded by retrieved design references. A CTO agent then evaluates, selects, and normalizes the most promising SDS into a machine-checkable contract that specifies file ownership, public interfaces, and dependency constraints. In the implementation stage, Developer agents generate code under a dependency-aware scheduler with bounded context and lightweight Git-based coordination, while a QA agent runs tests and drives iterative repairs. On the synthesis-based SketchEval benchmark, we explicitly compare CodeTeam's prompt-engineering (PE) and supervised fine-tuning (SFT) variants with the corresponding CodeS variants, where CodeTeam improves the overall SketchBLEU by 4.1 and 2.9 absolute points, respectively. On the execution-based NL2Repo-Bench benchmark, used as an external validation protocol, CodeTeam achieves the highest average test pass rate in both settings (34.6% PE, 42.3% SFT), confirming that the sketch-improvements extend to functional correctness under upstream test suites. Ablation results show that project-specific developer allocation and retrieval-augmented planning each contribute substantially to the SketchBLEU improvement (9.9% and 8.1% relative, respectively). CodeTeam and the experimental results are available at https://github.com/WhitenWhiten/CodeTeam
+
+自然语言到存储库生成（NL2Repo）需要一个系统根据自然语言需求文档构建整个软件存储库。与功能级代码生成相比，此任务需要更长的规划范围、跨文件的稳定接口以及跨文件不一致的迭代调试。为了应对这些挑战，我们提出了 CodeTeam，这是一个基于 LLM 的多代理框架，它将规划、决策和实施分为不同的、协调的阶段。在规划阶段，多个架构师代理起草相互竞争的软件设计草图（SDS），可以选择以检索到的设计参考为基础。然后，CTO 代理评估、选择最有前途的 SDS，并将其规范化为机器可检查的合同，该合同指定文件所有权、公共接口和依赖性约束。在实施阶段，开发人员代理在具有有界上下文和基于 Git 的轻量级协调的依赖项感知调度程序下生成代码，而 QA 代理则运行测试并驱动迭代修复。在基于综合的 SketchEval 基准测试中，我们明确地将 CodeTeam 的提示工程 (PE) 和监督微调 (SFT) 变体与相应的 CodeS 变体进行比较，其中 CodeTeam 将整体 SketchBLEU 分别提高了 4.1 和 2.9 个绝对点。在用作外部验证协议的基于执行的 NL2Repo-Bench 基准测试上，CodeTeam 在两种设置中均实现了最高的平均测试通过率（34.6% PE、42.3% SFT），确认草图改进扩展到上游测试套件下的功能正确性。消融结果表明，特定于项目的开发人员分配和检索增强规划都对 SketchBLEU 的改进做出了重大贡献（分别相对 9.9% 和 8.1%）。 CodeTeam 和实验结果可在 https://github.com/WhitenWhiten/CodeTeam 获取
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-19 (48 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-06-19
