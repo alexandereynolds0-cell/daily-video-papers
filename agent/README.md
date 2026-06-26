@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-26](papers/2026-06-26.md) - 32 papers
 - [2026-06-25](papers/2026-06-25.md) - 33 papers
 - [2026-06-24](papers/2026-06-24.md) - 42 papers
 - [2026-06-23](papers/2026-06-23.md) - 11 papers
@@ -110,6 +111,532 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-26 (32 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-06-26
+
+**Paper Count**: 32
+
+---
+
+## 1. Bridging Talk and Thought: Understanding Dialogue Dynamics Across Collaborative Problem-Solving Contexts / 连接谈话和思想：理解协作解决问题环境中的对话动态
+
+**Date**: 2026-06-25 | **arXiv**: [2606.27233v1](http://arxiv.org/abs/2606.27233v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27233v1)
+
+**Categories**: cs.CL, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present a conceptual framework for analyzing dialogue in collaborative problem-solving contexts, with an emphasis on the emerging dynamics of human-AI and multi-agent collaboration. As intelligent systems become active agents capable of autonomous reasoning and strategic cooperation, understanding the dialogic interaction during collaborative problem solving is increasingly important for optimizing and evaluating such partnerships. Our framework addresses key limitations in current analytical approaches through a hierarchical two-layer coding scheme that integrates cognitive and non-cognitive problem solving with metacognitive regulatory mechanisms. We demonstrate its effectiveness and generalizability across nine datasets spanning multiple domains, and provide insights into how humans and agents coordinate their knowledge, skills, and efforts to solve complex problems, showing in particular that metacognitive regulation can be an essential discriminator of deeper collaboration.
+
+我们提出了一个概念框架，用于分析协作解决问题环境中的对话，重点关注人类人工智能和多智能体协作的新兴动态。随着智能系统成为能够自主推理和战略合作的主动主体，理解协作问题解决过程中的对话交互对于优化和评估这种伙伴关系变得越来越重要。我们的框架通过将认知和非认知问题解决与元认知调节机制相结合的分层两层编码方案解决了当前分析方法的关键局限性。我们在跨越多个领域的九个数据集上展示了它的有效性和普遍性，并提供了关于人类和智能体如何协调他们的知识、技能和努力来解决复杂问题的见解，特别表明元认知调节可以成为更深层次合作的重要判别因素。
+
+</details>
+
+---
+
+## 2. A Process Harness for Uplifting Legacy Workflows to Agentic BPM: Design and Realization in CUGA FLO / 将遗留工作流程提升为代理 BPM 的流程工具：CUGA FLO 中的设计和实现
+
+**Date**: 2026-06-25 | **arXiv**: [2606.27188v1](http://arxiv.org/abs/2606.27188v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27188v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce the process harness, a new mechanism for uplifting legacy workflows into Agentic Business Process Management (Agentic BPM) without replacing the underlying workflow engine. A process harness places a policy-governed agentic layer around a deterministic workflow engine, intercepting designated control points to contribute reasoning, adaptation, and oversight while the engine retains structural authority over the process. To define the process harness rigorously, we develop the Task-Decision-Flow (TDF) model, specifying both its data schema and its execution semantics. TDF decomposes LLM reasoning across three policy-governed agent types: a TaskAgent for knowledge-intensive task execution, a DecisionAgent for per-case gateway routing, and a FlowAgent that governs runtime flow adaptation through a principled hook mechanism. Each agent reasons within an explicit policy drawn from the process FRAME, the aggregate policy set governing all LLM calls in the system. We then present CUGA FLO as the design and implementation realization of the TDF model, and demonstrate it on a loan approval workflow that exercises all three agent types and hook-driven regulatory override. The process harness uniquely reconciles imperative requirements, realized through deterministic workflow execution that enforces structural compliance, with normative requirements, realized through policy-framed agentic autonomy invoked at designated control points wherever the process demands it.
+
+我们引入了流程工具，这是一种新机制，用于将遗留工作流程提升为代理业务流程管理（代理 BPM），而无需替换底层工作流程引擎。流程工具在确定性工作流引擎周围放置了一个受策略控制的代理层，拦截指定的控制点以贡献推理、适应和监督，同时引擎保留对流程的结构权威。为了严格定义流程控制，我们开发了任务决策流（TDF）模型，指定其数据模式和执行语义。 TDF 将 LLM 推理分解为三种策略管理的代理类型：用于执行知识密集型任务的 TaskAgent、用于按案例网关路由的 DecisionAgent 以及通过有原则的钩子机制管理运行时流适应的 FlowAgent。每个代理在从流程框架中提取的显式策略中进行推理，该策略集管理系统中的所有 LLM 调用。然后，我们将 CUGA FLO 作为 TDF 模型的设计和实施实现，并在贷款审批工作流程上进行演示，该工作流程执行所有三种代理类型和挂钩驱动的监管覆盖。该流程工具独特地协调了命令性需求，通过确定性工作流执行来实现，该工作流执行强制执行结构合规性，而规范性需求则通过在流程需要的任何地方在指定控制点调用的策略框架代理自治来实现。
+
+</details>
+
+---
+
+## 3. OpenRCA 2.0: From Outcome Labels to Causal Process Supervision / OpenRCA 2.0：从结果标签到因果过程监督
+
+**Date**: 2026-06-25 | **arXiv**: [2606.27154v1](http://arxiv.org/abs/2606.27154v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27154v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Root cause analysis (RCA) poses a holistic test of LLM agentic capabilities, such as long-context understanding, multi-step reasoning, and tool use. However, existing datasets suffer from a fundamental gap: they label only the root cause, not the propagation path connecting it to the observed symptom, which largely simplifies the task to naive pattern matching. To support rigorous evaluation, we introduce PAVE, a step-wise labeling protocol that leverages known interventions from fault injection to reconstruct causal propagation paths. The mechanism is forward verification: reasoning from cause to effect rather than inferring backward from symptoms. Applying PAVE yields OpenRCA 2.0 (500 instances), the first cross-system RCA benchmark with step-wise causal annotations for LLM agents. Across 11 frontier LLMs, recovering the exact root-cause set succeeds in only 20.7% of cases on average. To locate where this difficulty lies, we relax the criterion and find what we call the ungrounded diagnosis: agents identify at least one correct root-cause service in 76.0% of cases, but ground that service in a verified causal propagation path to the observed symptom in only 61.5%. Outcome-only evaluation hides this failure mode; step-wise causal ground truth is the missing piece for trustworthy LLM-based RCA agents.
+
+根本原因分析（RCA）对法学硕士代理能力进行全面测试，例如长上下文理解、多步骤推理和工具使用。然而，现有的数据集存在一个根本性的差距：它们仅标记根本原因，而不标记将其连接到观察到的症状的传播路径，这在很大程度上简化了朴素模式匹配的任务。为了支持严格的评估，我们引入了 PAVE，这是一种逐步标记协议，它利用故障注入的已知干预措施来重建因果传播路径。该机制是前向验证：从原因到结果进行推理，而不是从症状向后推断。应用 PAVE 产生 OpenRCA 2.0（500 个实例），这是第一个跨系统 RCA 基准，为 LLM 代理提供逐步因果注释。在 11 个前沿法学硕士中，平均只有 20.7% 的案例能够成功恢复确切的根本原因。为了找到这个困难所在，我们放宽了标准，找到了所谓的无根据诊断：代理在 76.0% 的情况下至少识别出一个正确的根本原因服务，但只有 61.5% 的情况下将该服务置于已验证的因果传播路径中以观察到的症状。仅结果评估隐藏了这种失败模式；对于基于 LLM 的值得信赖的 RCA 代理来说，逐步的因果基础事实是缺失的部分。
+
+</details>
+
+---
+
+## 4. Proposal-Conditioned Latent Diffusion for Closed-Loop Traffic Scenario Generation / 用于闭环流量场景生成的提案条件潜在扩散
+
+**Date**: 2026-06-25 | **arXiv**: [2606.27123v1](http://arxiv.org/abs/2606.27123v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27123v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Closed-loop traffic simulation remains challenging because it must generate interactive multi-agent behaviors that are scene-consistent and controllable throughout rollout. Prior diffusion-based approaches achieve strong realism, but their computational cost can hinder deployment in time-constrained replanning loops for autonomous vehicle planning and simulation. We present a diffusion-based scenario generation framework conditioned on instance-centric scene context and multimodal proposal priors, with optional test-time guidance for shaping safety-critical behaviors. A compact action-latent representation and proposal-based initialization improve sampling efficiency and reduce per-step runtime without retraining. Experiments on the Waymo Open Motion Dataset demonstrate a favorable balance among realism, safety, and controllability across diverse interactive scenarios, while showing that test-time guidance enables systematic trade-offs among competing objectives.
+
+闭环交通模拟仍然具有挑战性，因为它必须生成在整个部署过程中场景一致且可控的交互式多智能体行为。先前基于扩散的方法实现了很强的现实性，但其计算成本可能会阻碍自动车辆规划和仿真的时间受限的重新规划循环中的部署。我们提出了一个基于扩散的场景生成框架，以实例为中心的场景上下文和多模式提议先验为条件，并提供可选的测试时指导来塑造安全关键行为。紧凑的动作潜在表示和基于建议的初始化提高了采样效率并减少了每步运行时间，而无需重新训练。 Waymo 开放运动数据集上的实验证明了跨不同交互场景的真实性、安全性和可控性之间的良好平衡，同时表明测试时指导可以在竞争目标之间进行系统权衡。
+
+</details>
+
+---
+
+## 5. Semantic Early-Stopping for Iterative LLM Agent Loops / 迭代 LLM 代理循环的语义提前停止
+
+**Date**: 2026-06-25 | **arXiv**: [2606.27009v1](http://arxiv.org/abs/2606.27009v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27009v1)
+
+**Categories**: cs.AI, cs.LG, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent large language model (LLM) loops, for example a Writer that drafts and a Critic that revises, are almost always terminated by a fixed iteration cap (max_iterations). This is a syntactic kill-switch: it is blind to whether the answer is still improving, so it over-spends tokens on easy inputs and truncates hard ones. We study semantic early-stopping: the loop halts when consecutive draft embeddings stop changing in meaning (cosine distance with a patience window) and the answer's measured quality stops improving. Our work makes three contributions. First, an honest theoretical footing: we prove deterministic termination and well-definedness and machine-check these claims, while treating the convergence of the distance sequence as an empirically tested conjecture rather than a (previously over-claimed) Banach contraction. Second, a judge-efficient evaluation protocol: we generate each question's full trajectory once, replay every stopping policy over the identical drafts, and cache every LLM-judge call, yielding a strictly paired efficiency-versus-quality comparison at low cost; we further separate operational tokens (charged to a policy) from evaluation tokens (a measurement instrument). Third, an empirical study on multi-hop retrieval-augmented question answering (HotpotQA). On the 60-question test split, a judge-free semantic stopper reduces operational tokens by 38% relative to max_iterations at parity quality (Delta-IS = -0.004, p = 0.81), whereas the full quality-gated variant is counter-productive because its per-round judging dominates cost. An oracle that selects the best round attains +0.115 Information Score over every practical policy (p ~ 4e-11), reframing the problem from "when to stop" (easy) to "which round is best" (open).
+
+多智能体大型语言模型 (LLM) 循环，例如起草的 Writer 和修订的 Critic，几乎总是由固定的迭代上限 (max_iterations) 终止。这是一个语法杀手开关：它不知道答案是否仍在改进，因此它在简单的输入上过度花费了令牌并截断了困难的输入。我们研究语义提前停止：当连续草稿嵌入的含义停止变化（带有耐心窗口的余弦距离）并且答案的测量质量停止提高时，循环就会停止。我们的工作做出了三个贡献。首先，一个诚实的理论基础：我们证明确定性终止和明确性，并对这些主张进行机器检查，同时将距离序列的收敛视为经过经验检验的猜想，而不是（之前被过度主张的）Banach 收缩。其次，法官高效的评估协议：我们生成每个问题的完整轨迹一次，在相同草稿上重播每个停止策略，并缓存每个法学硕士法官调用，以低成本产生严格配对的效率与质量比较；我们进一步将操作代币（记入策略）与评估代币（测量工具）分开。第三，多跳检索增强问答（HotpotQA）的实证研究。在 60 个问题的测试中，无判断的语义停止器在奇偶质量下相对于 max_iterations 减少了 38% 的操作令牌（Delta-IS = -0.004，p = 0.81），而完整的质量门控变体则适得其反，因为其每轮判断主导了成本。选择最佳回合的预言机在每项实际策略上都获得 +0.115 信息得分 (p ~ 4e-11)，将问题从“何时停止”（简单）重新定义为“哪一轮最好”（开放）。
+
+</details>
+
+---
+
+## 6. Chai: Agentic Discovery of Cryptographic Misuse Vulnerabilities / Chai：加密滥用漏洞的代理发现
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26933v1](http://arxiv.org/abs/2606.26933v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26933v1)
+
+**Categories**: cs.CR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI-assisted vulnerability discovery has proven effective for bug classes like memory safety, where instrumentation confirms memory violations and efficiently filters false positives. Many dangerous vulnerability classes, such as cryptographic misuse, however, lack any comparable instrumentation. In this work, we present Chai, an AI-based system that discovers and validates cryptographic misuse vulnerabilities through naturally occurring signals. To achieve this, Chai rethinks the classical technique of differential testing by leveraging AI to 1) improve precision for detecting real security issues in libraries, and 2) repurpose commonly overlooked discrepancies as leads for tangible vulnerabilities in downstream applications. In doing so, Chai inverts the prevailing paradigm of AI vulnerability discovery: instead of auditing one codebase for many flaws, it catalogs flaws at the library level and propagates them across a cryptographic dependency graph, delivering compounding efficiency gains. We evaluate Chai across X.509, JWT, and SAML libraries. Chai discovered a previously unknown critical vulnerability in an SSL library that powers billions of devices, along with security bugs in one library behind a major web browser and another in major Linux distributions. In total, these techniques surfaced over 100 vulnerabilities.
+
+事实证明，人工智能辅助的漏洞发现对于内存安全等错误类别是有效的，其中仪器可以确认内存违规并有效过滤误报。然而，许多危险的漏洞类别，例如密码滥用，缺乏任何类似的工具。在这项工作中，我们提出了 Chai，这是一个基于人工智能的系统，可以通过自然发生的信号发现并验证加密滥用漏洞。为了实现这一目标，Chai 重新思考了差异测试的经典技术，利用人工智能来 1）提高检测图书馆中实际安全问题的精度，2）重新利用经常被忽视的差异作为下游应用程序中明显漏洞的线索。在此过程中，Chai 颠覆了人工智能漏洞发现的流行模式：它不是审核一个代码库中的许多缺陷，而是在库级别对缺陷进行分类，并将它们传播到加密依赖图上，从而实现复合效率提升。我们跨 X.509、JWT 和 SAML 库评估 Chai。 Chai 在为数十亿台设备提供支持的 SSL 库中发现了一个以前未知的严重漏洞，同时在主要 Web 浏览器背后的一个库和主要 Linux 发行版中的另一个库中发现了安全漏洞。这些技术总共暴露了 100 多个漏洞。
+
+</details>
+
+---
+
+## 7. Confidence-Aware Tool Orchestration for Robust Video Understanding / 用于强大视频理解的信心感知工具编排
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26904v1](http://arxiv.org/abs/2606.26904v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26904v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video reasoning language models implicitly assume that every input frame is equally reliable. This leads to what we term the Blind Trust Problem: under realistic perturbations such as motion blur, glare, or occlusion, frontier video reasoning models can suffer 15-30%p accuracy drops on real-world embodied benchmarks, while remaining unaware that their visual evidence has been degraded. To address this challenge, we propose Robust-TO, an agentic video understanding framework that explicitly integrates per-frame trustworthiness into every stage of reasoning. Robust-TO organizes heterogeneous visual perception tools under a unified evidence interface. Each tool receives a sub-query derived from the original question and a set of trustworthy frames selected by the reliability-relevance score. It returns evidence in a shared format: a concrete prediction (e.g., a bounding box, motion trajectory, recognized text, or action label), temporal grounding, and a calibrated reliability score. During reasoning, these calibrated scores guide evidence weighting in a three-tier synthesis process (high/medium/low) and define a confidence-cost GRPO reward that jointly optimizes correctness, evidence reliability, and efficiency. On two video reasoning benchmarks spanning eight tasks, Robust-TO achieves 56.4% average accuracy on clean inputs, surpassing the strongest open-source baseline by 10.6%p and outperforming Gemini-2.5-Pro (46.2%). Under five realistic corruption types, Robust-TO maintains 54.3% average accuracy, 5.8%p above the strongest open-source baseline, while exhibiting the smallest clean-to-corrupted accuracy drop among all compared methods.
+
+视频推理语言模型隐含地假设每个输入帧都同样可靠。这导致了我们所说的“盲目信任问题”：在运动模糊、眩光或遮挡等现实扰动下，前沿视频推理模型在现实世界的具体基准上可能会出现 15-30%p 的精度下降，同时仍然不知道其视觉证据已被降级。为了应对这一挑战，我们提出了 Robust-TO，这是一种代理视频理解框架，它将每帧的可信度明确集成到推理的每个阶段。 Robust-TO 在统一的证据接口下组织异构视觉感知工具。每个工具都会接收从原始问题派生的子查询以及根据可靠性相关性得分选择的一组可信框架。它以共享格式返回证据：具体预测（例如，边界框、运动轨迹、识别的文本或动作标签）、时间基础和校准的可靠性得分。在推理过程中，这些校准分数指导三层综合过程（高/中/低）中的证据权重，并定义置信成本 GRPO 奖励，共同优化正确性、证据可靠性和效率。在涵盖八个任务的两个视频推理基准测试中，Robust-TO 在干净输入上实现了 56.4% 的平均准确率，比最强的开源基线高出 10.6%p，并且优于 Gemini-2.5-Pro (46.2%)。在五种实际的损坏类型下，Robust-TO 保持了 54.3% 的平均准确度，比最强的开源基线高出 5.8%p，同时在所有比较方法中表现出最小的干净到损坏的准确度下降。
+
+</details>
+
+---
+
+## 8. AgentX: Towards Agent-Driven Self-Iteration of Industrial Recommender Systems / AgentX：迈向代理驱动的工业推荐系统自我迭代
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26859v1](http://arxiv.org/abs/2606.26859v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26859v1)
+
+**Categories**: cs.AI, cs.CL, cs.IR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recommendation algorithm iteration is moving from an artisanal, engineer-bound process toward an industrialized research loop, but this transition remains blocked by a structural execution bottleneck: the idea-to-launch cycle still depends on human engineers to generate hypotheses, modify production code, launch A/B experiments, and attribute online results. Innovation therefore scales linearly with headcount rather than compounding with evidence, compute, and accumulated experimental knowledge. We present AgentX, a production-deployed multi-agent system that fundamentally restructures this production function. AgentX operates as a self-evolving development engine: it autonomously generates, implements, evaluates, and learns from recommendation experiments at a scale and pace that no manual workflow can sustain.   The system orchestrates four tightly coupled stages in a closed loop. A Brainstorm Agent synthesizes evidence from historical experiments, system architecture, data analysis, and external research into ranked, executable proposals. A Developing Agent translates each proposal into production-ready code through repository-grounded generation and multi-dimensional reliability verification. An Evaluation Agent conducts safe online rollout with guardrail-vetoed A/B judgment, converting both successes and failures into structured knowledge assets. A Harness Evolution layer (SGPO) then distills execution trajectories into semantic-gradient updates that continuously sharpen the agents themselves -- making the system not merely automated, but self-improving.
+
+推荐算法的迭代正在从手工的、工程师束缚的过程转向工业化的研究循环，但这种转变仍然受到结构性执行瓶颈的阻碍：从想法到发布的周期仍然依赖于人类工程师来生成假设、修改生产代码、启动 A/B 实验和归因在线结果。因此，创新与员工数量成线性关系，而不是与证据、计算和积累的实验知识相结合。我们提出了 AgentX，一个生产部署的多代理系统，它从根本上重构了这种生产函数。 AgentX 作为一个自我进化的开发引擎运行：它以手动工作流程无法维持的规模和速度自动生成、实施、评估和学习推荐实验。   该系统在一个闭环中协调四个紧密耦合的阶段。头脑风暴代理将来自历史实验、系统架构、数据分析和外部研究的证据综合成排序的可执行提案。开发代理通过基于存储库的生成和多维可靠性验证将每个提案转换为生产就绪的代码。评估代理通过护栏否决的 A/B 判断进行安全的在线部署，将成功和失败转化为结构化知识资产。然后，利用演化层（SGPO）将执行轨迹提炼为语义梯度更新，不断增强代理本身——使系统不仅自动化，而且能够自我改进。
+
+</details>
+
+---
+
+## 9. The Capability Frontier: Benchmarks Miss 82% of Model Performance / 能力前沿：基准测试未达到模型性能的 82%
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26836v1](http://arxiv.org/abs/2606.26836v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26836v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing benchmarks typically report accuracy for a single model on a single run. This systematically understates real-world LLM capabilities, particularly under heterogeneous data distributions: (i) different models get different questions correct according to their specializations, and (ii) given a budget, multiple generations can be sampled and selectively retained. To quantify this gap, we introduce the Capability Frontier: a Pareto frontier over a set of models that characterizes the best achievable performance at each cost level under optimal selection across models and generations (i.e., via an oracle). Our construction corrects for two opposing biases: underestimation from single-model evaluation and overestimation from taking maxima over noisy samples. We study 21 LLMs across 16 widely used benchmarks spanning coding, reasoning, medicine, factuality, instruction following, and agentic tasks, comparing Capability Frontier performance at matched cost to each benchmark's top-performing model. Correcting for single-model evaluation yields a 54% error rate reduction; additionally correcting for single runs yields an 82% improvement, with SOTA accuracy matched at 85% cost reduction. Complementing these empirical results, we use controlled probabilistic simulations to show that higher query topic entropy produces a near-monotonic increase in the performance gap between oracle routing and the best single model. Our findings suggest collective LLM capabilities are substantially underestimated, with implications for evaluation and deployment in data-heterogeneous, multi-domain settings.
+
+现有的基准测试通常报告单个模型在单次运行中的准确性。这系统地低估了现实世界的法学硕士能力，特别是在异构数据分布下：（i）不同的模型根据其专业化正确回答不同的问题，以及（ii）给定预算，可以对多代进行采样并有选择地保留。为了量化这一差距，我们引入了能力前沿：一组模型上的帕累托前沿，它描述了在跨模型和代际的最佳选择（即通过预言机）下每个成本水平上可实现的最佳性能。我们的构造纠正了两个相反的偏差：单模型评估的低估和在噪声样本上取最大值的高估。我们研究了跨 16 个广泛使用的基准的 21 个法学硕士，涵盖编码、推理、医学、事实性、指令遵循和代理任务，将匹配成本下的能力前沿性能与每个基准的最佳表现模型进行比较。纠正单模型评估可将错误率降低 54%；另外对单次运行进行校正可提高 82%，SOTA 准确度可降低 85% 的成本。作为对这些经验结果的补充，我们使用受控概率模拟来表明，较高的查询主题熵会导致预言机路由和最佳单一模型之间的性能差距近乎单调增加。我们的研究结果表明，法学硕士的集体能力被大大低估，这对数据异构、多领域环境中的评估和部署产生影响。
+
+</details>
+
+---
+
+## 10. MIRROR: Novelty-Constrained Memory-Guided MCTS Red-Teaming for Agentic RAG / MIRROR：针对 Agentic RAG 的新颖性受限的内存引导 MCTS 红队
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26793v1](http://arxiv.org/abs/2606.26793v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26793v1)
+
+**Categories**: cs.CR, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal agentic retrieval-augmented generation (RAG) systems expand the attack surface beyond prompt injection to include text poisoning, image injection, direct-query attacks, and orchestrator-level tool manipulation. Existing red-teaming approaches are typically surface-specific and often recycle known attack templates; on text-poisoning benchmarks we measure 73-84% exact duplication. We present MIRROR, a unified cross-surface framework that performs memory-guided Monte Carlo tree search while conditioning candidate generation on retrieved context under an explicit novelty constraint. A deterministic Novelty Gate rejects any candidate matching the retrieval set under normalized comparison, allowing retrieval to inform search priors without enabling prompt copying. Across four attack surfaces on a multimodal agentic RAG target, MIRROR attains 76% ASR on image poisoning compared with 52% for baselines, 97% ASR on orchestrator attacks at half the query cost, and the lowest cross-surface variance (coefficient of variation 0.47). In contrast, specialized baselines collapse across surfaces: suffix optimization reaches 79% ASR on text poisoning but 1% on direct queries. We release ART-SafeBench with 41,815 in-package records and runtime adapters yielding 41,991+ total records across four surfaces.
+
+多模式代理检索增强生成 (RAG) 系统将攻击面扩展到提示注入之外，包括文本中毒、图像注入、直接查询攻击和协调器级工具操纵。现有的红队方法通常是特定于表面的，并且经常重复使用已知的攻击模板；在文本中毒基准测试中，我们测量到 73-84% 的精确重复。我们提出了 MIRROR，一个统一的跨表面框架，它执行内存引导的蒙特卡洛树搜索，同时在显式新颖性约束下根据检索到的上下文调节候选生成。确定性的新颖性门会拒绝在标准化比较下与检索集匹配的任何候选者，从而允许检索在不启用提示复制的情况下告知搜索先验。在多模式代理 RAG 目标上的四个攻击面中，MIRROR 在图像中毒方面实现了 76% 的 ASR，而基线的 ASR 为 52%；在协调器攻击方面实现了 97% 的 ASR，查询成本只有一半，并且跨面方差最低（变异系数 0.47）。相比之下，专门的基线跨表面崩溃：后缀优化在文本中毒方面达到 79% ASR，但在直接查询方面达到 1%。我们发布了 ART-SafeBench，其中包含 41,815 条包内记录和运行时适配器，在四个表面上生成了超过 41,991 条总记录。
+
+</details>
+
+---
+
+## 11. OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning / OPID：代理强化学习的策略技能蒸馏
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26790v1](http://arxiv.org/abs/2606.26790v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26790v1)
+
+**Categories**: cs.CL
+
+**Code**: https://github.com/jinyangwu/OPID/tree/main.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Outcome-based reinforcement learning provides a stable optimization backbone for language agents, but its sparse trajectory-level rewards provide little guidance on which intermediate decisions should be reinforced or suppressed. On-policy self-distillation offers dense token-level supervision, yet existing skill-conditioned variants often rely on external skill memories or retrieved privileged context, which are costly to maintain and can be mismatched with the state distribution induced by the current policy in multi-turn interaction. We propose \textbf{OPID} (\textbf{O}n-\textbf{P}olicy Sk\textbf{i}ll \textbf{D}istillation), a framework that extracts skill supervision directly from completed on-policy trajectories. OPID represents trajectory hindsight as hierarchical skills: episode-level skills capture global workflows or failure-avoidance rules, while step-level skills capture local decision knowledge at critical timesteps. A critical-first routing mechanism uses step-level skills when critical decisions are identified and falls back to episode-level skills as default guidance otherwise. The selected skill is injected into the interaction history, allowing the old policy to re-score the same sampled response under both original and skill-augmented contexts. The resulting log-probability shift yields a token-level self-distillation advantage, which is combined with the outcome advantage for policy optimization. OPID thus preserves RL as the primary training objective while introducing dense, distribution-matched hindsight supervision. Experiments on ALFWorld, WebShop and Search-based QA demonstrate that OPID generally improves agent performance, sample efficiency, and robustness over outcome-only RL and existing skill-distillation baselines. Our code is available at https://github.com/jinyangwu/OPID/tree/main.
+
+基于结果的强化学习为语言代理提供了稳定的优化主干，但其稀疏的轨迹级奖励几乎无法提供关于应该强化或抑制哪些中间决策的指导。策略自蒸馏提供了密集的代币级监督，但现有的技能条件变体通常依赖于外部技能记忆或检索到的特权上下文，维护成本高昂，并且可能与多轮交互中当前策略引起的状态分布不匹配。我们提出 \textbf{OPID} (\textbf{O}n-\textbf{P}olicy Sk\textbf{i}ll \textbf{D}istillation)，一个直接从完整的策略轨迹中提取技能监督的框架。 OPID 将轨迹后见之明表示为分层技能：事件级技能捕获全局工作流程或故障避免规则，而步骤级技能捕获关键时间步长的本地决策知识。当确定关键决策时，关键优先路由机制使用步骤级技能，否则会回退到事件级技能作为默认指导。选定的技能被注入交互历史记录中，允许旧策略在原始和技能增强的上下文中对相同的采样响应重新评分。由此产生的对数概率变化产生了代币级别的自蒸馏优势，该优势与策略优化的结果优势相结合。因此，OPID 将强化学习保留为主要训练目标，同时引入密集的、分布匹配的事后监督。 ALFWorld、WebShop 和基于搜索的 QA 实验表明，与仅结果 RL 和现有技能蒸馏基线相比，OPID 通常可以提高代理性能、样本效率和鲁棒性。我们的代码可在 https://github.com/jinyangwu/OPID/tree/main 获取。
+
+</details>
+
+---
+
+## 12. EGG: An Expert-Guided Agent Framework for Kernel Generation / EGG：专家引导的内核生成代理框架
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26758v1](http://arxiv.org/abs/2606.26758v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26758v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+High-performance GPU kernels are critical for reducing the exponentially growing computational costs of large language models (LLMs), but their development heavily relies on manual tuning by domain experts. While recent advances in LLM-based approaches show promise for automating kernel generation, they still struggle to achieve both correctness and high performance. This limitation primarily arises from the lack of domain-specific optimization guidance, hindering effective exploration of the optimization space. We propose EGG, an Expert-Guided Agent Framework for Kernel Generation, which incorporates expert optimization principles to guide LLMs' decisions. Inspired by expert workflows, we decompose kernel generation into two hierarchical stages: 1) algorithmic structure design, which establishes a high-quality computational structure foundation; 2) hardware-specific tuning, which performs targeted adjustments through parallel mapping, tensor tiling, and memory optimization. This staged decomposition defines explicit optimization objectives, structuring the design space to achieve progressive refinement. To this end, a stage-aware multi-agent collaboration mechanism is designed for inter and intra-stage context management, ensuring stable optimization trajectories. Experiments on KernelBench and real-world workloads show that EGG achieves a 2.13x average speedup over PyTorch, outperforming existing agent-based and RL-based approaches.
+
+高性能 GPU 内核对于降低大型语言模型 (LLM) 呈指数级增长的计算成本至关重要，但其开发在很大程度上依赖于领域专家的手动调整。虽然基于 LLM 的方法的最新进展显示出自动化内核生成的前景，但它们仍然难以同时实现正确性和高性能。这种限制主要源于缺乏特定领域的优化指导，阻碍了优化空间的有效探索。我们提出了 EGG，一种用于内核生成的专家引导代理框架，它结合了专家优化原则来指导法学硕士的决策。受专家工作流程的启发，我们将内核生成分解为两个层次阶段：1）算法结构设计，建立高质量的计算结构基础； 2）特定于硬件的调优，通过并行映射、张量平铺和内存优化来进行有针对性的调整。这种分阶段分解定义了明确的优化目标，构建设计空间以实现逐步细化。为此，设计了一种阶段感知的多智能体协作机制，用于阶段间和阶段内上下文管理，确保稳定的优化轨迹。 KernelBench 和实际工作负载的实验表明，EGG 的平均加速比 PyTorch 提高了 2.13 倍，优于现有的基于代理和基于 RL 的方法。
+
+</details>
+
+---
+
+## 13. Socratic agents for autonomous scientific discovery in high-dimensional physical systems / 高维物理系统中自主科学发现的苏格拉底代理
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26722v1](http://arxiv.org/abs/2606.26722v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26722v1)
+
+**Categories**: cs.AI, physics.optics
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The automation of scientific discovery has reached an inflection point. While AI systems now operate instruments, optimize parameters and generate hypotheses, most remain procedural: they execute workflows fixed by human designers. True autonomous science demands epistemic autonomy--the capacity to construct, challenge and revise physical explanations in response to evidence. Here we introduce AHOIS, a multi-agent AI scientist that embeds Socratic midwifery into closed-loop experimentation. A physics-critic agent interrogates hypotheses through causal questioning, constraint checking, counterexample generation and falsification-criteria formulation. We evaluate AHOIS on a real multimode-fibre optical platform, a high-dimensional system with complex wave transformations, indirect detection, environmental drift and multi-modal acquisition. Without prior encoding schemes, classifiers or speckle models, the system autonomously proposed and validated a random-interference encoding hypothesis, discovered task-adaptive sparse-measurement strategies, diagnosed distinct failure modes (encoding instability, fluorescence contamination and detector noise) and translated a published imaging protocol into an executable workflow on a non-original configuration. The discovered encoding yielded 16x16 measurements with effective rank 56.9 and classification accuracies of 76.97% on MNIST and 83.17% on Fashion-MNIST. Ablations show that Socratic interrogation improves physical consistency, hypothesis completeness, uncertainty calibration and experimental-plan validity. These results establish a route from workflow automation towards evidence-grounded, self-correcting autonomous discovery in complex physical environments.
+
+科学发现的自动化已经达到了一个拐点。虽然人工智能系统现在可以操作仪器、优化参数并生成假设，但大多数仍然是程序性的：它们执行由人类设计师固定的工作流程。真正的自主科学需要认知自主——根据证据构建、挑战和修改物理解释的能力。在这里，我们介绍 AHOIS，这是一位多智能体人工智能科学家，它将苏格拉底式助产术嵌入到闭环实验中。物理评论家通过因果质疑、约束检查、反例生成和证伪标准制定来质疑假设。我们在真实的多模光纤光学平台上评估 AHOIS，这是一个具有复杂波变换、间接检测、环境漂移和多模态采集的高维系统。在没有事先的编码方案、分类器或散斑模型的情况下，系统自主提出并验证随机干扰编码假设，发现任务自适应稀疏测量策略，诊断不同的故障模式（编码不稳定、荧光污染和探测器噪声），并将已发布的成像协议转换为非原始配置上的可执行工作流程。发现的编码产生了 16x16 测量值，有效排名为 56.9，在 MNIST 上的分类准确度为 76.97%，在 Fashion-MNIST 上的分类准确度为 83.17%。消融表明，苏格拉底式询问提高了物理一致性、假设完整性、不确定性校准和实验计划的有效性。这些结果建立了一条从工作流程自动化到复杂物理环境中基于证据的、自我纠正的自主发现的路线。
+
+</details>
+
+---
+
+## 14. HiLSVA: Design and Evaluation of a Human-in-the-Loop Agentic System for Scientific Visualization / HiLSVA：用于科学可视化的人在环代理系统的设计和评估
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26614v1](http://arxiv.org/abs/2606.26614v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26614v1)
+
+**Categories**: cs.HC, cs.AI, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language model (LLM) agents enable natural language interaction for scientific visualization (SciVis). Still, prior systems have essentially prioritized autonomy over human analytical control, thereby limiting transparency and human oversight. We present HiLSVA, a human-in-the-loop agentic system that supports mixed-initiative SciVis workflows. HiLSVA integrates a plan-first multi-agent architecture with explicit human oversight, stepwise provenance tracking, and learn-at-test-time adaptation from user feedback. The system supports fluid handoff between humans and agents through both natural language and direct manipulation of visualizations, while sandboxed execution ensures safe, reproducible workflows. In doing so, HiLSVA reframes agentic SciVis as a collaborative process that augments, rather than replaces, human analytical reasoning. We evaluate HiLSVA through representative case studies and a controlled user study with twelve participants of varying expertise across multiple autonomy settings. Results show that mixed-initiative interaction improves task completion, user control, and workflow transparency across different levels of user expertise, while revealing a tradeoff between execution efficiency and human oversight. These findings highlight the importance of human-centered design in agentic SciVis and guide the development of future collaborative visualization systems. We encourage readers to explore our demo video, case studies, and source code at https://hilsva.github.io/.
+
+大语言模型 (LLM) 代理支持科学可视化 (SciVis) 的自然语言交互。尽管如此，先前的系统本质上还是将自主性置于人类分析控制之上，从而限制了透明度和人类监督。我们推出了 HiLSVA，这是一种支持混合主动 SciVis 工作流程的人机交互代理系统。 HiLSVA 将计划优先的多代理架构与明确的人工监督、逐步来源跟踪以及根据用户反馈进行测试时学习适应相集成。该系统通过自然语言和可视化的直接操作支持人类和代理之间的流畅切换，而沙盒执行则确保安全、可重复的工作流程。在此过程中，HiLSVA 将主体 SciVis 重新构建为一个协作过程，增强而不是取代人类分析推理。我们通过代表性案例研究和受控用户研究来评估 HiLSVA，该研究涉及 12 名具有不同专业知识、跨多个自治设置的参与者。结果表明，混合主动交互可以改善不同级别的用户专业知识的任务完成、用户控制和工作流程透明度，同时揭示执行效率和人工监督之间的权衡。这些发现强调了以人为本的设计在代理 SciVis 中的重要性，并指导未来协作可视化系统的开发。我们鼓励读者探索我们的演示视频、案例研究和源代码：https://hilsva.github.io/。
+
+</details>
+
+---
+
+## 15. EvoOptiGraph: Weakness-Driven Coevolution via Graph-Based Structural Generation for Optimization Modeling / EvoOptiGraph：通过基于图的结构生成进行弱点驱动的协同进化以进行优化建模
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26578v1](http://arxiv.org/abs/2606.26578v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26578v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Automating optimization modeling from natural language with large language models (LLMs) faces two key challenges. First, training corpora lack structural diversity. Second, data generation pipelines remain static and decoupled from model learning. To address these challenges, we propose EvoOptiGraph, a novel framework where data and model co-evolve, driven by model weaknesses. EvoOptiGraph represents each mixed-integer linear program (MILP) as an attributed bipartite graph and applies validity-preserving evolutionary operators to generate structurally diverse instances. The evolved graphs are converted into solver code and natural language via deterministic compilation and verified back-translation. Training proceeds in two stages: supervised fine-tuning (SFT) on an initial dataset, followed by reinforcement learning with verifiable rewards (RLVR), where graph-derived weakness signals guide the generation of new instances targeting the model's failures. This forms a closed loop that continuously updates the training distribution. Empirical results on six public datasets show that EvoOptiGraph significantly outperforms larger generalist models, agentic methods, and specialized baselines in accuracy, executability, and generalization. These results demonstrate that targeted data-model coevolution is an effective strategy for improving LLMs on optimization modeling tasks.
+
+使用大型语言模型 (LLM) 从自然语言自动优化建模面临两个关键挑战。首先，训练语料库缺乏结构多样性。其次，数据生成管道保持静态并与模型学习分离。为了应对这些挑战，我们提出了 EvoOptiGraph，这是一种新颖的框架，其中数据和模型在模型弱点的驱动下共同进化。 EvoOptiGraph 将每个混合整数线性程序 (MILP) 表示为属性二部图，并应用保留有效性的进化算子来生成结构多样的实例。通过确定性编译和验证的反向翻译，将演化后的图转换为求解器代码和自然语言。训练分两个阶段进行：在初始数据集上进行监督微调（SFT），然后进行具有可验证奖励的强化学习（RLVR），其中图导出的弱点信号指导针对模型失败的新实例的生成。这就形成了一个不断更新训练分布的闭环。六个公共数据集的实证结果表明，EvoOptiGraph 在准确性、可执行性和泛化方面显着优于更大的通才模型、代理方法和专业基线。这些结果表明，有针对性的数据模型协同进化是改进 LLM 优化建模任务的有效策略。
+
+</details>
+
+---
+
+## 16. IDEA: Insensitive to Dynamics Mismatch via Effect Alignment for Sim-to-Real Transfer in Multi-Agent Control / IDEA：通过多智能体控制中模拟到真实传输的效果对齐对动态不匹配不敏感
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26575v1](http://arxiv.org/abs/2606.26575v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26575v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Complex multi-agent control tasks remain challenging for traditional rule-based and model-based approaches, motivating the adoption of learning-based methods. However, learning-based methods often struggle with sim-to-real transfer because they rely on accurate dynamics modeling or system identification and learn policies in low-level control spaces that are highly sensitive to dynamics mismatch, making them costly and fragile in complex environments. To address this issue, we propose a sim-to-real method for multi-agent control, which is insensitive to dynamics mismatch via effect alignment. Our method combines random environmental structure with discrete semantic actions through closed-loop control, elevating policy learning to a semantic abstraction level. Additionally, we develop an action synchronization mechanism that mitigates inter-agent action timing mismatches, thereby enhancing the temporal consistency of the system. Experiments on four multi-agent navigation tasks demonstrate that our method substantially improves training efficiency over mainstream transfer methods and achieves higher success rates in real-world scenarios, thereby improving the robustness and deployment stability of multi-agent systems under dynamics mismatch.
+
+对于传统的基于规则和基于模型的方法来说，复杂的多智能体控制任务仍然具有挑战性，这促使人们采用基于学习的方法。然而，基于学习的方法通常难以实现从模拟到真实的转换，因为它们依赖于精确的动态建模或系统识别，并在对动态失配高度敏感的低级控制空间中学习策略，这使得它们在复杂环境中成本高昂且脆弱。为了解决这个问题，我们提出了一种用于多智能体控制的模拟真实方法，该方法对通过效果对齐的动态失配不敏感。我们的方法通过闭环控制将随机环境结构与离散语义动作结合起来，将策略学习提升到语义抽象水平。此外，我们开发了一种动作同步机制，可以减轻代理间动作时序不匹配的情况，从而增强系统的时间一致性。对四个多智能体导航任务的实验表明，我们的方法比主流迁移方法显着提高了训练效率，并在现实场景中获得了更高的成功率，从而提高了多智能体系统在动态失配下的鲁棒性和部署稳定性。
+
+</details>
+
+---
+
+## 17. Perception, Verdict, and Evolution: Hindsight-Driven Self-Refining Forensics Agent for AI-Generated Image Detection / 感知、判决和进化：用于人工智能生成图像检测的后见之明驱动的自我完善取证代理
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26552v1](http://arxiv.org/abs/2606.26552v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26552v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The rapid advancement of generative models presents a significant challenge to existing deepfake detection methods, particularly given the widespread dissemination of highly realistic AI-generated images. Although Multimodal Large Language Models (MLLMs) show strong potential for this task, existing approaches suffer from two key limitations: insufficient sensitivity to fine-grained forensic artifacts and reliance on static synthetic supervision from frontier models, leading to limited flexibility and high-cost. To address these issues, we propose ForeAgent, an agentic forensics framework for AI-generated image detection with iterative self-evolution. First, ForeAgent adopts a Perception-Verdict architecture that aggregates multi-view cues spanning semantic, spatial, and frequency-domain features, and leverages an MLLM as a verdict module to fuse these signals for a logical-grounded verdict. Second, to enable continual self-improvement, we introduce a Hindsight-Driven Self-Refining strategy following a Sampling-Reflection-Evolution paradigm. The agent performs inference rollouts on training instances. Guided by ground-truth labels as hindsight, it reflects on failure cases and low-quality reasoning trajectories to regenerate higher-quality reasoning traces. These synthesized samples are then strictly filtered through a dual-expert quality gating module. ForeAgent continuously evolves via fine-tuning on self-curated high-quality samples. Extensive experiments demonstrate that ForeAgent achieves state-of-the-art performance on the Chameleon benchmark, reaching 82.18% accuracy (+16.41% over AIDE), and achieves 93.3% mean accuracy on AIGCDetect-Benchmark across 16 generators. In addition, external evaluation shows that ForeAgent produces more consistent and causally grounded reasoning compared to GPT-5 and GPT-5-mini.
+
+生成模型的快速发展对现有的深度伪造检测方法提出了重大挑战，特别是考虑到高度逼真的人工智能生成图像的广泛传播。尽管多模态大型语言模型（MLLM）在这项任务上显示出强大的潜力，但现有方法存在两个关键限制：对细粒度取证工件的敏感性不足，以及依赖前沿模型的静态综合监督，导致灵活性有限且成本高昂。为了解决这些问题，我们提出了 ForeAgent，这是一种代理取证框架，用于通过迭代自我进化来检测人工智能生成的图像。首先，ForeAgent 采用感知-判决架构，聚合跨越语义、空间和频域特征的多视图线索，并利用 MLLM 作为判决模块来融合这些信号，以得出基于逻辑的判决。其次，为了实现持续的自我改进，我们引入了遵循采样-反思-进化范式的后见之明驱动的自我完善策略。代理对训练实例执行推理部署。在后见之明的事实标签的指导下，它反思失败案例和低质量推理轨迹，以重新生成更高质量的推理轨迹。然后，这些合成的样品通过双专家质量门控模块进行严格过滤。 ForeAgent 通过对自行策划的高质量样本进行微调，不断发展。大量实验表明，ForeAgent 在 Chameleon 基准上实现了最先进的性能，达到 82.18% 的准确率（比 AIDE 高出 16.41%），并在 16 个生成器的 AIGCDetect-Benchmark 上实现了 93.3% 的平均准确率。此外，外部评估表明，与 GPT-5 和 GPT-5-mini 相比，ForeAgent 产生的推理更加一致且基于因果关系。
+
+</details>
+
+---
+
+## 18. Theory-Scale Auto-Formalization of Logics for Computer Science / 计算机科学逻辑的理论规模自动形式化
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26525v1](http://arxiv.org/abs/2606.26525v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26525v1)
+
+**Categories**: cs.LG, cs.LO, cs.PL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Auto-formalization is critical for scalable formal verification, but existing progress largely focuses on isolated statements, while theory-scale auto-formalization, which coherently translates hundreds of interdependent definitions, lemmas, and theorems, remains open due to challenges in consistency, faithfulness, scalability, and correctness. In this paper, we introduce LCS-Bench, a stand-alone, theory-scale benchmark based on Logics for Computer Science. LCS-Bench is built through a novel semi-automated agentic pipeline that leverages concept graphs, formal signature planning, issue tracking, sorry-filling with counter-example search, complemented by faithfulness review from human experts. The resulting artifact covers 327 textbook items, over 4,076 Lean declarations, and more than 85K lines of Lean code. The dataset supports broad evaluation through a data engine that automatically derives five tracks of evaluation benchmarks, measuring different aspects of auto-formalization and theorem-proving capabilities. We also introduce a novel evaluation protocol featuring definitional equivalence checkers, enabling more fine-grained and faithful assessment. Through extensive evaluation on 14 models, we demonstrate that (1) LCS-Bench is of high quality, consistent, and faithful; (2) the benchmark is challenging, with state-of-the-art models achieving only 20.1% on auto-formalization tasks; and (3) our analysis reveals key findings regarding theory-scale auto-formalization and suggests promising directions for future work.
+
+自动形式化对于可扩展的形式验证至关重要，但现有的进展主要集中在孤立的陈述上，而理论规模的自动形式化，它连贯地翻译了数百个相互依赖的定义、引理和定理，由于一致性、忠实性、可扩展性和正确性方面的挑战，仍然处于开放状态。在本文中，我们介绍了 LCS-Bench，这是一种基于计算机科学逻辑的独立理论规模基准。 LCS-Bench 是通过一种新颖的半自动代理管道构建的，该管道利用概念图、正式签名规划、问题跟踪、反例搜索来弥补遗憾，并辅以人类专家的忠实审查。生成的工件涵盖 327 个教科书项目、超过 4,076 个精益声明以及超过 85K 行精益代码。该数据集通过数据引擎支持广泛的评估，该引擎自动导出评估基准的五个轨道，测量自动形式化和定理证明能力的不同方面。我们还引入了一种新颖的评估协议，具有定义等价检查器，可以实现更细粒度和更忠实的评估。通过对14个模型的广泛评估，我们证明：（1）LCS-Bench质量高、一致、忠实； (2) 基准测试具有挑战性，最先进的模型在自动形式化任务上仅取得 20.1% 的成绩； （3）我们的分析揭示了有关理论规模自动形式化的关键发现，并为未来的工作提出了有希望的方向。
+
+</details>
+
+---
+
+## 19. Localizing RL-Induced Tool Use to a Single Crosscoder Feature / 将 RL 引发的工具使用本地化为单个交叉编码器功能
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26474v1](http://arxiv.org/abs/2606.26474v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26474v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Fine-tuning through RL reshapes the internal representations of language models to enable agentic behaviors such as tool use, yet the mechanistic basis of these changes remains poorly understood. While RL substantially improves structured tool-call generation, it is unclear which features emerge, which are preserved, and whether identified features can be leveraged for retraining-free behavioral control. In this work, we show that $\textit{Dedicated Feature Crosscoders (DFC)}$ isolate a compact set of RL-specific features that mediate tool-calling capability in $\texttt{Qwen2.5-3B}$. Across a $48$-crosscoder hyperparameter sweep, encode-decode reconstruction improves the RL model's tool correctness by $+31.1 \pm {9.7}$ pp and passively transfers tool-calling ability to the frozen base model by $+6.8 \pm 5.0$ pp which we call a $\textit{capability spillover}$. Our findings show that DFC partitioning concentrates RL-introduced capability into a minimal, steerable feature set that enables runtime behavioral control of agentic LLMs.
+
+通过强化学习进行微调重塑了语言模型的内部表示，以实现工具使用等代理行为，但这些变化的机制基础仍然知之甚少。虽然强化学习极大地改进了结构化工具调用的生成，但尚不清楚哪些特征出现、哪些特征被保留，以及识别的特征是否可以用于无需再训练的行为控制。在这项工作中，我们展示了 $\textit{专用特征交叉编码器 (DFC)}$ 隔离了一组紧凑的 RL 特定特征，这些特征在 $\texttt{Qwen2.5-3B}$ 中调节工具调用能力。在 $48$ 交叉编码器超参数扫描中，编码-解码重建将 RL 模型的工具正确性提高了 $+31.1 \pm {9.7}$ pp，并通过 $+6.8 \pm 5.0$ pp 被动地将工具调用能力转移到冻结的基础模型，我们称之为 $\textit{能力溢出}$。我们的研究结果表明，DFC 分区将 RL 引入的功能集中到最小的、可操纵的功能集中，从而实现代理 LLM 的运行时行为控制。
+
+</details>
+
+---
+
+## 20. Optimizing CUDA like a Human: Micro-Profiling Tools as Expert Surrogates for LLM-Based GPU Kernel Optimization / 像人类一样优化 CUDA：微分析工具作为基于 LLM 的 GPU 内核优化的专家替代品
+
+**Date**: 2026-06-24 | **arXiv**: [2606.26453v1](http://arxiv.org/abs/2606.26453v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26453v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present KernelPro, a closed-loop multi-agent system that automatically generates, profiles, and iteratively optimizes GPU kernel code by integrating large language model (LLM) code generation with hardware profiler feedback and pluggable bottleneck detection tools. KernelPro introduces four contributions: (1) a semantic feedback operator that encodes expert heuristics as pluggable micro-profiling tools, transforming raw hardware metrics into actionable natural language guidance; (2) a two-stage tool invocation architecture where roofline-based bottleneck classification filters which specialized analysis tools execute, combining kernel-level (ncu), instruction-level (SASS), and system-level (nsys) profiling; (3) a domain-adapted MCTS with progressive widening, asymmetric branching, log-reward calibration, dead-end pruning, and search memory for cross-iteration learning; and (4) direct CuTe source-level code generation via autonomous code search over the CUTLASS/CuTe codebase. On KernelBench, KernelPro achieves geometric mean speedups of 2.42x/4.69x/5.30x on Levels 1/2/3, establishing state-of-the-art performance across all difficulty levels. On VeOmni's expert-optimized MoE training kernels, KernelPro achieves 1.23x over hand-tuned Triton by generating a from-scratch raw-CUDA+CuTe Hopper WGMMA kernel. Ablation studies demonstrate that each design component independently and significantly improves optimization quality: micro-profiling tools (p < 0.0001 vs raw metrics), MCTS search (26% higher geometric mean vs greedy, p = 0.004), and proactive tool orchestration (23% improvement, p = 0.035). Finally, KernelPro is the first CUDA kernel coding agent to optimize energy efficiency beyond the speed-only focus of prior systems, demonstrating an 11.6% measured energy reduction at matched speed.
+
+我们推出了 KernelPro，这是一个闭环多代理系统，通过将大型语言模型 (LLM) 代码生成与硬件分析器反馈和可插入瓶颈检测工具集成，自动生成、分析和迭代优化 GPU 内核代码。 KernelPro 引入了四个贡献：（1）语义反馈运算符，将专家启发法编码为可插入的微分析工具，将原始硬件指标转换为可操作的自然语言指导； （2）两阶段工具调用架构，其中基于屋顶线的瓶颈分类过滤器由专门的分析工具执行，结合内核级（ncu）、指令级（SASS）和系统级（nsys）分析； (3) 具有渐进加宽、不对称分支、对数奖励校准、死端剪枝和用于交叉迭代学习的搜索记忆的领域适应MCTS； (4) 通过 CUTLASS/CuTe 代码库上的自主代码搜索直接生成 CuTe 源代码。在 KernelBench 上，KernelPro 在 1/2/3 级上实现了 2.42x/4.69x/5.30x 的几何平均加速，在所有难度级别上建立了最先进的性能。在 VeOmni 的专家优化 MoE 训练内核上，KernelPro 通过生成从头开始的原始 CUDA+CuTe Hopper WGMMA 内核，实现了手动调整 Triton 的 1.23 倍。消融研究表明，每个设计组件都独立且显着提高了优化质量：微观分析工具（与原始指标相比，p < 0.0001）、MCTS 搜索（与贪婪算法相比，几何平均值高出 26%，p = 0.004）和主动工具编排（提高 23%，p = 0.035）。最后，KernelPro 是第一个 CUDA 内核编码代理，它超越了先前系统仅关注速度的范围来优化能源效率，在匹配的速度下测量到的能源减少了 11.6%。
+
+</details>
+
+---
+
+## 21. Closing the Loop to Discover Psychological Theories with an Automated Cognitive Scientist / 与自动认知科学家一起探索心理学理论
+
+**Date**: 2026-06-24 | **arXiv**: [2606.26448v1](http://arxiv.org/abs/2606.26448v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26448v1)
+
+**Categories**: q-bio.NC, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Across the sciences, autonomous systems are increasingly being used in closed-loop discovery, proposing new theories and designing and running experiments to test them. This approach is yet to be applied in the field of cognitive science, where the central bottleneck is theory-building: the creative step of turning the accumulated failures of existing models into better ones. Theory generation has remained manual even as data collection, modeling, and experiment design have been automated. We present the Automated Cognitive Scientist (AutoCog), a fully autonomous agentic-AI system that closes this loop. Large-language-model agents advocate competing theories, each expressed as an executable cognitive model, design experiments that best discriminate them, collect behavioral data from participants recruited online, score theories against collected data based on their generative performance, diagnose why they fail, and synthesize a better successor. Repeating this cycle allows them to search the space of theories, models, and experiments. In the domain of decision-making, AutoCog recovered known decision-making strategies from simulated behavior, including unconventional ones, showing that its discoveries are ultimately driven by the data rather than strictly bound by the priors of the underlying language models. When run with human participants, it produced theories that outperformed the established theories it was seeded with and generalized to held-out studies in two different experimental settings. It also surfaced a novel theory of multi-cue decision-making in which choices show diminishing sensitivity to feature values. The distinctive predictions of this theory were confirmed in a preregistered study with new participants. AutoCog demonstrates how an automated discovery system can be used to turn cognitive theory-building into an explicit, executable, and cumulative science.
+
+在整个科学领域，自主系统越来越多地用于闭环发现、提出新理论以及设计和运行实验来测试它们。这种方法尚未应用于认知科学领域，该领域的中心瓶颈是理论构建：将现有模型累积的失败转化为更好的模型的创造性步骤。即使数据收集、建模和实验设计已经自动化，理论生成仍然是手动的。我们推出了自动认知科学家（AutoCog），这是一个完全自主的代理人工智能系统，可以闭合这个循环。大语言模型代理提倡相互竞争的理论，每个理论都表达为可执行的认知模型，设计最能区分它们的实验，收集在线招募的参与者的行为数据，根据收集的数据根据​​其生成性能对理论进行评分，诊断它们失败的原因，并综合一个更好的继任者。重复这个循环使他们能够搜索理论、模型和实验的空间。在决策领域，AutoCog 从模拟行为（包括非常规行为）中恢复了已知的决策策略，表明其发现最终是由数据驱动的，而不是严格受底层语言模型先验的约束。当与人类参与者一起运行时，它产生的理论优于其所植入的既定理论，并推广到两个不同实验环境中的持续研究。它还提出了一种新颖的多线索决策理论，其中选择显示出对特征值的敏感性递减。这一理论的独特预测在一项针对新参与者的预先注册研究中得到了证实。 AutoCog 演示了如何使用自动发现系统将认知理论构建转变为明确的、可执行的和累积的科学。
+
+</details>
+
+---
+
+## 22. AXLE: A Cloud Infrastructure for Lean 4 Theorem Proving Utilities / AXLE：用于精益 4 定理证明实用程序的云基础设施
+
+**Date**: 2026-06-24 | **arXiv**: [2606.26442v1](http://arxiv.org/abs/2606.26442v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26442v1)
+
+**Categories**: cs.LO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present AXLE (Axiom Lean Engine), a cloud service for Lean 4 proof manipulation, extraction, and verification. Recent progress in AI for mathematics -- reinforcement learning pipelines, agentic proving workflows, dataset curation -- demands Lean 4 tooling that scales to millions of requests while remaining correct and robust; existing infrastructure offers parallel compilation but not scalable proof verification, higher-level proof manipulation, multi-version support, or per-request isolation at the throughput modern AI workflows require. AXLE provides 14 Lean 4 metaprogramming tools spanning strict proof verification, declaration metadata extraction, semantic source manipulation, deterministic proof repair and simplification, and lemma extraction. The service runs as a multi-tenant cloud deployment with per-request isolation and concurrent support for multiple Lean 4 and Mathlib versions, accessible via a Python SDK, command-line interface, web UI, MCP server, and raw HTTP API. AXLE is publicly available and free to use at https://axle.axiommath.ai and via the axiom-axle PyPI package, with no local Lean 4 installation required. It has served over 500 million requests to date and is the underlying infrastructure for Axiom Math's proving efforts, including its 12/12 score on the 2025 Putnam competition.
+
+我们推出 AXLE（Axiom 精益引擎），这是一种用于精益 4 证明操作、提取和验证的云服务。数学人工智能的最新进展——强化学习管道、代理证明工作流程、数据集管理——需要 Lean 4 工具能够扩展到数百万个请求，同时保持正确和稳健；现有基础设施提供并行编译，但不提供可扩展的证明验证、更高级别的证明操作、多版本支持或现代人工智能工作流程所需吞吐量的每个请求隔离。 AXLE 提供 14 个 Lean 4 元编程工具，涵盖严格的证明验证、声明元数据提取、语义源操作、确定性证明修复和简化以及引理提取。该服务作为多租户云部署运行，具有每个请求隔离和对多个 Lean 4 和 Mathlib 版本的并发支持，可通过 Python SDK、命令行界面、Web UI、MCP 服务器和原始 HTTP API 进行访问。 AXLE 可在 https://axle.axiommath.ai 上通过 axiom-axle PyPI 包公开并免费使用，无需本地安装 Lean 4。迄今为止，它已服务了超过 5 亿个请求，是 Axiom Math 证明工作的底层基础设施，包括在 2025 年 Putnam 竞赛中获得 12/12 的分数。
+
+</details>
+
+---
+
+## 23. Unbiased Canonical Set-Valued Oracles Via Lattice Theory / 通过格理论的无偏规范集值预言
+
+**Date**: 2026-06-24 | **arXiv**: [2606.26418v1](http://arxiv.org/abs/2606.26418v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26418v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A non-agentic "oracle" AI that estimates probabilities of future events faces a self-reference problem: once its answer is learned and acted upon, it can change the very probability it was asked to report. One response, advocated for the Scientist AI programme, is to ask only counterfactual questions, evaluated as if the answer had no influence. We observe that such answers tend to become irrelevant the moment they are learned, precisely because their premise is then false. We therefore explore a self-referential alternative in which the oracle reports not a single probability but a credal set that is simultaneously unbiased and self-consistent with the consequences of being learned. The naive self-consistency requirement is satisfied by too many sets (including the useless answer $[0,1]$), so the problem is to single out a canonical, nontrivial member. We do so with the Knaster--Tarski fixed-point theorem on the complete lattice of closed credal sets, taking the least fixed point of a suitably defined isotone operator; a variant instead reports the least fixed point that contains every self-consistent point estimate. We prove existence, self-consistency, and nonemptiness, show that the construction collapses to the classical point answer for non-performative questions, and that for a binary event the canonical answer is, under a natural hull-factoring assumption, an interval. The development is purely lattice-theoretic and extends unchanged from a binary event $B$ to an arbitrary random variable $X$, with $P(B\mid A,C)$ replaced by the conditional law $\mathcal{L}(X\mid A,C)$. We close with open questions, including whether the interval characterization itself survives that generalization.
+
+一个估计未来事件概率的非代理“预言机”人工智能面临着一个自我参照问题：一旦学习了它的答案并采取行动，它就可以改变它被要求报告的概率。科学家人工智能计划提倡的一种回应是只提出反事实问题，并评估答案是否有影响。我们观察到，这些答案往往在得知后就变得无关紧要，正是因为它们的前提是错误的。因此，我们探索一种自我参照的替代方案，其中预言机报告的不是单一概率，而是一组既无偏见又与学习结果自洽的信用集。天真的自我一致性要求是通过太多的集合来满足的（包括无用的答案 $[0,1]$），所以问题是挑出一个规范的、不平凡的成员。我们使用闭信集完全格上的 Knaster-Tarski 不动点定理来实现这一点，并采用适当定义的等调算子的最小不动点；相反，变体报告包含每个自洽点估计的最小不动点。我们证明了存在性、自洽性和非空性，表明该构造崩溃为非表演性问题的经典点答案，并且对于二元事件，在自然的船体分解假设下，规范答案是一个区间。该发展纯粹是晶格理论的，并且从二元事件 $B$ 不变地延伸到任意随机变量 $X$，其中 $P(B\mid A,C)$ 被条件定律 $\mathcal{L}(X\mid A,C)$ 替换。我们以开放性问题作为结束语，包括区间表征本身是否能经受住这一概括。
+
+</details>
+
+---
+
+## 24. When Agents Meet Electric Bus Fleet Operations: Pricing Behavior, Trade-offs, and Policy Implications in an Aggregator Framework / 当代理商遇到电动巴士车队运营时：聚合器框架中的定价行为、权衡和政策影响
+
+**Date**: 2026-06-24 | **arXiv**: [2606.26400v1](http://arxiv.org/abs/2606.26400v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26400v1)
+
+**Categories**: cs.AI, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic systems are changing how complex operational tasks are coordinated, introducing a new paradigm for connecting heterogeneous data sources and automating processes. Electric bus fleets provide a relevant test case. Their operation requires continuous coordination between service reliability, battery state-of-charge, charger availability, electricity prices, route-energy uncertainty, and vehicle-to-grid (V2G) opportunities. This paper proposes an agentic aggregator framework that streamlines this decision environment by coupling an optimization-based electric bus scheduling model with supervisory agents for disturbance detection, tariff adaptation, and schedule evaluation. The optimization core enforces physical feasibility across routes, chargers, batteries, and V2G exchanges, while the agentic layer interprets changing operating conditions, triggers real-time re-optimization when needed, and defines how flexibility value is allocated between the aggregator and the public transport operator (PTO). A realistic depot case study evaluates day-ahead and real-time operations under profit-based and operation-based coordination modes, considering service delays, route-energy deviations, electricity price shocks, and combined disturbances. The results show that agentic aggregation can support adaptive fleet-grid coordination by maintaining feasible schedules, activating re-optimization selectively, and improving the use of charging and V2G flexibility. However, they also reveal a critical trade-off: the same agentic capability that reduces operational complexity can extract value from the PTO when configured around profit-oriented pricing. These findings suggest that agentic aggregators can become useful for managing electric bus V2G operations, but their deployment in public-fleet contexts requires transparent coordination modes, auditable tariff-setting, and explicit value-sharing rules.
+
+代理系统正在改变复杂操作任务的协调方式，引入了连接异构数据源和自动化流程的新范例。电动公交车队提供了相关的测试案例。它们的运营需要服务可靠性、电池充电状态、充电器可用性、电价、路线能源不确定性和车辆到电网 (V2G) 机会之间的持续协调。本文提出了一种代理聚合器框架，该框架通过将基于优化的电动公交车调度模型与用于干扰检测、费率适应和调度评估的监督代理相结合来简化决策环境。优化核心强制跨路线、充电器、电池和 V2G 交换的物理可行性，而代理层解释不断变化的操作条件，在需要时触发实时重新优化，并定义如何在聚合商和公共交通运营商 (PTO) 之间分配灵活性价值。现实的电站案例研究评估了基于利润和基于运营的协调模式下的日前和实时运营，考虑了服务延迟、路线能源偏差、电价冲击和综合干扰。结果表明，代理聚合可以通过维护可行的时间表、选择性地激活重新优化以及提高充电和 V2G 的使用灵活性来支持自适应车队-电网协调。然而，它们也揭示了一个关键的权衡：当围绕以利润为导向的定价进行配置时，降低运营复杂性的相同代理能力可以从 PTO 中提取价值。这些发现表明，代理聚合器对于管理电动公交车 V2G 运营非常有用，但它们在公共车队环境中的部署需要透明的协调模式、可审计的费率设定和明确的价值共享规则。
+
+</details>
+
+---
+
+## 25. Narration-of-Thought: Inference-Time Scaffolding for Defeasible Ethical Reasoning in Large Language Models / 思想叙述：大型语言模型中可废止的伦理推理的推理时间支架
+
+**Date**: 2026-06-24 | **arXiv**: [2606.26366v1](http://arxiv.org/abs/2606.26366v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26366v1)
+
+**Categories**: cs.AI, cs.CL, cs.CY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Standard chain-of-thought on moral dilemmas exhibits two failure modes: stakeholder collapse (the trace names at most one party with a stake in the outcome) and uncertainty suppression (no explicit unknowns or hedges before committing to an action). We introduce narration-of-thought (NoT), a system prompt that structures chain-of-thought into five sections: protagonist, stakeholders, two-step consequences, uncertainty, then commitment. NoT adds no training, parameters, or fine-tuning. On 100 DailyDilemmas scenarios across four generators from three vendors, NoT cuts stakeholder collapse from up to 31% to under 1% and uncertainty suppression from up to 72% to 1-24% on every model. A matched-budget verbose-CoT control rules out token spend as the active ingredient; NoT retains Cliff's delta advantages of +0.79 to +0.90 on stakeholder count and +0.65 to +0.93 on uncertainty score for three of four generators, and a section ablation attributes each shift to its specific sub-instruction. Textual-gradient descent initialised at NoT improves the scaffold further; a cross-family training judge (different vendor from the generator) dominates an in-family one on every measured axis. Extended to a five-round multi-stakeholder debate protocol, the scaffold converts a 6% standoff into 95% full consensus on a calibration set and 100% combined convergence on a DailyDilemmas replication. The resulting traces externalise the stakeholders, consequences, and uncertainty grounding each commitment, providing an auditable substrate for dependable agentic deployment.
+
+关于道德困境的标准思想链表现出两种失败模式：利益相关者崩溃（最多追踪与结果有利害关系的一方）和不确定性抑制（在采取行动之前没有明确的未知数或对冲）。我们引入了思想叙述（NoT），这是一种系统提示，将思想链分为五个部分：主角、利益相关者、两步后果、不确定性、然后承诺。 NoT 不添加任何训练、参数或微调。在来自三个供应商的四个发电机的 100 个 DailyDilemmas 场景中，NoT 将每个模型的利益相关者崩溃率从高达 31% 减少到 1% 以下，并将不确定性抑制从高达 72% 减少到 1-24%。匹配预算的详细 CoT 控制排除了代币支出作为活性成分的可能性；对于四个生成器中的三个，NoT 保留了 Cliff 的利益相关者数量 +0.79 至 +0.90 的增量优势以及不确定性得分 +0.65 至 +0.93 的增量优势，并且部分消融将每个转变归因于其特定的子指令。在 NoT 初始化的文本梯度下降进一步改进了脚手架；跨家庭培训法官（与发电机不同的供应商）在每个测量轴上都支配着家庭内部培训法官。扩展到五轮多利益相关者辩论协议后，该支架将校准集上 6% 的僵局转化为 95% 的完全共识，并在 DailyDilemmas 复制中将 100% 的组合收敛。由此产生的痕迹将利益相关者、后果和每个承诺的不确定性外化，为可靠的代理部署提供可审计的基础。
+
+</details>
+
+---
+
+## 26. Instruction Bleed: Cross-Module Interference in Prompt-Composed Agentic Systems / 指令出血：快速组合代理系统中的跨模块干扰
+
+**Date**: 2026-06-24 | **arXiv**: [2606.26356v1](http://arxiv.org/abs/2606.26356v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26356v1)
+
+**Categories**: cs.AI, cs.IR, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Practitioners of prompt-composed agentic systems report a recurring failure mode: editing one prompt module silently shifts the behavior of others despite no shared variable or executable dependency. We formalize this as compositional behavioral leakage (CBL): interference between modules sharing a context window. CBL is enabled by architectural non-isolation: transformer self-attention provides no formal boundary between concatenated modules. We probe CBL on a deployed job-evaluation agent (Claude Sonnet 4.6, 144 trials) through a reusable three-channel protocol that perturbs non-focal modules along volume, content, and form. Only the content channel produces a detectable paired effect (Cohen's d = 0.63, bootstrap 95% CI excluding zero); no recommendation flipped -- a sub-threshold regime invisible to standard QA but compounding across the thousands of decisions a deployed agent makes. CBL is orthogonal to known agent-failure axes (adversarial injection, cognitive degradation, multi-agent fault propagation, privacy leakage). We contribute an operational definition, a reusable protocol, a falsifiable prediction set, and a system-class characterization, establishing cross-module interference measurement as a requirement for prompt-composed agent evaluation.
+
+提示组成的代理系统的实践者报告了一种反复出现的故障模式：尽管没有共享变量或可执行依赖项，但编辑一个提示模块会默默地改变其他模块的行为。我们将其形式化为组合行为泄漏（CBL）：共享上下文窗口的模块之间的干扰。 CBL 是通过架构非隔离实现的：变压器自注意力机制在串联模块之间不提供正式边界。我们通过可重复使用的三通道协议在已部署的工作评估代理（Claude Sonnet 4.6，144 次试验）上探测 CBL，该协议沿着体积、内容和形式扰乱非焦点模块。仅内容通道产生可检测的配对效应（Cohen's d = 0.63，引导 95% CI，不包括零）；没有建议被翻转——标准质量检查看不到的亚阈值制度，但会在部署的代理做出的数千个决策中复杂化。 CBL 与已知的代理故障轴（对抗性注入、认知退化、多代理故障传播、隐私泄漏）正交。我们提供了一个操作定义、一个可重用的协议、一个可证伪的预测集和一个系统级表征，将跨模块干扰测量建立为即时组合代理评估的要求。
+
+</details>
+
+---
+
+## 27. How Do Tool-Augmented LLM Agents Perform on Real-World Energy Analytics Tasks? / 工具增强的 LLM 代理如何执行现实世界的能源分析任务？
+
+**Date**: 2026-06-24 | **arXiv**: [2606.26346v1](http://arxiv.org/abs/2606.26346v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26346v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic benchmarks have emerged across general-purpose and domain-specific settings, including finance, coding, law, and drug discovery, yet energy-domain evaluations remain largely limited to static knowledge recall. This is a critical gap for a sector that requires live data retrieval, specialized regulatory and market knowledge, and multi-step quantitative reasoning under real-world constraints.   We present an empirical study of tool-augmented LLM agents on real-world energy market analytics tasks. Our evaluation environment includes 243 expert-curated problems across three categories: (1) Market Data Retrieval and Analysis, (2) Knowledge Retrieval and Interpretation, and (3) Advanced Quantitative Modeling and Decision Analytics. Tasks include price and demand analysis, tariff impact modeling, asset revenue and returns estimation, hedging strategy analysis, and optimization modeling, with problems spanning multiple difficulty levels.   Agents are equipped with a configurable suite of domain tools, including live electricity market APIs for major U.S. ISOs, regulatory docket search, utility tariff databases, asset optimization models, and retrieval-augmented generation over energy market documents. We assess agent responses using a multi-dimensional evaluation protocol that scores approach correctness, answer accuracy, attribute alignment, and source validity, with category-aware routing to match scoring criteria to question type. We evaluate both closed-source and open-source LLMs, providing a comparative analysis of how model capability and domain tooling interact in a high-stakes professional domain. Key artifacts are publicly released to support reproducibility and future research.
+
+代理基准已经出现在通用和特定领域的环境中，包括金融、编码、法律和药物发现，但能量领域评估仍然很大程度上局限于静态知识回忆。对于需要实时数据检索、专业监管和市场知识以及现实世界限制下的多步骤定量推理的行业来说，这是一个关键差距。   我们提出了工具增强法学硕士代理在现实世界能源市场分析任务中的实证研究。我们的评估环境包括 243 个专家策划的问题，涉及三个类别：(1) 市场数据检索和分析，(2) 知识检索和解释，以及 (3) 高级定量建模和决策分析。任务包括价格和需求分析、关税影响建模、资产收入和回报估计、对冲策略分析和优化建模，问题跨越多个难度级别。   代理配备了一套可配置的领域工具，包括美国主要 ISO 的实时电力市场 API、监管记录搜索、公用事业费率数据库、资产优化模型以及能源市场文件的检索增强生成。我们使用多维评估协议来评估代理的响应，该协议对方法的正确性、答案准确性、属性对齐和源有效性进行评分，并通过类别感知路由将评分标准与问题类型相匹配。我们评估闭源和开源法学硕士，对模型功能和领域工具如何在高风险专业领域中相互作用进行比较分析。公开发布关键工件以支持可重复性和未来的研究。
+
+</details>
+
+---
+
+## 28. EVOM: Agentic Meta-Evolution of Actor-Critic Architectures for Reinforcement Learning / EVOM：强化学习的 Actor-Critic 架构的代理元进化
+
+**Date**: 2026-06-24 | **arXiv**: [2606.26327v1](http://arxiv.org/abs/2606.26327v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26327v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In actor-critic reinforcement learning, network architectures are typically manually designed. Automating this design is challenging because each candidate must be trained before evaluation, and the design space is open-ended. To address these challenges, we introduce EVOM, an agentic meta-evolution framework for discovering high-performance actor-critic architectures. We frame architecture search as a bi-level optimization: an inner loop trains weights via the low-fidelity proximal policy optimization (PPO), while an outer loop drives meta-evolution by iteratively refining architecture programs. Crucially, this outer loop is powered by an LLM-based design agent that operates purely as an architecture designer, completely decoupled from policy execution and environment control. Experiments reveal that EVOM outperforms the manually designed baseline, an LLM-guided random search, and the state-of-the-art LLM-guided programmatic policy search method MLES, delivering superior performance on Ant-v4 and HalfCheetah-v4. Ablation studies validate that both the meta-evolution loop and the LLM Design Agent are indispensable for final performance.
+
+在行动者批评家强化学习中，网络架构通常是手动设计的。自动化此设计具有挑战性，因为每个候选人都必须在评估之前接受培训，并且设计空间是开放式的。为了应对这些挑战，我们引入了 EVOM，这是一种用于发现高性能 Actor-Critic 架构的代理元进化框架。我们将架构搜索构建为双层优化：内循环通过低保真近端策略优化（PPO）训练权重，而外循环通过迭代细化架构程序来驱动元进化。至关重要的是，这个外环由基于 LLM 的设计代理提供支持，该代理纯粹作为架构设计师运行，与策略执行和环境控制完全解耦。实验表明，EVOM 的性能优于手动设计的基线、LLM 引导的随机搜索和最先进的 LLM 引导的编程策略搜索方法 MLES，在 Ant-v4 和 HalfCheetah-v4 上提供卓越的性能。消融研究验证了元进化循环和 LLM 设计代理对于最终性能都是不可或缺的。
+
+</details>
+
+---
+
+## 29. The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators / 红皇后哥德尔机器：共同进化的智能体及其评估者
+
+**Date**: 2026-06-24 | **arXiv**: [2606.26294v1](http://arxiv.org/abs/2606.26294v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26294v1)
+
+**Categories**: cs.LG, cs.AI, cs.MA, cs.NE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Self-improving agents are state-of-the-art (SOTA) on agentic coding benchmarks and have recently been extended to general domains. However, their search methods generally assume a stationary evaluation criterion: a fixed verifier, benchmark, or labeled dataset that remains valid as the agent improves. This ignores a central feature of evolution: species adapt as their environments change with them. We aim to bring the same principle to recursive self-improvement, making evaluation part of the improvement loop and opening search to evolving evaluators, adversarial objectives, and dynamic utilities that may surpass static benchmarks. We introduce the Red Queen Godel Machine (RQGM), an evolutionary framework for recursive self-improvement under non-stationary utilities. The RQGM makes this possible through controlled utility evolution: search is organized into epochs with a fixed within-epoch evaluation criterion, while the utility can be updated at epoch boundaries, so self-improvement guarantees hold per epoch as the objective evolves across them. We begin by showing that even on verifiable coding tasks, the RQGM improves test pass rate over the prior SOTA by adding a complementary agent-as-a-judge code-review signal. This signal is cheaper and the RQGM uses 1.35x-1.72x fewer tokens. We then turn to scientific paper writing and reviewing, and Olympiad-level proof writing and grading, where the RQGM improves performance over prior self-improving agents: co-evolved writers reach 1.78x-1.86x higher acceptance rates under a diverse agent-as-a-judge panel, while co-evolved graders reach 9% higher ground-truth accuracy. In paper reviewing, the strongest baseline reviewer over-accepts AI-generated papers at up to 1.91x the human rate. The RQGM corrects this by introducing an adversarial objective that discovers reviewers equally stringent on AI and human work.
+
+自我改进代理在代理编码基准上是最先进的（SOTA），并且最近已扩展到一般领域。然而，他们的搜索方法通常假设一个固定的评估标准：固定的验证者、基准或标记数据集，随着代理的改进而保持有效。这忽略了进化的一个核心特征：物种会随着环境的变化而适应。我们的目标是将同样的原则引入递归自我改进，使评估成为改进循环的一部分，并开放搜索不断发展的评估者、对抗性目标和可能超越静态基准的动态实用程序。我们介绍了红皇后哥德尔机（RQGM），这是一种在非平稳效用下递归自我改进的进化框架。 RQGM 通过受控效用演化使这成为可能：搜索被组织成具有固定的纪元内评估标准的纪元，而效用可以在纪元边界进行更新，因此随着目标在各个纪元中的演变，自我改进保证在每个纪元中保持。我们首先表明，即使在可验证的编码任务上，RQGM 通过添加补充代理作为法官代码审查信号，也比之前的 SOTA 提高了测试通过率。该信号更便宜，并且 RQGM 使用的代币数量减少了 1.35 倍至 1.72 倍。然后，我们转向科学论文写作和审稿，以及奥林匹克级别的校对写作和评分，其中 RQGM 比之前的自我改进智能体提高了性能：在多样化的智能体作为评委小组下，共同进化的作者达到了 1.78 倍至 1.86 倍的接受率，而共同进化的评分者达到了 9% 的地面实况准确率。在论文审阅中，最强的基线审稿人过度接受人工智能生成的论文的速度高达人类的 1.91 倍。 RQGM 通过引入对抗性目标来纠正这一问题，该目标发现审稿人对人工智能和人类工作同样严格。
+
+</details>
+
+---
+
+## 30. Knowledge-augmented Agentic AI for Mental Health Medication Information Seeking / 用于心理健康药物信息检索的知识增强代理人工智能
+
+**Date**: 2026-06-24 | **arXiv**: [2606.26205v1](http://arxiv.org/abs/2606.26205v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26205v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Patients increasingly seek medication information online, yet safety knowledge for psychiatric drugs is split between regulatory adverse-event records, which are authoritative but abstract, and patient narratives, which are experience-near but unvalidated. Integrating them without conflating evidence and anecdote is especially consequential in psychiatry, where poorly contextualised information can amplify fear, nocebo responses, and non-adherence. Here we develop a provenance-aware, knowledge-graph-based multi-agent framework unifying 466,525 Reddit posts, 60,782 WebMD reviews, and twenty years of U.S. FDA Adverse Event Reporting System records for nine antidepressants. A large-language-model entity-recognition pipeline benchmarked against physician annotations reached highest F1 scores of 0.969 for medications and 0.973 for conditions. The two community platforms were far more concordant with each other (overlap up to a Jaccard similarity of 0.905) than with regulatory reports, indicating that patient-generated data form a partly independent safety signal. For sertraline, many adverse events appeared in community sources hundreds of days before the corresponding FDA date. A Neo4j knowledge graph grounded in ATC-N, ICD-10, and MedDRA vocabularies preserves provenance, keeping every claim traceable and regulatory facts distinct from patient experience. These results establish source-aware integration as a route to more auditable psychiatric medication information, with usefulness and patient benefit to be tested prospectively.
+
+患者越来越多地在网上寻求药物信息，但精神科药物的安全知识分为监管不良事件记录（权威但抽象）和患者叙述（接近经验但未经验证）。在精神病学中，在不混淆证据和轶事的情况下整合它们尤其重要，在精神病学中，情境化不佳的信息可能会放大恐惧、反安慰剂反应和不依从性。在这里，我们开发了一个基于知识图谱的多智能体框架，统一了 466,525 个 Reddit 帖子、60,782 个 WebMD 评论以及 20 年美国 FDA 九种抗抑郁药物不良事件报告系统的记录。以医生注释为基准的大型语言模型实体识别管道在药物方面达到了 0.969 的最高 F1 分数，在病情方面达到了 0.973 的最高 F1 分数。与监管报告相比，这两个社区平台彼此之间的一致性（重叠达到 0.905 的 Jaccard 相似度），表明患者生成的数据形成了部分独立的安全信号。对于舍曲林，许多不良事件在相应的 FDA 日期之前数百天就出现在社区来源中。以 ATC-N、ICD-10 和 MedDRA 词汇为基础的 Neo4j 知识图保留了来源，使每项索赔都可追溯，并将监管事实与患者体验区分开来。这些结果将源感知集成作为获取更多可审计精神药物信息的途径，并对其有用性和患者利益进行前瞻性测试。
+
+</details>
+
+---
+
+## 31. Agentic Analysis for Agentic Infrastructure: An LLM-Powered Pipeline for Comparative Governance of DAO and Corporate AI Protocols / 代理基础设施的代理分析：法学硕士支持的 DAO 和企业人工智能协议比较治理管道
+
+**Date**: 2026-06-24 | **arXiv**: [2606.26203v1](http://arxiv.org/abs/2606.26203v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26203v1)
+
+**Categories**: cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As AI agent protocols proliferate, the governance structures shaping their interoperability standards remain empirically underexamined. We introduce an LLM-powered comparative pipeline for large-scale governance discourse analysis, integrating automated annotation, neural topic modeling, and multi-layer network analysis to study socio-technical power structures at scale. We validate it on two contrasting standards for agent interoperability: ERC-8004 (permissionless, on-chain) and Google A2A (corporate-led). Analyzing 4,323 governance participation records, we combine LLM-assisted coding, topic modeling, and multi-layer network analysis to examine how institutional design shapes thematic priorities and community structure. We find that while governance form influences substantive focus, both regimes exhibit comparable levels of participation inequality and community fragmentation. Discourse alignment is denser in the permissionless setting, suggesting that open governance may foster greater thematic convergence despite decentralized participation. These findings illustrate how LLM-assisted methods can advance the empirical study of technology governance, with implications for designing more equitable agentic AI standards. All data and code are openly available.
+
+随着人工智能代理协议的激增，塑造其互操作性标准的治理结构仍然没有得到充分的实证检验。我们引入了一个由法学硕士支持的用于大规模治理话语分析的比较管道，集成了自动注释、神经主题建模和多层网络分析来大规模研究社会技术权力结构。我们根据代理互操作性的两个对比标准对其进行验证：ERC-8004（无需许可，链上）和 Google A2A（企业主导）。我们分析了 4,323 条治理参与记录，结合法学硕士辅助编码、主题建模和多层网络分析来研究制度设计如何塑造主题优先事项和社区结构。我们发现，虽然治理形式影响实质性焦点，但两种政权都表现出参与不平等和社区分裂程度相当。在未经许可的环境中，话语一致性更加密集，这表明尽管分散的参与，开放治理可能会促进更大的主题趋同。这些发现说明了法学硕士辅助方法如何推进技术治理的实证研究，并对设计更公平的代理人工智能标准具有影响。所有数据和代码都是公开可用的。
+
+</details>
+
+---
+
+## 32. Autodata: An agentic data scientist to create high quality synthetic data / Autodata：创建高质量合成数据的代理数据科学家
+
+**Date**: 2026-06-24 | **arXiv**: [2606.25996v2](http://arxiv.org/abs/2606.25996v2) | **PDF**: [Link](http://arxiv.org/pdf/2606.25996v2)
+
+**Categories**: cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce Autodata, a general method that enables AI agents to act as data scientists who build high quality training and evaluation data. We show how to train (meta-optimize) such a data scientist agent, so that it learns to create even stronger data. We describe the overall formulation, and a specific practical implementation, Agentic Self-Instruct. We conduct experiments on computer science research tasks, legal reasoning tasks and reasoning with mathematical objects, where we obtain improved results compared to classical synthetic dataset creation methods. Further, meta-optimizing the data scientist agent itself delivers an even larger performance uplift. Agentic data creation provides a way to convert increased inference compute into higher quality model training. Overall, we believe this direction has the potential to change the way we build AI data.
+
+我们引入了 Autodata，这是一种通用方法，使 AI 代理能够充当构建高质量训练和评估数据的数据科学家。我们展示了如何训练（元优化）这样的数据科学家代理，以便它学会创建更强大的数据。我们描述了整体的表述，以及具体的实际实现，代理自我指导。我们对计算机科学研究任务、法律推理任务和数学对象推理进行实验，与经典的综合数据集创建方法相比，我们获得了改进的结果。此外，对数据科学家代理本身进行元优化可以带来更大的性能提升。代理数据创建提供了一种将增加的推理计算转化为更高质量的模型训练的方法。总的来说，我们相信这个方向有可能改变我们构建人工智能数据的方式。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-25 (33 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-06-25
