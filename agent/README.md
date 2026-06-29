@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-29](papers/2026-06-29.md) - 8 papers
 - [2026-06-26](papers/2026-06-26.md) - 32 papers
 - [2026-06-25](papers/2026-06-25.md) - 33 papers
 - [2026-06-24](papers/2026-06-24.md) - 42 papers
@@ -111,6 +112,146 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-29 (8 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-06-29
+
+**Paper Count**: 8
+
+---
+
+## 1. Agentic Hardware Design as Repository-Level Code Evolution / 代理硬件设计作为存储库级代码演化
+
+**Date**: 2026-06-26 | **arXiv**: [2606.28279v1](http://arxiv.org/abs/2606.28279v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.28279v1)
+
+**Categories**: cs.AR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present HORIZON, a self-evolving agent framework that treats hardware design as repository-level code evolution. A Markdown harness is compiled into a project pack containing domain knowledge, an executable evaluator, an acceptance predicate, and a git/runtime policy; a hands-free agent loop then evolves an isolated git worktree, using repository operations for state management, tracing, and replay. This extends prior works of repository-scale self-evolution from EDA software systems, to hardware-design artifacts themselves. We evaluate our approach on ChipBench, RTLLM, Verilog-Eval, and nine CVDP categories, achieving 100\% benchmark completion across all suites with a fully hands-free agentic loop. However, we do not claim that agentic AI for hardware design is solved: these benchmarks are controlled proxies for a much broader engineering problem in chip design. Section~\ref{sec:discuss} examines the limitations of the current study and highlights open research challenges.
+
+我们提出了 HORIZON，一个自我进化的代理框架，它将硬件设计视为存储库级代码进化。 Markdown 工具被编译成一个项目包，其中包含领域知识、可执行评估器、接受谓词和 git/运行时策略；然后，免提代理循环会发展出一个独立的 git 工作树，使用存储库操作进行状态管理、跟踪和重播。这将之前的存储库规模自我进化工作从 EDA 软件系统扩展到硬件设计工件本身。我们在 ChipBench、RTLLM、Verilog-Eval 和九个 CVDP 类别上评估我们的方法，通过完全免提代理循环在所有套件中实现 100% 基准测试完成。然而，我们并不声称硬件设计的代理人工智能已经得到解决：这些基准测试是芯片设计中更广泛的工程问题的受控代理。部分〜\ ref {sec：discuss}检查了当前研究的局限性并强调了开放研究的挑战。
+
+</details>
+
+---
+
+## 2. Towards Automating Scientific Review with Google's Paper Assistant Tool / 使用 Google 论文助理工具实现科学评审自动化
+
+**Date**: 2026-06-26 | **arXiv**: [2606.28277v1](http://arxiv.org/abs/2606.28277v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.28277v1)
+
+**Categories**: cs.LG, cs.AI, cs.CL, cs.CY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Artificial intelligence is driving a revolution in scientific discovery, accelerating everything from hypothesis generation to mathematical theorem proving. However, this rapid acceleration is creating a systemic challenge: traditional human peer review cannot scale to match the influx of AI-assisted science. Ultimately, to resolve this tension, we must also deploy AI to accelerate the verification and review process itself. To frame the discussion around this transition, we propose a taxonomy consisting of four progressive levels of AI-human collaboration in scientific evaluation, and discuss various trade-offs involved with each.   As a step toward this future, we introduce the Paper Assistant Tool (PAT), an agentic AI framework built for deep scientific review and verification. PAT ingests full scientific manuscripts and produces a comprehensive evaluation, checking theoretical results, validating experiments, suggesting improvements, and identifying potential flaws. By utilizing inference scaling techniques, PAT is able to identify deeper issues than a single model call alone, achieving a 34% improvement over zero-shot recall on mathematical errors in the SPOT benchmark. Pilot deployments of PAT as a pre-submission tool for authors at two major Computer Science conferences -- STOC and ICML -- demonstrate its ability to identify critical errors and suggest substantive improvements to research papers. By catching errors early, PAT eases the cognitive burden placed on referees, while preserving their control over the outcomes of the review process.
+
+人工智能正在推动科学发现的一场革命，加速从假设生成到数学定理证明的一切。然而，这种快速加速正在带来系统性挑战：传统的人类同行评审无法适应人工智能辅助科学的涌入。最终，为了解决这种紧张局势，我们还必须部署人工智能来加速验证和审查过程本身。为了围绕这一转变进行讨论，我们提出了一种分类法，其中包括科学评估中人工智能与人类合作的四个渐进级别，并讨论了每个级别所涉及的各种权衡。   作为迈向这一未来的一步，我们推出了论文辅助工具（PAT），这是一个为深度科学审查和验证而构建的代理人工智能框架。 PAT 吸收完整的科学手稿并进行综合评估，检查理论结果，验证实验，提出改进建议并识别潜在缺陷。通过利用推理缩放技术，PAT 能够比单独的单个模型调用识别更深层次的问题，与 SPOT 基准中的数学错误零样本召回相比，实现了 34% 的改进。在两个主要计算机科学会议（STOC 和 ICML）上，PAT 作为作者的预提交工具进行了试点部署，证明了其识别关键错误并建议对研究论文进行实质性改进的能力。通过及早发现错误，PAT 减轻了裁判员的认知负担，同时保留了他们对审核过程结果的控制。
+
+</details>
+
+---
+
+## 3. Agent-Native Immune System: Architecture, Taxonomy, and Engineering / 代理天然免疫系统：架构、分类学和工程
+
+**Date**: 2026-06-26 | **arXiv**: [2606.28270v1](http://arxiv.org/abs/2606.28270v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.28270v1)
+
+**Categories**: cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The transition from static chat bots to autonomous agents--equipped with persistent memory, tool-use protocols, and multi-agent collaboration--has fundamentally expanded the AI threat landscape. Current defense mechanisms, such as perimeter security and training-time alignment, remain external to the agent's active reasoning loop. Consequently, they fall short: a fully aligned agent remains highly vulnerable to runtime hijacking via memory poisoning, tool-chain manipulation, or multi-agent protocol attacks. To address this critical gap, we introduce the Agent-Native Immune System (ANIS), the first biologically inspired, endogenous defense architecture embedded directly within the agent's cognitive loop. Our framework presents four primary contributions. First, we design a six-layer Immune Tower (L0-L5), distinctly incorporating Barrier Immunity (L1) as a non-cognitive, physical-and-logical isolation layer. Second, we establish a unified taxonomy of Agent Viruses and Agent Vaccines, formalizing the critical distinction between superficial non-parametric defenses and robust parametric vaccines. Third, we conceptualize the Harness Triad--Meta, Self, and Auto--a self-monitoring, meta-cognitive automation backbone that drives Continual Immune Learning (CIL), enabling vaccines to dynamically adapt to novel threats. Finally, we establish a rigorous theoretical demarcation between model alignment and agent immunity: while alignment provides a static "constitutional" value foundation during training, ANIS serves as the dynamic "law enforcement" mechanism during runtime. We conclude by framing open challenges for the field, including immune protocol standardization, novel evaluation metrics such as the Autoimmunity Rate (false-positive intervention rate), and the co-evolutionary dynamics between pathogens and vaccines within collective intelligence ecosystems.
+
+从静态聊天机器人到配备持久内存、工具使用协议和多代理协作的自主代理的转变，从根本上扩展了人工智能威胁格局。当前的防御机制，例如周边安全和训练时间调整，仍然位于代理的主动推理循环之外。因此，它们存在不足：完全一致的代理仍然非常容易受到内存中毒、工具链操纵或多代理协议攻击等运行时劫持的影响。为了解决这一关键差距，我们引入了代理原生免疫系统（ANIS），这是第一个受生物学启发的内源防御架构，直接嵌入代理的认知循环中。我们的框架提出了四个主要贡献。首先，我们设计了一个六层免疫塔（L0-L5），明显地将屏障免疫（L1）作为非认知的物理和逻辑隔离层。其次，我们建立了代理病毒和代理疫苗的统一分类法，正式明确了表面非参数防御和强大参数疫苗之间的关键区别。第三，我们概念化了“Harness Triad”——元、自我和自动——一种自我监控、元认知自动化支柱，可驱动持续免疫学习（CIL），使疫苗能够动态适应新的威胁。最后，我们在模型对齐和代理免疫之间建立了严格的理论界限：对齐在训练期间提供静态“宪法”价值基础，而 ANIS 在运行时充当动态“执法”机制。最后，我们提出了该领域的开放挑战，包括免疫协议标准化、自身免疫率（假阳性干预率）等新颖的评估指标，以及集体智慧生态系统内病原体和疫苗之间的共同进化动态。
+
+</details>
+
+---
+
+## 4. HAT-4D: Lifting Monocular Video for 4D Multi-Object Interactions via Human-Agent Collaboration / HAT-4D：通过人机协作提升单目视频以实现 4D 多对象交互
+
+**Date**: 2026-06-26 | **arXiv**: [2606.28215v1](http://arxiv.org/abs/2606.28215v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.28215v1)
+
+**Categories**: cs.CV, cs.AI, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Extracting dynamic 4D object interactions from massive, in-the-wild monocular videos offers a highly efficient data collection pathway for scaling Embodied AI and training VLAs. However, existing monocular 4D reconstruction methods primarily focus on isolated objects, often failing under the severe occlusions and complex dynamics inherent in multi-object interactions. To bridge this gap, we propose HAT-4D, the first agentic framework designed to reconstruct the 3D geometry, temporal dynamics, and physical interactions of multiple objects from a single video. By integrating VLMs with a multi-level human-in-the-loop feedback mechanism, HAT-4D efficiently resolves depth ambiguities and interaction-induced occlusions during 3D generation and 4D propagation, yielding physically plausible assets without relying on expensive multicamera rigs. As a scalable data engine, HAT-4D facilitates the creation of MVOIK-4D, an open-world benchmark for monocular 4D interaction reconstruction, accompanied by a novel multi-dimensional evaluation protocol focused on physical plausibility and temporal consistency. Extensive experiments demonstrate that HAT-4D achieves SOTA performance on most evaluation metrics, while maintaining competitive semantic alignment. Ablation studies show that introducing a small amount of human feedback improves interaction reconstruction. Moreover, the data produced by HAT-4D effectively improves baseline performance when used for fine-tuning. Our data and code are available at https://lijiaxin0111.github.io/HAT4D/
+
+从大量野外单目视频中提取动态 4D 对象交互，为扩展 Embodied AI 和训练 VLA 提供了高效的数据收集途径。然而，现有的单目 4D 重建方法主要关注孤立的对象，在多对象交互中固有的严重遮挡和复杂动态下往往会失败。为了弥补这一差距，我们提出了 HAT-4D，这是第一个代理框架，旨在从单个视频中重建多个对象的 3D 几何、时间动态和物理交互。通过将 VLM 与多级人机交互反馈机制相集成，HAT-4D 可以有效解决 3D 生成和 4D 传播过程中的深度模糊性和交互引起的遮挡，从而在不依赖昂贵的多摄像头设备的情况下生成物理上合理的资产。作为可扩展的数据引擎，HAT-4D 促进了 MVOIK-4D 的创建，MVOIK-4D 是单目 4D 交互重建的开放世界基准，并配有专注于物理合理性和时间一致性的新型多维评估协议。大量实验表明，HAT-4D 在大多数评估指标上实现了 SOTA 性能，同时保持了有竞争力的语义对齐。消融研究表明，引入少量的人类反馈可以改善交互重建。此外，HAT-4D产生的数据在用于微调时有效地提高了基线性能。我们的数据和代码可以在 https://lijiaxin0111.github.io/HAT4D/ 获取
+
+</details>
+
+---
+
+## 5. LLawCo: Learning Laws of Cooperation for Modeling Embodied Multi-Agent Behavior / LLawCo：学习合作法则以建模具体的多智能体行为
+
+**Date**: 2026-06-26 | **arXiv**: [2606.28182v1](http://arxiv.org/abs/2606.28182v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.28182v1)
+
+**Categories**: cs.LG, cs.AI, cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Embodied agents operating in decentralized and partially observable environments have attracted growing attention in recent years. However, existing large language model (LLM)-based agents often exhibit behaviors that are misaligned with their partners or inconsistent with the environment state, leading to inefficient cooperation and poor task success. To address this challenge, we propose a novel framework, Learning Laws of Cooperation (LLawCo), that enables embodied agents to autonomously align with both their partners and task objectives. Our framework allows agents to reflect on past failures to extract misaligned behavioral patterns, which are used to derive high-level behavioral laws, such as "Talk when necessary" and "Wait for partner." These laws are explicitly incorporated into the agents' chains of thought via supervised fine-tuning, aligning their reasoning with task requirements and the behavior of other agents. To evaluate our approach, we introduce PARTNR-Dialog, a large-scale multi-agent communicative and cooperative planning benchmark built on the PARTNR environment. Experiments on existing tasks and our new benchmark demonstrate significant improvements in cooperative efficiency and task success rates. Across four backbone LLMs, our method achieves average success rate improvements of 4.5% on the PARTNR-Dialog benchmark and 6.8% on the TDW-MAT benchmark over state-of-the-art open-source communicative agent frameworks. See the LLawCo project page for details: https://www.merl.com/research/highlights/LLawCo
+
+近年来，在去中心化和部分可观察的环境中运行的实体代理引起了越来越多的关注。然而，现有的基于大语言模型（LLM）的代理经常表现出与其合作伙伴不一致或与环境状态不一致的行为，导致合作效率低下和任务成功率低。为了应对这一挑战，我们提出了一个新颖的框架，即合作学习法则（LLawCo），它使实体主体能够自主地与其合作伙伴和任务目标保持一致。我们的框架允许代理反思过去的失败，以提取不一致的行为模式，这些模式用于导出高级行为法则，例如“必要时交谈”和“等待合作伙伴”。这些法则通过监督微调明确地纳入智能体的思维链中，使它们的推理与任务要求和其他智能体的行为保持一致。为了评估我们的方法，我们引入了 PARTNR-Dialog，这是一个构建在 PARTNR 环境上的大规模多智能体通信和合作规划基准。对现有任务和我们的新基准的实验表明，合作效率和任务成功率显着提高。在四个骨干法学硕士中，与最先进的开源通信代理框架相比，我们的方法在 PARTNR-Dialog 基准上的平均成功率提高了 4.5%，在 TDW-MAT 基准上的平均成功率提高了 6.8%。有关详细信息，请参阅 LLawCo 项目页面：https://www.merl.com/research/highlights/LLawCo
+
+</details>
+
+---
+
+## 6. CPAgents: Agentic Composite Phenotype Generation for Cardiac Disease Association / CPAgents：心脏病协会的代理复合表型生成
+
+**Date**: 2026-06-26 | **arXiv**: [2606.28179v1](http://arxiv.org/abs/2606.28179v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.28179v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Identifying robust associations between cardiac imaging phenotypes and clinical diseases is fundamental to population-scale cardiovascular research and reliable risk stratification. However, current phenome-wide association studies rely on pre-defined, single-variable phenotypes or expert-crafted features, which limits their ability to capture clinically meaningful non-linear effects and cross-phenotype interactions. To address this, we propose CPAgents, an iterative phenotype-Composition framework for cardiovascular Phenome-wide association study (PheWAS) that automatically constructs and validates interpretable composite phenotypes (e.g., polynomial, ratio, and interaction forms) from base imaging features. Specifically, our system coordinates three agents: (i) an Analyst that identifies statistical pathologies and nominates candidate transformations; (ii) a Proposer that generates constrained, medically and statistically motivated expressions under numerical safety rules; and (iii) a Verifier that evaluates candidates using multi-stage criteria and produces transparent evidence trails for accepted phenotypes. Evaluated on a population-scale cardiac imaging cohort, the discovered composite phenotypes markedly improve disease discrimination: across 72 classifier-disease-metric combinations, our variants achieve the top rank in 56 cases versus 18 for baselines, with gains observed across all nine clinical disease categories. Our framework yields compact, clinically interpretable phenotype formulas with transparent evidence trails, enabling scalable discovery of stronger phenotype-disease associations beyond expert-driven feature selection.
+
+确定心脏成像表型与临床疾病之间的牢固关联是人群规模心血管研究和可靠风险分层的基础。然而，当前的全表型关联研究依赖于预定义的单变量表型或专家设计的特征，这限制了它们捕获有临床意义的非线性效应和跨表型相互作用的能力。为了解决这个问题，我们提出了 CPAgents，这是一种用于心血管表型范围关联研究 (PheWAS) 的迭代表型组合框架，它可以根据基本成像特征自动构建和验证可解释的复合表型（例如多项式、比率和交互形式）。具体来说，我们的系统协调三个代理：（i）识别统计病理学并指定候选转换的分析师； (ii) 提案者根据数字安全规则生成受约束的、医学和统计动机的表达式； (iii) 验证员使用多阶段标准评估候选者，并为可接受的表型提供透明的证据线索。在人口规模的心脏成像队列中进行评估，发现的复合表型显着改善了疾病辨别能力：在 72 种分类器-疾病-度量组合中，我们的变体在 56 例中排名最高，而基线为 18 例，在所有九种临床疾病类别中都观察到了增益。我们的框架产生紧凑的、临床上可解释的表型公式，具有透明的证据轨迹，能够在专家驱动的特征选择之外扩展发现更强的表型与疾病关联。
+
+</details>
+
+---
+
+## 7. ToolPrivacyBench: Benchmarking Purpose-Bound Privacy in Tool-Using LLM Agents / ToolPrivacyBench：对使用工具的 LLM 代理中的特定目的隐私进行基准测试
+
+**Date**: 2026-06-26 | **arXiv**: [2606.28061v1](http://arxiv.org/abs/2606.28061v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.28061v1)
+
+**Categories**: cs.CR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) have increasingly moved from standalone text generation systems to agents that invoke external tools, access environments, and execute multi-step tasks. However, conventional function-calling benchmarks mainly evaluate task completion and API correctness, while privacy evaluation benchmarks typically focus on final responses or privacy judgments. Neither perspective captures purpose-bound information flow across an executed multi-tool trajectory. Motivated by this limitation in current agent evaluation, ToolPrivacyBench audits whether task-private atoms are routed only to authorized tools and downstream sinks, thereby evaluating both task completion and privacy over-disclosure during tool use. The benchmark contains 2,150 cases, including 1,150 fully synthetic privacy-sensitive business workflows and 1,000 cases adapted from existing multi-tool and function-calling benchmarks. Each case is represented by a policy knowledge base. After an agent executes against mock business backends, the evaluator compares recorded tool arguments and backend audit logs with this policy knowledge base. The evaluation covers nine widely used agents to characterize purpose-bound privacy over-disclosure. The results show that successful tool execution does not imply appropriate privacy disclosure: an agent may complete a task while transmitting unnecessary private information through intermediate tool calls. ToolPrivacyBench therefore formalizes a need-to-know disclosure boundary, under which each tool should receive only the information necessary for its stated purpose, and uses trajectory-level auditing to identify privacy over-disclosure in multi-tool workflows.
+
+大型语言模型 (LLM) 越来越多地从独立的文本生成系统转移到调用外部工具、访问环境和执行多步骤任务的代理。然而，传统的函数调用基准主要评估任务完成情况和API正确性，而隐私评估基准通常侧重于最终响应或隐私判断。这两种视角都无法捕获跨执行的多工具轨迹的特定目的的信息流。受当前代理评估中这一限制的启发，ToolPrivacyBench 审核任务私有原子是否仅路由到授权工具和下游接收器，从而评估工具使用过程中的任务完成情况和隐私过度披露。该基准包含 2,150 个案例，其中包括 1,150 个完全合成的隐私敏感业务工作流程和 1,000 个改编自现有多工具和函数调用基准的案例。每个案例都由一个策略知识库表示。代理针对模拟业务后端执行后，评估器会将记录的工具参数和后端审核日志与此策略知识库进行比较。该评估涵盖九种广泛使用的代理，以表征有目的的隐私过度披露。结果表明，成功的工具执行并不意味着适当的隐私泄露：代理可能会在通过中间工具调用传输不必要的私人信息的同时完成任务。因此，ToolPrivacyBench 正式确定了需要了解的披露边界，在该边界下，每个工具应仅接收其既定目的所需的信息，并使用轨迹级审核来识别多工具工作流程中的隐私过度披露。
+
+</details>
+
+---
+
+## 8. From Detection to Action: Using LLM Agents for Fault-Tolerant Control / 从检测到采取行动：使用 LLM 代理进行容错控制
+
+**Date**: 2026-06-26 | **arXiv**: [2606.28011v1](http://arxiv.org/abs/2606.28011v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.28011v1)
+
+**Categories**: eess.SY, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We propose an agentic Large Language Model (LLM) framework for active Fault-Tolerant Control (FTC) that transforms fault detection outputs into constraint-aware recovery actions grounded in plant-specific knowledge. The approach couples (i) a multi-agent workflow that decomposes operator duties into monitoring, planning, action synthesis, simulation, validation, and reprompting; (ii) a Digital Process Plant Twin (DPPT) that exposes plant data, models, and a simulation service for pre-execution testing; and (iii) a Graph Retrieval-Augmented Generation (Graph RAG) layer built on the CPSMod ontology, which organizes plant knowledge (structure, function, hybrid dynamics, control context, and fault semantics) into a graph that supports relation-aware, multi-hop retrieval for the agents. Corrective actions are generated as minimal-risk state-machine recovery paths and corresponding discrete commands or continuous setpoint adaptations, then validated deterministically against interlocks, envelopes, and dynamic feasibility before any actuation. If no acceptable plan is found within a bounded time window, control is handed to a safety fallback. The framework is evaluated in simulation on two representative benchmarks: a discrete batch Mixing Module and a Continuous Stirred-Tank Reactor (CSTR) under closed-loop PID regulation. Results with lightweight LLMs (GPT-4o-mini and GPT-4.1-mini) show that semantically grounded agents can derive valid recovery decisions within latency budgets compatible with the respective process dynamics, demonstrating a practical pathway from detection to validated corrective action across both discrete and continuous FTC tasks.
+
+我们提出了一种用于主动容错控制（FTC）的代理大语言模型（LLM）框架，该框架将故障检测输出转换为基于工厂特定知识的约束感知恢复操作。该方法结合了（i）多代理工作流程，将操作员职责分解为监控、规划、行动综合、模拟、验证和重新提示； (ii) 数字过程工厂孪生 (DPPT)，提供工厂数据、模型和用于执行前测试的模拟服务； (iii) 基于 CPSMod 本体构建的图检索增强生成（Graph RAG）层，它将工厂知识（结构、功能、混合动力学、控制上下文和故障语义）组织成一个图，支持代理的关系感知、多跳检索。纠正措施作为最小风险状态机恢复路径和相应的离散命令或连续设定点适应而生成，然后在任何致动之前根据联锁、包络和动态可行性进行确定性验证。如果在有限的时间窗口内找不到可接受的计划，控制权就会交给安全后备机构。该框架在两个代表性基准上进行模拟评估：离散批量混合模块和闭环 PID 调节下的连续搅拌罐反应器 (CSTR)。轻量级 LLM（GPT-4o-mini 和 GPT-4.1-mini）的结果表明，基于语义的代理可以在与各自的流程动态兼容的延迟预算内得出有效的恢复决策，从而展示了跨离散和连续 FTC 任务从检测到经过验证的纠正措施的实用途径。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-26 (32 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-06-26
