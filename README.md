@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-29](papers/2026-06-29.md) - 7 papers
 - [2026-06-26](papers/2026-06-26.md) - 18 papers
 - [2026-06-25](papers/2026-06-25.md) - 23 papers
 - [2026-06-24](papers/2026-06-24.md) - 11 papers
@@ -106,6 +107,132 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-29 (7 papers)</b></summary>
+
+# arXiv Video Papers - 2026-06-29
+
+**Paper Count**: 7
+
+---
+
+## 1. Unleashing Infinite Motion: Scaling Expressive Quadrupedal Motion via Generative Video Priors / 释放无限运动：通过生成视频先验缩放富有表现力的四足运动
+
+**Date**: 2026-06-26 | **arXiv**: [2606.28237v1](http://arxiv.org/abs/2606.28237v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.28237v1)
+
+**Categories**: cs.RO
+
+**Code**: https://github.com/GaoLii/Quad-Imaginarium.git,
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Quadruped robots have achieved remarkable locomotion, yet their behavioral repertoire remains confined to a few gaits--far from the expressive, companion-like presence long envisioned for them. Attempts to import the humanoid recipe of large-scale motion data have inherited one tacit assumption: that robot motion must first pass through an animal body, making data collection dependent on cooperative animals, reconstruction fragile across species, and retargeting ill-posed across incompatible morphologies. We propose Uni-Mo, a fully automated pipeline that removes the animal from the loop by reframing data scarcity as a generation problem: an LLM proposes motion prompts, a video diffusion model synthesizes the corresponding robot behaviors, and the generated videos are lifted into 3D reference trajectories used to train tracking policies deployed on a real Unitree Go2. To make naively-drifting generations reliably extractable, we introduce an Identity Consistency Loss that enforces appearance coherence across frames. We release Quad-Imaginarium at https://github.com/GaoLii/Quad-Imaginarium.git, the resulting open-source dataset of 7,488 language-annotated quadruped motions (18.5 hours) spanning acrobatic and performative behaviors. We validate 392 randomly sampled motions on a real Unitree Go2 with a 96.7% deployment success rate, complemented by a 97.6% success rate across the full dataset in simulation.
+
+四足机器人已经实现了非凡的运动能力，但它们的行为能力仍然局限于少数几种步态——与人们长期以来所设想的富有表现力、同伴般的存在相去甚远。导入大规模运动数据的人形配方的尝试继承了一个默认假设：机器人运动必须首先穿过动物身体，使得数据收集依赖于合作动物，跨物种重建脆弱，并且在不兼容的形态中重新定位不适定。我们提出了 Uni-Mo，一种完全自动化的管道，通过将数据稀缺性重新定义为生成问题，将动物从循环中移除：LLM 提出运动提示，视频扩散模型综合相应的机器人行为，生成的视频被提升到 3D 参考轨迹，用于训练部署在真正的 Unitree Go2 上的跟踪策略。为了使天真漂移的世代能够可靠地提取，我们引入了身份一致性损失，以强制跨帧的外观一致性。我们在 https://github.com/GaoLii/Quad-Imaginarium.git 发布了 Quad-Imaginarium，这是一个开源数据集，包含 7,488 个语言注释的四足动物动作（18.5 小时），涵盖杂技和表演行为。我们在真实的 Unitree Go2 上验证了 392 个随机采样的运动，部署成功率为 96.7%，模拟中整个数据集的成功率为 97.6%。
+
+</details>
+
+---
+
+## 2. Enhanced Neural Video Representation Compression across Extreme Complexity and Quality Scales / 跨极端复杂性和质量尺度的增强神经视频表示压缩
+
+**Date**: 2026-06-26 | **arXiv**: [2606.28163v1](http://arxiv.org/abs/2606.28163v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.28163v1)
+
+**Categories**: eess.IV, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Implicit neural representations (INRs) have recently emerged as a promising approach to video compression, delivering competitive rate-distortion performance alongside rapid decoding. However, existing neural video codecs struggle to balance complexity and scalability. Lightweight models often suffer from degraded compression performance when scaled to different bitrate/quality levels, whereas high-performance models exhibit limited scalability, as their model complexity typically increases with quality. This lack of a unified architecture capable of maintaining consistent complexity across a wide range of bitrates severely limits their diverse real-world deployment. To address these challenges, we introduce NVRC++, a novel INR-based video codec that utilizes a lightweight INR with multiple high-resolution feature grids, providing high scalability at any given complexity level. This is paired with an optimization framework that enables efficient overfitting on high-resolution grids for long video sequences, thereby exploiting spatio-temporal redundancies without prohibitive computational or memory overhead. Additionally, an advanced entropy model is designed for efficiently compressing the high-dimensional grid parameters. As a result, NVRC++ provides four complexity levels (from 7kMACs/pixel to 360kMACs/pixel), each spanning wide bitrate and quality ranges while supporting real-time decoding. The experimental results show that NVRC++ offers a much faster decoding speed (up to 7.6x) compared to the SOTA INR-based video codec, NVRC, while delivering comparable performance.
+
+隐式神经表示（INR）最近成为一种有前途的视频压缩方法，可在快速解码的同时提供有竞争力的速率失真性能。然而，现有的神经视频编解码器很难平衡复杂性和可扩展性。当扩展到不同的比特率/质量级别时，轻量级模型通常会遭受压缩性能下降的影响，而高性能模型则表现出有限的可扩展性，因为它们的模型复杂性通常随着质量的增加而增加。缺乏能够在各种比特率下保持一致的复杂性的统一架构严重限制了其多样化的实际部署。为了应对这些挑战，我们引入了 NVRC++，这是一种基于 INR 的新型视频编解码器，它利用具有多个高分辨率特征网格的轻量级 INR，在任何给定的复杂性级别上提供高可扩展性。它与一个优化框架相结合，可以对长视频序列的高分辨率网格进行有效的过度拟合，从而利用时空冗余，而无需过高的计算或内存开销。此外，还设计了先进的熵模型来有效压缩高维网格参数。因此，NVRC++ 提供了四个复杂度级别（从 7kMACs/像素到 360kMACs/像素），每个级别都跨越较宽的比特率和质量范围，同时支持实时解码。实验结果表明，与基于 SOTA INR 的视频编解码器 NVRC 相比，NVRC++ 提供了更快的解码速度（高达 7.6 倍），同时提供了相当的性能。
+
+</details>
+
+---
+
+## 3. PhysisForcing: Physics Reinforced World Simulator for Robotic Manipulation / PhysisForcing：用于机器人操作的物理强化世界模拟器
+
+**Date**: 2026-06-26 | **arXiv**: [2606.28128v1](http://arxiv.org/abs/2606.28128v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.28128v1)
+
+**Categories**: cs.CV, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation models have emerged as a promising paradigm for embodied world simulation. However, both general-domain video generators and robot-specific data fine-tuned models can still produce physically implausible manipulations, including discontinuous motion trajectories and inconsistent robot-object interactions, which limits their reliability as world simulators. Through extensive experiments, we find that such physical instability mainly arises from two factors: deformation of moving objects and implausible spatio-temporal correlations among interacting entities, particularly during contact. Building on this observation, we propose PhysisForcing, a scalable training framework that strengthens physical consistency by focusing supervision on physics-informative regions through joint optimization of pixel-level and semantic-level features. The framework consists of a pixel-level trajectory alignment loss, which supervises DiT features using reference point trajectories, and a semantic-level relational alignment loss, which aligns DiT features with inter-region relations extracted from a frozen video understanding encoder. Extensive experiments on R-Bench, PAI-Bench, and EZS-Bench show that PhysisForcing consistently improves embodied video generation over strong baselines, improving the Wan2.2-I2V-A14B and Cosmos3-Nano base models on R-Bench by 22.3\% and 9.2\% (7.1\% and 3.7\% over vanilla finetuning), with the Cosmos3-Nano variant attaining the best overall score. Beyond generation, as a world model under the WorldArena action-planner protocol it raises the closed-loop success rate from 16.0\% to 24.0\% and further improves downstream policy success, indicating that physically aligned video models yield stronger representations for robotic manipulation.
+
+视频生成模型已成为现实世界模拟的一个有前途的范例。然而，通用领域视频生成器和机器人特定数据微调模型仍然可以产生物理上难以置信的操作，包括不连续的运动轨迹和不一致的机器人与物体交互，这限制了它们作为世界模拟器的可靠性。通过大量的实验，我们发现这种物理不稳定性主要源于两个因素：移动物体的变形和相互作用实体之间令人难以置信的时空相关性，特别是在接触过程中。基于这一观察，我们提出了 PhysisForcing，这是一个可扩展的训练框架，通过像素级和语义级特征的联合优化，重点监督物理信息区域，从而增强物理一致性。该框架由像素级轨迹对齐损失和语义级关系对齐损失组成，前者使用参考点轨迹监督 DiT 特征，后者将 DiT 特征与从冻结视频理解编码器提取的区域间关系对齐。在 R-Bench、PAI-Bench 和 EZS-Bench 上进行的大量实验表明，PhysisForcing 在强基线上持续改进了具体视频生成，将 R-Bench 上的 Wan2.2-I2V-A14B 和 Cosmos3-Nano 基础模型改进了 22.3\% 和 9.2\%（比普通微调提高了 7.1\% 和 3.7\%）， Cosmos3-Nano 变体获得了最佳总体得分。除了生成之外，作为 WorldArena 行动规划器协议下的世界模型，它将闭环成功率从 16.0% 提高到 24.0%，并进一步提高了下游策略的成功率，这表明物理对齐的视频模型可以为机器人操作提供更强的表示。
+
+</details>
+
+---
+
+## 4. EMOSH: Expressive Motion and Shape Disentanglement for Human Animation / EMOSH：人类动画的表现力运动和形状解开
+
+**Date**: 2026-06-26 | **arXiv**: [2606.28026v1](http://arxiv.org/abs/2606.28026v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.28026v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+High-fidelity and expressive controllable human animation is essential for content creation and digital avatar applications. However, existing methods face a dilemma between expressiveness and disentanglement. Mainstream 2D pose-conditioned approaches suffer from "motion-shape entanglement", leading to the leakage of the driving subject's body shape. Conversely, methods relying on 3D priors (e.g., SMPL) achieve geometric disentanglement but struggle to capture facial expressions and complex gestures, resulting in rigid animations. To this end, we propose EMOSH, a novel framework for high-fidelity controllable human video generation. First, an Expressive Human Model (EHM) is introduced as the core control representation. By explicitly disentangling shape and pose parameters, we fundamentally resolve the body shape leakage issue. Alongside this, a robust motion tracker is designed to accurately estimate EHM parameters from video. Second, we propose a Coarse-to-Fine Hybrid Motion Injection strategy, enabling more fine-grained control over expressions and gestures. Furthermore, we introduce a Spatially-Aligned Conditioning mechanism to bridge the domain gap between training and inference, improving identity consistency. Extensive experiments demonstrate that EMOSH outperforms previous methods in both self-driven and cross-driven scenarios, producing high-fidelity videos with vivid expressions while maintaining shape disentanglement.
+
+高保真、富有表现力的可控人体动画对于内容创作和数字化身应用至关重要。然而，现有的方法面临着表达性和解开性之间的困境。主流的 2D 姿态调节方法遭受“运动形状纠缠”的困扰，导致驾驶主体的身体形状泄漏。相反，依赖 3D 先验的方法（例如 SMPL）实现了几何解缠，但难以捕捉面部表情和复杂手势，从而导致动画僵化。为此，我们提出了 EMOSH，一种用于高保真可控人类视频生成的新颖框架。首先，引入表达人类模型（EHM）作为核心控制表示。通过明确地解开形状和姿势参数，我们从根本上解决了身体形状泄漏问题。除此之外，还设计了一个强大的运动跟踪器来准确估计视频中的 EHM 参数。其次，我们提出了一种从粗到细的混合运动注入策略，可以对表情和手势进行更细粒度的控制。此外，我们引入了空间对齐调节机制来弥合训练和推理之间的领域差距，从而提高身份一致性。大量实验表明，EMOSH 在自驱动和交叉驱动场景中都优于以前的方法，在保持形状解缠结的同时，生成表情生动的高保真视频。
+
+</details>
+
+---
+
+## 5. TempAct: Advancing Temporal Plausibility in Autoregressive Video Generation via Planner-Executor RL / TempAct：通过 Planner-Executor RL 提高自回归视频生成的时间合理性
+
+**Date**: 2026-06-26 | **arXiv**: [2606.28016v1](http://arxiv.org/abs/2606.28016v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.28016v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive (AR) video diffusion models enable low-latency streaming generation by synthesizing videos chunk by chunk with cached visual context, but this chunk-wise formulation makes temporal instruction following ambiguous. A single global prompt does not specify which sub-event should be realized in each chunk, while naively switching to step-wise prompts often leads to delayed reactions, blended step semantics, and error propagation across prompt transitions. These failures are difficult to address with supervised fine-tuning or distillation alone: SFT suffers from exposure bias, while rollout-based distillation still optimizes low-level denoising or teacher-distribution matching rather than directly enforcing action ordering and prompt-transition correctness. We address these challenges with TempAct, a planner--executor reinforcement learning framework that jointly optimizes temporal decomposition and step-conditioned execution for temporally plausible AR video generation. TempAct uses an LLM planner to explore span-aware step prompts that are executable by the video model, and trains an AR diffusion executor to follow these prompts under its own generated histories. Its key mechanism is hierarchical group exploration: candidate plans form planning groups, and each plan induces an execution group of multiple continuations from a shared visual context, enabling plan-level credit assignment for long-horizon temporal outcomes and executor-level credit assignment for prompt-switch behavior. We further design hierarchical rewards that combine plan-quality and full-video temporal feedback for the planner with local transition-level step-following rewards, aesthetic regularization, and KL constraints for the executor. Experiments on Self-Forcing and LongLive show that TempAct improves temporal consistency while preserving overall visual quality.
+
+自回归 (AR) 视频扩散模型通过使用缓存的视觉上下文逐块合成视频来实现低延迟流生成，但这种按块的公式使得时间指令遵循模糊性。单个全局提示不指定应在每个块中实现哪个子事件，而天真地切换到逐步提示通常会导致延迟反应、混合步骤语义以及跨提示转换的错误传播。这些故障很难仅通过监督微调或蒸馏来解决：SFT 存在暴露偏差，而基于推出的蒸馏仍然优化低水平去噪或教师分布匹配，而不是直接强制执行动作排序和提示转换正确性。我们使用 TempAct 来应对这些挑战，这是一个规划器-执行器强化学习框架，可联合优化时间分解和步骤条件执行，以生成时间上合理的 AR 视频。 TempAct 使用 LLM 规划器来探索可由视频模型执行的跨度感知步骤提示，并训练 AR 扩散执行器在其自己生成的历史记录下遵循这些提示。其关键机制是分层组探索：候选计划形成计划组，每个计划从共享的视觉上下文中诱导出多个延续的执行组，从而实现长范围时间结果的计划级信用分配和提示切换行为的执行器级信用分配。我们进一步设计了分层奖励，将规划器的计划质量和全视频时间反馈与执行器的局部过渡级步骤跟踪奖励、美学正则化和 KL 约束结合起来。 Self-Forcing 和 LongLive 的实验表明，TempAct 提高了时间一致性，同时保持了整体视觉质量。
+
+</details>
+
+---
+
+## 6. HumanMoveVQA: Can Video MLLMs reason about human movement in videos? / HumanMoveVQA：视频 MLLM 能否推断视频中的人体运动？
+
+**Date**: 2026-06-26 | **arXiv**: [2606.27999v1](http://arxiv.org/abs/2606.27999v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27999v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Despite the rapid advance of Multimodal Large Language Models (MLLMs) in high-level video understanding, a fundamental bottleneck remains: these models collapse complex human motion into coarse semantic labels. Existing benchmarks mostly focus on scene-centric events or local joint articulations, failing to probe global human motion in space over time (trajectory and orientation changes). We introduce HumanMoveVQA, the first comprehensive benchmark designed to evaluate global trajectory and orientation reasoning from an exocentric perspective. Our benchmark utilizes a first-frame anchored world coordinate system, preserving translation and rotation relative to a fixed starting point. We propose a scalable, multi-stage pipeline that lifts 2D video observations into world-consistent 3D motion tracks to generate over 10K structured question-answer pairs across seven reasoning categories, including motion aggregation, sequential ordering, and trajectory-level inference. Our extensive evaluation reveals a critical capability gap in state-of-the-art proprietary models on deep human motion understanding. However, we demonstrate that this is a learnable problem; by fine-tuning an open-source baseline with our targeted, world-consistent supervision, we achieve a significant improvement.HumanMoveVQA establishes a rigorous geometric foundation for developing next-generation, movement-aware video understanding models.
+
+尽管多模态大型语言模型（MLLM）在高级视频理解方面取得了快速进展，但一个基本瓶颈仍然存在：这些模型将复杂的人体运动分解为粗略的语义标签。现有的基准主要关注以场景为中心的事件或局部关节关节，无法探测随着时间的推移在空间中的全局人体运动（轨迹和方向的变化）。我们推出了 HumanMoveVQA，这是第一个综合基准测试，旨在从外心角度评估全局轨迹和方向推理。我们的基准测试使用第一帧锚定世界坐标系，保留相对于固定起点的平移和旋转。我们提出了一种可扩展的多级管道，可将 2D 视频观察提升为世界一致的 3D 运动轨迹，从而在七个推理类别中生成超过 10K 个结构化问答对，包括运动聚合、顺序排序和轨迹级推理。我们的广泛评估揭示了在深度人体运动理解方面最先进的专有模型的关键能力差距。然而，我们证明这是一个可以学习的问题；通过我们有针对性的、世界一致的监督对开源基线进行微调，我们取得了显着的进步。HumanMoveVQA 为开发下一代运动感知视频理解模型奠定了严格的几何基础。
+
+</details>
+
+---
+
+## 7. Directing the World: Fast Autoregressive Video Generation with Compositional Human-Camera Control / 引导世界：通过合成人体摄像机控制快速生成自回归视频
+
+**Date**: 2026-06-26 | **arXiv**: [2606.27964v1](http://arxiv.org/abs/2606.27964v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27964v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Building interactive world models requires generating realistic videos while maintaining controllable dynamics over long horizons. Autoregressive video generation offers a scalable foundation, but suffers from error accumulation and temporal degradation during extended rollouts. This issue is further amplified under heterogeneous controls such as human motion and camera trajectories, which may interfere and destabilize a pretrained video prior, while existing methods often trade off controllability and visual quality. We propose "Directing the World", a fast autoregressive framework for controllable world-model video generation with compositional human-motion and camera-trajectory control. Our key idea is to decouple control learning while preserving a unified autoregressive video prior. We introduce a Fast-Slow Memory training strategy to stabilize long-horizon rollout learning and improve convergence. For human motion control, we design a t-guided Dynamic Projection mechanism and a refined Motion-CFG strategy, enabling temporally smooth and accurate motion alignment without degrading visual fidelity, and supporting multi-person control.After learning a robust motion prior, we introduce a second-stage camera-trajectory control module to compose human dynamics with viewpoint changes for coherent world exploration. We further construct a large-scale dataset with synchronized video, text, human-motion, and camera-trajectory annotations, organized into motion-centric and camera-centric subsets for decoupled training. Extensive experiments show stable long-horizon generation with precise controllability and high visual quality. See more at https://whydahuzi.github.io/Directing-the-World.github.io/.
+
+构建交互式世界模型需要生成逼真的视频，同时保持长期的可控动​​态。自回归视频生成提供了可扩展的基础，但在扩展部署期间会遭受错误积累和时间退化的影响。在人体运动和相机轨迹等异构控制下，这个问题会进一步放大，这可能会干扰预先训练的视频并使其不稳定，而现有方法通常会在可控性和视觉质量之间进行权衡。我们提出了“引导世界”，这是一种快速自回归框架，用于通过合成人体运动和摄像机轨迹控制来生成可控世界模型视频。我们的关键思想是解耦控制学习，同时保留统一的自回归视频先验。我们引入了快慢记忆训练策略来稳定长期部署学习并提高收敛性。对于人体运动控制，我们设计了一种t引导的动态投影机制和改进的Motion-CFG策略，在不降低视觉保真度的情况下实现时间平滑和精确的运动对准，并支持多人控制。在学习了鲁棒的运动先验之后，我们引入了第二阶段相机轨迹控制模块，以将人体动态与视点变化组合起来，以实现连贯的世界探索。我们进一步构建了一个具有同步视频、文本、人体运动和相机轨迹注释的大规模数据集，并组织成以运动为中心和以相机为中心的子集，以进行解耦训练。大量实验表明，长视距生成稳定，具有精确的可控性和高视觉质量。如需了解更多信息，请访问 https://whydahuzi.github.io/Directing-the-World.github.io/。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-26 (18 papers)</b></summary>
 
 # arXiv Video Papers - 2026-06-26
