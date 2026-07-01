@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-01](papers/2026-07-01.md) - 10 papers
 - [2026-06-30](papers/2026-06-30.md) - 8 papers
 - [2026-06-29](papers/2026-06-29.md) - 2 papers
 - [2026-06-26](papers/2026-06-26.md) - 10 papers
@@ -107,6 +108,178 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-01 (10 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-01
+
+**Paper Count**: 10
+
+---
+
+## 1. DVG-WM: Disentangled Video Generation Enables Efficient Embodied World Model for Robotic Manipulation / DVG-WM：解开的视频生成为机器人操作提供高效的具体世界模型
+
+**Date**: 2026-06-30 | **arXiv**: [2606.32028v1](http://arxiv.org/abs/2606.32028v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.32028v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video-based embodied world models provide an appealing substrate for robotic manipulation by predicting future states, yet current approaches remain limited by a fundamental entanglement: accurately modeling dynamics typically requires low-level temporal reasoning, while producing high-resolution frames demands expansive visual synthesis according to high-level semantics. This entanglement results in slow inference speed for iterative planning or too coarse predictions to retain contact-rich details. To solve this dilemma, we present Disentangled Video Generation World Model (DVG-WM), an efficient framework that explicitly decomposes world modeling into dynamics learning and visual synthesis. Conditioned on an initial observation and a language instruction, our model first generates a plausible sequence of intermediate visual states to preview the physical interaction and refines them to obtain high-fidelity videos. Furthermore, an efficient cascading mechanism is proposed, where DVG-WM uses flow matching to directly map the dynamics to video latents, and introduces a latent degradation mechanism to regenerate contact-rich details. Experiments on LIBERO and real-world platforms demonstrate improved video quality with up to 3.97 times acceleration, validating that disentangled video generation can be an efficient embodied world model for robotic manipulation.
+
+基于视频的具体世界模型通过预测未来状态为机器人操作提供了一个有吸引力的基础，但当前的方法仍然受到基本纠缠的限制：准确地建模动态通常需要低级时间推理，而生成高分辨率帧需要根据高级语义进行扩展视觉合成。这种纠缠会导致迭代规划的推理速度缓慢或预测过于粗略而无法保留丰富的接触细节。为了解决这个困境，我们提出了解缠结视频生成世界模型（DVG-WM），这是一个有效的框架，可以将世界建模明确地分解为动态学习和视觉合成。以初始观察和语言指令为条件，我们的模型首先生成一系列合理的中间视觉状态来预览物理交互，并对其进行改进以获得高保真视频。此外，还提出了一种有效的级联机制，其中 DVG-WM 使用流匹配将动态直接映射到视频潜伏，并引入潜伏退化机制来重新生成接触丰富的细节。 LIBERO 和现实世界平台上的实验表明，视频质量得到了提高，加速高达 3.97 倍，验证了解开的视频生成可以成为机器人操作的有效体现世界模型。
+
+</details>
+
+---
+
+## 2. AdaJEPA: An Adaptive Latent World Model / AdaJEPA：自适应潜在世界模型
+
+**Date**: 2026-06-30 | **arXiv**: [2606.32026v1](http://arxiv.org/abs/2606.32026v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.32026v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models enable planning from high-dimensional observations by predicting future states in a compact latent space. However, these models are typically kept frozen at test time: when their predictions become inaccurate, planning can fail, especially under test-time distribution shift. To address this, we propose AdaJEPA, an adaptive latent world model that performs test-time adaptation within the closed loop of model predictive control (MPC). After training, AdaJEPA plans and executes the first action chunk, uses the observed next-state transition as a self-supervised adaptation signal, and replans with the updated model. This closed-loop update continuously recalibrates the world model without additional expert demonstrations. Across a range of goal-reaching tasks, AdaJEPA substantially improves planning success with as few as one gradient step per MPC replanning step.
+
+潜在世界模型可以通过预测紧凑潜在空间中的未来状态来根据高维观察进行规划。然而，这些模型通常在测试时保持冻结状态：当它们的预测变得不准确时，规划可能会失败，特别是在测试时分布变化的情况下。为了解决这个问题，我们提出了 AdaJEPA，这是一种自适应潜在世界模型，它在模型预测控制 (MPC) 的闭环内执行测试时间自适应。训练后，AdaJEPA 计划并执行第一个动作块，使用观察到的下一状态转换作为自监督适应信号，并使用更新的模型重新计划。这种闭环更新不断地重新校准世界模型，无需额外的专家演示。在一系列实现目标的任务中，AdaJEPA 大大提高了规划的成功率，每个 MPC 重新规划步骤只需一个梯度步骤。
+
+</details>
+
+---
+
+## 3. LeCropFollow: Latent Space Planning for Navigation in Unstructured Crop Fields / LeCropFollow：非结构化农田导航的潜在空间规划
+
+**Date**: 2026-06-30 | **arXiv**: [2606.31941v1](http://arxiv.org/abs/2606.31941v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.31941v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Unstructured navigational features, such as irregular planting or discontinuities, remain the primary failure mode for under-canopy agricultural robots. Existing geometric approaches often fail in these scenarios because they compress high-dimensional visual data into deterministic spatial references, effectively discarding the uncertainty and semantic context required to navigate ambiguous terrain. To address this, we present LeCropFollow, a visual navigation framework that bypasses explicit geometric modeling in favor of a learned latent representation. By integrating a self-supervised semantic heatmap extractor with TD-MPC2, a Model-Based Reinforcement Learning (MBRL) planner, our system optimizes trajectories directly within a latent manifold. The framework operates over the uncompressed heatmap signal, preserving the semantic context that geometric reductions discard. We demonstrate that this representational shift enables zero-shot transfer from simplified simulation to the physical world without fine-tuning. Extensive field experiments in late-stage corn fields show that LeCropFollow matches state-of-the-art baselines in unstructured rows but significantly outperforms them in plantation gaps, achieving a 2.4x reduction in semantic failures compared to keypoint-based methods. These results suggest that latent planning offers a robust alternative to geometric estimation for operations in heterogeneous agricultural environments. Code, models, and data available: https://felipe-tommaselli.github.io/lecropfollow .
+
+非结构化导航功能，例如不规则种植或不连续性，仍然是冠层农业机器人的主要故障模式。现有的几何方法在这些场景中通常会失败，因为它们将高维视觉数据压缩为确定性的空间参考，有效地丢弃了导航模糊地形所需的不确定性和语义上下文。为了解决这个问题，我们提出了 LeCropFollow，一个视觉导航框架，它绕过显式几何建模，转而支持学习的潜在表示。通过将自监督语义热图提取器与基于模型的强化学习 (MBRL) 规划器 TD-MPC2 集成，我们的系统直接在潜在流形内优化轨迹。该框架对未压缩的热图信号进行操作，保留几何约简丢弃的语义上下文。我们证明，这种表征转变可以实现从简化模拟到物理世界的零样本迁移，而无需进行微调。在后期玉米田中进行的大量田间实验表明，LeCropFollow 与非结构化行中最先进的基线相匹配，但在种植间隙中的表现明显优于它们，与基于关键点的方法相比，语义失败减少了 2.4 倍。这些结果表明，潜在规划为异构农业环境中的操作提供了几何估计的可靠替代方案。可用代码、模型和数据：https://felipe-tommaselli.github.io/lecropfollow。
+
+</details>
+
+---
+
+## 4. WorldRoamBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models / WorldRoamBench：交互式世界模型长期稳定性的开放世界基准
+
+**Date**: 2026-06-30 | **arXiv**: [2606.31672v1](http://arxiv.org/abs/2606.31672v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.31672v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Despite rapid progress in interactive world models (IWMs), existing benchmarks evaluate action following only at trajectory level and ignore memory and interaction physics. We introduce WorldRoamBench, an open-world benchmark for long-horizon stability across four dimensions, each with tailored innovations: (i) Action: per-frame action metric bypassing cross-model semantic scale disparity and exposing failures hidden by trajectory; (ii) Vision: segment-based drift metric capturing non-monotonic mid-sequence collapse missed by start-vs-end comparisons; (iii) Physics: controllability-gated evaluation over mechanics, optics, and 3D consistency, scoring plausibility under faithful action execution; (iv) Memory: action-decoupled protocol evaluating scene memory via transition-localized 3D point-cloud reconstruction and subject memory via tracking-plus-VLM reasoning. The benchmark comprises 600+ test cases across Nature, Urban, and Indoor scenes in first/third-person views with WASD 10-60s continuous interaction. Evaluating 10+ open/closed-source models reveals none reliably satisfies all dimensions; even the best achieves only moderate scores. Advances on WorldRoamBench are steps toward IWMs that are stable, physically grounded, memory-faithful, and deployable in real-world applications.
+
+尽管交互式世界模型（IWM）取得了快速进展，但现有基准仅评估轨迹级别的动作遵循，而忽略了记忆和交互物理。我们引入了 WorldRoamBench，这是一个跨越四个维度的长视野稳定性的开放世界基准，每个维度都有定制的创新：（i）动作：每帧动作指标绕过跨模型语义尺度差异并暴露轨迹隐藏的故障； (ii) 愿景：基于分段的漂移度量捕获开始与结束比较中遗漏的非单调中序列崩溃； (iii) 物理：对机械、光学和 3D 一致性进行可控性门控评估，在忠实执行动作的情况下对合理性进行评分； (iv) 记忆：动作解耦协议通过转换局部 3D 点云重建评估场景记忆，并通过跟踪加 VLM 推理评估受试者记忆。该基准测试包括 600 多个测试用例，涉及自然、城市和室内场景，采用第一人称/第三人称视角，并具有 WASD 10-60 秒的连续交互。评估 10 多个开源/闭源模型表明，没有一个能够可靠地满足所有维度；即使是最好的也只能取得中等的分数。 WorldRoamBench 的进步是朝着 IWM 迈出的一步，IWM 稳定、物理接地、内存可靠且可在实际应用中部署。
+
+</details>
+
+---
+
+## 5. Ask the World Before Acting: Budgeted Environment Probing for World-Model Calibration / 行动前询问世界：世界模型校准的预算环境探测
+
+**Date**: 2026-06-30 | **arXiv**: [2606.31422v1](http://arxiv.org/abs/2606.31422v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.31422v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon language agents do not only choose actions; they carry a private model of the world from one decision to the next. When that model drifts, a later failure can be decided before the failing action is ever taken. We study a direct repair mechanism: before committing to the next task action, an agent may ask the environment about one belief field and write the answer back into its world model. This makes environment interaction a scarce calibration resource, not merely a way to advance the task. We introduce \method, a budgeted probing operator for structured belief tables. The useful probes are not the same everywhere. Procedural beliefs, such as tool dependencies, can often be repaired by targeted checks, but those checks spend steps that the task may need. Spatial beliefs, such as object locations and graph edges, rely more on structural cues; the agent's own confidence can be a poor guide when the world changes off-screen. A type-stratified analysis formalizes this probe-action frontier, and controlled experiments show that mid-planning environment evidence reduces terminal world-model error when the probe policy follows the structure of the task.
+
+长视域语言智能体不仅选择行动，而且选择行动。他们从一个决定到下一个决定都承载着一个私人的世界模型。当该模型发生漂移时，可以在采取失败的操作之前确定稍后的故障。我们研究一种直接修复机制：在执行下一个任务操作之前，智能体可能会向环境询问一个信念字段，并将答案写回其世界模型中。这使得环境交互成为一种稀缺的校准资源，而不仅仅是推进任务的一种方式。我们引入 \method，一种用于结构化置​​信表的预算探测运算符。有用的探针在各地并不相同。程序信念（例如工具依赖性）通常可以通过有针对性的检查来修复，但这些检查会花费任务可能需要的步骤。空间信念，例如物体位置和图形边缘，更多地依赖于结构线索；当屏幕外的世界发生变化时，特工自己的信心可能无法起到指导作用。类型分层分析形式化了这个探测行动边界，并且对照实验表明，当探测策略遵循任务结构时，中期规划环境证据会减少终端世界模型错误。
+
+</details>
+
+---
+
+## 6. World-Model Collapse as a Phase Transition / 作为相变的世界模型崩溃
+
+**Date**: 2026-06-30 | **arXiv**: [2606.31399v1](http://arxiv.org/abs/2606.31399v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.31399v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Water looks unchanged as it warms, then at a critical point it boils. We ask whether long-horizon language agents show an analogous transition in their implicit world models. In some parameter settings, changing state load by a small amount, or adding a single step of horizon, leaves behavior nearly unchanged; near a critical boundary, the same small change causes a sudden world collapse. We study this effect in a deterministic task family with exact per-step gold state. A large grid search over state cardinality, dependency density, horizon, branching, observation mode, and mutation rate reveals a phase diagram: a solved plateau, a narrow transition band, and a collapse floor. Per-step traces show the mechanism: world-state fidelity fails before action validity, so the agent is not merely choosing a bad action; it is acting from a corrupted world. Stronger models translate the critical boundary but do not remove the qualitative transition. These results make world-model collapse a measurable bottleneck for long-horizon agents.
+
+水在变暖时看起来没有变化，然后在临界点沸腾。我们询问长视域语言代理是否在其隐式世界模型中表现出类似的转变。在某些参数设置中，少量改变状态负载，或添加一步的水平线，行为几乎保持不变；在临界边界附近，同样的微小变化会导致世界突然崩溃。我们在具有精确的每步黄金状态的确定性任务族中研究这种效应。对状态基数、依赖密度、视野、分支、观察模式和突变率的大型网格搜索揭示了一个相图：已解决的平台、狭窄的过渡带和崩溃底板。每步跟踪显示了这一机制：世界状态保真度在动作有效性之前就失效了，因此智能体不仅选择了错误的动作，而且还选择了错误的动作。它是来自一个腐败的世界。更强的模型可以平移关键边界，但不会消除定性转变。这些结果使得世界模型崩溃成为长视野智能体的可测量瓶颈。
+
+</details>
+
+---
+
+## 7. Scaling Storm-Resolving Atmospheric AI Simulation to the Entire Planet / 将解决风暴的大气人工智能模拟扩展到整个星球
+
+**Date**: 2026-06-30 | **arXiv**: [2606.31248v1](http://arxiv.org/abs/2606.31248v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.31248v1)
+
+**Categories**: physics.ao-ph, cs.CE, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Kilometer-scale convection shapes precipitation extremes, tropical organization, and cloud feedbacks, but most global atmospheric models approximate these processes at 25-100 km resolution. Global storm-resolving physics models resolve convective systems explicitly, but at a cost -- roughly one MWh per simulated day on exascale supercomputers -- that limits long-duration simulation. We introduce STRATA (Storm-resolving Tile-based autoRegressive Atmosphere Transformer Architecture), the first autoregressive AI emulator for global storm-resolving atmospheric dynamics. STRATA is trained on the highest-resolution atmospheric dataset yet used for global AI emulation: 17 days of SCREAM physics-model output at 4.9-km resolution (~25 million grid cells) sampled every 10 minutes. Our central premise is that on 10-minute timescales atmospheric dynamics are predominantly local, so training on small spatial tiles trades scarce global temporal samples for abundant local spatial samples and enables global rollout via overlapping-tile blending. STRATA combines 3D patch embedding and local 3D neighborhood attention, a novel Stereographic Rotary Position Embedding (StereoRoPE) for grid-invariant encoding, and a pixel-space de-aliasing decoder that suppresses patch-scale rollout artifacts. An iso-FLOP scaling study reveals that km-scale emulation requires ~10x more FLOPs per grid point than coarse-resolution AI weather models, consistent with the higher information density of convective-scale dynamics. Trained on only 17 days of data, STRATA produces stable 24-hour global rollouts with realistic km-scale dynamics across diverse regimes, though large-scale biases develop with lead time. It achieves 48 simulation days per megawatt-hour -- about 50 times better energy efficiency than the SCREAM physics model -- and 741 simulated days per wall-clock day at 512 H100 GPUs. Code and dataset are publicly available.
+
+公里级对流会影响极端降水、热带组织和云反馈，但大多数全球大气模型以 25-100 公里的分辨率近似这些过程。全球风暴解析物理模型可以明确地解析对流系统，但代价是——在百亿亿级超级计算机上每天模拟大约一兆瓦时——限制了长时间的模拟。我们推出了 STRATA（基于风暴解析图块的自回归大气变压器架构），这是第一个用于全球风暴解析大气动力学的自回归 AI 模拟器。 STRATA 在用于全球 AI 仿真的最高分辨率大气数据集上进行训练：每 10 分钟采样一次，分辨率为 4.9 公里（约 2500 万网格单元）的 SCREAM 物理模型输出 17 天。我们的中心前提是，在 10 分钟时间尺度上，大气动态主要是局部的，因此对小空间图块的训练可以用稀缺的全局时间样本换取丰富的局部空间样本，并通过重叠图块混合实现全局推广。 STRATA 结合了 3D 补丁嵌入和局部 3D 邻域注意力、用于网格不变编码的新型立体旋转位置嵌入 (StereoRoPE) 以及抑制补丁规模推出伪影的像素空间去锯齿解码器。一项 iso-FLOP 尺度研究表明，公里尺度仿真需要比粗分辨率 AI 天气模型多约 10 倍的每个网格点 FLOP，这与对流尺度动力学的更高信息密度一致。 STRATA 仅使用 17 天的数据进行训练，即可在不同的制度下实现稳定的 24 小时全球部署，并具有现实的公里级动态，尽管大规模偏差会随着交付时间的推移而产生。它实现了每兆瓦时 48 个模拟天——比 SCREAM 物理模型高出大约 50 倍的能源效率——以及在 512 个 H100 GPU 上每个时钟日的 741 个模拟天。代码和数据集是公开的。
+
+</details>
+
+---
+
+## 8. Delta-JEPA: Learning Action-Sensitive World Models via Latent Difference Decoding / Delta-JEPA：通过潜在差异解码学习动作敏感的世界模型
+
+**Date**: 2026-06-30 | **arXiv**: [2606.31232v1](http://arxiv.org/abs/2606.31232v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.31232v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learning visual world models for planning requires compact latent dynamics that remain sensitive to actions, yet reconstruction-free joint-embedding objectives can collapse to action-insensitive representations. We propose Delta-JEPA, an end-to-end reconstruction-free world model that augments latent forward prediction with a Latent Difference Action Decoder (LDAD). Unlike inverse decoders that infer actions from concatenated endpoint embeddings, LDAD reconstructs the executed action from the latent displacement between consecutive observations. This displacement-level supervision directly regularizes transition geometry: adjacent embeddings cannot collapse without losing action information, and different actions are encouraged to induce distinguishable latent changes for rollout-based planning. Delta-JEPA uses only latent prediction and action reconstruction, avoiding pixel reconstruction and distribution-matching regularizers. Across four visual continuous-control tasks, Delta-JEPA improves planning over JEPA-based and representation-learning world model baselines. Ablations show that displacement-based action decoding is consistently more effective than endpoint concatenation, and action-sensitivity analyses show clearer action-conditioned latent responses. These results indicate that supervising latent differences is a simple and effective mechanism for collapse-resistant and action-sensitive world model learning.
+
+学习用于规划的视觉世界模型需要对动作保持敏感的紧凑的潜在动态，但免重构联合嵌入目标可能会崩溃为对动作不敏感的表示。我们提出了 Delta-JEPA，这是一种端到端的免重构世界模型，它通过潜在差异动作解码器（LDAD）增强潜在前向预测。与从连接的端点嵌入推断动作的逆解码器不同，LDAD 根据连续观察之间的潜在位移重建执行的动作。这种位移级别的监督直接规范了过渡几何形状：相邻嵌入在不丢失动作信息的情况下不能崩溃，并且鼓励不同的动作来引发基于推出的规划的可区分的潜在变化。 Delta-JEPA 仅使用潜在预测和动作重建，避免像素重建和分布匹配正则化器。在四个视觉连续控制任务中，Delta-JEPA 改进了基于 JEPA 和表示学习世界模型基线的规划。消融表明，基于位移的动作解码始终比端点串联更有效，并且动作敏感性分析显示出更清晰的动作条件潜在响应。这些结果表明，监督潜在差异是抗崩溃和动作敏感的世界模型学习的一种简单而有效的机制。
+
+</details>
+
+---
+
+## 9. Long-term Traffic Simulation via Structured Autoregressive Modeling / 通过结构化自回归模型进行长期交通模拟
+
+**Date**: 2026-06-30 | **arXiv**: [2606.31209v1](http://arxiv.org/abs/2606.31209v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.31209v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Interactive traffic simulation is a vital world model for autonomous driving. A central challenge in long-horizon simulation is modeling sustained multi-agent interactions, which is further exacerbated by dynamic token cardinality as agents continuously enter and exit the scene. In this work, we propose that the solution lies in the synergy between the architectural inductive biases and statistical priors of large-scale sequence models, e.g., Large Language Models (LLMs). Our probing experiments reveal that the transferability of attention mechanisms and the distributional consistency between motion tokens and natural language enable small-scale, heavily frozen LLMs to rapidly adapt to traffic modeling. Building on this insight, we introduce RosettaSim, a unified framework that projects scene topology, agent states, and spawning intents into a structured autoregressive stream with variable length, achieving both strong short-term accuracy and stable long-horizon simulation fidelity. Furthermore, evaluating extended rollouts presents yet another hurdle, as one-to-one agent correspondence inevitably fades over time. To address this, we introduce Retrieval-based Traffic Evaluation (RTE), which retrieves semantically similar real-world scenarios as context-aware reference anchors. Experiments on the Waymo Open Sim Agent Challenge (WOSAC) demonstrate that RosettaSim achieves state-of-the-art performance in both short- and long-term simulation. Furthermore, RTE exhibits a stronger correlation with standard metrics ($r=0.83$) than existing approaches ($r=0.74$), indicating improved alignment with long-horizon simulation fidelity.
+
+交互式交通模拟是自动驾驶的重要世界模型。长期模拟的一个核心挑战是对持续的多智能体交互进行建模，当智能体不断进入和退出场景时，动态令牌基数会进一步加剧这一挑战。在这项工作中，我们提出解决方案在于大规模序列模型（例如大型语言模型（LLM））的架构归纳偏差和统计先验之间的协同作用。我们的探索实验表明，注意力机制的可转移性以及运动标记和自然语言之间的分布一致性使得小规模、高度冻结的法学硕士能够快速适应流量建模。基于这一见解，我们引入了 RosettaSim，这是一个统一的框架，可将场景拓扑、代理状态和生成意图投影到长度可变的结构化自回归流中，从而实现强大的短期精度和稳定的长期模拟保真度。此外，评估延长的推出还存在另一个障碍，因为随着时间的推移，一对一的代理通信不可避免地会消失。为了解决这个问题，我们引入了基于检索的流量评估（RTE），它检索语义上相似的现实世界场景作为上下文感知参考锚点。 Waymo 开放模拟代理挑战赛 (WOSAC) 的实验表明，RosettaSim 在短期和长期模拟方面均实现了最先进的性能。此外，与现有方法 ($r=0.74$) 相比，RTE 与标准指标 ($r=0.83$) 的相关性更强，这表明与长范围模拟保真度的一致性得到了改善。
+
+</details>
+
+---
+
+## 10. Self-Evolving World Models for LLM Agent Planning / LLM代理规划的自我进化世界模型
+
+**Date**: 2026-06-29 | **arXiv**: [2606.30639v1](http://arxiv.org/abs/2606.30639v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.30639v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models offer a principled way to equip long-horizon LLM agents with foresight: predictions of action consequences before execution. However, unreliable foresight can be ignored, misused, or even degrade downstream decision-making. In this paper, we introduce WorldEvolver, a self-evolving world model framework that revises its deployment-time context while keeping the downstream agent and all model parameters frozen. WorldEvolver integrates three modules: (i) Episodic Memory, which exploits real action transitions through retrieval-based simulation; (ii) Semantic Memory, which extracts persistent heuristic rules from prediction-observation mismatches; and (iii) Selective Foresight, which filters low-confidence predictions before integrating them into agent reasoning context. We evaluate WorldEvolver on ALFWorld and ScienceWorld, measuring world model prediction accuracy on Word2World and downstream agent success rate on AgentBoard. Extensive experiments show that WorldEvolver achieves the highest prediction accuracy across three backbones and leads other world model baselines on downstream agent success rate, demonstrating that test-time memory revision enhances both predictive fidelity and planning performance.
+
+世界模型提供了一种原则性的方法，使长期的法学硕士代理人具有远见：在执行之前预测行动后果。然而，不可靠的远见可能会被忽视、滥用，甚至降低下游决策的质量。在本文中，我们介绍了 WorldEvolver，这是一个自我进化的世界模型框架，它修改其部署时上下文，同时保持下游代理和所有模型参数冻结。 WorldEvolver 集成了三个模块：(i) 情节记忆，通过基于检索的模拟来利用真实的动作转换； (ii) 语义记忆，从预测-观察不匹配中提取持久的启发式规则； (iii)选择性预见，在将低置信度预测整合到智能体推理上下文中之前对其进行过滤。我们在 ALFWorld 和 ScienceWorld 上评估 WorldEvolver，测量 Word2World 上的世界模型预测准确性以及 AgentBoard 上的下游代理成功率。大量实验表明，WorldEvolver 在三个主干网中实现了最高的预测精度，并在下游代理成功率方面领先于其他世界模型基线，这表明测试时内存修正增强了预测保真度和规划性能。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-30 (8 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-06-30
