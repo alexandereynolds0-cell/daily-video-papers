@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-07](papers/2026-07-07.md) - 4 papers
 - [2026-07-01](papers/2026-07-01.md) - 10 papers
 - [2026-06-30](papers/2026-06-30.md) - 8 papers
 - [2026-06-29](papers/2026-06-29.md) - 2 papers
@@ -108,6 +109,82 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-07 (4 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-07
+
+**Paper Count**: 4
+
+---
+
+## 1. KAM-WM: Kinematic Affordance Maps from Latent World Models for Robot Manipulation / KAM-WM：来自机器人操作潜在世界模型的运动功能可供图
+
+**Date**: 2026-07-06 | **arXiv**: [2607.04652v1](http://arxiv.org/abs/2607.04652v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.04652v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learning manipulation from few demonstrations requires visual priors that capture not only where to interact, but also how the interaction should begin; static priors such as segmentation masks encode only the former. We present KAM-WM, a framework that extracts a coarse directional interaction cue from a frozen latent video world model without rollout or world-model fine-tuning. KAM-WM queries a Flow Matching image-to-video backbone once and interprets its single-step latent velocity as a Kinematic Affordance Map (KAM), which provides task-conditioned interaction regions and coarse motion structure. A lightweight Perceiver compresses KAM into tokens that condition a diffusion policy together with RGB observations and proprioception. Across LIBERO and RoboTwin2.0, KAM-WM reaches 90.6% average success on LIBERO and achieves 65.7% and 22.4% success rates in the Easy and Hard settings on RoboTwin2.0, respectively. Controlled comparisons against a zero-order mask prior suggest that part of the gains comes from directional information beyond spatial localization alone. These results indicate that, in the evaluated settings, a frozen video model can provide a useful first-order visual prior for control without the test-time cost of future rollout.
+
+从少数演示中学习操作需要视觉先验，不仅要捕获交互的位置，还要捕获交互应该如何开始；静态先验（例如分段掩码）仅对前者进行编码。我们提出了 KAM-WM，这是一个框架，可以从冻结的潜在视频世界模型中提取粗略的定向交互线索，而无需推出或世界模型微调。 KAM-WM 查询一次流匹配图像到视频主干，并将其单步潜在速度解释为运动学可供性图 (KAM)，它提供任务条件交互区域和粗略运动结构。轻量级感知器将 KAM 压缩为标记，这些标记与 RGB 观察和本体感觉一起调节扩散策略。在 LIBERO 和 RoboTwin2.0 中，KAM-WM 在 LIBERO 上达到了 90.6% 的平均成功率，在 RoboTwin2.0 上的 Easy 和 Hard 设置中分别达到了 65.7% 和 22.4% 的成功率。与零阶掩模先验的受控比较表明，部分增益来自于空间定位之外的方向信息。这些结果表明，在评估的设置中，冻结视频模型可以为控制提供有用的一阶视觉先验，而无需未来推出的测试时间成本。
+
+</details>
+
+---
+
+## 2. Mask2Real-WM: Segmentation Masks as a Sim-to-Real Bridge for Controllable Dexterous World Models / Mask2Real-WM：分段掩模作为可控灵巧世界模型的模拟到真实桥梁
+
+**Date**: 2026-07-05 | **arXiv**: [2607.04546v1](http://arxiv.org/abs/2607.04546v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.04546v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Action-conditioned world models allow robots to predict the future consequences of candidate actions without additional physical interaction, supporting policy evaluation, planning, and data augmentation. We present Mask2Real-WM, a two-stage action-conditioned world model for dexterous manipulation that decouples pixel prediction into a dynamics model and a rendering model. The dynamics model predicts future segmentation masks from past masks and 23-DoF action sequences. The rendering model maps the predicted masks to photorealistic RGB using a ControlNet-augmented Stable Video Diffusion backbone. The smaller sim-to-real gap in segmentation space enables the dynamics model to benefit from large-scale pretraining on over 50 h of synthetic simulation data, followed by fine-tuning on fewer than 2.5 h of real demonstrations. Experiments on a dexterous pick-and-place benchmark show that mask conditioning and simulation pretraining are both required for per-DoF action controllability across all 23 degrees of freedom. In contrast, monolithic baselines capture broad hand and end-effector trajectories but do not reliably reflect fine-grained, per-joint action effects.
+
+行动条件世界模型使机器人能够预测候选行动的未来后果，而无需额外的物理交互，支持政策评估、规划和数据增强。我们提出了 Mask2Real-WM，这是一种用于灵巧操作的两阶段动作条件世界模型，它将像素预测解耦为动态模型和渲染模型。动力学模型根据过去的掩模和 23-DoF 动作序列预测未来的分割掩模。渲染模型使用 ControlNet 增强的稳定视频扩散主干将预测蒙版映射到真实感 RGB。分割空间中较小的模拟与真实差距使动态模型能够受益于对超过 50 小时的合成模拟数据进行的大规模预训练，然后对不到 2.5 小时的真实演示进行微调。灵巧拾放基准测试表明，要实现所有 23 个自由度的每自由度动作可控性，都需要掩模调节和模拟预训练。相比之下，整体基线捕获广泛的手和末端执行器轨迹，但不能可靠地反映细粒度的每个关节的动作效果。
+
+</details>
+
+---
+
+## 3. CRISP: A Spatiotemporal Camera-Radar Backbone for Driving via Forecasting-Based World-Model Pretraining / CRISP：通过基于预测的世界模型预训练进行驾驶的时空相机雷达骨干
+
+**Date**: 2026-07-05 | **arXiv**: [2607.04541v1](http://arxiv.org/abs/2607.04541v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.04541v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Camera-radar (CR) fusion is a practical sensing configuration for autonomous driving, but existing models are typically trained with task-specific supervision, limiting reusable representation learning. We present CRISP, a spatiotemporal CR backbone pretrained through forecasting-based representation learning. Given historical multi-view images and radar sweeps, CRISP learns a unified bird's-eye-view (BEV) representation by predicting future LiDAR point clouds. LiDAR is used only as privileged supervision during pretraining; the deployed model requires only camera and radar. To make forecasting-based pretraining effective for CR fusion, CRISP introduces an enhanced radar encoder, radar-enhanced temporal self-attention, and multimodal feature rendering with modality innovation gating. These components inject radar range and Doppler cues into BEV temporal propagation and allow BEV tokens to selectively incorporate camera and radar evidence. Experiments on nuScenes show that CRISP improves long-horizon point cloud forecasting and transfers effectively to downstream tasks, including 3D detection, tracking, online mapping, motion forecasting, future occupancy prediction, and planning, suggesting that predictive CR pretraining is a promising path toward scalable driving representations under practical sensor configurations. The project website is https://umfieldrobotics.github.io/CRISP.
+
+摄像头雷达（CR）融合是自动驾驶的一种实用传感配置，但现有模型通常是通过特定于任务的监督进行训练的，限制了可重复使用的表示学习。我们提出了 CRISP，一种通过基于预测的表示学习进行预训练的时空 CR 主干。给定历史多视图图像和雷达扫描，CRISP 通过预测未来 LiDAR 点云来学习统一的鸟瞰图 (BEV) 表示。 LiDAR仅在预训练期间用作特权监督；部署的模型只需要摄像头和雷达。为了使基于预测的预训练对 CR 融合有效，CRISP 引入了增强型雷达编码器、雷达增强型时间自注意力以及具有模态创新门控的多模态特征渲染。这些组件将雷达范围和多普勒线索注入 BEV 时间传播，并允许 BEV 代币有选择地合并摄像头和雷达证据。 nuScenes 上的实验表明，CRISP 改进了长视野点云预测，并有效地转移到下游任务，包括 3D 检测、跟踪、在线地图、运动预测、未来占用预测和规划，这表明预测 CR 预训练是在实际传感器配置下实现可扩展驾驶表示的一条有前途的途径。项目网站为https://umfieldrobotics.github.io/CRISP。
+
+</details>
+
+---
+
+## 4. Worldscape-MoE: A Unified Mixture-of-Experts World Model for Scalable Heterogeneous Action Control / Worldscape-MoE：用于可扩展异构动作控制的统一专家混合世界模型
+
+**Date**: 2026-07-04 | **arXiv**: [2607.03964v1](http://arxiv.org/abs/2607.03964v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.03964v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models are rapidly becoming a core infrastructure for embodied intelligence and interactive agents: they provide controllable simulators in which agents can perceive, act, forecast, and acquire scalable experience. Yet current video generation world models are still organized around isolated control interfaces, such as camera trajectories, robot actions, or hand-joint signals. This fragmentation is increasingly a scaling bottleneck. The central challenge is not the absence of controllable generators, but the lack of a unified and extensible learning framework that can absorb heterogeneous action supervision while preserving a shared model of world dynamics. In this work, we introduce Worldscape-MoE, a Mixture-of-Experts world model built on Diffusion Transformers for scalable heterogeneous action control. Our key observation is that different controls specify different interfaces to the same underlying world: although their representations differ, they constrain shared physical regularities, scene dynamics, and interaction semantics. Worldscape-MoE operationalizes this observation through modality-aware control injection, shared and control-specific experts, and a progressive MoE tuning strategy that supports continual extension to new action modalities. Experiments across locomotion, robotic manipulation, and egocentric hand control show that heterogeneous supervision improves rather than interferes with individual control capabilities. Worldscape-MoE achieves strong results on WorldArena, improves locomotion and hand-control metrics, exhibits robust out-of-distribution generalization, and demonstrates scaling behavior as additional control data and experts are integrated.
+
+世界模型正在迅速成为实体智能和交互式代理的核心基础设施：它们提供可控的模拟器，代理可以在其中感知、行动、预测和获取可扩展的体验。然而，当前的视频生成世界模型仍然围绕孤立的控制接口进行组织，例如摄像机轨迹、机器人动作或手关节信号。这种碎片化日益成为扩展瓶颈。核心挑战不是缺乏可控生成器，而是缺乏一个统一且可扩展​​的学习框架，该框架可以吸收异构动作监督，同时保留世界动态的共享模型。在这项工作中，我们介绍了 Worldscape-MoE，这是一种基于扩散变压器构建的专家混合世界模型，用于可扩展的异构动作控制。我们的主要观察结果是，不同的控件为同一底层世界指定了不同的接口：尽管它们的表示不同，但它们限制了共享的物理规律、场景动态和交互语义。 Worldscape-MoE 通过模态感知控制注入、共享和特定于控制的专家以及支持不断扩展新行动模态的渐进式 MoE 调整策略来实施这一观察。运动、机器人操作和以自我为中心的手控制的实验表明，异构监督改善而不是干扰个体的控制能力。 Worldscape-MoE 在 WorldArena 上取得了出色的成果，改进了运动和手动控制指标，展示了强大的分布外泛化能力，并在集成额外的控制数据和专家时展示了扩展行为。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-01 (10 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-01
