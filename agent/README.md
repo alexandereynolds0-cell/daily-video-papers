@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-07](papers/2026-07-07.md) - 11 papers
 - [2026-07-05](papers/2026-07-05.md) - 4 papers
 - [2026-07-01](papers/2026-07-01.md) - 52 papers
 - [2026-06-30](papers/2026-06-30.md) - 34 papers
@@ -115,6 +116,194 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-07 (11 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-07-07
+
+**Paper Count**: 11
+
+---
+
+## 1. A Reliable Context-Aware and Temporal Planning Framework for Autonomous Driving / 可靠的自动驾驶情境感知和时间规划框架
+
+**Date**: 2026-07-06 | **arXiv**: [2607.04689v1](http://arxiv.org/abs/2607.04689v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.04689v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Safe operation of autonomous vehicles in dense urban traffic depends on perception and planning that remain reliable when onboard sensing is degraded. In real driving conditions, camera observations are frequently corrupted by occlusion, motion blur, illumination change, and sensor noise, and when such degraded observations are aggregated indiscriminately over time, trajectory planning becomes unstable and collision risk rises for both the ego vehicle and surrounding road users. Recent Bird's-Eye-View (BEV) approaches unify perception and planning through a shared spatial representation, but most fuse temporal information across frames without assessing the reliability of the underlying observations. We present a Reliable Context-Aware and Temporal Planning framework for Autonomous Driving (RCT-AD) that explicitly models feature quality and temporal consistency to support safer, more consistent planning. A Reliable Context Awareness module scores per-frame reliability and selectively retains trustworthy features through a quality-gated First-In-Last-Out (FILO) memory mechanism, reconstructing degraded observations from reliable historical context so that corrupted inputs do not destabilize the scene representation. A Temporal Trajectory Planner captures long-term dependencies and multi-agent interactions to produce smoother, safety-aware trajectories, while a joint detection-and-segmentation head injects semantic and motion cues into the shared BEV space to strengthen scene understanding. Experiments on the nuScenes autonomous driving benchmark show that RCT-AD improves perception accuracy, motion prediction, and planning robustness over recent end-to-end baselines, achieving 61.5 nuScenes Detection Score, 52.9 mean Average Precision, and 52.3 mean Intersection over Union, while maintaining competitive computational efficiency suitable for real-time deployment.
+
+自动驾驶汽车在密集的城市交通中的安全运行取决于在车载传感性能下降时仍然可靠的感知和规划。在实际驾驶条件下，摄像头观察结果经常会因遮挡、运动模糊、照明变化和传感器噪声而受到破坏，当这种退化的观察结果随着时间的推移不加区别地聚集时，轨迹规划就会变得不稳定，并且本车和周围道路使用者的碰撞风险都会上升。最近的鸟瞰图（BEV）方法通过共享的空间表示来统一感知和规划，但大多数融合跨帧的时间信息，而没有评估基础观察的可靠性。我们提出了一个可靠的自动驾驶上下文感知和时间规划框架（RCT-AD），该框架显式地对特征质量和时间一致性进行建模，以支持更安全、更一致的规划。可靠上下文感知模块对每帧可靠性进行评分，并通过质量门控先进后出 (FILO) 内存机制选择性地保留可信特征，从可靠的历史上下文中重建退化的观察结果，以便损坏的输入不会破坏场景表示的稳定性。时间轨迹规划器捕获长期依赖性和多智能体交互，以产生更平滑、具有安全意识的轨迹，而联合检测和分割头将语义和运动线索注入共享 BEV 空间以加强场景理解。 nuScenes 自动驾驶基准测试表明，RCT-AD 相对于最近的端到端基线提高了感知准确性、运动预测和规划稳健性，实现了 61.5 nuScenes 检测分数、52.9 平均精度和 52.3 平均交集，同时保持适合实时部署的有竞争力的计算效率。
+
+</details>
+
+---
+
+## 2. ToolFailBench: Diagnosing Tool-Use Failures in LLM Agents / ToolFailBench：诊断 LLM Agent 中的工具使用故障
+
+**Date**: 2026-07-06 | **arXiv**: [2607.04686v1](http://arxiv.org/abs/2607.04686v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.04686v1)
+
+**Categories**: cs.CL, cs.AI, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Tool calling is central to modern language model agents, but aggregate benchmark scores often hide where tool use fails. A model that never calls a needed tool and a model that calls the tool but ignores the result can look similar under final task accuracy. We introduce ToolFailBench, a diagnostic benchmark for measuring tool-use failures across 1,000 tasks in finance, medicine, law, cybersecurity, and real estate. Tool-required tasks return values the model wouldn't guess, forcing it to trust the tool while control tasks attach the same tools but should be answered directly. We label each trace with Tool-Skip, Result-Ignore, Output-Fabrication, and Unnecessary-Tool-Use, using a rule classifier and two LLM judges aggregated by majority vote. Across 19 headline models, the best reaches 86.33% Clean Tool-Use Rate, showing that faithful tool use is not saturated. More importantly, models with similar aggregate scores fail in different ways: most stay disciplined on no-tool controls, while Llama-3.1 models show an Always-Call pattern, and at the same parameter scale Llama-3.1-70B and Qwen2.5-72B differ by 89 percentage points on control-task accuracy. Tool-use evaluation should measure not only whether agents call tools, but whether they use tool outputs correctly and avoid tools when none is needed.
+
+工具调用是现代语言模型代理的核心，但总体基准分数通常隐藏工具使用失败的地方。从不调用所需工具的模型和调用该工具但忽略结果的模型在最终任务准确性下看起来很相似。我们推出了 ToolFailBench，这是一种诊断基准，用于测量金融、医学、法律、网络安全和房地产领域 1,000 项任务中的工具使用失败情况。需要工具的任务返回模型无法猜测的值，迫使模型信任该工具，而控制任务则附加相同的工具，但应直接回答。我们使用规则分类器和通过多数投票汇总的两名 LLM 法官，用 Tool-Skip、Result-Ignore、Output-Fabrication 和 Unnecessary-Tool-Use 标记每个跟踪。在 19 个头条车型中，最好的工具清洁使用率达到 86.33%，表明忠实的工具使用并未饱和。更重要的是，具有相似总分的模型以不同的方式失败：大多数模型在无工具控制上保持纪律，而 Llama-3.1 模型显示出始终调用模式，并且在相同的参数范围下，Llama-3.1-70B 和 Qwen2.5-72B 在控制任务准确性上相差 89 个百分点。工具使用评估不仅应该衡量智能体是否调用工具，还应该衡量他们是否正确使用工具输出并在不需要时避免使用工具。
+
+</details>
+
+---
+
+## 3. EEG-SpikeAgent: Agentic Closed-Loop Program Synthesis for Automated EEG Spike Detection / EEG-SpikeAgent：用于自动 EEG 尖峰检测的代理闭环程序合成
+
+**Date**: 2026-07-06 | **arXiv**: [2607.04558v1](http://arxiv.org/abs/2607.04558v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.04558v1)
+
+**Categories**: cs.CL, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Automated detection of interictal epileptiform discharges in scalp electroencephalography (EEG) is clinically important, but recent high-performing deep-learning models often trade interpretability for accuracy. We introduce EEG-SpikeAgent, a closed-loop program-synthesis framework that uses a large language model (LLM) agentic system to generate signal-processing features for spike detection in scalp EEG. The system iteratively proposes one deterministic EEG feature module at a time, executes the resulting code on EEG to generate tabular features, evaluates performance via a tabular classifier, summarizes run-level metrics, and feeds structured diagnostics back to the model for refinement. Across iterations, EEG-SpikeAgent proposes and refines candidate signal features and decision rules informed by model performance. We evaluated EEG-SpikeAgent on VEPISET, a public 29-channel dataset of 4-second epochs containing 2,516 discharge-containing and 22,933 non-discharge epochs. Across five-fold cross-validation with a gradient-boosted tree classifier, agent-generated features achieved an area under the receiver operating characteristic curve of 0.935, balanced accuracy of 0.699, F1 score of 0.557, sensitivity of 0.401, and specificity of 0.996 at the default operating point. At an operating point with sensitivity 0.80, mean precision was 0.470 and mean specificity was 0.900. Artifact-aware feature generation improved balanced accuracy and F1 score over spike-only feature search. These results indicate that LLM-based program synthesis can automate EEG feature engineering in auditable and inspectable code-driven manner for clinical and methodological review.
+
+头皮脑电图 (EEG) 中发作间期癫痫样放电的自动检测在临床上很重要，但最近的高性能深度学习模型通常会牺牲可解释性来换取准确性。我们引入了 EEG-SpikeAgent，这是一个闭环程序合成框架，它使用大型语言模型（LLM）代理系统来生成用于头皮脑电图尖峰检测的信号处理特征。该系统一次迭代地提出一个确定性脑电图特征模块，在脑电图上执行结果代码以生成表格特征，通过表格分类器评估性能，总结运行级别指标，并将结构化诊断反馈给模型进行细化。在迭代过程中，EEG-SpikeAgent 根据模型性能提出并完善候选信号特征和决策规则。我们在 VEPISET 上评估了 EEG-SpikeAgent，VEPISET 是一个 4 秒时期的公共 29 通道数据集，包含 2,516 个放电时期和 22,933 个非放电时期。通过使用梯度增强树分类器的五重交叉验证，代理生成的特征在默认操作点处实现了接收者操作特征曲线下面积 0.935、平衡准确度 0.699、F1 得分 0.557、灵敏度 0.401 和特异性 0.996。在灵敏度为 0.80 的操作点，平均精度为 0.470，平均特异性为 0.900。与仅尖峰特征搜索相比，工件感知特征生成提高了平衡准确性和 F1 分数。这些结果表明，基于法学硕士的程序合成可以以可审计和可检查的代码驱动方式自动化脑电图特征工程，以进行临床和方法学审查。
+
+</details>
+
+---
+
+## 4. Compressing the Validation Bottleneck: An Agentic Self-Driving Lab for Scientific Discovery / 压缩验证瓶颈：用于科学发现的代理自动驾驶实验室
+
+**Date**: 2026-07-05 | **arXiv**: [2607.04508v1](http://arxiv.org/abs/2607.04508v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.04508v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic AI-for-Science can automate ideation, planning, and analysis, but final validation still depends on real experiments. A self-driving lab (SDL) can execute those experiments, yet the loop still has bottlenecks: the agent may spend too many rounds on low-value experiments, or each round may require a high-cost experiment. We target these two physical bottlenecks with one agent. First, a prior-aware agentic DOE loop uses domain knowledge and past results to propose feasible and informative next experiments, reducing trials-to-target. Second, a cost-aware surrogate agent predicts high-cost, high-resolution measurements from low-cost, low-resolution measurements. It chooses between a high- and a low-cost measurement based on the predicted uncertainty. We examine these directions in the biology and materials domains, respectively. Together, under a single agent, these components aim to accelerate the SDL loop by reducing both the number of loops and the cost per experiment.
+
+Agentic AI-for-Science 可以自动化构思、规划和分析，但最终验证仍然取决于真实的实验。自动驾驶实验室（SDL）可以执行这些实验，但循环仍然存在瓶颈：代理可能会在低价值实验上花费太多轮次，或者每轮可能需要高成本实验。我们用一个代理来解决这两个物理瓶颈。首先，先验感知代理 DOE 循环使用领域知识和过去的结果来提出可行且信息丰富的下一步实验，从而减少目标试验。其次，具有成本意识的代理代理根据低成本、低分辨率的测量来预测高成本、高分辨率的测量。它根据预测的不确定性在高成本和低成本测量之间进行选择。我们分别在生物学和材料领域研究这些方向。在单个代理的作用下，这些组件旨在通过减少循环数量和每次实验的成本来加速 SDL 循环。
+
+</details>
+
+---
+
+## 5. Autonomous Information Seeking: A Roadmap for Agentic Recommender Systems / 自主信息搜索：代理推荐系统的路线图
+
+**Date**: 2026-07-05 | **arXiv**: [2607.04433v1](http://arxiv.org/abs/2607.04433v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.04433v1)
+
+**Categories**: cs.IR, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The rapid integration of large language model-based agents into recommender systems has driven a shift from static, ranking-based pipelines toward autonomous and interactive systems that can reason, plan, and act. This survey provides a comprehensive overview of this emerging landscape by introducing a unified taxonomy grounded in the level of autonomy and three core paradigms of agentic recommender systems: agent-assisted recommendation, agent-as-recommender, and agent-as-user-simulator. The autonomy framework organizes existing methods along increasing capabilities in proactivity, context awareness, interaction flexibility, and adaptivity. Building on this framework, the survey analyzes how each paradigm adopts different agentic architectures and how agents enhance key components such as profiles, memory, tool use, workflows, and optimization mechanisms. We further examine evaluation methodologies for agentic recommendation, covering automated metrics, LLM-based judging, and simulation-based assessment, and discuss their limitations in capturing reasoning quality, user experience, and system behavior. Beyond existing evaluation protocols, we further discuss unresolved issues in evaluating agentic recommender systems, including trajectory-level assessment, agent contribution analysis, and calibration of user simulation. Lastly, the survey outlines open challenges in lifelong user modeling, contextual abstraction, multimodal alignment, controllability, trustworthiness, privacy, scalability, and efficiency. Together, these analyses establish a unified foundation for understanding the current progress of agentic recommender systems and highlight promising opportunities for developing more autonomous, reliable, and human-aligned recommendation agents.
+
+基于大型语言模型的代理快速集成到推荐系统中，推动了从静态、基于排名的管道向能够推理、计划和行动的自主和交互式系统的转变。这项调查通过引入基于自主水平的统一分类法和代理推荐系统的三个核心范例：代理辅助推荐、代理作为推荐者和代理作为用户模拟器，对这一新兴领域进行了全面概述。自主框架按照增强主动性、情境感知、交互灵活性和适应性的能力来组织现有方法。在此框架的基础上，调查分析了每种范式如何采用不同的代理架构，以及代理如何增强配置文件、内存、工具使用、工作流程和优化机制等关键组件。我们进一步研究代理推荐的评估方法，包括自动化指标、基于法学硕士的判断和基于模拟的评估，并讨论它们在捕获推理质量、用户体验和系统行为方面的局限性。除了现有的评估协议之外，我们还进一步讨论了评估代理推荐系统中尚未解决的问题，包括轨迹级评估、代理贡献分析和用户模拟校准。最后，调查概述了终身用户建模、上下文抽象、多模式对齐、可控性、可信性、隐私、可扩展性和效率方面的开放挑战。总之，这些分析为理解代理推荐系统的当前进展奠定了统一的基础，并强调了开发更自主、更可靠、更人性化的推荐代理的有希望的机会。
+
+</details>
+
+---
+
+## 6. ACE-Brain-0.5: A Unified Embodied Foundational Model for Physical Agentic AI / ACE-Brain-0.5：物理代理人工智能的统一体现基础模型
+
+**Date**: 2026-07-05 | **arXiv**: [2607.04426v1](http://arxiv.org/abs/2607.04426v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.04426v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Embodied AI is moving from isolated perception or action modules toward physical agents that understand, plan under goals, act through robot bodies, monitor progress, and improve from experience. Existing systems address this loop only in parts: end-to-end policies generate actions but often lack spatial reasoning, planning, and execution assessment, while robot-agent systems orchestrate tools or specialists but do not learn a shared representation. This fragmentation limits general Physical Agentic AI. We present ACE-Brain-0.5, a unified embodied foundation model that organizes robot intelligence into five coupled functions: spatial perception, decision making, embodied interaction, self-monitoring, and self-improvement. Built on ACE-Brain-0, which established spatial intelligence as a shared scaffold across robot platforms, ACE-Brain-0.5 extends an understanding-centric model into a closed-loop foundation model. A single 8B backbone instantiates the first four functions: grounding objects and affordances, reasoning over 3D and egocentric spatial relations, decomposing instructions into subgoals, generating navigation and manipulation actions, and estimating progress for verification and recovery. To unify these capabilities without cross-task interference, we introduce SSR+, which extends Scaffold-Specialize-Reconcile with a Reactivate stage after task-vector merging. The fifth function, self-improvement, is realized by a companion framework that updates external execution state, including task schemas, spatial memory, and failure-recovery cases, from rollouts. Across fifteen benchmarks, ACE-Brain-0.5 improves over ACE-Brain-0 on 14 of 18 spatial perception and grounding benchmarks, achieves competitive navigation and manipulation performance, and provides strong progress estimation in ID and OOD settings. Together, these results mark an early step toward general Physical Agentic AI.
+
+具身人工智能正在从孤立的感知或行动模块转向物理代理，这些物理代理可以理解、根据目标进行计划、通过机器人身体行动、监控进度并根据经验进行改进。现有系统仅部分解决此循环：端到端策略生成操作，但通常缺乏空间推理、规划和执行评估，而机器人代理系统编排工具或专家，但不学习共享表示。这种碎片化限制了一般的物理代理人工智能。我们提出了 ACE-Brain-0.5，这是一个统一的具身基础模型，它将机器人智能组织成五个耦合功能：空间感知、决策、具身交互、自我监控和自我改进。 ACE-Brain-0.5 以 ACE-Brain-0 为基础，将空间智能建立为跨机器人平台的共享支架，ACE-Brain-0.5 将以理解为中心的模型扩展为闭环基础模型。单个 8B 主干网实例化了前四个功能：基础对象和可供性、3D 推理和以自我为中心的空间关系、将指令分解为子目标、生成导航和操作操作以及估计验证和恢复的进度。为了统一这些功能而不产生跨任务干扰，我们引入了 SSR+，它通过任务向量合并后的重新激活阶段扩展了 Scaffold-Specialize-Reconcile。第五个功能是自我改进，是通过一个配套框架来实现的，该框架可以通过推出更新外部执行状态，包括任务模式、空间内存和故障恢复案例。在 15 个基准测试中，ACE-Brain-0.5 在 18 个空间感知和接地基准测试中的 14 个上比 ACE-Brain-0 有所改进，实现了有竞争力的导航和操作性能，并在 ID 和 OOD 设置中提供了强大的进度估计。总之，这些结果标志着迈向通用物理代理人工智能的早期一步。
+
+</details>
+
+---
+
+## 7. Memory-Orchestrated Semantic System (MOSS): An Auditable Agentic Memory Architecture / 内存编排语义系统（MOSS）：可审计代理内存架构
+
+**Date**: 2026-07-05 | **arXiv**: [2607.04391v1](http://arxiv.org/abs/2607.04391v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.04391v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-term memory remains a structural weakness of AI agents. The dominant approach, retrieval-augmented generation (RAG), relies on embedding-based similarity search, which is opaque by construction, difficult to audit, and bounded by the theoretical limits of vector representations. We present the Memory-Orchestrated Semantic System (MOSS), an agentic memory architecture in which the agent drives retrieval over a structured relational database. MOSS is model-agnostic, storage-agnostic, and API-agnostic: it runs on any relational engine, connects to any LLM provider (or to deterministic non-LLM processes), and deploys on any infrastructure, local or cloud. Its retrieval execution is symbolic and reproducible (once a query is formulated, no LLM participates in the retrieval loop) and every step of the system, from indexing to answer formulation, is logged and inspectable, making MOSS auditable by construction. Rather than imposing an external ontology, MOSS derives its conceptual vocabulary from the corpus itself. We report on a longitudinal deployment unique in the agentic-memory literature: a year of continuous production over an individual scholar's working corpus--a conversational corpus reaching back to October 2024 (some 44 million tokens, retroactively indexed) comprising 110,183 segments, alongside 163,494 catalogued documents, 569 inductively derived concepts, 322,662 concept annotations, and eleven metadata graphs totaling approximately five million relations--across four successive infrastructure generations. While the present case is that of a single researcher, the architecture is in no way specific to one person: it serves a team, an institution, or any entity that accumulates knowledge over time. We argue that auditable, sovereign, structurally unbounded memory is a precondition for AI agents intended to accompany a person or an organization over years rather than sessions.
+
+长期记忆仍然是人工智能代理的结构性弱点。主导方法是检索增强生成（RAG），依赖于基于嵌入的相似性搜索，这种搜索在结构上是不透明的，难以审计，并且受到向量表示的理论限制。我们提出了内存编排语义系统（MOSS），这是一种代理内存架构，其中代理驱动结构化关系数据库的检索。 MOSS 与模型、存储和 API 无关：它在任何关系引擎上运行，连接到任何 LLM 提供商（或确定性非 LLM 流程），并部署在任何基础设施（本地或云）上。它的检索执行是象征性的和可重复的（一旦制定了查询，没有法学硕士参与检索循环），并且系统的每一步（从索引到答案制定）都会被记录和检查，从而使 MOSS 可以通过构建进行审核。 MOSS 不是强加外部本体论，而是从语料库本身派生其概念词汇。我们报告了代理记忆文献中独特的纵向部署：对单个学者的工作语料库进行了一年的连续生产——一个可追溯到 2024 年 10 月的会话语料库（约 4400 万个标记，追溯索引），包括 110,183 个片段，以及 163,494 个编目文档、569 个归纳推导的概念、322,662 个概念注释和 11 个元数据图，总计约 5 个百万个关系——跨越连续四代基础设施。虽然当前的案例是单个研究人员的案例，但该架构绝不是特定于一个人的：它服务于一个团队、一个机构或任何随着时间的推移积累知识的实体。我们认为，可审计的、主权的、结构上无限制的记忆是人工智能代理旨在陪伴一个人或一个组织多年而不是会话的先决条件。
+
+</details>
+
+---
+
+## 8. Anytime Plug-and-Play Control with Contract-Based Distributed MPC / 使用基于合约的分布式 MPC 进行随时即插即用控制
+
+**Date**: 2026-07-05 | **arXiv**: [2607.04215v1](http://arxiv.org/abs/2607.04215v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.04215v1)
+
+**Categories**: math.OC, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A central challenge in many mobile multi-robot applications is that communication topologies are inherently time-varying. Agents may enter or exit the network and such changes cannot generally be restricted a priori. This work introduces a distributed multi-agent control algorithm based on local communication that supports anytime agent joining and leaving the communication network without centralized coordination. The method scales efficiently with the number of agents by relying on a distance-based neighbor definition and on contracts derived from predicted trajectories. The resulting contract constraints guarantee collision avoidance and constraint satisfaction. We validate the proposed method in an autonomous multi-agent driving scenario, demonstrating effective collision avoidance in high-speed, dynamic environments with agents moving in opposite directions, in both simulated and real-world experiments.
+
+许多移动多机器人应用的一个核心挑战是通信拓扑本质上是随时间变化的。代理可以进入或退出网络，并且这种变化通常不能被先验地限制。本文介绍了一种基于本地通信的分布式多智能体控制算法，支持智能体随时加入和离开通信网络，无需集中协调。该方法依靠基于距离的邻居定义和从预测轨迹导出的契约，有效地随着代理的数量进行扩展。由此产生的契约约束保证了冲突避免和约束满足。我们在自主多智能体驾驶场景中验证了所提出的方法，在模拟和现实实验中证明了在高速、动态环境中智能体向相反方向移动时可以有效避免碰撞。
+
+</details>
+
+---
+
+## 9. ACE: Agentic Control for Embodied Manipulation via Zero-shot Workflow Reasoning / ACE：通过零样本工作流推理进行具体操作的代理控制
+
+**Date**: 2026-07-05 | **arXiv**: [2607.04162v1](http://arxiv.org/abs/2607.04162v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.04162v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Open-ended tabletop manipulation requires agents to not only understand natural language but also adapt to dynamic environments and execution failures. We present ACE (Agentic Control for Embodied Manipulation), a zero-shot workflow reasoning framework for tabletop pick-and-place from natural language. Rather than relying on direct low-level action mapping, ACE combines agentic workflow reasoning with two robot-facing executable skills: a visual grounding interface and a reusable pick-and-place primitive. To bridge semantic reasoning and physical control, the active sub-goal is grounded into a mask-mediated vision-action interface. This unified mask specifies the target object and destination, is tracked over time, exposed for human verification, and ultimately passed to a task-agnostic downstream policy for execution. Crucially, ACE operates in a closed loop supported by a multi-timescale memory. After an action is executed, the system automatically verifies whether the intended sub-goal succeeded, using the outcome to advance, retry, repair, or replan. This enables online adaptation to user corrections, scene changes, and physical failures. We evaluate ACE on logically complex, long-horizon tasks, including zero-shot multi-step equation formation with number cubes and constraint-based object retrieval. ACE demonstrates task-level zero-shot generalization on novel semantic constraints and randomized tabletop scenes without task-specific retraining. Specifically, while standard end-to-end baselines struggle to complete these logically demanding tasks, ACE achieves a 50% success rate in equation formation and a 70% success rate in constraint retrieval. This contrast demonstrates that explicit workflow reasoning and mask-mediated control offer a robust, practical route toward adaptable robotic manipulation.
+
+开放式桌面操作要求代理不仅能够理解自然语言，而且能够适应动态环境和执行失败。我们提出了 ACE（体现操纵的代理控制），这是一种用于通过自然语言进行桌面拾取和放置的零样本工作流推理框架。 ACE 不依赖于直接的低级动作映射，而是将代理工作流程推理与两种面向机器人的可执行技能相结合：视觉基础界面和可重复使用的拾放原语。为了架起语义推理和物理控制的桥梁，主动子目标被植根于掩模介导的视觉动作界面。这个统一的掩码指定了目标对象和目的地，随着时间的推移进行跟踪，暴露给人工验证，并最终传递给与任务无关的下游策略来执行。至关重要的是，ACE 在多时间尺度内存支持的闭环中运行。执行操作后，系统会自动验证预期的子目标是否成功，并使用结果进行推进、重试、修复或重新计划。这使得能够在线适应用户修正、场景变化和物理故障。我们在逻辑复杂、长期任务上评估 ACE，包括使用数字立方体的零样本多步方程形成和基于约束的对象检索。 ACE 展示了对新颖语义约束和随机桌面场景的任务级零样本泛化，无需特定于任务的再训练。具体来说，虽然标准的端到端基线难以完成这些逻辑上要求较高的任务，但 ACE 在方程形成方面实现了 50% 的成功率，在约束检索方面实现了 70% 的成功率。这种对比表明，明确的工作流程推理和掩模介导的控制为适应性机器人操作提供了一条稳健、实用的途径。
+
+</details>
+
+---
+
+## 10. The Remarkable Effectiveness of Providing AI Agents with Natural Language Tools: A Replication Study Validating NLT Performance Across 14 Models / 为 AI 代理提供自然语言工具的显着效果：一项验证 14 个模型的 NLT 性能的复制研究
+
+**Date**: 2026-07-04 | **arXiv**: [2607.03953v1](http://arxiv.org/abs/2607.03953v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.03953v1)
+
+**Categories**: cs.CL, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This study independently replicates and extends the Natural Language Tools (NLT) framework of Johnson et al.~(2025), which questions the use of structured tool calling in large language model (LLM) agentic systems. We evaluated NLT across 14 models and 8,560 trials, adding newer frontier, reasoning, and open-weight models to the original set. The results confirm the core findings and add detail. NLT improves tool-calling accuracy by 14.9 percentage points overall (62.3\% versus 47.4\% structured) and reduces critical errors by 93\% (51 versus 755 errors). The gains depend on model capability: models without native tool calling, reasoning models, and smaller models gain substantially (+24.0pp to +43.1pp), while heavily optimized frontier models (GPT-5, Gemini 2.5 Pro) show smaller or reversed advantages. This matches recent analyses of reinforcement-learning-optimized tool use (Martinez, 2025). NLT also cuts token usage by 25.2\%. The reliability and efficiency advantages compound in recursive agentic workflows, where agents chain many tool calls across sub-agents: a structured failure triggers retries, fallback routing, and coordination overhead, while NLT avoids most of that cost at the source. This work makes three contributions: (1) the first independent validation of NLT using open-source tooling, (2) evidence that model capability moderates NLT's advantages (Chen et al., 2025; Zhang et al., 2025), and (3) a measurement of NLT's reliability benefit (93\% fewer errors), its most deployment-relevant property given the known fragility of structured tool calling. NLT is a practical alternative to structured tool calling, especially for production systems that value reliability over parseability.
+
+这项研究独立地复制和扩展了 Johnson 等人~(2025) 的自然语言工具 (NLT) 框架，该框架质疑在大型语言模型 (LLM) 代理系统中使用结构化工具调用。我们评估了 14 个模型和 8,560 次试验的 NLT，在原始模型集中添加了更新的前沿模型、推理模型和开放权重模型。结果证实了核心发现并增加了细节。 NLT 总体上将工具调用准确度提高了 14.9 个百分点（结构化为 62.3%，相对于结构化为 47.4%），并将关键错误减少了 93%（错误为 51 个，相对于 755 个错误）。增益取决于模型能力：没有本机工具调用的模型、推理模型和较小的模型大幅增益（+24.0pp 至 +43.1pp），而深度优化的前沿模型（GPT-5、Gemini 2.5 Pro）则显示出较小或相反的优势。这与最近对强化学习优化工具使用的分析相匹配（Martinez，2025）。 NLT 还将代币使用量减少了 25.2%。可靠性和效率优势在递归代理工作流程中得到了复合，其中代理跨子代理链接了许多工具调用：结构化故障触发重试、后备路由和协调开销，而 NLT 从源头避免了大部分成本。这项工作做出了三项贡献：（1）首次使用开源工具对 NLT 进行独立验证，（2）证据表明模型能力调节了 NLT 的优势（Chen 等人，2025 年；Zhang 等人，2025 年），以及（3）衡量 NLT 的可靠性优势（错误减少 93%），考虑到已知的结构化工具调用的脆弱性，这是其与部署最相关的属性。 NLT 是结构化工具调用的实用替代方案，特别是对于重视可靠性而非可解析性的生产系统。
+
+</details>
+
+---
+
+## 11. Rethinking Scientific Discovery in an Agentic Era / 重新思考代理时代的科学发现
+
+**Date**: 2026-07-04 | **arXiv**: [2607.03863v1](http://arxiv.org/abs/2607.03863v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.03863v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Artificial intelligence has advanced scientific discovery, but most AI4Science systems remain fragmented tools that rely on humans to coordinate problem formulation, literature grounding, model use, simulation, validation, and knowledge reuse. This paper presents \textbf{SCION (Scientific Collaborative Innovation with Agentic Organizational Nexus)}, an agentic scientific operating system that acts as an \textbf{organizational nexus}. Through a Science Agent serving as a \textbf{Meta-Harness}, SCION connects scientific tasks, tools, agents, artifacts, and memory, transforming research into an executable, auditable, and reusable operational process. At its core is the \textbf{Research Execution Plan (REP)}, which compiles high-level scientific intent into staged objectives, dependencies, verification checkpoints, tool requirements, expected artifacts, and fallback conditions. SCION further integrates hierarchical multi-agent execution, profile-driven specialization, selective context construction, governed delegation, and layered epistemic memory to support long-horizon scientific work. We formulate discovery under SCION as \textbf{Target-conditioned Inverse Search} and extend it to hidden-target settings through batch active search under finite experimental budgets. Applications in materials analysis, molecule design, and protein or antibody screening, together with experiments on scientific reading, idea generation, molecule generation, and antibody screening, show that SCION outperforms existing autonomous research-agent baselines, especially in decomposition, verification, refinement, and memory reuse. Overall, SCION shifts AI from isolated tools toward a coordinated operational layer for traceable and reusable scientific innovation.
+
+人工智能具有先进的科学发现，但大多数 AI4Science 系统仍然是支离破碎的工具，依赖人类来协调问题表述、文献基础、模型使用、模拟、验证和知识重用。本文提出了 \textbf{SCION（具有代理组织关系的科学协作创新）}，这是一个充当\textbf{组织关系}的代理科学操作系统。通过充当 \textbf{Meta-Harness} 的科学代理，SCION 连接科学任务、工具、代理、工件和内存，将研究转化为可执行、可审计和可重用的操作流程。其核心是\textbf{研究执行计划（REP）}，它将高级科学意图编译为分阶段目标、依赖性、验证检查点、工具要求、预期工件和后备条件。 SCION 进一步集成了分层多代理执行、配置文件驱动的专业化、选择性上下文构建、受控委托和分层认知记忆，以支持长期科学工作。我们将 SCION 下的发现表述为 \textbf{目标条件逆搜索}，并通过有限实验预算下的批量主动搜索将其扩展到隐藏目标设置。在材料分析、分子设计、蛋白质或抗体筛选方面的应用，以及科学阅读、想法生成、分子生成和抗体筛选方面的实验表明，SCION 优于现有的自主研究代理基线，特别是在分解、验证、细化和内存重用方面。总体而言，SCION 将人工智能从孤立的工具转向协调的操作层，以实现可追溯和可重复使用的科学创新。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-05 (4 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-07-05
