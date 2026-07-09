@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-09](papers/2026-07-09.md) - 9 papers
 - [2026-07-08](papers/2026-07-08.md) - 9 papers
 - [2026-07-07](papers/2026-07-07.md) - 4 papers
 - [2026-07-01](papers/2026-07-01.md) - 10 papers
@@ -110,6 +111,162 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-09 (9 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-09
+
+**Paper Count**: 9
+
+---
+
+## 1. TouchWorld: A Predictive and Reactive Tactile Foundation Model for Dexterous Manipulation / TouchWorld：用于灵巧操作的预测性和反应性触觉基础模型
+
+**Date**: 2026-07-08 | **arXiv**: [2607.07287v1](http://arxiv.org/abs/2607.07287v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.07287v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Dexterous manipulation in everyday environments requires both anticipation and reaction: a robot must predict how contact should evolve while rapidly correcting local errors caused by slip, misalignment, unstable grasping, or force mismatch. Vision and language provide semantic and geometric guidance, but they cannot reliably reveal hidden contact states such as force, slip, and contact stability. Although tactile sensing exposes these physical cues, most existing policies treat touch as a low-frequency observation stream within a monolithic action model, coupling slow task reasoning, action generation, and fast contact feedback in a single loop. We introduce TouchWorld, a predictive-and-reactive tactile foundation model for dexterous manipulation. TouchWorld uses a hierarchical policy that separates vision-language subtask planning, tactile world-model prediction, visuo-tactile goal-conditioned action generation, and high-frequency tactile residual refinement. A High-Level Planning Layer produces executable subtasks and predicts tactile subgoals; a Visuo-Tactile Goal-Conditioned Policy generates nominal action chunks; and a Tactile-Conditioned Refinement Policy performs online residual correction using recent tactile and proprioceptive feedback. By using touch as both a predictive contact reference and a fast feedback signal, TouchWorld preserves the semantic generalization of vision-language-action policies while improving local contact adaptation. Across six long-horizon and contact-rich dexterous manipulation tasks, TouchWorld achieves 65.0% success in the clean setting and 53.7% success under human perturbations, outperforming the strongest baseline by 15.7 and 18.5 percentage points, respectively.
+
+日常环境中的灵巧操作需要预测和反应：机器人必须预测接触应如何演变，同时快速纠正因滑动、未对准、不稳定抓取或力不匹配引起的局部错误。视觉和语言提供语义和几何指导，但它们无法可靠地揭示隐藏的接触状态，例如力、滑动和接触稳定性。尽管触觉感知暴露了这些物理线索，但大多数现有策略将触摸视为整体动作模型中的低频观察流，将缓慢的任务推理、动作生成和快速接触反馈耦合在单个循环中。我们引入了 TouchWorld，这是一种用于灵巧操作的预测性和反应性触觉基础模型。 TouchWorld 使用分层策略，将视觉语言子任务规划、触觉世界模型预测、视觉触觉目标条件动作生成和高频触觉残差细化分开。高级规划层生成可执行子任务并预测触觉子目标；视觉触觉目标条件策略生成名义动作块；触觉条件细化策略使用最近的触觉和本体感觉反馈执行在线残差校正。通过使用触摸作为预测接触参考和快速反馈信号，TouchWorld 保留了视觉-语言-动作策略的语义概括，同时改进了局部接触适应。在六项长视界和接触丰富的灵巧操作任务中，TouchWorld 在干净环境下取得了 65.0% 的成功率，在人类干扰下取得了 53.7% 的成功率，分别比最强基线高出 15.7 和 18.5 个百分点。
+
+</details>
+
+---
+
+## 2. Billions of Sketches Reveal Hidden Cultural Variation in Human Concepts / 数十亿幅草图揭示了人类概念中隐藏的文化差异
+
+**Date**: 2026-07-08 | **arXiv**: [2607.07267v1](http://arxiv.org/abs/2607.07267v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.07267v1)
+
+**Categories**: cs.CY, cs.CL, physics.soc-ph
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Claims about the universality of human concepts have been predominantly assessed through linguistic similarity across languages and cultures. However, words are effective as communication devices because they compress rich experiential variation into shared conventions, potentially obscuring hidden individual and cultural differences in how concepts are mentally represented. Here, we analyse 2.6 billion human-made sketches of common concepts from 236 countries and territories to examine conceptual structure through people's visual imagination. Consistent with recent work on image-based cognition, we find that single concepts unfold into multiple distinct visual exemplars, revealing latent information about similarities and differences in conceptual structure across cultures. This variation is strongest for concepts involving haptic interaction, suggesting that visual imagery reflects variation in embodied experience as much as conventional definitions. Comparing embedding models of sketches with word embedding models across languages, we find that their geometries diverge, with visual representations preserving rich semantic and cultural structure that language models compress. Cross-cultural similarities derived from sketches align 45% more closely with established cultural distances than do text-based measures. Together, these results suggest that patterns of human conceptual universality may depend critically on the modality through which concepts are measured, with large-scale sketching providing a direct, high-resolution probe of conceptual diversity across embodied and cultural dimensions of thought.
+
+关于人类概念普遍性的主张主要是通过语言和文化之间的语言相似性来评估的。然而，语言作为交流工具是有效的，因为它们将丰富的经验变化压缩成共同的惯例，可能掩盖概念在心理表达方式方面隐藏的个人和文化差异。在这里，我们分析了来自 236 个国家和地区的 26 亿幅常见概念的人工草图，通过人们的视觉想象来检验概念结构。与最近基于图像的认知的研究一致，我们发现单个概念展开为多个不同的视觉范例，揭示了跨文化概念结构的相似性和差异性的潜在信息。对于涉及触觉交互的概念，这种变化最为强烈，这表明视觉图像与传统定义一样反映了具体体验的变化。将草图的嵌入模型与跨语言的词嵌入模型进行比较，我们发现它们的几何形状有所不同，视觉表示保留了语言模型压缩的丰富的语义和文化结构。与基于文本的测量相比，从草图得出的跨文化相似性与既定文化距离的吻合度高 45%。总之，这些结果表明，人类概念普遍性的模式可能在很大程度上取决于衡量概念的方式，大规模的草图提供了对跨越思想的具体和文化维度的概念多样性的直接、高分辨率的探索。
+
+</details>
+
+---
+
+## 3. Validate the Dream Before You Trust Its Verdict: Admissibility for World-Model Simulators / 在相信它的结论之前验证梦想：世界模型模拟器的可接受性
+
+**Date**: 2026-07-08 | **arXiv**: [2607.07196v1](http://arxiv.org/abs/2607.07196v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.07196v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Across robotics, World Models (WMs) are increasingly used to evaluate action policies by simulating the consequences of actions in an imagined world, and returning a success or safety verdict. Yet a verdict is only as trustworthy as the WM that produced it, and the WM itself needs to be certified. In video-generation WMs, fidelity metrics such as Fréchet Video Distance (FVD) reward visual realism, but ignore whether the world responds correctly to the policy's actions, including those unseen in training. Classical simulation-based validation assumes a trusted simulator evaluating an untrusted policy, whereas generative WMs are themselves unverified learned artifacts. Hence, we argue that any WM used as a test oracle must first be accredited before its verdicts can serve as evidence. Building on credibility practices from safety-critical simulation, including Verification, Validation & Accreditation (VV&A), Safety of the Intended Functionality (SOTIF), and scenario-based testing standards, we define an admissibility ladder (L0-L4) that a WM must climb before its closed-loop verdicts are accepted as assurance evidence. Our framework is embodiment-agnostic, and is instantiated in autonomous driving (AD), where assurance methods for traditional simulation are most mature. Applied to two driving WMs, the lower rungs reveal a reversal: the model that ranks higher on visual generation quality (L0) ranks lower on action-following (L1-L2), so visual fidelity does not predict the action-robustness a closed-loop verdict depends on.
+
+在机器人领域，世界模型 (WM) 越来越多地用于通过模拟想象世界中行动的后果来评估行动策略，并返回成功或安全判决。然而，判决的可信度取决于做出判决的 WM，而 WM 本身也需要经过认证。在视频生成 WM 中，Fréchet 视频距离 (FVD) 等保真度指标奖励视觉真实感，但忽略世界是否正确响应策略的操作，包括训练中未看到的操作。经典的基于模拟的验证假设一个可信的模拟器评估不可信的策略，而生成式 WM 本身就是未经验证的学习工件。因此，我们认为任何用作测试预言机的 WM 都必须首先获得认可，然后其判决才能作为证据。基于安全关键型仿真的可信度实践，包括验证、确认和认可 (VV&A)、预期功能安全 (SOTIF) 和基于场景的测试标准，我们定义了一个可接受性阶梯 (L0-L4)，WM 必须在其闭环判决被接受为保证证据之前攀登该阶梯。我们的框架与实施例无关，并在自动驾驶（AD）中实例化，其中传统模拟的保证方法最为成熟。应用于两个驾驶 WM 时，较低的梯级揭示了一个逆转：在视觉生成质量 (L0) 上排名较高的模型在动作跟踪 (L1-L2) 上排名较低，因此视觉保真度并不能预测闭环判决所依赖的动作鲁棒性。
+
+</details>
+
+---
+
+## 4. Grounding Spatial Relations in a Compact World Model: Instruction Leakage and a Goal-Free Dynamics Fix / 在紧凑世界模型中奠定空间关系：指令泄漏和无目标动力学修复
+
+**Date**: 2026-07-08 | **arXiv**: [2607.06925v1](http://arxiv.org/abs/2607.06925v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.06925v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Compact world models that condition on a language goal promise to ground relations such as ``put the red block left of the blue block'' using a sparse set of explicit \emph{reference anchors}. We ask when such references actually ground a relation, and identify a trap: a goal-conditioned predictor reaches a striking $0.90$ relation-readout accuracy, yet this is \emph{instruction transcription}, not perception. Withholding the goal collapses it to chance ($0.90\!\to\!0.27$, three seeds) and a counterfactual instruction makes the predicted anchors follow the \emph{false} instruction $94.5\%$ of the time (true scene $2.3\%$; $N{=}256$). Tested across three settings and a within-task ablation, our central claim characterizes the confound: \textbf{instruction leakage occurs when the scored quantity is transcribable from the instruction (when the instruction names the answer) and is essentially independent of how predictive the non-instruction inputs are.} Our tabletop and the external BabyAI benchmark leak, whereas a Language-Table forward-dynamics world model whose instruction names \emph{referents} does not, until the instruction is augmented to name the direction; and degrading the action never increases leakage, the opposite of what predictor-competition predicts. The diagnosis prescribes the fix: keep the goal out of the dynamics (it belongs to the planner's cost) and supervise the \emph{read} path, recovering genuine, instruction-independent grounding ($0.88$, identical with and without the goal). The detection protocol and remedy apply to any goal-conditioned world model whose instruction names the scored quantity.
+
+以语言目标为条件的紧凑世界模型承诺使用一组稀疏的显式\emph{参考锚}来实现诸如“将红色块放在蓝色块左侧”等基础关系。我们询问此类参考何时真正建立关系，并识别出一个陷阱：目标条件预测器达到惊人的 0.90 美元关系读出精度，但这只是\emph{指令转录}，而不是感知。保留目标会使其崩溃（$0.90\!\to\!0.27$，三个种子），并且反事实指令使预测的锚点遵循 \emph{false} 指令 $94.5\%$（真实场景 $2.3\%$；$N{=}256$）。在三种设置和任务内消融中进行测试，我们的中心主张描述了混淆的特征：\textbf{当评分数量可从指令转录时（当指令命名答案时），指令泄漏发生，并且基本上独立于非指令输入的预测程度。}我们的桌面和外部 BabyAI 基准泄漏，而指令名称为 \emph{referents} 的语言表前向动态世界模型则不会，直到指令被增强以命名方向；降低行为不会增加泄漏，这与预测竞争的预测相反。诊断给出了解决方案：将目标排除在动态之外（它属于规划者的成本）并监督 \emph{read} 路径，恢复真正的、独立于指令的基础（0.88 美元，有目标和没有目标相同）。检测协议和补救措施适用于任何目标条件的世界模型，其指令指定得分数量。
+
+</details>
+
+---
+
+## 5. Vision Language Action (VLA) Models for Unmanned Aerial Robotics and Bimanual Manipulation: A Review / 无人机机器人和双手操作的视觉语言动作 (VLA) 模型：综述
+
+**Date**: 2026-07-07 | **arXiv**: [2607.06706v1](http://arxiv.org/abs/2607.06706v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.06706v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision Language Action (VLA) models unify visual perception, natural-language understanding, and action generation within a single foundation model, allowing a robot to follow instructions such as fold the towel or fly to the red building directly from camera images. Because VLAs inherit world knowledge from internet-scale pre-training, they have become the dominant framework for learning-based manipulation, with bimanual coordination serving as the most demanding testbed: two arms with 7 degrees of freedom each must move in concert to fold, assemble, and reorient objects. Unmanned aerial robotics faces a structurally similar challenge: a drone must coordinate thrust, attitude, and increasingly gripper commands from visual observations under strict latency and payload constraints. This review covers 183 contributions spanning 2017-2026 and organized along seven dimensions: VLA architectures, training recipes, action representations, bimanual coordination (2022-2026), unmanned aerial vehicle (UAV) navigation and control (2017-2026), language grounding, and cross-cutting concerns including memory and world models. We show that the coordination strategies, training recipes, and action representations developed for bimanual VLAs transfer to unmanned aerial systems and identify fourteen research directions across both domains.
+
+视觉语言动作 (VLA) 模型将视觉感知、自然语言理解和动作生成统一在一个基础模型中，使机器人能够遵循指令，例如折叠毛巾或直接从相机图像飞向红色建筑物。由于 VLA 继承了互联网规模预训练的世界知识，因此它们已成为基于学习的操作的主导框架，其中双手协调是最苛刻的测试平台：两个具有 7 个自由度的手臂必须协调一致地移动，以折叠、组装和重新定向物体。无人机机器人技术面临着结构上类似的挑战：无人机必须在严格的延迟和有效负载限制下协调推力、姿态和来自视觉观察的越来越多的抓手命令。本次回顾涵盖了 2017-2026 年期间的 183 项贡献，并按照七个维度进行组织：VLA 架构、训练方法、动作表示、双手协调（2022-2026 年）、无人机 (UAV) 导航和控制（2017-2026 年）、语言基础以及包括记忆和世界模型在内的跨领域关注点。我们展示了为双手 VLA 开发的协调策略、训练方法和动作表示转移到无人机系统，并确定了两个领域的 14 个研究方向。
+
+</details>
+
+---
+
+## 6. The Rank-One Corner: How Much Value Equivalence Does a Task Need from a World Model? / 第一角：一项任务需要世界模型多少等值？
+
+**Date**: 2026-07-07 | **arXiv**: [2607.06640v1](http://arxiv.org/abs/2607.06640v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.06640v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A learned world model is usually judged by how faithfully it reconstructs its observations or predicts reward, as though quality were something the model simply has or lacks. But what a task actually needs from a model is narrower: the few predictive coordinates its queries depend on, which we call the closure. We show that how much of that closure a latent comes to represent is set not by the model's capacity or its observations but by the dimensionality of the objective it is trained against, and we measure this directly on a DreamerV3 stack in a controlled environment with known ground-truth closure. An aligned scalar value signal -- the objective at the heart of value equivalence -- installs only a one-dimensional projection of a closure that needs several dimensions: read through a single linear probe, the recoverable structure rises from R^2=0.10 to 0.76 as the scalar is replaced by the full objective. Sweeping the objective's dimensionality from one to four installs exactly that many predictive directions through an auxiliary head, and the same staircase appears -- at attenuated magnitude but the same rank -- through the model's own value head, so the dissociation is dimensional rather than an artifact of head form. Capacity-matched comparisons and in-situ pressure checks rule out the obvious alternatives. The law governs a regime, and we measure its boundary: on a companion closed-loop task whose structure is observable frame by frame, reconstruction installs that structure and the scalar objective suffices -- the objective decides what a latent represents exactly where cheaper training signals cannot already recover it. Value equivalence is thus not all-or-nothing but dimensional: the familiar single-reward objective is its rank-one corner, and a model installs as much of a task's structure as the objective it is asked to predict.
+
+一个学习的世界模型通常是根据它重建其观察结果或预测奖励的忠实程度来判断的，就好像质量只是模型拥有或缺乏的东西一样。但任务实际需要的模型范围更窄：其查询所依赖的少数预测坐标，我们称之为闭包。我们表明，潜伏所代表的闭包有多少不是由模型的能力或其观察结果决定的，而是由它所训练的目标的维度决定的，并且我们在具有已知地面实况闭包的受控环境中直接在 DreamerV3 堆栈上测量这一点。对齐的标量值信号（价值等价的核心目标）仅安装需要多个维度的闭包的一维投影：通过单个线性探针读取，随着标量被完整目标替换，可恢复结构从 R^2=0.10 上升到 0.76。将目标的维度从一扫到四，通过辅助头部准确安装了许多预测方向，并且通过模型自己的值头部出现了相同的楼梯（以衰减的幅度但相同的等级），因此分离是维度的，而不是头部形式的产物。容量匹配比较和现场压力检查排除了明显的替代方案。法则支配着一个体系，我们测量它的边界：在一个其结构可逐帧观察的伴随闭环任务上，重建安装该结构并且标量目标就足够了——目标决定了潜在的确切代表什么，而更便宜的训练信号无法恢复它。因此，价值等价不是全有或全无，而是维度：熟悉的单一奖励目标是其排名一角，并且模型安装了与要求预测的目标一样多的任务结构。
+
+</details>
+
+---
+
+## 7. RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation / RynnWorld-4D：机器人操作的 4D 体现世界模型
+
+**Date**: 2026-07-07 | **arXiv**: [2607.06559v1](http://arxiv.org/abs/2607.06559v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.06559v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robotic manipulation in the open world requires not only recognizing what a scene looks like, but also anticipating how its 3D structure moves under interaction. We argue that synchronized RGB, depth, and optical flow, namely RGB-DF, provide a physically grounded representation that captures the underlying 4D dynamics of a scene. Compared to 2D pixel videos, this multi-modal synergy aligns visual appearance with geometric structure and temporal motion, creating a representation space significantly closer to the low-level end-effector actions demanded by robotic systems, thereby narrowing the gap between world prediction and policy learning. Building on this insight, we introduce RynnWorld-4D, a generative model that co-produces future RGB frames, depth maps, and optical flow from a single RGB-D image and a language instruction within one unified diffusion process. This 4D world model features a tri-branch architecture that integrates cross-modal attention with frame-wise 3D RoPE, ensuring that appearance, geometry, and motion evolve consistently. To supply training data at scale, we curate Rynn4DDataset 1.0, a massive dataset of over 254.4 million frames across egocentric human and robotic manipulation videos with high-quality pseudo-labels for depth and optical flow. We further propose RynnWorld-4D-Policy, an inverse dynamics head that consumes the internal 4D representations of RynnWorld-4D in a single forward pass, bypassing expensive multi-step denoising, to output robot actions in a closed-loop manner. Experiments show that RynnWorld-4D produces temporally and spatially coherent 4D predictions, and that RynnWorld-4D-Policy achieves state-of-the-art performance on real-world dexterous bimanual manipulation tasks, particularly excelling in tasks demanding spatial precision and temporal coordination.
+
+开放世界中的机器人操纵不仅需要识别场景的外观，还需要预测其 3D 结构在交互下如何移动。我们认为同步的 RGB、深度和光流（即 RGB-DF）提供了一种物理基础的表示，可以捕获场景的底层 4D 动态。与 2D 像素视频相比，这种多模态协同将视觉外观与几何结构和时间运动结合起来，创建一个明显更接近机器人系统所需的低级末端执行器动作的表示空间，从而缩小世界预测和政策学习之间的差距。基于这一见解，我们引入了 RynnWorld-4D，这是一种生成模型，可在一个统一的扩散过程中从单个 RGB-D 图像和语言指令共同生成未来的 RGB 帧、深度图和光流。该 4D 世界模型采用三分支架构，将跨模式注意力与逐帧 3D RoPE 集成在一起，确保外观、几何形状和运动一致发展。为了大规模提供训练数据，我们策划了 Rynn4DDataset 1.0，这是一个包含超过 2.544 亿帧的海量数据集，涵盖以自我为中心的人类和机器人操作视频，并具有用于深度和光流的高质量伪标签。我们进一步提出了 RynnWorld-4D-Policy，这是一种逆动力学头，它在一次前向传递中消耗 RynnWorld-4D 的内部 4D 表示，绕过昂贵的多步去噪，以闭环方式输出机器人动作。实验表明，RynnWorld-4D 可以产生时间和空间相干的 4D 预测，并且 RynnWorld-4D-Policy 在现实世界灵巧双手操作任务中实现了最先进的性能，特别是在需要空间精度和时间协调的任务中表现出色。
+
+</details>
+
+---
+
+## 8. RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation / RynnWorld-Teleop：数字远程操作的动作条件世界模型
+
+**Date**: 2026-07-07 | **arXiv**: [2607.06558v1](http://arxiv.org/abs/2607.06558v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.06558v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scaling robot learning requires massive, diverse trajectory data, yet collection is currently bottlenecked by physical teleoperation, where every demonstration binds operator time to specific hardware and workspaces. We introduce digital teleoperation, a paradigm that decouples data collection from physical constraints by replacing the real robot with a generative world model. In this framework, an operator's hand-pose stream drives a robot-centric generative world model to synthesize high-fidelity egocentric videos from a single reference image. The recorded pose stream serves as an embodiment-agnostic action label transferable to any target robot via standard retargeting, yielding complete state-action trajectories for imitation learning independent of physical hardware. We instantiate this paradigm in RynnWorld-Teleop, a system that integrates depth-aware skeletal conditioning, progressive human-to-robot training on a video Diffusion Transformer, and streaming autoregressive distillation. This pipeline compresses the generative process into a single-pass inference, enabling 40+ FPS, real-time interactive generation on a single H100 GPU. Policies trained exclusively on RynnWorld-Teleop-generated data achieve effective zero-shot Sim2Real transfer across dexterous and diverse bimanual tasks. Moreover, augmenting real-world datasets with our digitally teleoperated data consistently improves success rates, demonstrating that RynnWorld-Teleop serves as a high-fidelity, scalable data engine for the next generation of robotic agents.
+
+扩展机器人学习需要大量、多样化的轨迹数据，但收集目前受到物理远程操作的瓶颈，每次演示都将操作员的时间绑定到特定的硬件和工作空间。我们引入了数字远程操作，这是一种通过用生成世界模型替换真实机器人来将数据收集与物理约束分离的范例。在此框架中，操作员的手势流驱动以机器人为中心的生成世界模型，以从单个参考图像合成高保真自我中心视频。记录的姿势流充当与实施例无关的动作标签，可通过标准重定向转移到任何目标机器人，从而产生独立于物理硬件的模仿学习的完整状态动作轨迹。我们在 RynnWorld-Teleop 中实例化了这一范例，该系统集成了深度感知骨骼调节、视频扩散变压器上的渐进式人机训练以及流式自回归蒸馏。该管道将​​生成过程压缩为单通道推理，从而在单个 H100 GPU 上实现 40+ FPS 的实时交互生成。专门针对 RynnWorld-Teleop 生成的数据进行训练的策略可实现跨灵巧且多样化的双手任务的有效零样本 Sim2Real 传输。此外，使用我们的数字远程操作数据增强现实世界数据集可以持续提高成功率，这表明 RynnWorld-Teleop 可以作为下一代机器人代理的高保真、可扩展的数据引擎。
+
+</details>
+
+---
+
+## 9. Hypothesis-driven Model Expansion under Uncertainty for Open-World Robot Planning / 开放世界机器人规划不确定性下的假设驱动模型扩展
+
+**Date**: 2026-07-07 | **arXiv**: [2607.06501v1](http://arxiv.org/abs/2607.06501v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.06501v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We consider an open-world planning setting in which service robots must operate in unknown environments with incomplete knowledge of objects and actions. Traditional closed-world approaches with pre-programmed knowledge bases fail when robots encounter unexpected situations and tasks, posing a fundamental challenge for autonomous knowledge expansion in human environments. In this work, we propose an open-world planning framework that enables robots to automatically generate, verify, and update hypotheses about their abstract world models. Our key insight is to explicitly maintain uncertainty-aware knowledge expansion and integrate hypothesis verification into goal-reaching planning. The framework leverages foundation models to generate initial hypotheses over states and transitions, and applies automated planning to produce action sequences that jointly address hypothesis verification and task execution. Through iterative execution and refinement, the robot expands its knowledge by incorporating verification feedback from the foundation models when hypotheses prove incorrect. Extensive experiments in simulated and real-world environments demonstrate that our framework enables autonomous knowledge expansion and effective operation in open-world settings. These results indicate that integrating uncertainty-aware model expansion from robot foundation models with planning advances the practical deployment of household service robots.
+
+我们考虑一个开放世界的规划环境，其中服务机器人必须在未知的环境中运行，并且对物体和动作的了解不完整。当机器人遇到意外情况和任务时，具有预编程知识库的传统封闭世界方法就会失败，这对人类环境中的自主知识扩展构成了根本挑战。在这项工作中，我们提出了一个开放世界规划框架，使机器人能够自动生成、验证和更新有关其抽象世界模型的假设。我们的主要见解是明确地维持不确定性意识的知识扩展，并将假设验证整合到实现目标的计划中。该框架利用基础模型生成关于状态和转换的初始假设，并应用自动规划来生成共同解决假设验证和任务执行的行动序列。通过迭代执行和细化，当假设被证明不正确时，机器人通过合并来自基础模型的验证反馈来扩展其知识。在模拟和现实环境中进行的大量实验表明，我们的框架能够在开放世界环境中实现自主知识扩展和有效操作。这些结果表明，将机器人基础模型的不确定性感知模型扩展与规划相结合可以促进家庭服务机器人的实际部署。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-08 (9 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-08
