@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-10](papers/2026-07-10.md) - 5 papers
 - [2026-07-09](papers/2026-07-09.md) - 6 papers
 - [2026-07-08](papers/2026-07-08.md) - 25 papers
 - [2026-07-04](papers/2026-07-04.md) - 25 papers
@@ -112,6 +113,98 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-10 (5 papers)</b></summary>
+
+# arXiv Video Papers - 2026-07-10
+
+**Paper Count**: 5
+
+---
+
+## 1. OpenCoF: Learning to Reason Through Video Generation / OpenCoF：通过视频生成学习推理
+
+**Date**: 2026-07-09 | **arXiv**: [2607.08763v1](http://arxiv.org/abs/2607.08763v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.08763v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reasoning has become a core capability for large models, especially when reliable decisions require understanding logical consequences. Recent video generation models offer a reasoning path distinct from previous Chain-of-Thought (CoT): reasoning can unfold through temporally connected frames, known as Chain-of-Frame (CoF) reasoning. However, existing video generators are primarily trained on general video corpora, still lacking diverse supervision and dedicated designs for CoF reasoning. To address this gap, we introduce OpenCoF, a framework comprising the OpenCoF-17K dataset, a reasoning video dataset spanning 11 task families, and Wan-CoF, a fine-tuned video model for studying whether diverse temporal supervision improves CoF behavior. Across four video reasoning benchmarks, Wan-CoF achieves considerable gains over the Wan2.2-I2V-A14B baseline. Building on this, we empirically explore more advanced designs for CoF capabilities, i.e., equipping the model with visual and textual reasoning tokens. This mechanism respectively captures low-level visual cues and high-level semantic priors for spatial and temporal reasoning. Through performance comparisons and attention analysis, we examine how these tokens contribute across model depth, denoising steps, space, and time. Our results suggest that stronger video reasoning requires both broad temporal supervision and explicit mechanisms for organizing intermediate reasoning state. We open-source the dataset, model, and code to facilitate future research on reasoning-oriented video generation.
+
+推理已成为大型模型的核心功能，尤其是当可靠的决策需要理解逻辑结果时。最近的视频生成模型提供了与之前的思想链 (CoT) 不同的推理路径：推理可以通过时间连接的帧展开，称为帧链 (CoF) 推理。然而，现有的视频生成器主要是在通用视频语料库上进行训练，仍然缺乏多样化的监督和专门的 CoF 推理设计。为了解决这一差距，我们引入了 OpenCoF，一个由 OpenCoF-17K 数据集（涵盖 11 个任务族的推理视频数据集）和 Wan-CoF 组成的框架，Wan-CoF 是一个微调视频模型，用于研究不同的时间监督是否可以改善 CoF 行为。在四个视频推理基准测试中，Wan-CoF 比 Wan2.2-I2V-A14B 基准取得了相当大的进步。在此基础上，我们凭经验探索更先进的 CoF 功能设计，即为模型配备视觉和文本推理标记。该机制分别捕获低级视觉线索和高级语义先验，以进行空间和时间推理。通过性能比较和注意力分析，我们检查这些标记如何在模型深度、去噪步骤、空间和时间方面做出贡献。我们的结果表明，更强的视频推理需要广泛的时间监督和组织中间推理状态的明确机制。我们开源数据集、模型和代码，以促进未来面向推理的视频生成的研究。
+
+</details>
+
+---
+
+## 2. AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding / AUTOPILOT VQA：对以事件为中心的行车记录仪理解的视觉语言模型进行基准测试
+
+**Date**: 2026-07-09 | **arXiv**: [2607.08745v1](http://arxiv.org/abs/2607.08745v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.08745v1)
+
+**Categories**: cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in Vision-Language Models, Large Language Models, and Multimodal Large Language Models have improved autonomous driving tasks such as scene understanding, decision making, trajectory prediction, and visual question answering. However, evaluating whether these models can reliably reason about safety-critical incidents remains challenging. To address this gap, we present AUTOPILOT-VQA, an incident-centric visual question answering benchmark for dashcam video understanding. The dataset evaluates different systems through structured questions designed around real-world driving incidents and near-incidents. The benchmark covers diverse safety-relevant categories, including weather and lighting conditions, traffic environment, road layout, road surface state, signage, involved entities, accident occurrence, impact location, and avoidability-related reasoning. By requiring models to answer grounded questions about both contextual scene properties and event-level incident details, AUTOPILOT-VQA moves beyond object recognition toward temporally grounded, safety-aware reasoning. The dataset is released as part of the AUTOPILOT CVPR 2026 competition and provides a standardized benchmark for assessing the reliability of autonomous driving systems in different scenarios. Our benchmark support developments for more interpretable, robust, and safety-conscious vision-language systems for real-world autonomous driving.
+
+视觉语言模型、大语言模型和多模态大语言模型的最新进展改善了场景理解、决策、轨迹预测和视觉问答等自动驾驶任务。然而，评估这些模型是否能够可靠地推理安全关键事件仍然具有挑战性。为了解决这一差距，我们推出了 AUTOPILOT-VQA，这是一种以事件为中心的视觉问答基准，用于理解行车记录仪视频。该数据集通过围绕现实世界驾驶事件和接近事故设计的结构化问题来评估不同的系统。该基准涵盖多种安全相关类别，包括天气和照明条件、交通环境、道路布局、路面状态、标牌、涉及实体、事故发生、影响位置以及可避免性相关推理。通过要求模型回答有关上下文场景属性和事件级事件细节的基础问题，AUTOPILOT-VQA 超越了对象识别，转向了基于时间的、安全意识推理。该数据集作为 AUTOPILOT CVPR 2026 竞赛的一部分发布，为评估不同场景下自动驾驶系统的可靠性提供了标准化基准。我们的基准支持为现实世界的自动驾驶开发更具可解释性、稳健性和安全意识的视觉语言系统。
+
+</details>
+
+---
+
+## 3. Pose-to-Biomechanics: Bridging 3D Human Pose Estimation and Biomechanical Attribute Prediction / 姿势到生物力学：桥接 3D 人体姿势估计和生物力学属性预测
+
+**Date**: 2026-07-09 | **arXiv**: [2607.08725v1](http://arxiv.org/abs/2607.08725v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.08725v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent progress in 3D human pose estimation has made markerless recovery of skeletal motion increasingly accurate and scalable. However, most pose estimators remain optimized for geometric keypoint accuracy, while many real-world applications in rehabilitation, sports science, ergonomics, and clinical movement analysis require biomechanical quantities that describe how the body moves, loads, and activates. In this work, we propose BioModule, a lightweight plug-in temporal transformer that attaches downstream of any 3D pose estimator and predicts biomechanical attributes from standard 17-joint 3D skeletons. BioModule is estimator-agnostic and requires no modification of the upstream pose model, enabling existing pose estimators to be extended toward physically interpretable motion analysis.   To train and evaluate BioModule, we construct a large-scale aligned dataset pairing Human3.6M video and 3D keypoints with the biomechanical label space of Human3.6Mplus. We establish and verify anatomical correspondence between coordinate systems of the two datasets, enabling frame-accurate cross-modal supervision. Using this aligned supervision, BioModule predicts biomechanical quantities. We further benchmark BioModule across seven state-of-the-art 3D pose estimators, providing the first systematic analysis of how upstream pose estimation quality propagates to downstream biomechanical prediction fidelity. The results position BioModule as a compact, modular bridge between vision-based pose estimation and biomechanically meaningful human motion analysis.
+
+3D 人体姿势估计的最新进展使得骨骼运动的无标记恢复变得越来越准确和可扩展。然而，大多数姿势估计器仍然针对几何关键点精度进行了优化，而康复、运动科学、人体工程学和临床运动分析中的许多实际应用需要描述身体如何移动、加载和激活的生物力学量。在这项工作中，我们提出了 BioModule，这是一种轻量级插件时间转换器，可附加到任何 3D 姿态估计器的下游，并根据标准 17 关节 3D 骨架预测生物力学属性。 BioModule 与估计器无关，不需要修改上游姿态模型，使现有的姿态估计器能够扩展到物理上可解释的运动分析。   为了训练和评估 BioModule，我们构建了一个大规模对齐数据集，将 Human3.6M 视频和 3D 关键点与 Human3.6Mplus 的生物力学标签空间配对。我们建立并验证两个数据集的坐标系之间的解剖对应关系，从而实现帧精确的跨模式监督。利用这种一致的监督，BioModule 可以预测生物力学量。我们进一步对七个最先进的 3D 姿态估计器的 BioModule 进行基准测试，首次系统分析上游姿态估计质量如何传播到下游生物力学预测保真度。结果将 BioModule 定位为基于视觉的姿势估计和具有生物力学意义的人体运动分析之间的紧凑、模块化桥梁。
+
+</details>
+
+---
+
+## 4. VEGAS: Human-Aligned Video Caption Evaluation via Gaze / VEGAS：通过凝视进行人眼对齐视频字幕评估
+
+**Date**: 2026-07-09 | **arXiv**: [2607.08489v1](http://arxiv.org/abs/2607.08489v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.08489v1)
+
+**Categories**: cs.CV, cs.AI, cs.HC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language models excel at video captioning, yet typically generate descriptions that fail to capture individual viewers' attention. We propose VEGAS (Video caption Evaluation via GAze Score), a training-free metric that leverages test-time gaze to sample personalized, attention-aligned text. It is a cross-modal, information-theoretic metric that quantifies how well a candidate caption matches a viewer's focus. To evaluate VEGAS, we curate a dataset of egocentric activities and instructional slides paired with synchronized gaze and reference annotations. We then select captions based on VEGAS via rejection sampling without model retraining. Experiments show that VEGAS-selected captions align significantly better with human focus and improve downstream caption-to-video retrieval, demonstrating the practical utility of incorporating viewer attention during inference.
+
+视觉语言模型擅长视频字幕，但通常生成的描述无法吸引个别观众的注意力。我们提出了 VEGAS（通过凝视分数进行视频字幕评估），这是一种无需训练的指标，利用测试时的凝视来采样个性化的、注意力一致的文本。它是一种跨模式的信息论度量，可量化候选字幕与观看者焦点的匹配程度。为了评估 VEGAS，我们整理了一个以自我为中心的活动和教学幻灯片的数据集，并配有同步凝视和参考注释。然后，我们通过拒绝采样来选择基于 VEGAS 的字幕，无需模型重新训练。实验表明，VEGAS 选择的字幕明显更好地符合人类焦点，并改善了下游字幕到视频的检索，证明了在推理过程中纳入观看者注意力的实用性。
+
+</details>
+
+---
+
+## 5. Behavior Foundations for Quadruped Robots: ABot-C0 Technical Report / 四足机器人的行为基础：ABot-C0 技术报告
+
+**Date**: 2026-07-08 | **arXiv**: [2607.07370v2](http://arxiv.org/abs/2607.07370v2) | **PDF**: [Link](http://arxiv.org/pdf/2607.07370v2)
+
+**Categories**: cs.RO, cs.AI, cs.HC, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The motion controller is one of the most fundamental modules in embodied intelligence systems. Driven by large-scale human motion-capture data and the motion-tracking paradigm, humanoid control has achieved remarkable progress in recent years. However, migrating this recipe to the quadrupedal setting is far less straightforward: animal motion data is scarcer and harder to capture at scale than human data, and cross-embodiment retargeting remains fragile. We present ABot-C0, a generalist motion-control system for quadruped robots that establishes three complementary behavior foundations: a scalable multi-source motion-data pipeline, robust policy learning across motion tracking, locomotion, and scene interaction, and a unified deployment stack for reliable real-world operation. Fundamentally, we construct a data pyramid through conditional video-generation synthesis, annotated motion capture, teleoperation, and human design, producing 16,074 physically feasible motion clips as the data foundation for diverse motion-learning demands. With large-scale motion data, a Flow-Matching generalist policy demonstrates, for the first time, a scaling law for quadruped motion tracking: performance improves consistently as training scales up, with zero-shot capability to track unseen motions. We then go a step further toward robust all-terrain locomotion by adopting a three-stage privileged-to-perceptive framework with temporal LiDAR memory and terrain-predictive supervision. Collectively, these components form a motion generalist that coordinates multi-policy execution, smooth behavior transitions, energy-efficient control, and safety mechanisms for real-world deployment. Extensive experiments on urban-terrain autonomous navigation and companion-style multimodal interaction demonstrate that quadruped robots can move beyond functional demos toward product-level behavioral intelligence.
+
+运动控制器是实体智能系统中最基本的模块之一。在大规模人体动作捕捉数据和动作跟踪范式的驱动下，人形控制近年来取得了显着的进展。然而，将此方法迁移到四足动物设置远没有那么简单：动物运动数据比人类数据更稀缺且更难以大规模捕获，并且跨实体重定向仍然脆弱。我们推出了 ABot-C0，这是一种用于四足机器人的通用运动控制系统，它建立了三个互补的行为基础：可扩展的多源运动数据管道、跨运动跟踪、运动和场景交互的强大策略学习，以及用于可靠的现实世界操作的统一部署堆栈。从根本上来说，我们通过条件视频生成合成、带注释的动作捕捉、远程操作和人体设计构建了一个数据金字塔，生成 16,074 个物理上可行的动作剪辑，作为满足不同动作学习需求的数据基础。利用大规模运动数据，流量匹配通才策略首次证明了四足动物运动跟踪的缩放法则：随着训练规模的扩大，性能持续提高，并具有零样本能力来跟踪看不见的运动。然后，我们通过采用具有时间激光雷达记忆和地形预测监督的三阶段特权感知框架，进一步朝着稳健的全地形运动迈出了一步。总的来说，这些组件形成了一个运动多面手，可以协调多策略执行、平稳的行为转换、节能控制和实际部署的安全机制。关于城市地形自主导航和同伴式多模式交互的大量实验表明，四足机器人可以超越功能演示，迈向产品级行为智能。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-09 (6 papers)</b></summary>
 
 # arXiv Video Papers - 2026-07-09
