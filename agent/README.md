@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-11](papers/2026-07-11.md) - 4 papers
 - [2026-07-10](papers/2026-07-10.md) - 26 papers
 - [2026-07-09](papers/2026-07-09.md) - 36 papers
 - [2026-07-08](papers/2026-07-08.md) - 48 papers
@@ -119,6 +120,84 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-11 (4 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-07-11
+
+**Paper Count**: 4
+
+---
+
+## 1. DexVerse: A Modular Benchmark for Multi-Task, Multi-Embodiment Dexterous Manipulation / DexVerse：多任务、多实施灵巧操作的模块化基准
+
+**Date**: 2026-07-09 | **arXiv**: [2607.08751v1](http://arxiv.org/abs/2607.08751v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.08751v1)
+
+**Categories**: cs.RO
+
+**Project**: https://ycyao216.github.io/DexVerse.site  <details><summary><b>Abstract / 摘要</b></summary>
+
+Building general-purpose dexterous manipulation policies requires benchmarks that go beyond isolated tasks to systematically evaluate policies across diverse interaction modes, sensory conditions, and robot embodiments. However, existing benchmarks remain limited in task and data diversity, embodiment coverage, or controllable visual variation, hindering studies of cross-task and cross-embodiment generalization. We present DexVerse, a large-scale and modular benchmark for dexterous manipulation. DexVerse includes 100 tasks spanning a broad range of manipulation skills, including object grasping and relocation, articulated-object interaction, functional tool use, bimanual coordination, non-prehensile control, contact-rich behaviors, multi-goal execution, and long-horizon multi-stage task completion. It supports 3 robot arms and 6 dexterous hands, and is extensible to new tasks, assets, and embodiments. To evaluate visuomotor generalization, DexVerse provides configurable visual variations in textures, background, lighting, and camera viewpoints. We further provide a VR-based teleoperation interface and 3,180 demonstrations with synchronized proprioceptive, RGB, depth, point-cloud, and state observations. We benchmark representative methods, including Diffusion Policy, DP3, OpenVLA, and $π_{0.5}$, across 19 tasks. Results reveal substantial challenges in task generalization and visuomotor robustness, establishing DexVerse as a promising testbed for general-purpose dexterous manipulation. Project page: https://ycyao216.github.io/DexVerse.site
+
+构建通用灵巧操作策略需要超越孤立任务的基准，以系统地评估跨不同交互模式、感官条件和机器人实施例的策略。然而，现有的基准在任务和数据多样性、实施例覆盖或可控视觉变化方面仍然有限，阻碍了跨任务和跨实施例泛化的研究。我们推出 DexVerse，一个用于灵巧操作的大规模模块化基准。 DexVerse 包括 100 项涵盖广泛操作技能的任务，包括物体抓取和重新定位、铰接物体交互、功能性工具使用、双手协调、非抓握控制、丰富接触行为、多目标执行和长期多阶段任务完成。它支持 3 个机器人手臂和 6 个灵巧的手，并且可扩展到新的任务、资产和实施例。为了评估视觉运动泛化，DexVerse 提供了纹理、背景、照明和相机视点的可配置视觉变化。我们还提供基于 VR 的远程操作界面和 3,180 个具有同步本体感受、RGB、深度、点云和状态观察的演示。我们在 19 项任务中对代表性方法进行了基准测试，包括 Diffusion Policy、DP3、OpenVLA 和 $π_{0.5}$。结果揭示了任务泛化和视觉运动鲁棒性方面的巨大挑战，使 DexVerse 成为通用灵巧操作的有前途的测试平台。项目页面：https://ycyao216.github.io/DexVerse.site
+
+</details>
+
+---
+
+## 2. Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents / 利用 VLA：通过内存引导代理将冻结的 VLA 引导为可靠的操作原语
+
+**Date**: 2026-07-09 | **arXiv**: [2607.08448v1](http://arxiv.org/abs/2607.08448v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.08448v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Language-conditioned manipulation requires both precise contact-rich control and robust reasoning over language, scenes, and long horizons. End-to-end Vision-Language-Action (VLA) models provide strong local visuomotor skills, but they are trained on in-distribution task trajectories and often fail under deployment perturbations such as semantic retargeting, goal re-binding, spatial-layout shifts, and unstable local contacts. LLM coding agents provide complementary semantic and compositional reasoning, but purely analytic primitives struggle with irregular grasping, constrained placement, and articulated-object interaction. We present Harness VLA, a memory-augmented agentic framework that exposes a frozen VLA as a retryable contact-rich primitive and composes it with a small fixed library of analytic primitives for grounding, staging, transport, navigation, and release. Rather than expanding the skill library, the harness learns the operating range of these fixed primitives from task-specific execution traces, global success rules, and failure models. By lifting semantic re-grounding, non-contact execution, and VLA re-staging to the planner while reserving the frozen VLA for local contact-rich phases, Harness VLA extends pretrained VLAs beyond their original trajectory distribution without finetuning. Across perturbed tabletop, household kitchen, and clean-to-randomized bimanual manipulation, Harness VLA improves over the strongest relevant baselines by 38.6 and 25.4 percentage points on LIBERO-Pro and RoboCasa365, respectively, and reaches 58.4% on RoboTwin C2R.
+
+语言条件操纵需要精确的、丰富的接触控制和对语言、场景和长远视野的强大推理。端到端视觉-语言-动作（VLA）模型提供了强大的局部视觉运动技能，但它们是在分布任务轨迹上进行训练的，并且经常在语义重定向、目标重新绑定、空间布局变化和不稳定的局部接触等部署扰动下失败。 LLM 编码代理提供了补充的语义和组合推理，但纯粹的分析原语与不规则的抓取、受限的放置和铰接对象交互作斗争。我们提出了 Harness VLA，这是一个内存增强的代理框架，它将冻结的 VLA 公开为可重试的接触丰富的原语，并将其与一个用于接地、分段、传输、导航和释放的小型固定分析原语库组合在一起。线束不是扩展技能库，而是从特定于任务的执行跟踪、全局成功规则和失败模型中学习这些固定原语的操作范围。通过将语义重新定位、非接触执行和 VLA 重新分级提升给规划器，同时为局部接触丰富的阶段保留冻结的 VLA，Harness VLA 将预训练的 VLA 扩展到其原始轨迹分布之外，而无需进行微调。在受干扰的桌面、家庭厨房和清洁到随机双手操作方面，Harness VLA 在 LIBERO-Pro 和 RoboCasa365 上分别比最强相关基线提高了 38.6 和 25.4 个百分点，在 RoboTwin C2R 上达到 58.4%。
+
+</details>
+
+---
+
+## 3. MASTE: A Multi-Agent Pipeline for Zero-Shot Aspect Sentiment Triplet Extraction / MASTE：用于零样本情感三元组提取的多代理管道
+
+**Date**: 2026-07-09 | **arXiv**: [2607.08080v1](http://arxiv.org/abs/2607.08080v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.08080v1)
+
+**Categories**: cs.CL
+
+**Code**: https://github.com/Hankerlove/MASTE.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Aspect Sentiment Triplet Extraction (ASTE) requires jointly identifying (aspect, opinion, sentiment) triples from a given review sentence. While large language models (LLMs) achieve strong zero-shot performance on many NLP benchmarks, their effectiveness on ASTE remains limited, as single-pass generation forces the model to determine span boundaries, opinion grouping, and sentiment polarity in a single decoding step. Common remedies, such as few-shot in-context learning and chain-of-thought prompting, offer only marginal improvements and rely heavily on either in-domain demonstrations sampled from labeled training data or carefully engineered reasoning prompts, neither of which is broadly available in zero-shot deployment. Inspired by the classical agent paradigm, we propose MASTE, a multi-agent pipeline for zero-shot Aspect Sentiment Triplet Extraction. MASTE decomposes ASTE into four sequential stages, where specialized agents handle different compositional subtasks with explicit conditioning on prior outputs. This design enables entirely training-free zero-shot ASTE and generalizes across different backbones and datasets. Extensive experiments on four ASTE benchmarks show that MASTE substantially outperforms zero-shot and chain-of-thought LLM baselines under the same backbone, narrowing the gap to fully supervised methods without using any labeled triplets. Code is available at https://github.com/Hankerlove/MASTE.
+
+方面情感三元组提取（ASTE）需要从给定的评论句子中联合识别（方面、观点、情感）三元组。虽然大型语言模型 (LLM) 在许多 NLP 基准上实现了强大的零样本性能，但它们在 ASTE 上的有效性仍然有限，因为单遍生成迫使模型在单个解码步骤中确定跨度边界、意见分组和情感极性。常见的补救措施，例如少样本上下文学习和思维链提示，只能提供边际改进，并且严重依赖从标记的训练数据中采样的域内演示或精心设计的推理提示，而这两种方法在零样本部署中都无法广泛使用。受经典代理范式的启发，我们提出了 MASTE，一种用于零样本方面情感三元组提取的多代理管道。 MASTE 将 ASTE 分解为四个连续的阶段，其中专门的代理通过对先前输出的显式调节来处理不同的组合子任务。这种设计实现了完全免训练的零样本 ASTE，并在不同的骨干网和数据集上进行泛化。对四个 ASTE 基准的广泛实验表明，MASTE 在同一主干下大大优于零样本和思想链 LLM 基线，缩小了与完全监督方法的差距，而无需使用任何标记的三元组。代码可在 https://github.com/Hankerlove/MASTE 获取。
+
+</details>
+
+---
+
+## 4. DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment / DeepSearch-World：可验证环境中深度搜索代理的自蒸馏
+
+**Date**: 2026-07-08 | **arXiv**: [2607.07820v1](http://arxiv.org/abs/2607.07820v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.07820v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Training tool-use agents to improve from their own experience remains challenging, as supervised fine-tuning relies on fixed teacher-distilled trajectories, while sparse-reward reinforcement learning provides weak supervision for long-horizon interactions. We present DeepSearch-Evolve, a self-distillation framework for web agents built on DeepSearch-World, a deterministic and verifiable environment with reproducible search and page-reading tools. DeepSearch-World contains 420K multi-hop QA tasks constructed from entity-level random walks and supports key agentic cognitive behaviors useful for self-evolving, including progress verification, grounded reflection, and failure recovery. DeepSearch-Evolve iteratively performs trajectory generation, filtering, data mixing, and fine-tuning to train stronger agents. Without distillation from more capable models, DeepSearch-World-9B achieves competitive performance compared with open-source agents, reaching 31.2% on BrowseComp, 61.5% on GAIA, and 93.4% on HotpotQA, showing that verifiable environments enable scalable self-evolution for long-horizon web agents. We will release the environment, 420K training pool, validation set, model, and code to facilitate future research on self-improving deep search agents.
+
+训练使用工具的智能体根据自己的经验进行改进仍然具有挑战性，因为有监督的微调依赖于固定的教师提炼轨迹，而稀疏奖励强化学习为长期交互提供了弱监督。我们提出了 DeepSearch-Evolve，这是一个基于 DeepSearch-World 的网络代理的自蒸馏框架，DeepSearch-World 是一个具有可重复搜索和页面阅读工具的确定性和可验证环境。 DeepSearch-World 包含由实体级随机游走构建的 420K 多跳 QA 任务，并支持对自我进化有用的关键代理认知行为，包括进度验证、扎根反思和故障恢复。 DeepSearch-Evolve 迭代执行轨迹生成、过滤、数据混合和微调，以训练更强大的代理。无需从功能更强大的模型中进行提炼，DeepSearch-World-9B 即可实现与开源代理相比具有竞争力的性能，在 BrowseComp 上达到 31.2%，在 GAIA 上达到 61.5%，在 HotpotQA 上达到 93.4%，这表明可验证的环境能够为长期网络代理实现可扩展的自我进化。我们将发布环境、420K 训练池、验证集、模型和代码，以促进未来自我改进深度搜索代理的研究。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-10 (26 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-07-10
