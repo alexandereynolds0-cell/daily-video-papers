@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-13](papers/2026-07-13.md) - 1 papers
 - [2026-07-11](papers/2026-07-11.md) - 1 papers
 - [2026-07-10](papers/2026-07-10.md) - 3 papers
 - [2026-07-09](papers/2026-07-09.md) - 9 papers
@@ -113,6 +114,34 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-13 (1 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-13
+
+**Paper Count**: 1
+
+---
+
+## 1. Shortcut Trajectory Planning for Efficient Offline Reinforcement Learning / 高效离线强化学习的捷径轨迹规划
+
+**Date**: 2026-07-10 | **arXiv**: [2607.09336v1](http://arxiv.org/abs/2607.09336v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.09336v1)
+
+**Categories**: cs.LG, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion-based trajectory planners have shown strong performance in offline reinforcement learning, but their iterative denoising process often incurs high inference cost. Consistency-based planners reduce the number of sampling steps, yet they typically rely on a two-stage teacher--student distillation pipeline that increases training cost and may introduce instability. We propose Shortcut Trajectory Planning (STP), an offline model-based reinforcement learning framework that incorporates shortcut models as efficient trajectory generators. STP trains a conditional shortcut trajectory model in a single stage, supports adjustable one-step and few-step inference through step-size conditioning, and selects candidate plans using a critic augmented with feasibility-aware correction. Across standard D4RL benchmarks, including locomotion, navigation, manipulation, and dexterous control tasks, STP achieves strong performance while simplifying the training pipeline for fast generative planning.
+
+基于扩散的轨迹规划器在离线强化学习中表现出了强大的性能，但其迭代去噪过程往往会产生较高的推理成本。基于一致性的规划器减少了采样步骤的数量，但它们通常依赖于两阶段的师生蒸馏管道，这会增加培训成本并可能引入不稳定。我们提出了快捷轨迹规划（STP），这是一种基于离线模型的强化学习框架，它将快捷模型作为高效的轨迹生成器。 STP 在单个阶段训练条件快捷轨迹模型，通过步长调节支持可调整的一步和少步推理，并使用增强了可行性感知修正的批评家来选择候选计划。在标准 D4RL 基准测试中，包括运动、导航、操纵和灵巧控制任务，STP 实现了强大的性能，同时简化了快速生成规划的训练流程。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-11 (1 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-11
