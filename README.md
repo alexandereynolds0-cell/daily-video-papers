@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-13](papers/2026-07-13.md) - 3 papers
 - [2026-07-11](papers/2026-07-11.md) - 16 papers
 - [2026-07-10](papers/2026-07-10.md) - 5 papers
 - [2026-07-09](papers/2026-07-09.md) - 6 papers
@@ -114,6 +115,66 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-13 (3 papers)</b></summary>
+
+# arXiv Video Papers - 2026-07-13
+
+**Paper Count**: 3
+
+---
+
+## 1. Wan-Dancer: A Hierarchical Framework for Minute-scale Coherent Music-to-Dance Generation / Wan-Dancer：分钟级连贯音乐舞蹈生成的分层框架
+
+**Date**: 2026-07-10 | **arXiv**: [2607.09581v1](http://arxiv.org/abs/2607.09581v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.09581v1)
+
+**Categories**: cs.CV, cs.SD
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generating long-duration, high-definition, and rhythmically synchronized dance videos directly from music remains a significant challenge, primarily due to the temporal constraints of current diffusion models, which typically fail beyond 20 seconds. Existing approaches, whether they rely on intermediate 3D skeletons or on end-to-end video synthesis, suffer from temporal drift, identity inconsistency, and repetitive motion patterns when extended to longer horizons. To address these limitations, we propose a novel hierarchical framework for minute-scale coherent music-to-dance generation. Our method decouples the process into global keyframe planning and local temporal refinement, leveraging full-track musical context to ensure long-range coherence. Key innovations include dynamic frame rate adaptation via time-mapped RoPE embeddings for precise alignment, an optical-flow-based loss function to enhance motion continuity, and motion-speed control to preserve high-fidelity details during rapid movements. Extensive experiments demonstrate that our framework surpasses the conventional duration barrier, generating stable, 720p/30fps videos exceeding one minute with superior temporal stability. Furthermore, the model exhibits robust versatility across five distinct dance genres, conditioned on both audio and textual prompts, establishing a new state-of-the-art in coherent, long-form dance video synthesis.
+
+直接从音乐生成长时间、高清且节奏同步的舞蹈视频仍然是一项重大挑战，主要是由于当前扩散模型的时间限制，该模型通常会在超过 20 秒后失败。现有的方法，无论是依赖中间 3D 骨架还是端到端视频合成，当扩展到更长的视野时，都会遇到时间漂移、身份不一致和重复运动模式的问题。为了解决这些限制，我们提出了一种新颖的分层框架，用于分钟级连贯的音乐到舞蹈的生成。我们的方法将过程分解为全局关键帧规划和局部时间细化，利用全轨音乐背景来确保远程连贯性。主要创新包括通过时间映射 RoPE 嵌入进行动态帧速率自适应以实现精确对准、基于光流的损失函数以增强运动连续性，以及运动速度控制以在快速运动过程中保留高保真细节。大量的实验表明，我们的框架超越了传统的持续时间障碍，生成了超过一分钟的稳定的 720p/30fps 视频，并且具有卓越的时间稳定性。此外，该模型在五种不同的舞蹈流派中表现出强大的多功能性，以音频和文本提示为条件，在连贯的长格式舞蹈视频合成方面建立了新的最先进技术。
+
+</details>
+
+---
+
+## 2. Dynamic Inverse Rendering for Enhanced Material-Lighting Decomposition / 用于增强材质照明分解的动态逆渲染
+
+**Date**: 2026-07-10 | **arXiv**: [2607.09329v1](http://arxiv.org/abs/2607.09329v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.09329v1)
+
+**Categories**: cs.CV, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Decomposing outgoing surface radiance into material and illumination during inverse rendering is essential for applications such as relighting and augmented reality, yet it is severely ill-posed since multiple combinations can result in the same observed colour. Capturing an object under multiple lighting conditions usually helps resolve this ambiguity as it constrains the optimization towards correct solutions. In this work, we explore the potential of reconstructing rigidly moving objects -- which provides observations of diverse light-surface interactions -- to resolve the material-lighting ambiguity in inverse rendering. For this purpose, we introduce a relightable approach that marries object tracking and reconstruction with inverse rendering for general rigidly moving objects. Our experimental analysis on synthetic data demonstrates that motion can be an advantage for disentangling material and lighting: the reconstructed material is significantly more accurate when the object is observed under rigid motion than when it is static. Moreover, results on RGB videos of real hand-held objects show that our pipeline preserves this advantage even under noisy real-world conditions.
+
+在逆向渲染过程中将出射表面辐射分解为材料和照明对于重新照明和增强现实等应用至关重要，但它是严重不适定的，因为多种组合可能会导致相同的观察到的颜色。在多种照明条件下捕获物体通常有助于解决这种模糊性，因为它限制了对正确解决方案的优化。在这项工作中，我们探索了重建刚性移动物体的潜力——它提供了对不同光-表面相互作用的观察——以解决逆渲染中的材质-照明模糊性。为此，我们引入了一种可重新点亮的方法，它将对象跟踪和重建与一般刚性移动对象的逆渲染结合起来。我们对合成数据的实验分析表明，运动对于解开材质和照明来说是一个优势：当物体在刚性运动下观察时，重建的材质比在静态时观察到的物体要准确得多。此外，真实手持物体的 RGB 视频结果表明，即使在嘈杂的现实条件下，我们的管道也保留了这一优势。
+
+</details>
+
+---
+
+## 3. REMIND: RE-Identification with Memory for INDoor Navigation / 提醒：室内导航的内存重新识别
+
+**Date**: 2026-07-10 | **arXiv**: [2607.09267v1](http://arxiv.org/abs/2607.09267v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.09267v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Mobile robots operating indoors must re-identify previously observed objects after long temporal gaps, significant viewpoint changes, and severe illumination variations. This remains a challenging problem: multi-object tracking methods are optimized for short-term association of pedestrians and vehicles at video rates, person and vehicle re-identification approaches lack persistent memory mechanisms, and state-of-the-art video object segmentation techniques rely on reactive distractor filtering rather than enforcing global identity consistency.   To address these limitations, we present REMIND, an online tracker designed for long-term multi-object re-identification of generic indoor objects from monocular RGB imagery, requiring neither camera pose nor depth. Motivated by evidence from visual cognition that humans rely on accumulated appearance familiarity and spatial context rather than explicit self-localization, REMIND combines frozen DINOv3 features with a dual-bank multi-prototype appearance memory, part- and background-level descriptors, a neighbour-context reasoning module exploiting spatial co-occurrence, and joint Hungarian assignment with ambiguity-aware safeguards. On a purpose-built indoor dataset featuring controlled revisits and dense same-class clutter, REMIND reaches 90.35% IDF1, nearly 20 points above a state-of-the-art video object segmentation baseline and more than 36 above a strong tracking-by-detection baseline. On ScanNet++, it attains the highest IDF1 in every setting but one, end-to-end detection over all scenes, where the tracking-by-detection baseline is marginally ahead while REMIND still associates and recovers identities more accurately; it also completes every scene, whereas the video object segmentation baseline exhausts GPU memory on 66.9% under YOLO detections. The complete system, evaluation framework, and dataset are publicly released.
+
+在长时间的时间间隙、显着的视点变化和严重的照明变化之后，室内操作的移动机器人必须重新识别之前观察到的物体。这仍然是一个具有挑战性的问题：多目标跟踪方法针对行人和车辆在视频速率下的短期关联进行了优化，人和车辆的重新识别方法缺乏持久的记忆机制，最先进的视频对象分割技术依赖于反应性干扰过滤，而不是强制全局身份一致性。   为了解决这些限制，我们推出了 REMIND，这是一种在线跟踪器，专为从单目 RGB 图像中对一般室内物体进行长期多物体重新识别而设计，不需要相机姿态或深度。受视觉认知证据的启发，人类依赖于累积的外观熟悉度和空间上下文，而不是明确的自我定位，REMIND 将冻结的 DINOv3 特征与双库多原型外观记忆、部分和背景级描述符、利用空间共现的邻居上下文推理模块以及具有模糊性感知保护措施的联合匈牙利分配相结合。在具有受控重访和密集同类杂波的专用室内数据集上，REMIND 达到 90.35% IDF1，比最先进的视频对象分割基线高出近 20 个点，比强大的检测跟踪基线高出 36 以上。在 ScanNet++ 上，它在除所有场景的端到端检测之外的所有设置中都获得了最高的 IDF1，其中检测跟踪基线略微领先，而 REMIND 仍然更准确地关联和恢复身份；它还完成了每个场景，而视频对象分割基线在 YOLO 检测下耗尽了 66.9% 的 GPU 内存。完整的系统、评估框架和数据集已公开发布。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-11 (16 papers)</b></summary>
 
 # arXiv Video Papers - 2026-07-11
