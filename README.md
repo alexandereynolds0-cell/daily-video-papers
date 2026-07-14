@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-14](papers/2026-07-14.md) - 6 papers
 - [2026-07-13](papers/2026-07-13.md) - 3 papers
 - [2026-07-11](papers/2026-07-11.md) - 16 papers
 - [2026-07-10](papers/2026-07-10.md) - 5 papers
@@ -115,6 +116,116 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-14 (6 papers)</b></summary>
+
+# arXiv Video Papers - 2026-07-14
+
+**Paper Count**: 6
+
+---
+
+## 1. AU-Guided Synthetic Video Generation for Micro-Expression Recognition / 用于微表情识别的 AU 引导合成视频生成
+
+**Date**: 2026-07-12 | **arXiv**: [2607.10860v1](http://arxiv.org/abs/2607.10860v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.10860v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Micro-expression recognition is limited by the small scale, narrow demographic coverage, and restricted emotion labels of existing datasets. We introduce EquiME, a synthetic micro-expression dataset built from AU-guided image-to-video generation. EquiME contains 75K videos generated from 15K source face images across five target emotions, together with automatically inferred demographic metadata and video-quality measurements. We evaluate EquiME using frame-pair similarity, spatial variation, and no-reference perceptual-quality metrics, together with cross-dataset MER experiments on SAMM and CASME II. Models trained on EquiME achieve competitive cross-dataset performance on SAMM and CASME II and show comparatively low variation across the four evaluated architectures. This paper focuses on the dataset design, the structured AU-conditioning pipeline used for video generation, and the empirical evidence needed to assess EquiME as a synthetic MER resource. Project page: https://kirito-blade.github.io/me-vlm/
+
+微表情识别受到现有数据集规模小、人口覆盖范围窄和情感标签受限的限制。我们引入了 EquiME，这是一个基于 AU 引导的图像到视频生成构建的合成微表情数据集。 EquiME 包含从 15K 源面部图像生成的 75K 视频，涵盖五种目标情绪，以及自动推断的人口统计元数据和视频质量测量。我们使用帧对相似性、空间变化和无参考感知质量指标以及 SAMM 和 CASME II 上的跨数据集 MER 实验来评估 EquiME。在 EquiME 上训练的模型在 SAMM 和 CASME II 上实现了具有竞争力的跨数据集性能，并且在四种评估的架构中显示出相对较低的变化。本文重点介绍数据集设计、用于视频生成的结构化 AU 调节管道，以及评估 EquiME 作为合成 MER 资源所需的经验证据。项目页面：https://kirito-blade.github.io/me-vlm/
+
+</details>
+
+---
+
+## 2. Compositional Context Fine-Tuning Vision-Language Model for Complex Assembly Action Understanding from Videos / 组合上下文微调视觉语言模型，用于从视频中理解复杂的装配动作
+
+**Date**: 2026-07-12 | **arXiv**: [2607.10797v1](http://arxiv.org/abs/2607.10797v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.10797v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Assembly action understanding is a key enabler for effective human-robot collaborative assembly, yet it remains challenging due to subtle motions and fine-grained hand-object interactions. We adapt vision-language models (VLMs) to this challenging domain with Compositional Context Fine-Tuning (CCFT), a method that decomposes assembly actions into semantic elements (Verb, Object, Tool) and fine-tunes VLMs to recognize each action element using templated question-answering pairs. This approach ensures near-deterministic outputs. To enable efficient and effective multi-task learning under limited data, a Layer-Partitioned Alternating Training (LP-AT) method is presented, which assigns distinct model layers to recognize specific action elements through element-specific low-rank adapters. LP-AT alternates weight updates across element-specific adapters, reducing cross-task interference while enabling per-adapter hyperparameter optimization. Furthermore, we create HA-ViD-VQA and IKEA-ASM-VQA datasets from existing assembly video datasets. Extensive experiments on these datasets demonstrate that our method consistently outperforms strong action recognition baselines while providing interpretable element-level predictions that can support diverse downstream applications.
+
+装配动作理解是有效人机协作装配的关键推动因素，但由于微妙的动作和细粒度的手部物体交互，它仍然具有挑战性。我们通过组合上下文微调 (CCFT) 使视觉语言模型 (VLM) 适应这个具有挑战性的领域，该方法将组装动作分解为语义元素（动词、对象、工具），并微调 VLM 以使用模板化问答对识别每个动作元素。这种方法确保了近乎确定性的输出。为了在有限的数据下实现高效且有效的多任务学习，提出了一种分层交替训练（LP-AT）方法，该方法分配不同的模型层以通过特定于元素的低秩适配器来识别特定的动作元素。 LP-AT 在特定于元素的适配器之间交替进行权重更新，减少跨任务干扰，同时实现每个适配器的超参数优化。此外，我们还根据现有装配视频数据集创建 HA-ViD-VQA 和 IKEA-ASM-VQA 数据集。对这些数据集的大量实验表明，我们的方法始终优于强大的动作识别基线，同时提供可解释的元素级预测，可以支持不同的下游应用程序。
+
+</details>
+
+---
+
+## 3. NanoVSR: Towards Real-Time Video Super-Resolution on Edge Devices / NanoVSR：在边缘设备上实现实时视频超分辨率
+
+**Date**: 2026-07-11 | **arXiv**: [2607.10495v1](http://arxiv.org/abs/2607.10495v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.10495v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/filippawlicki/nanovsr.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent Video Super-Resolution (VSR) methods rely heavily on transformers and explicit optical flow, creating computational overhead and custom operations that hinder deployment on hardware accelerators like TensorRT. To address this, we introduce NanoVSR, a scalable, fully convolutional architecture designed for resource-constrained edge devices. Using structural reparameterization, NanoVSR collapses into standard convolutions during inference, ensuring seamless hardware compatibility and negligible runtime overhead. Furthermore, despite lacking explicit motion compensation, it maintains competitive restoration quality by implicitly learning spatio-temporal alignments through progressive training. Evaluated on the REDS4 benchmark, NanoVSR demonstrates an exceptional balance between accuracy and computational efficiency, significantly improving the trade-off for compact architectures. Our NanoVSR-644k baseline yields 28.64 dB PSNR while delivering 27.2 FPS on the NVIDIA Jetson Orin NX 16GB (25W), offering massive speed gains over heavier models. The scaled NanoVSR-1.7M variant reaches 29.15 dB with a throughput of 19.58 FPS, providing superior, edge-optimized upscaling. Code is available at https://github.com/filippawlicki/nanovsr.
+
+最近的视频超分辨率 (VSR) 方法严重依赖变压器和显式光流，产生计算开销和自定义操作，阻碍了在 TensorRT 等硬件加速器上的部署。为了解决这个问题，我们引入了 NanoVSR，这是一种可扩展的全卷积架构，专为资源受限的边缘设备而设计。使用结构重新参数化，NanoVSR 在推理期间折叠为标准卷积，确保无缝硬件兼容性和可忽略的运行时开销。此外，尽管缺乏显式运动补偿，但它通过渐进训练隐式学习时空对齐来保持有竞争力的恢复质量。根据 REDS4 基准进行评估，NanoVSR 展示了准确性和计算效率之间的出色平衡，显着改善了紧凑架构的权衡。我们的 NanoVSR-644k 基准可产生 28.64 dB PSNR，同时在 NVIDIA Jetson Orin NX 16GB (25W) 上提供 27.2 FPS，与较重的型号相比，速度大幅提升。经过缩放的 NanoVSR-1.7M 变体达到 29.15 dB，吞吐量为 19.58 FPS，提供卓越的边缘优化升级。代码可在 https://github.com/filippawlicki/nanovsr 获取。
+
+</details>
+
+---
+
+## 4. Differentiable Proxy Learning for Adaptive Quantization Control in H.264 Video Coding / H.264 视频编码中自适应量化控制的可微代理学习
+
+**Date**: 2026-07-11 | **arXiv**: [2607.10478v1](http://arxiv.org/abs/2607.10478v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.10478v1)
+
+**Categories**: eess.IV, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+H.264 has been the most widely used video coding format for the past two decades due to its relative simplicity, efficiency, and wide availability of software and hardware implementations. However, optimizing codec parameters such as the quantization parameter (QP) for specific objectives (e.g., perceptual quality or machine vision tasks) is challenging due to the non-differentiable nature of standard video codecs. While differentiable proxies have recently been used to enable gradient-based optimization around standard codecs, their fidelity to the target codec is rarely explicitly characterized. In this paper, we propose a differentiable proxy learning method for H.264 intra codec to enable adaptive quantization control. Built upon a variable-rate learned compression model, the proposed proxy is made differentiable with respect to codec QP through a soft-indexing mechanism. It is then trained to approximate the rate-distortion behavior of H.264 under two quantization settings: global-QP, which uses one QP per image, and spatial-QP, which assigns QPs at the macroblock level. Using the frozen trained proxy, we develop a proxy-based adaptive quantization (AQ) framework for both perceptual optimization and machine vision tasks. Experimental results demonstrate that the proposed proxies closely approximate the rate-distortion behavior of H.264 intra codec. The resulting proxy-based AQ framework consistently improves rate-task trade-offs over fixed-QP H.264 baselines, achieving BD-rate reduction of up to 17.12% for semantic segmentation and 15.30% for MS-SSIM.
+
+H.264 因其相对简单、高效以及软件和硬件实现的广泛可用性而成为过去二十年中使用最广泛的视频编码格式。然而，由于标准视频编解码器的不可微分性质，针对特定目标（例如感知质量或机器视觉任务）优化量化参数 (QP) 等编解码器参数具有挑战性。虽然可微代理最近被用于围绕标准编解码器实现基于梯度的优化，但它们对目标编解码器的保真度很少被明确表征。在本文中，我们提出了一种用于 H.264 帧内编解码器的可微代理学习方法，以实现自适应量化控制。基于可变速率学习压缩模型，所提出的代理通过软索引机制相对于编解码器 QP 是可微分的。然后对其进行训练，以在两种量化设置下近似 H.264 的率失真行为：全局 QP（每张图像使用一个 QP）和空间 QP（在宏块级别分配 QP）。使用冻结训练的代理，我们开发了一个基于代理的自适应量化（AQ）框架，用于感知优化和机器视觉任务。实验结果表明，所提出的代理非常接近 H.264 帧内编解码器的速率失真行为。由此产生的基于代理的 AQ 框架持续改进了固定 QP H.264 基线的速率-任务权衡，实现了语义分割的 BD 速率降低高达 17.12%，MS-SSIM 的 BD 速率降低了 15.30%。
+
+</details>
+
+---
+
+## 5. On the Real-World Generalisability of Optical Flow Models / 关于光流模型的现实世界通用性
+
+**Date**: 2026-07-11 | **arXiv**: [2607.10470v1](http://arxiv.org/abs/2607.10470v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.10470v1)
+
+**Categories**: cs.CV, eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Real-world deployment of vision models to broadly benefit society is arguably a main research objective. In optical flow, however, the difficulty to obtain the ground truth has focused research mainly on synthetic data and domain-specific benchmarks. Here, we investigate the severity of this mismatch. We study how well modern optical flow estimation models generalise to real-world video and question if accuracy on synthetic benchmark proxies actually predicts accuracy on real-world optical flow. To address this, we build a real-world evaluation benchmark and evaluate the real-world generalisability of a broad set of recent optical flow models using standard checkpoints. Our benchmark contains 8,204 frame pairs across TAP-Flow, Slow Flow, and our own dataset FlowFactor. FlowFactor is a manually annotated real-world benchmark of 1,000 HD frame pairs organised into four confounding factors: large displacements, repetitive textures, occlusions, and lighting variation. Each setting mainly varies only one factor, enabling diagnostic, confounder-specific analysis. Using FlowFactor, we reveal that performance on varying lighting and large displacements correlates most strongly with real-world accuracy, and that improvements on large-motion regimes can trade off against robustness in small-motion, stationary scenes. Our experiments show that progress on Sintel, KITTI and Spring only weakly predicts accuracy on real-world data, highlighting the need for a broad real-world optical flow benchmark. Interestingly, scaling up the amount of training data does not necessarily resolve the gap, calling for new innovative research instead of simply scaling data and compute.
+
+在现实世界中部署视觉模型以广泛造福社会可以说是一个主要研究目标。然而，在光流中，获取真实数据的困难使得研究主要集中在合成数据和特定领域的基准上。在这里，我们调查这种不匹配的严重性。我们研究现代光流估计模型如何推广到现实世界的视频，并质疑合成基准代理的准确性是否真的可以预测现实世界光流的准确性。为了解决这个问题，我们建立了一个现实世界的评估基准，并使用标准检查点评估一系列最新光流模型的现实世界通用性。我们的基准测试包含 TAP-Flow、Slow Flow 和我们自己的数据集 FlowFactor 中的 8,204 个帧对。 FlowFactor 是手动注释的真实世界基准，包含 1,000 个高清帧对，分为四个混杂因素：大位移、重复纹理、遮挡和光照变化。每种设置主要仅改变一个因素，从而实现诊断、特定混杂因素分析。使用 FlowFactor，我们发现不同光照和大位移的性能与现实世界的精度密切相关，并且大运动机制的改进可以权衡小运动、静止场景的鲁棒性。我们的实验表明，Sintel、KITTI 和 Spring 的进展只能微弱地预测现实世界数据的准确性，这凸显了对广泛的现实世界光流基准的需求。有趣的是，扩大训练数据量并不一定能解决这一差距，需要新的创新研究，而不是简单地扩大数据和计算。
+
+</details>
+
+---
+
+## 6. InterPet4D: A Multimodal 4D Human-Pet Interaction Dataset for Pet Motion Generation / InterPet4D：用于生成宠物运动的多模态 4D 人宠物交互数据集
+
+**Date**: 2026-07-11 | **arXiv**: [2607.10287v1](http://arxiv.org/abs/2607.10287v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.10287v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human-pet interaction estimation and generation remain underexplored due to the absence of a high-quality large-scale dataset. We present InterPet4D, the first multimodal dataset capturing natural interactions between humans and dogs. Using a synchronized multi-view capture system, we record human-dog obedience tasks and provide annotations for both humans and dogs, including multi-view and egocentric videos, segmentations, 2D and 3D keypoints, meshes, and audio tracks. InterPet4D consists of 6.8 million frames collected from 13 dogs of 11 breeds interacting with 23 human participants. We further introduce the InterPetMoGen framework for human-pet interaction motion generation. Our proposed model achieves an FID score of 11.21 and substantially outperforms the Seq2Seq and DiT baselines, demonstrating the effectiveness of InterPet4D for modeling realistic human-pet interactions.
+
+由于缺乏高质量的大规模数据集，人与宠物的交互估计和生成仍未得到充分探索。我们推出了 InterPet4D，这是第一个捕获人类和狗之间自然交互的多模式数据集。使用同步多视图捕获系统，我们记录人与狗的服从任务，并为人类和狗提供注释，包括多视图和以自我为中心的视频、分割、2D 和 3D 关键点、网格和音轨。 InterPet4D 由 11 个品种的 13 只狗与 23 名人类参与者互动时收集的 680 万帧组成。我们进一步介绍了用于人与宠物交互动作生成的 InterPetMoGen 框架。我们提出的模型获得了 11.21 的 FID 分数，大大优于 Seq2Seq 和 DiT 基线，证明了 InterPet4D 在模拟真实的人与宠物交互方面的有效性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-13 (3 papers)</b></summary>
 
 # arXiv Video Papers - 2026-07-13
