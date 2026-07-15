@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-15](papers/2026-07-15.md) - 8 papers
 - [2026-07-13](papers/2026-07-13.md) - 1 papers
 - [2026-07-11](papers/2026-07-11.md) - 1 papers
 - [2026-07-10](papers/2026-07-10.md) - 3 papers
@@ -114,6 +115,146 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-15 (8 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-15
+
+**Paper Count**: 8
+
+---
+
+## 1. Can Induced Emotion Bias LLM Behaviors in Sequential Decision Making? / 诱发情绪会导致法学硕士在顺序决策中的行为产生偏差吗？
+
+**Date**: 2026-07-14 | **arXiv**: [2607.12631v1](http://arxiv.org/abs/2607.12631v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.12631v1)
+
+**Categories**: cs.CL, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As Large Language Models (LLMs) are increasingly deployed as autonomous agents in high-stakes domains, understanding contextual factors that may modulate their decision-making becomes critical. While LLMs are trained to perceive and resonate with users' emotions, it remains unclear whether induced emotion can influence their sequential decision-making. We investigate this question using the Iowa Gambling Task (IGT), a classic psychological paradigm for studying decision-making under uncertainty, combined with an imagination-based emotion induction procedure. We first validate the feasibility of this paradigm by confirming that LLMs can sense strong, distinguishable emotions from context and that LLM agents can learn from sequential interactions in a human-like pace. With the validated setup, we find that, different from humans, induced emotion does not significantly bias the decision dynamics of LLM agents on average. However, the effects of anger are conditioned: inducing anger makes LLM agents less sensitive to penalties for bad decisions, and in early stages of the game, anger can lower exploration, locking decisions into a few choices early. These findings reveal the subtle yet distinct effects of induced emotion on LLM decision-making compared to human behavior, and provide a tool for future research on affective modulation of LLM agents.
+
+随着大型语言模型（LLM）越来越多地被部署为高风险领域的自主代理，了解可能调节其决策的上下文因素变得至关重要。虽然法学硕士接受过感知用户情绪并与之产生共鸣的训练，但目前尚不清楚诱发的情绪是否会影响他们的后续决策。我们使用爱荷华州赌博任务（IGT）来研究这个问题，这是一种研究不确定性下决策的经典心理学范式，并结合基于想象力的情绪诱导程序。我们首先通过确认 LLM 可以从上下文中感知强烈的、可区分的情绪，并且 LLM 智能体可以以类似人类的速度从顺序交互中学习，从而验证这种范式的可行性。通过经过验证的设置，我们发现，与人类不同，诱导情绪平均不会显着影响 LLM 代理的决策动态。然而，愤怒的影响是有条件的：引发愤怒会使LLM代理人对错误决策的惩罚不太敏感，并且在游戏的早期阶段，愤怒会降低探索性，将决策锁定在早期的几个选择中。这些发现揭示了与人类行为相比，诱导情绪对法学硕士决策的微妙但独特的影响，并为法学硕士代理人情感调节的未来研究提供了工具。
+
+</details>
+
+---
+
+## 2. TRACE: An Operational Reasoning Schema for Auditable Agentic Commitments / TRACE：可审计代理承诺的操作推理模式
+
+**Date**: 2026-07-14 | **arXiv**: [2607.12480v1](http://arxiv.org/abs/2607.12480v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.12480v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper defines TRACE (Typed Reasoning And Commitment Evidence): a typed, versioned schema for recording reasoning traces, a reference procedure for writing records against it, and one operating discipline, no durable state change without a record. The paper argues in three layers that reasoning is not in the language model: the autoregressive mechanism natively computes association; chain-of-thought and reinforcement learning inherit its limits; and the formal constructs of reasoning theory, from Socratic procedure to Pearl's ladder, are absent as machinery. The schema answers the absence with fields and tests: the TraceRecord and its causal specialization, an eight-stage reference writer, a gate-first measurement regime, the TRACE-Bench protocol, and the consumers, memory admission, plan gating, temporal regret, and verdict reuse, whose more auditable decisions are the measure of the record. A record-consumer contract states what a record guarantees and what a consumer must honor in return, making the schema an operational interface rather than a passive document. Two worked examples run in the main text: a music-lessons argument traced from sentence to typed verdict, separating association, intervention, and prescription; and a flood search-and-rescue vignette in which a predictive world model reports confident plan success that its own support and out-of-distribution scores contradict, so the record defers the commitment, requests a bounded observation, revises append-only, and clears a different branch. The vignette is illustrative, not empirical; closed-loop evaluation is left to future work, so the contribution is the schema and its contract, not a performance claim. Appendices carry the full schema, writer algorithms and cost model, clinical and policy illustrations, the benchmark protocol, convergence metrics, and usage scenarios.
+
+本文定义了TRACE（类型化推理和承诺证据）：一种用于记录推理跟踪的类型化、版本化模式，一种根据它编写记录的参考过程，以及一个操作规程，没有记录就不会发生持久状态更改。论文从三个层面论证了推理不在语言模型中：自回归机制本身计算关联；思路链和强化学习继承了它的局限性；推理理论的形式结构，从苏格拉底程序到珀尔的阶梯，都作为机械而缺席。该模式用字段和测试来回答缺失：TraceRecord 及其因果专业化、八阶段参考编写器、门优先测量机制、TRACE-Bench 协议以及消费者、内存接纳、计划门控、暂时遗憾和判决重用，其更可审计的决策是记录的测量。记录消费者合同规定了记录保证什么以及消费者必须遵守什么作为回报，使模式成为一个操作界面而不是一个被动文档。正文中有两个有效的例子：一个音乐课论证，从句子到打字的判决，分离联想、干预和处方；以及洪水搜救小插图，其中预测世界模型报告自信的计划成功，但其自身的支持和分布外分数相矛盾，因此记录推迟了承诺，要求有界观察，仅修改附加，并清除不同的分支。这个小插图是说明性的，而不是经验性的；闭环评估留给未来的工作，因此贡献是模式及其契约，而不是性能声明。附录包含完整的架构、编写算法和成本模型、临床和政策说明、基准协议、收敛指标和使用场景。
+
+</details>
+
+---
+
+## 3. From Observation to Insight: Mechanistic World Models and the Quest for Autonomous Discovery / 从观察到洞察：机械世界模型和自主发现的探索
+
+**Date**: 2026-07-14 | **arXiv**: [2607.12474v1](http://arxiv.org/abs/2607.12474v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.12474v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in foundation models have transformed AI for Science, enabling remarkably accurate predictive performance across domains ranging from protein folding to weather forecasting. Yet prediction alone does not constitute scientific discovery. Scientific understanding depends on uncovering the reusable explanatory mechanisms that generate observations, whereas contemporary machine learning remains fundamentally organised around predictive mappings rather than explanatory structure. In this paper, we argue that scientific discovery is fundamentally a problem of knowledge organisation. To this end, we introduce Mechanistic World Models, a new design paradigm that places reusable mechanisms at the centre of representation, computation and learning. Drawing on insights from the philosophy of science, we derive the computational capabilities required for discovery, identify the design principles and inductive pressures that encourage explanatory knowledge to emerge, and formalise the anatomy of a mechanism-centric world model. Finally, we show how diverse research directions including mechanistic interpretability, causal representation learning, equation discovery and modular architectures capture complementary ingredients of this paradigm while lacking a unified framework. We propose Mechanistic World Models as a conceptual foundation and computational blueprint for moving AI beyond predictive forecasting towards autonomous scientific discovery.
+
+基础模型的最新进展已经改变了科学人工智能，在从蛋白质折叠到天气预报等领域实现了非常准确的预测性能。然而，仅靠预测并不构成科学发现。科学理解取决于揭示生成观察结果的可重用解释机制，而当代机器学习从根本上仍然是围绕预测映射而不是解释结构进行组织的。在本文中，我们认为科学发现从根本上来说是一个知识组织问题。为此，我们引入了机械世界模型，这是一种新的设计范式，它将可重用的机制置于表示、计算和学习的中心。借鉴科学哲学的见解，我们推导出发现所需的计算能力，确定鼓励解释性知识出现的设计原则和归纳压力，并形式化以机制为中心的世界模型的解剖结构。最后，我们展示了不同的研究方向，包括机械可解释性、因果表示学习、方程发现和模块化架构，如何在缺乏统一框架的情况下捕获该范式的互补成分。我们提出机械世界模型作为概念基础和计算蓝图，使人工智能超越预测预测，走向自主科学发现。
+
+</details>
+
+---
+
+## 4. NeuralActuator: Neural Actuation Modeling for Robot Dynamics and External Force Perception / NeuralActuator：机器人动力学和外力感知的神经驱动建模
+
+**Date**: 2026-07-13 | **arXiv**: [2607.11734v1](http://arxiv.org/abs/2607.11734v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.11734v1)
+
+**Categories**: cs.RO, cs.CV, cs.GR, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Differentiable simulators have advanced policy learning and model-based control, yet actuator dynamics remain an important source of sim-to-real error. This is particularly acute on low-cost platforms, where the linear current-to-torque relation $τ= K_tI$ becomes unreliable during commanded-target tracking because of friction, hysteresis, backlash, and thermal effects. We present NeuralActuator, a neural actuator model that jointly predicts (i) a simulator-equivalent generalized-effort surrogate for trajectory propagation on low-cost servo platforms, (ii) external force with a contact-probability gate for sensorless force perception, and (iii) a motor-condition score for the supervised joint. We also introduce the Neural Actuation Dataset (NAD), collected with a twin-arm teleoperation system that records robot states and actuator telemetry together with external-force labels. The torque-surrogate head is trained through differentiable simulation from pose trajectories without direct generalized-effort labels, while the force, gate, and motor-condition heads receive direct supervision. A Transformer captures temporal dependencies while supporting real-time inference. We evaluate NeuralActuator on a 5-DoF OpenManipulator-X, a 6-DoF SO-101, and a 7-DoF Franka Emika Panda, spanning three actuator families and platforms costing approximately USD 500 to over USD 30,000. The low-cost platforms support dynamics and force evaluation, while the offline Franka experiment provides an additional payload-force-estimation benchmark. Experiments further demonstrate its application for motor condition estimation on OpenManipulator-X and improved behavior-cloning performance when NeuralActuator is used as a pretrained module.
+
+可微分模拟器具有先进的策略学习和基于模型的控制，但执行器动力学仍然是模拟到真实误差的重要来源。这在低成本平台上尤其严重，其中线性电流与扭矩关系 $τ= K_tI$ 在指令目标跟踪期间由于摩擦、迟滞、间隙和热效应而变得不可靠。我们提出了 NeuralActuator，一种神经执行器模型，它联合预测（i）模拟器等效的广义作用代理，用于低成本伺服平台上的轨迹传播，（ii）具有用于无传感器力感知的接触概率门的外力，以及（iii）受监督关节的运动状况得分。我们还介绍了神经驱动数据集（NAD），该数据集是通过双臂远程操作系统收集的，该系统记录机器人状态和执行器遥测以及外力标签。扭矩代理头通过姿势轨迹的可微分模拟进行训练，无需直接广义努力标签，而力、门和运动条件头则接受直接监督。 Transformer 捕获时间依赖性，同时支持实时推理。我们在 5 自由度 OpenManipulator-X、6 自由度 SO-101 和 7 自由度 Franka Emika Panda 上评估 NeuralActuator，涵盖三个执行器系列和平台，成本约为 500 美元至超过 30,000 美元。低成本平台支持动力学和力评估，而离线 Franka 实验提供了额外的有效负载力估计基准。实验进一步证明了其在 OpenManipulator-X 上的运动状态估计中的应用，以及当 NeuralActuator 用作预训练模块时改进的行为克隆性能。
+
+</details>
+
+---
+
+## 5. From World Action Models to Embodied Brains: A Roadmap for Open-World Physical Intelligence / 从世界行动模型到具身大脑：开放世界物理智能的路线图
+
+**Date**: 2026-07-13 | **arXiv**: [2607.11689v1](http://arxiv.org/abs/2607.11689v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.11689v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Artificial general intelligence ultimately requires agents that can reason and act in the physical world. Action models, vision-language-action policies, and world models have advanced this goal, while World Action Models (WAMs) are particularly promising because they connect candidate interventions with predicted consequences. However, progress remains fragmented: models use incompatible action spaces and prediction targets, datasets and tasks follow different conventions, and runtime systems expose limited interfaces for reuse and evaluation. We review the evolution toward WAMs and organize these limitations into three coupled gaps: model roles and representations, objectives and standardization, and system composition. Building on this analysis, we propose a co-evolution roadmap for physical intelligence centered on the \emph{embodied brain}, a long-term model target for integrating multimodal context, comparing candidate interventions, and issuing state-transition or capability requests rather than direct actuator commands. WAMs provide promising prototypes for its predictive functions, while a physical harness grounds model outputs through tools, controllers, verification, and trace logging. Shared contracts align heterogeneous models, data, tasks, and embodiments, and closed-loop post-training converts verified interaction into reusable experience. Together, these components define a modular physical-intelligence stack for adaptive and self-improving embodied agents.
+
+通用人工智能最终需要能够在物理世界中推理和行动的代理。行动模型、愿景-语言-行动政策和世界模型已经推进了这一目标，而世界行动模型（WAM）尤其有前途，因为它们将候选干预措施与预测结果联系起来。然而，进展仍然支离破碎：模型使用不兼容的动作空间和预测目标，数据集和任务遵循不同的约定，运行时系统公开了有限的接口以供重用和评估。我们回顾了 WAM 的演变，并将这些限制分为三个耦合的差距：模型角色和表示、目标和标准化以及系统组成。在此分析的基础上，我们提出了一个以 emph{embodied Brain} 为中心的物理智能的共同进化路线图，这是一个长期模型目标，用于整合多模态环境、比较候选干预措施以及发出状态转换或能力请求，而不是直接执行器命令。 WAM 为其预测功能提供了有前景的原型，而物理线束则通过工具、控制器、验证和跟踪记录来提供模型输出。共享合约协调异构模型、数据、任务和实施例，闭环后训练将经过验证的交互转换为可重用的体验。这些组件共同定义了一个模块化的物理智能堆栈，用于自适应和自我改进的实体代理。
+
+</details>
+
+---
+
+## 6. Xiaomi-Robotics-U0: Unified Embodied Synthesis with World Foundation Model / 小米-机器人-U0：与世界基础模型的统一体现综合
+
+**Date**: 2026-07-13 | **arXiv**: [2607.11643v1](http://arxiv.org/abs/2607.11643v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.11643v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent foundation image and video generation models offer strong generalization and controllability, but their direct application to embodied scenarios is limited by requirements for multi-view consistency, geometric coherence, and robot embodiment constraints. Existing methods typically adapt foundation models with limited robot data, often sacrificing visual knowledge acquired during large-scale pre-training. We present Xiaomi-Robotics-U0, a 38-billion-parameter multimodal autoregressive model for unified embodied synthesis. It treats embodied generation as an extension of foundation image and video generation and jointly optimizes text-to-image generation, image editing, embodied scene generation, embodied transfer, and embodied video generation. This unified framework preserves the generalization of the pre-trained world foundation model while adapting it to embodied settings. Xiaomi-Robotics-U0 is the first model to support high-quality multi-view scene generation across multiple robot embodiments and to introduce structured, controllable embodied transfer for fine-grained editing while preserving multi-view consistency and interaction dynamics. It achieves state-of-the-art results on single-step and sequential generation tasks, outperforming GPT-Image-2.0 in human evaluations of embodied scene generation and transfer, ranking first on World Arena for embodied video generation, and improving the out-of-distribution success rate of pi_0.5 from 36.9% to 63.2% on challenging real-world manipulation tasks. These results show that foundation world models can serve both as embodied world models and scalable data engines for embodied intelligence. Code and checkpoints are available at https://robotics.xiaomi.com/xiaomi-robotics-u0.html.
+
+最近的基础图像和视频生成模型提供了很强的泛化性和可控性，但它们在具体场景中的直接应用受到多视图一致性、几何相干性和机器人具体约束的要求的限制。现有方法通常使用有限的机器人数据来调整基础模型，通常会牺牲在大规模预训练期间获得的视觉知识。我们推出了Xiaomi-Robotics-U0，这是一个用于统一具体综合的 380 亿参数多模态自回归模型。它将具体化生成视为基础图像和视频生成的扩展，并联合优化文本到图像生成、图像编辑、具体化场景生成、具体化传输和具体化视频生成。这个统一的框架保留了预先训练的世界基础模型的泛化性，同时使其适应具体的设置。小米机器人-U0是第一个支持跨多个机器人实施例的高质量多视图场景生成的模型，并引入结构化、可控的实施传输以进行细粒度编辑，同时保持多视图一致性和交互动态。它在单步和顺序生成任务上取得了最先进的结果，在具体场景生成和传输的人类评估中优于 GPT-Image-2.0，在具体视频生成的 World Arena 上排名第一，并将 pi_0.5 在具有挑战性的现实世界操作任务上的分布外成功率从 36.9% 提高到 63.2%。这些结果表明，基础世界模型既可以作为具体世界模型，也可以作为具体智能的可扩展数据引擎。代码和检查点可在 https://robotics.xiaomi.com/xiaomi-robotics-u0.html 获取。
+
+</details>
+
+---
+
+## 7. WALA Learning Executable Latent Actions from Action-Labeled Demonstrations and Action-Free Videos / WALA 从带动作标签的演示和无动作视频中学习可执行的潜在动作
+
+**Date**: 2026-07-13 | **arXiv**: [2607.11397v1](http://arxiv.org/abs/2607.11397v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.11397v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generalizable robot policies typically rely on action-labeled robot demonstrations, which are expensive to collect and difficult to scale. In contrast, large-scale human and robot videos contain rich physical interactions but often lack executable robot action labels. We present WALA, a framework for learning executable latent actions from both action-labeled demonstrations and action-free videos. WALA first pretrains a semantic-geometric latent action model from videos by modeling the evolution between current observations and sparsely sampled future observations. Instead of reconstructing raw pixels, WALA predicts future deltas in the DINOv3 feature space and dense depth space, preserving task-relevant semantic and geometric structure while reducing sensitivity to appearance details. During policy training, the pretrained encoder provides stable latent action targets, and the decoder serves as a trainable latent world model. The latent actions generated by the vision-language backbone are jointly supervised by robot action prediction, latent action target matching, and future dynamics prediction. This enables action-labeled demonstrations to provide executable control supervision, while action-free videos contribute dynamics supervision without requiring robot action annotations. Experiments show that WALA achieves strong performance on RoboTwin, sets a new state-of-the-art result on RoboCasa with 75.2% average success, and improves both policy performance and generalization in real-world manipulation tasks.
+
+可推广的机器人政策通常依赖于带有动作标签的机器人演示，这些演示的收集成本很高且难以扩展。相比之下，大规模的人类和机器人视频包含丰富的物理交互，但往往缺乏可执行的机器人动作标签。我们提出了 WALA，一个用于从带有动作标签的演示和无动作视频中学习可执行潜在动作的框架。 WALA 首先通过对当前观察结果和稀疏采样的未来观察结果之间的演变进行建模，从视频中预训练语义几何潜在动作模型。 WALA 不是重建原始像素，而是预测 DINOv3 特征空间和密集深度空间中的未来增量，保留与任务相关的语义和几何结构，同时降低对外观细节的敏感性。在策略训练期间，预训练编码器提供稳定的潜在动作目标，解码器充当可训练的潜在世界模型。视觉语言主干生成的潜在动作由机器人动作预测、潜在动作目标匹配和未来动态预测共同监督。这使得带有动作标记的演示能够提供可执行的控制监督，而无动作视频则无需机器人动作注释即可提供动态监督。实验表明，WALA 在 RoboTwin 上取得了强劲的性能，在 RoboCasa 上以 75.2% 的平均成功率创下了新的最先进结果，并提高了现实世界操纵任务中的策略性能和泛化能力。
+
+</details>
+
+---
+
+## 8. Is Energy Guidance All You Need? Training-Free Norm Injection for Driving World Models / 您需要的是能量指导吗？用于驾驶世界模型的免培训规范注入
+
+**Date**: 2026-07-12 | **arXiv**: [2607.10781v1](http://arxiv.org/abs/2607.10781v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.10781v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Driving world models built on large video-diffusion backbones generate realistic scenes but are hard to control: enforcing a traffic norm typically means retraining the backbone or conditioning it on hand-built layouts. We ask whether controllability requires training at all. Our experiment shows that a rectified-flow driving world model, which jointly generates future video and a planned ego trajectory, can have its planned trajectory steered entirely at sampling time by differentiable energy functions that encode driving norms, without knowledge-specific retraining of the diffusion backbone. Concretely, we demonstrate that a world model built on Open-Sora 2.0 MM-DiT backbone can be steered to brake at a counterfactual target by injecting energy guidance at sampling time. However, we find that the generated video does not yet follow the steered trajectory through the backbone's joint self-attention and identify the cross-stream coupling as a crucial requirement for end-to-end-controllable rollouts.
+
+基于大型视频扩散骨干网构建的驾驶世界模型会生成逼真的场景，但难以控制：执行流量规范通常意味着重新训练骨干网或将其调整为手工构建的布局。我们询问可控性是否需要培训。我们的实验表明，联合生成未来视频和计划自我轨迹的整流流驾驶世界模型可以在采样时通过编码驾驶规范的可微能量函数完全控制其计划轨迹，而无需对扩散主干进行特定知识的再训练。具体来说，我们证明了基于 Open-Sora 2.0 MM-DiT 主干网络构建的世界模型可以通过在采样时注入能量引导来控制反事实目标制动。然而，我们发现生成的视频尚未通过骨干网络的联合自注意力遵循引导轨迹​​，并将跨流耦合视为端到端可控推出的关键要求。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-13 (1 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-13
