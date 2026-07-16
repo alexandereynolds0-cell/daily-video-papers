@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-16](papers/2026-07-16.md) - 4 papers
 - [2026-07-15](papers/2026-07-15.md) - 8 papers
 - [2026-07-13](papers/2026-07-13.md) - 1 papers
 - [2026-07-11](papers/2026-07-11.md) - 1 papers
@@ -115,6 +116,82 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-16 (4 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-16
+
+**Paper Count**: 4
+
+---
+
+## 1. The SIGReg Objective as Variational Free Energy: A Theoretical Active-Inference Account of JEPA World Models / 作为变分自由能的 SIGReg 目标：JEPA 世界模型的理论主动推理说明
+
+**Date**: 2026-07-15 | **arXiv**: [2607.13612v1](http://arxiv.org/abs/2607.13612v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.13612v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint-Embedding Predictive Architectures (JEPAs) are the dominant design for latent world models, yet they are usually justified by empirical performance rather than a normative principle. We show that the choice of anti-collapse regulariser determines whether a JEPA's training objective, a prediction loss plus a weighted embedding regulariser, is a valid Active Inference (AIF) variational free energy. We organise four non-contrastive regularisers (VICReg, LogDet, PairDist, and SIGReg) into an entropy-estimator hierarchy indexed by a prior-miscalibration gap, and show that the gap's sign, whether the estimator bounds the latent entropy from above or below, decides whether the AIF surprise bound survives: VICReg and LogDet are unsafe upper bounds, PairDist a safe lower bound, and SIGReg eliminates the gap. We then prove a correspondence theorem: under the standard constant-noise encoder model and successful SIGReg enforcement (isotropic-Gaussian embeddings), the gap vanishes, the objective becomes an exact information bottleneck, the surprise bound is preserved, and the latent goal cost becomes an exact proxy for AIF pragmatic value, whereas VICReg leaves an irreducible second-order anisotropy term. We extend the correspondence to multi-step expected free energy, ensemble epistemic value, and a learned-policy regime, and we identify the one AIF term no current JEPA world model computes: the state-epistemic value, a future-state coverage signal. The predictions differ in kind, not degree, and are stated here as theoretical consequences left for empirical test in separate work; full proofs are in Appendix A, and the algebraic core of every result is machine-verified in Lean 4 (Appendix D).
+
+联合嵌入预测架构（JEPA）是潜在世界模型的主导设计，但它们通常由经验性能而不是规范原则来证明其合理性。我们表明，抗崩溃正则化器的选择决定了 JEPA 的训练目标（预测损失加上加权嵌入正则化器）是否是有效的主动推理（AIF）变分自由能。我们将四个非对比正则化器（VICReg、LogDet、PairDist 和 SIGReg）组织成由先验误校准间隙索引的熵估计器层次结构，并表明间隙的符号（无论估计器从上方还是下方限制潜在熵）决定 AIF 意外界限是否存在：VICReg 和 LogDet 是不安全的上限，PairDist 是安全的下界，而 SIGReg消除了间隙。然后我们证明了一个对应定理：在标准恒定噪声编码器模型和成功的 SIGReg 执行（各向同性高斯嵌入）下，间隙消失，目标成为精确的信息瓶颈，意外界限被保留，潜在目标成本成为 AIF 实用值的精确代理，而 VICReg 留下了不可约的二阶各向异性项。我们将对应关系扩展到多步预期自由能、整体认知值和学习策略体系，并且我们确定了当前 JEPA 世界模型无法计算的一个 AIF 术语：状态认知值、未来状态覆盖信号。这些预测在种类上有所不同，而不是程度上的不同，这里将其表述为理论结果，留给单独工作中的实证检验；完整的证明在附录 A 中，每个结果的代数核心在精益 4（附录 D）中经过机器验证。
+
+</details>
+
+---
+
+## 2. Grounded world models in biological organisms and future embodied AI / 以生物有机体和未来人工智能为基础的世界模型
+
+**Date**: 2026-07-15 | **arXiv**: [2607.13560v1](http://arxiv.org/abs/2607.13560v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.13560v1)
+
+**Categories**: q-bio.NC, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in generative and embodied AI have been driven by large-scale predictive learning over multimodal data. However, the resulting systems remain largely based on passive training regimes where linguistic regularities create the scaffold onto which information from other modalities is attached. Conversely, neuroscience and cognitive science suggest that biological intelligence is organized in the opposite way, where grounded world models acquired through interaction with the environment provide the semantic scaffold to which language is attached. Here, we illustrate five examples of neural circuits supporting grounded world modelling, which underlie navigation in physical and conceptual spaces, affordance-based perception and interaction with objects, active perception and exploratory learning, allostatic control and emotion, and the distinction between self- and world-generated outcomes. These examples highlight several features largely missing from current embodied AI, including the role of intrinsic dynamics as a foundation for learning, the centrality of action in aligning these dynamics with the external world, the prominence of autonomous experience and open-ended learning over passive assimilation of externally provided data, and the fact that early predictive and control mechanisms scaffold higher cognitive abilities such as reasoning, conceptual navigation, planning, imagination, understanding others' minds, and communication. Finally, we discuss whether and how principles derived from biological systems may inform future embodied AI, including training regimes based on social interaction to construct world models that are not only grounded but also socially shared and aligned with human norms and values.
+
+生成式人工智能和嵌入式人工智能的最新进展是由多模态数据的大规模预测学习推动的。然而，由此产生的系统仍然主要基于被动训练制度，其中语言规律创建了支架，来自其他模式的信息被附加到该支架上。相反，神经科学和认知科学表明，生物智能是以相反的方式组织的，通过与环境交互获得的扎根世界模型提供了语言所依附的语义支架。在这里，我们举例说明了支持扎根世界建模的神经回路的五个例子，这些神经回路是物理和概念空间中的导航、基于可供性的感知和与物体的交互、主动感知和探索性学习、动态控制和情感，以及自我生成的结果和世界生成的结果之间的区别的基础。这些例子凸显了当前体现人工智能中很大程度上缺失的几个特征，包括内在动力作为学习基础的作用、将这些动力与外部世界相结合的行动的中心地位、自主经验和开放式学习相对于外部提供的数据的被动同化的突出地位，以及早期预测和控制机制支撑更高的认知能力，如推理、概念导航、计划、想象力、理解他人的思想和沟通。最后，我们讨论源自生物系统的原则是否以及如何为未来的具体人工智能提供信息，包括基于社会互动的训练制度，以构建不仅有根基而且社会共享并符合人类规范和价值观的世界模型。
+
+</details>
+
+---
+
+## 3. Learning Safe Agent Behaviour from Human Preferences and Justifications via World Models / 通过世界模型从人类偏好和理由中学习安全代理行为
+
+**Date**: 2026-07-14 | **arXiv**: [2607.13172v1](http://arxiv.org/abs/2607.13172v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.13172v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We address the problem of safely training an agent policy and deploying a good and safe policy, in settings where the environment dynamics are unknown and no suitable reward function is available. In the context of safety-critical environments, we consider traditional reinforcement learning impractical and resort to the resource of human input. We introduce DROPJ, a human-centred method for both safe training and deployment. We first learn a world model (a learned simulator) from a dataset of prior real-world trajectories. A human then plays the game in this learned simulator to extract several informative simulated trajectories. From these, we sample pairs of simulated trajectory segments and elicit from a human their preference over these segments, as well as a reason (justification) for their choice. We then train a reward model from these justified preferences and use it, together with the world model, to directly deploy the agent using model predictive control. Running real-user experiments, we find that generating informative simulated trajectories from a user significantly reduces the computational cost during training compared to other strategies, and can also improve the performance during deployment. In the context of training within a learned simulator, we show that the use of preferences rather than other types of feedback substantially improves the performance during deployment. We further demonstrate that safety justifications accompanying preferences can significantly enhance safety or prioritise user-prescribed aspects of safety associated with them during deployment.
+
+我们解决了在环境动态未知且没有合适的奖励函数可用的情况下安全训练代理策略并部署良好且安全的策略的问题。在安全关键环境的背景下，我们认为传统的强化学习不切实际，并求助于人力输入资源。我们推出 DROPJ，一种以人为本的安全培训和部署方法。我们首先从先前的现实世界轨迹数据集中学习一个世界模型（一个学习的模拟器）。然后，人类在这个学习模拟器中玩游戏，以提取几个信息丰富的模拟轨迹。从中，我们对模拟轨迹段进行采样，并从人们那里引出他们对这些段的偏好，以及他们选择的原因（理由）。然后，我们根据这些合理的偏好训练奖励模型，并将其与世界模型一起使用，以使用模型预测控制直接部署代理。运行真实用户实验，我们发现与其他策略相比，从用户生成信息丰富的模拟轨迹可以显着降低训练期间的计算成本，并且还可以提高部署期间的性能。在学习模拟器中进行训练的情况下，我们表明使用偏好而不是其他类型的反馈可以显着提高部署期间的性能。我们进一步证明，伴随偏好的安全理由可以显着增强安全性或在部署期间优先考虑与其相关的用户指定的安全方面。
+
+</details>
+
+---
+
+## 4. From Observation to Insight: Mechanistic World Models and the Quest for Autonomous Discovery / 从观察到洞察：机械世界模型和自主发现的探索
+
+**Date**: 2026-07-14 | **arXiv**: [2607.12474v2](http://arxiv.org/abs/2607.12474v2) | **PDF**: [Link](http://arxiv.org/pdf/2607.12474v2)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in foundation models have transformed AI for Science, enabling remarkably accurate predictive performance across domains ranging from protein folding to weather forecasting. Yet prediction alone does not constitute scientific discovery. Scientific understanding depends on uncovering the reusable explanatory mechanisms that generate observations, whereas contemporary machine learning remains fundamentally organised around predictive mappings rather than explanatory structure. In this paper, we argue that scientific discovery is fundamentally a problem of knowledge organisation. To this end, we introduce Mechanistic World Models, a new design paradigm that places reusable mechanisms at the centre of representation, computation and learning. Drawing on insights from the philosophy of science, we derive the computational capabilities required for discovery, identify the design principles and inductive pressures that encourage explanatory knowledge to emerge, and formalise the anatomy of a mechanism-centric world model. Finally, we show how diverse research directions including mechanistic interpretability, causal representation learning, equation discovery and modular architectures capture complementary ingredients of this paradigm while lacking a unified framework. We propose Mechanistic World Models as a conceptual foundation and computational blueprint for moving AI beyond predictive forecasting towards autonomous scientific discovery.
+
+基础模型的最新进展已经改变了科学人工智能，在从蛋白质折叠到天气预报等领域实现了非常准确的预测性能。然而，仅靠预测并不构成科学发现。科学理解取决于揭示生成观察结果的可重用解释机制，而当代机器学习从根本上仍然是围绕预测映射而不是解释结构进行组织的。在本文中，我们认为科学发现从根本上来说是一个知识组织问题。为此，我们引入了机械世界模型，这是一种新的设计范式，它将可重用的机制置于表示、计算和学习的中心。借鉴科学哲学的见解，我们推导出发现所需的计算能力，确定鼓励解释性知识出现的设计原则和归纳压力，并形式化以机制为中心的世界模型的解剖结构。最后，我们展示了不同的研究方向，包括机械可解释性、因果表示学习、方程发现和模块化架构，如何在缺乏统一框架的情况下捕获该范式的互补成分。我们提出机械世界模型作为概念基础和计算蓝图，使人工智能超越预测预测，走向自主科学发现。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-15 (8 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-15
