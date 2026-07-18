@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-18](papers/2026-07-18.md) - 3 papers
 - [2026-07-17](papers/2026-07-17.md) - 30 papers
 - [2026-07-16](papers/2026-07-16.md) - 4 papers
 - [2026-07-15](papers/2026-07-15.md) - 23 papers
@@ -119,6 +120,66 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-18 (3 papers)</b></summary>
+
+# arXiv Video Papers - 2026-07-18
+
+**Paper Count**: 3
+
+---
+
+## 1. Hierarchical Denoising For Multi-Step Visual Reasoning / 多步视觉推理的分层去噪
+
+**Date**: 2026-07-16 | **arXiv**: [2607.15278v1](http://arxiv.org/abs/2607.15278v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.15278v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video models are evolving into vision foundation models, yet they still lack human-like multi-step reasoning. Streaming autoregressive diffusion models are efficient but limited in reasoning, while bidirectional diffusion enables global revision with high inference costs due to dense frame-level denoising. Both paradigms struggle to achieve logical consistency and low-latency streaming for complex reasoning tasks. We propose HDR (Hierarchical Denoising for Visual Reasoning), a unified framework that integrates hierarchical latents into causal video generation for multi-step reasoning. HDR organizes video latents into a tree-structured hierarchy, enabling coarse-to-fine reasoning before streaming output. Coarse denoising layers preserve uncertain hypotheses for global planning, while finer layers progressively refine them into concrete visual states. A sparse hierarchical attention pattern (SHAP) further reduces temporal attention costs. We introduce a level-stratified multi-step video reasoning benchmark with out-of-distribution cases, covering six tasks: maze navigation, Tower of Hanoi, one-line drawing, sliding puzzle, Sokoban, and water pouring. Compared with streaming autoregressive diffusion baselines, HDR improves success from 34.22 to 60.29 (76.2% relative gain) and increases average progress from 76.00 to 89.56, demonstrating more consistent reasoning trajectories. HDR maintains low-latency streaming at 0.70 seconds per latent, achieving 54.2 times faster inference than bidirectional diffusion. It also retains 82.9% of full-data performance with only 2% training data, compared with 52.0% for bidirectional diffusion. Real-world robot experiments further demonstrate HDR's potential for physical interaction and world modeling. Project demo: https://hierarchical-diffusion-reasoning.github.io/.
+
+视频模型正在演变为视觉基础模型，但它们仍然缺乏类人的多步骤推理。流式自回归扩散模型虽然高效，但推理能力有限，而双向扩散则可实现全局修正，但由于密集的帧级去噪，推理成本较高。这两种范式都在努力实现复杂推理任务的逻辑一致性和低延迟流。我们提出了 HDR（视觉推理分层去噪），这是一个统一的框架，它将分层潜伏集成到因果视频生成中以进行多步推理。 HDR 将视频潜在层组织成树状结构的层次结构，从而在流式输出之前实现从粗到细的推理。粗略的去噪层为全局规划保留了不确定的假设，而更精细的层则逐渐将它们细化为具体的视觉状态。稀疏分层注意力模式（SHAP）进一步降低了时间注意力成本。我们引入了一种具有分布外情况的分层多步视频推理基准，涵盖六个任务：迷宫导航、汉诺塔、单线绘制、滑动拼图、推箱子和倒水。与流式自回归扩散基线相比，HDR 将成功率从 34.22 提高到 60.29（相对增益 76.2%），并将平均进度从 76.00 提高到 89.56，展示了更一致的推理轨迹。 HDR 将低延迟流保持在每个延迟 0.70 秒，推理速度比双向扩散快 54.2 倍。它还仅用 2% 的训练数据保留了 82.9% 的全数据性能，而双向扩散的性能为 52.0%。真实世界的机器人实验进一步证明了 HDR 在物理交互和世界建模方面的潜力。项目演示：https://hierarchical-diffusion-reasoning.github.io/。
+
+</details>
+
+---
+
+## 2. MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators / MeanFlowNFT：将前向过程强化学习引入平均速度生成器
+
+**Date**: 2026-07-16 | **arXiv**: [2607.15273v1](http://arxiv.org/abs/2607.15273v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.15273v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+MeanFlow generators achieve fast few-step sampling by predicting average velocities over time intervals, making them attractive for efficient generation. Reinforcement learning (RL) has become a powerful way to align diffusion and flow models with human preferences and task-specific objectives. In particular, DiffusionNFT offers an efficient forward-process RL framework that does not require reverse-process trajectories or likelihood estimation. However, applying such RL methods to MeanFlow remains underexplored. DiffusionNFT optimizes instantaneous velocities, whereas MeanFlow samples with average velocities. To bridge this gap, we introduce MeanFlowNFT. Inspired by the MeanFlow identity, which bridges average and instantaneous velocities, we construct an induced instantaneous-velocity predictor. We apply the DiffusionNFT objective to this predictor, making reward optimization well-defined for MeanFlow. Sampling remains based on the average velocity, preserving MeanFlow's fast few-step generation. We further prove that MeanFlowNFT inherits DiffusionNFT's strict policy-improvement guarantee. Experiments on image and video generation show that MeanFlowNFT consistently improves baselines. Moreover, it outperforms prior state-of-the-art RL-tuned few-step generators on most metrics ($6$ of $8$ on SD3.5-M), and can even surpass multi-step RL-tuned diffusion while using only a few sampling steps. For instance, on Wan 2.1, $4$-step MeanFlowNFT reaches a VBench score of $84.33$, surpassing $50$-step LongCat-Video RL ($82.57$).
+
+MeanFlow 生成器通过预测时间间隔内的平均速度来实现快速的几步采样，这使得它们对于高效生成具有吸引力。强化学习 (RL) 已成为将扩散和流动模型与人类偏好和特定任务目标结合起来的强大方法。特别是，DiffusionNFT 提供了一种高效的前向过程 RL 框架，不需要逆向过程轨迹或似然估计。然而，将此类 RL 方法应用于 MeanFlow 的探索仍未充分。 DiffusionNFT 优化瞬时速度，而 MeanFlow 以平均速度采样。为了弥补这一差距，我们引入了 MeanFlowNFT。受到连接平均速度和瞬时速度的 MeanFlow 恒等式的启发，我们构建了诱导瞬时速度预测器。我们将 DiffusionNFT 目标应用于该预测器，为 MeanFlow 明确定义了奖励优化。采样仍然基于平均速度，保留了 MeanFlow 的快速几步生成。我们进一步证明MeanFlowNFT继承了DiffusionNFT严格的策略改进保证。图像和视频生成实验表明，MeanFlowNFT 持续改进基线。此外，它在大多数指标上都优于先前最先进的 RL 调整的少步生成器（SD3.5-M 上的 6 美元或 8 美元），甚至可以在仅使用几个采样步骤的情况下超越多步 RL 调整的扩散。例如，在 Wan 2.1 上，4 美元步的 MeanFlowNFT 的 VBench 得分为 84.33 美元，超过了 50 美元步的 LongCat-Video RL（82.57 美元）。
+
+</details>
+
+---
+
+## 3. Online Neural Space Time Memory for Dynamic Novel View Synthesis / 用于动态小说视图合成的在线神经时空记忆
+
+**Date**: 2026-07-16 | **arXiv**: [2607.15271v1](http://arxiv.org/abs/2607.15271v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.15271v1)
+
+**Categories**: cs.CV, cs.GR, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Online novel view synthesis from multi-view streaming videos faces a fundamental trade-off: maintaining a persistent, long-horizon memory to reconstruct temporarily occluded regions while operating under strict real-time constraints. While Test-Time Training (TTT) offers a powerful memory mechanism, standard models mandate gradient-based memory updates at every frame to adapt to the changing motion in dynamic scenes. The computational cost of heavy memory updates precludes real-time application and can lead to instability over long contexts. Given that memory updates are more demanding than memory application and video content is largely redundant, we propose to decouple the frequencies of these two processes. Our approach performs periodic memory updates while applying the memory on a per-frame basis, using cross-view attention to manage deformations between the prior memory state and the current frame. To lock in the historical context, we introduce two critical mechanisms: an auxiliary Memory Loss that forces persistent internalization of the scene, and a Memory Caching strategy that regularizes active weights against catastrophic drift. Our method demonstrates real-time, state-of-the-art performance on scenes with dynamic human motion as well as minute-scale online memorization.
+
+多视图流视频的在线新颖视图合成面临着一个基本的权衡：在严格的实时约束下运行时，维持持久的长视野内存以重建暂时遮挡的区域。虽然测试时训练 (TTT) 提供了强大的记忆机制，但标准模型要求在每一帧进行基于梯度的记忆更新，以适应动态场景中不断变化的运动。大量内存更新的计算成本阻碍了实时应用，并可能导致长上下文中的不稳定。鉴于内存更新比内存申请要求更高，并且视频内容很大程度上是冗余的，我们建议将这两个过程的频率解耦。我们的方法执行定期内存更新，同时在每帧的基础上应用内存，使用跨视图注意力来管理先前内存状态和当前帧之间的变形。为了锁定历史背景，我们引入了两个关键机制：强制场景持久内化的辅助内存丢失，以及规范主动权重以防止灾难性漂移的内存缓存策略。我们的方法在具有动态人体运动以及分钟级在线记忆的场景中展示了实时、最先进的性能。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-17 (30 papers)</b></summary>
 
 # arXiv Video Papers - 2026-07-17
