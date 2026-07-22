@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-22](papers/2026-07-22.md) - 26 papers
 - [2026-07-18](papers/2026-07-18.md) - 5 papers
 - [2026-07-17](papers/2026-07-17.md) - 33 papers
 - [2026-07-16](papers/2026-07-16.md) - 24 papers
@@ -125,6 +126,438 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-22 (26 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-07-22
+
+**Paper Count**: 26
+
+---
+
+## 1. Computing on the Fly: Navigating a Vision for the Future of Drone Computing / 飞行计算：引领无人机计算的未来愿景
+
+**Date**: 2026-07-21 | **arXiv**: [2607.19213v1](http://arxiv.org/abs/2607.19213v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19213v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The report envisions a decade in which drones move goods, medical supplies, and information at a scale comparable to national infrastructure investments like highways and the electric grid. Potential applications include natural disaster detection drones that spot wildfire sources within minutes, medical supply chains that bypass ground congestion to reach rural hospitals, and nationwide fleets that continuously inspect bridges and power lines. Realizing this future, however, requires closing what report authors call a "capability gap," where hardware and aspirations are outpacing the software and systems needed to operate safely at scale.   The report identifies twelve technical challenges that must be addressed to realize the transformative potential of drone technology: Scaling to millions of drones; AI intelligence and assurance; Edge-cloud continuum and real-time coordination; AI autonomy and agentic systems; Data, training, and validation infrastructure; Critical infrastructure protection; Building reliable fleets from non-deterministic agents; Trust, security, and distributed authentication; Next-generation drone networks; Human-AI partnership and scalable insight; Standards, certification, and regulation; and Workforce development and education.   These twelve challenges and proposed approaches to them form the basis of the report, laying out a multifaceted path forward for the evolution of done technology.
+
+该报告设想，在十年内，无人机运输货物、医疗用品和信息的规模将与高速公路和电网等国家基础设施投资相当。潜在的应用包括在几分钟内发现野火源的自然灾害探测无人机、绕过地面拥堵到达乡村医院的医疗供应链，以及持续检查桥梁和电线的全国车队。然而，要实现这一未来，需要缩小报告作者所说的“能力差距”，即硬件和愿望超过了大规模安全运行所需的软件和系统。   该报告确定了实现无人机技术变革潜力必须解决的 12 项技术挑战： 扩展到数百万架无人机； AI智能与保障；边云连续体和实时协调；人工智能自主和代理系统；数据、培训和验证基础设施；关键基础设施保护；从非确定性代理建立可靠的车队；信任、安全和分布式身份验证；下一代无人机网络；人机合作和可扩展的洞察力；标准、认证和监管；劳动力发展和教育。   这十二项挑战以及针对这些挑战提出的方法构成了报告的基础，为现有技术的发展奠定了多方面的发展道路。
+
+</details>
+
+---
+
+## 2. Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents / Agentic Real2Sim：使用视觉语言代理进行基于物理的世界建模
+
+**Date**: 2026-07-21 | **arXiv**: [2607.19190v1](http://arxiv.org/abs/2607.19190v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19190v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Real-to-sim conversion for robotic interaction with objects remains labor-intensive because it requires more than visual reconstruction: a streamlined real2sim process must recover scene geometries and object states, infer physical parameters, and assemble actors, objects, cameras, poses, and trajectories into a runnable physical simulation. Today this process still depends on manual tuning of visual foundation models, mesh cleanup, coordinate-frame alignment, and brittle workflow glue across visual perception tools and simulators. We introduce \textit{Agentic Real2Sim}, a framework for generalized physical world modeling with vision-language agents, converting a real-world recording of object-robot interaction into a simulatable episodic twin which preserves observations, geometries, robot interactions, and object states. We evaluate Agentic Real2Sim on rigid-object manipulation, deformable-object interaction, and humanoid motion scenes, spanning domains that are usually handled by separate Real2Sim pipelines, marking a first step toward scalable conversion. The framework's agentic decisions can be driven by an open-weight VLM backend at a small fraction of the cost of frontier models, while attaining comparable conversion success rate. We aim to use the resulting real-world-aligned twins for downstream robotics tasks, specifically policy learning and evaluation. The project site is available at https://ericchen321.github.io/agentic_real2sim.github.io/.
+
+机器人与物体交互的实数到模拟转换仍然是劳动密集型的，因为它需要的不仅仅是视觉重建：简化的 real2sim 流程必须恢复场景几何形状和物体状态，推断物理参数，并将演员、物体、相机、姿势和轨迹组装成可运行的物理模拟。如今，这个过程仍然依赖于手动调整视觉基础模型、网格清理、坐标系对齐以及视觉感知工具和模拟器之间脆弱的工作流程粘合。我们引入了 \textit{Agentic Real2Sim}，这是一个使用视觉语言代理进行广义物理世界建模的框架，将对象与机器人交互的真实世界记录转换为可模拟的情景孪生，以保留观察结果、几何形状、机器人交互和对象状态。我们在刚性对象操作、可变形对象交互和人形运动场景上评估 Agentic Real2Sim，跨越通常由单独的 Real2Sim 管道处理的领域，标志着迈向可扩展转换的第一步。该框架的代理决策可以由开放重量的 VLM 后端驱动，成本仅为前沿模型的一小部分，同时获得可比的转换成功率。我们的目标是将由此产生的与现实世界一致的双胞胎用于下游机器人任务，特别是政策学习和评估。该项目站点位于 https://ericchen321.github.io/agentic_real2sim.github.io/。
+
+</details>
+
+---
+
+## 3. Comparative Study of Multi-Agent Actor-Critic Algorithms in Parameterized Action Reinforcement Learning / 参数化动作强化学习中多智能体Actor-Critic算法的比较研究
+
+**Date**: 2026-07-21 | **arXiv**: [2607.19117v1](http://arxiv.org/abs/2607.19117v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19117v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Parameterized action reinforcement learning has shown strong performance in environments requiring both discrete action selection and continuous parameterization. Prior work established the effectiveness of single-agent actor-critic algorithms - Greedy Actor-Critic (GAC), Soft Actor-Critic (SAC), and Truncated Quantile Critics (TQC) - on benchmark parameterized action tasks, but their extension to multi-agent settings remains largely unexplored. This paper presents a comparative study of shared-experience multi-agent extensions of these algorithms: Multi-Agent Greedy Actor-Critic (MAGAC), Multi-Agent Soft Actor-Critic (MASAC), and Multi-Agent Truncated Quantile Critics (MATQC). Rather than following the centralized training, decentralized execution (CTDE) paradigm, the proposed framework uses multiple independent actor-critic agents that share a replay buffer while maintaining separate policy and value networks. We evaluate the algorithms on the Platform-v0 and Goal-v0 benchmarks against their single-agent counterparts, using three-, five-, and ten-agent configurations to assess scalability. Performance is measured by average evaluation return and training time across ten independent runs, with one-way ANOVA and Tukey HSD post-hoc tests used to assess statistical significance. Results show that the multi-agent framework consistently improves Greedy Actor-Critic performance, while MASAC and MATQC show comparatively modest gains over their single-agent versions. Increasing the number of agents beyond five yields limited additional performance while substantially raising computational cost, particularly for MAGAC. These results highlight a trade-off between learning performance and computational efficiency, offering insight into the scalability of shared-experience multi-agent actor-critic methods for parameterized action reinforcement learning.
+
+参数化动作强化学习在需要离散动作选择和连续参数化的环境中表现出了强大的性能。之前的工作确立了单智能体 Actor-Critic 算法（Greedy Actor-Critic (GAC)、Soft Actor-Critic (SAC) 和 Truncated Quantile Critics (TQC)）在基准参数化动作任务上的有效性，但它们对多智能体设置的扩展在很大程度上仍未被探索。本文对这些算法的共享体验多智能体扩展进行了比较研究：多智能体贪婪 Actor-Critic (MAGAC)、多智能体软 Actor-Critic (MASAC) 和多智能体截断分位数批评 (MATQC)。所提出的框架没有遵循集中训练、分散执行（CTDE）范式，而是使用多个独立的行动者-批评者代理，这些代理共享重播缓冲区，同时维护单独的策略和价值网络。我们根据单代理算法在 Platform-v0 和 Goal-v0 基准上评估算法，使用三、五和十代理配置来评估可扩展性。性能通过十次独立运行的平均评估回报和训练时间来衡量，并使用单向方差分析和 Tukey HSD 事后测试来评估统计显着性。结果表明，多智能体框架持续提高了 Greedy Actor-Critic 的性能，而 MASAC 和 MATQC 相对于单智能体版本的收益相对较小。将代理数量增加到超过 5 个会限制额外的性能，同时大幅提高计算成本，尤其是对于 MAGAC。这些结果强调了学习性能和计算效率之间的权衡，为参数化动作强化学习的共享经验多智能体演员批评方法的可扩展性提供了见解。
+
+</details>
+
+---
+
+## 4. FilmWorld: Agentic Novel-to-Film Generation through Dynamic Cinematic World Modeling / FilmWorld：通过动态电影世界建模代理小说到电影的生成
+
+**Date**: 2026-07-21 | **arXiv**: [2607.19038v1](http://arxiv.org/abs/2607.19038v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19038v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Translating novels into films poses a grand challenge for generative artificial intelligence, requiring conversion of abstract literary prose into long-form, multi-scene visual narratives. While current video generation models excel at short, single-scene clips within narrow temporal and spatial contexts, novel-to-film generation operates in a more complex regime, demanding long-duration content across diverse scenes with dynamically evolving entity states. To address this, we formalize novel-to-film generation as dynamic cinematic world modeling, decomposed into two phases: construction, which grounds abstract, underspecified literary narratives into concrete, stateful, and persistent world entities; and evolution, which governs how these entities dynamically update under plot progression to maintain causal consistency across scenes. We propose FilmWorld, an end-to-end agentic system where two groups of specialized agents collaborate to instantiate these phases. Construction-side agents perform narrative structured translation, world entity state modeling with visual anchoring, and state-driven shot planning, progressively projecting literary language into a cinematic blueprint. Evolution-side agents perform state-anchored visual generation, cross-shot dynamic state propagation, and closed-loop state verification to maintain causal consistency and visual coherence. To address the evaluation gap in long-form generation, we introduce FilmEval, a systematic evaluation framework that couples a difficulty-graded benchmark of 15 representative novels with an automated protocol of nine objective metrics spanning three dimensions: cinematic presentation, film consistency, and novel fidelity. Experiments demonstrate that FilmWorld consistently outperforms state-of-the-art video generation agent systems, with particularly pronounced improvements in narrative fidelity and cross-scene consistency.
+
+将小说翻译成电影对生成人工智能提出了巨大的挑战，需要将抽象的文学散文转换为长篇、多场景的视觉叙事。虽然当前的视频生成模型擅长在狭窄的时间和空间背景下的短的、单场景的剪辑，但小说到电影的生成在更复杂的机制中运行，需要跨具有动态演变的实体状态的不同场景的长时间内容。为了解决这个问题，我们将小说到电影的生成形式化为动态的电影世界建模，分解为两个阶段：构建，将抽象的、不明确的文学叙事建立在具体的、有状态的和持久的世界实体上；和进化，它控制这些实体如何在情节进展下动态更新，以保持场景之间的因果一致性。我们提出了 FilmWorld，这是一个端到端的代理系统，其中两组专门的代理协作来实例化这些阶段。施工方代理执行叙事结构化翻译、具有视觉锚定的世界实体状态建模以及状态驱动的镜头规划，逐步将文学语言投射到电影蓝图中。进化端代理执行状态锚定视觉生成、交叉镜头动态状态传播和闭环状态验证，以保持因果一致性和视觉连贯性。为了解决长篇生成中的评估差距，我们引入了 FilmEval，这是一个系统评估框架，它将 15 部代表性小说的难度分级基准与跨越三个维度的九个客观指标的自动化协议结合起来：电影呈现、电影一致性和小说保真度。实验表明，FilmWorld 的性能始终优于最先进的视频生成代理系统，在叙事保真度和跨场景一致性方面的改进尤其显着。
+
+</details>
+
+---
+
+## 5. CoGoal3D: Collaborative 3D Object Detection with 3D-Aware Fusion and Refinement / CoGoal3D：具有 3D 感知融合和细化的协作 3D 对象检测
+
+**Date**: 2026-07-21 | **arXiv**: [2607.19036v1](http://arxiv.org/abs/2607.19036v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19036v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/Megalo-f/CoGoal3D.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+V2X collaborative object detection features overcoming the limitations of single-vehicle systems by aggregating environmental features from multiple collaborative agents. However, existing mainstream V2X perception methods mainly focus on 2D BEV object detection. When 3D detection task is concerned, inferior results are obtained because they ignore the 3D spatial misalignment caused by differing height and attitude among the collaborators. In this paper, we propose a novel collaborative 3D object detection framework called CoGoal3D, which extracts and refines the 3D feature gradually in a two-stage pipeline. In the first stage, a multiscale 3D-aware global fusion module is designed to mitigate the 3D spatial misalignment. The resulting proposals are then refined in the second stage with an auxiliary task of 3D point reconstruction. An effective multi-agent collaborative data augmentation strategy is further proposed to enrich the training data while minimizing information loss. Extensive experiments on public real-world datasets demonstrate that our CoGoal3D achieves new state-of-the-art performance, with 3D AP@0.7 improvements of 10.86%, 10.34%, and 10.18% on the DAIR-V2X, V2V4Real, and V2X-Real datasets, respectively. Code is available at https://github.com/Megalo-f/CoGoal3D.
+
+V2X 协作对象检测功能通过聚合来自多个协作代理的环境特征来克服单车系统的局限性。然而，现有主流V2X感知方法主要集中在2D BEV目标检测上。当涉及 3D 检测任务时，由于忽略了协作者之间不同的高度和态度引起的 3D 空间错位，因此获得了较差的结果。在本文中，我们提出了一种名为 CoGoal3D 的新型协作 3D 对象检测框架，该框架在两阶段管道中逐渐提取和细化 3D 特征。在第一阶段，设计了多尺度 3D 感知全局融合模块来减轻 3D 空间错位。然后在第二阶段通过 3D 点重建的辅助任务对所得建议进行细化。进一步提出了一种有效的多智能体协作数据增强策略，以丰富训练数据，同时最大限度地减少信息丢失。对公共真实数据集的大量实验表明，我们的 CoGoal3D 实现了新的最先进性能，3D AP@0.7 在 DAIR-V2X、V2V4Real 和 V2X-Real 数据集上分别提高了 10.86%、10.34% 和 10.18%。代码可在 https://github.com/Megalo-f/CoGoal3D 获取。
+
+</details>
+
+---
+
+## 6. PhoenixRepair: Rethinking Repair Strategy Exploration in Software Agents / PhoenixRepair：重新思考软件代理中的修复策略探索
+
+**Date**: 2026-07-21 | **arXiv**: [2607.18859v1](http://arxiv.org/abs/2607.18859v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18859v1)
+
+**Categories**: cs.AI
+
+**Code**: https://github.com/DeepSoftwareAnalytics/PhoenixRepair.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While Large Language Models have greatly advanced automated issue resolution, existing agent-based methods exhibit a fundamental limitation in their insufficient exploration of repair strategies. This insufficiency manifests in two key aspects. First, the exploration of multiple potential edit locations is limited. Second, the exploration of repair attempts at each location is also insufficient. To address these challenges, we present PhoenixRepair, a multi-agent framework that systematically explores multiple candidate edit locations and performs iterative reflection and refinement on patch generation, thereby expanding the search space of repair strategies. Our framework begins with multi-location sampling, optionally augmented with graph-based localization information for difficult tasks, followed by iterative reflection and refinement to generate better patches, culminating in final-round generation guided by distilled insights from all historical attempts. Experiments on SWE-bench-Verified demonstrate that PhoenixRepair achieves the largest relative improvement of 7.8\% over SWE-agent under DeepSeek-V3.1, and attains the highest resolved rate of 76.0\% Pass@1 under MiniMax-M2.5. Meanwhile, it achieves higher fault localization accuracy than existing approaches. Our code is available at https://github.com/DeepSoftwareAnalytics/PhoenixRepair.
+
+虽然大型语言模型极大地推进了自动化问题解决，但现有的基于代理的方法在对修复策略的探索不足方面表现出根本性的局限性。这种不足主要体现在两个方面。首先，对多个潜在编辑位置的探索是有限的。其次，各个地点的修复尝试探索也不够。为了应对这些挑战，我们提出了 PhoenixRepair，这是一个多代理框架，它系统地探索多个候选编辑位置并对补丁生成进行迭代反思和细化，从而扩大修复策略的搜索空间。我们的框架从多位置采样开始，可选择针对困难任务添加基于图形的本地化信息，然后进行迭代反思和细化以生成更好的补丁，最终在所有历史尝试中提炼的见解指导下进行最后一轮生成。在SWE-bench-Verified上的实验表明，PhoenixRepair在DeepSeek-V3.1下比SWE-agent实现了7.8%的最大相对改进，并在MiniMax-M2.5下获得了76.0% Pass@1的最高解析率。同时，它比现有方法实现了更高的故障定位精度。我们的代码可在 https://github.com/DeepSoftwareAnalytics/PhoenixRepair 获取。
+
+</details>
+
+---
+
+## 7. Data Leakage Prevention in Agentic Applications via Preemptive Hardening / 通过预先强化预防代理应用程序中的数据泄漏
+
+**Date**: 2026-07-21 | **arXiv**: [2607.18847v1](http://arxiv.org/abs/2607.18847v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18847v1)
+
+**Categories**: cs.CR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic systems integrate LLM driven planning with interfaces to external tools, making data leakage and tool misuse feasible via instruction/data boundary failures and prompt injection attacks. Enforcing required controls consistently is particularly challenging in workflows spanning many codebases and heterogeneous agents. To address this challenge in multi agentic systems, we present a pre-deployment pipeline for scanning, hardening, and validation of agentic applications. The pipeline analyzes prompt templates, tool interfaces, and tool-invocation code to identify leakage-enabling patterns and generate actionable patches. The hardened application is then validated through adversarial prompt injection attacks and benign input variations ensuring that mitigations do not disrupt intended behavior. In the hardening stage, high-risk tools are prioritized, and minimally invasive mitigations are applied, including schema tightening, boundary sanitization, allowlist-based tool gating, and least-privilege checks. In the validation stage, the pipeline automatically generates attack inputs that mimic jailbreaks, instruction overrides, and tool-targeted manipulation, along with benign task variants, to confirm that the functionality of the hardened application is preserved after remediation. We evaluated the pipeline on five real-world agentic applications, as well as on the AgentDojo benchmark. Across all applications, the proposed pipeline identified recurring leakage-enabling patterns and generated patches that can be integrated without disrupting the intended application behavior. The resulting modifications of application code were shown to eliminate leaks when targeted by basic jailbreak and instruction-override attacks, achieving a 100% reduction in leakage, and reduce leaks by 91% under conditions of stress-induced manipulation, without the need of continuous runtime policy enforcement.
+
+代理系统将 LLM 驱动的规划与外部工具的接口集成在一起，通过指令/数据边界故障和提示注入攻击使数据泄漏和工具误用成为可能。在跨越许多代码库和异构代理的工作流程中，一致地执行所需的控制尤其具有挑战性。为了应对多代理系统中的这一挑战，我们提出了一个用于扫描、强化和验证代理应用程序的预部署管道。该管道分析提示模板、工具界面和工具调用代码，以识别导致泄漏的模式并生成可操作的补丁。然后通过对抗性提示注入攻击和良性输入变化来验证强化的应用程序，确保缓解措施不会破坏预期行为。在强化阶段，优先考虑高风险工具，并应用微创缓解措施，包括模式紧缩、边界清理、基于白名单的工具门控和最小权限检查。在验证阶段，管道自动生成模仿越狱、指令覆盖和针对工具的操作的攻击输入，以及良性任务变体，以确认修复后保留了强化应用程序的功能。我们在五个实际代理应用程序以及 AgentDojo 基准测试上评估了该管道。在所有应用程序中，提议的管道识别了重复出现的泄漏启用模式并生成了可以集成的补丁，而不会破坏预期的应用程序行为。结果表明，对应用程序代码进行的修改可以消除基本越狱和指令覆盖攻击时的泄漏，实现泄漏减少 100%，并在压力引起的操纵条件下减少 91% 的泄漏，而无需持续执行运行时策略。
+
+</details>
+
+---
+
+## 8. AgentTrails: Towards Trust and Reuse for Agentic Tasks / AgentTrails：迈向代理任务的信任和重用
+
+**Date**: 2026-07-21 | **arXiv**: [2607.18816v1](http://arxiv.org/abs/2607.18816v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18816v1)
+
+**Categories**: cs.DB, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM-powered agents increasingly tackle complex tasks by invoking tools, querying databases, executing code, and manipulating intermediate artifacts. These agents follow trajectories that are typically stored as chronological logs, obscuring the underlying dataflow -- the dependencies between their actions and the artifacts they create and manipulate. This limits developers' ability to understand the agents' trails, compare executions, debug failures, and re-use the computations. We present AgentTrails, a prototype system for agent provenance and sensemaking. AgentTrails converts raw trajectories into structured provenance graphs, where tool calls are modeled as computational actions and inputs and outputs as data artifacts. The system supports the comparison of executions by placing multiple provenance graphs on a shared canvas and constructing a joined quotient graph that aligns recurring tools, artifacts, and dependency structures across trajectories. On top of this representation, AgentTrails supports pattern extraction, downstream analysis, and skill abstraction. We demonstrate AgentTrails on real-world agent trajectories, showing that it reveals hidden dependencies, aligns divergent executions, and surfaces recurring tool-use patterns beyond chronological logs.
+
+由 LLM 支持的代理越来越多地通过调用工具、查询数据库、执行代码和操作中间工件来处理复杂的任务。这些代理遵循通常存储为时间顺序日志的轨迹，模糊了底层数据流——它们的操作与它们创建和操作的工件之间的依赖关系。这限制了开发人员理解代理轨迹、比较执行、调试失败和重用计算的能力。我们推出 AgentTrails，这是一个用于代理起源和意义构建的原型系统。 AgentTrails 将原始轨迹转换为结构化来源图，其中工具调用被建模为计算操作，输入和输出被建模为数据工件。该系统通过将多个来源图放置在共享画布上并构建一个连接商图来支持执行比较，该商图可以跨轨迹对齐重复出现的工具、工件和依赖结构。在此表示之上，AgentTrails 支持模式提取、下游分析和技能抽象。我们在现实世界的代理轨迹上演示了 AgentTrails，表明它揭示了隐藏的依赖关系，对齐不同的执行，并显示超出时间日志的重复工具使用模式。
+
+</details>
+
+---
+
+## 9. AgentDebugX: An Open-Source Toolkit for Failure Observability, Attribution, and Recovery in LLM Agents / AgentDebugX：用于 LLM 代理中故障可观察性、归因和恢复的开源工具包
+
+**Date**: 2026-07-21 | **arXiv**: [2607.18754v1](http://arxiv.org/abs/2607.18754v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18754v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM agent failures are difficult to debug because the step where an error surfaces is often not the one that caused it. Existing observability tools replay execution traces but provide little support for identifying the root cause or translating diagnosis into recovery. We present AgentDebugX, an open-source debugging framework that organizes debugging as a closed loop of Detect, Attribute, Recover, and Rerun. At its core, DeepDebug performs multi-turn root-cause diagnosis through global trajectory understanding, structure-guided investigation, and cross-examination. On the Who and When benchmark, DeepDebug achieves the best strict attribution accuracy among the evaluated methods on both tested open-weight backbones, reaching 28.8 percent exact agent-and-step accuracy on qwen3.5-9b versus 21.7 percent for the strongest single-pass baseline. On GAIA, DeepDebug repairs 13 of 73 failed tasks in a single rerun, compared with 4 to 6 for three decoupled self-correction baselines, improving overall accuracy from 55.8 percent to 63.6 percent. AgentDebugX exposes this workflow through a Python library, CLI, web console, and installable agentic skill, and provides an opt-in Error Hub for sharing scrubbed failure-diagnosis-repair bundles and reusing them as debugging memory.
+
+LLM 代理故障很难调试，因为出现错误的步骤通常不是导致错误的步骤。现有的可观察性工具会重放执行跟踪，但对识别根本原因或将诊断转化为恢复提供的支持很少。我们推出了 AgentDebugX，这是一个开源调试框架，它将调试组织为检测、属性、恢复和重新运行的闭环。 DeepDebug 的核心是通过全局轨迹理解、结构引导调查和交叉检查来执行多轮根本原因诊断。在 Who 和 When 基准测试中，DeepDebug 在两种测试的开放权重主干上的评估方法中实现了最佳的严格归因准确度，在 qwen3.5-9b 上达到 28.8% 的准确代理和步骤准确度，而最强的单通道基线则达到 21.7%。在 GAIA 上，DeepDebug 在一次重新运行中修复了 73 个失败任务中的 13 个，而三个解耦自校正基线则修复了 4 到 6 个任务，将整体准确率从 55.8% 提高到 63.6%。 AgentDebugX 通过 Python 库、CLI、Web 控制台和可安装的代理技能公开此工作流程，并提供一个可选的错误中心，用于共享清理后的故障诊断修复包并将其重新用作调试内存。
+
+</details>
+
+---
+
+## 10. Strategy-Following Multi-Agent Deep Reinforcement Learning Considering Control Strategies Provided to Other Agents / 考虑提供给其他代理的控制策略的策略跟踪多代理深度强化学习
+
+**Date**: 2026-07-21 | **arXiv**: [2607.18719v1](http://arxiv.org/abs/2607.18719v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18719v1)
+
+**Categories**: cs.MA, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This study proposes a learning method for multi-agent systems that allows agents to be controlled through human manager instructions after learning and enables uninstructed agents to implicitly complement the overall work based on the actions of other agents. Multi-agent applications using deep learning have shown potential; thus, to achieve extensive social applications, humans should be able to control learned agents using simple methods to respond to environmental and social changes. Even without such changes, learned coordination often does not match the expectations of human managers, making it preferable to control coordination structures to match human intentions. Some studies have aimed to control agent behavior using simple instructions. However, they assumed that instructions are provided to all agents, which is time-consuming and not evident when designing a better cooperation regime. Ideally, specific agents should receive key action instructions, while others should automatically complete the remaining tasks. The proposed method, which extends previous work on controllability in multi-agent deep reinforcement learning, enables uninstructed agents to adaptively complement overlooked tasks and areas. The experimental results show that agents using the proposed method can shift to another cooperative structure and achieve better performance than those using conventional methods.
+
+本研究提出了一种多智能体系统的学习方法，允许智能体在学习后通过人类管理者的指令进行控制，并使未经指导的智能体能够根据其他智能体的行为隐式地补充整体工作。使用深度学习的多智能体应用程序已显示出潜力；因此，为了实现广泛的社会应用，人类应该能够使用简单的方法控制学习代理来响应环境和社会变化。即使没有这样的改变，习得的协调通常也不符合人类管理者的期望，因此最好控制协调结构以符合人类的意图。一些研究旨在使用简单的指令来控制代理行为。然而，他们假设向所有代理提供指令，这在设计更好的合作机制时非常耗时且不明显。理想情况下，特定代理应接收关键操作指令，而其他代理应自动完成剩余任务。所提出的方法扩展了先前关于多智能体深度强化学习可控性的工作，使无指导的智能体能够自适应地补充被忽视的任务和领域。实验结果表明，使用该方法的智能体可以转向另一种合作结构，并获得比使用传统方法的智能体更好的性能。
+
+</details>
+
+---
+
+## 11. Intelligent Multi-UAV Navigation in ITNTNs: A Hierarchical LLM Approach / ITNTN 中的智能多无人机导航：分层法学硕士方法
+
+**Date**: 2026-07-21 | **arXiv**: [2607.18604v1](http://arxiv.org/abs/2607.18604v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18604v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG, cs.NI, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The deployment of high-speed Uncrewed Aerial Vehicles (UAVs) in 3D aerial highways necessitates robust coordination of physical flight kinematics and multi-tier network handovers. While Deep Reinforcement Learning (DRL) offers rapid tactical control, it lacks the zero-shot strategic reasoning required to quickly adapt to dynamic Integrated Terrestrial and Non-Terrestrial Networks (ITNTNs). Conversely, Large Language Models (LLMs) excel at semantic reasoning but suffer from high inference latency, rendering them unsuitable for real-time aerodynamic control. To bridge this gap, we propose a novel Hierarchical LLM-driven control framework. A massive cloud-based LLM deployed on a High-Altitude Platform Station (HAPS) manages slow-timescale global load balancing, while lightweight edge-LLMs on individual UAVs translate local observations into tactical sub-goals. These sub-goals guide a fast-timescale physical DRL controller to execute collision-free, handover-aware trajectories. Simulation results demonstrate that our agentic architecture significantly reduces collision rates and improves aggregate system throughput compared to existing baselines.
+
+在 3D 空中高速公路中部署高速无人飞行器 (UAV) 需要对物理飞行运动学和多层网络切换进行强有力的协调。虽然深度强化学习 (DRL) 提供快速的战术控制，但它缺乏快速适应动态集成陆地和非陆地网络 (ITNTN) 所需的零样本战略推理。相反，大型语言模型（LLM）擅长语义推理，但推理延迟较高，导致它们不适合实时空气动力学控制。为了弥补这一差距，我们提出了一种新颖的分层法学硕士驱动的控制框架。部署在高空平台站 (HAPS) 上的大规模基于云的 LLM 管理慢速全局负载平衡，而单个无人机上的轻量级边缘 LLM 将本地观察结果转化为战术子目标。这些子目标指导快速物理 DRL 控制器执行无碰撞、切换感知的轨迹。模拟结果表明，与现有基线相比，我们的代理架构显着降低了冲突率并提高了总体系统吞吐量。
+
+</details>
+
+---
+
+## 12. Engineering Trustworthy Agentic AI for Critical Systems / 为关键系统设计值得信赖的代理人工智能
+
+**Date**: 2026-07-20 | **arXiv**: [2607.18548v1](http://arxiv.org/abs/2607.18548v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18548v1)
+
+**Categories**: cs.AI, cs.MA, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic artificial intelligence systems, capable of autonomous perception, planning, tool use, and multi-step action, are increasingly proposed for critical engineering domains where decisions carry physical, operational, or economic consequences. This survey addresses a gap in current literature by treating trustworthiness, whether agentic behavior can be verified, audited, and trusted under the constraints that engineering practice actually requires, as a first-class engineering property, rather than evaluating agentic AI by task capability alone. The study adopts a trustworthiness model organized around five cross-cutting dimensions: safety and constraint satisfaction; robustness and reliability; transparency and interpretability; accountability and auditability; and privacy and security. This is mapped onto an agentic assurance workflow spanning perception through audit. Building on this foundation, agentic systems architectures, threats, concrete trust mechanisms, and quantitative metrics are surveyed for direct application in agentic systems development and evaluation. These principles are then examined across four constraint-bound engineering domains: power systems, autonomous vehicles/robotics/UAVs, high-performance computing, and communication networks, identifying recurring design patterns, shared failure modes, and domain-specific gaps. Synthesizing across those domains, agentic AI trustworthiness is shown to be a single problem, with a path outlined toward a reusable, cross-domain assurance framework analogous to the graded certification regimes used by mature safety-critical engineering fields.
+
+能够自主感知、规划、工具使用和多步骤行动的代理人工智能系统越来越多地被提出用于决策带来物理、操作或经济后果的关键工程领域。这项调查通过将可信度（即在工程实践实际需要的约束下是否可以验证、审计和信任代理行为）作为一流的工程属性，而不是仅通过任务能力来评估代理人工智能，解决了当前文献中的一个空白。该研究采用了围绕五个交叉维度组织的可信度模型：安全性和约束满意度；稳健性和可靠性；透明度和可解释性；问责制和可审计性；以及隐私和安全。这被映射到从感知到审计的代理保证工作流程。在此基础上，对代理系统架构、威胁、具体信任机制和定量指标进行了调查，以便直接应用于代理系统开发和评估。然后在四个受约束的工程领域检查这些原则：电力系统、自动驾驶汽车/机器人/无人机、高性能计算和通信网络，识别重复出现的设计模式、共享故障模式和特定领域的差距。综合这些领域，代理人工智能可信度被证明是一个单一问题，并概述了通往可重用、跨领域保证框架的路径，类似于成熟的安全关键工程领域使用的分级认证制度。
+
+</details>
+
+---
+
+## 13. MAGE: Human-Like Macro Placement via Agentic Multimodal Reasoning / MAGE：通过代理多模态推理进行类人宏观布局
+
+**Date**: 2026-07-20 | **arXiv**: [2607.18536v1](http://arxiv.org/abs/2607.18536v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18536v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Macro placement still requires substantial manual refinement in industrial physical design flows. We present MAGE (Macro Placement Agentic Engine), a multimodal multi-agent framework for macro placement refinement. MAGE decomposes the macro placement task into a six-phase workflow that combines structured floorplanning rules, visual checks, and iterative refinement. Expert floorplanning knowledge is encoded through natural-language directives and validation criteria, rather than learned from labeled placement data. A tournament-style refinement mode evaluates multiple candidate placements and propagates feedback from higher-quality solutions. We also introduce four metrics for quantifying human-likeness in macro placement: notch score, whitespace score, pocket score, and alignment score. These metrics capture structural properties used by expert designers but not directly measured by conventional PPA metrics. Across nine designs in NanGate45 and GlobalFoundries 12nm enablements, MAGE achieves geometric-mean improvements of 11.1%-19.3% in WNS and 70.0%-74.0% in TNS over commercial macro placers. On the three NanGate45 designs, for which human-expert and Hier-RTLMP baselines are available, MAGE improves WNS and TNS by 18.3% and 72.5% over the human expert, and by 47.0% and 80.4% over Hier-RTLMP, with comparable wirelength and power. On human-likeness metrics, MAGE improves the overall score by 6%-48% over all baselines. Additional case studies on anonymized netlists, unseen designs, dense rectilinear floorplans, and high-utilization settings show that the framework transfers to new placement settings without design-specific retraining.
+
+宏观布局仍然需要在工业物理设计流程中进行大量的手动改进。我们提出了 MAGE（宏布局代理引擎），这是一种用于宏布局细化的多模式多代理框架。 MAGE 将宏布局任务分解为六阶段工作流程，其中结合了结构化布局规划规则、视觉检查和迭代细化。专家布局规划知识是通过自然语言指令和验证标准进行编码的，而不是从标记的布局数据中学习的。锦标赛式的细化模式评估多个候选位置并传播来自更高质量解决方案的反馈。我们还引入了四个用于量化宏观布局中的人类相似度的指标：缺口分数、空白分数、口袋分数和对齐分数。这些指标捕获专家设计人员使用的结构属性，但不能通过传统 PPA 指标直接测量。在 NanGate45 和 GlobalFoundries 12nm 支持的九个设计中，与商业宏布局器相比，MAGE 在 WNS 中实现了 11.1%-19.3% 的几何平均改进，在 TNS 中实现了 70.0%-74.0% 的几何平均改进。在提供人类专家和 Hier-RTLMP 基线的三种 NanGate45 设计中，MAGE 将 WNS 和 TNS 比人类专家提高了 18.3% 和 72.5%，比 Hier-RTLMP 提高了 47.0% 和 80.4%，并且线长和功率相当。在人类相似度指标上，MAGE 的总体得分比所有基线提高了 6%-48%。关于匿名网表、未见过的设计、密集直线布局和高利用率设置的其他案例研究表明，该框架无需特定于设计的重新训练即可转移到新的布局设置。
+
+</details>
+
+---
+
+## 14. Competitive and Complementary Tools / 竞争性和互补性工具
+
+**Date**: 2026-07-20 | **arXiv**: [2607.18460v1](http://arxiv.org/abs/2607.18460v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18460v1)
+
+**Categories**: q-bio.NC, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Humans have always externalized thought onto tools, from the tally and the abacus to the map and, now, large language models. I model the agent, the tool, and the task as one dynamical system in which competence (what the user retains) and reliance (what the user outsources) co-evolve, and find that the outcome is bistable. Above a critical tool availability the competent state is destroyed and competence collapses toward a low dependent floor as the user outsources completely. Lowering availability does not reverse the collapse until a far lower threshold, so history of practice rather than the current tool fixes the state. Two users with the same present access can therefore occupy opposite and lasting states, one competent and one dependent, decided only by which they built first. The collapse threshold depends jointly on the competence a user brings to a task and on the tool's transparency, the fraction of its working a user can reconstruct. In the case where an agent faces an uncertain goal, a tool can cause agency itself to transfer to the tool and the human-agent becomes an agentic-instrument, irreversibly, because the tool's model is too large to internalize. The model is tested against several independent data sets, including GPS and map use, arithmetic expertise, and language models. These results reframe how tools should be built, how artificial intelligence is deployed, and what a tool-resistant education might require.
+
+人类总是将思想外化到工具上，从计数、算盘到地图，再到现在的大型语言模型。我将代理、工具和任务建模为一个动态系统，其中能力（用户保留的内容）和依赖（用户外包的内容）共同演化，并发现结果是双稳态的。当用户完全外包时，超过关键的工具可用性，能力状态就会被破坏，并且能力会崩溃到较低的依赖层。降低可用性并不能扭转崩溃，直到阈值低得多，因此实践历史而不是当前工具可以修复状态。因此，具有相同当前访问权限的两个用户可以占据相反且持久的状态，一个有能力，一个受依赖，这仅取决于他们首先建立的状态。崩溃阈值共同取决于用户执行任务的能力以及工具的透明度，即用户可以重建其工作的部分。在代理面临不确定目标的情况下，工具可以导致代理本身转移到工具，而人类代理不可逆转地成为代理工具，因为工具的模型太大而无法内化。该模型针对多个独立数据集进行了测试，包括 GPS 和地图使用、算术专业知识和语言模型。这些结果重新定义了工具的构建方式、人工智能的部署方式以及抗工具教育可能需要什么。
+
+</details>
+
+---
+
+## 15. Operational Hallucination and Safety Drift in AI Agents / 人工智能代理的操作幻觉和安全漂移
+
+**Date**: 2026-07-20 | **arXiv**: [2607.18366v1](http://arxiv.org/abs/2607.18366v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18366v1)
+
+**Categories**: cs.AI, cs.CL, cs.CY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) serving as planners in tool-using autonomous agents introduce dynamic reliability risks in multi-turn execution. While single-turn safety mechanisms are relatively mature, extended interactions reveal structural vulnerabilities where initial alignment degrades over time. This paper empirically characterizes two observed failure modes across multiple state-of-the-art LLMs: Safety Drift, the gradual erosion of declared safety intent leading to constraint-violating actions (e.g., textual refusal followed by reconnaissance and unsafe execution), and Operational Hallucination, persistent repetitive tool calls indicative of flawed state perception (e.g., livelocks even in legitimate tasks). Through controlled multi-turn evaluation on high-stakes ethical dilemmas, malicious requests, and benign controls, we quantify these phenomena using declaration-action gap and livelock metrics, demonstrating their cross-model prevalence under direct execution protocols. Root-cause analysis attributes the instabilities to the decoupling of reasoning context from execution state in current agent loops. We propose an Action-Aware Supervision Layer - a lightweight, plug-and-play architectural blueprint incorporating intent-action consistency checks, runtime state tracking, and forced termination primitives. Post-hoc simulation on captured failure trajectories shows the layer can intercept observed violations without false positives on benign cases. This work advances agent reliability by shifting focus from linguistic safeguards to enforceable architectural mechanisms for responsible agentic AI.
+
+在使用工具的自治代理中充当规划器的大型语言模型（LLM）在多轮执行中引入了动态可靠性风险。虽然单圈安全机制相对成熟，但扩展的交互揭示了结构漏洞，其中初始对准随着时间的推移而退化。本文根据经验描述了多个最先进的法学硕士中观察到的两种故障模式：安全漂移，所声明的安全意图的逐渐侵蚀导致违反约束的行为（例如，文本拒绝，然后是侦察和不安全执行），以及操作幻觉，持续重复的工具调用表明有缺陷的状态感知（例如，即使在合法任务中也存在活锁）。通过对高风险道德困境、恶意请求和良性控制进行受控多轮评估，我们使用声明-行动差距和活锁指标来量化这些现象，证明它们在直接执行协议下的跨模型普遍性。根本原因分析将不稳定性归因于当前代理循环中推理上下文与执行状态的解耦。我们提出了一个动作感知监督层——一个轻量级、即插即用的架构蓝图，包含意图-动作一致性检查、运行时状态跟踪和强制终止原语。对捕获的故障轨迹进行事后模拟表明，该层可以拦截观察到的违规行为，而不会误报良性案例。这项工作通过将重点从语言保障转移到负责任的代理人工智能的可执行架构机制来提高代理可靠性。
+
+</details>
+
+---
+
+## 16. HALLMARK: Diagnosing Three Failure Modes in LLM Citation Verifiers / HALLMARK：诊断 LLM 引文验证程序中的三种故障模式
+
+**Date**: 2026-07-20 | **arXiv**: [2607.18360v1](http://arxiv.org/abs/2607.18360v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18360v1)
+
+**Categories**: cs.CR, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) now routinely draft literature reviews and assist with academic writing, which means a higher risk of fabricated references: GPTZero found 53 papers with hallucinated citations among NeurIPS 2025's accepted set. Rule- and LLM-based verifiers are emerging, but no shared benchmark compares them and gives detailed failure diagnostics. We close that gap with HALLMARK (Hallucination benchmark): 2,526 BibTeX entries spanning 14 hallucination types, three difficulty tiers, six diagnostic sub-tests per entry, and a contamination-resistant held-out split. On it we evaluate a DOI-lookup baseline, frontier LLMs zero-shot, tool-augmented agents, and our own rule-based, co-designed verifier bibtex-updater. Across the benchmark one result is consistent: the false-positive rate, not recall, decides whether a verifier is deployable. HALLMARK makes it concrete through three failure modes: agentic lookups buy recall but inflate false positives; at a venue-realistic base rate, the order-of-magnitude spread in false-positive rates (FPRs) -- not recall -- governs whether a verifier's flags are mostly true catches or mostly noise; and most LLMs over-flag papers published past their training cutoff, where only the two latest-cutoff models hold their false-positive rate near in-distribution levels (a signal we report as descriptive, since it is confounded with possible recall of those entries). Thus FPR is the deployment bottleneck, but an undetected fabrication remains the costlier error for the scientific record.
+
+大型语言模型 (LLM) 现在通常会起草文献综述并协助学术写作，这意味着伪造参考文献的风险更高：GPTZero 在 NeurIPS 2025 的接受集中发现了 53 篇存在虚假引用的论文。基于规则和 LLM 的验证器正在出现，但没有共享基准对它们进行比较并提供详细的故障诊断。我们通过 HALLMARK（幻觉基准）缩小了这一差距：2,526 个 BibTeX 条目涵盖 14 种幻觉类型、三个难度等级、每个条目有 6 个诊断子测试以及一个抗污染的保留分割。在其上，我们评估了 DOI 查找基线、前沿 LLM 零样本、工具增强代理，以及我们自己的基于规则、共同设计的验证器 bibtex-updater。在整个基准测试中，有一个结果是一致的：决定验证器是否可部署的是误报率，而不是召回率。 HALLMARK 通过三种故障模式将其具体化：代理查找会导致召回，但会增加误报；在场地现实的基本率下，假阳性率（FPR）的数量级分布（不记得了）决定了验证者的标志是大部分是真实的捕获还是大部分是噪音；大多数法学硕士都过度标记了超过训练截止时间发表的论文，其中只有两个最新截止模型的假阳性率接近分布水平（我们将其报告为描述性信号，因为它与可能回忆这些条目相混淆）。因此，FPR 是部署瓶颈，但未检测到的制造仍然是科学记录中代价更高的错误。
+
+</details>
+
+---
+
+## 17. TRIM: Reducing AI-Generated CodeSlop via Agent Trajectory Minimization / TRIM：通过代理轨迹最小化减少 AI 生成的 CodeSlop
+
+**Date**: 2026-07-20 | **arXiv**: [2607.18161v1](http://arxiv.org/abs/2607.18161v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18161v1)
+
+**Categories**: cs.SE, cs.AI, cs.OS
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Coding agents are increasingly used to accelerate code generation in many downstream tasks, such as fixing bugs, building applications, and prototyping. However, despite their value as coding assistants, agent-generated code tends to be larger and more verbose than the corresponding human-written implementation. In this work, we show that the cause lies in the agent's own search process: while iterating toward a passing solution, an agent accumulates speculative edits, abandoned hypotheses, and temporary changes that persist into the final patch. This may seem harmless for a single patch, but the problem compounds as agents take responsibility for ever-larger portions of a codebase-a codebase that was once minimal and well-maintained slowly accumulates redundancy faster than it can be cleaned up, drifting to a state that is harder to maintain. Given the magnitude of this problem, we take a step towards alleviating this issue. First, we formally define this phenomenon as CodeSlop-the residual and functionally unnecessary edits commonly seen in AI-generated code. We then introduce our algorithm TRIM (Trajectory-guided Redundancy Identification and Minimization). Rather than minimizing CodeSlop directly, TRIM instead minimizes agent trajectories. As we show empirically, this indirect technique of minimizing CodeSlop is highly effective: TRIM cuts CodeSlop by 17.9%-32.9% across agentic scaffolds, with negligible performance regression. TRIM is also highly efficient, requiring roughly half the validation cost of algorithmic baselines such as Delta Debugging.
+
+编码代理越来越多地用于加速许多下游任务中的代码生成，例如修复错误、构建应用程序和原型设计。然而，尽管它们作为编码助手很有价值，但代理生成的代码往往比相应的人工编写的实现更大、更冗长。在这项工作中，我们表明原因在于代理自身的搜索过程：在迭代通过解决方案时，代理会累积推测性编辑、放弃的假设以及持续到最终补丁的临时更改。这对于单个补丁来说似乎是无害的，但随着代理承担代码库中越来越大的部分的责任，问题变得更加复杂——曾经最小且维护良好的代码库慢慢积累冗余的速度快于清理的速度，从而陷入更难以维护的状态。鉴于这个问题的严重性，我们采取措施缓解这个问题。首先，我们将这种现象正式定义为 CodeSlop——人工智能生成的代码中常见的残留和功能上不必要的编辑。然后我们介绍我们的算法 TRIM（轨迹引导冗余识别和最小化）。 TRIM 不是直接最小化 CodeSlop，而是最小化代理轨迹。正如我们的经验表明，这种最小化 CodeSlop 的间接技术非常有效：TRIM 在代理支架上将 CodeSlop 减少了 17.9%-32.9%，性能下降可以忽略不计。 TRIM 也非常高效，所需的验证成本大约是 Delta 调试等算法基线的一半。
+
+</details>
+
+---
+
+## 18. LLMs and Agentic AI Systems for Smart Grids: A Tutorial on Architectures and Applications / 法学硕士和智能电网代理人工智能系统：架构和应用教程
+
+**Date**: 2026-07-20 | **arXiv**: [2607.18147v1](http://arxiv.org/abs/2607.18147v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18147v1)
+
+**Categories**: eess.SY, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) and agentic AI systems have evolved from natural language tasks to using external tools to plan, retrieve, and act in technical domains. In smart grids, recent work applies agentic schemes to forecasting, optimization, and control, wrapping trusted solvers behind language interfaces and orchestrating multi-step workflows. The literature lacks a unified approach to designing and evaluating such systems. LLMs can produce numerically plausible yet physically infeasible outputs, evaluation protocols vary across tasks, and the boundary between what the model should and should not compute is implicit. This paper presents a solver-grounded design principle: a numerical result is reported only when it originates from a trusted tool and passes explicit verification. We review the building blocks of LLM and agentic AI systems for power systems: prompting strategies and agentic architectures. We instantiate the principle in four case studies: wind power forecasting, EV charging scheduling, power flow analysis, and contingency diagnosis, each comparing an LLM-only baseline against its solver-grounded counterpart on identical data and metrics. EVAgent reproduces the CVXPY optimum while reducing LLM-only unmet energy by 7.5-9.5x, and GridDebugAgent repairs 17/39 contingency cases while reducing total violations by 52.3%. We propose a four-group evaluation framework spanning task utility, solver-grounded correctness, faithfulness and safe failure, and cost and latency. A consistent division of labor emerges: the agentic system reliably orchestrates, retrieves, and explains, while trusted tools compute and a verification gate decides what is reported.
+
+大型语言模型（LLM）和代理人工智能系统已经从自然语言任务发展到使用外部工具在技术领域进行规划、检索和行动。在智能电网中，最近的工作将代理方案应用于预测、优化和控制，将可信求解器包装在语言接口后面并编排多步骤工作流程。文献缺乏设计和评估此类系统的统一方法。法学硕士可以产生数字上合理但物理上不可行的输出，评估协议因任务而异，并且模型应该计算和不应该计算之间的界限是隐含的。本文提出了一种基于求解器的设计原则：只有当数值结果来自可信工具并通过显式验证时，才会报告数值结果。我们回顾了电力系统的法学硕士和代理人工智能系统的构建模块：提示策略和代理架构。我们在四个案例研究中实例化了该原理：风电预测、电动汽车充电调度、潮流分析和应急诊断，每个案例都在相同的数据和指标上将纯法学硕士基线与其基于求解器的对应基线进行比较。 EVAgent 再现了 CVXPY 最优值，同时将仅 LLM 未满足的能量减少了 7.5-9.5 倍，GridDebugAgent 修复了 17/39 的意外情况，同时将违规总数减少了 52.3%。我们提出了一个四组评估框架，涵盖任务效用、基于求解器的正确性、忠实性和安全故障以及成本和延迟。一致的分工出现：代理系统可靠地编排、检索和解释，而可信工具进行计算，验证门决定报告的内容。
+
+</details>
+
+---
+
+## 19. O-VAD: Industrial Video Anomaly Detection through Object-Centric Tracking and Reasoning / O-VAD：通过以对象为中心的跟踪和推理进行工业视频异常检测
+
+**Date**: 2026-07-20 | **arXiv**: [2607.18142v1](http://arxiv.org/abs/2607.18142v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18142v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Industrial Video Anomaly Detection (IVAD) aims to identify anomalous objects and events in an industrial process, which is crucial for modern manufacturing and quality control systems. Existing VLM-based anomaly reasoning methods are capable of detecting open-ended anomalies in general domains. However, their performance declines in industrial settings characterized by intricate object transformations, strict physics, and procedural constraints. To tackle the complexity of such interaction-intensive detection, we introduce a training-free agentic framework for anomaly detection free of domain-specific knowledge, emphasizing object state evolution like humans inspectors. It is designed to track spatial-temporal dynamics and underlying transformations of detected objects over time, and then reason over the object-wise temporal state trajectories to identify abnormal objects in grounded frames. Our method overcomes limitations of prior approaches that rely on retraining on normal clips or injecting domain knowledge as context for test-time inference. Extensive experiments on three IVAD datasets demonstrate that our method outperforms frontier VLMs, agentic frameworks, and traditional VAD methods fine-tuned on the respective datasets, while providing interpretable reports over anomaly processes and types.
+
+工业视频异常检测（IVAD）旨在识别工业过程中的异常物体和事件，这对于现代制造和质量控制系统至关重要。现有的基于 VLM 的异常推理方法能够检测一般领域中的开放式异常。然而，在以复杂的对象转换、严格的物理和程序限制为特征的工业环境中，它们的性能会下降。为了解决这种交互密集型检测的复杂性，我们引入了一种无需训练的代理框架，用于无需特定领域知识的异常检测，强调像人类检查员一样的对象状态演化。它旨在跟踪检测到的对象随时间的时空动态和潜在变换，然后对对象的时间状态轨迹进行推理，以识别接地框架中的异常对象。我们的方法克服了先前方法的局限性，这些方法依赖于对正常剪辑的再训练或注入领域知识作为测试时推理的上下文。对三个 IVAD 数据集的大量实验表明，我们的方法优于在各自数据集上微调的前沿 VLM、代理框架和传统 VAD 方法，同时提供有关异常过程和类型的可解释报告。
+
+</details>
+
+---
+
+## 20. SGA: Plug&Play Geometric Verification for Educational Video Synthesis / SGA：用于教育视频合成的即插即用几何验证
+
+**Date**: 2026-07-20 | **arXiv**: [2607.18116v1](http://arxiv.org/abs/2607.18116v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18116v1)
+
+**Categories**: cs.AI, cs.CV, cs.GR, cs.MA, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent work leverages Large Language Models (LLMs) to generate executable code for pedagogical animations using libraries such as Manim. However, ensuring spatial correctness and visual legibility remains challenging, as existing frameworks emphasize pedagogical content while overlooking geometric occlusions. We propose the Symbolic Geometric Agent (SGA), a plug-and-play module for code-centric animation pipelines that intercepts LLM-generated code, performs partial execution to extract symbolic scene graphs, and applies targeted refinement when spatial conflicts are detected. We further introduce the Manim Visual Quality Score (MVQS), a deterministic rendering-free proxy for spatial integrity. Experiments on the MMMC-Code benchmark across four LLM backbones and two agentic pipelines show that SGA achieves a peak MVQS of 73.11 (Code2Video + GPT-5.1), corresponding to a 16.1% relative improvement over the raw baseline, and improves MVQS in 7 of 8 backbone x pipeline configurations.
+
+最近的工作利用大型语言模型 (LLM) 使用 Manim 等库生成教学动画的可执行代码。然而，确保空间正确性和视觉易读性仍然具有挑战性，因为现有框架强调教学内容，而忽视了几何遮挡。我们提出了符号几何代理（SGA），这是一个用于以代码为中心的动画管道的即插即用模块，它拦截 LLM 生成的代码，执行部分执行以提取符号场景图，并在检测到空间冲突时应用有针对性的细化。我们进一步介绍了 Manim 视觉质量评分（MVQS），这是一种确定性的、无需渲染的空间完整性代理。跨四个 LLM 主干和两个代理管道的 MMMC-Code 基准实验表明，SGA 的峰值 MVQS 为 73.11 (Code2Video + GPT-5.1)，相当于比原始基准提高了 16.1%，并且在 8 个主干 x 管道配置中的 7 个中改进了 MVQS。
+
+</details>
+
+---
+
+## 21. Sparse Evidence Can Suffice: Agentic Evidence Seeking for Multimodal Video Misinformation Detection / 稀疏证据就足够了：用于多模态视频错误信息检测的代理证据寻找
+
+**Date**: 2026-07-20 | **arXiv**: [2607.18080v1](http://arxiv.org/abs/2607.18080v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18080v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal video misinformation detection is commonly formulated as a holistic video-understanding task, where the entire video and its associated content are processed and judged in a single pass. However, real-world misinformation often exhibits a sparse and compositional evidence structure: a reliable decision may depend on only a few coupled clues, while most video content contributes limited additional information. Exhaustive multimodal reasoning may therefore introduce substantial redundancy and obscure decisive evidence. This motivates decoupling evidence acquisition from verification: first identifying sparse, decision-relevant clues and then judging veracity based on the acquired evidence. Accordingly, we propose SIEVE, a framework for Sparse Interactive Evidence Verification via Extraction in multimodal video misinformation detection. An evidence-seeking agent actively explores the available multimodal evidence and constructs a compact evidence package, which is then used by a verifier to determine veracity. The agent is trained with supervised evidence-seeking trajectories and an evidence-aware reinforcement learning objective that promotes informative evidence acquisition while discouraging unnecessary or invalid interactions. Experiments on multiple video misinformation benchmarks show that SIEVE consistently outperforms the evaluated baselines and supports reliable verification using compact evidence packages. Moreover, the resulting acquisition process provides an explicit and inspectable evidence trail, improving the transparency and groundedness of multimodal misinformation detection.
+
+多模态视频错误信息检测通常被表述为整体视频理解任务，其中整个视频及其相关内容在一次传递中进行处理和判断。然而，现实世界的错误信息通常表现出稀疏且组合的证据结构：可靠的决策可能仅取决于几个耦合的线索，而大多数视频内容提供的附加信息有限。因此，详尽的多模态推理可能会引入大量冗余和模糊的决定性证据。这促使证据获取与验证脱钩：首先识别稀疏的、与决策相关的线索，然后根据获取的证据判断准确性。因此，我们提出了 SIEVE，一种在多模态视频错误信息检测中通过提取进行稀疏交互式证据验证的框架。寻求证据的代理积极探索可用的多模式证据并构建一个紧凑的证据包，然后由验证者用来确定准确性。该代理接受有监督的证据寻求轨迹和证据感知强化学习目标的训练，该目标促进信息证据的获取，同时阻止不必要或无效的交互。对多个视频错误信息基准的实验表明，SIEVE 始终优于评估的基准，并支持使用紧凑证据包进行可靠验证。此外，由此产生的采集过程提供了明确且可检查的证据线索，提高了多模式错误信息检测的透明度和基础性。
+
+</details>
+
+---
+
+## 22. Natural Language Access to Domain-Specific Metadata: A Reusable Framework for LLM Query Generation / 对特定领域元数据的自然语言访问：LLM 查询生成的可重用框架
+
+**Date**: 2026-07-20 | **arXiv**: [2607.18029v1](http://arxiv.org/abs/2607.18029v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18029v1)
+
+**Categories**: cs.DB, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Researchers need to answer ad-hoc questions about the contents of domain-specific archives but often lack the expertise to write structured queries on the metadata. We show that when domain vocabulary and semantics are captured in a well-designed Web Ontology Language (OWL) ontology, Large Language Models (LLMs) can generate accurate structured queries zero-shot, without fine-tuning, retrieval augmentation, or multi-agent orchestration. We present the Natural Language Knowledge Graph Query (NLKGQ) system, a framework and development process that enables natural language access to metadata in such archives. The framework includes a web interface that helps researchers pose natural language questions, which a domain-agnostic harness translates to SPARQL via an LLM and executes against a knowledge graph. The development process begins with capturing domain vocabulary and semantics in a formal OWL ontology. Domain-specific code then extracts metadata from archive sources and imports it into a knowledge graph defined by the ontology. Both are designed for reuse across domains. We demonstrate the system on metadata derived from a large-scale neuroimaging research archive, evaluating multiple LLMs and ontology representations. The best configurations achieve 100% accuracy on a competence and regression question set developed with domain experts. An ablation study across eight ontology representations reveals that readable entity names and semantic annotations are the dominant factors in accuracy, more significant than model choice or prompt engineering. We also compare SPARQL to an auto-generated SQL database as query backends, showing that OWL's structural features provide a substantial advantage over SQL DDL for LLM-driven query generation. Our demonstration domain also requires local LLMs on modest institutional hardware to address privacy concerns for human subject data.
+
+研究人员需要回答有关特定领域档案内容的临时问题，但通常缺乏对元数据编写结构化查询的专业知识。我们表明，当在精心设计的 Web 本体语言 (OWL) 本体中捕获领域词汇和语义时，大型语言模型 (LLM) 可以零样本生成准确的结构化查询，无需微调、检索增强或多代理编排。我们提出了自然语言知识图查询（NLKGQ）系统，这是一个框架和开发过程，可以让自然语言访问此类档案中的元数据。该框架包括一个网络界面，可帮助研究人员提出自然语言问题，与领域无关的工具通过 LLM 将其转换为 SPARQL 并针对知识图执行。开发过程从在正式的 OWL 本体中捕获领域词汇和语义开始。然后，特定于领域的代码从存档源中提取元数据并将其导入到本体定义的知识图中。两者都是为跨域重用而设计的。我们在源自大规模神经影像研究档案的元数据上演示了该系统，评估了多个法学硕士和本体表示。最佳配置在由领域专家开发的能力和回归问题集上实现 100% 的准确性。对八种本体表示的消融研究表明，可读的实体名称和语义注释是准确性的主导因素，比模型选择或提示工程更重要。我们还将 SPARQL 与作为查询后端的自动生成的 SQL 数据库进行比较，表明 OWL 的结构特性在 LLM 驱动的查询生成方面比 SQL DDL 具有显着的优势。我们的演示领域还需要本地法学硕士在适度的机构硬件上解决人类受试者数据的隐私问题。
+
+</details>
+
+---
+
+## 23. MADA-RL: Multi-Agent Debate-Aware Reinforcement Learning for Parameter-Efficient Reasoning in Compact Models / MADA-RL：紧凑模型中参数高效推理的多智能体辩论感知强化学习
+
+**Date**: 2026-07-20 | **arXiv**: [2607.18006v1](http://arxiv.org/abs/2607.18006v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18006v1)
+
+**Categories**: cs.LG, cs.AI, cs.CL, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models achieve strong reasoning performance, but often at prohibitive training cost - a challenge that is especially acute for compact models ($\leq 4 \, \mathrm{B}$ parameters) trained under limited budgets. We introduce MADA-RL, a post-training framework that specializes compact models into generator and critic roles and trains them with a debate-aware learning signal, fine-tuning only a small subset of parameters via LoRA adapters. Our central contribution is a counterfactual critic advantage: a dynamic, role-conditioned baseline that redefines the critic's advantage as its reward minus the generator ensemble's per-instance accuracy. This explicitly optimizes critics to improve over generator consensus rather than to merely reproduce a correct answer, yielding more targeted credit assignment than static mean-reward normalization. At deployment, the specialized agents are composed in a lightweight multi-round protocol. Across five mathematical reasoning benchmarks, MADA-RL raises the accuracy of the DeepSeek-R1-Distill-Qwen-1.5B model from $39.9 \, \%$ to $41.9 \, \%$ ($+2.0$ points, $p < 0.001$) using $16$ times fewer trainable parameters than fully fine-tuned baselines, placing it on the accuracy-trainable-parameter Pareto front. It approaches, but does not surpass, the strongest baselines (DeepScaleR, STILL-3), which are trained on substantially larger datasets; we analyse this gap and the associated inference-time cost directly. A controlled study isolates the source of MADA-RL's gains: the counterfactual advantage produces the highest critic improvement rate of any model evaluated, indicating that trained critics learn to correct generator errors rather than to imitate them.
+
+大型语言模型实现了强大的推理性能，但通常训练成本过高 - 对于在有限预算下训练的紧凑模型（$\leq 4 \，\mathrm{B}$ 参数）来说，这一挑战尤其严峻。我们引入了 MADA-RL，这是一种后训练框架，专门针对生成器和评论家角色的紧凑模型，并使用辩论感知学习信号对其进行训练，通过 LoRA 适配器仅微调一小部分参数。我们的核心贡献是反事实的批评者优势：一个动态的、角色条件的基线，它将批评者的优势重新定义为其奖励减去生成器集合的每个实例的准确性。这明确地优化了批评者以改进生成器共识，而不是仅仅重现正确答案，从而产生比静态平均奖励标准化更有针对性的信用分配。在部署时，专用代理由轻量级多轮协议组成。在五个数学推理基准中，MADA-RL 将 DeepSeek-R1-Distill-Qwen-1.5B 模型的准确性从 $39.9 \, \%$ 提高到 $41.9 \, \%$ （$+2.0$ 点，$p < 0.001$），使用的可训练参数比完全微调的基线少 16$ 倍，将其置于准确性可训练参数 Pareto 前沿。它接近但没有超越最强的基线（DeepScaleR、STILL-3），这些基线是在更大的数据集上进行训练的；我们直接分析这个差距和相关的推理时间成本。一项对照研究隔离了 MADA-RL 收益的来源：反事实优势产生了所有评估模型中最高的批评者改进率，这表明训练有素的批评者学会纠正生成器错误而不是模仿它们。
+
+</details>
+
+---
+
+## 24. RT-SHCUA: Real-Time Self-Hosted Computer-Use Agent for UAV Control / RT-SHCUA：用于无人机控制的实时自托管计算机使用代理
+
+**Date**: 2026-07-20 | **arXiv**: [2607.17951v1](http://arxiv.org/abs/2607.17951v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17951v1)
+
+**Categories**: cs.CR, cs.AI, cs.RO, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Natural-language control offers a promising interface for unmanned aerial vehicles (UAVs), but directly applying self-hosted computer-use agents (SHCUAs) to UAV control introduces a structural mismatch. SHCUAs are designed for interactive host-side tool use, where delayed agent iterations are often acceptable. UAV control, however, is coupled with continuously changing physical states, strict timing constraints, safety risks, and security accountability. A stale, unauthorized, or tampered agent decision may therefore lead to unsafe or untraceable vehicle behavior.   This paper proposes a real-time and security-oriented restructuring of SHCUA-based UAV control. Instead of allowing an SHCUA to directly issue flight commands, we transform its outputs into contract-bound UAV skill invocations with explicit timing, state, authority, fallback, and evidence semantics. Based on this abstraction, we design an architecture that separates semantic reasoning from onboard execution and security/safety enforcement. Slow cloud or edge reasoning is used for mission understanding, while onboard components validate and dispatch only timely, authorized, and state-consistent skills. Security-critical enforcement points can be protected by TEE-style or microcontroller isolation mechanisms without moving the full language agent or high-frequency flight-control loop into trusted components. Prototype evaluation shows that RT-SHCUA maintains bounded task-level responsiveness while supporting degraded handling, trusted admission, and auditable evidence preservation for SHCUA-mediated UAV actions.
+
+自然语言控制为无人机（UAV）提供了一个有前景的接口，但直接将自托管计算机使用代理（SHCUA）应用于无人机控制会带来结构上的不匹配。 SHCUA 专为交互式主机端工具使用而设计，其中延迟的代理迭代通常是可以接受的。然而，无人机控制伴随着不断变化的物理状态、严格的时间限制、安全风险和安全责任。因此，过时的、未经授权的或被篡改的代理决策可能会导致不安全或无法追踪的车辆行为。   本文提出了一种基于SHCUA的无人机控制的实时且面向安全的重构方法。我们不是让 SHCUA 直接发出飞行命令，而是将其输出转换为具有明确时间、状态、权限、后备和证据语义的合同绑定的无人机技能调用。基于这种抽象，我们设计了一种架构，将语义推理与板载执行和安全/安全执行分开。缓慢的云或边缘推理用于任务理解，而机载组件仅验证和调度及时、授权和状态一致的技能。安全关键执行点可以通过 TEE 式或微控制器隔离机制进行保护，而无需将完整的语言代理或高频飞行控制循环移至可信组件中。原型评估表明，RT-SHCUA 保持有界任务级响应能力，同时支持 SHUA 介导的无人机操作的降级处理、可信准入和可审计证据保存。
+
+</details>
+
+---
+
+## 25. Towards Agentic Agent-based Models: Feasibility, Performance, and Statistical Model Checking / 迈向基于代理的模型：可行性、性能和统计模型检查
+
+**Date**: 2026-07-20 | **arXiv**: [2607.17948v1](http://arxiv.org/abs/2607.17948v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17948v1)
+
+**Categories**: cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agent-based models (ABMs) rely on simple, explicit and reproducible rules for individual decision making, while complex collective behavior emerges from interactions among agents. Recent advances in large language models (LLMs) make it tempting to replace, enrich, or perturb these rules with LLM-based agentic capabilities. However, this raises a methodological question: how does introducing LLM-driven decisions affect the reliability, computational cost, and behavior of ABM simulations? We investigate this for Mesa ABM models, a popular Python library for ABMs, analyzed by statistical model checking. Building on Mesa's integration with the statistical model checker MultiVeStA, we extend the classical Schelling segregation model with a hybrid population: ordinary agents classify neighbors using the standard symbolic rule, while one agent delegates this task to an LLM through tool calls. The LLM-enabled agent receives natural-language descriptions of neighboring agents and invokes tools that increment counters of similar/different neighbors; these counters determine its happiness according to the original Schelling dynamics. This provides a minimal but controlled setting where the semantic, operational, and computational behavior of LLM-based decisions can be studied inside an otherwise standard ABM. We report preliminary experiments with locally served LLMs of different sizes, showing that smaller models may fail simple semantic classification experiments or become operationally unusable during repeated tool-call generation, while larger tested models pass these preliminary checks. We discuss how statistical model checking can estimate classical ABM observables and quantify the impact of introducing agentic LLM components into simulation models.
+
+基于主体的模型（ABM）依赖于简单、明确和可重复的个体决策规则，而复杂的集体行为则源于主体之间的交互。大型语言模型 (LLM) 的最新进展使得人们很容易用基于 LLM 的代理功能来替换、丰富或扰乱这些规则。然而，这提出了一个方法论问题：引入 LLM 驱动的决策如何影响 ABM 模拟的可靠性、计算成本和行为？我们针对 Mesa ABM 模型（一种流行的 ABM Python 库）进行了研究，并通过统计模型检查进行了分析。在 Mesa 与统计模型检查器 MultiVeStA 集成的基础上，我们用混合群体扩展了经典的谢林隔离模型：普通代理使用标准符号规则对邻居进行分类，而一个代理通过工具调用将此任务委托给 LLM。支持 LLM 的代理接收相邻代理的自然语言描述，并调用增加相似/不同邻居的计数器的工具；这些计数器根据原始谢林动力学确定其幸福度。这提供了一个最小但受控的设置，可以在其他标准 ABM 中研究基于 LLM 的决策的语义、操作和计算行为。我们报告了不同规模的本地服务法学硕士的初步实验，表明较小的模型可能会失败简单的语义分类实验，或者在重复的工具调用生成过程中变得无法操作，而较大的测试模型通过了这些初步检查。我们讨论统计模型检查如何估计经典 ABM 可观测值并量化将代理 LLM 组件引入模拟模型的影响。
+
+</details>
+
+---
+
+## 26. ETAS: An Effect-Typed Language for Agent Systems / ETAS：代理系统的效果类型语言
+
+**Date**: 2026-07-20 | **arXiv**: [2607.17780v1](http://arxiv.org/abs/2607.17780v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17780v1)
+
+**Categories**: cs.PL, cs.AI, cs.LG, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+ETAS is a programming language for agent systems that treats model-backed agents, tool calls, prompts, typed memory, human approvals, policies, and execution traces as semantic program elements rather than library conventions. It separates deterministic computation from agentic nondeterminism and externally visible actions while preserving a direct programming style.   We present the core design of ETAS. Its static semantics assigns ordinary types through spec conformance and tracks each computation with two behavioral indices: an escaping effect row and a persistent abstraction of the typed action trace it may request. Specs form a terminating compile-time constraint calculus: type specs provide evidence for polymorphism and resource facts, callable specs constrain function and stage shapes, and trace specs express allow, deny, and temporal constraints. Typing checks requested traces against compiled monitors and emits residual obligations when dynamic resources preclude a complete static proof. The dynamic semantics distinguish requested, handled, denied, and committed events; handlers interpret typed actions without making their requests invisible to authorization or audit.   We formalize a core calculus and state preservation, progress, type/effect soundness, handler trace-transparency, and policy safety. We also implement ETAS in Rust with a command-line interface, typed HIR checks, effect and policy diagnostics, handler checks, and trace-aware execution hooks. ETAS provides a programming-language foundation for reasoning about authorization, nondeterminism, recovery, and audit evidence before and during agent execution.
+
+ETAS 是一种用于代理系统的编程语言，它将模型支持的代理、工具调用、提示、类型化内存、人工批准、策略和执行跟踪视为语义程序元素而不是库约定。它将确定性计算与代理非确定性和外部可见操作分开，同时保留直接编程风格。   我们展示 ETAS 的核心设计。它的静态语义通过规范一致性分配普通类型，并使用两个行为索引跟踪每个计算：转义效果行和它可能请求的类型化操作跟踪的持久抽象。规范形成终止编译时约束演算：类型规范提供多态性和资源事实的证据，可调用规范约束函数和阶段形状，跟踪规范表达允许、拒绝和时间约束。当动态资源妨碍完整的静态证明时，键入检查请求对已编译的监视器进行跟踪并发出剩余义务。动态语义区分请求、处理、拒绝和提交的事件；处理程序解释键入的操作，而不使他们的请求对授权或审计不可见。   我们形式化了核心演算和状态保存、进度、类型/效果健全性、处理程序跟踪透明度和策略安全性。我们还通过命令行界面、类型化 HIR 检查、效果和策略诊断、处理程序检查和跟踪感知执行挂钩在 Rust 中实现 ETAS。 ETAS 为在代理执行之前和期间推理授权、不确定性、恢复和审计证据提供了编程语言基础。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-18 (5 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-07-18
