@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-25](papers/2026-07-25.md) - 3 papers
 - [2026-07-23](papers/2026-07-23.md) - 8 papers
 - [2026-07-22](papers/2026-07-22.md) - 7 papers
 - [2026-07-17](papers/2026-07-17.md) - 13 papers
@@ -119,6 +120,66 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-25 (3 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-25
+
+**Paper Count**: 3
+
+---
+
+## 1. HyWorldVLA: A Vision-Language-Action Model with Hybrid World Modeling for Autonomous Driving / HyWorldVLA：用于自动驾驶的具有混合世界建模的视觉-语言-动作模型
+
+**Date**: 2026-07-23 | **arXiv**: [2607.20988v1](http://arxiv.org/abs/2607.20988v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.20988v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language-Action (VLA) models augmented with world modeling represent a promising paradigm for end-to-end autonomous driving. While pixel-level future prediction enables fine-grained spatiotemporal reasoning, it compromises robustness in noisy driving scenarios. Conversely, latent-based world models alleviate this sensitivity but often incur limited interpretability and representational degradation due to absent pixel-level grounding. To reconcile this trade-off, we propose HyWorldVLA, a hybrid world-VLA framework that unifies pixel-level supervision and latent representation learning. In the pre-training stage, HyWorldVLA predicts video latents encoded by a pre-trained video VAE, while simultaneously reconstructing video frames to provide precise pixel-level grounding. During the subsequent co-fine-tuning phase, the model exclusively predicts latent features, which are fed into an action expert to generate trajectories. Extensive experiments on NAVSIM v1 and v2 benchmarks demonstrate that HyWorldVLA significantly outperforms both pixel-based and latent-based world model baselines. Notably, we present the first comprehensive qualitative and quantitative analysis of world model noise robustness in autonomous driving, establishing a new benchmark for evaluating future architectures.
+
+通过世界建模增强的视觉-语言-动作（VLA）模型代表了端到端自动驾驶的有前途的范例。虽然像素级的未来预测可以实现细粒度的时空推理，但它会损害噪声驾驶场景中的鲁棒性。相反，基于潜在的世界模型减轻了这种敏感性，但由于缺乏像素级基础，通常会导致可解释性有限和表征退化。为了协调这种权衡，我们提出了 HyWorldVLA，这是一种混合世界 VLA 框架，统一了像素级监督和潜在表示学习。在预训练阶段，HyWorldVLA 预测由预训练视频 VAE 编码的视频潜伏，同时重建视频帧以提供精确的像素级基础。在随后的协同微调阶段，该模型专门预测潜在特征，这些特征被输入到动作专家中以生成轨迹。 NAVSIM v1 和 v2 基准的大量实验表明，HyWorldVLA 显着优于基于像素和基于潜在的世界模型基准。值得注意的是，我们首次对自动驾驶中的世界模型噪声稳健性进行了全面的定性和定量分析，为评估未来架构建立了新的基准。
+
+</details>
+
+---
+
+## 2. Interaction Dynamics Modeling and Predictive Control for Safe Steerable Catheter--Tissue Interaction / 安全可转向导管的相互作用动力学建模和预测控制--组织相互作用
+
+**Date**: 2026-07-23 | **arXiv**: [2607.20939v1](http://arxiv.org/abs/2607.20939v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.20939v1)
+
+**Categories**: eess.SY, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Safe steerable catheter control is fundamentally a problem of interaction dynamics: the tip must follow a planned motion, remain compliant against moving tissue, reject friction and hysteresis, and respect a clinically meaningful never-exceed contact-force bound. We formulate catheter--tissue interaction dynamics in the scalar tip-normal coordinate of a single-segment single-tendon catheter. A partial-physics feedforward cancels only the reliable nominal bending dynamics, exposing a configuration-invariant linear interaction-dynamics model whose input gain varies through the scalar catheter inertia. A predictive optimizer then regulates this interaction state subject to hard contact-force, tendon-force, and curvature constraints. An augmented Kalman filter compresses contact, friction, and modeling error into one sensor-free disturbance state, giving nominal offset-free regulation in free space while leaving force safety to the explicit constraint. The unconstrained and disturbance-free limit recovers classical catheter impedance as a special realization of the same interaction dynamics, rather than as the main design object. In a MuJoCo distributed-compliance simulation of an eight-link tendon-driven catheter, disturbance augmentation cuts free-space approach error by 90\%, and only the force-constrained predictive interaction-dynamics controller reconciles tracking with the 0.5\,N bound: the unconstrained controller drives contact force to 0.60\,N against a penetrating target, while the constrained one holds 0.47\,N at identical tracking. These results show that offset-free motion regulation and contact-force safety are coupled interaction-dynamics objectives, and that the explicit predictive constraint resolves their tension under stiff tissue contact. The bound also holds under $0.5$\,mm, $1.2$\,Hz cardiac motion. Hardware validation is future work.
+
+安全的可操纵导管控制从根本上来说是一个相互作用动力学问题：尖端必须遵循计划的运动，保持对移动组织的顺应性，拒绝摩擦和滞后，并遵守具有临床意义的永不超过接触力界限。我们在单段单腱导管的标量尖端法线坐标中制定了导管与组织相互作用的动力学。部分物理前馈仅取消可靠的标称弯曲动力学，从而暴露出配置不变的线性相互作用动力学模型，其输入增益随标量导管惯性而变化。然后，预测优化器会根据硬接触力、腱力和曲率约束来调节这种交互状态。增强卡尔曼滤波器将接触、摩擦和建模误差压缩为一种无传感器干扰状态，在自由空间中提供标称无偏移调节，同时将力安全性留给显式约束。无约束和无扰动极限恢复经典导管阻抗作为相同相互作用动力学的特殊实现，而不是作为主要设计对象。在八连杆腱驱动导管的 MuJoCo 分布式顺应性仿真中，扰动增强将自由空间逼近误差减少了 90%，并且只有力约束的预测交互动力学控制器能够与 0.5N 界限协调跟踪：无约束控制器将接触力驱动到穿透目标的 0.60N，而受约束的控制器在相同的跟踪下保持 0.47N。这些结果表明，无偏移运动调节和接触力安全是耦合的相互作用动力学目标，并且明确的预测约束解决了它们在刚性组织接触下的张力。该界限也保持在 $0.5$\,mm、$1.2$\,Hz 心脏运动以下。硬件验证是未来的工作。
+
+</details>
+
+---
+
+## 3. PhysCoRe: Physics-Corrected Residual World Models for Material-Aware Deformable Dynamics / PhysCoRe：用于材料感知可变形动力学的物理校正残差世界模型
+
+**Date**: 2026-07-22 | **arXiv**: [2607.20653v1](http://arxiv.org/abs/2607.20653v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.20653v1)
+
+**Categories**: cs.RO, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Predicting how deformable objects evolve under robotic manipulation is a longstanding challenge. Existing approaches typically rely on per-object optimization to fit material parameters, which can be slow and cannot generalize, while end-to-end learned alternatives extrapolate poorly and often violate basic physical structure. We present PhysCoRe, a physics-corrected residual world model that couples a differentiable Material Point Method (MPM) simulator with two feed-forward neural networks. A material refinement module, Material from Motion (MfM), infers per-particle elasticity from visual observations, grounding the simulator in object-specific physics. A residual correction module, Residual from Dynamics (RfD), learns the discrepancy and predicts corrections to the simulator's internal dynamics, absorbing systematic biases that the analytical model cannot capture. This design also supports online material identification on novel objects. MfM adapts from limited interactions, and its predictive uncertainty steers further exploration toward the regions where its estimate is least confident. Experiments on real deformable-object manipulation sequences show that PhysCoRe outperforms state-of-the-art baselines in prediction accuracy, and that its predicted confidence forms a reliable distribution across the object's geometry, providing a natural signal for future confidence-guided exploration.
+
+预测可变形物体在机器人操纵下如何演化是一个长期的挑战。现有的方法通常依赖于每个对象的优化来适应材料参数，这可能很慢并且无法泛化，而端到端学习的替代方案推断效果很差并且经常违反基本的物理结构。我们提出了 PhysCoRe，这是一种经过物理校正的残差世界模型，它将可微分质点法 (MPM) 模拟器与两个前馈神经网络结合起来。材料细化模块“运动材料”(MfM) 从视觉观察中推断出每个粒子的弹性，使模拟器基于特定于对象的物理原理。残差校正模块“动力学残差”(RfD) 可了解差异并预测对模拟器内部动态的校正，吸收分析模型无法捕获的系统偏差。该设计还支持新奇物体的在线材质识别。 MfM 适应有限的相互作用，其预测不确定性引导进一步探索其估计最不可信的区域。对真实可变形对象操作序列的实验表明，PhysCoRe 在预测精度方面优于最先进的基线，并且其预测的置信度在对象的几何形状上形成了可靠的分布，为未来的置信引导探索提供了自然信号。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-23 (8 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-23
