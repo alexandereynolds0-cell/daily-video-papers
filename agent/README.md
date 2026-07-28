@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-28](papers/2026-07-28.md) - 11 papers
 - [2026-07-25](papers/2026-07-25.md) - 21 papers
 - [2026-07-23](papers/2026-07-23.md) - 29 papers
 - [2026-07-22](papers/2026-07-22.md) - 26 papers
@@ -128,6 +129,198 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-28 (11 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-07-28
+
+**Paper Count**: 11
+
+---
+
+## 1. TRUAV: Distributed Multi-Agent Reinforcement Learning for Trajectory Planning and Routing Enhancement in UAV-Aided IoT-Enabled VANETs / TRUAV：分布式多代理强化学习，用于无人机辅助物联网 VANET 中的轨迹规划和路由增强
+
+**Date**: 2026-07-26 | **arXiv**: [2607.23734v1](http://arxiv.org/abs/2607.23734v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.23734v1)
+
+**Categories**: cs.NI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Unmanned aerial vehicles (UAVs) have emerged as a key enabler of next-generation Internet of Things (IoT) ecosystems, offering flexible aerial relaying to extend connectivity across dynamic vehicular ad hoc networks (VANETs) in smart city environments. However, conventional centralized approaches for UAV trajectory planning require continuous global network state aggregation, making them impractical under bandwidth and energy constraints typical of dense urban deployments. In this article, we present TRUAV, a distributed multi-agent reinforcement learning framework based on independent tabular Q-learning for joint UAV trajectory planning and routing enhancement in UAV-aided VANETs. Each UAV is equipped with a local Q-learning agent that operates purely on locally observable information, including vehicle density, packet queue states, and neighbor UAV positions, thereby eliminating the need for global state exchange. A potential-game-inspired reward design encourages spatial diversity and routing-aware UAV positioning among interacting agents while accounting for energy consumption. Numerical simulations over a large urban area with 200 mobile vehicles show that the proposed TRUAV framework achieves network coverage and packet delivery ratios comparable to centralized deep reinforcement learning methods, while also improving relay delay and energy efficiency. Finally, we discuss emerging challenges and future research directions for distributed multi-agent UAV-assisted IoT systems.
+
+无人机 (UAV) 已成为下一代物联网 (IoT) 生态系统的关键推动者，提供灵活的空中中继，以扩展智慧城市环境中动态车载自组织网络 (VANET) 的连接性。然而，传统的集中式无人机轨迹规划方法需要持续的全局网络状态聚合，这使得它们在密集城市部署典型的带宽和能源限制下不切实际。在本文中，我们提出了 TRUAV，一种基于独立表格 Q 学习的分布式多智能体强化学习框架，用于无人机辅助 VANET 中的联合无人机轨迹规划和路由增强。每架无人机都配备了本地 Q 学习代理，该代理纯粹根据本地可观测信息进行操作，包括车辆密度、数据包队列状态和相邻无人机位置，从而消除了全局状态交换的需要。受潜在游戏启发的奖励设计鼓励交互代理之间的空间多样性和路由感知无人机定位，同时考虑能源消耗。对拥有 200 辆移动车辆的大型城市地区进行的数值模拟表明，所提出的 TRUAV 框架实现了与集中式深度强化学习方法相当的网络覆盖范围和数据包传递率，同时还提高了中继延迟和能源效率。最后，我们讨论分布式多智能体无人机辅助物联网系统的新挑战和未来研究方向。
+
+</details>
+
+---
+
+## 2. E-Bench: Benchmarking Multi-Step Tool-Use Agents in Real-World Product Scenarios / E-Bench：在真实产品场景中对多步骤工具使用代理进行基准测试
+
+**Date**: 2026-07-26 | **arXiv**: [2607.23722v1](http://arxiv.org/abs/2607.23722v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.23722v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large Language Models (LLMs) are increasingly deployed as agents that interact with stateful environments over multiple steps: gathering hidden information, composing tool calls, and committing state changes. We refer to this capability as multi-step tool use. Existing benchmarks have advanced tool-use agent evaluation, but often focus on isolated API calls, short trajectories, or settings that are difficult to scale or control. We introduce E-Bench, a fully synthetic benchmark with 323 state-changing tasks across three product domains: Honor of Kings, QQ Music, and Tencent Meeting. E-Bench decouples environment synthesis from task synthesis: graph-guided database filling builds reusable, orphan-free product environments, while generator-solver asymmetry creates tasks with both an information gap and a tool gap, requiring agents to discover hidden data and compose multiple tool calls before changing state. Outcomes are graded deterministically by database-state diffs. Since both environments and tasks are synthetic, E-Bench is controllable at the environment level and scalable at the task level. Benchmarking 11 cutting-edge LLMs shows that multi-step tool use remains challenging: Pass^3 stays below 60% for the strongest models, and even with code execution in the E-Bench-Code extension, reliability (Pass^3) remains below 70%.
+
+大型语言模型 (LLM) 越来越多地部署为通过多个步骤与有状态环境交互的代理：收集隐藏信息、编写工具调用和提交状态更改。我们将此功能称为多步骤工具使用。现有的基准测试具有先进的工具使用代理评估，但通常侧重于孤立的 API 调用、短轨迹或难以扩展或控制的设置。我们推出了 E-Bench，这是一个完全综合的基准测试，包含 323 个状态更改任务，涵盖三个产品领域：王者荣耀、QQ 音乐和腾讯会议。 E-Bench 将环境综合与任务综合解耦：图形引导的数据库填充构建可重用、无孤儿的产品环境，而生成器-求解器的不对称性则创建具有信息差距和工具差距的任务，要求代理发现隐藏数据并在更改状态之前组成多个工具调用。结果根据数据库状态差异确定性地分级。由于环境和任务都是合成的，因此 E-Bench 在环境级别上是可控的，在任务级别上是可扩展的。对 11 个前沿法学硕士进行基准测试表明，多步骤工具的使用仍然具有挑战性：对于最强的模型，Pass^3 仍保持在 60% 以下，即使在 E-Bench-Code 扩展中执行代码，可靠性 (Pass^3) 仍低于 70%。
+
+</details>
+
+---
+
+## 3. Focus Is All You Need: Adaptive Goal-aware Attention Orchestration for Multi-Agent Graph Systems / 专注就是你所需要的：多智能体图系统的自适应目标感知注意力编排
+
+**Date**: 2026-07-26 | **arXiv**: [2607.23678v1](http://arxiv.org/abs/2607.23678v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.23678v1)
+
+**Categories**: cs.AI
+
+**Code**: https://github.com/MingzhouFan97/AGAO.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) enable autonomous agents for reasoning, planning, and tool use. Recent systems increasingly organize these agents as graphs of specialized, interconnected nodes. Although graph-based orchestration supports flexible decomposition and coordination, it creates a key challenge: \textbf{attention allocation}. As workflows grow, existing approaches often execute graph components uniformly, wasting resources on irrelevant or low-impact tasks. We introduce \textbf{Attention Orchestration}, a paradigm that extends Transformer-style attention from token representations to workflow-level agent coordination. Our framework, \textbf{Adaptive Goal-aware Attention Orchestration (AGAO)}, dynamically estimates agent importance based on user objectives, graph dependencies, and computational constraints. AGAO combines three components: (1) goal-aware attention, measuring semantic relevance between user goals and agent capabilities; (2) topology-aware attention, modeling structural dependencies in agent graphs; and (3) resource-aware attention, allocating budgets and execution priorities across heterogeneous agents. Together, these mechanisms transform static agent graphs into adaptive systems that focus computation on goal-critical reasoning paths. Experiments across diverse multi-agent workloads show that AGAO improves task effectiveness while reducing unnecessary computation, latency, and token consumption compared with existing graph-based execution strategies. Our work establishes \textbf{Attention Engineering} as a direction for scalable, intelligent multi-agent systems. Code: https://github.com/MingzhouFan97/AGAO.
+
+大型语言模型 (LLM) 使自主代理能够进行推理、规划和工具使用。最近的系统越来越多地将这些代理组织为专门的互连节点图。尽管基于图的编排支持灵活的分解和协调，但它带来了一个关键挑战：\textbf{注意力分配}。随着工作流程的增长，现有方法通常统一执行图形组件，将资源浪费在不相关或低影响的任务上。我们引入了 \textbf{Attention Orchestration}，这是一种将 Transformer 式注意力从令牌表示扩展到工作流级代理协调的范例。我们的框架，\textbf{自适应目标感知注意编排（AGAO）}，根据用户目标、图依赖性和计算约束动态估计代理重要性。 AGAO 结合了三个组成部分：（1）目标感知注意力，测量用户目标和代理能力之间的语义相关性； (2) 拓扑感知注意力，对代理图中的结构依赖关系进行建模； (3) 资源感知注意力，跨异构代理分配预算和执行优先级。这些机制共同将静态代理图转换为自适应系统，将计算重点放在目标关键推理路径上。跨不同多代理工作负载的实验表明，与现有的基于图的执行策略相比，AGAO 提高了任务效率，同时减少了不必要的计算、延迟和令牌消耗。我们的工作将 \textbf{注意力工程} 确立为可扩展的智能多智能体系统的方向。代码：https://github.com/MingzhouFan97/AGAO。
+
+</details>
+
+---
+
+## 4. Plans Work in Mysterious Ways: Evaluating a Plan Mode for Spreadsheet Agents / 计划以神秘的方式运作：评估电子表格代理的计划模式
+
+**Date**: 2026-07-26 | **arXiv**: [2607.23670v1](http://arxiv.org/abs/2607.23670v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.23670v1)
+
+**Categories**: cs.HC, cs.AI, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Plan Modes have become standard features in agentic programming tools, allowing users to gain transparency and control by working with the agent to develop a plan before task execution. However, it remains unclear whether the benefits of this feature translate to end-user programming environments such as spreadsheets. Since spreadsheet programmers tend to work iteratively and care less about technical correctness, upfront planning may not fit into their workflows as easily. In this paper, we build a prototype of a Plan Mode for spreadsheet programming and evaluate it against a non-planning baseline through a within-subjects user study (N=24). We found that despite similar task outcomes with both tools, using Plan Mode led to a reduction in refinement and a better perception of the tool across dimensions of creativity support and human-machine collaboration. We discuss the implications of these results for the future design of Plan Modes, and for the broader role of human-AI planning in end-user programming.
+
+计划模式已成为代理编程工具中的标准功能，允许用户通过与代理合作在任务执行之前制定计划来获得透明度和控制权。然而，目前尚不清楚此功能的优势是否会转化为电子表格等最终用户编程环境。由于电子表格程序员倾向于迭代工作并且不太关心技术正确性，因此前期计划可能不太适合他们的工作流程。在本文中，我们构建了用于电子表格编程的计划模式原型，并通过受试者内用户研究（N = 24）根据非计划基线对其进行评估。我们发现，尽管这两种工具的任务结果相似，但使用计划模式会减少细化，并在创造力支持和人机协作方面更好地感知该工具。我们讨论了这些结果对规划模式的未来设计以及人类人工智能规划在最终用户编程中更广泛作用的影响。
+
+</details>
+
+---
+
+## 5. Where Is the Cost of Third-Party API Routers in Agentic Software Development? / 代理软件开发中第三方 API 路由器的成本在哪里？
+
+**Date**: 2026-07-26 | **arXiv**: [2607.23624v1](http://arxiv.org/abs/2607.23624v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.23624v1)
+
+**Categories**: cs.SE, cs.AI, cs.CL
+
+**Code**: https://github.com/Riyasushin/SIDE.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Third-party API routers have become a common layer that unifies access across increasingly diverse LLM providers. In coding-agent workflows, high-autonomy operation is widely adopted because it reduces interaction overhead. As a result, a third-party API router, which sits between the agent and the upstream provider, inevitably occupies the trusted path. It can inspect and modify every request and response, yet no mechanism verifies alignment between the provider's output and the repository-level actions ultimately executed by the agent. Consequently, client-side permission mechanisms may become ineffective in practice. Whether this control gap produces real, hard-to-detect effects on software development tasks remains empirically unmeasured. In this paper, we conduct an empirical study of router-side injection in coding agents, examining four intervention levels of increasing subtlety: Response Substitution (L1), Response Append (L2), LLM-Polished Injection (L3), and LLM-Polished with Distribution Alignment Injection (L4). Moreover, we develop SIDEL, a framework for trace recording, replay, injection, and defense evaluation, with a curated dataset of 400 samples. We evaluate four representative coding agents, and further evaluate whitelist-based execution control and LLM review. Router-side intervention substantially alters repository-level actions and remains difficult for existing client-side safeguards to detect. Without additional mitigations, all evaluated agents achieved a defense success rate of 0 percent across all injection levels. Client-side mitigations and reactive reviews improve resistance but do not fully restore end-to-end control, motivating provider-side output-integrity guarantees. Our code is available at https://github.com/Riyasushin/SIDE.
+
+第三方 API 路由器已成为一个通用层，可以统一日益多样化的 LLM 提供商之间的访问。在编码代理工作流程中，高自主性操作被广泛采用，因为它减少了交互开销。因此，位于代理和上游提供商之间的第三方 API 路由器不可避免地占用可信路径。它可以检查和修改每个请求和响应，但没有任何机制可以验证提供程序的输出与代理最终执行的存储库级操作之间的一致性。因此，客户端许可机制在实践中可能变得无效。这种控制差距是否会对软件开发任务产生真正的、难以察觉的影响，仍然无法根据经验来衡量。在本文中，我们对编码代理中的路由器端注入进行了实证研究，检查了四种日益微妙的干预级别：响应替换（L1）、响应追加（L2）、LLM-抛光注入（L3）和LLM-抛光与分布对齐注入（L4）。此外，我们还开发了 SIDEL，这是一个用于跟踪记录、重放、注入和防御评估的框架，拥有包含 400 个样本的精选数据集。我们评估了四个具有代表性的编码代理，并进一步评估了基于白名单的执行控制和LLM审查。路由器端干预极大地改变了存储库级别的操作，并且现有的客户端保护措施仍然难以检测到。在没有额外缓解措施的情况下，所有评估的代理在所有注入级别上的防御成功率均为 0%。客户端缓解措施和反应性审查可以提高抵抗力，但不能完全恢复端到端控制，从而激励提供商方提供输出完整性保证。我们的代码可在 https://github.com/Riyasushin/SIDE 获取。
+
+</details>
+
+---
+
+## 6. Hybrid Advantage Estimation with Unified Critic for VLM Agentic Reinforcement Learning / VLM 代理强化学习的混合优势估计与统一批评
+
+**Date**: 2026-07-26 | **arXiv**: [2607.23605v1](http://arxiv.org/abs/2607.23605v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.23605v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large Vision-Language Models (VLMs) now act as agents in interactive environments, where success requires coherent reasoning and decision-making across turns. Although end-to-end training in agentic environments can improve such multi-turn decision-making abilities, current methods mainly rely on either token-wise optimization over concatenated token trajectories or turn-wise optimization with uniform within-turn credit. In this work, we establish theoretical formulations for the two levels of optimization and derive a hybrid advantage that serves both objectives. Furthermore, with an appropriate choice of discount factor and learning target, we prove that a unified critic model can estimate values for both turn-wise and token-wise. As such, we propose HyGAE, an actor-critic framework that jointly optimizes token- and turn-level objectives with the hybrid advantage and unified critic. We conduct extensive evaluations of HyGAE across five multi-turn decision-making environments, where it achieves an average success rate of 91% and a significant improvement of 10% over other methods. Furthermore, we provide an in-depth analysis showing that the exact analytic form of the hybrid advantage and return is crucial for optimization. Project Page: https://wx-zhang.github.io/hygae-web/.
+
+大型视觉语言模型 (VLM) 现在充当交互环境中的代理，在交互环境中，成功需要跨轮的连贯推理和决策。尽管代理环境中的端到端训练可以提高这种多回合决策能力，但当前的方法主要依赖于连接令牌轨迹的令牌明智优化或具有统一回合内信用的回合明智优化。在这项工作中，我们为两个优化级别建立了理论公式，并得出了服务于这两个目标的混合优势。此外，通过适当选择折扣因子和学习目标，我们证明统一的批评模型可以估计轮次和令牌方面的值。因此，我们提出了 HyGAE，一个行动者批评家框架，利用混合优势和统一批评家联合优化令牌级和回合级目标。我们在五个多轮决策环境中对 HyGAE 进行了广泛的评估，其平均成功率达到 91%，比其他方法显着提高了 10%。此外，我们提供了深入的分析，表明混合优势和回报的精确分析形式对于优化至关重要。项目页面：https://wx-zhang.github.io/hygae-web/。
+
+</details>
+
+---
+
+## 7. Mwando: Leveraging AI to Preserve and Teach shiKomori / Mwando：利用人工智能来保护和教授 shiKomori
+
+**Date**: 2026-07-26 | **arXiv**: [2607.23481v1](http://arxiv.org/abs/2607.23481v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.23481v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper presents Mwando, a virtual educational assistant designed to support the teaching and preservation of shiKomori, the language of the Comoros Islands. The system covers the four main dialectal variants (shiNgazidja, shiMwali, shiNdzuani and shiMaore) through a knowledge base constructed from phrases, proverbs, dictionaries and grammar lessons. A multi-agent architecture combining vector search, a knowledge graph and web search fallback enables accurate and context-aware responses. Evaluation on 500 queries demonstrates strong performance on vocabulary lookup and grammar explanations, while qualitative case studies illustrate both capabilities and current limitations. This work represents an initial step toward computational support for shiKomori and provides a blueprint for developing AI-powered educational tools for other low-resource languages.
+
+本文介绍了 Mwando，这是一款虚拟教育助手，旨在支持科摩罗群岛语言 shiKomori 的教学和保存。该系统通过由短语、谚语、词典和语法课程构建的知识库涵盖了四种主要方言变体（shiNgazidja、shiMwali、shiNdzuani 和 shiMaore）。结合矢量搜索、知识图和网络搜索回退的多代理架构可实现准确且上下文感知的响应。对 500 个查询的评估显示了词汇查找和语法解释方面的强大性能，而定性案例研究则说明了功能和当前的局限性。这项工作代表了向 shiKomori 提供计算支持的第一步，并为为其他低资源语言开发人工智能驱动的教育工具提供了蓝图。
+
+</details>
+
+---
+
+## 8. Separating Capability from Permission: A Governance Framework for Agentic AI Autonomy Levels / 将能力与权限分离：代理人工智能自治级别的治理框架
+
+**Date**: 2026-07-26 | **arXiv**: [2607.23438v1](http://arxiv.org/abs/2607.23438v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.23438v1)
+
+**Categories**: cs.AI, cs.CY, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As AI systems increasingly exhibit agentic behavior, discussions of autonomy often conflate what systems are technically capable of doing with what they should be permitted to do in practice. This paper introduces a governance framework that explicitly separates Allowed Autonomy Levels (AAL), which define the degree of autonomy an AI agent is authorized to exercise given risk, oversight, and accountability considerations, from Autonomous Capability Levels (ACL), which characterize an agent's inherent technical abilities. We present a structured set of autonomy levels spanning reactive execution, decision support, supervised action, goal-directed autonomy, and delegated operational authority, and describe how control, reversibility, and accountability change as autonomy increases. To operationalize this framework, we propose a risk-aware decision process for assigning allowed autonomy, analyze how risk and accountability evolve across autonomy levels, and demonstrate its application through a deployed enterprise data engineering agent, illustrating how a system assessed at a high capability level can be deliberately constrained to a lower allowed autonomy based on risk, reversibility, and organizational readiness. By distinguishing authorization from capability, this work provides practical guidance for the design, deployment, and governance of Agentic AI systems.
+
+随着人工智能系统越来越多地表现出代理行为，关于自主性的讨论常常将系统在技术上能够做什么与在实践中应该被允许做什么混为一谈。本文介绍了一个治理框架，该框架将允许的自主级别 (AAL) 与自主能力级别 (ACL) 明确区分开来，其中允许的自主级别定义了人工智能代理被授权执行给定风险、监督和问责考虑的自主程度，而自主能力级别则描述了代理的固有技术能力。我们提出了一套结构化的自治级别，涵盖反应性执行、决策支持、监督行动、目标导向的自治和委托操作权限，并描述了控制、可逆性和问责制如何随着自治的增加而变化。为了实施该框架，我们提出了一个用于分配允许的自主权的风险意识决策流程，分析风险和责任如何在自主级别上演变，并通过部署的企业数据工程代理演示其应用程序，说明如何根据风险、可逆性和组织就绪性，将在高能力级别评估的系统故意限制为较低的允许自主权。通过区分授权和能力，这项工作为 Agentic AI 系统的设计、部署和治理提供了实用指导。
+
+</details>
+
+---
+
+## 9. False Prophets: On the Security of World Models in Agentic Systems / 假先知：论代理系统中世界模型的安全性
+
+**Date**: 2026-07-25 | **arXiv**: [2607.23147v1](http://arxiv.org/abs/2607.23147v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.23147v1)
+
+**Categories**: cs.CR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models now power autonomous agents capable of complex, multi-step tasks in different environments. Accurate and reliable execution of these tasks requires the agent to predict the results of its actions. Recent research proposes to enhance predictive capabilities via specially trained environment simulators-world models. While world models can improve performance, they can also mislead agents into executing harmful actions, creating significant security and privacy risks. In this paper, we raise security concerns regarding the usage of world models in agentic systems. We discover a range of world model specific vulnerabilities, which can be exploited in terminal-based agents to execute malicious code or extract sensitive data. To facilitate future development, we introduce a security benchmark dataset designed for text-based world models. We argue that some risks are intrinsic to approximate world modeling, and show that attackers can induce mispredictions in agentic pipelines with up to 95% success rate, possibly resulting in unintended command execution, denial of service, drainage of wallet and private information extraction. Finally, we provide practical recommendations for practitioners to mitigate the discovered harms and harden agentic systems.
+
+现在，大型语言模型使自主代理能够在不同环境中执行复杂的多步骤任务。准确可靠地执行这些任务需要代理预测其操作的结果。最近的研究建议通过经过专门训练的环境模拟器世界模型来增强预测能力。虽然世界模型可以提高性能，但它们也可能误导代理执行有害的操作，从而造成重大的安全和隐私风险。在本文中，我们提出了有关在代理系统中使用世界模型的安全问题。我们发现了一系列特定于世界模型的漏洞，这些漏洞可在基于终端的代理中被利用来执行恶意代码或提取敏感数据。为了促进未来的发展，我们引入了专为基于文本的世界模型设计的安全基准数据集。我们认为，一些风险是近似世界建模所固有的，并且表明攻击者可以在代理管道中引发错误预测，成功率高达 95%，可能导致意外命令执行、拒绝服务、钱包流失和私人信息提取。最后，我们为从业者提供实用的建议，以减轻已发现的危害并强化代理系统。
+
+</details>
+
+---
+
+## 10. AgentOmnia: Scaling Agentic Models for Full-Scenario Applications / AgentOmnia：扩展代理模型以适应全场景应用
+
+**Date**: 2026-07-25 | **arXiv**: [2607.23124v1](http://arxiv.org/abs/2607.23124v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.23124v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language model agents have advanced rapidly, yet progress remains fragmented across domains, capabilities, task difficulty, and interaction settings. We frame this as full-scenario agentic scaling and present AgentOmnia, a framework coordinating task-space definition, data synthesis, post-training, evaluation, and improvement across To-Consumer (ToC), To-Business (ToB), and To-Employee (ToE) applications. An extensible Domain x Capability x Atomic Difficulty taxonomy aligns these stages and enables fine-grained diagnosis with OmniaBench. AgentOmnia combines bidirectional environment-task synthesis with tool-dependency, program-structured, and solver-based pipelines, constructing 5,018 stateful environments with 255,375 tools and 52,361 tasks. Programs, solvers, and verifiers provide correctness signals, while supervised fine-tuning, online agentic reinforcement learning, and a rollback curriculum support post-training. Evaluation failures translate into Product Requirement Documents (PRDs) for targeted self-evolution. Starting from Qwen3-30B-A3B-Thinking-2507, AgentOmnia raises the pass rate on the OmniaBench challenging subset from 9.16% to 37.11% and the macro-average across OmniaBench, $τ^2$-Bench, DeepPlanning, and VitaBench from 22.86% to 41.69%. Under a unified protocol,it leads the evaluated agentic post-trained baselines on OmniaBench and retains the highest four-benchmark macro-average. It also surpasses Qwen3-235B-A22B-Thinking-2507 on all four benchmarks and exceeds Qwen3.5-35B-A3B on the macro-average. Gains span three application splits, ten capability dimensions, eight atomic-difficulty factors, and 76 of 90 level-1 domains, indicating broad rather than category-specific improvement. A one-round study provides initial evidence for PRD-guided self-evolution, motivating validation at larger scales and in industrial settings.
+
+大型语言模型代理发展迅速，但在领域、功能、任务难度和交互设置方面的进展仍然分散。我们将其构建为全场景代理扩展，并提出了 AgentOmnia，这是一个跨消费者 (ToC)、企业 (ToB) 和员工 (ToE) 应用程序协调任务空间定义、数据合成、训练后、评估和改进的框架。可扩展的领域 x 能力 x 原子难度分类法使这些阶段保持一致，并通过 OmniaBench 实现细粒度诊断。 AgentOmnia 将双向环境-任务综合与工具依赖性、程序结构和基于求解器的管道相结合，利用 255,375 个工具和 52,361 个任务构建了 5,018 个有状态环境。程序、求解器和验证器提供正确性信号，同时监督微调、在线代理强化学习和回滚课程支持训练后。评估失败转化为产品需求文档（PRD），用于有针对性的自我进化。从 Qwen3-30B-A3B-Thinking-2507 开始，AgentOmnia 将 OmniaBench 挑战子集的通过率从 9.16% 提高到 37.11%，将 OmniaBench、$τ^2$-Bench、DeepPlanning 和 VitaBench 的宏观平均通过率从 22.86% 提高到 41.69%。在统一协议下，它领先于OmniaBench上评估的代理训练后基线，并保留了最高的四个基准宏观平均值。它还在所有四个基准测试中超过了 Qwen3-235B-A22B-Thinking-2507，并在宏观平均水平上超过了 Qwen3.5-35B-A3B。收益涵盖三个应用程序细分、十个功能维度、八个原子难度因子以及 90 个 1 级域中的 76 个，表明​​广泛而非特定类别的改进。一轮研究为 PRD 引导的自我进化提供了初步证据，激发了更大规模和工业环境中的验证。
+
+</details>
+
+---
+
+## 11. SQBench: A Benchmark for Evaluating Task Delivery by Language-Model Agents in Production-Oriented Workflows / SQBench：评估面向生产的工作流中语言模型代理的任务交付的基准
+
+**Date**: 2026-07-25 | **arXiv**: [2607.23123v1](http://arxiv.org/abs/2607.23123v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.23123v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing evaluations of large language models cover knowledge, reasoning, coding, and tool use, but they rarely treat a verifiable deliverable produced within a constrained workflow as the unit of evaluation. We introduce SQBench, a benchmark for evaluating production-oriented task delivery by language-model agents. SQBench v1.0 contains 220 standardized tasks organized into L1 atomic capabilities, L2 composite skills, and L3 business scenarios. Each task requires an agent to process input assets, use available tools, and produce an explicitly specified deliverable. The evaluation first computes functional Completion and then derives Risk Penalty and Performance from independently evidenced triggers in a 10D Risk Matrix. A Strict Pass requires Completion = 1 and Risk Penalty = 0. We evaluate 27 model configurations under a common protocol, with one run per configuration-task pair. The highest prespecified Weighted Pass@1 is 60.5%. Mean Strict Pass@1 on L3 is 18.5%, and every configuration performs worse on L3 than on both L1 and L2, indicating that delivery under domain constraints is a shared weakness within the current task set. Of 2,348 results with Completion = 1, 113 (4.8%) fail the Strict Pass criterion because of risks such as unverifiable citations, inappropriate resource use, or format violations. These results show that functional completion alone does not fully characterize delivery quality and that risk determinations should be reported separately.
+
+现有的大型语言模型评估涵盖了知识、推理、编码和工具使用，但很少将受限工作流程中产生的可验证可交付成果视为评估单元。我们引入了 SQBench，这是一个评估语言模型代理面向生产的任务交付的基准。 SQBench v1.0包含220个标准化任务，分为L1原子能力、L2复合技能和L3业务场景。每项任务都需要代理来处理输入资产、使用可用工具并生成明确指定的可交付成果。评估首先计算功能完成度，然后从 10D 风险矩阵中独立证明的触发器得出风险惩罚和绩效。严格通过要求完成 = 1 且风险惩罚 = 0。我们在通用协议下评估 27 个模型配置，每个配置任务对运行一次。最高预设加权 Pass@1 为 60.5%。 L3 上的平均严格通过率@1 为 18.5%，每种配置在 L3 上的表现都比在 L1 和 L2 上差，这表明域约束下的交付是当前任务集中的一个共同弱点。在完成度 = 1 的 2,348 个结果中，有 113 个 (4.8%) 由于存在无法验证的引用、资源使用不当或格式违规等风险而未通过严格通过标准。这些结果表明，仅功能完成并不能完全表征交付质量，并且应单独报告风险确定。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-25 (21 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-07-25
