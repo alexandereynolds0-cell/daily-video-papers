@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-29](papers/2026-07-29.md) - 6 papers
 - [2026-07-28](papers/2026-07-28.md) - 5 papers
 - [2026-07-25](papers/2026-07-25.md) - 4 papers
 - [2026-07-24](papers/2026-07-24.md) - 11 papers
@@ -125,6 +126,114 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-29 (6 papers)</b></summary>
+
+# arXiv Video Papers - 2026-07-29
+
+**Paper Count**: 6
+
+---
+
+## 1. I2VShield: An Efficient Proactive Defense Framework against DiT-based Image-to-Video Models / I2VShield：针对基于 DiT 的图像到视频模型的高效主动防御框架
+
+**Date**: 2026-07-28 | **arXiv**: [2607.25522v1](http://arxiv.org/abs/2607.25522v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.25522v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The rapid advancement of video generation models has led to the increasing misuse of image-to-video (I2V) models. Although substantial progress has been made in detecting AI-generated videos, proactive defenses against I2V models remain underexplored. In particular, current proactive defenses against I2V models predominantly rely on gradient-based adversarial attacks, which require defenders to possess GPUs with substantial memory resources (VRAM) to generate adversarial examples. To address this issue, we propose I2VShield, a privacy protection method based on generative adversarial attacks tailored to Diffusion Transformer (DiT)-based I2V models. The proposed method primarily consists of two components: (1) a text-adaptive perturbation generation framework integrating adversarial learning to mitigate computational overhead while maintaining visual imperceptibility; and (2) an untargeted Multimodal Attention Disruption (MAD) attack that exploits the inherent vulnerabilities of DiT-based I2V models, maximizing the deviation of the internal attention features from their clean states. Extensive experiments demonstrate that our approach achieves highly competitive protection performance across various datasets and mainstream DiT-based I2V models, particularly in disrupting spatiotemporal coherence, while substantially reducing computational costs.
+
+视频生成模型的快速发展导致图像到视频（I2V）模型的滥用日益增加。尽管在检测 AI 生成的视频方面已经取得了实质性进展，但针对 I2V 模型的主动防御仍未得到充分探索。特别是，当前针对 I2V 模型的主动防御主要依赖于基于梯度的对抗性攻击，这要求防御者拥有具有大量内存资源 (VRAM) 的 GPU 来生成对抗性示例。为了解决这个问题，我们提出了 I2VShield，这是一种基于生成对抗攻击的隐私保护方法，专为基于扩散变压器 (DiT) 的 I2V 模型而定制。所提出的方法主要由两个部分组成：（1）集成对抗性学习的文本自适应扰动生成框架，以减轻计算开销，同时保持视觉不可感知性； (2) 无目标的多模态注意力干扰 (MAD) 攻击，利用基于 DiT 的 I2V 模型的固有漏洞，最大化内部注意力特征与其干净状态的偏差。大量实验表明，我们的方法在各种数据集和基于 DiT 的主流 I2V 模型中实现了极具竞争力的保护性能，特别是在破坏时空一致性方面，同时大幅降低了计算成本。
+
+</details>
+
+---
+
+## 2. Physics-Grounded Fluid Video Generation with a Simulation Dataset and Dual-Stream Optical-Flow Supervision / 使用仿真数据集和双流光流监控生成基于物理的流体视频
+
+**Date**: 2026-07-28 | **arXiv**: [2607.25321v1](http://arxiv.org/abs/2607.25321v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.25321v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video diffusion models generate visually compelling content but routinely violate elementary physics when the subject involves fluids: liquid columns break apart in mid-air, container water levels fail to rise as liquid is poured in, and splashes disperse without regard to momentum or gravity. We attribute this gap to the fact that large-scale video-text corpora contain almost no explicit motion supervision, so models learn to imitate fluid appearance rather than dynamics. We address this with two contributions. First, we build a physics-simulation fluid dataset combining 1,638 MPM-simulated pouring/sloshing videos with 2,320 keyword-filtered real pouring videos mined from stock footage, plus two held-out test sets: a 1,515-video real-video benchmark and an 18-prompt text-to-first-frame generalization benchmark. Second, we introduce a dual-stream image-to-video architecture built on a pretrained diffusion-transformer video generator. It augments the standard RGB decoder with a lightweight Optical-Flow Decoder branch trained with explicit end-point-error and smoothness losses, fused into the RGB stream via zero-initialized convolutions so the pretrained backbone starts undisturbed. Only the two decoders are updated; the encoder, temporal transformer, and text encoder remain frozen. Across two model scales (1.3B and 14B) and two test sets, our method improves VideoPhy-2 Physical-Commonsense and Video-Quality scores over the frozen backbone by up to 8.75 and 4.65 points, outperforms a leading open competitor, and is preferred by human raters in a blind study. A direct optical-flow read-out evaluation further shows an end-point error as low as 0.54 pixels in-distribution, confirming the model has internalized a coherent motion prior rather than merely improving surface appearance.
+
+视频扩散模型会生成视觉上引人注目的内容，但当主题涉及流体时，通常会违反基本物理：液柱在半空中破裂，容器水位在液体倒入时不会上升，并且飞溅物会在不考虑动量或重力的情况下分散。我们将这种差距归因于这样一个事实：大规模视频文本语料库几乎不包含明确的运动监督，因此模型学习模仿流体外观而不是动力学。我们通过两个贡献来解决这个问题。首先，我们构建了一个物理模拟流体数据集，该数据集结合了 1,638 个 MPM 模拟的倾倒/晃动视频和从库存素材中挖掘的 2,320 个经过关键字过滤的真实倾倒视频，以及两个保留的测试集：一个 1,515 视频的真实视频基准和一个 18 提示文本到第一帧泛化基准。其次，我们介绍了一种基于预训练扩散变换器视频生成器构建的双流图像到视频架构。它使用经过显式端点误差和平滑度损失训练的轻量级光流解码器分支增强了标准 RGB 解码器，并通过零初始化卷积融合到 RGB 流中，因此预训练的主干网开始不受干扰。仅更新两个解码器；编码器、时间转换器和文本编码器保持冻结状态。在两个模型尺度（1.3B 和 14B）和两个测试集上，我们的方法将 VideoPhy-2 物理常识和视频质量分数在冻结主干上提高了高达 8.75 和 4.65 分，优于领先的公开竞争对手，并且在盲法研究中受到人类评估者的青睐。直接光流读出评估进一步显示端点分布误差低至 0.54 像素，证实该模型已内化了先验的连贯运动，而不仅仅是改善表面外观。
+
+</details>
+
+---
+
+## 3. Denial of Deadline: Network-Driven Accuracy Collapse in Distributed Inference Pipelines / 拒绝最后期限：分布式推理管道中网络驱动的准确性崩溃
+
+**Date**: 2026-07-27 | **arXiv**: [2607.24692v1](http://arxiv.org/abs/2607.24692v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.24692v1)
+
+**Categories**: cs.NI, cs.AI, cs.CR, cs.DC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Inference systems increasingly combine a fast path that returns predictions within the application's latency deadline together with a higher-accuracy slow path that runs higher-compute methods on stronger, remote hardware, so its results can be returned on time and combined with the fast path predictions. Across several application domains, we abstract this inference architecture as a fast path, a slow path, and a coordination layer with two functions: a router that invokes the slow path and a merger that decides whether to incorporate its returned predictions. In this work, we show that this new coordination layer exposes a new attack surface: shaped workload attacks, e.g., Yo-Yo bursts, can exploit contention at shared resources along the slow path to push benign users' slow-path predictions past their latency deadlines. The merger then discards those predictions, while the fast path continues to return timely outputs. We refer to the resulting loss of slow-path accuracy benefits as accuracy collapse.   We demonstrate accuracy collapse in a two-tier edge-cloud multi-object tracking pipeline in autonomous driving. In simulation, approximately 4,000 burst-shaped requests increase benign p99 latency from 92ms to 2s, nearly eliminating the benefit of the slow path's cloud inference, reducing object tracking quality by 7.0 HOTA points on average. We further find that accuracy degradation can significantly vary (2.0-18.7 HOTA points), depending on the video intervals that are targeted in the attack, and that certain rare classes (e.g., stop signs) lose nearly half of their pre-attack prediction accuracy. These results show that workload attacks can degrade prediction quality without needing either access to model weights or victim data, and motivate research on attacks and defenses for routing, merging, scheduling, and resource isolation in these emerging inference pipeline architectures.
+
+推理系统越来越多地将在应用程序的延迟期限内返回预测的快速路径与在更强大的远程硬件上运行更高计算方法的更高精度的慢速路径结合起来，因此可以按时返回其结果并与快速路径预测相结合。在多个应用程序域中，我们将这种推理架构抽象为快速路径、慢速路径和具有两个功能的协调层：调用慢速路径的路由器和决定是否合并其返回的预测的合并器。在这项工作中，我们展示了这个新的协调层暴露了一个新的攻击面：成形的工作负载攻击，例如 Yo-Yo 突发，可以利用慢速路径上共享资源的争用，将良性用户的慢速路径预测推过其延迟期限。然后合并会丢弃这些预测，而快速路径继续返回及时的输出。我们将由此导致的慢路径精度优势的损失称为精度崩溃。   我们演示了自动驾驶中两层边缘云多对象跟踪管道的准确性崩溃。在模拟中，大约 4,000 个突发型请求将良性 p99 延迟从 92 毫秒增加到 2 秒，几乎消除了慢速路径云推理的优势，对象跟踪质量平均降低了 7.0 个 HOTA 点。我们进一步发现，根据攻击目标的视频间隔，准确度下降可能会有显着差异（2.0-18.7 HOTA 点），并且某些罕见类别（例如停车标志）会损失近一半的攻击前预测准确度。这些结果表明，工作负载攻击无需访问模型权重或受害者数据即可降低预测质量，并激发了对这些新兴推理管道架构中的路由、合并、调度和资源隔离的攻击和防御的研究。
+
+</details>
+
+---
+
+## 4. CADER: Confidence-Aware Dynamic Evidence Reasoning for Long-Video Understanding / CADER：用于长视频理解的置信度动态证据推理
+
+**Date**: 2026-07-27 | **arXiv**: [2607.24582v1](http://arxiv.org/abs/2607.24582v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.24582v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-video understanding increasingly relies on large vision-language models and tool-augmented reasoning, but most systems apply the same inference procedure to every example regardless of difficulty. This uniform strategy invokes unnecessary tool-assisted processing for easy questions and provides limited control when difficult questions require fine-grained temporal evidence. We propose CADER (Confidence-Aware Dynamic Evidence Reasoning), a training-free framework for adaptive and reliable long-video reasoning. CADER first performs global reasoning over uniformly sampled frames and estimates answer confidence with a logit-margin signal, allowing high-confidence examples to exit early. For uncertain examples, CADER activates a second-stage tool-augmented loop that combines temporal cropping, lightweight semantic verification, and Relevance-Guided Resampling to progressively localize question-relevant evidence. This design treats tool use as a sample-level decision: a single global pass handles easy cases, while additional reasoning is reserved for examples where uncertainty suggests that more evidence is needed. Experiments on multiple VideoQA benchmarks show that CADER improves long-video reasoning while bypassing Stage~2 for high-confidence samples. Moreover, when applied to a backbone trained only with tool-free chain-of-thought supervision, CADER achieves competitive performance against specialized tool-augmented frameworks, suggesting a practical inference-time route for adaptive long-video reasoning.
+
+长视频理解越来越依赖于大型视觉语言模型和工具增强推理，但大多数系统无论难度如何，都会对每个示例应用相同的推理过程。这种统一的策略对于简单的问题调用不必要的工具辅助处理，而当困难的问题需要细粒度的时间证据时提供有限的控制。我们提出 CADER（置信度感知动态证据推理），这是一种用于自适应且可靠的长视频推理的免训练框架。 CADER 首先对均匀采样的帧执行全局推理，并使用 logit-margin 信号估计答案置信度，从而允许高置信度示例提前退出。对于不确定的示例，CADER 激活第二阶段工具增强循环，该循环结合了时间裁剪、轻量级语义验证和相关性引导重采样，以逐步定位与问题相关的证据。这种设计将工具使用视为样本级决策：单个全局传递处理简单的情况，而为不确定性表明需要更多证据的示例保留额外的推理。多个 VideoQA 基准测试的实验表明，CADER 改进了长视频推理，同时绕过了高置信度样本的 Stage~2。此外，当应用于仅通过无工具思想链监督训练的主干时，CADER 实现了与专门的工具增强框架相比的竞争性能，为自适应长视频推理提供了一种实用的推理时间路线。
+
+</details>
+
+---
+
+## 5. EgoPlay: Event-Triggered Video Editing for Egocentric Streams / EgoPlay：以自我为中心的流的事件触发视频编辑
+
+**Date**: 2026-07-27 | **arXiv**: [2607.24560v1](http://arxiv.org/abs/2607.24560v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.24560v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce EgoPlay, an event-triggered video-to-video editor for egocentric streams, obtained by fine-tuning a pretrained V2V diffusion transformer on event-conditioned data built primarily from Ego4D. Given a monocular video and an event-triggered prompt of the form "when X happens, do Y," EgoPlay infers whether and when event X occurs, preserves pre-event frames, and applies edit Y only to the post-event continuation. Rather than cascading a separate event detector with an editor, EgoPlay learns event recognition, temporal restraint, and pixel-level editing jointly in a single end-to-end model, while also handling negative and multi-event prompts. To support this, we construct a large-scale dataset of 106K event-triggered clip-prompt pairs spanning positive triggers, fabricated-trigger negatives, and multi-event prompts. We then train a bidirectional video diffusion editor with event-triggered supervision and derive a causal variant for chunk-by-chunk streamable inference. We further introduce an event-aware evaluation protocol that separately measures post-trigger editing quality, pre-trigger preservation, and false-trigger robustness. On the Ego4D benchmark, EgoPlay substantially outperforms EgoEdit, the state-of-the-art instruction-based egocentric video editing baseline, with relative gains of 17.7%, 16.9%, and 16.4% in editing quality, visual quality, and background consistency. It also surpasses a VLM-guided detector-editor baseline by 15.7%, 14.5%, and 13.5% on the same metrics, while using less than half the GPU memory.
+
+我们介绍 EgoPlay，这是一种用于以自我为中心的流的事件触发视频到视频编辑器，通过对主要由 Ego4D 构建的事件条件数据微调预训练的 V2V 扩散变压器而获得。给定单眼视频和“当 X 发生时，执行 Y”形式的事件触发提示，EgoPlay 会推断事件 X 是否以及何时发生，保留事件前帧，并将编辑 Y 仅应用于事件后延续。 EgoPlay 不是将单独的事件检测器与编辑器级联，而是在单个端到端模型中联合学习事件识别、时间约束和像素级编辑，同时还处理负面提示和多事件提示。为了支持这一点，我们构建了一个包含 106K 个事件触发剪辑提示对的大型数据集，涵盖正触发、虚构触发负和多事件提示。然后，我们训练具有事件触发监督的双向视频扩散编辑器，并导出逐块流式推理的因果变体。我们进一步引入了一种事件感知评估协议，该协议分别测量触发后编辑质量、触发前保存和错误触发鲁棒性。在 Ego4D 基准测试中，EgoPlay 大幅优于 EgoEdit（最先进的基于指令的自我中心视频编辑基准），在编辑质量、视觉质量和背景一致性方面相对提高了 17.7%、16.9% 和 16.4%。在相同指标上，它还比 VLM 引导的检测器编辑器基线高出 15.7%、14.5% 和 13.5%，同时使用的 GPU 内存还不到一半。
+
+</details>
+
+---
+
+## 6. MXAttention: Data-Free Optimal Scaling and Pre-Normalization Quantization for MXFP4 Attention / MXAttention：MXFP4 Attention 的无数据最优缩放和预归一化量化
+
+**Date**: 2026-07-27 | **arXiv**: [2607.24377v1](http://arxiv.org/abs/2607.24377v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.24377v1)
+
+**Categories**: cs.LG, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The quadratic cost of attention is a major bottleneck in diffusion-based video generation models. MXFP4 attention provides a promising path toward efficient inference, but direct MXFP4 quantization often degrades generation quality due to two numerical issues: the clipping-underflow trade-off from power-of-two scaling and the row-wise normalization error introduced in the softmax loop. We propose MXAttention, a data-free post-training quantization framework for MXFP4 attention. MXAttention introduces two components: Universal Optimal Scaling (UOS), which exploits the periodic structure of power-of-two microscaling to derive a distribution-independent optimal scaling boundary Qmax=7.25 without calibration or search, and Pre-Normalization Quantization (PNQ), which quantizes unnormalized softmax exponentials before row-wise summation to preserve normalization by construction. Experiments on Wan2.2 and HunyuanVideo show that MXAttention closes at least 95% of the VBench Imaging Quality gap between OCP MXFP4 and FP16, substantially improves frame-level similarity, and preserves FP16-level generation quality with less than 0.01 absolute degradation on all reported VBench metrics. MXAttention also achieves performance competitive with strong NVFP4-based baselines with negligible overhead when fused into the attention pipeline. The implementation is publicly available in MindIE-SD.
+
+注意力的二次成本是基于扩散的视频生成模型的主要瓶颈。 MXFP4 注意力为高效推理提供了一条有前途的途径，但由于两个数值问题，直接 MXFP4 量化通常会降低生成质量：二次幂缩放的削波下溢权衡以及 softmax 循环中引入的行归一化误差。我们提出了 MXAttention，一种用于 MXFP4 注意力的无数据训练后量化框架。 MXAttention 引入了两个组件：通用最优缩放 (UOS)，它利用二次幂微缩放的周期结构来导出与分布无关的最优缩放边界 Qmax=7.25，无需校准或搜索；以及预归一化量化 (PNQ)，它在行求和之前量化非归一化的 softmax 指数，以通过构造保持归一化。 Wan2.2 和 HunyuanVideo 上的实验表明，MXAttention 缩小了 OCP MXFP4 和 FP16 之间至少 95% 的 VBench 成像质量差距，显着提高了帧级相似性，并保留了 FP16 级别的生成质量，所有报告的 VBench 指标的绝对降级均小于 0.01。 MXAttention 还实现了与基于 NVFP4 的强大基线竞争的性能，当融合到注意力管道中时，开销可以忽略不计。该实现已在 MindIE-SD 中公开发布。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-28 (5 papers)</b></summary>
 
 # arXiv Video Papers - 2026-07-28
