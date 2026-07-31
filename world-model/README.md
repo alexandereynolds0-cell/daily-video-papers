@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-31](papers/2026-07-31.md) - 6 papers
 - [2026-07-30](papers/2026-07-30.md) - 16 papers
 - [2026-07-29](papers/2026-07-29.md) - 2 papers
 - [2026-07-28](papers/2026-07-28.md) - 2 papers
@@ -123,6 +124,114 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-31 (6 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-31
+
+**Paper Count**: 6
+
+---
+
+## 1. Tycho: Active Abstraction with Programmatic World Models for ARC-AGI-3 / 第谷：ARC-AGI-3 的程序化世界模型的主动抽象
+
+**Date**: 2026-07-30 | **arXiv**: [2607.28287v1](http://arxiv.org/abs/2607.28287v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.28287v1)
+
+**Categories**: cs.AI, cs.CV, cs.SC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+ARC-AGI-3 turns abstraction into an interactive problem of skill acquisition. A player must infer an unfamiliar game's rules, hidden state, and goal while maintaining action efficiency because every move counts. We formalize these environments as parameterized rendered deterministic Moore machines and introduce Tycho, a coding-agent system that constructs and uses game-specific models during interaction. Tycho separates actionable observations from intermediate animation, level-completion, and game-over frames. From this structured history, an agent can model, test, plan with, repair, or bypass a free-form executable hypothesis.   In one matched public-set run per policy, we compare four orchestration policies on all 25 public games using Claude Opus 4.8 under matched inference budgets. Actor-requested delegation to a model builder obtains the highest observed mean Relative Human Action Efficiency (RHAE), 88.49. With this selected policy, GPT-5.6 Sol and Opus 5 both reach 100.00 RHAE and complete all 183 levels. Their game-balanced first-run human-replay midranks are 98.5 and 100.0. Opus 5 uses 61% fewer scored actions than the aggregate official human baselines.   Automatic repair after verification failures produces models that reproduce observed transitions much more accurately, yet reaches only 83.07 RHAE. Transition match indicates whether a simulator reproduces observed dynamics, not whether it has identified the objective or improves the next action. Strong play also requires deciding when to construct, repair, use, or bypass a model. We call this joint problem active abstraction: generating a testable model from costly interaction and deciding when acquiring or using it is worth its cost.
+
+ARC-AGI-3 将抽象转化为技能获取的交互式问题。玩家必须推断不熟悉的游戏规则、隐藏状态和目标，同时保持行动效率，因为每一步都很重要。我们将这些环境形式化为参数化渲染的确定性摩尔机，并引入 Tycho，这是一种在交互过程中构建和使用游戏特定模型的编码代理系统。第谷将可操作的观察与中间动画、关卡完成和游戏结束帧分开。根据这个结构化的历史记录，智能体可以对自由形式的可执行假设进行建模、测试、规划、修复或绕过。   在每个策略的一个匹配的公共集运行中，我们在匹配的推理预算下使用 Claude Opus 4.8 比较了所有 25 个公共游戏的四种编排策略。参与者请求的模型构建者委托获得了观察到的最高平均相对人类行为效率 (RHAE)，88.49。通过此选定的策略，GPT-5.6 Sol 和 Opus 5 均达到 100.00 RHAE 并完成所有 183 个级别。他们的游戏平衡首轮人类重播中排名为 98.5 和 100.0。 Opus 5 使用的评分动作比官方的人类总基线少 61%。   验证失败后的自动修复生成的模型可以更准确地再现观察到的转变，但 RHAE 仅达到 83.07。转换匹配表明模拟器是否再现了观察到的动态，而不是它是否已经确定了目标或改进了下一个动作。强大的游戏还需要决定何时构建、修复、使用或绕过模型。我们将这种联合问题称为主动抽象：从昂贵的交互中生成可测试的模型，并决定何时获取或使用它值得其成本。
+
+</details>
+
+---
+
+## 2. Security of World-Model-Based Embodied AI: A Lifecycle of Threats, Defenses, and Evaluation / 基于世界模型的嵌入式人工智能的安全性：威胁、防御和评估的生命周期
+
+**Date**: 2026-07-30 | **arXiv**: [2607.28226v1](http://arxiv.org/abs/2607.28226v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.28226v1)
+
+**Categories**: cs.CR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models give embodied AI a predictive core: they compress observations into states, simulate action-conditioned futures, and enable planning beyond reactive control. This predictive layer, however, opens a new security boundary-compromise can propagate from data, sensors, prompts, or feedback into physical action. Rather than treating world models as an isolated component, this survey traces threats across their entire lifecycle-from data construction and representation learning, through state grounding and imagination, to trajectory evaluation, execution, and long-term adaptation via memory and tools. We show that familiar attack families: poisoning, backdoors, adversarial examples, sensor spoofing, prompt injection, trajectory manipulation, and supply-chain attacks take on distinct meanings when they corrupt world states, learned dynamics, affordance estimates, or safety costs. We also highlight a duality: world models can serve as runtime safety shields, yet when compromised or over-trusted they generate predictive safety illusions. The survey offers a lifecycle taxonomy, maps existing attacks to world-model security properties, outlines evaluation protocols for safety failures, and structures defenses across provenance, robust grounding, uncertainty-aware prediction, trajectory gating, feedback auditing, and deployment assurance.
+
+世界模型为具体人工智能提供了预测核心：它们将观察结果压缩为状态，模拟以行动为条件的未来，并实现超越反应控制的规划。然而，这个预测层打开了一个新的安全边界——妥协可以从数据、传感器、提示或反馈传播到物理行为。这项调查并没有将世界模型视为一个孤立的组成部分，而是追踪整个生命周期中的威胁——从数据构建和表示学习，通过状态基础和想象，到通过记忆和工具进行轨迹评估、执行和长期适应。我们展示了常见的攻击家族：中毒、后门、对抗性例子、传感器欺骗、即时注入、轨迹操纵和供应链攻击，当它们破坏世界状态、学习动态、可供性估计或安全成本时，它们具有不同的含义。我们还强调了一种二元性：世界模型可以充当运行时安全屏障，但当受到损害或过度信任时，它们会产生预测性安全错觉。该调查提供了生命周期分类法，将现有攻击映射到世界模型安全属性，概述了安全故障的评估协议，并构建了跨来源的防御、稳健的基础、不确定性感知预测、轨迹门控、反馈审计和部署保证。
+
+</details>
+
+---
+
+## 3. ODEWorld: A Continuous Predictive Architecture via Physical-Time Flow / ODEWorld：通过物理时间流的连续预测架构
+
+**Date**: 2026-07-30 | **arXiv**: [2607.27924v1](http://arxiv.org/abs/2607.27924v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.27924v1)
+
+**Categories**: cs.LG, cs.CV, cs.RO
+
+**Project**: https://dstate.github.io/odeworld_website/  <details><summary><b>Abstract / 摘要</b></summary>
+
+In the physical world we inhabit, space and time are fundamentally continuous. However, existing machine learning paradigms for world modeling are largely confined to discrete-time prediction, thereby exhibiting significant inefficiency in capturing the dynamics of physical world. We introduce Physical-Time Flow (\textbf{PT-Flow}), a novel approach that learns a continuous latent velocity field operating in physical time. Crucially, the underlying dynamics of sequential data are parameterized by an ordinary differential equation (ODE) embedded in a well-structured representation space. Under this paradigm, the prediction of future can be recast as temporal integration via an ODE solver in the compressed latent space. Building upon PT-Flow, we construct \textbf{ODEWorld}, a continuous-time latent world model that is both efficient and versatile. By extracting time-variant features and enforcing ODE properties on both the dynamical representation space and the latent velocity field, ODEWorld effectively addresses the long-standing representation collapse issue in latent world model literature. This also enables high-quality image reconstruction even after long-horizon prediction. Moreover, its continuous nature allows for arbitrary temporal resolution and even backward prediction, which is impossible for most discrete-time models. Lastly, ODEWorld can provide rich planning-oriented information to facilitate downstream policy learning. Comprehensive experiments demonstrate that ODEWorld successfully reconciles planning-conducive dynamics abstraction with visual realism, excelling in both video generation and robotic control. \href{https://dstate.github.io/odeworld_website/}{Project Website}.
+
+在我们居住的物质世界中，空间和时间基本上是连续的。然而，现有的世界建模机器学习范式很大程度上局限于离散时间预测，因此在捕捉物理世界的动态方面表现出明显的低效。我们引入物理时间流（\textbf{PT-Flow}），这是一种学习在物理时间中运行的连续潜速度场的新颖方法。至关重要的是，序列数据的基本动态通过嵌入结构良好的表示空间中的常微分方程 (ODE) 进行参数化。在这种范式下，未来的预测可以通过压缩潜在空间中的 ODE 求解器重新转换为时间积分。在 PT-Flow 的基础上，我们构建了 \textbf{ODEWorld}，一个高效且通用的连续时间潜在世界模型。通过提取时变特征并在动态表示空间和潜在速度场上强制执行 ODE 属性，ODEWorld 有效解决了潜在世界模型文献中长期存在的表示崩溃问题。即使在长范围预测之后，这也能够实现高质量的图像重建。此外，它的连续性质允许任意时间分辨率甚至向后预测，这对于大多数离散时间模型来说是不可能的。最后，ODEWorld可以提供丰富的规划导向信息，方便下游政策学习。综合实验表明，ODEWorld 成功地协调了有利于规划的动态抽象与视觉现实​​主义，在视频生成和机器人控制方面均表现出色。 \href{https://dstate.github.io/odeworld_website/}{项目网站}。
+
+</details>
+
+---
+
+## 4. World Action Planner: Generalizable Decision-Making with Action-Conditioned World Models / 世界行动规划师：利用行动条件世界模型进行通用决策
+
+**Date**: 2026-07-30 | **arXiv**: [2607.27599v1](http://arxiv.org/abs/2607.27599v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.27599v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Building generalizable agents for diverse applications remains a fundamental challenge. While imitation learning-based policies succeed in specific training environments, they often fail to generalize to novel scenes and tasks. In this work, we propose World Action Planner, a robot planning system that leverages the reasoning capabilities of Vision-Language Models (VLMs) and the physical grounding of a multi-task pose-image conditioned world model. Our system enables an agent to propose initial action plans and iteratively refine them via optimization and search, reasoning over imagined world model rollouts. We demonstrate that our approach achieves superior performance across compositional tasks, new layouts, and zero-shot generalization scenarios, significantly outperforming state-of-the-art end-to-end policy models such as VLAs and WAMs. Project website at worldactionplanner.github.io
+
+为不同的应用构建通用代理仍然是一个基本挑战。虽然基于模仿学习的策略在特定的训练环境中取得了成功，但它们通常无法推广到新的场景和任务。在这项工作中，我们提出了 World Action Planner，这是一种机器人规划系统，它利用视觉语言模型（VLM）的推理能力和多任务姿势图像条件世界模型的物理基础。我们的系统使代理能够提出初始行动计划，并通过优化和搜索、对想象的世界模型推出进行推理来迭代地完善它们。我们证明，我们的方法在组合任务、新布局和零样本泛化场景中实现了卓越的性能，显着优于最先进的端到端策略模型（例如 VLA 和 WAM）。项目网站：worldactionplanner.github.io
+
+</details>
+
+---
+
+## 5. Failure Detection for Surgical Robot Imitation Policies via Flow-Matching World Modeling / 通过流程匹配世界建模进行手术机器人模仿策略的故障检测
+
+**Date**: 2026-07-29 | **arXiv**: [2607.27511v1](http://arxiv.org/abs/2607.27511v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.27511v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Imitation learning has shown increasing promise for autonomous robotic surgery, yet safe deployment remains challenging due to the safety-critical nature of surgical tasks and the complexity and variability of surgical environments. Failure detection is therefore an essential safeguard, but its development remains difficult due to the challenges of scarce failure data, highly variable manipulation dynamics, and the need to balance missed detections against disruptive false alarms. To address these challenges, we introduce FoMo-FD (Flow-Matching World Model for Failure Detection), a failure detection method that learns nominal short-horizon visual dynamics with an action-conditioned flow-matching world model. FoMo-FD scores the inverse-transport nonconformity of observed endpoint latents, enabling window-level detection of visual-action inconsistencies without requiring failure demonstrations. Detection thresholds are obtained by conformal calibration on successful executions, yielding task-specific alarms without assuming future failure types. We evaluate FoMo-FD on four surgically relevant manipulation tasks with twenty failure modes across simulation and real-world experiments using the da Vinci Research Kit (dVRK). Results show that FoMo-FD outperforms observation-level anomaly baselines and a prediction-error variant of the same world model, with the wrist-camera view achieving the strongest performance, including a 96.6% failure detection rate (FDR) at a 1.3% false alarm rate (FAR).
+
+模仿学习为自主机器人手术带来了越来越多的希望，但由于手术任务的安全关键性以及手术环境的复杂性和多变性，安全部署仍然具有挑战性。因此，故障检测是一项重要的保障措施，但由于故障数据稀缺、操纵动态变化很大以及需要平衡漏检和破坏性误报等挑战，其发展仍然困难重重。为了应对这些挑战，我们引入了 FoMo-FD（用于故障检测的流匹配世界模型），这是一种故障检测方法，可通过动作条件的流匹配世界模型来学习标称短视界视觉动态。 FoMo-FD 对观察到的端点潜伏的逆向传输不一致性进行评分，从而能够在窗口级检测视觉动作不一致性，而无需进行故障演示。检测阈值是通过成功执行的保形校准获得的，产生特定于任务的警报，而无需假设未来的故障类型。我们使用达芬奇研究套件 (dVRK) 在模拟和现实实验中评估了 FoMo-FD 在四项手术相关操作任务中的二十种故障模式。结果表明，FoMo-FD 的性能优于观测级异常基线和同一世界模型的预测误差变体，其中腕式摄像头视图实现了最强的性能，包括 96.6% 的故障检测率 (FDR) 和 1.3% 的误报率 (FAR)。
+
+</details>
+
+---
+
+## 6. What Can Latent World Models Know? Physical Parameter Identifiability in Multimodal Predictive Representations / 潜在世界模型能知道什么？多模态预测表示中的物理参数可识别性
+
+**Date**: 2026-07-29 | **arXiv**: [2607.27017v2](http://arxiv.org/abs/2607.27017v2) | **PDF**: [Link](http://arxiv.org/pdf/2607.27017v2)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A central premise of latent world models is that predicting the future forces a representation to internalize the physics of its environment. Which physical quantities does a trained latent actually contain, and what decides this? We answer with controlled interventions in POKEWORLD, an interactive environment whose visually identical objects hide mass, drag, and contact stiffness. A certificate-gated protocol first certifies each parameter as recoverable from raw observations, then measures whether it enters the latent, so a null result can be attributed to the objective rather than to the environment. The resulting identifiability map has two organizing mechanisms and one frontier. Inputs limit what can be known, while prediction targets decide what is retained. Stiffness enters the latent only when touch is forecast ($R^2=0.50$, compared with $-0.02$ when the same signal is merely fused into the input), and under single-step prediction a vision-only latent discards even perfectly visible object state. Drag marks the frontier. It carries a recoverability certificate of 0.89 yet plateaus near 0.13 under every deterministic prediction objective we test, while a supervised head on the same trunk reaches 0.45. Parameters whose readout is slow and ratio-type under the sensed coordinates fall outside what these objectives acquire. On RH20T, an input-target factorial across scaling curves reproduces both mechanisms across two robots and 4,258 episodes. Every arm missing information or prediction pressure stays flat over a fivefold data range, and only the full multimodal objective forecasts force beyond a persistence baseline, with held-out gains that grow with scale. Objective structure determines which physical parameters a latent acquires, and additional data improves only the parameters it already acquires.
+
+潜在世界模型的一个核心前提是，预测未来迫使表征将其环境的物理特性内化。经过训练的潜在变量实际上包含哪些物理量，什么决定了这一点？我们通过 POKEWORLD 中的受控干预来回答，这是一个交互式环境，其视觉上相同的对象隐藏了质量、阻力和接触刚度。证书门控协议首先证明每个参数可从原始观察中恢复，然后测量它是否进入潜在状态，因此空结果可以归因于目标而不是环境。由此产生的可识别性地图有两种组织机制和一个边界。输入限制了已知的内容，而预测目标决定了保留的内容。仅当预测触摸时，刚度才进入潜伏（$R^2=0.50$，与仅将相同信号融合到输入中时的 $-0.02$ 相比），并且在单步预测下，仅视觉潜伏会丢弃甚至完全可见的对象状态。拖动标志着边界。它的可恢复性证书为 0.89，但在我们测试的每个确定性预测目标下稳定在 0.13 附近，而同一树干上的监督头达到 0.45。在感测坐标下读出缓慢且比率类型的参数超出了这些目标所获取的范围。在 RH20T 上，跨缩放曲线的输入目标阶乘重现了两个机器人和 4,258 个情节的两种机制。每个缺失信息或预测压力的手臂在五倍的数据范围内保持平稳，只有完整的多模式客观预测才能超越持久性基线，并随着规模的扩大而增长。客观结构决定了潜在变量获取哪些物理参数，而附加数据仅改进其已获取的参数。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-30 (16 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-30
