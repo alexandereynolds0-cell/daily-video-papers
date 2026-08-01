@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-01](papers/2026-08-01.md) - 2 papers
 - [2026-07-31](papers/2026-07-31.md) - 6 papers
 - [2026-07-30](papers/2026-07-30.md) - 16 papers
 - [2026-07-29](papers/2026-07-29.md) - 2 papers
@@ -124,6 +125,50 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-01 (2 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-08-01
+
+**Paper Count**: 2
+
+---
+
+## 1. QQWorld: Quantile-Quantile Matching for World Model Regularization / QQWorld：世界模型正则化的分位数-分位数匹配
+
+**Date**: 2026-07-30 | **arXiv**: [2607.28415v1](http://arxiv.org/abs/2607.28415v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.28415v1)
+
+**Categories**: cs.LG, cs.AI, cs.CV, cs.MM, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models enable efficient planning by predicting future states in a compact representation space, but their performance depends critically on the quality of the learned latent distribution. LeWorldModel (LeWM) regularizes its latents toward an isotropic Gaussian using the Epps-Pulley (EP) objective. We show that the corrective gradients of EP rapidly vanish for isolated tail samples, leaving heavy-tailed deviations insufficiently controlled. To address this limitation, we propose QQWorld, which replaces EP with a quantile-quantile matching objective that directly aligns projected latent samples with rank-matched Gaussian quantiles, thereby maintaining effective corrective gradients in the tails. We further develop cross-batch QQ, which enlarges the effective ranking pool using detached samples from previous batches, and characterize its bias-variance trade-off. Across four control environments, QQWorld effectively improves the average planning success rate of LeWM, while consistently yielding better Gaussian alignment and thinner latent tails.
+
+潜在世界模型通过在紧凑的表示空间中预测未来状态来实现有效的规划，但其性能关键取决于学习的潜在分布的质量。 LeWorldModel (LeWM) 使用 Epps-Pulley (EP) 目标将其潜函数正规化为各向同性高斯。我们表明，对于孤立的尾部样本，EP 的校正梯度迅速消失，导致重尾偏差得不到充分控制。为了解决这个限制，我们提出了 QQWorld，它用分位数-分位数匹配目标取代 EP，该目标直接将投影的潜在样本与等级匹配的高斯分位数对齐，从而在尾部保持有效的校正梯度。我们进一步开发了跨批次 QQ，它使用以前批次的分离样本扩大了有效排名池，并表征了其偏差-方差权衡。在四个控制环境中，QQWorld 有效提高了 LeWM 的平均规划成功率，同时持续产生更好的高斯对齐和更薄的潜在尾部。
+
+</details>
+
+---
+
+## 2. ShadowDancer: Teaching Video World Models Any Action by Learning Unified Dynamics Representations from a Video and Its Shadow / ShadowDancer：通过从视频及其阴影学习统一动态表示来教学视频世界模拟任何动作
+
+**Date**: 2026-07-30 | **arXiv**: [2607.28362v1](http://arxiv.org/abs/2607.28362v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.28362v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present ShadowDancer, a novel approach to any-action, frame-level control of interactive video world models. The obstacle is representational: existing interfaces either encode an action loosely, leaving how it unfolds for the model to improvise, or encode it exactly through structured signals that serve one family and are hard to acquire, so precise control across diverse dynamics remains impractical. Demonstration videos are the natural remedy, specifying any dynamics frame by frame; yet a video shows its dynamics only through one particular appearance, a single shadow of the underlying dynamics, so actions learned from demonstrations transfer poorly to new scenes. ShadowDancer addresses this with two key innovations: (1) shadow pairs, video pairs that replay the same dynamics under independently resampled appearance, constructed at scale by our Shadow Library, so that a dynamics family becomes controllable exactly when such pairs can be constructed for it; and (2) cross-shadow prediction, which learns actions by predicting one shadow from the other, so that whatever the pairing resamples is discarded by construction and whatever it preserves becomes the action, yielding a unified dynamics representation that drives a block-causal world model. Any demonstrated clip thus becomes a reusable action asset, replayed in new environments without action labels, motion estimators, or fine-tuning. Experiments demonstrate improved action transfer and long action rollout over strong latent-action and interactive world model baselines across diverse dynamics families, with an average blinded win rate of 86% in rollout comparisons. We show video results at https://ShadowDancer-1.github.io
+
+我们推出 ShadowDancer，这是一种对交互式视频世界模型进行任何动作、帧级控制的新颖方法。障碍是代表性的：现有的界面要么松散地对一个动作进行编码，让模型即兴发挥它的展开方式，要么通过为一个家庭服务且难以获取的结构化信号对其进行精确编码，因此对不同动态的精确控制仍然不切实际。演示视频是自然的补救措施，逐帧指定任何动态；然而，视频仅通过一种特定的外观（潜在动态的单一阴影）来显示其动态，因此从演示中学到的动作很难转移到新场景。 ShadowDancer 通过两项关键创新解决了这个问题：(1) 阴影对，即在独立重采样外观下重播相同动态的视频对，由我们的阴影库按比例构建，这样当可以为其构建此类对时，动态族就变得可以精确控制； （2）交叉阴影预测，它通过预测一个阴影和另一个阴影来学习动作，这样无论配对重采样的是什么，都会被构造丢弃，而保留下来的任何东西都会成为动作，从而产生驱动块因果世界模型的统一动态表示。因此，任何演示的剪辑都成为可重复使用的动作资产，可以在新环境中重播，无需动作标签、运动估计器或微调。实验表明，在不同动态系列的强潜在动作和交互式世界模型基线上，动作转移和长期动作推出得到了改进，在推出比较中平均盲法获胜率为 86%。我们在 https://ShadowDancer-1.github.io 上显示视频结果
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-31 (6 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-31
