@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-02](papers/2026-08-02.md) - 2 papers
 - [2026-08-01](papers/2026-08-01.md) - 3 papers
 - [2026-07-31](papers/2026-07-31.md) - 32 papers
 - [2026-07-30](papers/2026-07-30.md) - 35 papers
@@ -133,6 +134,50 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-02 (2 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-08-02
+
+**Paper Count**: 2
+
+---
+
+## 1. LEDGERMIND: Provenance-Constrained Multimodal Agentic Reasoning with a Structured Evidence Ledger / LEDGERMIND：具有结构化证据分类账的来源约束多模式代理推理
+
+**Date**: 2026-07-30 | **arXiv**: [2607.28374v1](http://arxiv.org/abs/2607.28374v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.28374v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal agents for visual question answering increasingly operate as multi-step trajectories that interleave perception, retrieval, and reasoning, yet evaluation still largely reduces to final-answer accuracy. This aggregate signal cannot tell whether a correct answer was reached through grounded evidence, language priors, or accidental error cancellation. We propose to treat a multimodal agent trajectory as a provenance-constrained state machine: tool outputs are normalized into a Structured Evidence Ledger that serves as the trajectory state, downstream reasoning and decision claims may cite only active ledger entries, grounding is checked at the entity and numeric level, and repair is realized as typed state transitions that cannot introduce content without tool-produced provenance. We instantiate this design as LedgerMind (Provenance-Constrained Multimodal Agentic Reasoning with a Structured Evidence Ledger), augmented by a Three-Layer Grounding Protocol, an Adaptive Dual-Path Dispatcher that matches reasoning depth to question complexity, and an Event-Triggered Verification-and-Repair engine with a formal provenance non-amplification guarantee. We use LedgerMind to target four recurring failure patterns that final-answer accuracy tends to obscure: unsupported intermediate reasoning, citation-backed entity hallucination (Phantom Grounding), over-reasoning on simple queries, and repair-time amplification. Experiments across multiple multimodal reasoning benchmarks and backbone MLLMs show that LedgerMind improves both answer accuracy and trajectory-level faithfulness.
+
+用于视觉问答的多模态代理越来越多地作为多步骤轨迹运行，交织感知、检索和推理，但评估仍然在很大程度上降低了最终答案的准确性。这个聚合信号无法判断是否通过有根据的证据、语言先验或意外错误消除得出了正确答案。我们建议将多模式代理轨迹视为出处受限的状态机：工具输出被标准化为充当轨迹状态的结构化证据账本，下游推理和决策声明可能仅引用活动账本条目，在实体和数字级别检查基础，并且修复被实现为类型化状态转换，如果没有工具生成的出处，则无法引入内容。我们将此设计实例化为 LedgerMind（具有结构化证据分类帐的来源约束多模式代理推理），并通过三层接地协议、将推理深度与问题复杂性相匹配的自适应双路径调度程序以及具有正式来源非放大保证的事件触发验证和修复引擎进行了增强。我们使用 LedgerMind 来针对最终答案准确性往往会模糊的四种重复出现的故障模式：不支持的中间推理、引用支持的实体幻觉（幻象接地）、对简单查询的过度推理以及修复时间放大。跨多个多模态推理基准和骨干 MLLM 的实验表明，LedgerMind 提高了答案准确性和轨迹级可信度。
+
+</details>
+
+---
+
+## 2. Fidelity Is Not Safety: Gently-Compressed LLMs Pass Every Data-Free Quality Guard Yet Invent Procedure Steps in Agentic Execution / 忠诚并不安全：轻微压缩的法学硕士通过了所有无数据质量守卫，但在代理执行中发明了程序步骤
+
+**Date**: 2026-07-30 | **arXiv**: [2607.28196v1](http://arxiv.org/abs/2607.28196v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.28196v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Practitioners accept a compressed language model once it clears a stack of data-cheap quality guards: perplexity within a small factor of the original, downstream accuracy (for example MMLU) inside a confidence interval, and data-free output-fidelity signals that compare the compressed and original network's internal representations under random probe inputs. This stack has a blind spot. Across three model families, gently-compressed models clear every guard and then invent procedure steps that were never in the instructions when they run a standard operating procedure (SOP) as an agent. The effect is operator-specific: coherent low-rank (SVD) truncation induces it, and magnitude pruning matched to the same perplexity does not. One dissociation isolates the cause. The same compressed weights that CI-win a paired output-fidelity test CI-fail the invented-step canary. The governing axis is the coherence of the compression error times its rate; the magnitude of the damage does not predict it. The data-free fidelity probe is a fidelity oracle by construction, so it cannot see this axis. We characterize the blindspot and dissociation with paired confidence intervals on a pre-registered, powered canary across three architectures. Operator-specificity replicates on all three, and the perplexity-guard evasion appears where the model admits in-guard low-rank headroom. We then give a data-free screen: a two-axis statistic of the compression error (coherent-fraction and error-rate) that flags the failing builds with fixed thresholds across architectures and matches the coherence-times-rate mechanism. Perplexity, MMLU, and fidelity acceptance do not certify agent safety. Screen gently-compressed low-rank builds before agentic deployment
+
+一旦压缩语言模型清除了一堆数据廉价的质量守卫，从业者就会接受它：原始的一小部分的困惑，置信区间内的下游精度（例如MMLU），以及在随机探测输入下比较压缩和原始网络内部表示的无数据输出保真度信号。这个堆栈有一个盲点。在三个模型系列中，温和压缩的模型清除了所有防护，然后发明了当它们作为代理运行标准操作程序 (SOP) 时从未在说明中出现的程序步骤。该效应是特定于算子的：相干低秩（SVD）截断会引发这种效应，而与相同困惑度匹配的幅度剪枝则不会。一种分离可以隔离原因。 CI 赢得配对输出保真度测试 CI 失败的相同压缩权重发明步骤金丝雀。控制轴是压缩误差的相干性乘以其速率；损害的严重程度无法预测。无数据保真度探针是构建的保真度预言机，因此它看不到该轴。我们通过跨三种架构的预注册、动力金丝雀上的配对置信区间来描述盲点和分离。操作员特异性在所有三个上都复制，并且当模型允许守卫低等级余量时，就会出现困惑守卫规避。然后，我们提供一个无数据屏幕：压缩错误（相干分数和错误率）的两轴统计数据，它使用跨架构的固定阈值标记失败的构建，并匹配相干倍率机制。困惑度、MMLU 和保真度接受度并不能证明代理的安全性。在代理部署之前筛选轻轻压缩的低级别构建
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-01 (3 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-08-01
