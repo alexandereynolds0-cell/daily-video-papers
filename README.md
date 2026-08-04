@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-04](papers/2026-08-04.md) - 3 papers
 - [2026-08-01](papers/2026-08-01.md) - 4 papers
 - [2026-07-31](papers/2026-07-31.md) - 10 papers
 - [2026-07-30](papers/2026-07-30.md) - 29 papers
@@ -129,6 +130,66 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-04 (3 papers)</b></summary>
+
+# arXiv Video Papers - 2026-08-04
+
+**Paper Count**: 3
+
+---
+
+## 1. ChordVideo: One-Step, Training-Free, Temporally Consistent Video Editing via Low-Energy Transport / ChordVideo：通过低能量传输进行一步式、免培训、时间一致的视频编辑
+
+**Date**: 2026-08-01 | **arXiv**: [2608.00769v1](http://arxiv.org/abs/2608.00769v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.00769v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+One-step text-to-image models enable training-free, inversion-free editing with only 1--2 network function evaluations (NFE), while ChordEdit stabilizes such edits through low-energy smoothing along sampling time. Applied independently to video frames, however, it produces temporal flicker and edit-strength drift. We introduce \textbf{ChordVideo}, which extends the same low-energy principle to video time through shared noise, motion-aligned causal aggregation of per-frame Chord fields, and an optional temporally smoothed proximal correction. We derive a warping-error bound that separates motion bias from stochastic flicker and predicts diminishing returns with larger temporal windows. On TGVE/DAVIS with two one-step backbones, ChordVideo reduces warping error by \textbf{78\%} and flicker by \textbf{49\%}, improves CLIP frame consistency by \textbf{9--10 points}, and increases background PSNR by about \textbf{1.5,dB}, while retaining \textbf{2 NFE/frame}. Compared with seven multi-step editors, it achieves competitive temporal consistency and source preservation using \textbf{10--60$\times$ fewer model steps per clip
+
+一步式文本到图像模型只需 1--2 次网络功能评估 (NFE) 即可实现免训练、免反转编辑，而 ChordEdit 通过沿采样时间进行低能量平滑来稳定此类编辑。然而，独立应用于视频帧时，它会产生时间闪烁和编辑强度漂移。我们引入了 \textbf{ChordVideo}，它通过共享噪声、每帧 Chord 场的运动对齐因果聚合以及可选的时间平滑近端校正，将相同的低能量原理扩展到视频时间。我们得出了一个扭曲误差界限，它将运动偏差与随机闪烁分开，并预测较大时间窗口的收益递减。在具有两个单步主干的 TGVE/DAVIS 上，ChordVideo 将扭曲误差减少 \textbf{78\%}，将闪烁减少 \textbf{49\%}，将 CLIP 帧一致性提高 \textbf{9--10 点}，并将背景 PSNR 增加约 \textbf{1.5,dB}，同时保留 \textbf{2 NFE/frame}。与七个多步骤编辑器相比，它使用每个剪辑少 \textbf{10--60$\times$ 的模型步骤来实现有竞争力的时间一致性和源保存
+
+</details>
+
+---
+
+## 2. Coverage-Driven Adaptive Keyframe Selection for Video Understanding / 用于视频理解的覆盖驱动自适应关键帧选择
+
+**Date**: 2026-08-01 | **arXiv**: [2608.00714v1](http://arxiv.org/abs/2608.00714v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.00714v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in large vision-language models (LVLMs) have enabled long-video understanding and analysis. However, processing the large number of frames in a video incurs substantial computational overhead. Existing methods reduce LVLM inference costs by scoring frame-query relevance before inference and selecting keyframes accordingly. Nevertheless, the distribution of relevant frames varies across queries, and these methods often need to score hundreds or thousands of frames. To address this limitation, we propose CSES, a training-free semantic keyframe selector that adaptively determines the numbers of frames to score and keyframes to select. CSES estimates the prominence of the frame-query relevance profile to guide active acquisition and adapt the temporal coverage of each input. It then formulates keyframe selection as a coverage problem that jointly accounts for semantic relevance, temporal redundancy, and visual redundancy. Active acquisition and keyframe selection terminate based on coverage saturation. The selection objective is monotone and submodular, enabling greedy optimization with a standard approximation guarantee. Experiments with four LVLMs on two benchmarks show that our method preserves accuracy while scoring $4$-$13\times$ fewer frames and selecting $18.4\%$-$20.5\%$ fewer input keyframes than existing baselines. CSES further achieves a $3.1$-$5.4\times$ speedup in frame selection over baselines.
+
+大型视觉语言模型（LVLM）的最新进展使得长视频理解和分析成为可能。然而，处理视频中的大量帧会产生大量的计算开销。现有方法通过在推理之前对帧查询相关性进行评分并相应地选择关键帧来降低 LVLM 推理成本。然而，相关帧的分布因查询而异，并且这些方法通常需要对数百或数千个帧进行评分。为了解决这个限制，我们提出了 CSES，这是一种无需训练的语义关键帧选择器，可以自适应地确定要评分的帧数和要选择的关键帧数。 CSES 估计帧查询相关性配置文件的突出程度，以指导主动采集并调整每个输入的时间覆盖范围。然后，它将关键帧选择制定为一个覆盖问题，共同考虑语义相关性、时间冗余和视觉冗余。主动采集和关键帧选择根据覆盖饱和度终止。选择目标是单调和子模的，可通过标准近似保证实现贪婪优化。在两个基准上使用四个 LVLM 进行的实验表明，与现有基线相比，我们的方法在保持准确性的同时，减少了 $4$-$13\times$ 的帧数，并选择了 $18.4\%$-$20.5\%$ 的输入关键帧。 CSES 在帧选择方面比基线进一步实现了 $3.1$-$5.4\times$ 加速。
+
+</details>
+
+---
+
+## 3. Diagnosing Under-Development of Irreversible Processes in Video Generation / 诊断视频生成中不可逆过程的发育不足
+
+**Date**: 2026-08-01 | **arXiv**: [2608.00617v1](http://arxiv.org/abs/2608.00617v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.00617v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Many physical attributes are \emph{irreversible}: ice melts but does not re-freeze, paper chars but does not un-burn. Do video generators respect this? We show the question is hard to measure, and that what can be measured reliably is \emph{development} rather than reversal. Metrics of local reversal are null-degenerate: a per-clip violation rate scores $0.50$ on pure noise, and a variance-normalized reversal residual sits at its noise ceiling. What survives null-testing is a two-part protocol: progress (a directional attribute correlation) and a stasis rate. Under this protocol, generated video separates cleanly from real footage, and the gap is human-validated. Across seven text-to-video models, real reference footage advances ($ρ{=}{+}0.40$, $35\%$ static) while every generator shows near-zero progress and $92$--$100\%$ stasis; nine annotators rate real footage far above generated ($2.75$ vs.\ $0.99$ on a $0$--$4$ scale). The reliable finding is \emph{under-development}: generators barely advance irreversible attributes rather than reversing them. As a complementary mechanism, we show that post-hoc readout guidance is gameable, whereas enforcing monotonicity by construction in a disentangled attribute latent removes the gameable readout, validated in controlled and semi-synthetic settings.
+
+许多物理属性是\emph{不可逆}：冰会融化但不会重新冻结，纸会烧焦但不会重新燃烧。视频生成器尊重这一点吗？我们表明这个问题很难衡量，而可以可靠衡量的是\emph{发展}而不是逆转。局部反转的指标是零退化的：每个剪辑的违规率在纯噪声上得分为 0.50 美元，方差归一化的反转残差位于其噪声上限。在空测试中幸存下来的是一个由两部分组成的协议：进度（方向属性相关性）和停滞率。根据该协议，生成的视频与真实镜头完全分离，并且差距经过人工验证。在七个文本到视频模型中，真实参考镜头进步（$ρ{=}{+}0.40$，$35\%$ 静态），而每个生成器显示接近零的进步和 $92$--$100\%$ 停滞；九位注释者对真实镜头的评价远高于生成的镜头（2.75 美元 vs.\ 0.99 美元，在 0 美元 - 4 美元范围内）。可靠的发现是\emph{开发中}：生成器几乎没有推进不可逆属性，而不是逆转它们。作为一种补充机制，我们表明事后读出指导是可游戏的，而通过在解开的潜在属性中构造来强制单调性会消除可游戏的读出，并在受控和半合成设置中进行验证。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-01 (4 papers)</b></summary>
 
 # arXiv Video Papers - 2026-08-01
