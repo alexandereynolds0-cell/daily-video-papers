@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-05](papers/2026-08-05.md) - 17 papers
 - [2026-08-04](papers/2026-08-04.md) - 3 papers
 - [2026-08-01](papers/2026-08-01.md) - 4 papers
 - [2026-07-31](papers/2026-07-31.md) - 10 papers
@@ -130,6 +131,304 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-05 (17 papers)</b></summary>
+
+# arXiv Video Papers - 2026-08-05
+
+**Paper Count**: 17
+
+---
+
+## 1. A Low-Cost Hybrid Reservoir Computing Model for Isolated Sign Language Video Recognition / 一种用于孤立手语视频识别的低成本混合存储计算模型
+
+**Date**: 2026-08-04 | **arXiv**: [2608.03444v1](http://arxiv.org/abs/2608.03444v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.03444v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Sign language recognition (SLR) enhances communication between hearing and hearing-impaired individuals. Although deep learning (DL) has achieved promising performance in SLR, its high computational cost limits deployment on edge devices. To address this challenge, we propose a lightweight reservoir computing (RC)-based approach for SLR. In the proposed method, MediaPipe extracts body and hand keypoints to capture the spatial and temporal dynamics of gestures. These keypoints are then processed by a hybrid reservoir computing (HRC) architecture that combines deep reservoir computing (DRC) and bidirectional reservoir computing (BRC), transforming the input into a high-dimensional dynamic representation. A ridge regression model maps the final HRC state to class labels. This HRC-based SLR method achieved Top-1, Top-5, and Top-10 accuracies of 61.12%, 86.05%, and 92.56%, respectively, on the Word-Level American Sign Language 100 (WLASL100) video dataset, demonstrating competitive performance compared to deep learning-based approaches. Additionally, due to the lightweight nature of RC, the training time was drastically reduced to only a few seconds compared with DL-based methods such as Bi-GRU.This method offers low computational cost, showing its potential for deployment on edge devices.
+
+手语识别 (SLR) 可以增强听力正常者和听力障碍者之间的交流。尽管深度学习（DL）在单反相机中取得了可喜的性能，但其高计算成本限制了在边缘设备上的部署。为了应对这一挑战，我们提出了一种基于轻量级储层计算（RC）的 SLR 方法。在所提出的方法中，MediaPipe 提取身体和手部关键点以捕获手势的空间和时间动态。然后，这些关键点由结合了深度油藏计算（DRC）和双向油藏计算（BRC）的混合油藏计算（HRC）架构进行处理，将输入转换为高维动态表示。岭回归模型将最终的 HRC 状态映射到类标签。这种基于 HRC 的 SLR 方法在单词级美国手语 100 (WLASL100) 视频数据集上分别实现了 61.12%、86.05% 和 92.56% 的 Top-1、Top-5 和 Top-10 准确率，与基于深度学习的方法相比，表现出了竞争性的性能。此外，由于 RC 的轻量级特性，与 Bi-GRU 等基于 DL 的方法相比，训练时间大幅缩短至仅几秒。该方法的计算成本较低，显示出其在边缘设备上部署的潜力。
+
+</details>
+
+---
+
+## 2. SPADE: An Input-Adaptive Sparse Attention Engine for Fast Video Diffusion Models Inference / SPADE：用于快速视频扩散模型推理的输入自适应稀疏注意力引擎
+
+**Date**: 2026-08-04 | **arXiv**: [2608.03335v1](http://arxiv.org/abs/2608.03335v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.03335v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/6somehow/DAC-SPADE.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video diffusion transformers (vDiTs) generate high quality but pay quadratic self-attention cost, making inference prohibitive at video-token scales. The challenge is input-adaptive sparsity: selecting critical Q/K/V tokens with negligible overhead and executing them for end-to-end gains. We present SPADE, a training-free sparse-attention engine of three parts: (i) vDiT-SSR, a specification defining 3D blocking candidates and formalizing dynamic masks via Summarizer/Estimator expressions; (ii) runtime scheme generation using SICS and a head-wise policy; and (iii) an executor with low-overhead index search, flash block-sparse attention, and kernel grouping. Across Hunyuan-Video and Wan 2.1/2.2 for text-to-video and image-to-video generation, SPADE raises sparsity and speed while preserving quality, accelerating attention by 2.26x-3.40x and end-to-end inference by 1.49x-1.80x. Our code is open-sourced at https://github.com/6somehow/DAC-SPADE.
+
+视频扩散变压器（vDiT）产生高质量，但付出二次自注意力成本，使得在视频令牌规模上的推理变得令人望而却步。挑战在于输入自适应稀疏性：选择开销可以忽略不计的关键 Q/K/V 令牌并执行它们以获得端到端增益。我们提出了 SPADE，一个免训练的稀疏注意力引擎，由三部分组成：(i) vDiT-SSR，一个定义 3D 阻塞候选者并通过 Summarizer/Estimator 表达式形式化动态掩码的规范； (ii) 使用 SICS 和 head-wise 策略生成运行时方案； (iii) 具有低开销索引搜索、闪存块稀疏注意力和内核分组的执行器。在用于文本到视频和图像到视频生成的Hunyuan-Video和Wan 2.1/2.2中，SPADE在保持质量的同时提高了稀疏性和速度，将注意力加速了2.26x-3.40x，将端到端推理加速了1.49x-1.80x。我们的代码在 https://github.com/6somehow/DAC-SPADE 上开源。
+
+</details>
+
+---
+
+## 3. CrossScope: A Role-Asymmetric World Model for Joint Dual-Scope Surgical Video Prediction / CrossScope：用于联合双范围手术视频预测的角色不对称世界模型
+
+**Date**: 2026-08-04 | **arXiv**: [2608.03211v1](http://arxiv.org/abs/2608.03211v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.03211v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual world models typically learn future dynamics from a single observation stream, limiting their ability to model cooperative systems with multiple independently moving observers. We investigate this challenge in Mother--Child endoscopic retrograde cholangiopancreatography (ERCP), where two flexible scopes provide complementary yet role-dependent views without a calibrated stereo relationship. Unlike conventional multi-view fusion that assumes symmetric information exchange, we formulate \textbf{role-asymmetric dual-scope future prediction}, where cross-view evidence is selectively transferred according to the prediction target and its underlying spatial requirements. We propose \textbf{CrossScope}, a dual-stream surgical world model that preserves view-specific experts while enabling target-specific evidence routing through geometry-guided residual interactions. CrossScope learns two complementary communication directions: geometric motion cues from the Mother view guide Child-view future dynamics, while pose-aligned Child appearance supports Mother-view prediction only when valid spatial correspondence is established. This design allows each scope to contribute task-relevant evidence without compromising its view-specific representation. To evaluate this problem, we establish a paired dual-scope benchmark comprising synchronized phantom and real-world ERCP episodes, with evaluations assessing visual fidelity, structural preservation, target localization, and motion consistency. Experiments demonstrate that CrossScope consistently outperforms strong surgical video generation baselines, validating the importance of role-aware evidence routing for multi-observer visual world modeling.
+
+视觉世界模型通常从单个观察流中学习未来动态，这限制了它们对具有多个独立移动观察者的协作系统进行建模的能力。我们在母子内窥镜逆行胰胆管造影（ERCP）中研究了这一挑战，其中两个灵活的示波器提供互补但角色依赖的视图，而无需校准立体关系。与假设对称信息交换的传统多视图融合不同，我们制定了 \textbf{角色不对称双范围未来预测}，其中根据预测目标及其潜在空间要求选择性地传输跨视图证据。我们提出 \textbf{CrossScope}，一种双流手术世界模型，它保留特定视图的专家，同时通过几何引导的残差交互实现特定目标的证据路由。 CrossScope 学习两个互补的通信方向：来自母亲视图的几何运动线索引导儿童视图未来动态，而姿势对齐的儿童外观仅在建立有效的空间对应时支持母亲视图预测。这种设计允许每个范围提供与任务相关的证据，而不会影响其特定于视图的表示。为了评估这个问题，我们建立了一个配对的双范围基准，包括同步的模型和真实世界的 ERCP 事件，并评估视觉保真度、结构保存、目标定位和运动一致性。实验表明，CrossScope 始终优于强大的手术视频生成基线，验证了角色感知证据路由对于多观察者视觉世界建模的重要性。
+
+</details>
+
+---
+
+## 4. Adaptive Two-Stage Visual Token Pruning for Efficient Inference in Video-Language Models / 用于视频语言模型中高效推理的自适应两阶段视觉标记修剪
+
+**Date**: 2026-08-04 | **arXiv**: [2608.03112v1](http://arxiv.org/abs/2608.03112v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.03112v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language models excel at image and video understanding but suffer from high inference latency due to the need to process thousands of tokens per image, limiting their deployment on resource-constrained edge devices and in real-time surveillance applications. This challenge is further amplified in video processing, where multiple frames must be analyzed simultaneously. Existing token reduction techniques are largely developed for single-image inputs and therefore fail to account for the temporal and inter-frame redundancies present in video sequences. In addition, these methods generally rely on a fixed, uniform pruning ratio applied across all inputs, which is suboptimal because the degree of redundancy can vary significantly between different videos, necessitating content-dependent pruning levels to preserve critical information. To address these limitations, we propose a two-stage adaptive token pruning strategy specifically designed for video processing. In the first stage, we prune out the redundant frames, and in the second stage, token-level pruning is applied within the retained frames. Crucially, the pruning ratio in the second stage is determined adaptively based on the content of each video. This is achieved by analyzing the correlation structure of token embeddings to quantify redundancy, which is used to determine the ratio. Importantly, our method is entirely post-hoc and requires no additional training or fine-tuning, while achieving strong empirical gains; notably, it improves accuracy by +7\% on a video captioning benchmark at 10\% token retention, while reducing computation TFLOPs by 95\%.
+
+视觉语言模型在图像和视频理解方面表现出色，但由于每个图像需要处理数千个令牌，因此存在高推理延迟，限制了它们在资源有限的边缘设备和实时监控应用中的部署。这一挑战在视频处理中进一步放大，其中必须同时分析多个帧。现有的令牌缩减技术主要是针对单图像输入而开发的，因此无法考虑视频序列中存在的时间和帧间冗余。此外，这些方法通常依赖于在所有输入上应用固定、统一的修剪比率，这是次优的，因为不同视频之间的冗余程度可能会有很大差异，需要依赖于内容的修剪级别来保留关键信息。为了解决这些限制，我们提出了一种专门为视频处理设计的两阶段自适应令牌修剪策略。在第一阶段，我们修剪掉冗余帧，在第二阶段，在保留的帧内应用令牌级修剪。至关重要的是，第二阶段的修剪比率是根据每个视频的内容自适应确定的。这是通过分析令牌嵌入的相关结构来量化冗余来实现的，冗余用于确定比率。重要的是，我们的方法完全是事后的，不需要额外的训练或微调，同时获得了强大的经验收益；值得注意的是，它在 10% 令牌保留的视频字幕基准上将准确性提高了 7%，同时将计算 TFLOP 减少了 95%。
+
+</details>
+
+---
+
+## 5. Channel-wise Dynamic Knowledge Distillation via Adaptive Sample Generation for Action Recognition / 通过自适应样本生成进行通道动态知识蒸馏以进行动作识别
+
+**Date**: 2026-08-04 | **arXiv**: [2608.03100v1](http://arxiv.org/abs/2608.03100v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.03100v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/mlvccn/ASCD_KD_Action.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Knowledge Distillation (KD) offers a promising yet underexplored path for compressing large action recognition models. However, existing KD methods suffer from two key limitations: 1) reliance on fixed input samples leads to suboptimal feature alignment between the frozen teacher (larger model) and the learnable student (smaller model), and 2) applying a uniform distillation strength for all channels fails to account for their varying importance in capturing distinct knowledge (e.g., motion tempo or magnitude) across training epochs. This motivates us to develop an Adaptive Sample-aware Channel-wise Dynamic (ASCD) KD approach, which operates in two stages. First, we use an adaptive sample generation module to create updated samples by incorporating semantics from sample gradients, which are derived by minimizing a feature loss weighted by channel centroid frequency differences at each layer. Meanwhile, crucial motion-related details are preserved by applying a Gaussian mask to frequency features. Second, we employ a channel-wise dynamic distillation module to train student on these generated samples, guided by sample gradients and feature frequencies. For efficiency, samples are updated periodically rather than per epoch. Extensive experiments on three video benchmarks (UCF101, Kinetics-400, Something-Something-v2) and two image datasets (CIFAR-100, ImageNet) demonstrate the state-of-the-art performance of our method. Code is available at https://github.com/mlvccn/ASCD_KD_Action.
+
+知识蒸馏（KD）为压缩大型动作识别模型提供了一条有前途但尚未充分探索的途径。然而，现有的 KD 方法存在两个关键限制：1）对固定输入样本的依赖导致冻结的教师（较大的模型）和可学习的学生（较小的模型）之间的特征对齐不理想，2）对所有通道应用统一的蒸馏强度无法解释它们在跨训练时期捕获不同知识（例如，运动节奏或幅度）时的不同重要性。这促使我们开发一种自适应样本感知通道动态 (ASCD) KD 方法，该方法分两个阶段运行。首先，我们使用自适应样本生成模块通过合并样本梯度的语义来创建更新的样本，样本梯度是通过最小化由每层通道质心频率差加权的特征损失而导出的。同时，通过对频率特征应用高斯掩模来保留与运动相关的关键细节。其次，我们采用通道动态蒸馏模块，在样本梯度和特征频率的指导下，对这些生成的样本进行训练。为了提高效率，样本会定期更新，而不是每个时期更新。对三个视频基准（UCF101、Kinetics-400、Something-Something-v2）和两个图像数据集（CIFAR-100、ImageNet）的广泛实验证明了我们方法的最先进性能。代码可在 https://github.com/mlvccn/ASCD_KD_Action 获取。
+
+</details>
+
+---
+
+## 6. FakeI2V-Bench: Benchmarking the Applicability of Image-level Deepfake Detectors for Deepfake Video Detection / FakeI2V-Bench：对图像级 Deepfake 检测器在 Deepfake 视频检测中的适用性进行基准测试
+
+**Date**: 2026-08-04 | **arXiv**: [2608.03096v1](http://arxiv.org/abs/2608.03096v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.03096v1)
+
+**Categories**: cs.CR, cs.AI, cs.CV
+
+**Code**: https://github.com/CryptoAILab/FakeI2V-Bench.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in video generation models have significantly intensified the deepfake threat, yet the current deepfake video detection benchmarks remain underdeveloped. In particular, the effectiveness of image-level detectors in the video domain has not been systematically assessed. To fill this gap, we present FakeI2V-Bench, a benchmark for evaluating state-of-the-art video-level deepfake detectors in challenging scenarios, with a particular focus on systematically assessing the performance of image-level deepfake detectors in the video domain. FakeI2V-Bench comprises 97,548 videos, containing content generated by the latest powerful generation models and covering a broader range of categories. Using this dataset, we conduct a systematic evaluation of eight video-level detectors and twelve representative image-level detectors. Experimental results show that the best-performing image-level detector achieves an 80.16% AUC, slightly outperforming the strongest video-level detector (i.e., 79.99% AUC). Going beyond benchmarking, we present IV-Bridge, a general framework that enhances the applicability of image-level deepfake detectors to videos. IV-Bridge employs a random forest model with statistical features to aggregate frame-level predictions, allowing eleven image-level detectors to surpass state-of-the-art video-level approaches, with the best-performing variant achieving a 93.80% AUC. Overall, FakeI2V-Bench establishes a rigorous benchmark for deepfake video detection and introduces a novel pathway for extending image-level detectors to the video domain, offering new insights and directions for future research. Code and data are available at https://github.com/CryptoAILab/FakeI2V-Bench.
+
+视频生成模型的最新进展显着加剧了 Deepfake 威胁，但当前的 Deepfake 视频检测基准仍然不发达。特别是，视频领域图像级检测器的有效性尚未得到系统评估。为了填补这一空白，我们推出了 FakeI2V-Bench，这是一个在具有挑战性的场景中评估最先进的视频级 Deepfake 检测器的基准，特别注重系统地评估视频领域图像级 Deepfake 检测器的性能。 FakeI2V-Bench 包含 97,548 个视频，包含由最新一代强大模型生成的内容，涵盖更广泛的类别。使用该数据集，我们对八个视频级检测器和十二个代表性图像级检测器进行了系统评估。实验结果表明，性能最好的图像级检测器达到了 80.16% AUC，略优于最强的视频级检测器（即 79.99% AUC）。除了基准测试之外，我们还推出了 IV-Bridge，这是一个通用框架，可以增强图像级深度伪造检测器对视频的适用性。 IV-Bridge 采用具有统计特征的随机森林模型来聚合帧级预测，使 11 个图像级检测器超越最先进的视频级方法，其中性能最佳的变体实现了 93.80% AUC。总体而言，FakeI2V-Bench 为深度伪造视频检测建立了严格的基准，并引入了一种将图像级检测器扩展到视频领域的新颖途径，为未来的研究提供了新的见解和方向。代码和数据可在 https://github.com/CryptoAILab/FakeI2V-Bench 获取。
+
+</details>
+
+---
+
+## 7. SUV: Future Scene Understanding as Video Generation for End-to-End Driving / SUV：未来场景理解作为端到端驾驶的视频生成
+
+**Date**: 2026-08-04 | **arXiv**: [2608.03084v1](http://arxiv.org/abs/2608.03084v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.03084v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+End-to-end driving requires a coherent understanding of future scenes, yet existing methods model these scenes using task-specific heads and output formats, with limited scalability. Can video generation instead provide a shared predictor? We introduce SUV, a unified end-to-end driving framework that casts future Scene Understanding as Video generation using a pretrained video foundation model. SUV models future appearance, semantics, relative depth, and instance-level dynamics as video streams with a shared video expert, without stream-specific visual prediction heads. Through joint video-action attention, the action expert attends to the latent representations of all future streams and generates the ego trajectory. Experiments show that SUV directly predicts all four future streams, while controlled ablations show that structured future supervision and direct future-stream access yield higher trajectory planning scores. With only a single front camera and no candidate-trajectory selection, SUV outperforms a broad set of recent state-of-the-art methods on both NAVSIM-v2 splits, achieving 91.0 EPDMS on navtest and 36.9 on navhard. On the long-tail WOD-E2E benchmark, SUV achieves a competitive RFS of 7.94.
+
+端到端驾驶需要对未来场景有连贯的理解，但现有方法使用特定于任务的头和输出格式对这些场景进行建模，可扩展性有限。视频生成可以提供共享预测器吗？我们推出了 SUV，这是一个统一的端到端驾驶框架，它使用预训练的视频基础模型将未来的场景理解转化为视频生成。 SUV 通过共享视频专家将未来的外观、语义、相对深度和实例级动态建模为视频流，而不需要特定于流的视觉预测头。通过联合视频动作注意力，动作专家关注所有未来流的潜在表示并生成自我轨迹。实验表明，SUV 直接预测所有四个未来流，而受控消融表明，结构化未来监督和直接未来流访问会产生更高的轨迹规划分数。由于只有一个前置摄像头且没有候选轨迹选择，SUV 在 NAVSIM-v2 分割上的表现优于一系列最新的最先进方法，在 navtest 上达到 91.0 EPDMS，在 navhard 上达到 36.9。在长尾WOD-E2E基准上，SUV实现了具有竞争力的RFS 7.94。
+
+</details>
+
+---
+
+## 8. GSTEP: Global Spatio-Temporal Density-Driven Visual Token Pruning for Efficient Video Large Language Models / GSTEP：全局时空密度驱动的视觉标记修剪，实现高效视频大语言模型
+
+**Date**: 2026-08-04 | **arXiv**: [2608.03083v1](http://arxiv.org/abs/2608.03083v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.03083v1)
+
+**Categories**: cs.CV, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video large language models (VideoLLMs) achieve strong video understanding performance, but their inference remains expensive due to the large number of redundant spatio-temporal visual tokens in long videos. Existing token pruning methods alleviate this cost by reducing redundant tokens, yet most of them rely on segment-level local pruning, where videos are partitioned into isolated segments and tokens are selected independently within each segment. Such designs may under-preserve short but semantically dense segments and discard tokens that appear non-salient locally but remain critical from a global perspective. To address this issue, we propose GSTEP (Global Spatio-Temporal Density Pruning), a plug-and-play pruning framework that models video as a continuous spatio-temporal information flow. GSTEP constructs a token-level spatio-temporal density by combining a continuous temporal density, obtained from a smoothed centered frame-level change signal, with intra-frame spatial density, and then performs global token sampling by jointly balancing information density and coverage. Extensive experiments on multiple VideoLLMs and public benchmarks demonstrate that GSTEP consistently achieves strong accuracy-efficiency trade-offs and generalizes well across model architectures and evaluation settings. On LLaVA-OneVision-7B, GSTEP prunes 75% of visual tokens, preserves up to 100.2% of the original average performance across benchmarks, and achieves a 1.17 end-to-end speedup.
+
+视频大语言模型（VideoLLM）实现了强大的视频理解性能，但由于长视频中存在大量冗余时空视觉标记，其推理仍然昂贵。现有的令牌修剪方法通过减少冗余令牌来减轻这种成本，但大多数方法都依赖于分段级本地修剪，其中视频被划分为独立的分段，并且在每个分段内独立选择令牌。此类设计可能无法充分保留简短但语义密集的片段，并丢弃局部看似不显着但从全局角度来看仍然至关重要的标记。为了解决这个问题，我们提出了 GSTEP（全局时空密度修剪），这是一种即插即用的修剪框架，将视频建模为连续的时空信息流。 GSTEP通过将从平滑中心帧级变化信号获得的连续时间密度与帧内空间密度相结合来构造令牌级时空密度，然后通过联合平衡信息密度和覆盖率来执行全局令牌采样。对多个 VideoLLM 和公共基准进行的大量实验表明，GSTEP 始终能够实现强大的准确性与效率权衡，并在模型架构和评估设置之间具有良好的泛化性。在 LLaVA-OneVision-7B 上，GSTEP 修剪了 75% 的视觉标记，在基准测试中保留了高达 100.2% 的原始平均性能，并实现了 1.17 的端到端加速。
+
+</details>
+
+---
+
+## 9. CAPE-T2V: Captioner-Anchored Prompt Enhancement toward Two-Sided Conditioning Alignment in Text-to-Video Generation / CAPE-T2V：文本到视频生成中双向调节对齐的字幕锚定提示增强
+
+**Date**: 2026-08-04 | **arXiv**: [2608.03046v1](http://arxiv.org/abs/2608.03046v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.03046v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/yizzz927/CAPE-T2V.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-to-video (T2V) diffusion transformers (DiTs) are trained with detailed video captions, whereas inference often relies on user prompts rewritten by a prompt enhancer (PE). Prior work has improved generation by optimizing the PE, the DiT, or both; some methods have also sought to narrow the training-inference mismatch through shared schemas. Yet even within a shared schema, inference-time PE outputs and DiT training captions may still differ in detail selection, information organization, descriptive granularity, and phrasing. We refer to this residual mismatch as the PE-Caption gap and introduce CAPE-T2V, a two-step Captioner-Anchored Prompt Enhancement framework toward two-sided conditioning alignment in T2V generation. First, CAPE-T2V constructs three types of PE training examples, pairing captioner-generated targets with concise source captions, detailed source captions, or pseudo user prompts derived from those targets. It then fine-tunes the PE to map each input to its paired target. Second, CAPE-T2V fine-tunes the DiT on video-derived captions rewritten by the Anchored PE; the same PE rewrites user prompts at inference. Relative to a baseline using the same caption schema, CAPE-T2V achieves higher aggregate scores on StoryEval, VBench-2.0, and T2V-CompBench across Wan2.2 and LTX-2.3. Further, CAPE-T2V exhibits a smaller PE-Caption gap than the baseline: its DiT fine-tuning captions are closer in distribution to inference-time PE outputs, as measured by squared maximum mean discrepancy in a fixed embedding space. Overall, these results support CAPE-T2V as an effective approach to mitigating the PE-Caption gap. The project is available at https://github.com/yizzz927/CAPE-T2V.
+
+文本到视频 (T2V) 扩散转换器 (DiT) 使用详细的视频字幕进行训练，而推理通常依赖于提示增强器 (PE) 重写的用户提示。先前的工作通过优化 PE、DiT 或两者来改进生成；一些方法还试图通过共享模式来缩小训练与推理的不匹配。然而，即使在共享模式中，推理时 PE 输出和 DiT 训练标题在细节选择、信息组织、描述粒度和措辞方面仍然可能有所不同。我们将这种残余不匹配称为 PE-Caption 间隙，并引入 CAPE-T2V，这是一种两步式 Captioner 锚定提示增强框架，旨在实现 T2V 生成中的两侧调节对齐。首先，CAPE-T2V 构建了三种类型的 PE 训练示例，将字幕生成器生成的目标与简洁的源字幕、详细的源字幕或从这些目标派生的伪用户提示配对。然后它微调 PE 以将每个输入映射到其配对目标。其次，CAPE-T2V 对 Anchored PE 重写的视频衍生字幕上的 DiT 进行微调；同一个 PE 会在推理时重写用户提示。相对于使用相同字幕模式的基线，CAPE-T2V 在 StoryEval、VBench-2.0 和 T2V-CompBench 上跨 Wan2.2 和 LTX-2.3 获得了更高的总分。此外，CAPE-T2V 表现出比基线更小的 PE-Caption 差距：它的 DiT 微调字幕在分布上更接近推理时间 PE 输出，这是通过固定嵌入空间中的平方最大平均差异来衡量的。总体而言，这些结果支持 CAPE-T2V 作为缩小 PE-Caption 差距的有效方法。该项目位于 https://github.com/yizzz927/CAPE-T2V。
+
+</details>
+
+---
+
+## 10. WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity / WorldExam：从外观到内在反应性对世界模型进行基准测试
+
+**Date**: 2026-08-03 | **arXiv**: [2608.02603v1](http://arxiv.org/abs/2608.02603v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.02603v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Controllable video generation models are increasingly being developed as world models. Accordingly, evaluating them in this role extends beyond the apparent appearance of generated videos to the inherent reactivity of the worlds they depict: the ability to infer from the scene state how the world should react and to generate plausible consequences not explicitly described in the input. Yet existing benchmarks mainly assess visual quality or explicit instruction fulfillment by checking whether requested actions and interaction outcomes are realized, leaving inherent reactivity underexamined. We introduce WorldExam, a hierarchical diagnostic benchmark spanning four levels: Visual Quality, Control Adherence, Spatial Consistency, and World Reactivity. It comprises 1,474 cases across eight dedicated tasks and supports unified evaluation of camera-, action-, and language-driven model paradigms. The World Reactivity level evaluates scene-conditioned reactions and goal-directed behaviors beyond what is explicitly specified in the input. Evaluation of 20 representative models reveals a clear capability split. Camera-driven models excel at camera control, but their interfaces do not support dynamic interaction; action-driven models control subjects more precisely but often leave the world unresponsive; and language-driven models perform better on interaction but follow complex controls less faithfully. No model combines broad task coverage with consistently strong performance, showing that high visual quality and explicit instruction fulfillment do not guarantee inherent reactivity.
+
+可控视频生成模型越来越多地被开发为世界模型。因此，在这个角色中评估它们超出了生成视频的外观，扩展到它们所描绘的世界的固有反应性：从场景状态推断世界应该如何反应并生成输入中未明确描述的合理结果的能力。然而，现有的基准主要通过检查所请求的动作和交互结果是否实现来评估视觉质量或明确的指令履行情况，而没有充分检查固有的反应性。我们推出了 WorldExam，这是一个跨越四个级别的分层诊断基准：视觉质量、控制依从性、空间一致性和世界反应性。它包含 8 个专门任务的 1,474 个案例，并支持对相机、动作和语言驱动的模型范式进行统一评估。世界反应级别评估超出输入中明确指定的场景条件反应和目标导向行为。对 20 个代表性模型的评估揭示了明显的能力分化。相机驱动模型擅长相机控制，但其界面不支持动态交互；行动驱动的模型可以更精确地控制主体，但往往会让世界反应迟钝；语言驱动的模型在交互方面表现更好，但不太忠实地遵循复杂的控制。没有任何模型能够将广泛的任务覆盖范围与始终如一的强大性能相结合，这表明高视觉质量和明确的指令执行并不能保证固有的反应性。
+
+</details>
+
+---
+
+## 11. Token Radius Attention for Efficient Video Generation / 用于高效视频生成的 Token Radius Attention
+
+**Date**: 2026-08-03 | **arXiv**: [2608.02504v1](http://arxiv.org/abs/2608.02504v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.02504v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/IF-LAB-PKU/Token-Radius-Attention.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video Diffusion Transformers (VDiTs) enable high-fidelity generation but incur quadratic cost from dense 3D self-attention. Existing head- and block-level sparse methods share computation budgets across queries, overlooking token-specific attention demand. We observe that retained density varies across queries yet correlates log-linearly with attention entropy, while dominant interactions form query-centered neighborhoods with token-dependent radii. Based on these findings, we propose Token Radius Attention (TRA), a training-free framework that maps query entropy to an analytic token budget and converts it into a temporally decayed radius without explicit key ranking. Fused entropy extraction, warm-up reuse, and block-sparse mask construction further reduce overhead. Across seven Wan2.1, Wan2.2, and HunyuanVideo T2V/I2V configurations, TRA retains only 9-19% of attention interactions and achieves 1.56x-2.05x speedup with competitive generation quality. Code is available at https://github.com/IF-LAB-PKU/Token-Radius-Attention.
+
+视频扩散变压器 (VDiT) 可实现高保真生成，但会因密集 3D 自注意力而产生二次成本。现有的头级和块级稀疏方法在查询之间共享计算预算，忽略了特定于令牌的注意力需求。我们观察到，保留密度在查询之间有所不同，但与注意力熵呈对数线性相关，而主导交互形成具有令牌相关半径的以查询为中心的邻域。基于这些发现，我们提出了令牌半径注意力（TRA），这是一个免训练的框架，它将查询熵映射到分析令牌预算，并将其转换为时间衰减半径，而无需明确的键排名。融合熵提取、预热重用和块稀疏掩模构造进一步减少了开销。在 7 个 Wan2.1、Wan2.2 和 HunyuanVideo T2V/I2V 配置中，TRA 仅保留 9-19% 的注意力交互，并以具有竞争力的生成质量实现 1.56x-2.05x 的加速。代码可在 https://github.com/IF-LAB-PKU/Token-Radius-Attention 获取。
+
+</details>
+
+---
+
+## 12. EchoCache: Energy-Guided Cross-Modal Caching for Efficient Audio-Driven Video Generation / EchoCache：用于高效音频驱动视频生成的能量引导跨模式缓存
+
+**Date**: 2026-08-03 | **arXiv**: [2608.02474v1](http://arxiv.org/abs/2608.02474v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.02474v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/IF-LAB-PKU/EchoCache.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Audio-driven video generation (A2V) has achieved promising progress in synthesizing temporally coherent and audio-visually aligned videos, yet its inference remains expensive due to the iterative denoising process of diffusion models. Existing caching methods mainly exploit temporal redundancy in visual features while overlooking the cross-modal alignment of A2V, where audio drives visual generation with highly non-uniform temporal importance. In this paper, we identify two levels of misalignment in existing A2V caching methods: temporal-semantic and computation-storage misalignment. To address them, we propose EchoCache, an energy-guided cross-modal caching framework for efficient A2V generation. EchoCache leverages audio time-frequency energy as a saliency anchor to guide latent-level cache updates and further introduces a dynamic timestep-latent caching mechanism with quantized cache management for joint efficiency and memory optimization. Extensive experiments on mainstream A2V models show that EchoCache consistently improves the latency-quality trade-off while preserving generation quality and audio-visual consistency. In particular, on Wan2.2-S2V over the EMTD benchmark, EchoCache achieves a 2.46x speedup with the best overall performance. Code is available at https://github.com/IF-LAB-PKU/EchoCache.
+
+音频驱动的视频生成（A2V）在合成时间相干和视听对齐的视频方面取得了有希望的进展，但由于扩散模型的迭代去噪过程，其推理仍然昂贵。现有的缓存方法主要利用视觉特征中的时间冗余，而忽略了 A2V 的跨模态对齐，其中音频驱动具有高度不均匀时间重要性的视觉生成。在本文中，我们确定了现有 A2V 缓存方法中两个级别的错位：时间语义错位和计算存储错位。为了解决这些问题，我们提出了 EchoCache，一种用于高效 A2V 生成的能量引导跨模式缓存框架。 EchoCache利用音频时频能量作为显着性锚点来指导潜在级缓存更新，并进一步引入了具有量化缓存管理的动态时间步潜在缓存机制，以实现联合效率和内存优化。对主流 A2V 模型的大量实验表明，EchoCache 持续改善延迟质量权衡，同时保持生成质量和视听一致性。特别是，在 EMTD 基准测试的 Wan2.2-S2V 上，EchoCache 实现了 2.46 倍的加速，整体性能最佳。代码可在 https://github.com/IF-LAB-PKU/EchoCache 获取。
+
+</details>
+
+---
+
+## 13. PhyCheck: Fine-Grained Evidence-Grounded Dataset for Physical Law Understanding in Video-LLMs / PhyCheck：用于视频法学硕士中物理定律理解的细粒度循证数据集
+
+**Date**: 2026-08-03 | **arXiv**: [2608.02150v2](http://arxiv.org/abs/2608.02150v2) | **PDF**: [Link](http://arxiv.org/pdf/2608.02150v2)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Embodied intelligence and world models require video understanding systems to go beyond recognizing objects and actions and develop an understanding of physical regularities. However, despite their strong performance on general video understanding tasks, current video-language models still struggle to reliably determine whether an observed event conforms to specific physical laws. Existing benchmarks primarily assess the physical quality of generated videos, providing limited support for systematically evaluating and improving the physical-law understanding of Video Large Language Models (VideoLLMs). To address this gap, we introduce PhyCheck, a video question answering dataset organized at two complementary levels of granularity. The coarse-grained subset asks models to determine whether the phenomenon shown in a video conforms to or violates physical laws, while the fine-grained subset further examines whether models can capture physical details responsible for the violation or compliance. We use these subsets as structured supervision to improve physical understanding. In addition, the dataset contains a diagnostic subset with external causal context that reveal hidden factors affecting physical plausibility, assessing whether models can recalibrate their judgments accordingly. Experiments with Fine-tune Qwen2.5-VL show that training with the proposed data substantially improves the understanding of physical-consistency, while evaluations in the diagnostic subset reveal that current models still have difficulty incorporating additional causal conditions into their decisions. These findings highlight the gap between recognizing surface-level inconsistencies and understanding underlying physical mechanisms, and provide a foundation for evaluating and improving physical understanding in Video-LLMs.
+
+具身智能和世界模型要求视频理解系统超越识别物体和动作的范围，并发展对物理规律的理解。然而，尽管当前的视频语言模型在一般视频理解任务上表现出色，但仍然难以可靠地确定观察到的事件是否符合特定的物理定律。现有基准主要评估生成视频的物理质量，为系统评估和提高视频大语言模型（VideoLLM）的物理定律理解提供有限的支持。为了解决这一差距，我们引入了 PhyCheck，这是一个以两个互补的粒度级别组织的视频问答数据集。粗粒度子集要求模型确定视频中显示的现象是否符合或违反物理定律，而细粒度子集则进一步检查模型是否可以捕获导致违规或合规的物理细节。我们使用这些子集作为结构化监督来提高物理理解。此外，该数据集包含一个具有外部因果背景的诊断子集，揭示影响物理合理性的隐藏因素，评估模型是否可以相应地重新校准其判断。 Fine-tune Qwen2.5-VL 的实验表明，使用所提出的数据进行训练大大提高了对物理一致性的理解，而诊断子集中的评估表明，当前模型仍然难以将额外的因果条件纳入其决策中。这些发现凸显了认识表面不一致和理解底层物理机制之间的差距，并为评估和提高视频法学硕士的物理理解提供了基础。
+
+</details>
+
+---
+
+## 14. HiResNets: Native Full-HD Video Recognition with Foveal Residual Streams / HiResNets：具有中央凹残留流的本机全高清视频识别
+
+**Date**: 2026-08-03 | **arXiv**: [2608.02140v2](http://arxiv.org/abs/2608.02140v2) | **PDF**: [Link](http://arxiv.org/pdf/2608.02140v2)
+
+**Categories**: cs.CV, cs.PF
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Much of the recent progress in image and video recognition has come at the cost of memory: larger models, increased resolution, and longer temporal contexts. An inevitable component is the quadratic (or larger) growth of memory and compute based on image resolution, which is a property of the grid sampling used in convolutional networks and vision transformers. In this work we study residual networks whose convolutional blocks have logarithmic-square growth instead, enabling them to process very high-resolution video quickly. The key insight is to use a residual architecture's residual stream as a high-resolution buffer, to which convolutional blocks only read and write via log-polar image warp operations. Layers adaptively focus on different parts of each frame, with very high resolution only near the focus point. A complete high-resolution representation is built up in the residual stream, analogous to eye saccades creating a complete picture in biological vision, and a theoretical construction is presented that eliminates the quadratic dependency of the residual stream resolution. Experiments demonstrate that our proposed HiResNets learn to foveate around scenes similarly to human vision, and have superior performance in difficult egocentric video recognition tasks, especially egocentric video with small objects and fine-grained recognition.
+
+图像和视频识别领域的最新进展大多是以内存为代价的：更大的模型、更高的分辨率和更长的时间上下文。不可避免的组成部分是基于图像分辨率的内存和计算的二次（或更大）增长，这是卷积网络和视觉变换器中使用的网格采样的属性。在这项工作中，我们研究了残差网络，其卷积块具有对数平方增长，使它们能够快速处理非常高分辨率的视频。关键的见解是使用残差架构的残差流作为高分辨率缓冲区，卷积块仅通过对数极坐标图像扭曲操作对其进行读写。图层自适应地聚焦于每帧的不同部分，仅在焦点附近具有非常高分辨率。在残差流中建立了完整的高分辨率表示，类似于在生物视觉中创建完整图像的眼扫视，并且提出了消除残差流分辨率的二次依赖性的理论结构。实验表明，我们提出的 HiResNet 能够像人类视觉一样学习围绕场景进行注视，并且在困难的以自我为中心的视频识别任务中具有卓越的性能，特别是具有小对象和细粒度识别的以自我为中心的视频。
+
+</details>
+
+---
+
+## 15. RSVideo: Are Your Vision-Language Models Ready for Remote Sensing Videos? / RSVideo：您的视觉语言模型准备好用于遥感视频了吗？
+
+**Date**: 2026-08-03 | **arXiv**: [2608.02039v2](http://arxiv.org/abs/2608.02039v2) | **PDF**: [Link](http://arxiv.org/pdf/2608.02039v2)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/HongjieZhou0329/RSVideo.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Remote-sensing videos enable real-time observation of changes in target attributes, short-term activities, and scene evolution. They record motion, actions, interactions, and scene changes that cannot be captured by isolated images. Existing models primarily target single images or discrete temporal observations spanning a long time range. However, a unified evaluation setting for assessing vision-language models on continuous remote-sensing video understanding remains lacking. We introduce RSVideo-10K, a remote-sensing video dataset comprising 10,773 instances, 1.47 million frames, and 17.02 hours of footage, containing both unmanned aerial vehicles and satellite platforms. Its fixed evaluation benchmark, RSVideo-Bench, contains 2,731 test instances and evaluates two complementary aspects of remote-sensing video understanding: L1 Perception and L2 Reasoning, spanning seven capability groups and 17 tasks. Evaluations show that current vision-language models still struggle to recover small local evidence, track short-lived states, and use scene-constrained spatial relations. Based on this analysis, we further propose RSVideo, a reinforcement learning framework for small-target spatiotemporal focusing that selects question-relevant regions across frames and suppresses redundant background tokens. RSVideo achieves a maximum absolute improvement of 9.01% with InternVL3.5-14B and attains the highest accuracy of 40.63% with Qwen3.6-27B across 26 open-source vision-language backbones. Codes will be available at https://github.com/HongjieZhou0329/RSVideo.
+
+遥感视频可以实时观察目标属性的变化、短期活动和场景演变。它们记录了孤立图像无法捕捉到的运动、动作、交互和场景变化。现有模型主要针对单个图像或跨越较长时间范围的离散时间观察。然而，仍然缺乏用于评估连续遥感视频理解的视觉语言模型的统一评估设置。我们引入了 RSVideo-10K，这是一个遥感视频数据集，包含 10,773 个实例、147 万帧和 17.02 小时的镜头，包含无人机和卫星平台。其固定评估基准 RSVideo-Bench 包含 2,731 个测试实例，评估遥感视频理解的两个互补方面：L1 感知和 L2 推理，涵盖 7 个能力组和 17 个任务。评估表明，当前的视觉语言模型仍然难以恢复小的局部证据、跟踪短暂的状态以及使用场景约束的空间关系。基于此分析，我们进一步提出 RSVideo，一种用于小目标时空聚焦的强化学习框架，可跨帧选择与问题相关的区域并抑制冗余背景标记。 RSVideo 在 InternVL3.5-14B 上实现了 9.01% 的最大绝对改进，在 Qwen3.6-27B 上在 26 个开源视觉语言主干上实现了 40.63% 的最高精度。代码可在 https://github.com/HongjieZhou0329/RSVideo 获取。
+
+</details>
+
+---
+
+## 16. AcoustiTrace: When Plausible Sound Violates Physics / AcoustiTrace：当合理的声音违反物理原理时
+
+**Date**: 2026-08-03 | **arXiv**: [2608.02035v1](http://arxiv.org/abs/2608.02035v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.02035v1)
+
+**Categories**: cs.MM, cs.SD
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent audio-video generators can produce semantically plausible and apparently synchronized sound, yet may still violate the acoustic processes implied by visible events and environments. Existing benchmarks provide limited support for attributing such violations to particular acoustic processes and quantifying their severity. We introduce AcoustiTrace, a diagnostic benchmark that formalizes acoustic physical realism in audio-video generation. AcoustiTrace organizes text-to-audio-video (T2AV) and image-to-audio-video (I2AV) evaluation around the acoustic process, covering sound generation, propagation environment, and acoustic reception through eight dimensions grounded in measurable acoustic quantities. Based on these evaluation dimensions, we construct a large-scale dataset organized around acoustic mechanisms, comprising real-world audio-video recordings and acoustically annotated RGB-D observations, and use it to develop targeted prompt suites and validated evaluators. Experiments reveal that even leading generators still struggle with fundamental acoustic processes despite producing plausible sound events. Finally, we show that the diagnostics AcoustiTrace provides for specific acoustic relations can guide model refinement toward more physically faithful audio and open new directions for incorporating acoustic principles into training objectives, reward modeling, and candidate selection.
+
+最近的音频视频生成器可以产生语义上合理且明显同步的声音，但仍然可能违反可见事件和环境所暗示的声学过程。现有基准对于将此类违规归因于特定声学过程并量化其严重性提供有限的支持。我们推出了 AcoustiTrace，这是一种诊断基准，可形式化音频视频生成中的声学物理真实性。 AcoustiTrace 围绕声学过程组织文本到音频视频 (T2AV) 和图像到音频视频 (I2AV) 评估，涵盖基于可测量声学量的八个维度的声音生成、传播环境和声学接收。基于这些评估维度，我们构建了一个围绕声学机制组织的大规模数据集，包括真实世界的音频视频记录和声学注释的 RGB-D 观察结果，并用它来开发有针对性的提示套件和经过验证的评估器。实验表明，即使是领先的发电机，尽管产生了可信的声音事件，但仍然难以应对基本的声学过程。最后，我们表明 AcoustiTrace 为特定声学关系提供的诊断可以指导模型细化以实现更忠实于物理的音频，并为将声学原理纳入训练目标、奖励建模和候选者选择开辟新的方向。
+
+</details>
+
+---
+
+## 17. CultureVidBench: Benchmarking Cultural Understanding in Text-to-Video Generation / CultureVidBench：文本到视频生成中文化理解的基准测试
+
+**Date**: 2026-08-03 | **arXiv**: [2608.01942v1](http://arxiv.org/abs/2608.01942v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.01942v1)
+
+**Categories**: cs.CV, cs.CL, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-to-video (T2V) generation models have advanced rapidly, yet their ability to represent diverse cultural contexts remains underexplored. Existing benchmarks mainly focus on perceptual quality, physical plausibility, and text-video alignment, but do not directly assess whether generated videos capture culturally specific objects, actions, rituals, visible text, or audio cues. We introduce CultureVidBench, a comprehensive benchmark for evaluating cultural understanding in T2V generation. CultureVidBench contains 1,000 curated prompts covering 12 countries, 6 continents, 8 cultural regions, and 14 cultural aspects organized into three categories: material culture, social practice & performance, and ritual & ceremony. Designed specifically for video generation, CultureVidBench emphasizes dynamic and multimodal cultural representation, including social interactions, ritual procedure, and culturally appropriate visible text and audio. We evaluate seven representative T2V models through human user studies and MLLM-based automatic assessment across cultural faithfulness, multimodal cultural rendering, semantic adherence, and perceptual quality. Results show that although current models achieve strong semantic adherence and visual quality, they often fail to faithfully capture fine-grained cultural details, particularly for underrepresented regions, rituals, and multimodal cultural cues.
+
+文本到视频（T2V）生成模型发展迅速，但其代表不同文化背景的能力仍未得到充分探索。现有的基准主要关注感知质量、物理合理性和文本视频对齐，但不直接评估生成的视频是否捕捉文化特定的对象、动作、仪式、可见文本或音频提示。我们推出了 CultureVidBench，这是一个评估 T2V 一代文化理解的综合基准。 CultureVidBench 包含 1,000 个精选提示，涵盖 12 个国家、6 大洲、8 个文化区域和 14 个文化方面，分为三类：物质文化、社会实践和表演以及仪式和仪式。 CultureVidBench 专为视频生成而设计，强调动态和多模式的文化表征，包括社交互动、仪式程序以及文化上适当的可见文本和音频。我们通过人类用户研究和基于 MLLM 的自动评估来评估七个具有代表性的 T2V 模型，涵盖文化忠诚度、多模态文化渲染、语义依从性和感知质量。结果表明，尽管当前的模型实现了很强的语义依从性和视觉质量，但它们往往无法忠实地捕捉细粒度的文化细节，特别是对于代表性不足的地区、仪式和多模式文化线索。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-04 (3 papers)</b></summary>
 
 # arXiv Video Papers - 2026-08-04
