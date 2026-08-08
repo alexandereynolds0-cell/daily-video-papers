@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-08](papers/2026-08-08.md) - 8 papers
 - [2026-08-07](papers/2026-08-07.md) - 48 papers
 - [2026-08-06](papers/2026-08-06.md) - 20 papers
 - [2026-08-05](papers/2026-08-05.md) - 57 papers
@@ -138,6 +139,146 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-08 (8 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-08-08
+
+**Paper Count**: 8
+
+---
+
+## 1. The Bitter Lesson of Tool Calling / 工具调用的惨痛教训
+
+**Date**: 2026-08-06 | **arXiv**: [2608.06370v1](http://arxiv.org/abs/2608.06370v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.06370v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Tool use transforms LLMs into agents that act beyond their training data, and for code-capable models, programmatic tool calling extends this further by replacing rigid JSON calls with scripts that chain and parallelize naturally. However, a systematic evaluation of tools as code on an established benchmark across current and prior model generations under real-world task conditions has not been conducted. In this work, we empirically compare programmatic tool calling (PTC) to native JSON tool calling across 14 language models on BFCL v4. In the programmatic tool calling paradigm, tools are exposed as typed Python stubs that the model invokes through code, with execution and results handled in a single agent turn. Programmatic tool calling matches or exceeds native JSON tool calling in 11 of 14 models on BFCL v4, with the GPT-5.6 family achieving a 10.6% improvement over the JSON tool calling baseline. Further, it matches or outperforms baseline in 13 of 14 models under parallel fan-out, and holds stable under context rot conditions where baseline degrades 2.3% on average. Our results demonstrate that programmatic tool calling is a viable and robust alternative to JSON tool calling, with performance tracking model capability across release generations.
+
+工具的使用将 LLM 转变为超越其训练数据的代理，而对于支持代码的模型，编程工具调用通过用自然链接和并行的脚本替换严格的 JSON 调用来进一步扩展这一点。然而，尚未对实际任务条件下当前和先前模型代的既定基准对工具即代码进行系统评估。在这项工作中，我们根据经验比较了 BFCL v4 上 14 种语言模型的编程工具调用 (PTC) 与本机 JSON 工具调用。在编程工具调用范例中，工具被公开为模型通过代码调用的类型化 Python 存根，执行和结果在单个代理轮次中处理。在 BFCL v4 上的 14 个模型中，有 11 个模型的编程工具调用与本机 JSON 工具调用相匹配或超过了本机 JSON 工具调用，其中 GPT-5.6 系列比 JSON 工具调用基线提高了 10.6%。此外，在并行扇出的情况下，它在 14 个模型中的 13 个模型中匹配或优于基线，并且在基线平均下降 2.3% 的上下文衰减条件下保持稳定。我们的结果表明，编程工具调用是 JSON 工具调用的可行且强大的替代方案，具有跨版本的性能跟踪模型功能。
+
+</details>
+
+---
+
+## 2. Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering / 追踪心脏：心力衰竭特征工程的循证流程
+
+**Date**: 2026-08-06 | **arXiv**: [2608.06366v1](http://arxiv.org/abs/2608.06366v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.06366v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure, which affects an estimated 6.7 million U.S. adults and requires integrating fragmented EHR data with disease-specific, guideline-based clinical reasoning. Existing rule-based and large language model (LLM)-based approaches offer only partial automation with limited maintainability and evidence traceability. We developed the Nimblemind Multi-Agent System (nMAS), an evidence-linked, rubric-grounded pipeline for automated heart-failure feature engineering, and evaluated it on 500 dummy patient records from nine EHR source tables. nMAS generated 132 structured and 70 rubric-scored aggregated features, verified for structural integrity, rubric compliance, and provenance, and audited by a restricted LLM. Adding the aggregated features improved held-out AUROC from 0.895 to 0.963 for HFrEF and 0.870 to 0.910 for HFpEF phenotyping, and an independent LLM-based rubric assessment of evidence support and methodological soundness scored the features at 81.5% of maximum points. These results demonstrate the feasibility of automated, auditable feature engineering for complex cardiovascular EHR data, though evaluation was limited to a single-institution cohort and external validation is needed.
+
+电子健康记录（EHR）特征工程是临床研究和人工智能的主要瓶颈，占数据科学家工作量的39-45%。这在心力衰竭中尤其明显，心力衰竭影响了大约 670 万美国成年人，需要将零碎的 EHR 数据与特定疾病、基于指南的临床推理相结合。现有的基于规则和基于大语言模型 (LLM) 的方法仅提供部分自动化，可维护性和证据可追溯性有限。我们开发了 Nimblemind 多智能体系统 (nMAS)，这是一个用于自动心力衰竭特征工程的循证、基于标题的管道，并根据来自 9 个 EHR 源表的 500 条虚拟患者记录对其进行了评估。 nMAS 生成了 132 个结构化和 70 个评分聚合特征，验证了结构完整性、评分标准合规性和出处，并由受限制的法学硕士进行了审核。添加聚合特征将 HFrEF 的 AUROC 从 0.895 提高到 0.963，将 HFpEF 表型的 AUROC 从 0.870 提高到 0.910，并且基于 LLM 的证据支持和方法健全性的独立评估对这些特征进行了最高分的 81.5%。这些结果证明了针对复杂心血管 EHR 数据进行自动化、可审核的特征工程的可行性，尽管评估仅限于单个机构队列并且需要外部验证。
+
+</details>
+
+---
+
+## 3. TRAJDEBUG: Tracing Error Lifecycle to Identify Critical Failures in Long-Horizon Agent Trajectories / TRAJDEBUG：跟踪错误生命周期以识别长视野代理轨迹中的关键故障
+
+**Date**: 2026-08-06 | **arXiv**: [2608.06346v1](http://arxiv.org/abs/2608.06346v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.06346v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM-based agentic systems have shown remarkable capabilities in complex domains, while suffering from cascading errors and difficulty in debugging. Critical error detection aims to locate the earliest error step in a failed trajectory that is responsible for the final failure. However, progress faces two main challenges. First, long trajectories make it difficult to identify individual errors, since the evidence for judging a step may be scattered across distant instructions, observations, and prior context. Second, failed trajectories often contain multiple local errors with different downstream effects, only some of which remain responsible for the final failure. In this work, we propose TrajDebug, an error-lifecycle tracing framework that addresses long-trajectory error discovery with multi-granularity history compression and evidence-based error identification, and supports critical attribution by tracing each error's resolution status and terminal impact. We further construct TrajErrBench, a benchmark of 486 manually annotated failed trajectories from Tau2Bench and SWE-Bench Pro, covering realistic tool-use and coding scenarios. Experiments across diverse agent benchmarks show that TrajDebug achieves the best overall performance over existing baselines, and application studies further demonstrate that its diagnoses provide actionable feedback for improving downstream agent success. We will release the codes and data to facilitate further research.
+
+基于LLM的代理系统在复杂领域表现出了卓越的能力，但同时也面临着级联错误和调试困难的问题。关键错误检测旨在定位失败轨迹中导致最终失败的最早错误步骤。然而，进展面临两个主要挑战。首先，长轨迹使得识别个体错误变得困难，因为判断步骤的证据可能分散在遥远的指令、观察和先前的背景中。其次，失败的轨迹通常包含多个具有不同下游影响的局部错误，只有其中一些仍然对最终失败负责。在这项工作中，我们提出了 TrajDebug，这是一种错误生命周期跟踪框架，它通过多粒度历史压缩和基于证据的错误识别来解决长轨迹错误发现问题，并通过跟踪每个错误的解决状态和最终影响来支持关键归因。我们进一步构建了 TrajErrBench，这是来自 Tau2Bench 和 SWE-Bench Pro 的 486 个手动注释的失败轨迹的基准，涵盖了实际的工具使用和编码场景。跨不同代理基准的实验表明，TrajDebug 在现有基准上实现了最佳整体性能，应用研究进一步表明，其诊断为提高下游代理的成功提供了可操作的反馈。我们将发布代码和数据以方便进一步的研究。
+
+</details>
+
+---
+
+## 4. Benchmarking and Enhancing LLMs for Rule-Intensive Review of National Standard Documents / 国家标准文件规则强化审查的法学硕士基准测试和增强
+
+**Date**: 2026-08-06 | **arXiv**: [2608.06312v1](http://arxiv.org/abs/2608.06312v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.06312v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) increasingly support complex professional tasks, yet their capabilities in rule-intensive document review remain insufficiently evaluated. National standard documents, such as China GB/T standards, offer a representative testbed: they are lengthy, highly structured, and governed by explicit rules for scope, terminology, normative wording, and cross-section consistency. Existing benchmarks focus on domain knowledge and question answering, largely overlooking intrinsic quality review for professional documents. Such reviews rely heavily on human experts, making them costly and difficult to scale. To bridge this gap, we introduce GB/T-Bench, the first benchmark for the structured review of national standard documents. Its GB/T Review Taxonomy is a hierarchical schema covering document structure, scope alignment, normative modality, terminology consistency, and normative references, with 25 diagnosable error types. A controllable counterexample generation mechanism combines deterministic rules and constrained LLM rewriting to process 488 documents into 7,306 traceable review error instances for evaluation. We also develop a diagnosis-oriented evaluation protocol requiring exact matches on error location, review dimension, and error type, plus document-level coverage metrics. We further propose GB/T-Reviewer, a multi-agent framework that converts review knowledge into specialized skills and coordinates global inspection, targeted diagnosis, rule scanning, and result verification. Experiments with 14 mainstream LLMs reveal a substantial human-LLM gap: the strongest model achieves only 0.3280 CMCS versus 0.6640 for experts. GB/T-Reviewer raises the best CMCS to 0.5094, showing the value of structured skill coordination for rule-intensive document review. This work paves the way for trustworthy AI in standardization and other high-stakes document domains.
+
+大型语言模型（LLM）越来越多地支持复杂的专业任务，但它们在规则密集型文档审查方面的能力仍未得到充分评估。国家标准文件，例如中国 GB/T 标准，提供了一个具有代表性的测试平台：它们冗长、结构严密，并受到范围、术语、规范性措辞和横截面一致性的明确规则的约束。现有的基准侧重于领域知识和问题解答，很大程度上忽视了专业文档的内在质量审查。此类审查严重依赖人类专家，导致成本高昂且难以规模化。为了弥补这一差距，我们推出了第一个国家标准文件结构化审查基准 GB/T-Bench。其 GB/T 审查分类法是一个分层模式，涵盖文档结构、范围对齐、规范模式、术语一致性和规范性引用，具有 25 种可诊断错误类型。可控反例生成机制结合了确定性规则和约束LLM重写，将488个文档处理成7,306个可追溯的审阅错误实例进行评估。我们还开发了一种面向诊断的评估协议，要求错误位置、审查维度和错误类型以及文档级覆盖率指标的精确匹配。我们进一步提出GB/T-Reviewer，一个多智能体框架，将评审知识转化为专业技能，协调全局检查、针对性诊断、规则扫描和结果验证。对 14 名主流法学硕士的实验揭示了人类与法学硕士之间的巨大差距：最强模型仅达到 0.3280 CMCS，而专家模型为 0.6640。 GB/T-Reviewer 将最佳 CMCS 提高到 0.5094，显示了结构化技能协调对于规则密集型文档审核的价值。这项工作为标准化和其他高风险文档领域中值得信赖的人工智能铺平了道路。
+
+</details>
+
+---
+
+## 5. Beyond Top-K: Replacing Black-Box Retrieval with Interpretable Agentic Operations / 超越 Top-K：用可解释的代理操作取代黑盒检索
+
+**Date**: 2026-08-06 | **arXiv**: [2608.06305v1](http://arxiv.org/abs/2608.06305v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.06305v1)
+
+**Categories**: cs.AI, cs.CL, cs.IR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Retrieval-augmented generation over long documents is dominated by one design: chunk the text, embed the chunks, and surface the top-k nearest neighbours of the query. We argue that for an important class of documents -- financial statements, audit reports, regulatory returns -- this design is structurally unsound, and we make the argument measurable. On a 780-page government financial report, 86.8% of content lines are table rows, thousands of near-identical figures compete in one embedding space, and a figure inherits its unit from a header a median of 13 lines above it -- so a chunk boundary routinely separates a number from whether it is in lakh or crore, an error of two orders of magnitude. A table-aware chunker built as a steelman fixes the unit problem but leaves 27-30% of numeric chunks with no fiscal-year header at every chunk size we tried. We propose READ (Reliable Embedding-free Agentic Document-search), in which an agent reads the raw document through three deterministic operations -- normalized lexical search, structural navigation, and bounded span reads -- exposed over the Model Context Protocol, so a trajectory is a replayable audit trail, not an opaque similarity score. On 51 verified questions READ answers 58.8% against dense retrieval's 15.7% (p_Holm = 2 x 10^-5) -- or 35.3% tuned, which READ still leads by 23.5 points (p_Holm = 0.017). An agent given the same loop but a top-k tool reaches only 27.5%, locating the gain in the interface rather than in iteration. We also report what the evidence does not support: BM25 is statistically indistinguishable from READ, so our result separates embedding-based from embedding-free retrieval, not agentic from lexical search.
+
+长文档的检索增强生成主要由一种设计主导：对文本进行分块，嵌入块，并显示查询的前 k 个最近邻。我们认为，对于一类重要的文件——财务报表、审计报告、监管回报——这种设计在结构上是不健全的，我们使论点变得可衡量。在一份 780 页的政府财务报告中，86.8% 的内容行是表格行，数千个几乎相同的数字竞争在一个嵌入空间中，并且数字从其上方中位数 13 行的标题继承其单位 - 因此块边界通常将数字与十万或千万分隔开，这是两个数量级的误差。作为 Steelman 构建的表感知分块器解决了单位问题，但在我们尝试的每个块大小中，仍有 27-30% 的数字块没有会计年度标题。我们提出 READ（可靠的无嵌入代理文档搜索），其中代理通过三个确定性操作（标准化词汇搜索、结构导航和有界跨度读取）读取原始文档，这些操作通过模型上下文协议公开，因此轨迹是可重播的审计跟踪，而不是不透明的相似性评分。在 51 个经过验证的问题上，READ 的回答率为 58.8%，而密集检索的回答率为 15.7% (p_Holm = 2 x 10^-5)，即调整后的 35.3%，其中 READ 仍领先 23.5 分 (p_Holm = 0.017)。给定相同循环但使用 top-k 工具的代理仅达到 27.5%，将增益定位在界面而不是迭代中。我们还报告了证据不支持的内容：BM25 在统计上与 READ 无法区分，因此我们的结果将基于嵌入的检索与无嵌入的检索分开，而不是将代理与词汇搜索分开。
+
+</details>
+
+---
+
+## 6. HarnessOpt-Bench: Evaluating LLMs at Harness Optimization / HarnessOpt-Bench：在 Harness Optimization 中评估法学硕士
+
+**Date**: 2026-08-06 | **arXiv**: [2608.06301v1](http://arxiv.org/abs/2608.06301v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.06301v1)
+
+**Categories**: cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As LLMs are increasingly deployed within agentic systems, their capabilities depend not only on the model weights but also on the harness: the prompts, tools, control flow, memory, and orchestration code surrounding them. This makes automated harness optimization -- the iterative and evaluation-guided improvement of a harness by an AI system -- both an important route to improving AI systems and a demanding capability for AI systems themselves. Yet the community lacks a common protocol for measuring how well frontier LLMs perform at this task. We introduce HarnessOpt-Bench, a benchmark for end-to-end harness optimization under expensive and stochastic evaluation. An optimizer, an LLM paired with a coding harness, receives a target agent's seed harness, graded evaluation feedback, and a fixed target-evaluation budget. It edits the harness and nominates a final candidate, which is scored by its normalized gain over the seed on a held-out test partition that remains inaccessible throughout search. A trusted execution environment enforces the evaluation boundary, meters target-agent resource use, and preserves candidate versions for audit. We evaluate 5 frontier LLMs as optimizers both under a shared coding harness and under their native harnesses across 4 downstream tasks, over 111 scored runs. Experiment results show that optimizer models separate more than the coding harnesses they act through, native harnesses are not consistently superior, and gains vary substantially across tasks and seed regimes. These results establish harness optimization as a measurable and discriminative capability with large space for improvement.
+
+随着 LLM 越来越多地部署在代理系统中，它们的功能不仅取决于模型权重，还取决于工具：提示、工具、控制流、内存和围绕它们的编排代码。这使得自动化线束优化——人工智能系统对线束进行迭代和评估引导的改进——既是改进人工智能系统的重要途径，也是对人工智能系统本身的要求很高的能力。然而，社区缺乏一个通用的协议来衡量前沿法学硕士在这项任务上的表现。我们推出 HarnessOpt-Bench，这是在昂贵的随机评估下进行端到端线束优化的基准。优化器（与编码工具配对的法学硕士）接收目标代理的种子工具、分级评估反馈和固定目标评估预算。它编辑工具并提名最终候选者，该候选者根据其相对于保留测试分区上种子的归一化增益进行评分，而该测试分区在整个搜索过程中仍然无法访问。可信执行环境强制执行评估边界、计量目标代理资源使用情况并保留候选版本以供审核。我们评估了 5 个前沿 LLM 作为优化器，它们既在共享编码工具下，又在其本机工具下跨 4 个下游任务，超过 111 次评分运行。实验结果表明，优化器模型比它们所通过的编码工具分离得更多，本机工具并不总是优越的，而且不同任务和种子机制的增益差异很大。这些结果将线束优化确立为一种可测量的、具有区分性的能力，具有很大的改进空间。
+
+</details>
+
+---
+
+## 7. QuanTiMedAI: Quantum-Enhanced Time-Series Model guided by Agentic AI for Cardiac Arrest Mortality Prediction / QuanTiMedAI：由 Agentic AI 引导的量子增强时间序列模型，用于心脏骤停死亡率预测
+
+**Date**: 2026-08-06 | **arXiv**: [2608.06294v1](http://arxiv.org/abs/2608.06294v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.06294v1)
+
+**Categories**: cs.AI, cs.ET
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cardiac arrest remains one of the most lethal conditions encountered in intensive care units. Despite the growing availability of electronic health record data, existing mortality prediction studies in this population largely depend on static summaries derived from early admission. Such approaches ignore the temporal progression of physiological deterioration and recovery that unfolds throughout a patient's ICU stay. To address this limitation, we introduce QuanTiMedAI, a quantum-agentic framework developed for cardiac arrest mortality prediction using agentic AI guided quantum enhancement time series model. The proposed system combines an agentic large language model (LLM) for clinically informed feature discovery with a compact quantum recurrent network for temporality aware mortality prediction. Our findings demonstrate that agentic LLM-guided feature selection consistently outperforms conventional feature selection approaches, and the proposed quantum architecture achieves competitive predictive performance through nonlinear feature enhancement while keeping the number of parameters very low. Through extensive experimentation on a MIMIC-IV cohort of cardiac arrest patients, QuanTiMedAI's quantum-enhanced architecture attains an AUROC of 0.852 using only 605 parameters, an improvement of approximately 2.9\% over a current state-of-the-art baseline for this task. A structured ablation study systematically validates the contribution of each architectural design choice. These results show that quantum-enhanced sequential modeling can exceed classical recurrent networks while using substantially fewer parameters.
+
+心脏骤停仍然是重症监护室遇到的最致命的情况之一。尽管电子健康记录数据的可用性不断增加，但该人群现有的死亡率预测研究在很大程度上依赖于早期入院得出的静态总结。这些方法忽略了患者入住 ICU 期间生理恶化和恢复的时间进程。为了解决这一限制，我们引入了 QuanTiMedAI，这是一种量子代理框架，使用代理 AI 引导的量子增强时间序列模型来预测心脏骤停死亡率。所提出的系统将用于临床知情特征发现的代理大语言模型（LLM）与用于时间感知死亡率预测的紧凑量子循环网络相结合。我们的研究结果表明，代理 LLM 引导的特征选择始终优于传统的特征选择方法，并且所提出的量子架构通过非线性特征增强实现了有竞争力的预测性能，同时保持参数数量非常低。通过对 MIMIC-IV 心脏骤停患者队列进行广泛实验，QuanTiMedAI 的量子增强架构仅使用 605 个参数即可获得 0.852 的 AUROC，比当前这项任务的最先进基线提高了约 2.9%。结构化消融研究系统地验证了每个建筑设计选择的贡献。这些结果表明，量子增强序列建模可以超越经典的循环网络，同时使用更少的参数。
+
+</details>
+
+---
+
+## 8. A-SR: Self-Evolving Agentic LLMs for Symbolic Regression via Hierarchical Coordination / A-SR：通过层次协调进行符号回归的自我进化代理法学硕士
+
+**Date**: 2026-08-05 | **arXiv**: [2608.04872v2](http://arxiv.org/abs/2608.04872v2) | **PDF**: [Link](http://arxiv.org/pdf/2608.04872v2)
+
+**Categories**: cs.CL, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Symbolic regression aims to discover closed-form equations from data, but existing LLM-guided methods often rely on a unified proposal loop that compresses heterogeneous search failures into a scalar score and a single prompt. We propose A-SR, a self-evolving agentic framework that shifts the control unit from expression edits to role-conditioned evidence views. A-SR coordinates formula discovery through routing among coordination protocols, an online evaluator-reward role policy, and state-routed process memory. During search, evaluator feedback characterizes reliability and productivity, updates role-level utilities, and routes elite motifs, failure traces, and validity diagnostics to different agents. The framework self-evolves at two timescales: within a run, it adapts the search process without updating LLM parameters; across runs, recorded trajectories can be distilled into open-source LLMs as role-conditioned proposal priors. Averaged over the four LSR-Synth scientific domains in LLM-SRBench, A-SR improves Acc@0.01 over baselines from 25.79% to 48.30% with Llama3.1-8B, while A-SR-LoRA improves the corresponding Qwen3-4B result from 24.58% to 38.29%. On four real-world scientific discovery tasks, A-SR obtains the best in-distribution or out-of-distribution normalized mean squared error on 7 of 8 reported metrics.
+
+符号回归旨在从数据中发现封闭式方程，但现有的法学硕士指导方法通常依赖于统一的提案循环，将异构搜索失败压缩为标量分数和单个提示。我们提出了 A-SR，一种自我进化的代理框架，它将控制单元从表达编辑转变为角色条件证据视图。 A-SR 通过协调协议之间的路由、在线评估者奖励角色策略和状态路由过程内存来协调公式发现。在搜索过程中，评估者反馈表征可靠性和生产力，更新角色级实用程序，并将精英主题、故障跟踪和有效性诊断路由到不同的代理。该框架在两个时间尺度上自我进化：在一次运行中，它调整搜索过程而不更新LLM参数；在运行过程中，记录的轨迹可以作为角色条件提案先验提炼成开源 LLM。对 LLM-SRBench 中的四个 LSR-Synth 科学领域进行平均，A-SR 将 Llama3.1-8B 的 Acc@0.01 相对于基线的结果从 25.79% 提高到 48.30%，而 A-SR-LoRA 将相应的 Qwen3-4B 结果从 24.58% 提高到 38.29%。在四项现实世界的科学发现任务中，A-SR 在 8 个报告指标中的 7 个上获得了最佳分布内或分布外归一化均方误差。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-07 (48 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-08-07
