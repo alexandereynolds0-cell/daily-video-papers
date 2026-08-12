@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-12](papers/2026-08-12.md) - 20 papers
 - [2026-08-08](papers/2026-08-08.md) - 1 papers
 - [2026-08-07](papers/2026-08-07.md) - 31 papers
 - [2026-08-06](papers/2026-08-06.md) - 5 papers
@@ -134,6 +135,338 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-12 (20 papers)</b></summary>
+
+# arXiv Video Papers - 2026-08-12
+
+**Paper Count**: 20
+
+---
+
+## 1. Learning How the World Evolves: Extrapolative Video World Models via Latent Dynamics Reasoning / 学习世界如何演变：通过潜在动力学推理推断视频世界模型
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09926v1](http://arxiv.org/abs/2608.09926v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09926v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The world evolves following its dynamics, i.e., its laws of motion. However, leading video diffusion models largely fit the pixels without modeling how the pixels transit over time. Thus, they render visually plausible frames but may not accurately obey the laws. To capture the dynamics purely from pixels, we introduce Latent Dynamics Reasoning (LDR). LDR casts the latent transition as an explicit kinematic integration, where the lower-order dynamics are integrated numerically and the model regresses only the third- and higher-order residual that drives the rollout. For this integration to extrapolate better, LDR runs it on a structured latent rather than dense convolutional features. Following PhyWorld, we validate LDR on a controlled white-box physics benchmark spanning five tasks (uniform motion, parabola, collision, bouncing, looming), focusing on out-of-distribution scenarios that reveal whether a model has truly learned the underlying dynamics. LDR extrapolates the learned dynamics far better: the gap between its in- and out-of-distribution error is over 20$\times$ smaller than the video diffusion baseline's, under both single- and joint-task training at 256$^2$ resolution, while using 26$\times$ fewer parameters and running 143$\times$ faster. LDR can even generalize under severe shift: for example, trained only on red balls moving left-to-right, it correctly predicts the motion of a blue square moving right-to-left. To our knowledge, this is the first video world model that extrapolates learned dynamics beyond its training distribution. Project page: https://lat-dyn-reason.github.io/
+
+世界按照其动力学（即运动定律）演化。然而，领先的视频扩散模型很大程度上适合像素，而没有对像素随时间的传输方式进行建模。因此，它们呈现视觉上合理的框架，但可能不准确地遵守法律。为了纯粹从像素捕获动态，我们引入了潜在动态推理（LDR）。 LDR 将潜在转变转换为显式运动学积分，其中低阶动力学以数值方式积分，并且模型仅回归驱动推出的三阶和高阶残差。为了更好地推断这种集成，LDR 在结构化潜在特征而不是密集卷积特征上运行。继 PhyWorld 之后，我们在涵盖五种任务（均匀运动、抛物线、碰撞、弹跳、隐现）的受控白盒物理基准上验证了 LDR，重点关注揭示模型是否真正学习了底层动力学的分布外场景。 LDR 更好地推断了学习动态：在分辨率为 256$^2$ 的单任务和联合任务训练下，其分布内和分布外误差之间的差距比视频扩散基线小 20$\times$，同时使用的参数减少了 26$\time$，运行速度提高了 143$\time$。 LDR 甚至可以在严重的转变下进行泛化：例如，仅对从左到右移动的红球进行训练，它可以正确预测从右到左移动的蓝色方块的运动。据我们所知，这是第一个视频世界模型，可以推断出其训练分布之外的学习动态。项目页面：https://lat-dyn-reason.github.io/
+
+</details>
+
+---
+
+## 2. Sci-VBench: Evaluating Knowledge- and Reasoning-Intensive Video Generation in Science Domains / Sci-VBench：评估科学领域的知识和推理密集型视频生成
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09873v1](http://arxiv.org/abs/2608.09873v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09873v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce Sci-VBench, a comprehensive benchmark for evaluating knowledge- and reasoning-intensive video generation across scientific domains. It contains 1,253 expert-annotated examples spanning 60 subjects across four core disciplines: Natural Science, Healthcare, Humanities & Social Sciences, and Engineering. Each example requires models to generate temporally rich videos that demand scientific reasoning and knowledge-grounded synthesis, going beyond surface-level visual plausibility. We further establish a rubric-based evaluation protocol. Our analysis shows that, under this protocol, both non-expert human evaluators and MLLM-as-Judge systems can achieve relatively high agreement with expert judgments, supporting reproducible evaluation at scale. We benchmark 16 frontier proprietary and open-source models and find that, while automatic perceptual-quality scores cluster tightly across systems, performance on Prompt Grounding and Scientific and Causal Correctness varies substantially, with a pronounced proprietary-open-source gap. These findings show that advances in visual realism have not yet translated into reliable modeling of scientific and causal dynamics.
+
+我们推出 Sci-VBench，这是一个用于评估跨科学领域的知识和推理密集型视频生成的综合基准。它包含 1,253 个专家注释的示例，涵盖四个核心学科的 60 个主题：自然科学、医疗保健、人文与社会科学以及工程。每个示例都需要模型来生成时间丰富的视频，这些视频需要科学推理和基于知识的合成，超越表面的视觉合理性。我们进一步建立了基于标准的评估协议。我们的分析表明，在该协议下，非专家人类评估者和 MLLM-as-Judge 系统都可以与专家判断达成相对较高的一致性，支持大规模的可重复评估。我们对 16 个前沿专有和开源模型进行了基准测试，发现虽然自动感知质量分数在各个系统中紧密聚集，但提示接地以及科学和因果正确性的性能差异很大，专有与开源之间存在明显的差距。这些发现表明，视觉现实主义的进步尚未转化为科学和因果动力学的可靠模型。
+
+</details>
+
+---
+
+## 3. REFRAMED: Towards Realistic Audio Description Generation for Movies / REFRAMED：为电影生成逼真的音频描述
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09765v1](http://arxiv.org/abs/2608.09765v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09765v1)
+
+**Categories**: cs.CL, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Audio Description (AD) is a verbal narration of key visual content in videos, enabling access for visually impaired audiences. Unlike standard video captioning, AD is a structured editorial task: descriptions must be inserted into gaps in dialogue and must convey only what is needed to understand the narrative being told. However, existing approaches formulate AD generation in an artificial setting where both the content and timing of descriptions are pre-specified, reducing the task to clip-level captioning. They further rely on noisy transcription and alignment pipelines, and lack the rich parallel data required for modeling narrative context. We introduce a new formulation of AD generation in which models must jointly decide what to describe and when to do it. To support this, we present REFRAMED, a high-quality dataset of 2,023 videos that span 3,302 scenes from 206 movies, with professional AD transcripts (both American and British versions), professional subtitles and aligned screenplays. We also provide a manually curated challenge set that pairs full movies with multiple AD references, together with evaluation protocols that leverage dialogue gaps and multi-reference comparisons. Experiments with state-of-the-art AD systems and multimodal LLMs show that they outperform trivial baselines but fall far short of expert human performance. Our dataset and benchmark establish a new foundation for research on video understanding.
+
+音频描述 (AD) 是对视频中关键视觉内容的口头叙述，方便视障观众观看。与标准视频字幕不同，AD 是一项结构化的编辑任务：描述必须插入对话的间隙中，并且必须仅传达理解所讲述的叙述所需的内容。然而，现有的方法在人工设置中制定广告生成，其中描述的内容和时间都是预先指定的，从而将任务简化为剪辑级字幕。它们进一步依赖于嘈杂的转录和对齐管道，并且缺乏建模叙事上下文所需的丰富并行数据。我们引入了 AD 生成的新公式，其中模型必须共同决定描述什么以及何时描述。为了支持这一点，我们推出了 REFRAMED，这是一个包含 2,023 个视频的高质量数据集，涵盖 206 部电影的 3,302 个场景，并配有专业的 AD 脚本（美国和英国版本）、专业字幕和对齐的剧本。我们还提供了一个手动策划的挑战集，将完整的电影与多个 AD 参考配对，以及利用对话间隙和多参考比较的评估协议。对最先进的 AD 系统和多模式法学硕士的实验表明，它们的表现优于普通基线，但远远低于人类专家的表现。我们的数据集和基准为视频理解研究奠定了新的基础。
+
+</details>
+
+---
+
+## 4. World Tokens: Enhancing Embodied Policies with Training-Time World Modeling / 世界代币：通过训练时世界建模增强具体政策
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09730v1](http://arxiv.org/abs/2608.09730v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09730v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language-action (VLA) models are a widely adopted paradigm for embodied policies. They excel at efficient closed-loop control but do not explicitly model how physical scenes evolve as a task unfolds. Recently emerging world-action models (WAMs) leverage pretrained video world models to capture spatiotemporal evolution, yet retaining future generation or a large video backbone in the control loop substantially increases inference cost. We introduce World Tokens, an embodied policy architecture built around a World Adapter that bridges visual-language understanding, world-dynamics modeling, and action generation. It uses world modeling during training to enhance the action policy while preserving efficient deployment. Specifically, the World Adapter transforms VLM features into a fixed set of world tokens, which condition a jointly fine-tuned future-video denoiser and simultaneously serve as the action expert's sole visual-language context. This shared conditioning allows gradients from future-video denoising to directly shape the representation used for action prediction, while exclusive routing prevents the policy from bypassing that representation. At deployment, the world-model branch is removed, leaving only the VLM, World Adapter, and action expert, with no online video-model inference. With a 2B backbone and no embodied action pretraining, World Tokens is highly competitive on LIBERO, attains the best reported averages on SIMPLER, substantially improves real-world R1 Pro success over a matched action-only baseline, and generates each action chunk at VLA-level latency.
+
+视觉-语言-行动（VLA）模型是广泛采用的具体政策范例。它们擅长高效的闭环控制，但没有明确模拟物理场景如何随着任务的展开而演变。最近新兴的世界动作模型 (WAM) 利用预训练的视频世界模型来捕获时空演化，但在控制循环中保留下一代或大型视频主干会大大增加推理成本。我们引入了世界代币，这是一种围绕世界适配器构建的具体策略架构，可连接视觉语言理解、世界动态建模和动作生成。它在训练期间使用世界建模来增强行动策略，同时保持高效部署。具体来说，世界适配器将 VLM 功能转换为一组固定的世界令牌，这些令牌调节联合微调的未来视频降噪器，同时充当动作专家唯一的视觉语言上下文。这种共享条件允许未来视频去噪的梯度直接塑造用于动作预测的表示，而独占路由则防止策略绕过该表示。部署时，世界模型分支被删除，只留下VLM、世界适配器和动作专家，没有在线视频模型推理。凭借 2B 主干网且无具体动作预训练，World Tokens 在 LIBERO 上具有高度竞争力，在 SIMPLER 上获得了最佳报告平均值，与匹配的仅动作基线相比，显着提高了现实世界 R1 Pro 的成功率，并以 VLA 级延迟生成每个动作块。
+
+</details>
+
+---
+
+## 5. Open Evaluation Agent: Efficient and Promptable Evaluation of Visual Generative Models / 开放评估代理：高效、及时地评估视觉生成模型
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09666v1](http://arxiv.org/abs/2608.09666v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09666v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in visual generative models have enabled high-quality image and video generation, but evaluating these models often demands sampling hundreds or thousands of images or videos, which is computationally expensive. Existing evaluation methods also rely on rigid pipelines that overlook specific user needs and provide numerical results without clear explanations. Mimicking how humans quickly form impressions of a model's capabilities from only a few samples, we propose the Evaluation Agent framework, which employs human-like strategies for efficient, dynamic, multi-round evaluations, offering detailed, user-tailored analyses. Given a natural-language evaluation request, the agent decomposes it into sub-aspects, generates targeted prompts, samples images or videos from the evaluated model, invokes suitable evaluation tools, and iteratively updates its plan from the observed evidence, covering both predefined benchmark dimensions and open-ended user concerns. The framework is thus efficient, promptable, explainable, and scalable across models and tools. Experiments show that Evaluation Agent reduces evaluation time to 10% of traditional methods while delivering comparable results. We further introduce Open Evaluation Agent (Open-EA) by constructing EA-CoT-10K, a corpus of history-conditioned step-level instruction-tuning records derived from multi-round evaluation rollouts, and training EA-3B from Qwen2.5-3B-Instruct as a local planning backbone that preserves the structured reasoning, tool invocation, and summary protocol of the API-based agent while reducing dependence on proprietary backbones. Experiments validate the API-based agent on established T2I/T2V benchmarks and open-ended queries, and evaluate Open-EA on four in-domain and three out-of-domain T2V generator families, showing partial cross-family transfer of the learned policy.
+
+视觉生成模型的最新进展已经实现了高质量的图像和视频生成，但评估这些模型通常需要采样数百或数千个图像或视频，这在计算上是昂贵的。现有的评估方法还依赖于严格的流程，忽视了特定的用户需求并提供了没有明确解释的数值结果。模仿人类如何通过少量样本快速形成对模型能力的印象，我们提出了评估代理框架，该框架采用类人策略进行高效、动态、多轮评估，提供详细的、用户定制的分析。给定自然语言评估请求，代理将其分解为子方面，生成有针对性的提示，从评估模型中采样图像或视频，调用合适的评估工具，并根据观察到的证据迭代更新其计划，涵盖预定义的基准维度和开放式用户关注点。因此，该框架高效、及时、可解释且可跨模型和工具扩展。实验表明，评估代理将评估时间缩短至传统方法的 10%，同时提供可比较的结果。我们通过构建 EA-CoT-10K（从多轮评估推出得出的历史条件步骤级指令调整记录的语料库）进一步引入开放评估代理（Open-EA），并从 Qwen2.5-3B-Instruct 训练 EA-3B 作为本地规划骨干，保留基于 API 的代理的结构化推理、工具调用和摘要协议，同时减少对专有骨干的依赖。实验在已建立的 T2I/T2V 基准和开放式查询上验证基于 API 的代理，并在四个域内和三个域外 T2V 生成器系列上评估 Open-EA，显示所学习策略的部分跨系列迁移。
+
+</details>
+
+---
+
+## 6. DUET: A Diversity-Quality Duet of Distillation Experts for Two-Step Video Generation / DUET：用于两步视频生成的蒸馏专家的多样性质量二重奏
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09637v1](http://arxiv.org/abs/2608.09637v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09637v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion models have enabled high-quality video generation in recent years, but the high cost of iterative sampling hinders their practical deployment. Few-step distillation alleviates this cost, yet exposes a quality--diversity trade-off between its two dominant paradigms: trajectory-level distillation (e.g., sCM) favors diversity, whereas distribution-level distillation (e.g., DMD) favors quality. Targeting extreme two-step video generation, we introduce DUET, which reconciles the two paradigms through a noise-level duet of experts: an sCM expert takes the high-noise step to lay out diverse structure, and a DMD expert takes the low-noise step to refine appearance detail. Since the two experts are trained independently with their native objectives, DUET sidesteps the optimization difficulties of loss-level combinations and delivers quality and diversity jointly rather than trading one for the other. We further identify the relay interface and the high-noise stage as the remaining bottlenecks, and address them with RL-guided expert adaptation, yielding DUET+. With the Wan2.1-T2V-1.3B backbone, DUET lifts the two-step quality of sCM close to the level of DMD while retaining nearly all of its structural diversity---about twice that of DMD---and DUET+ further improves overall quality while preserving this diversity advantage. Together, these results establish noise-level expert specialization as a simple, effective paradigm for reconciling diversity and quality in two-step video generation.
+
+近年来，扩散模型已经实现了高质量的视频生成，但迭代采样的高成本阻碍了其实际部署。少步蒸馏减轻了这种成本，但暴露了其两个主要范式之间的质量-多样性权衡：轨迹级蒸馏（例如，sCM）有利于多样性，而分布级蒸馏（例如，DMD）有利于质量。针对极端的两步视频生成，我们引入了 DUET，它通过专家的噪声级二重奏来协调两种范式：sCM 专家采取高噪声步骤来布置多样化结构，DMD 专家采取低噪声步骤来细化外观细节。由于两位专家是根据各自的目标进行独立培训的，因此 DUET 回避了损失水平组合的优化困难，并共同提供质量和多样性，而不是用一个人交换另一个人。我们进一步确定中继接口和高噪声级是剩余的瓶颈，并通过 RL 引导的专家自适应来解决它们，从而产生 DUET+。借助 Wan2.1-T2V-1.3B 主干，DUET 将 sCM 的两步质量提升到接近 DMD 的水平，同时保留几乎所有的结构多样性（大约是 DMD 的两倍），而 DUET+ 进一步提高了整体质量，同时保留了这种多样性优势。总之，这些结果将噪声级专家专业化确立为一种简单、有效的范例，用于协调两步视频生成中的多样性和质量。
+
+</details>
+
+---
+
+## 7. Illusion or Integrity? Geometrical Consistency Metric for AIGC Video Quality Evaluation / 幻觉还是诚信？ AIGC 视频质量评估的几何一致性度量
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09594v1](http://arxiv.org/abs/2608.09594v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09594v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recently, AI-driven video generation has attracted considerable attention. This surge increases the demand for reliable video quality assessment (VQA) metrics to evaluate AI-generated content (AIGC) videos and guide model optimization. Existing studies assess video quality through visual harmony, video-text consistency, and domain-specific alignment, yet lack quantitative metrics for measuring fidelity to physical laws. To address this limitation, we present a novel benchmark that evaluates the quality of AIGC videos based on their compliance with physical principles by quantitatively measuring geometric consistency across frames extracted from generated sequences. This serves as a proxy for estimating the extent to which generated videos conform to real-world physical rules. Specifically, GeoCon-Bench captures global motion through translation estimation, fits homography or fundamental matrix models using background correspondences, and reports complementary metrics, including inlier ratio and geometric error. We also release a dataset containing 20 scenes across six motion categories. Experiments on state-of-the-art AIGC models demonstrate the reliability of GeoCon-Bench as a video quality assessment metric.
+
+最近，人工智能驱动的视频生成引起了广泛关注。这种激增增加了对可靠视频质量评估 (VQA) 指标的需求，以评估人工智能生成的内容 (AIGC) 视频并指导模型优化。现有研究通过视觉和谐、视频文本一致性和特定领域对齐来评估视频质量，但缺乏衡量物理定律保真度的定量指标。为了解决这一限制，我们提出了一种新颖的基准，通过定量测量从生成序列中提取的帧之间的几何一致性，根据 AIGC 视频是否符合物理原理来评估 AIGC 视频的质量。这可以作为估计生成的视频符合现实世界物理规则的程度的代理。具体来说，GeoCon-Bench 通过平移估计捕获全局运动，使用背景对应拟合单应性或基本矩阵模型，并报告补充指标，包括内点比率和几何误差。我们还发布了一个数据集，其中包含 6 个运动类别的 20 个场景。对最先进的 AIGC 模型进行的实验证明了 GeoCon-Bench 作为视频质量评估指标的可靠性。
+
+</details>
+
+---
+
+## 8. VideoVIBE: A Video-Grounded Diagnostic Benchmark for One-Shot Interactive Website Generation / VideoVIBE：用于一次性交互式网站生成的基于视频的诊断基准
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09573v1](http://arxiv.org/abs/2608.09573v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09573v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Natural-language-driven "vibe coding" enables the one-shot generation of visually rich and interactive web applications, yet reliable assessment of their quality has not kept pace. Existing evaluations often score isolated artifacts or final task outcomes, offering limited evidence about which failures occur and why. We introduce VideoVIBE, a video-grounded benchmark that transforms human-operated webpage recordings into fine-grained diagnostic tasks. It contains approximately 1.7K diagnostic Video QA instances derived from 6,338 verified failures across generated webpages, spanning semantic-logical, visual-motion, structural-temporal, and functional failures. Diagnoses are grounded primarily in recorded presentation and behavior, with webpage source code used as complementary context. We further propose V2Lens, a training-free, evidence-grounded multi-agent system that challenges and selectively refines initial video-based diagnoses through targeted visual and source-code verification. Across thirteen closed-source and open-weight Video MLLMs, Gemini-2.5-Flash is the strongest standalone model with a score of 64.54, while V2Lens reaches 71.72, an improvement of 7.18 points. Together, our results show that video-grounded evaluation can move beyond isolated artifacts and aggregate outcomes toward a behaviorally faithful and diagnostically informative account of generated application quality.
+
+自然语言驱动的“vibe 编码”能够一次性生成视觉丰富且交互式的 Web 应用程序，但对其质量的可靠评估却未能跟上步伐。现有的评估通常对孤立的工件或最终任务结果进行评分，提供关于发生哪些故障及其原因的有限证据。我们推出了 VideoVIBE，这是一种基于视频的基准测试，可将人工操作的网页录制转换为细粒度的诊断任务。它包含大约 1.7K 个诊断视频 QA 实例，这些实例源自生成的网页中 6,338 个经过验证的故障，涵盖语义逻辑、视觉运动、结构时间和功能故障。诊断主要基于记录的演示和行为，并使用网页源代码作为补充上下文。我们进一步提出了 V2Lens，这是一种免训练、有证据的多智能体系统，可通过有针对性的视觉和源代码验证来挑战并选择性地完善基于视频的初始诊断。在 13 个闭源和开源视频 MLLM 中，Gemini-2.5-Flash 是最强的独立模型，得分为 64.54，而 V2Lens 达到 71.72，提高了 7.18 分。总之，我们的结果表明，基于视频的评估可以超越孤立的工件，并将结果聚合到对生成的应用程序质量进行行为忠实且具有诊断信息的描述。
+
+</details>
+
+---
+
+## 9. GeoRoute: Geometry-Aware Hybrid Inference for Traffic Future-Frame Prediction / GeoRoute：用于交通未来帧预测的几何感知混合推理
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09493v1](http://arxiv.org/abs/2608.09493v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09493v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon future-frame prediction is important for autonomous driving, traffic surveillance, and intelligent transportation systems, yet remains challenging due to temporal ghosting, geometry drift, and inconsistent object motion. Recent latent video diffusion models have achieved impressive visual quality, but directly applying them to structured traffic scenes often leads to unstable geometry and degraded temporal coherence over extended horizons. We present a training-free inference framework that stabilizes reliable static structure in pretrained video predictions through multi-frame temporal context and view-conditioned routing. For front-camera videos, our method refines generated futures with a multi-frame depth-layered renderer that projects static geometry from observed history frames while preserving dynamic regions from the generative base model. For heterogeneous traffic views, a frozen vision-language model infers a coarse camera group from the observed clip and selects a specialized motion-based predictor. The framework requires neither retraining nor fine-tuning of the underlying video model and can be applied directly to pretrained generators. We validate the proposed framework on the AI City Challenge Track 5 benchmark, where our final system achieves competitive performance among the top-ranked teams. These results demonstrate that geometry-aware inference-time refinement and view-conditioned hybrid inference can improve static-geometry stability and low-level structural fidelity without changing the original model architecture.
+
+长视野未来帧预测对于自动驾驶、交通监控和智能交通系统非常重要，但由于时间重影、几何漂移和不一致的物体运动，仍然具有挑战性。最近的潜在视频扩散模型已经取得了令人印象深刻的视觉质量，但将它们直接应用于结构化交通场景通常会导致几何形状不稳定，并且在扩展范围内时间相干性降低。我们提出了一种免训练推理框架，通过多帧时间上下文和视图条件路由来稳定预训练视频预测中可靠的静态结构。对于前置摄像头视频，我们的方法使用多帧深度分层渲染器来细化生成的未来，该渲染器从观察到的历史帧中投影静态几何图形，同时保留生成基础模型中的动态区域。对于异构交通视图，冻结视觉语言模型从观察到的剪辑中推断出粗略的摄像机组，并选择专门的基于运动的预测器。该框架不需要对底层视频模型进行重新训练或微调，可以直接应用于预训练的生成器。我们在 AI City Challenge Track 5 基准上验证了所提出的框架，我们的最终系统在顶级团队中实现了具有竞争力的表现。这些结果表明，几何感知推理时间细化和视图条件混合推理可以在不改变原始模型架构的情况下提高静态几何稳定性和低级结构保真度。
+
+</details>
+
+---
+
+## 10. Agreement-Based Audio-Visual Segmentation:Champion Report for the MeViS-Audio Track in the 8th LSVOS Challenge / 基于协议的视听分割：第八届LSVOS挑战赛MeViS-Audio赛道冠军报告
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09475v1](http://arxiv.org/abs/2608.09475v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09475v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The MeViS-Audio track asks a system to segment the objects described by a spoken motion expression throughout a video and to return empty masks when the described target is absent. We present a simple staged solution. Qwen3-ASR first converts speech into text. Several video mask tracks are then produced with complementary grounding and segmentation models. Instead of trusting a single prediction, we select the track that has the highest average mask agreement with the other candidates. A small set of explicit direction, count, and plural rules corrects queries that require more than ordinary single-object tracking. Finally, a video-level classifier combines visual, audio-visual, and within-video query scores to decide whether any target is present. The submitted system obtains 0.5952 J &F, 0.7931 no-target accuracy, 0.9205 target accuracy, and a final score of 0.769589. The challenge organizers notified our team that this result ranked first in the track.
+
+MeViS-Audio 轨道要求系统对整个视频中由语音动作表达描述的对象进行分段，并在所描述的目标不存在时返回空掩码。我们提出了一个简单的分阶段解决方案。 Qwen3-ASR 首先将语音转换为文本。然后使用互补的基础和分割模型生成多个视频掩模轨道。我们不相信单个预测，而是选择与其他候选者具有最高平均掩模一致性的轨道。一小组明确的方向、计数和复数规则可以纠正需要比普通单对象跟踪更多的查询。最后，视频级分类器结合视觉、视听和视频内查询分数来决定是否存在任何目标。提交的系统获得0.5952 J&F，0.7931无目标准确率，0.9205目标准确率，最终得分为0.769589。挑战组织者通知我们团队，这个成绩在赛道上排名第一。
+
+</details>
+
+---
+
+## 11. Sekai2: From World Exploration to Interactive World Modeling / Sekai2：从世界探索到交互式世界建模
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09449v1](http://arxiv.org/abs/2608.09449v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09449v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video world models must capture how scenes evolve over time and across viewpoints. Training them for long-horizon generation and camera control therefore benefits from long videos paired with camera trajectories and temporally grounded semantics. Existing corpora rarely offer the three together: large-scale web video provides broad visual diversity but no trajectories or time-aligned text, while pose-annotated datasets are typically short-range or reconstruction-oriented. We introduce Sekai2, a multi-source real-world video dataset that carries the world-exploration footage of Sekai toward interactive world modeling. The release contains 128,892 clips totaling 2,826 hours from 10,428 source videos across 113 countries or regions, and is deliberately weighted toward sustained observation: under a common 120-second decomposition, 43,594 segments reach the full two minutes and account for 51.4% of all footage. Every clip includes a released camera trajectory and hierarchical annotations disentangling subject motion, environment dynamics, static scene content, and camera behavior, resulting in 649,597 temporally grounded segments. Crucially, we further introduce 982 panoramic sequences captured along non-linear trajectories with loops and revisits. These revisits provide repeated observations of the same locations across time and viewpoints, offering essential supervision for learning persistent scene representations, long-term spatial memory, and geometrically consistent world models. Corpus-scale analyses demonstrate complete pose-and-caption coverage, broad geographic and semantic diversity, varied camera trajectories, and highly non-redundant temporal descriptions. Together, these properties make Sekai2 a scalable resource for long-horizon video generation, camera-controllable synthesis, and interactive world-model pre-training.
+
+视频世界模型必须捕捉场景如何随时间和跨视点演变。因此，训练它们进行长视距生成和摄像机控制可以受益于与摄像机轨迹和时间基础语义配对的长视频。现有的语料库很少同时提供这三者：大规模网络视频提供广泛的视觉多样性，但没有轨迹或时间对齐的文本，而姿势注释的数据集通常是短范围的或面向重建的。我们介绍 Sekai2，一个多源现实世界视频数据集，它将 Sekai 的世界探索镜头带入交互式世界建模。该版本包含来自113个国家或地区的10,428个源视频的128,892个片段，总计2,826小时，并刻意偏重于持续观察：在常见的120秒分解下，43,594个片段达到完整的两分钟，占所有片段的51.4%。每个剪辑都包含已发布的摄像机轨迹和分层注释，以解开主体运动、环境动态、静态场景内容和摄像机行为，从而产生 649,597 个时间接地片段。至关重要的是，我们进一步介绍了沿着非线性轨迹捕获的 982 个全景序列，并进行循环和重访。这些重访提供了跨时间和视点对相同位置的重复观察，为学习持久场景表示、长期空间记忆和几何一致的世界模型提供了必要的监督。语料库规模分析展示了完整的姿势和标题覆盖、广泛的地理和语义多样性、不同的相机轨迹以及高度非冗余的时间描述。这些特性共同使 Sekai2 成为一种可扩展的资源，用于长视距视频生成、摄像机可控合成和交互式世界模型预训练。
+
+</details>
+
+---
+
+## 12. Alpha as an Efficiency Signal: Visibility-Routed RGBA Image-to-Video Generation / Alpha 作为效率信号：可见性路由的 RGBA 图像到视频生成
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09355v1](http://arxiv.org/abs/2608.09355v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09355v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+RGBA videos combine RGB appearance with an alpha channel, enabling animated assets to be applied across arbitrary backgrounds, which are heavily used in gaming industry. However, generating high-quality RGBA animations for games remains challenging for two reasons. First, most existing RGBA video datasets are dominated by photorealistic content, with limited coverage of game assets. Second, the traditional generate-then-matte pipelines estimate alpha only after RGB synthesis, so semi-transparent regions are often blurred by background, resulting in unstable matting outputs. More recently, many methods have begun to model RGB and alpha jointly, but existing approaches are mostly text-conditioned, and still have unresolved issues in efficiency and quality. To address these challenges, we introduce GameAlpha-2.4K, a 2.4K-clip game-style RGBA video dataset built with matte-friendly synthesis, multi-hypothesis alpha recovery, and compositing-based quality gates. Using this dataset, we train a reference-conditioned RGBA video generator that jointly produces RGB frames and alpha mattes in a single pass. To improve efficiency, we propose a visibility router that identifies transparent tokens in an early stage and bypasses their later DiT updates, while x_0-lock guides them along the original flow-matching schedule toward self-predicted endpoints. Our model obtains lower FVD than traditional two-stage pipelines, and the visibility router skips 35% of token evaluations in the final two DiT denoising steps, providing a 1.2x backbone speedup with negligible quality degradation compared to dense inference.
+
+RGBA 视频将 RGB 外观与 Alpha 通道相结合，使动画资源能够应用于任意背景，这在游戏行业中被大量使用。然而，为游戏生成高质量的 RGBA 动画仍然具有挑战性，原因有两个。首先，大多数现有的 RGBA 视频数据集以真实感内容为主，游戏资产的覆盖范围有限。其次，传统的“生成然后遮罩”管道仅在 RGB 合成后才估计 alpha，因此半透明区域通常会被背景模糊，导致遮罩输出不稳定。最近，许多方法已经开始对 RGB 和 alpha 进行联合建模，但现有方法大多是文本条件的，并且在效率和质量方面仍然存在未解决的问题。为了应对这些挑战，我们引入了 GameAlpha-2.4K，这是一个 2.4K 剪辑游戏风格 RGBA 视频数据集，采用遮罩友好合成、多假设 alpha 恢复和基于合成的质量门构建。使用此数据集，我们训练一个参考条件 RGBA 视频生成器，该生成器在单次传递中联合生成 RGB 帧和 alpha 遮罩。为了提高效率，我们提出了一个可见性路由器，它可以在早期阶段识别透明令牌并绕过其后续的 DiT 更新，而 x_0-lock 则引导它们沿着原始流匹配时间表走向自我预测的端点。我们的模型获得了比传统两级管道更低的 FVD，并且可见性路由器在最后两个 DiT 去噪步骤中跳过了 35% 的令牌评估，与密集推理相比，提供了 1.2 倍的主干加速，且质量下降可以忽略不计。
+
+</details>
+
+---
+
+## 13. Revisiting the Current Frame: Physical-Trace-Guided Network Output Correction for Video Restoration / 重新审视当前帧：用于视频恢复的物理痕迹引导网络输出校正
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09342v1](http://arxiv.org/abs/2608.09342v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09342v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video restoration methods exploit temporal information to recover information missing from degraded observations. However, reference frames within the sequence may introduce inconsistent degradation, content discrepancy, or reconstruction errors due to physical image-formation variations, occlusion, and imperfect temporal aggregation. Existing approaches mainly focus on improving restoration networks, while the reliability of the generated outputs at different spatial locations remains largely unexplored. In this work, we propose ANCHOR, a model-agnostic framework that revisits the low-quality current frame as a temporally aligned anchor for video restoration correction. Specifically, ANCHOR estimates a spatial trust field from heterogeneous physical-trace evidence and adaptively balances the restoration proposal with the original observation. Experiments on High Dynamic Range video reconstruction and video deraining demonstrate consistent improvements across various state-of-the-art restoration models, validating the effectiveness of reliability-aware output correction for video restoration.
+
+视频恢复方法利用时间信息来恢复从退化的观察中丢失的信息。然而，由于物理图像形成变化、遮挡和不完美的时间聚合，序列内的参考帧可能会引入不一致的降级、内容差异或重建错误。现有的方法主要集中在改进恢复网络，而不同空间位置生成的输出的可靠性在很大程度上仍未得到探索。在这项工作中，我们提出了 ANCHOR，一种与模型无关的框架，它重新审视低质量的当前帧作为视频恢复校正的时间对齐锚点。具体来说，ANCHOR 根据异构物理痕迹证据估计空间信任场，并自适应地平衡恢复建议与原始观察。高动态范围视频重建和视频去雨实验证明了各种最先进的恢复模型的一致改进，验证了视频恢复的可靠性感知输出校正的有效性。
+
+</details>
+
+---
+
+## 14. NBA_Streaming: A Large-Scale Benchmark for Fine-Grained Basketball Commentary Generation in Continuous Streams / NBA_Streaming：连续流中生成细粒度篮球评论的大规模基准
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09200v1](http://arxiv.org/abs/2608.09200v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09200v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Live basketball commentary generation requires determining when an event is sufficiently observable and describing it before subsequent events unfold. However, existing methods are primarily designed for pre-segmented clips or complete videos, making them unsuitable for continuous streams. Existing datasets also provide limited supervision for player identities, fine-grained actions, event attributes, and coherent event chains, restricting the factual richness of generated commentary. To address these limitations, we introduce NBA_Streaming, a large-scale benchmark for online fine-grained basketball commentary generation. It contains 307 hours of basketball broadcasts and approximately 35K temporally aligned events, with annotations of event boundaries, player identities, fine-grained actions, event chains, and natural-language commentary. By moving from isolated clips to continuous streams, NBA_Streaming enables unified evaluation of event localization, response reliability, factual grounding, and commentary quality under causal constraints. We further propose a causal two-stage framework that combines completion-first localization with ball-centric semantic grounding, enabling the system to identify complete events from observed streams and organize scene, event, identity, and action cues for commentary generation. Extensive experiments reveal the difficulty of NBA_Streaming, where existing baselines struggle with online timing, factual grounding, and fine-grained description. Our framework consistently improves over strong alternatives, while the remaining gap highlights NBA_Streaming as a valuable benchmark for streaming sports video understanding and generation.
+
+现场篮球评论的生成需要确定事件何时可以充分观察，并在后续事件发生之前对其进行描述。然而，现有的方法主要是针对预先分段的剪辑或完整视频而设计的，这使得它们不适合连续流。现有数据集还对玩家身份、细粒度动作、事件属性和连贯事件链提供有限的监督，限制了生成的评论的事实丰富性。为了解决这些限制，我们引入了 NBA_Streaming，这是一个用于在线细粒度篮球评论生成的大规模基准。它包含 307 小时的篮球直播和大约 35K 个时间对齐的事件，并带有事件边界注释、球员身份、细粒度动作、事件链和自然语言评论。通过从孤立的剪辑转向连续的流，NBA_Streaming 能够在因果约束下对事件定位、响应可靠性、事实依据和评论质量进行统一评估。我们进一步提出了一个因果两阶段框架，它将完成优先的定位与以球为中心的语义基础相结合，使系统能够从观察到的流中识别完整的事件，并组织场景、事件、身份和动作线索以生成评论。大量的实验揭示了 NBA_Streaming 的困难，现有的基线在在线计时、事实基础和细粒度描述方面遇到了困难。我们的框架不断改进强大的替代方案，而剩余的差距凸显了 NBA_Streaming 作为流媒体体育视频理解和生成的有价值的基准。
+
+</details>
+
+---
+
+## 15. CodecArena: Codec Quality Assessment via Visual Reinforcement Learning / CodecArena：通过视觉强化学习进行编解码器质量评估
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09139v1](http://arxiv.org/abs/2608.09139v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09139v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video coding is advancing into the low and ultra-low bitrate regime, driven by end-to-end codecs that replace the hand-crafted pipeline with jointly optimized neural networks and generative codecs that exploit the priors of video generation models. Yet the dominant metrics, LPIPS and DISTS, measure feature and texture similarity rather than content fidelity: a reconstruction that hallucinates a wrong face or blurs text into convincing strokes can still score well, even when a human rejects it instantly. To address this, we propose CodecArena, the first vision-language framework for video coding quality assessment, casting codec evaluation as source-conditioned comparative reasoning between a reference and its reconstructions. We optimize CodecArena with Facet-GRPO, a visual reinforcement learning scheme that aligns pairwise codec preferences while grounding the verdict in five fidelity facets: identity, objects, text, texture, and temporal consistency. Its facet-anchored reward uses automatically derived facet directions as weak anchors, rather than human per-facet labels, to prevent any single sub-score from dominating the holistic preference and to yield interpretable fine-grained quality judgments. To support training and evaluation in this underexplored regime, we construct two complementary resources: CodecArena-1K, a fully automatic preference dataset of 1,500 comparison groups built from traditional, neural, and generative codec reconstructions with fused vision-language and objective supervision; and CodecArena-Bench, a human-ranked benchmark with source-disjoint videos for fair out-of-domain evaluation. Extensive experiments demonstrate that CodecArena achieves state-of-the-art agreement with human judgments on source-disjoint content across diverse codecs and bitrates, surpassing perceptual metrics and prior vision-language evaluators.
+
+在端到端编解码器的推动下，视频编码正在进入低比特率和超低比特率状态，这些编解码器用联合优化的神经网络和利用视频生成模型先验的生成编解码器取代了手工制作的管道。然而，主要的指标 LPIPS 和 DISTS 衡量的是特征和纹理相似性，而不是内容保真度：幻觉错误的面孔或将文本模糊为令人信服的笔画的重建仍然可以得分很高，即使人类立即拒绝它。为了解决这个问题，我们提出了 CodecArena，这是第一个用于视频编码质量评估的视觉语言框架，将编解码器评估作为参考与其重建之间的源条件比较推理。我们使用 Facet-GRPO 优化 CodecArena，这是一种视觉强化学习方案，可调整成对编解码器偏好，同时将判决基于五个保真度方面：身份、对象、文本、纹理和时间一致性。其刻面锚定奖励使用自动派生的刻面方向作为弱锚点，而不是人类的每个刻面标签，以防止任何单个子分数主导整体偏好，并产生可解释的细粒度质量判断。为了支持这个尚未开发的体系中的训练和评估，我们构建了两个互补资源：CodecArena-1K，一个由 1,500 个比较组组成的全自动偏好数据集，由传统、神经和生成编解码器重建以及融合视觉语言和客观监督构建而成； CodecArena-Bench，一个人工排名的基准，具有源不相交的视频，用于公平的域外评估。大量的实验表明，CodecArena 在不同的编解码器和比特率下实现了与人类对源不相交内容的判断的最先进的一致性，超越了感知指标和先前的视觉语言评估器。
+
+</details>
+
+---
+
+## 16. RAVEN-Eval: Rubric-Guided Automatic Evaluation for AI Video Generation Models Based on LMM Preference Judgement / RAVEN-Eval：基于LMM偏好判断的AI视频生成模型Rubric引导自动评估
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09111v1](http://arxiv.org/abs/2608.09111v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09111v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI video generation has advanced rapidly and entered widespread commercial use. As a result, quality differences among videos produced by state-of-the-art AI video generation models~(AIVGMs) have become increasingly difficult to discern using conventional evaluation criteria, such as visual fidelity and semantic instruction following. Meanwhile, human evaluation now requires more expertise and sustained attention, substantially increasing annotation costs. This calls for automated evaluation that can reliably distinguish fine-grained differences among advanced AIVGMs with minimal human intervention. To address this challenge, we present RAVEN-Eval, a rubric-guided automated evaluation framework for AIVGMs, built primarily on the LMM-as-a-judge paradigm. Through an automatic task curation and quality-filtering pipeline, RAVEN-Eval curates 150 text-to-video~(T2V) tasks and 100 image-to-video~(I2V) tasks, and systematically collects more than 4,500 AIGVs. At its core, RAVEN-Eval adopts rubric-guided automated LMM preference judgement, in which LMM judges conduct pairwise comparisons according to task-specific rubrics. It further introduces an anchor-based model insertion approach to reduce the evaluation cost of incorporating new models. Finally, we evaluate 20 high-performance AIVGMs, as well as the judging capabilities of 13 LMM judges, and establish the RAVEN-Eval Leaderboards. Overall, RAVEN-Eval paves a scalable path for automatic and trustworthy evaluation of rapidly evolving AIVGMs.
+
+AI视频生成发展迅速并进入广泛的商业应用。因此，使用传统的评估标准（例如视觉保真度和语义指令遵循）越来越难以辨别由最先进的人工智能视频生成模型（AIVGM）生成的视频之间的质量差异。与此同时，人工评估现在需要更多的专业知识和持续的关注，从而大大增加了注释成本。这就需要自动评估，能够以最少的人为干预可靠地区分先进 AIVGM 之间的细粒度差异。为了应对这一挑战，我们提出了 RAVEN-Eval，这是一种以标题为指导的 AIVGM 自动评估框架，主要基于 LMM 作为法官范式构建。通过自动任务管理和质量过滤管道，RAVEN-Eval 管理了 150 个文本到视频 (T2V) 任务和 100 个图像到视频 (I2V) 任务，并系统地收集了超过 4,500 个 AIGV。 RAVEN-Eval 的核心采用了评分标准引导的自动 LMM 偏好判断，其中 LMM 判断者根据特定任务的评分标准进行成对比较。它还引入了基于锚的模型插入方法，以降低合并新模型的评估成本。最后，我们评估了20个高性能AIVGM，以及13个LMM评委的评判能力，并建立了RAVEN-Eval排行榜。总体而言，RAVEN-Eval 为快速发展的 AIVGM 的自动且值得信赖的评估铺平了一条可扩展的道路。
+
+</details>
+
+---
+
+## 17. SG-WAM: Text-Grounded and Spatial-aware Semantic Guidance for World-Action Models / SG-WAM：世界动作模型的基于文本和空间感知的语义指导
+
+**Date**: 2026-08-09 | **arXiv**: [2608.08839v1](http://arxiv.org/abs/2608.08839v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.08839v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World-Action Models (WAMs) have emerged as a promising paradigm for robotic manipulation. However, most existing WAMs generate future videos and actions by relying mainly on visual cues rather than language instructions, since off-the-shelf text encoders embed instructions independently of visual observations. As a result, the videos predicted by these WAMs are often semantically misaligned with their corresponding language instructions, which degrades the accuracy of the predicted actions. To overcome this limitation, we propose SG-WAM, a semantic guidance method for world-action models that leverages a vision-language model (VLM) as a semantic planner to enhance the instruction-grounding capacity of world-action models. Specifically, we train a VLM-based planner to predict text-grounded and spatial-aware semantic foresight. The text-grounded semantic foresight grounds the instruction by identifying the correct target objects, and the spatial-aware semantic foresight provides the scene geometry for precise manipulation. We then inject this foresight into the world-action model as high-level semantic guidance, ensuring that both future-video generation and action prediction faithfully follow the language instruction. Extensive experiments in simulation and the real world demonstrate the superiority of our semantic guidance method, showcasing precise manipulation and strong instruction-following capabilities.
+
+世界动作模型（WAM）已成为机器人操纵的一个有前途的范例。然而，大多数现有的 WAM 主要依靠视觉提示而不是语言指令来生成未来的视频和动作，因为现成的文本编码器嵌入独立于视觉观察的指令。因此，这些 WAM 预测的视频在语义上通常与相应的语言指令不一致，从而降低了预测动作的准确性。为了克服这一限制，我们提出了 SG-WAM，一种用于世界动作模型的语义指导方法，它利用视觉语言模型（VLM）作为语义规划器来增强世界动作模型的指令基础能力。具体来说，我们训练一个基于 VLM 的规划器来预测基于文本和空间感知的语义预见。基于文本的语义预见通过识别正确的目标对象来为指令提供基础，而空间感知的语义预见则提供用于精确操作的场景几何形状。然后，我们将这种远见作为高级语义指导注入到世界动作模型中，确保未来视频生成和动作预测忠实地遵循语言指令。模拟和现实世界中的大量实验证明了我们的语义引导方法的优越性，展示了精确的操作和强大的指令跟踪能力。
+
+</details>
+
+---
+
+## 18. LogiShot: Logically Coherent Cross-Shot Video Generation / LogiShot：逻辑连贯的交叉镜头视频生成
+
+**Date**: 2026-08-09 | **arXiv**: [2608.08820v1](http://arxiv.org/abs/2608.08820v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.08820v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generating cross-shot videos that are logically connected is essential for content creation. Currently, most cross-shot video-generation workflows, such as short-drama production, still rely on isolated textual scripts or explicit reference images to specify the generated content. Consequently, when user instructions are underspecified or ambiguous, a generated clip may appear visually plausible on its own but fail to align with the overall narrative, leading to disjointed content. We argue that achieving cross-shot logical coherence in video generation requires establishing logical connections across shots and maintaining visual consistency. To this end, we propose LogiShot, which incorporates information through two complementary paths: 1) LogiShot jointly encodes the context video and other conditioning signals, yielding dense multimodal cues that provide visual-semantic evidence for cross-shot generation; 2) the model maintains a visual memory of the context video throughout generation to preserve visual consistency across shots. Additionally, we construct a dataset with 110K samples and a dedicated benchmark for evaluating cross-shot logical coherence. Experiments demonstrate that LogiShot consistently outperforms existing baselines in terms of logical coherence across multiple shots. Model and data will be made publicly available.
+
+生成逻辑上相互连接的交叉镜头视频对于内容创作至关重要。目前，大多数交叉镜头视频生成工作流程（例如短剧制作）仍然依赖于孤立的文本脚本或明确的参考图像来指定生成的内容。因此，当用户指令不明确或不明确时，生成的剪辑可能在视觉上看起来合理，但无法与整体叙述保持一致，从而导致内容脱节。我们认为，在视频生成中实现跨镜头逻辑连贯性需要在镜头之间建立逻辑连接并保持视觉一致性。为此，我们提出了 LogiShot，它通过两个互补路径合并信息：1）LogiShot 联合编码上下文视频和其他条件信号，产生密集的多模态线索，为交叉镜头生成提供视觉语义证据； 2）模型在整个生成过程中保持上下文视频的视觉记忆，以保持镜头之间的视觉一致性。此外，我们构建了一个包含 11 万个样本的数据集和一个用于评估跨镜头逻辑一致性的专用基准。实验表明，LogiShot 在多个镜头的逻辑一致性方面始终优于现有基线。模型和数据将公开。
+
+</details>
+
+---
+
+## 19. VADER: Adaptive Debiasing for Hallucination Mitigation in Video Large Language Models / VADER：视频大语言模型中用于减轻幻觉的自适应去偏
+
+**Date**: 2026-08-09 | **arXiv**: [2608.08622v1](http://arxiv.org/abs/2608.08622v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.08622v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large vision-language models (LVLMs) have demonstrated strong performance in open-ended video understanding, yet they remain prone to fluent responses unsupported by video evidence. Existing training-free methods typically apply a globally fixed visual intervention or construct a contrastive branch through input perturbation. The former cannot accommodate video-dependent fusion paths, while the latter can be compensated by cross-frame redundancy. We therefore propose Video-Adaptive Debiasing via Evidence Reweighting (VADER), a training-free framework with two complementary modules. Visual Focus Reallocation (VFR) automatically instantiates an intervention policy for each video-question input: it diagnoses layer-wise visual-to-text evidence flow, determines where to intervene, and derives how strongly to reallocate pre-softmax attention from system-token to video-token blocks. Selective Evidence Erasure (SEE) independently masks high-importance visual tokens in every frame, constructing a prior-biased branch that is difficult to compensate through neighboring frames. Contrastive decoding then down-weights predictions that remain confident after selective evidence erasure. Across multiple VideoLLMs, VADER yields substantial improvements on event-level grounding and temporal consistency; on LLaVA-Video-7B, it reaches 72.60% accuracy on EventHallusion.
+
+大型视觉语言模型（LVLM）在开放式视频理解方面表现出了强大的性能，但在没有视频证据支持的情况下，它们仍然容易做出流畅的反应。现有的免训练方法通常应用全局固定的视觉干预或通过输入扰动构建对比分支。前者不能适应视频相关的融合路径，而后者可以通过跨帧冗余来补偿。因此，我们提出通过证据重新加权进行视频自适应去偏（VADER），这是一个具有两个互补模块的免训练框架。视觉焦点重新分配 (VFR) 自动实例化每个视频问题输入的干预策略：它诊断逐层视觉到文本的证据流，确定干预位置，并得出将前 softmax 注意力从系统令牌重新分配到视频令牌块的强度。选择性证据擦除 (SEE) 独立地屏蔽每个帧中的高重要性视觉标记，构建难以通过相邻帧进行补偿的先验偏差分支。然后，对比解码会降低在选择性证据删除后仍然有信心的预测的权重。在多个 VideoLLM 中，VADER 在事件级基础和时间一致性方面取得了重大改进；在 LLaVA-Video-7B 上，EventHallusion 的准确率达到 72.60%。
+
+</details>
+
+---
+
+## 20. REVEAL: A Rubric-Guided Agent for Explicit Evidence Sufficiency Verificationin Long-Video Question Answering / REVEAL：用于长视频问答中显式证据充分性验证的Rubric引导代理
+
+**Date**: 2026-08-09 | **arXiv**: [2608.08612v1](http://arxiv.org/abs/2608.08612v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.08612v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recently, retrieval-augmented and memory-augmented methods have emerged as two promising paradigms for long-video question answering. However, existing methods typically rely on rigid, fixed-length temporal chunking (e.g., 10s) and static offline memory banks, which not only fragment coherent continuous events but also fail to adapt during real-time reasoning. Moreover, whether using multi-scale summaries or multimodal knowledge graphs, current approaches prioritize retrieval relevance while overlooking evidence sufficiency, often stopping to answer once only semantically relevant clues are retrieved, even when key temporal, causal, or fine-grained action evidence is still missing. To tackle these challenges, we propose REVEAL, a rubric-guided agent framework. As a foundation, we introduce an adaptive visual-similarity-based preprocessing pipeline that groups visually coherent adjacent frames into natural event units to construct an offline-online video memory---capturing global video context offline while dynamically maintaining question-conditioned memory online. Built upon this structured memory, REVEAL uses an automatically constructed rubric library to explicitly verify whether retrieved evidence satisfies sufficiency criteria, pinpoints missing clues upon verification failure, and directs targeted re-retrieval for complementary information. Without any extra training, REVEAL consistently outperforms both closed-source and open-source state-of-the-art methods across extensive experiments. These results show that explicitly verifying evidence sufficiency, rather than stopping at semantic relevance, retrieves the decisive clues that prior methods miss and yields more reliable long-video reasoning.
+
+最近，检索增强和记忆增强方法已成为长视频问答的两种有前途的范例。然而，现有的方法通常依赖于严格的、固定长度的时间分块（例如 10 秒）和静态离线存储库，这不仅会分割连贯的连续事件，而且无法适应实时推理。此外，无论是使用多尺度摘要还是多模态知识图，当前的方法都优先考虑检索相关性，而忽视证据充分性，一旦检索到语义相关的线索，通常就会停止回答，即使关键的时间、因果或细粒度的行动证据仍然缺失。为了应对这些挑战，我们提出了 REVEAL，一个以标题为指导的代理框架。作为基础，我们引入了一种基于自适应视觉相似性的预处理管道，它将视觉上相干的相邻帧分组为自然事件单元，以构建离线在线视频记忆——离线捕获全局视频上下文，同时在线动态维护问题条件记忆。基于这种结构化记忆，REVEAL 使用自动构建的标题库来明确验证检索到的证据是否满足充分性标准，在验证失败时查明丢失的线索，并指导有针对性地重新检索补充信息。无需任何额外的训练，REVEAL 在广泛的实验中始终优于闭源和开源的最先进方法。这些结果表明，明确验证证据充分性，而不是停留在语义相关性上，可以检索先前方法错过的决定性线索，并产生更可靠的长视频推理。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-08 (1 papers)</b></summary>
 
 # arXiv Video Papers - 2026-08-08
