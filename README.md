@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-13](papers/2026-08-13.md) - 14 papers
 - [2026-08-12](papers/2026-08-12.md) - 20 papers
 - [2026-08-08](papers/2026-08-08.md) - 1 papers
 - [2026-08-07](papers/2026-08-07.md) - 31 papers
@@ -135,6 +136,242 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-13 (14 papers)</b></summary>
+
+# arXiv Video Papers - 2026-08-13
+
+**Paper Count**: 14
+
+---
+
+## 1. VidForensics-M1: Meta-Detection Reinforcement Learning with Verifiable Temporal Grounding for AI-Generated Video Forensics / VidForensics-M1：具有可验证时间基础的元检测强化学习，用于人工智能生成的视频取证
+
+**Date**: 2026-08-11 | **arXiv**: [2608.11201v1](http://arxiv.org/abs/2608.11201v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.11201v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in video generation models have significantly improved the realism of synthetic videos, blurring the boundary between generated and authentic content and raising concerns about misinformation. Existing MLLM-based detectors mainly rely on supervised fine-tuning or label-level reinforcement learning, where coarse supervision limits generalization to unseen scenarios and emerging video generators. To overcome these limitations, we are the first to introduce \textbf{meta-detection} into AI-generated video detection, enabling reliable forgery detection by jointly optimizing predicted labels and supporting evidence within reinforcement learning. This paradigm requires reliable evidence signals and effective mechanisms to integrate them into label-level optimization. Textual rationales provide semantic descriptions of forgery artifacts, but their generation and verification depend on external models, making supervision vulnerable to hallucinations and semantic biases. In contrast, temporal grounding provides more objective and verifiable evidence, as manipulated intervals can be precisely controlled during forgery construction. Based on this insight, we propose an automated data construction pipeline that generates paired real-fake videos by replacing temporal segments with boundary-frame-conditioned video generation models. Furthermore, we introduce \textbf{Evidence-Guided Reward Redistribution}, which performs evidence-aware credit assignment by redistributing rewards among label-correct responses according to evidence quality. This preserves reliable label supervision while encouraging detectors to acquire fine-grained and verifiable forgery localization capabilities. Extensive experiments demonstrate that \textbf{VidForensics-M1} effectively leverages verifiable temporal evidence to achieve robust and generalizable AI-generated video detection.
+
+视频生成模型的最新进展显着提高了合成视频的真实感，模糊了生成内容和真实内容之间的界限，并引发了对错误信息的担忧。现有的基于 MLLM 的检测器主要依赖于监督微调或标签级强化学习，其中粗略监督限制了对未见过的场景和新兴视频生成器的泛化。为了克服这些限制，我们第一个将 \textbf{meta-detection} 引入人工智能生成的视频检测中，通过联合优化预测标签和强化学习中的支持证据来实现可靠的伪造检测。这种范式需要可靠的证据信号和有效的机制将它们集成到标签级优化中。文本原理提供了伪造制品的语义描述，但它们的生成和验证依赖于外部模型，使得监督容易受到幻觉和语义偏差的影响。相比之下，时间接地提供了更客观和可验证的证据，因为在伪造过程中可以精确控制操纵间隔。基于这一见解，我们提出了一种自动化数据构建管道，通过用边界帧条件视频生成模型替换时间段来生成配对的真假视频。此外，我们引入了 \textbf{Evidence-Guided Reward Redistribution}，它通过根据证据质量在标签正确的响应之间重新分配奖励来执行证据感知的信用分配。这保留了可靠的标签监管，同时鼓励检测器获得细粒度和可验证的伪造定位能力。大量实验表明，\textbf{VidForensics-M1} 有效地​​利用可验证的时间证据来实现鲁棒且可泛化的人工智能生成视频检测。
+
+</details>
+
+---
+
+## 2. R4DSG: Relative 4D Scene Graph Memory for Object-Centric Question Answering in Long Egocentric Video / R4DSG：相对 4D 场景图形内存，用于长自我中心视频中以对象为中心的问答
+
+**Date**: 2026-08-11 | **arXiv**: [2608.11017v1](http://arxiv.org/abs/2608.11017v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.11017v1)
+
+**Categories**: cs.CV, cs.AI, cs.HC, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon egocentric video is a rich substrate for wearable AI assistants, but object-centric questions such as where an item was moved, when it last changed state, or why it was relocated remain difficult because caption- and transcript-based memories rarely preserve persistent object identity or structured spatial change. Existing long-video QA methods mainly emphasize temporal grounding and clip retrieval, while prior 3D scene-graph methods typically assume stronger geometry than free-motion wearable RGB video provides, including point clouds, RGB-D input, posed views, sparse reconstruction, or reconstructed scenes. R4DSG introduces a relative 4D scene graph memory for long egocentric video. Instead of storing raw graph sequences, R4DSG converts video into compact queryable memory entries indexed by time, place, persistent objects, anchor-relative change, and local interaction context. The main idea is to separate stable anchors from dynamic objects, maintain persistent object identity across frames, and represent object state through anchor-relative transitions rather than a globally aligned world model. Built on recent RGB-only advances in promptable video segmentation, temporal propagation, and relative 3D lifting, the method produces a retrieval-ready memory directly usable for long-horizon question answering. Evaluation on a 255-question object-related subset from EgoLifeQA shows, under question-only retrieval, a 6.7-point overall gain over EgoRAG-Text and a 12.5-point gain on when questions, which highlights the value of temporally organized object memory. These results position relative 4D scene graphs as a practical memory substrate for wearable assistants, AR systems, and embodied multimedia agents. GitHub Page: https://dualtransparency.github.io/R4DSG/.
+
+长视野的以自我为中心的视频是可穿戴人工智能助手的丰富基础，但以对象为中心的问题，例如项目被移动到哪里、最后一次改变状态是什么时候，或者为什么被重新定位，仍然很困难，因为基于字幕和转录的记忆很少保留持久的对象身份或结构化空间变化。现有的长视频 QA 方法主要强调时间基础和剪辑检索，而先前的 3D 场景图方法通常假设比自由运动可穿戴 RGB 视频提供更强的几何形状，包括点云、RGB-D 输入、姿势视图、稀疏重建或重建场景。 R4DSG 为长的以自我为中心的视频引入了相对 4D 场景图形存储器。 R4DSG 不是存储原始图形序列，而是将视频转换为按时间、地点、持久对象、锚点相对变化和本地交互上下文索引的紧凑可查询内存条目。主要思想是将稳定锚点与动态对象分开，跨帧维护持久的对象身份，并通过锚点相对转换而不是全局对齐的世界模型来表示对象状态。该方法基于最近在快速视频分割、时间传播和相对 3D 提升方面仅 RGB 的进展，生成可直接用于长视野问答的检索就绪存储器。对来自 EgoLifeQA 的 255 个与对象相关的问题子集的评估显示，在仅问题检索下，比 EgoRAG-Text 总体提高了 6.7 分，在何时问题上提高了 12.5 分，这凸显了按时间组织的对象记忆的价值。这些结果将相对 4D 场景图定位为可穿戴助手、AR 系统和嵌入式多媒体代理的实用存储基底。 GitHub 页面：https://dualtransparency.github.io/R4DSG/。
+
+</details>
+
+---
+
+## 3. Watching Synthetic Videos: Aligning Cross-modal Representations with Visual Synthesis for Zero-shot Video Captioning / 观看合成视频：将跨模态表示与视觉合成相结合，实现零镜头视频字幕
+
+**Date**: 2026-08-11 | **arXiv**: [2608.11013v1](http://arxiv.org/abs/2608.11013v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.11013v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-only training is a popular paradigm in zero-shot video captioning, where the video distribution is not available to the model during training, leading to a cross-modal gap between the training (text-only) and the inference (video-only). Previous works attempt to bridge the gap through simple linear transformations. However, the inherent gap between text and video makes cross-modal representation space alignment insufficient, resulting in inaccurate sentences. To address this issue, we propose a novel zero-shot video captioning framework (WSV) consisting of two training stages, which first generates corresponding synthetic video latent representations via a pretrained text-to-video generation model. To strengthen the fidelity of the latent representations, we propose a polisher capable of bridging the gap between real and synthetic video distributions. Subsequently, we design a prompter that conditions GPT-2 on the polished latent representations to generate the captions in the second training stage. During inference, an input video is encoded by a pretrained 3D Causal VAE and then fed directly into the prompter, which in turn guides GPT-2 to produce the final caption. Experimental results conducted on MSVD, MSR-VTT, and VATEX datasets demonstrate that our proposed method achieves scores of 52 and 95.7 on the B@4 and CIDEr metrics, respectively.
+
+纯文本训练是零镜头视频字幕中的一种流行范例，其中视频分布在训练期间不可用于模型，从而导致训练（纯文本）和推理（纯视频）之间存在跨模式差距。以前的作品试图通过简单的线性变换来弥补这一差距。然而，文本和视频之间固有的差距使得跨模态表示空间对齐不足，导致句子不准确。为了解决这个问题，我们提出了一种新颖的零镜头视频字幕框架（WSV），由两个训练阶段组成，它首先通过预训练的文本到视频生成模型生成相应的合成视频潜在表示。为了增强潜在表示的保真度，我们提出了一种能够弥合真实视频分布和合成视频分布之间差距的抛光器。随后，我们设计了一个提示器，将 GPT-2 置于经过修饰的潜在表示上，以在第二个训练阶段生成字幕。在推理过程中，输入视频由预训练的 3D Causal VAE 进行编码，然后直接输入提示器，提示器进而引导 GPT-2 生成最终字幕。在 MSVD、MSR-VTT 和 VATEX 数据集上进行的实验结果表明，我们提出的方法在 B@4 和 CIDEr 指标上分别获得了 52 和 95.7 的分数。
+
+</details>
+
+---
+
+## 4. StreamFlow: Dynamic Memory Flows for Streaming Video Understanding / StreamFlow：用于流式视频理解的动态内存流
+
+**Date**: 2026-08-11 | **arXiv**: [2608.10949v1](http://arxiv.org/abs/2608.10949v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.10949v1)
+
+**Categories**: cs.CV, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Streaming video understanding requires multimodal large language models (MLLMs) to preserve relevant evidence from continuously evolving streams under strict causality and bounded memory. Yet existing paradigms remain limited: model-based methods require intrusive backbone updates, while memory-based methods expend substantial visual-encoding computation on temporally redundant content and rely on rigid access to visual history. To address these limitations, we introduce StreamFlow, an efficient visual memory framework that enables dynamic, on-demand access to historical visual information. StreamFlow combines a lightweight, dynamics-aware mid-term memory that filters temporal redundancy before visual encoding with a latent long-term memory that consolidates historical video content into visual latents accessible to subsequent reasoning. During generation, an attention-guided retrieval mechanism injects relevant visual latents when the model's reliance on visual evidence weakens. StreamFlow achieves state-of-the-art streaming video understanding performance, reaching 67.73% overall accuracy on StreamingBench, while also delivering strong performance on offline long-video benchmarks. Relative to the vanilla setting, it improves the visual attention score (VAS) by 59.1% while reducing end-to-end latency and peak memory by 50.4% and 21.1%, respectively, enabling more visually grounded and efficient reasoning.
+
+流视频理解需要多模态大语言模型 (MLLM)，以在严格的因果关系和有限记忆下从不断演变的流中保留相关证据。然而现有的范式仍然有限：基于模型的方法需要侵入性主干更新，而基于内存的方法在时间冗余内容上花费了大量的视觉编码计算，并依赖于对视觉历史的严格访问。为了解决这些限制，我们引入了 StreamFlow，这是一种高效的视觉记忆框架，可以动态、按需访问历史视觉信息。 StreamFlow 将轻量级、动态感知的中期记忆与潜在的长期记忆相结合，前者在视觉编码之前过滤时间冗余，后者将历史视频内容整合为后续推理可访问的视觉潜在内容。在生成过程中，当模型对视觉证据的依赖减弱时，注意力引导的检索机制会注入相关的视觉潜伏。 StreamFlow 实现了最先进的流媒体视频理解性能，在 StreamingBench 上达到 67.73% 的整体准确率，同时在离线长视频基准测试中也提供了强劲的性能。相对于普通设置，它提高了 59.1% 的视觉注意力评分 (VAS)，同时将端到端延迟和峰值内存分别降低了 50.4% 和 21.1%，从而实现更加视觉化和高效的推理。
+
+</details>
+
+---
+
+## 5. SafeCA: Safe Cross-Attention Localization and Regulation for Text-to-Video Jailbreak Defense / SafeCA：文本到视频越狱防御的安全交叉注意力定位和监管
+
+**Date**: 2026-08-11 | **arXiv**: [2608.10933v1](http://arxiv.org/abs/2608.10933v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.10933v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-to-Video (T2V) generative models are vulnerable to jailbreak attacks in real-world deployment, leading them to produce harmful or inappropriate content. Existing defense approaches mainly rely on input filtering or reconstruction, which not only incur high computational latency but also tend to distort semantics. To address these issues, we experimentally and systematically analyze the differences between clean and jailbreak samples in the cross-attention feature space, revealing for the first time a cumulative separation effect and a progressively increasing trend of linear separability between the two during the diffusion process. Based on this insight, we propose SafeCA, a feature-level defense mechanism for safe cross-attention localization and regularization. Firstly, we identify key defensive regions and values through attention stability analysis using cross-attention features collected from clean prompts within a single inference. Secondly, SafeCA mitigates anomalous activations via attention masking with energy normalization and introduces a lightweight semantic-space adapter to redirect abnormal semantic flows. Furthermore, we detect and suppress potentially malicious tokens by back-propagating feature anomaly signals to the input cue words, thereby enhancing the deployability of the defense in commercial models. Experimental results show that SafeCA reduces the jailbreak success rate by about 20% on mainstream T2V models, adds almost no inference overhead (+0.1s), and maintains good text-video semantic consistency. Overall, SafeCA provides an architecture-level, deployable protection paradigm for T2V generation models.
+
+文本到视频 (T2V) 生成模型在实际部署中很容易受到越狱攻击，从而导致生成有害或不适当的内容。现有的防御方法主要依赖于输入过滤或重建，这不仅会导致较高的计算延迟，而且往往会扭曲语义。为了解决这些问题，我们通过实验系统地分析了干净样本和越狱样本在交叉注意力特征空间中的差异，首次揭示了扩散过程中两者之间的累积分离效应以及线性可分离性逐渐增加的趋势。基于这一见解，我们提出了 SafeCA，一种用于安全交叉注意力定位和正则化的特征级防御机制。首先，我们使用从单个推理中的干净提示中收集的交叉注意力特征，通过注意力稳定性分析来识别关键的防御区域和价值。其次，SafeCA 通过能量归一化的注意力屏蔽来减轻异常激活，并引入轻量级语义空间适配器来重定向异常语义流。此外，我们通过将特征异常信号反向传播到输入提示词来检测和抑制潜在的恶意标记，从而增强商业模型中防御的可部署性。实验结果表明，SafeCA在主流T2V模型上降低越狱成功率约20%，几乎不增加推理开销（+0.1s），并保持良好的文本视频语义一致性。总体而言，SafeCA 为 T2V 生成模型提供了架构级、可部署的保护范例。
+
+</details>
+
+---
+
+## 6. Temporally Grounded Compositional Camera Motion Understanding via Geometric Knowledge Distillation / 通过几何知识蒸馏理解时间基础的组合相机运动
+
+**Date**: 2026-08-11 | **arXiv**: [2608.10932v1](http://arxiv.org/abs/2608.10932v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.10932v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Understanding camera motion is fundamental to video perception, with applications in spatial intelligence and controllable video generation. Multimodal large language models (MLLMs) provide a natural interface for this task, but existing work typically assigns one or more labels to an entire clip. Such clip-level recognition overlooks two defining properties of real camera motion: it can change within a shot, and multiple movements can occur simultaneously. We therefore formulate camera-motion understanding as temporally grounded, compositional recognition, which requires a model to localize motion-consistent intervals and identify every movement active within each interval. We introduce CamChoreo, a benchmark of 4,229 real single-shot clips with expert-annotated temporal segments. Its annotations use a compact vocabulary of 20 direction-aware labels, and nearly half of the segments contain compound camera motion, with multiple movement primitives active simultaneously. Recognizing such fine-grained, compositional motion is hard for current MLLMs, whose visual encoders emphasize semantic content rather than the geometric evidence on which camera motion depends. Directly injecting features from a frozen 3D foundation model addresses this gap, but requires running the expensive geometry model on every input; we refer to this baseline as CamInject. We instead propose CamDistill, which distills the same geometric knowledge into lightweight camera tokens during training and removes the 3D model at inference. CamDistill matches the accuracy of direct feature injection without running the 3D teacher at inference. Together, CamChoreo and CamDistill advance camera-motion understanding from clip-level labeling to temporally grounded, compositional recognition. Project page: https://ddz16.github.io/cammotion.github.io/.
+
+了解相机运动是视频感知的基础，可应用于空间智能和可控视频生成。多模态大语言模型（MLLM）为此任务提供了一个自然的界面，但现有的工作通常为整个剪辑分配一个或多个标签。这种剪辑级识别忽略了真实摄像机运动的两个定义属性：它可以在一个镜头内发生变化，并且多个运动可以同时发生。因此，我们将相机运动理解制定为基于时间的构图识别，这需要一个模型来定位运动一致的间隔并识别每个间隔内活跃的每个运动。我们介绍 CamChoreo，这是一个包含 4,229 个真实单镜头剪辑（带有专家注释的时间段）的基准。其注释使用由 20 个方向感知标签组成的紧凑词汇表，近一半的片段包含复合相机运动，多个运动基元同时活动。对于当前的 MLLM 来说，识别这种细粒度的组合运动很困难，其视觉编码器强调语义内容，而不是相机运动所依赖的几何证据。直接从冻结的 3D 基础模型注入特征可以解决这一问题，但需要在每个输入上运行昂贵的几何模型；我们将此基线称为 CamInject。相反，我们提出了 CamDistill，它在训练期间将相同的几何知识提炼成轻量级相机标记，并在推理时删除 3D 模型。 CamDistill 与直接特征注入的准确性相匹配，无需在推理时运行 3D 教师。 CamChoreo 和 CamDistill 共同推进相机运动理解，从剪辑级标签到基于时间的构图识别。项目页面：https://ddz16.github.io/cammotion.github.io/。
+
+</details>
+
+---
+
+## 7. Multi-View Relational Distillation for Spatial Reasoning with Vision-Language Models / 使用视觉语言模型进行空间推理的多视图关系蒸馏
+
+**Date**: 2026-08-11 | **arXiv**: [2608.10864v1](http://arxiv.org/abs/2608.10864v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.10864v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language models (VLMs) have achieved strong image and video understanding, yet their visual-spatial representations remain geometrically fragile, leading to failures in spatial reasoning needed for embodied AI, robotics, and autonomous driving. Prior approaches to geometry grounding either fine-tune VLMs on spatial question answering, which can perpetuate spurious visual representations, or fuse features from large geometry-grounded vision models, which substantially increases model size at inference. Knowledge distillation from geometry-grounded vision models offers an alternative, but directly matching multi-view teacher features can disrupt the pretrained alignment between visual and textual representations, degrading object- and language-semantic capabilities. We propose multi-view relational distillation (MVRD), which distills patch-wise cosine similarities across views instead of the teacher features themselves. These relations encode geometric correspondences adequate for spatial understanding, while leaving the student representation underdetermined, allowing it to remain close to its pretrained vision- language space. Across representative VLMs, MVRD improves visual-spatial reasoning, outperforming supervised fine-tuning and feature distillation while approaching feature fusion methods with considerably fewer added parameters and lower latency. We show that MVRD makes visual representations more geometric while retaining language alignment, and generalizes to 3D scene understanding tasks such as object grounding, dense captioning, and question answering.
+
+视觉语言模型（VLM）已经实现了强大的图像和视频理解，但它们的视觉空间表示在几何上仍然脆弱，导致实体人工智能、机器人和自动驾驶所需的空间推理失败。先前的几何基础方法要么在空间问答上微调 VLM，这可能会永久存在虚假视觉表示，要么融合来自大型几何基础视觉模型的特征，这会大大增加推理时的模型大小。从基于几何的视觉模型中提取知识提供了一种替代方案，但直接匹配多视图教师特征可能会破坏视觉和文本表示之间的预训练对齐，从而降低对象和语言语义能力。我们提出了多视图关系蒸馏（MVRD），它蒸馏视图之间的补丁式余弦相似性，而不是教师特征本身。这些关系编码了足以用于空间理解的几何对应关系，同时使学生的表示不确定，从而使其保持接近其预先训练的视觉语言空间。在代表性的 VLM 中，MVRD 改进了视觉空间推理，优于监督微调和特征蒸馏，同时以相当少的添加参数和更低的延迟实现特征融合方法。我们表明，MVRD 使视觉表示更加几何化，同时保留语言对齐，并推广到 3D 场景理解任务，例如对象基础、密集字幕和问题回答。
+
+</details>
+
+---
+
+## 8. MVTrack: Ultrafast Appearance-Free Moving Object Tracking from Compressed Bitstreams / MVTrack：来自压缩比特流的超快无外观移动物体跟踪
+
+**Date**: 2026-08-11 | **arXiv**: [2608.10790v1](http://arxiv.org/abs/2608.10790v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.10790v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Deploying modern video trackers at scale is bottlenecked by the computational cost of RGB-based object detectors. To this end, we present MVTrack, an ultrafast tracker for moving objects that operates directly on H.264 bitstreams. MVTrack combines MVDet, a lightweight detector for motion vector fields, with MVLink, a minimalist kinematic association module. On VIRAT, MVTrack outperforms YOLO26n while using 60$\times$ fewer parameters, requiring 40$\times$ fewer FLOPs, and reducing CPU latency by 8.6$\times$. These results demonstrate that compressed video data alone can enable accurate and scalable surveillance tracking, thereby bypassing the need for pixel reconstruction.
+
+大规模部署现代视频跟踪器受到基于 RGB 的物体检测器的计算成本的瓶颈。为此，我们推出了 MVTrack，这是一种直接在 H.264 比特流上运行的移动物体超快跟踪器。 MVTrack 将 MVDet（运动矢量场的轻量级检测器）与 MVLink（极简运动学关联模块）相结合。在 VIRAT 上，MVTrack 的性能优于 YOLO26n，同时使用的参数减少了 60$\time$，需要的 FLOP 减少了 40$\time$，并将 CPU 延迟降低了 8.6$\times$。这些结果表明，仅压缩视频数据就可以实现准确且可扩展的监视跟踪，从而绕过像素重建的需要。
+
+</details>
+
+---
+
+## 9. FADE: From Passive Verification to Active Discovery in Counterfactual Video Understanding / FADE：反事实视频理解中从被动验证到主动发现
+
+**Date**: 2026-08-11 | **arXiv**: [2608.10764v1](http://arxiv.org/abs/2608.10764v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.10764v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Counterfactual video understanding evaluates whether models grasp physical and commonsense regularities. However, existing multiple-choice question (MCQ) benchmarks inadvertently leak target events through their questions and candidate options. This reduces the core challenge from active discovery to text-guided verification. In this paper, we present FADE, an effective training framework for counterfactual discovery and explanation. Our method is built on an evidence-first, two-stage training paradigm. First, evidence-internalized supervised fine-tuning grounds the model's predictions in decisive visual anomalies. Second, we apply a fading-anchor reinforcement learning strategy that progressively removes textual guidance, compelling the model to independently discover and explain evidence. To rigorously evaluate this capability, we also introduce an effective pipeline that converts existing MCQ datasets into aligned MCQ, open-ended question answering (OQA), and captioning tasks without requiring additional data curation. Our simple approach yields strong results. Using Qwen3-VL-8B as the baseline, FADE achieves state-of-the-art strict paired scores across all three tasks on DualityVidQA-test and IPV-Bench, outperforming GPT-5.6. In specific, when transitioning from constrained MCQs to unconstrained OQA and captioning, our model demonstrates remarkable robustness. Its performance retention is 90.4% and 67.4% on DualityVidQA-test-substantially higher than the 48.1% and 30.7% retained by GPT-5.6. We hope this simple framework can serve as a solid baseline for future research in unconstrained counterfactual video understanding.
+
+反事实视频理解评估模型是否掌握物理和常识规律。然而，现有的多项选择题（MCQ）基准无意中通过其问题和候选选项泄漏了目标事件。这减少了从主动发现到文本引导验证的核心挑战。在本文中，我们提出了 FADE，一种用于反事实发现和解释的有效训练框架。我们的方法建立在证据第一、两阶段训练范例的基础上。首先，证据内部化的监督微调使模型的预测基于决定性的视觉异常。其次，我们应用褪色锚定强化学习策略，逐步消除文本指导，迫使模型独立发现和解释证据。为了严格评估这种能力，我们还引入了一个有效的管道，可以将现有的 MCQ 数据集转换为对齐的 MCQ、开放式问答 (OQA) 和字幕任务，而无需额外的数据管理。我们简单的方法产生了很好的结果。使用 Qwen3-VL-8B 作为基线，FADE 在 DualityVidQA-test 和 IPV-Bench 上的所有三项任务中均取得了最先进的严格配对分数，性能优于 GPT-5.6。具体来说，当从受约束的 MCQ 过渡到不受约束的 OQA 和字幕时，我们的模型表现出了显着的鲁棒性。在 DualityVidQA 测试中，其性能保留率为 90.4% 和 67.4%，大大高于 GPT-5.6 保留的 48.1% 和 30.7%。我们希望这个简单的框架能够成为未来无约束反事实视频理解研究的坚实基础。
+
+</details>
+
+---
+
+## 10. Beyond Pixels: From Video Priors to 4D Worlds / 超越像素：从视频先验到 4D 世界
+
+**Date**: 2026-08-11 | **arXiv**: [2608.10744v1](http://arxiv.org/abs/2608.10744v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.10744v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+4D generation synthesizes dynamic 3D scenes from conditions such as text or images. Existing methods either reconstruct generated RGB videos with a separate 4D model or adapt a particular video generator to predict geometry directly. The former suffers from distribution mismatch and error propagation, whereas the latter ties 4D prediction to a specific generator and may require retraining when the generator or conditioning regime changes. We ask whether the final denoised latents of video models that share a variational autoencoder (VAE) can instead provide a reusable interface to explicit 4D prediction. Building on this insight, we introduce direct latent-to-4D generation and instantiate it as Latent-to-4D, which bypasses RGB by aligning a video latent with the token grid of a pretrained 4D decoder and refining it through frame-wise and global spatiotemporal attention. Trained on roughly 1K existing reconstruction clips, a single checkpoint transfers unchanged across multiple video diffusion transformers within the same VAE family. On Text4D-200 and I4D-200, Latent-to-4D surpasses matched same-latent Wan+4RC cascades in projection-based DINO-F1 by 2.88--3.45 and 5.81 points, respectively, while also being preferred by human raters for geometry, temporal stability, and overall quality.
+
+4D 生成根据文本或图像等条件合成动态 3D 场景。现有方法要么使用单独的 4D 模型重建生成的 RGB 视频，要么采用特定的视频生成器来直接预测几何。前者会遭受分布不匹配和错误传播的影响，而后者将 4D 预测与特定生成器联系起来，并且当生成器或调节机制发生变化时可能需要重新训练。我们询问共享变分自动编码器 (VAE) 的视频模型的最终去噪潜伏是否可以为显式 4D 预测提供可重用的接口。基于这一见解，我们引入了直接 Latent-to-4D 生成并将其实例化为 Latent-to-4D，它通过将视频潜在与预训练的 4D 解码器的令牌网格对齐并通过逐帧和全局时空注意力对其进行细化来绕过 RGB。在大约 1K 现有重建剪辑上进行训练后，单个检查点在同一 VAE 系列中的多个视频扩散转换器之间传输不变。在 Text4D-200 和 I4D-200 上，Latent-to-4D 分别超过基于投影的 DINO-F1 中匹配的相同潜在 Wan+4RC 级联 2.88--3.45 和 5.81 分，同时在几何形状、时间稳定性和整体质量方面也受到人类评估者的青睐。
+
+</details>
+
+---
+
+## 11. SparSTAR: Sparse Attention for SpaceTime AutoRegressive Video Synthesis / SparSTAR：时空自回归视频合成的稀疏注意力
+
+**Date**: 2026-08-11 | **arXiv**: [2608.10519v1](http://arxiv.org/abs/2608.10519v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.10519v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+InfinityStar extends visual autoregressive generation to video through a sequence of image and clip pyramids. Its changing scale and cross-clip context, however, leave late-scale attention costly and make sparse patterns reused from diffusion or image VAR models unreliable. We introduce SparSTAR, a training-free block-sparse attention method tailored to this setting. At each expensive scale and attention head, SparSTAR scores contiguous key blocks from the current query and key activations, retains required conditioning context, and executes the selected blocks through a forward-only sparse path. We analyze cross-scale consistency within a clip, pattern persistence across clip boundaries, and quality degradation as reuse spans increasingly distant scales. Across these analyses, important key blocks shift, showing that recomputing block selection at each target scale is more reliable than reusing a transferred mask. On 720p text-to-video and image-to-video generation, SparSTAR preserves every token and refinement scale while providing about a 1.6x end-to-end speedup and maintaining VBench and paired-output reconstruction fidelity close to dense InfinityStar.
+
+InfinityStar 通过一系列图像和剪辑金字塔将视觉自回归生成扩展到视频。然而，其不断变化的尺度和跨剪辑上下文使得后期关注成本高昂，并使从扩散或图像 VAR 模型中重用的稀疏模式变得不可靠。我们引入了 SparSTAR，这是一种针对此设置量身定制的免训练块稀疏注意力方法。在每个昂贵的规模和注意力头上，SparSTAR 对当前查询和关键激活中的连续关键块进行评分，保留所需的条件上下文，并通过仅前向稀疏路径执行所选块。我们分析剪辑内的跨尺度一致性、跨剪辑边界的模式持久性，以及随着重用跨越越来越远的尺度而导致的质量下降。在这些分析中，重要的关键块发生了变化，表明在每个目标尺度上重新计算块选择比重用转移的掩模更可靠。在 720p 文本到视频和图像到视频生成中，SparSTAR 保留了每个标记和细化比例，同时提供约 1.6 倍的端到端加速，并保持接近密集 InfinityStar 的 VBench 和配对输出重建保真度。
+
+</details>
+
+---
+
+## 12. Bridging Event Streams and DiT: Event-Guided Video Frame Interpolation / 桥接事件流和 DiT：事件引导视频帧插值
+
+**Date**: 2026-08-11 | **arXiv**: [2608.10479v1](http://arxiv.org/abs/2608.10479v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.10479v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent diffusion models have recently advanced video frame interpolation by synthesizing intermediate frames between input images. However, handling large temporal gaps and complex motion remains challenging, often resulting in motion blur, structural distortions, and temporal inconsistencies. Event cameras provide high-temporal-resolution motion cues that are well suited for bridging these gaps and improving interpolation quality. To exploit this advantage without training an event-assisted model from scratch, we propose an adapter-based framework that incorporates event-derived cues into a pre-trained image-to-video diffusion model with minimal architectural changes. Specifically, our method leverages Image Warped Events (IWEs) and bidirectional sparse optical flow to provide spatially and temporally aligned guidance during generation. By injecting these event-guided structural and motion cues into the diffusion process, our approach reduces interpolation artifacts and improves both reconstruction fidelity and temporal coherence. Experimental results on real and synthetic benchmarks show that our method consistently outperforms existing state-of-the-art approaches. The project page is at https://joseph-lin-tech.github.io/BridgeEventDiT-VFI/.
+
+潜在扩散模型最近通过合成输入图像之间的中间帧来改进视频帧插值。然而，处理大的时间间隙和复杂的运动仍然具有挑战性，通常会导致运动模糊、结构扭曲和时间不一致。事件摄像机提供高时间分辨率运动线索，非常适合弥补这些差距并提高插值质量。为了利用这一优势，而不需要从头开始训练事件辅助模型，我们提出了一种基于适配器的框架，该框架将事件派生的线索合并到预先训练的图像到视频扩散模型中，并且架构变化最小。具体来说，我们的方法利用图像扭曲事件（IWE）和双向稀疏光流在生成过程中提供空间和时间对齐的指导。通过将这些事件引导的结构和运动线索注入扩散过程，我们的方法减少了插值伪影并提高了重建保真度和时间一致性。真实和综合基准的实验结果表明，我们的方法始终优于现有的最先进方法。项目页面位于 https://joseph-lin-tech.github.io/BridgeEventDiT-VFI/。
+
+</details>
+
+---
+
+## 13. Stream Forcing: Constructing Unified Training Trajectory for Robust Streaming Video Generation / 流强制：构建统一的训练轨迹以实现鲁棒的流视频生成
+
+**Date**: 2026-08-11 | **arXiv**: [2608.10439v1](http://arxiv.org/abs/2608.10439v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.10439v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Streaming video generation holds strong potential for world modeling, where future frames must be inferred online sequentially to form a continuous video stream. However, streaming video diffusion models introduce a fundamental train-inference mismatch: inference follows a specialized denoising order, whereas advanced training strategies typically require diverse noise-level configurations. To address this trade-off between train-inference consistency and training coverage, we reformulate the video diffusion sampling as a frame-indexed stochastic process over noise levels. Within this stochastic process space, we construct a continuous training trajectory along which the sampling schedule progressively evolves from independent sampling to inference-consistent sampling. We further introduce a joint calibration algorithm and a temporal correlative sampling algorithm to ensure trajectory smoothness and cross-frame correlation. Building on these designs, we propose Stream Forcing, a unified training framework for streaming video generation that balances training sufficiency and inference efficiency. Extensive experiments demonstrate that Stream Forcing significantly improves generation quality with a 36.6% FVD improvement on the UCF-101 benchmark. Furthermore, our method facilitates robust zero-shot extrapolation to long-horizon video generation with a 27.9% FVD improvement on the UCF-101 benchmark.
+
+流视频生成在世界建模方面具有强大的潜力，其中必须按顺序在线推断未来的帧以形成连续的视频流。然而，流视频扩散模型引入了基本的训练推理不匹配：推理遵循专门的去噪顺序，而高级训练策略通常需要不同的噪声级别配置。为了解决训练推理一致性和训练覆盖率之间的权衡，我们将视频扩散采样重新表述为噪声水平上的帧索引随机过程。在这个随机过程空间内，我们构建了一个连续的训练轨迹，沿着该轨迹采样计划逐渐从独立采样演变为推理一致采样。我们进一步引入联合校准算法和时间相关采样算法，以确保轨迹平滑性和跨帧相关性。基于这些设计，我们提出了 Stream Forcing，这是一种用于流视频生成的统一训练框架，可以平衡训练充分性和推理效率。大量实验表明，Stream Forcing 显着提高了生成质量，在 UCF-101 基准上 FVD 提高了 36.6%。此外，我们的方法促进了对长视野视频生成的鲁棒零样本外推，在 UCF-101 基准上 FVD 提高了 27.9%。
+
+</details>
+
+---
+
+## 14. Sekai2: From World Exploration to Interactive World Modeling / Sekai2：从世界探索到交互式世界建模
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09449v2](http://arxiv.org/abs/2608.09449v2) | **PDF**: [Link](http://arxiv.org/pdf/2608.09449v2)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video world models must capture how scenes evolve over time and across viewpoints. Training them for long-horizon generation and camera control therefore benefits from long videos paired with camera trajectories and temporally grounded semantics. Existing corpora rarely offer the three together: large-scale web video provides broad visual diversity but no trajectories or time-aligned text, while pose-annotated datasets are typically short-range or reconstruction-oriented. We introduce Sekai2, a multi-source real-world video dataset that carries the world-exploration footage of Sekai toward interactive world modeling. The release contains 128,892 clips totaling 2,826 hours from 10,428 source videos across 113 countries or regions, and is deliberately weighted toward sustained observation: under a common 120-second decomposition, 43,594 segments reach the full two minutes and account for 51.4% of all footage. Every clip includes a released camera trajectory and hierarchical annotations disentangling subject motion, environment dynamics, static scene content, and camera behavior, resulting in 649,597 temporally grounded segments. Crucially, we further introduce 982 panoramic sequences captured along non-linear trajectories with loops and revisits. These revisits provide repeated observations of the same locations across time and viewpoints, offering essential supervision for learning persistent scene representations, long-term spatial memory, and geometrically consistent world models. Corpus-scale analyses demonstrate complete pose-and-caption coverage, broad geographic and semantic diversity, varied camera trajectories, and highly non-redundant temporal descriptions. Together, these properties make Sekai2 a scalable resource for long-horizon video generation, camera-controllable synthesis, and interactive world-model pre-training.
+
+视频世界模型必须捕捉场景如何随时间和跨视点演变。因此，训练它们进行长视距生成和摄像机控制可以受益于与摄像机轨迹和时间基础语义配对的长视频。现有的语料库很少同时提供这三者：大规模网络视频提供广泛的视觉多样性，但没有轨迹或时间对齐的文本，而姿势注释的数据集通常是短范围的或面向重建的。我们介绍 Sekai2，一个多源现实世界视频数据集，它将 Sekai 的世界探索镜头带入交互式世界建模。该版本包含来自113个国家或地区的10,428个源视频的128,892个片段，总计2,826小时，并刻意偏重于持续观察：在常见的120秒分解下，43,594个片段达到完整的两分钟，占所有片段的51.4%。每个剪辑都包含已发布的摄像机轨迹和分层注释，以解开主体运动、环境动态、静态场景内容和摄像机行为，从而产生 649,597 个时间接地片段。至关重要的是，我们进一步介绍了沿非线性轨迹捕获的 982 个全景序列，并进行循环和重访。这些重访提供了跨时间和视点对相同位置的重复观察，为学习持久场景表示、长期空间记忆和几何一致的世界模型提供了必要的监督。语料库规模分析展示了完整的姿势和标题覆盖、广泛的地理和语义多样性、不同的相机轨迹以及高度非冗余的时间描述。这些特性共同使 Sekai2 成为一种可扩展的资源，用于长视距视频生成、摄像机可控合成和交互式世界模型预训练。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-12 (20 papers)</b></summary>
 
 # arXiv Video Papers - 2026-08-12
