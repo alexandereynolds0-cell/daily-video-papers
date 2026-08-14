@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-14](papers/2026-08-14.md) - 3 papers
 - [2026-08-13](papers/2026-08-13.md) - 12 papers
 - [2026-08-12](papers/2026-08-12.md) - 8 papers
 - [2026-08-08](papers/2026-08-08.md) - 1 papers
@@ -132,6 +133,66 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-14 (3 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-08-14
+
+**Paper Count**: 3
+
+---
+
+## 1. Better Slots, Better Worlds: Representation Quality & Robustness in Object-Centric World Models / 更好的插槽，更好的世界：以对象为中心的世界模型中的表示质量和鲁棒性
+
+**Date**: 2026-08-12 | **arXiv**: [2608.12078v1](http://arxiv.org/abs/2608.12078v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12078v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learning world models from offline trajectories enables agents to accomplish different tasks through planning. Object-centric (OC) representations, which decompose a scene into a set of slots that bind to its objects, have been proposed as an inductive bias for world models that are more sample-efficient and generalize better. Yet prior object-centric world models (OCWMs) take the slot encoder as given and evaluate only in-distribution, leaving open whether the object-centric bias actually delivers for planning and what within the OCWM drives it. We conduct a controlled study of OCWMs for visual model-predictive control along two axes: object-centric representation quality and generalization under distribution shift relative to scene-centric models. We find that (i) planning success correlates positively with unsupervised slot-quality metrics (FG-ARI, mBO), though the gains saturate at high slot quality; (ii) with well-bound slots, the auxiliary proprioception inputs and masking inductive bias that prior methods relied on become unnecessary; and (iii) under unseen distribution shifts, the OCWM with well-bound slots is more robust overall than the end-to-end trained scene-centric LeWM, while DINO-WM, built on similar frozen pretrained features, remains competitive -- pointing to pretrained features as a key contributor to robustness.
+
+从离线轨迹学习世界模型使智能体能够通过规划完成不同的任务。以对象为中心（OC）的表示将场景分解为一组绑定到其对象的槽，已被提议作为世界模型的归纳偏差，该模型具有更高的样本效率和更好的泛化能力。然而，之前的以对象为中心的世界模型 (OCWM) 将槽位编码器视为给定的，并且仅评估分布内的情况，而以对象为中心的偏差是否真正可用于规划以及 OCWM 内的驱动因素尚未确定。我们对 OCWM 进行了对照研究，用于沿两个轴进行视觉模型预测控制：以对象为中心的表示质量和相对于以场景为中心的模型的分布偏移下的泛化。我们发现 (i) 规划成功与无监督时隙质量指标（FG-ARI、mBO）呈正相关，尽管收益在高时隙质量时饱和； (ii) 通过良好绑定的槽，先前方法所依赖的辅助本体感觉输入和掩蔽归纳偏差变得不必要； (iii) 在看不见的分布变化下，具有良好绑定槽的 OCWM 总体上比端到端训练的以场景为中心的 LeWM 更稳健，而基于类似的冻结预训练特征构建的 DINO-WM 仍然具有竞争力——表明预训练特征是鲁棒性的关键贡献者。
+
+</details>
+
+---
+
+## 2. Keep the Future, Drop the Rollout: RIFT for World Action Models / 保留未来，放弃推出：世界行动模型的 RIFT
+
+**Date**: 2026-08-12 | **arXiv**: [2608.11521v1](http://arxiv.org/abs/2608.11521v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.11521v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World action models (WAMs) condition robot actions on predicted futures, but iterative video rollout increases deployment latency. We ask whether action generation requires the evolving rollout trajectory or only its future representation. Across four WAMs on all 40 LIBERO tasks, paired closed-loop interventions show that masking or reassigning future-cache values changes execution and reduces success, indicating sensitivity to future values and their assigned positions. For Joint and Cosmos-2, however, replaying one fixed final-clean key/value (K/V) cache nearly preserves unmodified execution, with $1.7$ to $1.9$~cm end-effector average displacement error and $97.9\%$ to $98.2\%$ success. This separates cache consumption from production: these models can reuse a fixed cache but still require iterative rollout to construct it. We therefore propose RIFT (\emph{Rollout-free Imagination via Future Tokens}), which uses learned anticipation tokens to construct a complete future K/V cache in one backbone pass while retaining the original future-read interface. On LIBERO, RIFT achieves $98.8\%$ success, close to rollout-based Joint, IDM, and LingBot-VA at $98.4\%$ to $98.6\%$, while reducing action-chunk latency by $68.2\%$ to $89.1\%$. On RoboTwin~2.0, RIFT reaches $92.9/92.6\%$ on clean/randomized scenes, the highest observed among the evaluated methods. These results support rollout-free future conditioning without iterative video generation at deployment.
+
+世界动作模型 (WAM) 根据预测的未来来调节机器人动作，但迭代视频推出会增加部署延迟。我们询问行动生成是否需要不断发展的推出轨迹，或者仅需要其未来的表示。在所有 40 个 LIBERO 任务的四个 WAM 中，配对闭环干预表明，屏蔽或重新分配未来缓存值会改变执行并降低成功率，这表明对未来值及其分配位置的敏感性。然而，对于 Joint 和 Cosmos-2，重播一个固定的最终清理键/值 (K/V) 缓存几乎可以保留未修改的执行，末端执行器平均位移误差为 1.7$ 至 1.9$~cm，成功率为 97.9\%$ 至 98.2\%$。这将缓存消耗与生产分开：这些模型可以重用固定缓存，但仍然需要迭代部署来构建它。因此，我们提出 RIFT（\emph{通过未来代币实现无滚动想象}），它使用学习到的预期代币在一个骨干通道中构建完整的未来 K/V 缓存，同时保留原始的未来读取接口。在 LIBERO 上，RIFT 取得了 98.8\%$ 的成功，接近基于推出的 Joint、IDM 和 LingBot-VA 的 98.4\%$ 至 $98.6\%$，同时将动作块延迟减少了 $68.2\%$ 至 $89.1\%$。在 RoboTwin~2.0 上，RIFT 在干净/随机场景上达到 $92.9/92.6%$，是评估方法中观察到的最高值。这些结果支持免部署的未来调节，无需在部署时迭代视频生成。
+
+</details>
+
+---
+
+## 3. ComBodied Agents: a New Paradigm of Human-Centric Agentic AI / ComBodied Agents：以人为中心的智能体人工智能的新范式
+
+**Date**: 2026-08-11 | **arXiv**: [2608.10915v2](http://arxiv.org/abs/2608.10915v2) | **PDF**: [Link](http://arxiv.org/pdf/2608.10915v2)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+After an older adult misses a medication dose, a software agent can send another reminder and an embodied agent can bring the medication. Yet neither explains whether the person forgot, is confused, has side effects, or deliberately refused, nor what support is appropriate. This reveals a structural gap in Agentic AI: Digital Agents primarily transform software states, while Embodied Agents transform physical states; neither makes a person's evolving state and agency the primary object of modeling, intervention, and evaluation. We introduce Combodied Agents, a human-centered paradigm that perceives, models, predicts, and supports individual human-state trajectories over time, using software tools, sensors, wearables, robots, and human services as action channels rather than end goals. We unify fragmented capabilities across personal assistants, health agents, AI companions, and adaptive human--AI systems into a closed loop: event-based multimodal perception reconstructs meaningful personal events; longitudinal, correctable memory provides temporal context; Personal World Models estimate future personal states and outcomes under alternative decisions and interventions; and an admissible intervention policy selects proportionate support under consent, uncertainty, safety, reversibility, and user control. Feedback from the person and environment updates the loop. Rather than requiring an exhaustive Human Digital Twin, the framework uses purpose-bounded, uncertainty-aware, user-correctable representations. We organize the design space by human-state targets, relational contexts, and agent roles, and propose scenario-centered evaluation, agency-preservation metrics, benchmark requirements, edge-native personal models, and governance directions. Combodied Agents shift Agentic AI from external task completion toward sustained human benefit.
+
+当老年人错过服药剂量后，软件代理可以再次发送提醒，并且实体代理可以带来药物。然而，两者都没有解释该人是否忘记、困惑、有副作用或故意拒绝，也没有解释什么支持是合适的。这揭示了代理人工智能的结构性差距：数字代理主要改变软件状态，而实体代理则改变物理状态；两者都没有将一个人不断变化的状态和能动性作为建模、干预和评估的主要对象。我们引入了组合代理，这是一种以人为中心的范式，它使用软件工具、传感器、可穿戴设备、机器人和人类服务作为行动渠道而不是最终目标，随着时间的推移感知、建模、预测和支持个体人类状态轨迹。我们将个人助理、健康代理、人工智能伴侣和自适应人类人工智能系统的碎片化能力统一到一个闭环中：基于事件的多模态感知重建有意义的个人事件；纵向的、可纠正的记忆提供了时间背景；个人世界模型估计未来的个人状态和在替代决策和干预下的结果；可接受的干预政策在同意、不确定性、安全性、可逆性和用户控制下选择适当的支持。来自人和环境的反馈更新了循环。该框架不需要详尽的人类数字孪生，而是使用有目的的、不确定性感知的、用户可纠正的表示。我们通过人类国家目标、关系上下文和代理角色来组织设计空间，并提出以场景为中心的评估、代理保存指标、基准要求、边缘本地个人模型和治理方向。组合代理将代理人工智能从外部任务完成转向持续的人类利益。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-13 (12 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-08-13
