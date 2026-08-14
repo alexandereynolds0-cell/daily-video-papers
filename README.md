@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-14](papers/2026-08-14.md) - 15 papers
 - [2026-08-13](papers/2026-08-13.md) - 14 papers
 - [2026-08-12](papers/2026-08-12.md) - 20 papers
 - [2026-08-08](papers/2026-08-08.md) - 1 papers
@@ -136,6 +137,258 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-14 (15 papers)</b></summary>
+
+# arXiv Video Papers - 2026-08-14
+
+**Paper Count**: 15
+
+---
+
+## 1. NARU: A Benchmark for NARrative Evolution and Cultural Nuance Understanding in Japanese Extreme Long Video / NARU：日本超长视频叙事演变和文化细微差别理解的基准
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13210v1](http://arxiv.org/abs/2608.13210v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13210v1)
+
+**Categories**: cs.CV, cs.AI, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-form video understanding encompasses tasks that go beyond retrieving isolated events, including tracking an evolving narrative and interpreting social meaning that may remain implicit. However, existing benchmarks rarely evaluate these capabilities jointly, particularly in high-context, non-English media. To address this gap, we introduce NARU, a benchmark designed to evaluate Narrative evolution and Reasoning on cultural Understanding in Japanese long-form video. NARU consists of 1,481 questions grounded in 155 videos totaling 146.8 hours, spanning four narrative and five cultural dimensions. To construct the benchmark at this scale, we propose a hierarchical memory-based annotation pipeline that transforms raw video into structured event, narrative, and cultural annotations, then generates questions via task-oriented synthesis and iterative shortcut removal. The construction process includes two native-speaker verification stages involving 68 annotators. Evaluations across eight model configurations reveal substantial limitations in both long-range narrative integration and culturally grounded reasoning. By exposing these persistent gaps, NARU offers a systematic testing ground for developing MLLMs capable of reliably interpreting long-form, high-context video.
+
+长篇视频理解涵盖的任务不仅仅是检索孤立的事件，还包括跟踪不断发展的叙述和解释可能仍然隐含的社会意义。然而，现有的基准很少联合评估这些能力，特别是在高语境、非英语媒体中。为了解决这一差距，我们引入了 NARU，这是一个旨在评估日本长视频中的叙事演变和文化理解推理的基准。 NARU 包含 1,481 个问题，涉及 155 个视频，总计 146.8 小时，涵盖四个叙事和五个文化维度。为了构建这种规模的基准，我们提出了一种基于分层内存的注释管道，将原始视频转换为结构化事件、叙事和文化注释，然后通过面向任务的合成和迭代快捷方式删除来生成问题。构建过程包括两个母语验证阶段，涉及 68 个注释者。对八种模型配置的评估揭示了长期叙事整合和基于文化的推理的巨大局限性。通过揭示这些持续存在的差距，NARU 为开发能够可靠地解释长格式、高上下文视频的 MLLM 提供了一个系统测试平台。
+
+</details>
+
+---
+
+## 2. StateFlow: Building, Evolving, and Accessing 3D World States for Previsualization / StateFlow：构建、演进和访问 3D 世界状态以进行预可视化
+
+**Date**: 2026-08-12 | **arXiv**: [2608.12314v1](http://arxiv.org/abs/2608.12314v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12314v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Previsualization is an intermediate layer between ideas and production in film, games, architecture, and urban design. It lets creators iteratively refine scenes, actions, cameras, and spatial-temporal dynamics. Yet existing generative methods rely on simple prompts to jointly control all of these factors through one-shot image or video synthesis, offering weak controllability and limited support for iterative editing. Fundamentally, a world comprises multiple elements with geometry, appearance, and other attributes, together with cameras. Different frames are produced through local modifications or recombinations of this shared state, which is otherwise largely reused. Therefore, we argue that the missing component is an explicit and persistent working state. To address this, we present StateFlow, a state-centric framework for generative previsualization. Rather than generating videos in one shot, StateFlow uses an editable 3D world to organize scene structure, evolution, and cameras, while off-the-shelf video models enhance visual quality when higher fidelity is desired. This world is maintained as a persistent structured 3D state of scene elements and camera configurations, serving as the core working representation for previsualization. Built on this insight, StateFlow has three stages to construct, evolve, and access the world state. State construction lifts generated 2D content into a coherent 3D world through prior-guided, conflict-aware dual-view initialization, while State evolution translates user intent into structured state transitions while preserving world memory, avoiding full-scene regeneration for each edit. State access uses render-feedback reflection to refine camera plans into visually feasible trajectories, avoiding reliance on VLM semantics alone. Experiments show that StateFlow produces high-quality 3D worlds for video creation and game-like prototyping.
+
+预可视化是电影、游戏、建筑和城市设计中创意和制作之间的中间层。它让创作者能够迭代地完善场景、动作、摄像机和时空动态。然而现有的生成方法依靠简单的提示，通过一次性图像或视频合成来共同控制所有这些因素，可控性较弱，对迭代编辑的支持有限。从根本上讲，世界由具有几何、外观和其他属性的多个元素以及相机组成。不同的帧是通过对该共享状态进行本地修改或重组而产生的，否则该共享状态将被大量重用。因此，我们认为缺失的组件是一种明确且持久的工作状态。为了解决这个问题，我们提出了 StateFlow，一个用于生成预可视化的以状态为中心的框架。 StateFlow 不是一次性生成视频，而是使用可编辑的 3D 世界来组织场景结构、演变和摄像机，而现成的视频模型可以在需要更高保真度时增强视觉质量。这个世界被维护为场景元素和摄像机配置的持久结构化 3D 状态，作为预可视化的核心工作表示。基于这一见解，StateFlow 分为三个阶段来构建、演化和访问世界状态。状态构建通过预先引导、冲突感知的双视图初始化将生成的 2D 内容提升到连贯的 3D 世界，而状态演化将用户意图转换为结构化状态转换，同时保留世界记忆，避免每次编辑的全场景重新生成。状态访问使用渲染反馈反射将摄像机计划细化为视觉上可行的轨迹，避免单独依赖 VLM 语义。实验表明，StateFlow 可以为视频创作和游戏原型制作生成高质量的 3D 世界。
+
+</details>
+
+---
+
+## 3. Beyond Trial-and-Error: Agentic Optimization for Image-to-Video Adherence / 超越反复试验：图像到视频依从性的代理优化
+
+**Date**: 2026-08-12 | **arXiv**: [2608.12290v1](http://arxiv.org/abs/2608.12290v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12290v1)
+
+**Categories**: cs.CV, cs.AI, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern black-box Image-to-Video (I2V) models offer powerful capabilities in automated content creation, yet their lack of fine-grained control and reliability presents significant challenges in professional workflows. Their inherent stochasticity causes minor variations in textual prompts or hyperparameters to yield drastically different outputs often necessitating inefficient, brute-force trial-and-error processes. To address these limitations, we introduce the ``Agentic Self-Improvement" framework, which reframes video synthesis into a closed-loop, goal-directed optimization. Our framework systematically navigates the generation parameter space using a novel two-stage approach. In the first stage, an iterative prompt optimization loop uses a multimodal Large Language Model (mLLM) to refine the input prompt. This refinement implements two automated evaluations: Davidsonian Scene Graph (DSG) queries ensure semantic adherence, and Common Mistake Questions (CMQ) for artifact detection. At the second stage, we use Bayesian optimization to efficiently co-optimize stochastic seeds and CFG scales. This search is guided by a suite of quality metrics, including the novel Video-Text Adherence (VTA) score derived from the DSG and CMQ evaluations. Our framework significantly outperforms unguided search methods: in human preference studies, videos generated via our agentic approach were strongly preferred over baseline outputs, achieving win rates up to 69\%. This work provides a practical and extensible methodology for enhancing the predictability and control of state-of-the-art video generation models, moving the field beyond speculative curiosities toward reliable, production-ready tools.
+
+现代黑盒图像到视频 (I2V) 模型在自动内容创建方面提供了强大的功能，但它们缺乏细粒度的控制和可靠性，给专业工作流程带来了重大挑战。它们固有的随机性会导致文本提示或超参数发生微小变化，从而产生截然不同的输出，通常需要低效、强力的试错过程。为了解决这些限制，我们引入了“代理自我改进”框架，它将视频合成重新构建为闭环、目标导向的优化。我们的框架使用新颖的两阶段方法系统地导航生成参数空间。在第一阶段，迭代提示优化循环使用多模态大语言模型（mLLM）来细化输入提示。这种细化实现了两个自动评估：戴维森场景图（DSG）查询确保语义一致性，以及常见错误在第二阶段，我们使用贝叶斯优化来有效地共同优化随机种子和 CFG 尺度，包括从 DSG 和 CMQ 评估中得出的新颖的视频文本依从性 (VTA) 分数，我们的框架显着优于无引导的搜索方法：在人类偏好研究中，通过我们的代理方法生成的视频比基线输出更受青睐，获胜率高达 69%。这项工作提供了一种实用且可扩展的方法，用于增强最先进的视频生成模型的可预测性和控制，使该领域超越投机好奇心，转向可靠的、可用于生产的工具。
+
+</details>
+
+---
+
+## 4. ScaleVid: Geometry-Aware Video Object Scaling with Mesh-Free Inference / ScaleVid：利用无网格推理进行几何感知视频对象缩放
+
+**Date**: 2026-08-12 | **arXiv**: [2608.12232v1](http://arxiv.org/abs/2608.12232v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12232v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Geometry-aware video object scaling aims to anisotropically resize the object along object-centric axes while preserving geometric plausibility, temporal coherence, and background consistency. Existing text-guided methods mainly operate in the 2D image plane, while depth-guided approaches provide coarse control and mesh-based methods require costly 3D reconstruction. We present a progressive two-stage training framework that decouples geometry-aware foreground transformation from background preservation and realistic video composition, without mesh-pixel alignment and explicit 3D reconstruction at inference. In both stages, geometrically perturbed pseudo-sources are constructed from real videos, while the original complete videos are retained as reconstruction targets. The first stage uses planar transformations to learn robust foreground-background composition, whereas the second introduces object-centric 3D deformation guidance for geometry-aware scaling. This pseudo-source reconstruction formulation enables real-video synthesis without paired real-world scaling targets. We construct complementary paired-geometry and real-background benchmarks and further evaluate on in-the-wild videos. Extensive experiments demonstrate superior geometric consistency, foreground fidelity, and background preservation, together with faster and more practical inference than methods requiring explicit 3D reconstruction.
+
+几何感知视频对象缩放旨在沿以对象为中心的轴各向异性地调整对象大小，同时保持几何合理性、时间连贯性和背景一致性。现有的文本引导方法主要在 2D 图像平面中运行，而深度引导方法提供粗略控制，而基于网格的方法需要昂贵的 3D 重建。我们提出了一个渐进的两阶段训练框架，它将几何感知的前景变换与背景保留和真实的视频合成分离，无需网格像素对齐和推理时的显式 3D 重建。在这两个阶段中，几何扰动的伪源都是从真实视频构建的，而原始的完整视频被保留作为重建目标。第一阶段使用平面变换来学习稳健的前景-背景合成，而第二阶段则引入以对象为中心的 3D 变形指导，以实现几何感知缩放。这种伪源重建公式可以实现真实视频合成，而无需配对的真实世界缩放目标。我们构建互补的配对几何和真实背景基准，并进一步评估野外视频。大量实验证明了其优越的几何一致性、前景保真度和背景保留，以及比需要显式 3D 重建的方法更快、更实用的推理。
+
+</details>
+
+---
+
+## 5. GeoFlow: Efficient Driving Video Generation via Geometry-Aligned Priors / GeoFlow：通过几何对齐先验有效生成驾驶视频
+
+**Date**: 2026-08-12 | **arXiv**: [2608.12203v1](http://arxiv.org/abs/2608.12203v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12203v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative models like Diffusion Models and Flow Matching have demonstrated remarkable capabilities in synthesizing high-fidelity driving videos, but are severely constrained by high inference latency due to the requirement of extensive sampling steps. We argue that this inefficiency stems from the prevailing reliance on a standard Gaussian source distribution, where consecutive frames are initialized as independent Gaussian noise. This paradigm disregards the rich spatiotemporal correlations inherent in driving videos, compelling the model to regenerate deterministic scene structures existing in previous frames from noise, which is both computationally redundant and prone to geometric inconsistency. To address this problem, we propose GeoFlow, a novel framework designed to achieve efficient driving video generation by harnessing explicit geometric priors. Instead of sampling from standard Gaussian noise, we leverage multi-view geometry and spatially-adaptive noise injection to construct a Geometry-Aligned Prior (GAP) distribution as starting point. This initialization bridges the gap between source distribution and data distribution, yielding a significantly straighter and shorter sampling trajectory. Extensive experiments demonstrate that GeoFlow can achieve remarkable efficiency of both training and inference: merely several hours of fine-tuning on baseline models can significantly boost few-step generation quality, while fully converged training drastically reduces number of inference steps required for state-of-the-art video generation.
+
+扩散模型和流匹配等生成模型在合成高保真驾驶视频方面表现出了卓越的能力，但由于需要大量采样步骤，因此受到高推理延迟的严重限制。我们认为这种低效率源于对标准高斯源分布的普遍依赖，其中连续帧被初始化为独立的高斯噪声。这种范式忽视了驾驶视频中固有的丰富的时空相关性，迫使模型从噪声中重新生成先前帧中存在的确定性场景结构，这在计算上是冗余的，并且容易出现几何不一致。为了解决这个问题，我们提出了 GeoFlow，这是一种新颖的框架，旨在通过利用显式几何先验来实现高效的驾驶视频生成。我们不是从标准高斯噪声中采样，而是利用多视图几何和空间自适应噪声注入来构建几何对齐先验（GAP）分布作为起点。这种初始化弥合了源分布和数据分布之间的差距，产生明显更直和更短的采样轨迹。大量实验表明，GeoFlow 可以实现显着的训练和推理效率：只需对基线模型进行几个小时的微调即可显着提高几步生成质量，而完全融合的训练则大大减少了最先进的视频生成所需的推理步骤数量。
+
+</details>
+
+---
+
+## 6. Autonomous Telerehabilitation via Skeletal Motion Prediction and Joint-Level Performance Assessment / 通过骨骼运动预测和关节级性能评估进行自主远程康复
+
+**Date**: 2026-08-12 | **arXiv**: [2608.12145v1](http://arxiv.org/abs/2608.12145v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12145v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous rehabilitation systems must not only recognize human motion but also provide structured feedback to support users without continuous therapist supervision. This paper presents a telerehabilitation pipeline that integrates skeleton-based exercise quality assessment and short-term motion prediction into a two-module system operating on marker-free RGB video. A self-attentive Bidirectional LSTM performs exercise quality classification using MMD-NCA metric learning, while a graph-based motion prediction module computes per-joint position errors between predicted and observed poses, generating spatially localized deviation signals. Each module is evaluated independently on established benchmarks: the classifier achieves 96.45% mean-class accuracy on squat sequences from the PROZIS dataset, and the adopted STARS predictor achieves a mean MPJPE of 75.8 mm at 560 ms on Human3.6M, outperforming graph and recurrent baselines across all prediction horizons. The framework is designed for eventual deployment in assistive robotics and home-based rehabilitation contexts; end-to-end integration and clinical validation are important directions for future work. By combining motion recognition and prediction in a single system, this work contributes a step toward autonomous, feedback-driven telerehabilitation, for more accessible and scalable rehabilitation solutions.
+
+自主康复系统不仅必须识别人体运动，还必须提供结构化反馈，以在没有治疗师持续监督的情况下为用户提供支持。本文提出了一种远程康复流程，它将基于骨架的运动质量评估和短期运动预测集成到在无标记 RGB 视频上运行的双模块系统中。自注意力双向 LSTM 使用 MMD-NCA 度量学习执行运动质量分类，而基于图的运动预测模块计算预测姿势和观察姿势之间的每个关节位置误差，生成空间局部偏差信号。每个模块都根据既定基准进行独立评估：分类器对来自 PROZIS 数据集的深蹲序列实现了 96.45% 的平均类准确度，并且采用的 STARS 预测器在 Human3.6M 上的 560 ms 上实现了 75.8 mm 的平均 MPJPE，在所有预测范围内优于图形和循环基线。该框架旨在最终部署在辅助机器人和家庭康复环境中；端到端集成和临床验证是未来工作的重要方向。通过将运动识别和预测结合在一个系统中，这项工作朝着自主、反馈驱动的远程康复迈出了一步，从而提供了更易于访问和扩展的康复解决方案。
+
+</details>
+
+---
+
+## 7. Avatar-Forever: Decoupled Parallel Training for High-Quality Real-Time Infinite Avatars / Avatar-Forever：解耦并行训练高质量实时无限头像
+
+**Date**: 2026-08-12 | **arXiv**: [2608.12107v1](http://arxiv.org/abs/2608.12107v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12107v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing streaming video systems often rely on sequential, distillation-centered training pipelines to enable few-step long-video generation. However, this paradigm suffers from two limitations. First, failures or distribution shifts introduced in earlier stages affect later optimization, complicating the training process to converge. Second, the distillation-centric objective favours short-term generation but is prone to quality degradation when autoregressive errors accumulate over long rollouts. We propose Avatar-Forever, a decoupled parallel training framework for high-quality real-time infinite interactive avatars. Instead of coupling generation efficiency and long-horizon robustness under a sequential distillation pipeline, we treat them as two independent capabilities that can be trained in parallel. One branch performs full-parameter distillation to train an efficient generator with high visual quality, while another trains a lightweight long-horizon adapter via Recovery-oriented Rollout Training (RRT), which improves generation robustness under long-horizon inference conditions. Our decoupled parallel training design simplifies the overall training process and avoids unnecessary objective conflicts between few-step generation and long-horizon adaptation. We further introduce ForeverCache, a chunk-wise feature caching mechanism to substantially reduce redundant history computation during streaming inference. Built upon a 22B video foundation model, Avatar-Forever supports unbounded audio-driven avatar generation while maintaining identity consistency, motion coherence, and visual fidelity, enabling an end-to-end throughput of high-resolution 768x512 videos at 27.2 FPS on a single H100 GPU and providing a practical path toward stable digital humans.
+
+现有的流视频系统通常依赖于顺序的、以蒸馏为中心的训练管道来实现几步长视频生成。然而，这种范式有两个限制。首先，早期阶段引入的故障或分布变化会影响后期的优化，使收敛的训练过程变得复杂。其次，以蒸馏为中心的目标有利于短期生成，但当自回归误差在长期部署过程中累积时，很容易出现质量下降。我们提出了 Avatar-Forever，一个用于高质量实时无限交互式头像的解耦并行训练框架。我们没有将生成效率和长期鲁棒性耦合在顺序蒸馏管道下，而是将它们视为可以并行训练的两个独立功能。一个分支执行全参数蒸馏，以训练具有高视觉质量的高效生成器，而另一个分支则通过面向恢复的转出训练（RRT）训练轻量级长视野适配器，这提高了长视野推理条件下的生成鲁棒性。我们的解耦并行训练设计简化了整个训练过程，并避免了少步生成和长期适应之间不必要的客观冲突。我们进一步引入了 ForeverCache，一种分块特征缓存机制，可大大减少流推理期间的冗余历史计算。 Avatar-Forever 基于 22B 视频基础模型构建，支持无限制的音频驱动头像生成，同时保持身份一致性、运动连贯性和视觉保真度，从而在单个 H100 GPU 上以 27.2 FPS 实现高分辨率 768x512 视频的端到端吞吐量，并为稳定的数字人类提供了一条实用路径。
+
+</details>
+
+---
+
+## 8. LoSA: Near-Lossless Sparse Attention for Training-Free Video Diffusion Acceleration / LoSA：用于免训练视频扩散加速的近乎无损稀疏注意力
+
+**Date**: 2026-08-12 | **arXiv**: [2608.12032v1](http://arxiv.org/abs/2608.12032v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12032v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video diffusion transformers are costly to sample: every denoising step applies self-attention over a long 3D token sequence, a quadratic cost that dominates as resolution and duration grow. Sparse attention reduces this cost without retraining, but existing methods pursue aggressive sparsity, where further speedup costs disproportionately more attention fidelity. We target the opposite end of this trade-off: fix near-lossless fidelity by construction, and remove as much computation as this constraint permits. Two observations make this regime practical: roughly 40% of block interactions can be removed while retaining 99% of the attention mass, and the high-mass support remains stable across denoising steps. We propose LoSA, a training-free sparse-attention method that fixes a retained-mass threshold of 99% rather than a sparsity ratio: it measures exact block attention masses at one early dense step, keeps, for each head and query block, the smallest key/value block set meeting the threshold, and reuses the frozen block indices for all remaining steps. On Wan2.1-1.3B, LoSA alone gives a $1.36\times$ speedup with a 0.06-point VBench Overall drop. The benefit is largest under composition: combined with feature caching, LoSA reaches a $3.2\times$ speedup on HunyuanVideo at a 0.02-point drop, versus 0.32 points for the strongest sparse baseline at comparable speed. Across three video diffusion transformers and speedups up to $3.2\times$, LoSA consistently achieves the best training-free speed-quality trade-off.
+
+视频扩散变换器的采样成本很高：每个去噪步骤都在长 3D 标记序列上应用自注意力，随着分辨率和持续时间的增长，二次成本占主导地位。稀疏注意力无需再训练即可降低这种成本，但现有方法追求激进的稀疏性，进一步加速会不成比例地增加注意力保真度。我们的目标是这种权衡的另一端：通过构造修复近乎无损的保真度，并在该约束允许的情况下删除尽可能多的计算。两个观察结果使该机制变得实用：大约 40% 的块交互可以被删除，同时保留 99% 的注意力质量，并且高质量支持在去噪步骤中保持稳定。我们提出了 LoSA，一种免训练的稀疏注意力方法，将保留质量阈值固定为 99%，而不是稀疏率：它在一个早期密集步骤中测量精确的块注意力质量，为每个头和查询块保留满足阈值的最小键/值块集，并为所有剩余步骤重用冻结的块索引。在 Wan2.1-1.3B 上，仅 LoSA 就提供了 1.36 美元\times$ 的加速，而 VBench 总体下降了 0.06 点。组合方面的好处最大：与特征缓存相结合，LoSA 在 HunyuanVideo 上实现了 $3.2\times$ 加速，但下降了 0.02 点，而在同等速度下最强稀疏基线的加速为 0.32 点。通过三个视频扩散变压器和高达 3.2 美元\次$的加速，LoSA 始终实现了最佳的免训练速度与质量权衡。
+
+</details>
+
+---
+
+## 9. Distractor-Aware Video Object Segmentation / 干扰感知视频对象分割
+
+**Date**: 2026-08-12 | **arXiv**: [2608.11835v1](http://arxiv.org/abs/2608.11835v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.11835v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Semi-supervised video object segmentation is a challenging task that aims to segment a target throughout a video sequence given an initial mask at the first frame. Discriminative approaches have demonstrated competitive performance on this task at a sensible complexity. These approaches typically formulate the problem as a one-versus-one classification between the target and the background. However, in reality, a video sequence usually encompasses a target, background, and possibly other distracting objects. Those objects increase the risk of introducing false positives, especially if they share visual similarities with the target. Therefore, it is more effective to separate distractors from the background, and handle them independently.   We propose a one-versus-many scheme to address this situation by separating distractors into their own class. This separation allows imposing special attention to challenging regions that are most likely to degrade the performance. We demonstrate the prominence of this formulation by modifying the learning-what-to-learn (LWL) method to be distractor-aware. Our proposed approach sets a new state-of-the-art on the DAVIS 2017 val dataset, and improves over the baseline on the DAVIS 2017 test-dev benchmark by 4.6 percentage points.
+
+半监督视频对象分割是一项具有挑战性的任务，旨在在给定第一帧的初始掩模的情况下分割整个视频序列中的目标。判别性方法已在该任务上以合理的复杂性展示了竞争性能。这些方法通常将问题表述为目标与背景之间的一对一分类。然而，实际上，视频序列通常包含目标、背景和可能的其他分散注意力的对象。这些物体会增加引入误报的风险，特别是当它们与目标具有视觉相似性时。因此，将干扰因素与背景分开并独立处理会更有效。   我们提出了一种一对多的方案，通过将干扰因素分为自己的类别来解决这种情况。这种分离允许对最有可能降低性能的具有挑战性的区域给予特别关注。我们通过修改“学习什么”（LWL）方法以具有干扰意识，证明了这种表述的重要性。我们提出的方法在 DAVIS 2017 验证数据集上设定了新的最先进水平，并且比 DAVIS 2017 测试开发基准的基线提高了 4.6 个百分点。
+
+</details>
+
+---
+
+## 10. LiveAnimate: Stable Long-Form Streaming Human Animation in Real-Time / LiveAnimate：稳定的实时长格式流人类动画
+
+**Date**: 2026-08-12 | **arXiv**: [2608.11745v1](http://arxiv.org/abs/2608.11745v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.11745v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pose-driven human animation synthesizes a video of a target person from a single reference image and a driving pose stream. Real-time generation is essential for interactive applications such as live streaming, telepresence, and virtual avatars, yet diffusion-based systems require minutes to hours per clip, precluding responsive interaction. We present LiveAnimate, to our knowledge the first animation system to combine real-time streaming with stable long-form generation at billion scale, built on a 14B-parameter video Diffusion Transformer (DiT). A two-stage training pipeline first adapts a pretrained bidirectional DiT into a block-causal autoregressive generator through Reference-Anchored Teacher-Forcing Adaptation, and then reduces the sampling budget to three steps through Block-wise Self-Forcing Distillation. To preserve appearance over extended streams, we introduce Pose-Retrieval Sink Attention (PR-Sink), a bounded KV-cache mechanism combining a Static Sink that permanently anchors the first generated block, a Dynamic Sink that holds a pose-retrieved historical block, and a three-slot Rolling Window. When a pose recurs, PR-Sink restores the relevant appearance context without retaining the entire sequence, so memory and per-block latency remain constant regardless of stream duration. Together with Ulysses sequence parallelism and operator fusion, these designs enable 19.63\,FPS streaming inference on two NVIDIA H100 GPUs. On a three-minute benchmark, LiveAnimate maintains nearly constant perceptual quality and identity from the first 30 seconds to the final minute (IQA 4.047 vs.\ 4.026), while prior systems degrade substantially or require hours of offline computation for the same rollout. These results establish a new operating point in quality, latency, and duration for interactive full-body animation.
+
+姿势驱动的人体动画根据单个参考图像和驾驶姿势流合成目标人的视频。实时生成对于实时流媒体、远程呈现和虚拟化身等交互式应用程序至关重要，但基于扩散的系统每个剪辑需要几分钟到几小时，从而妨碍了响应式交互。据我们所知，我们推出的 LiveAnimate 是第一个将实时流媒体与十亿级稳定长格式生成相结合的动画系统，该系统基于 14B 参数视频扩散变压器 (DiT) 构建。两阶段训练管道首先通过参考锚定教师强制适应将预训练的双向 DiT 适应块因果自回归生成器，然后通过块式自强迫蒸馏将采样预算减少到三个步骤。为了保留扩展流上的外观，我们引入了姿势检索接收器注意（PR-Sink），这是一种有界 KV 缓存机制，结合了永久锚定第一个生成块的静态接收器、保存姿势检索历史块的动态接收器和三槽滚动窗口。当姿势重复出现时，PR-Sink 会恢复相关的外观上下文而不保留整个序列，因此无论流持续时间如何，内存和每块延迟都保持不变。这些设计与 Ulysses 序列并行性和运算符融合相结合，可在两个 NVIDIA H100 GPU 上实现 19.63\,FPS 流式推理。在三分钟基准测试中，LiveAnimate 从前 30 秒到最后一分钟保持几乎恒定的感知质量和特性（IQA 4.047 vs.\ 4.026），而之前的系统性能大幅下降，或者需要数小时的离线计算才能完成相同的部署。这些结果在交互式全身动画的质量、延迟和持续时间方面建立了新的操作点。
+
+</details>
+
+---
+
+## 11. Generative Video Compression Based on Hierarchical Referencing / 基于分层引用的生成视频压缩
+
+**Date**: 2026-08-12 | **arXiv**: [2608.11618v1](http://arxiv.org/abs/2608.11618v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.11618v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion-based generative video compression has emerged as a promising paradigm to improve perceptual quality, where latent frames are required to be encoded efficiently while serving as denoising conditions. However, existing methods neither carefully design reference and quality structures during latent coding nor account for the impact of frame-level quality variation on denoising procedure, which limits coding efficiency and aggravates artifact propagation during generative reconstruction. In this paper, we propose GVCHR, Generative Video Compression based on Hierarchical Referencing. The key idea is to organize latent frames hierarchically, where the selected high-quality references benefit both latent coding and generative reconstruction. In latent coding, GVCHR couples a hierarchical reference structure with a hierarchical quality structure, assigning more bits to lower-layer frames that are reused more frequently as references. Built on this design, we introduce Hierarchical Temporal Context Mining to exploits complementary short- and long-term temporal context for effective latent coding. In generative reconstruction, the coding-side hierarchy is incorporated into a Hierarchical Attentive Adapter which is attached to a video diffusion transformer. This adapter uses hierarchical attention to restrict each latent frame to attend only to the same- or lower-layer references, thereby reducing artifact propagation during denoising. Experiments validate GVCHR on multiple benchmarks. Compared with the previous state-of-the-art method, GVCHR achieves 50.5% and 54.0% BD-rate gains in terms of LPIPS and DISTS, respectively, while also delivering clearly improved visual quality.
+
+基于扩散的生成视频压缩已成为提高感知质量的有前景的范例，其中需要对潜在帧进行有效编码，同时充当去噪条件。然而，现有方法既没有在潜在编码期间仔细设计参考和质量结构，也没有考虑帧级质量变化对去噪过程的影响，这限制了编码效率并加剧了生成重建期间的伪影传播。在本文中，我们提出了 GVCHR，基于分层引用的生成视频压缩。关键思想是分层组织潜在帧，其中所选的高质量参考有利于潜在编码和生成重建。在潜在编码中，GVCHR 将分层参考结构与分层质量结构结合起来，为较低层帧分配更多位，以便更频繁地重新用作参考。在此设计的基础上，我们引入了分层时间上下文挖掘，以利用互补的短期和长期时间上下文来进行有效的潜在编码。在生成重建中，编码侧层次结构被合并到附加到视频扩散变压器的层次化关注适配器中。该适配器使用分层注意力来限制每个潜在帧仅关注相同或较低层的参考，从而减少去噪期间的伪影传播。实验在多个基准上验证了 GVCHR。与之前最先进的方法相比，GVCHR 在 LPIPS 和 DISTS 方面分别实现了 50.5% 和 54.0% 的 BD 速率增益，同时还提供了明显改善的视觉质量。
+
+</details>
+
+---
+
+## 12. Foresight Without Seeing: Latent Futures for World Action Models / 没有看到的远见：世界行动模式的潜在未来
+
+**Date**: 2026-08-12 | **arXiv**: [2608.11605v1](http://arxiv.org/abs/2608.11605v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.11605v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) couple future visual prediction with robot action generation, enabling policies to model how the physical world evolves during interaction. Existing WAMs differ in how predictive dynamics are exposed to the action pathway. Explicit-future WAMs provide direct access to predicted scene evolution, but incur substantial inference costs from iterative video denoising. In contrast, direct-policy WAMs efficiently predict actions from the current observation but lack an explicit inference-time interface for exposing predictive dynamics to the Action DiT. To bridge this gap, we propose ForeWAM, a dynamics-conditioned direct-policy WAM that provides predictive context for action generation without decoding future videos. At its core, Future-KV performs a single Video DiT prefill over the current visual latent and stochastic future slots, and reuses the resulting layer-wise key-value states throughout action denoising. We further introduce dynamics registers supervised by a frozen latent action teacher, encouraging the implicit future states to capture interaction-induced transitions such as object motion, contact changes, and task progress. Ground-truth future observations and the teacher are used only during training; deployment requires neither and performs no future video generation. Without embodied robot data pretraining, the standard and accelerated variants of ForeWAM achieve average success rates of 96.7% and 96.9% on LIBERO, respectively. The standard variant further achieves 61.6% success on LIBERO-Plus. These results demonstrate that direct-policy WAMs can retain efficient action prediction while exposing predictive dynamics to the action pathway without explicitly generating future observations.
+
+世界动作模型 (WAM) 将未来视觉预测与机器人动作生成相结合，使策略能够对交互过程中物理世界如何演变进行建模。现有的 WAM 的不同之处在于预测动态如何暴露于行动路径。显式未来 WAM 可以直接访问预测的场景演变，但会因迭代视频去噪而产生大量推理成本。相比之下，直接策略 WAM 可以根据当前观察有效地预测动作，但缺乏明确的推理时间接口来将预测动态暴露给 Action DiT。为了弥补这一差距，我们提出了 ForeWAM，这是一种动态调节的直接策略 WAM，它为动作生成提供预测上下文，而无需解码未来的视频。 Future-KV 的核心是在当前视觉潜在和随机未来槽位上执行单个视频 DiT 预填充，并在整个动作去噪过程中重用生成的分层键值状态。我们进一步引入由冻结潜在动作教师监督的动态寄存器，鼓励隐式未来状态捕获交互引起的转变，例如对象运动、接触变化和任务进展。真实的未来观察和教师仅在训练期间使用；部署既不需要也不执行未来的视频生成。在没有具体机器人数据预训练的情况下，ForeWAM 的标准变体和加速变体在 LIBERO 上分别实现了 96.7% 和 96.9% 的平均成功率。标准变体在 LIBERO-Plus 上进一步取得了 61.6% 的成功。这些结果表明，直接策略 WAM 可以保留有效的行动预测，同时将预测动态暴露给行动路径，而无需明确生成未来的观察结果。
+
+</details>
+
+---
+
+## 13. From Synthesis to Removal: Physics-Grounded Reflection Simulation and Diffusion-Based Video Dereflection / 从合成到去除：基于物理的反射模拟和基于扩散的视频去反射
+
+**Date**: 2026-08-12 | **arXiv**: [2608.11562v1](http://arxiv.org/abs/2608.11562v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.11562v1)
+
+**Categories**: cs.CV, cs.AI, eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Videos captured through glass often contain reflections that degrade visual quality and interfere with downstream vision tasks. Although single-image reflection removal has been extensively studied, video reflection removal remains largely underexplored due to the lack of paired video data, temporally coherent removal models, and dedicated evaluation benchmarks. We present a closed-loop framework that unifies physics-grounded reflection simulation, diffusion-based video dereflection, and benchmark evaluation. Our S2R-Synthesis pipeline generates paired reflected and reflection-free videos by performing physics-grounded augmentation in the structure space and rendering realistic reflected videos with a trained video diffusion renderer; the augmentation models key glass-related effects including roughness-induced blur, thickness-induced ghosting, and reflectance variation. Based on the synthesized data, we introduce S2R-Removal, the first diffusion-based video reflection removal model, which adapts a pretrained video diffusion prior through reflection-aware latent adaptation and one-step pixel-geometric refinement, recovering the clean transmission in a single denoising step. We further build S2R-Bench, the first benchmark for video reflection removal, supporting both full-reference evaluation and real-world human perceptual assessment. Experiments on S2R-Bench and multiple public image benchmarks demonstrate state-of-the-art performance and faster inference than even non-diffusion baselines, and validate the effectiveness of S2R-Synthesis. Project page: https://codingwzp.github.io/VideoDereflection_S2R.
+
+通过玻璃捕获的视频通常包含会降低视觉质量并干扰下游视觉任务的反射。尽管单图像反射去除已被广泛研究，但由于缺乏配对视频数据、时间相干去除模型和专用评估基准，视频反射去除在很大程度上仍未得到充分探索。我们提出了一个闭环框架，它将基于物理的反射模拟、基于扩散的视频去反射和基准评估相结合。我们的 S2R-Synthesis 管道通过在结构空间中执行基于物理的增强并使用训练有素的视频扩散渲染器渲染逼真的反射视频来生成配对的反射和无反射视频；增强模拟了与玻璃相关的关键效应，包括粗糙度引起的模糊、厚度引起的重影和反射率变化。基于合成数据，我们引入了 S2R-Removal，这是第一个基于扩散的视频反射去除模型，该模型通过反射感知潜在适应和一步像素几何细化来适应预先训练的视频扩散，在单个去噪步骤中恢复干净的传输。我们进一步构建了S2R-Bench，这是第一个视频反射去除基准，支持全参考评估和现实世界的人类感知评估。 S2R-Bench 和多个公共图像基准测试证明了最先进的性能和比非扩散基线更快的推理，并验证了 S2R-Synthesis 的有效性。项目页面：https://codingwzp.github.io/VideoDereflection_S2R。
+
+</details>
+
+---
+
+## 14. Keep the Future, Drop the Rollout: RIFT for World Action Models / 保留未来，放弃推出：世界行动模型的 RIFT
+
+**Date**: 2026-08-12 | **arXiv**: [2608.11521v1](http://arxiv.org/abs/2608.11521v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.11521v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World action models (WAMs) condition robot actions on predicted futures, but iterative video rollout increases deployment latency. We ask whether action generation requires the evolving rollout trajectory or only its future representation. Across four WAMs on all 40 LIBERO tasks, paired closed-loop interventions show that masking or reassigning future-cache values changes execution and reduces success, indicating sensitivity to future values and their assigned positions. For Joint and Cosmos-2, however, replaying one fixed final-clean key/value (K/V) cache nearly preserves unmodified execution, with $1.7$ to $1.9$~cm end-effector average displacement error and $97.9\%$ to $98.2\%$ success. This separates cache consumption from production: these models can reuse a fixed cache but still require iterative rollout to construct it. We therefore propose RIFT (\emph{Rollout-free Imagination via Future Tokens}), which uses learned anticipation tokens to construct a complete future K/V cache in one backbone pass while retaining the original future-read interface. On LIBERO, RIFT achieves $98.8\%$ success, close to rollout-based Joint, IDM, and LingBot-VA at $98.4\%$ to $98.6\%$, while reducing action-chunk latency by $68.2\%$ to $89.1\%$. On RoboTwin~2.0, RIFT reaches $92.9/92.6\%$ on clean/randomized scenes, the highest observed among the evaluated methods. These results support rollout-free future conditioning without iterative video generation at deployment.
+
+世界动作模型（WAM）根据预测的未来来调节机器人的动作，但迭代视频的推出会增加部署延迟。我们询问行动生成是否需要不断发展的推出轨迹，或者仅需要其未来的表示。在所有 40 个 LIBERO 任务的四个 WAM 中，配对闭环干预表明，屏蔽或重新分配未来缓存值会改变执行并降低成功率，这表明对未来值及其分配位置的敏感性。然而，对于 Joint 和 Cosmos-2，重播一个固定的最终清理键/值 (K/V) 缓存几乎可以保留未修改的执行，末端执行器平均位移误差为 1.7$ 至 1.9$~cm，成功率为 97.9\%$ 至 98.2\%$。这将缓存消耗与生产分开：这些模型可以重用固定缓存，但仍然需要迭代部署来构建它。因此，我们提出 RIFT（\emph{通过未来代币实现无滚动想象}），它使用学习到的预期代币在一个骨干通道中构建完整的未来 K/V 缓存，同时保留原始的未来读取接口。在 LIBERO 上，RIFT 取得了 98.8\%$ 的成功，接近基于推出的 Joint、IDM 和 LingBot-VA 的 98.4\%$ 至 $98.6\%$，同时将动作块延迟减少了 $68.2\%$ 至 $89.1\%$。在 RoboTwin~2.0 上，RIFT 在干净/随机场景上达到 $92.9/92.6%$，是评估方法中观察到的最高值。这些结果支持免部署的未来调节，无需在部署时迭代视频生成。
+
+</details>
+
+---
+
+## 15. Multi-Agent Target-Existence Verification and Learned Mask Geometry Refinement: Winning Report of the MeViS-Text Track at the 8th LSVOS Challenge 2026 / 多智能体目标存在验证和学习掩模几何细化：2026 年第八届 LSVOS 挑战赛 MeViS-Text 赛道的获奖报告
+
+**Date**: 2026-08-11 | **arXiv**: [2608.11458v1](http://arxiv.org/abs/2608.11458v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.11458v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present the first-place solution to the MeViS-Text track of the 8th Large-scale Video Object Segmentation (LSVOS) Challenge 2026: referring video object segmentation guided by written motion expressions, including deceptive no-target expressions that match no object in the video and must yield empty masks in every frame. Our pipeline, SSUPER, resolves each expression into a visual concept, generates full-video candidate masklets with SAM~3.1, and selects target IDs. At every reasoning stage, three heterogeneous multimodal large language models independently execute the same stage-specific prompt before a single synthesis pass commits one schema-validated verdict. Although this system rejects every no-target expression in validation, the leaderboard reveals that a substantial share of test no-target cases still slips through. The reason is that hard negatives name a plausible object and fail only under the complete temporal predicate, so when selection and existence are decided together, a category-plausible masklet anchors the verdict. Hence, we decouple existence verification into an independent multi-agent audit of the full predicate (category, count, action, trajectory, event order, and semantic role) that distinguishes absence from temporary invisibility, discounts apparent motion caused by camera movement, and requires contradicting evidence rather than mere uncertainty for a no-target verdict. Without any new segmentation call, this audit recovers most of the residual no-target errors. A training-data-only StyleRefiner then aligns mask geometry with the annotation style of MeViSv2 while preserving every presence decision by construction, showing that once the semantics are fixed, part of the remaining error is stylistic rather than semantic. The complete system reaches a Final score of 0.9081339614 on the official challenge leaderboard.
+
+我们向 2026 年第八届大规模视频对象分割 (LSVOS) 挑战赛的 MeViS-Text 赛道提出了第一名的解决方案：参考书面运动表达式引导的视频对象分割，包括与视频中的任何对象不匹配的欺骗性无目标表达式，并且必须在每一帧中产生空掩模。我们的管道 SSUPER 将每个表达式解析为视觉概念，使用 SAM~3.1 生成全视频候选 masklet，并选择目标 ID。在每个推理阶段，在单个综合过程提交一个模式验证的结论之前，三个异构多模式大语言模型独立执行相同的特定于阶段的提示。尽管该系统在验证中拒绝了所有无目标表达，但排行榜显示，很大一部分测试无目标案例仍然被漏掉。原因是硬否定命名了一个合理的对象，并且只有在完整的时间谓词下才会失败，因此当选择和存在一起决定时，类别合理的掩码会锚定结论。因此，我们将存在验证解耦为对完整谓词（类别、计数、动作、轨迹、事件顺序和语义角色）的独立多智能体审计，该审计区分缺席和暂时不可见，折扣由摄像机运动引起的明显运动，并且需要矛盾的证据而不仅仅是无目标判决的不确定性。无需任何新的分段调用，此审核即可恢复大部分残留的无目标错误。然后，仅训练数据的 StyleRefiner 将掩模几何形状与 MeViSv2 的注释样式对齐，同时通过构造保留每个存在决策，这表明一旦语义被修复，剩余的部分错误是风格而不是语义。整个系统在官方挑战排行榜上的最终得分为 0.9081339614。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-13 (14 papers)</b></summary>
 
 # arXiv Video Papers - 2026-08-13
