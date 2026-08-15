@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-15](papers/2026-08-15.md) - 11 papers
 - [2026-08-14](papers/2026-08-14.md) - 3 papers
 - [2026-08-13](papers/2026-08-13.md) - 12 papers
 - [2026-08-12](papers/2026-08-12.md) - 8 papers
@@ -133,6 +134,194 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-15 (11 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-08-15
+
+**Paper Count**: 11
+
+---
+
+## 1. Intervention-Aware Clinical World Model for Post-Op Outcome Forecasting in Cardiology / 用于心脏病学术后结果预测的干预感知临床世界模型
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13518v1](http://arxiv.org/abs/2608.13518v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13518v1)
+
+**Categories**: cs.LG, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Many clinical prediction models treat post-intervention outcomes as a one-step mapping from baseline measurements to a future endpoint. However, recovery after a procedure often unfolds as an irregular trajectory: clinical observations, medication changes, repeat interventions, and physiological measurements are recorded asynchronously and can change risk assessment over time. We propose an intervention-aware clinical world model that represents each patient with a structured latent state and evolves it through time-ordered post-intervention events. The model first encodes baseline imaging into a 3D spatial latent state. It then updates this state using procedural context, static covariates, elapsed time, and peri-event physiological embeddings. Follow-up imaging provides training-only supervision through a latent forecasting objective. We apply the framework to atrial fibrillation ablation. During the 90-day recovery window, irregular post-procedure records provide clinically meaningful evidence for long-term recurrence risk. In repeated internal cross-validation on DECAAF-II, our model achieves AUROC 0.756 and AUPRC 0.777 for recurrence prediction. It also achieves a scar-extent MAE of 2.971 percentage points without requiring follow-up MRI intensities at inference. The learned state supports recurrence-risk queries at different horizons and retrospective input editing of blanking-period records.
+
+许多临床预测模型将干预后结果视为从基线测量到未来终点的一步映射。然而，手术后的恢复通常以不规则的轨迹展开：临床观察、药物变化、重复干预和生理测量都是异步记录的，并且可能随着时间的推移而改变风险评估。我们提出了一种干预感知的临床世界模型，该模型代表每个患者的结构化潜在状态，并通过按时间排序的干预后事件来发展它。该模型首先将基线成像编码为 3D 空间潜在状态。然后，它使用程序上下文、静态协变量、经过的时间和事件周围的生理嵌入来更新此状态。后续成像通过潜在的预测目标提供仅限训练的监督。我们将该框架应用于房颤消融。在 90 天的恢复期内，不规则的术后记录为长期复发风险提供了具有临床意义的证据。在 DECAAF-II 上的重复内部交叉验证中，我们的模型在复发预测方面达到了 AUROC 0.756 和 AUPRC 0.777。它还实现了 2.971 个百分点的疤痕范围 MAE，无需在推理时进行后续 MRI 强度。学习状态支持不同范围内的复发风险查询以及消隐期记录的回顾性输入编辑。
+
+</details>
+
+---
+
+## 2. DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation / DreamX-Phi 1.0：用于机器人操作的动作条件视频世界模型
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13489v1](http://arxiv.org/abs/2608.13489v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13489v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present \textbf{DreamX-Phi 1.0}, an action-conditioned video world model for robotic manipulation that, given an observed frame, a language instruction, and a prescribed action sequence comprising end-effector poses and gripper states, predicts the resulting future observations. Yet realism alone does not guarantee faithfulness: a convincing rollout can still move the wrong arm or lose the manipulated object. To ensure the prediction respects each arm's commanded path, we inject per-arm $\mathrm{SE}(3)$ transformations into attention via \textbf{PRoPE-style geometric encoding}, preserving arm identity and rigid-motion structure. Action control alone does not fully constrain scene geometry or the evolution of small manipulated objects. We therefore add a lightweight \textbf{depth branch} for scene-level geometry and use \textbf{SAM3 masks} with a frozen \textbf{V-JEPA teacher} to maintain object consistency throughout grasping. We further distill the multi-step generator into a few-step student via distribution-matching distillation for efficient deployment. At the time of writing, \model{} achieves first place on Track~1 and second place on Track~2 of the WorldArena~2.0 Challenge. Our model and code will be publicly available.
+
+我们提出了 \textbf{DreamX-Phi 1.0}，这是一种用于机器人操作的动作条件视频世界模型，在给定观察到的帧、语言指令和包括末端执行器姿势和夹具状态的规定动作序列的情况下，预测未来的观察结果。然而，现实主义本身并不能保证忠实：令人信服的推出仍然可能会移动错误的手臂或丢失被操纵的对象。为了确保预测遵循每个手臂的命令路径，我们通过 \textbf{PRoPE 式几何编码}将每个手臂 $\mathrm{SE}(3)$ 转换注入注意力，保留手臂身份和刚性运动结构。单独的动作控制并不能完全约束场景几何形状或小型操纵对象的演变。因此，我们为场景级几何添加了一个轻量级的\textbf{深度分支}，并使用\textbf{SAM3 mask}和冻结的\textbf{V-JEPA Teacher}来保持整个抓取过程中对象的一致性。我们通过分布匹配蒸馏将多步生成器进一步蒸馏为几步学生，以实现高效部署。在撰写本文时，\model{} 在 WorldArena~2.0 挑战赛的 Track~1 上获得第一名，在 Track~2 上获得第二名。我们的模型和代码将公开。
+
+</details>
+
+---
+
+## 3. A Unifying Perspective on Causal World Models: From Observations to Representations to Structure / 因果世界模型的统一视角：从观察到表示到结构
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13456v1](http://arxiv.org/abs/2608.13456v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13456v1)
+
+**Categories**: cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Models (WM) are increasingly seen as a foundation for intelligent agents that can predict, plan, and act beyond their training distribution. In this paper, we study WMs from a causal perspective across multiple levels of abstraction, ranging from perceptual observations to building a conceptual representation of the structure governing the environment dynamics. We argue that useful WMs must go beyond generative capabilities alone: they should also capture entity properties, entity-to-entity interactions, and entity-to-environment interactions that determine and explain the dynamics of a system. We provide a formal definition of Causal WMs (CWMs) grounded in the tasks they are intended to support, connecting world modelling with existing work in causal representation learning, object-centric learning, causal discovery, structural causal models, and model-based decision-making. Finally, we relate CWMs to the literature on identifiability, clarifying when the components of a WM can be recovered from data and up to which equivalence. With this, we ground WMs in representations and structures that support causal reasoning and informed decision-making.
+
+世界模型 (WM) 越来越被视为智能代理的基础，智能代理可以在其训练分布之外进行预测、计划和行动。在本文中，我们从因果角度跨多个抽象层次研究 WM，从感知观察到构建控制环境动态的结构的概念表示。我们认为，有用的 WM 必须超越单纯的生成能力：它们还应该捕获实体属性、实体到实体的交互以及实体到环境的交互，从而确定和解释系统的动态。我们根据因果 WM (CWM) 旨在支持的任务提供了正式定义，将世界建模与因果表示学习、以对象为中心的学习、因果发现、结构因果模型和基于模型的决策等领域的现有工作联系起来。最后，我们将 CWM 与可识别性文献联系起来，阐明何时可以从数据中恢复 WM 的组成部分以及最多达到哪些等价性。由此，我们将 WM 置于支持因果推理和明智决策的表示和结构中。
+
+</details>
+
+---
+
+## 4. ContactGuard: Pre-Contact Execution Monitoring with Action-Conditioned Latent World Models / ContactGuard：使用动作条件潜在世界模型进行接触前执行监控
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13438v1](http://arxiv.org/abs/2608.13438v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13438v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Contact-rich manipulation failures are often detected only after the robot has committed to contact. This is especially limiting in wrist-camera setups: close gripper--object views help observe contact, but a poor approach may already push, miss, slip, or disturb the object before conventional detectors react. We introduce \emph{ContactGuard}, a pre-contact execution monitor for chunked visuomotor policies. Given the policy's planned action chunk, ContactGuard predicts its short-horizon consequence in latent visual space and aborts if the predicted future latent indicates likely failure. Its latent world model is trained from unlabelled robot trajectories to predict compact multi-view visual embeddings under planned actions, avoiding pixel-level video prediction. A lightweight failure probe is then trained from a small labelled set of pre-contact clips. At deployment, ContactGuard anchors prediction before an imminent contact event, rolls the model forward under the policy's own actions, and verifies the predicted post-contact latent. Across real-world contact-rich manipulation tasks, ContactGuard predicts failure more accurately than direct and corrupted-action ablations, and transfers to live robot as a pre-contact abort signal without modifying the underlying policy.
+
+富含接触的操作故障通常只有在机器人进行接触后才会被检测到。这在手腕相机设置中尤其受到限制：近距离的抓手——物体视图有助于观察接触，但不良的方法可能在传统探测器做出反应之前就已经推动、错过、滑动或干扰物体。我们引入了 \emph{ContactGuard}，一个用于分块视觉运动策略的接触前执行监视器。考虑到策略的计划行动块，ContactGuard 会预测其在潜在视觉空间中的短期后果，并在预测的未来潜在表明可能失败时中止。其潜在世界模型是根据未标记的机器人轨迹进行训练的，可以在计划的动作下预测紧凑的多视图视觉嵌入，从而避免像素级视频预测。然后从一小组标记的预接触夹中训练一个轻量级故障探针。在部署时，ContactGuard 在即将发生的接触事件之前锚定预测，在策略自身的操作下向前滚动模型，并验证预测的接触后潜伏。在现实世界中接触丰富的操作任务中，ContactGuard 比直接和损坏的动作消融更准确地预测失败，并在不修改底层策略的情况下将其作为预接触中止信号传输到实时机器人。
+
+</details>
+
+---
+
+## 5. S2-HWM: Sparse Event-Structured Hierarchical World Model for Long-Horizon Surgical Robot Manipulation / S2-HWM：用于长视野手术机器人操作的稀疏事件结构分层世界模型
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13103v1](http://arxiv.org/abs/2608.13103v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13103v1)
+
+**Categories**: cs.RO, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon surgical robot manipulation is challenging because task rewards are sparse, while meaningful interaction changes occur at irregular intervals. Existing world-model agents typically imagine at primitive-step resolution, leaving variable-duration task progress implicit. Manually specified stages can provide intermediate structure, but their task specific boundaries are difficult to align with state-dependent interaction transitions. We propose S2-HWM, a Sparse Event-Structured Hierarchical World Model that learns sparse event evidence from primitive latent trajectories to coordinate an event-level manager and a primitive-step worker. The event evidence schedules manager goal updates, and each selected latent goal conditions the worker's primitive actions until the next update. The learned event evidence also forms variable-duration segments for an Event Transition Model (ETM), which predicts the next?boundary stochastic state, segment duration, and accumulated segment reward. Chaining these event-level predictions provides a variable-duration continuation beyond the primitive imagination horizon for manager learning, while the worker retains primitive-step actor-critic learning. On a SurRoL-based PegTransfer task, S2-HWM achieves a success rate of 98.7%, outperforming the flat GAS DreamerV3 baseline by 22.7 percentage points.
+
+长视野手术机器人操作具有挑战性，因为任务奖励很少，而有意义的交互变化以不规则的间隔发生。现有的世界模型智能体通常以原始步骤分辨率进行想象，而隐含可变持续时间的任务进度。手动指定的阶段可以提供中间结构，但它们的任务特定边界很难与状态相关的交互转换保持一致。我们提出了 S2-HWM，一种稀疏事件结构的分层世界模型，它从原始潜在轨迹中学习稀疏事件证据，以协调事件级管理器和原始步骤工作器。事件证据安排经理目标更新，每个选定的潜在目标都会影响工作人员的原始操作，直到下一次更新。学习到的事件证据还形成事件转换模型（ETM）的可变持续时间段，该模型预测下一个边界随机状态、段持续时间和累积段奖励。将这些事件级预测链接起来，为管理者学习提供了超出原始想象视野的可变持续时间延续，而工作人员则保留了原始步骤的演员批评家学习。在基于 SurRoL 的 PegTransfer 任务中，S2-HWM 的成功率达到 98.7%，比平坦的 GAS DreamerV3 基线高出 22.7 个百分点。
+
+</details>
+
+---
+
+## 6. H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models / H2R-Bench：世界模型中人机操作视频生成的基准测试
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13049v1](http://arxiv.org/abs/2608.13049v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13049v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large-scale manipulation data is essential for robot learning, yet collecting robot demonstrations remains expensive and difficult to scale. Meanwhile, abundant egocentric human manipulation videos provide rich behavioral experiences, but transferring them across embodiments remains challenging due to differences between human hands and robotic end-effectors. Recent advances in video world models offer a promising pathway to synthesize robot-centric manipulation videos from human observations, while their cross-embodiment transfer capability remains largely unexplored. Therefore, we introduce H2R-Bench, a benchmark for evaluating cross-embodiment human-to-robot manipulation video generation, where models transform egocentric human demonstrations into robot manipulation videos under specified embodiments. Each benchmark instance contains a human demonstration video, target embodiment constraints, and source-grounded annotations covering task goals, action events, functional contacts, and object responses. H2R-Bench evaluates generated videos through five dimensions, including goal-state completion, action-event completion, functional contact transfer, embodiment correctness, and general video quality. We benchmark eleven state-of-the-art video generation models across six manipulation families and two robot embodiments. Our evaluation reveals that current video world models remain limited in human-to-robot manipulation transfer: even leading models often fail in embodiment consistency, functional interaction, and task execution. H2R-Bench provides a systematic diagnostic framework for evaluating whether video world models can bridge the human-to-robot embodiment gap and convert human manipulation observations into robot-centric training resources.
+
+大规模操作数据对于机器人学习至关重要，但收集机器人演示仍然昂贵且难以扩展。与此同时，丰富的以自我为中心的人类操作视频提供了丰富的行为体验，但由于人手和机器人末端执行器之间的差异，将它们跨实施例转移仍然具有挑战性。视频世界模型的最新进展为根据人类观察合成以机器人为中心的操作视频提供了一条有前途的途径，而它们的跨实体传输能力在很大程度上仍未得到探索。因此，我们引入了 H2R-Bench，一个用于评估跨实施例人机操作视频生成的基准，其中模型将以自我为中心的人类演示转换为指定实施例下的机器人操作视频。每个基准实例都包含人类演示视频、目标实施例约束以及涵盖任务目标、动作事件、功能接触和对象响应的基于源的注释。 H2R-Bench 通过五个维度评估生成的视频，包括目标状态完成度、动作事件完成度、功能性接触转移、体现正确性和一般视频质量。我们对六个操纵系列和两个机器人实施例中的十一个最先进的视频生成模型进行了基准测试。我们的评估表明，当前的视频世界模型在人机交互操作方面仍然受到限制：即使是领先的模型也常常在体现一致性、功能交互和任务执行方面失败。 H2R-Bench 提供了一个系统的诊断框架，用于评估视频世界模型是否可以弥合人与机器人的具体差距，并将人类操作观察结果转化为以机器人为中心的训练资源。
+
+</details>
+
+---
+
+## 7. The Objective Is the Bottleneck: Latent World Models Encode What Their Planners Cannot Use / 目标是瓶颈：潜在世界模型编码了规划者无法使用的内容
+
+**Date**: 2026-08-13 | **arXiv**: [2608.12959v1](http://arxiv.org/abs/2608.12959v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12959v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models are judged by how well they predict, so when planning fails at long horizons the natural reading is that the predictor degrades. On a reproduction of LeWorldModel on TwoRoom we show the binding constraint is the planner's objective instead.   The predictor is not the limit: its imagined state seventy-five environment steps ahead is still only 0.189 as wrong as assuming the world froze, while the planner never imagines beyond twenty-five. The objective is. Cross-entropy-method planning minimises squared latent distance, which tracks true distance at r = 0.426, saturates by about eighty arena units and decreases beyond a hundred and twenty, so moving away from the goal can lower the cost. The information is present throughout: a ridge probe recovers position from the frozen embedding at R^2 0.9922.   The pathology is the method's, not one reimplementation's. It is present in the authors' released weights, and across four checkpoints long-horizon success rank-orders exactly with metric quality and inversely with prediction accuracy.   Replacing only the objective, with nothing retrained and no GPU, lifts goals reached at offset 100 from 26.0% to 98.0%, equals the 98.0% at offset 25, and reaches 92.0% under a third of the budget: planning stops depending on the horizon. The best cost is not the most accurate. A head learned from frame separation alone predicts spatial distance worse than a position probe (r = 0.819 against 0.9897) yet plans better, charging 24% more to cross the environment's dividing wall where squared latent distance charges 4% less. It has learned reachability, not proximity.
+
+潜在世界模型是根据它们的预测能力来判断的，因此，当规划在长期范围内失败时，自然的解读是预测器性能下降。在 TwoRoom 上 LeWorldModel 的复制品中，我们表明绑定约束是规划者的目标。   预测器并不是极限：它的想象状态提前了 75 个环境步骤，与假设世界冻结的误差仍然只有 0.189，而规划器的想象永远不会超过 25 个。目标是。交叉熵方法规划最小化平方潜在距离，它在 r = 0.426 处跟踪真实距离，饱和约八十个竞技场单位并减少超过一百二十个，因此远离目标可以降低成本。信息贯穿始终：脊探针从 R^2 0.9922 处的冻结嵌入中恢复位置。   病理是方法的问题，而不是一种重新实现的问题。它存在于作者发布的权重中，并且在四个检查点的长期成功排名中与度量质量完全一致，与预测准确性相反。   仅替换目标，不进行任何重新训练，也不使用 GPU，将偏移量 100 处达到的目标从 26.0% 提升到 98.0%，等于偏移量 25 处的 98.0%，并在预算的三分之一以下达到 92.0%：规划停止取决于地平线。最好的成本并不是最准确的。仅从帧分离中学习的头部预测的空间距离比位置探测器差（r = 0.819 对 0.9897），但计划更好，在穿越环境隔离墙时要多收费 24%，其中平方潜在距离收费要少 4%。它学会了可达性，而不是邻近性。
+
+</details>
+
+---
+
+## 8. Diagnosing JEPA World Models with Action-Conditioned Predictive Consistency / 诊断具有行动条件预测一致性的 JEPA 世界模型
+
+**Date**: 2026-08-13 | **arXiv**: [2608.12939v1](http://arxiv.org/abs/2608.12939v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12939v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint-embedding predictive architectures (JEPAs) learn world models that predict in a compact latent space rather than in pixels, reducing the pressure to model nuisance appearance. Yet this provides no guarantee against visual perturbations: they can still alter the encoded representation and affect subsequent action-conditioned predictions. Bisimulation captures this requirement precisely: two observations should be treated as the same state only when their action-conditioned consequences agree. Guided by this criterion, we introduce Action-Conditioned Predictive Consistency (ACPC), a diagnostic that measures how far a clean history and a visually perturbed view of it diverge after being rolled forward under the same action sequence. We prove that this divergence bounds the perturbation-induced change in multi-step prediction error and planner cost. Building on pairwise ACPC, we define two complementary measures: the Invariance Radius (IR) summarizes clean-perturbed rollout spread, while the Separation Rate (SR) checks whether different states remain distinguishable after rollout. Experiments on four visual control tasks show that pairwise ACPC predicts perturbation-induced prediction and cost changes. On LeWM, the IR-SR screen transfers across tasks, and the joint diagnostic remains informative under blur and resize. PLDM exhibits similar diagnostic trends under a different architecture.
+
+联合嵌入预测架构（JEPA）学习在紧凑的潜在空间而不是像素中进行预测的世界模型，从而减少了对令人讨厌的外观进行建模的压力。然而，这并不能保证防止视觉扰动：它们仍然可以改变编码表示并影响后续的动作条件预测。互模拟精确地抓住了这一要求：只有当两个观察结果的动作条件结果一致时，才应将其视为相同状态。在此标准的指导下，我们引入了动作条件预测一致性（ACPC），这是一种诊断方法，用于测量在相同动作序列下前滚后，干净的历史记录与其视觉上受到干扰的视图的分歧程度。我们证明这种分歧限制了多步预测误差和规划器成本中扰动引起的变化。在成对 ACPC 的基础上，我们定义了两个互补的度量：不变半径 (IR) 总结了干净扰动的 rollout 分布，而分离率 (SR) 检查不同状态在 rollout 后是否仍然可区分。对四个视觉控制任务的实验表明，成对 ACPC 可以预测扰动引起的预测和成本变化。在 LeWM 上，IR-SR 屏幕可以跨任务传输，联合诊断在模糊和调整大小的情况下仍能提供丰富的信息。 PLDM 在不同的架构下表现出类似的诊断趋势。
+
+</details>
+
+---
+
+## 9. AirForesight: Current-to-Future Spatial Map Imagination with Cross-Space Planning Consistency for UAV-VLN / AirForesight：UAV-VLN 的当前到未来空间地图想象与跨空间规划一致性
+
+**Date**: 2026-08-13 | **arXiv**: [2608.12835v1](http://arxiv.org/abs/2608.12835v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12835v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Unmanned Aerial Vehicle Vision-Language Navigation (UAV-VLN) requires agents to follow language instructions, infer spatial structure from sparse multi-view observations, and execute feasible 3D motion in complex outdoor environments. Despite recent progress with large language models, most existing methods still map vision-language inputs directly to actions, providing limited explicit scene grounding and future-aware spatial reasoning. We propose AirForesight, a current-to-future spatial map imagination framework for UAV-VLN. AirForesight first learns a structured current-map representation from multi-view observations. This representation is jointly supervised by current-map reconstruction and future-trajectory prediction, encouraging it to encode both present scene structure and future motion intent. Under structured causal attention, the current spatial knowledge is propagated to future-map reasoning, and the resulting current and future representations are aggregated to predict the next 3D waypoint. To make spatial imagination more relevant to navigation, we introduce a cross-space planning consistency loss that encourages directional agreement between the predicted map-space trajectory and the expert action direction derived from the ground-truth waypoint displacement. Experiments on OpenUAV and AerialVLN-S, together with extensive ablations, demonstrate strong performance and support the effectiveness and stability of the proposed framework.
+
+无人机视觉语言导航 (UAV-VLN) 要求智能体遵循语言指令，从稀疏的多视图观测中推断空间结构，并在复杂的室外环境中执行可行的 3D 运动。尽管大型语言模型最近取得了进展，但大多数现有方法仍然将视觉语言输入直接映射到动作，提供有限的显式场景基础和未来感知的空间推理。我们提出了 AirForesight，一个针对 UAV-VLN 从当前到未来的空间地图想象框架。 AirForesight 首先从多视图观测中学习结构化的当前地图表示。这种表示由当前地图重建和未来轨迹预测共同监督，鼓励它对当前场景结构和未来运动意图进行编码。在结构化因果注意力下，当前的空间知识被传播到未来地图推理，并且所得到的当前和未来表示被聚合以预测下一个 3D 路径点。为了使空间想象与导航更加相关，我们引入了跨空间规划一致性损失，它鼓励预测的地图空间轨迹与从地面实况航路点位移得出的专家行动方向之间的方向一致。 OpenUAV 和 AerialVLN-S 上的实验以及广泛的消融证明了强大的性能并支持了所提出框架的有效性和稳定性。
+
+</details>
+
+---
+
+## 10. Scaling Automatic Research Agents via World Models / 通过世界模型扩展自动研究代理
+
+**Date**: 2026-08-12 | **arXiv**: [2608.12564v1](http://arxiv.org/abs/2608.12564v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12564v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Automating empirical research is a long-standing direction of AI. Recent automatic research (AutoResearch) agents bring this goal within reach, as modern LLMs show the capability to independently implement solutions and learn from the execution outcomes. Behind these gains, post-training (especially RL) plays a central role. In this paper, we identify a fundamental tension when scaling RL for these agents: the two components of every AutoResearch trajectory (agent generation and environment execution) scale in very different manners, since all generation shares compute through batching, while each execution occupies its exclusive sandbox and real machine time. As a result, the environment execution dominates the training cost and becomes the bottleneck as trajectories grow. To resolve this tension, we propose World Model RL (WMRL), which replaces environment execution with a world model to remove this bottleneck. Additionally, the world model can be imperfect, as its rewards are corrupted by bias and noise. Therefore, we further equip WMRL with two mitigations, Online Debiasing and Inverse-Variance Denoising, which offset the bias and suppress the noise respectively. Theoretically, we prove that both mitigations of WMRL strictly improve the convergence guarantee. Empirically, WMRL accelerates training by 3-4x on various tasks at different agent scales, while exceeding the performance of standard RL baselines. Moreover, our post-trained 4B and 9B agents outperform much larger open-weight agents of 48B and 120B on held-out benchmarks. Beyond AutoResearch, WMRL also transfers to post-training embodied VLA policies, which demonstrates the generalizability of our method.
+
+自动化实证研究是人工智能的一个长期方向。最近的自动研究（AutoResearch）代理使这一目标触手可及，因为现代法学硕士表现出了独立实施解决方案并从执行结果中学习的能力。在这些成果的背后，训练后（尤其是强化学习）发挥着核心作用。在本文中，我们发现了在扩展这些代理的 RL 时存在的一个基本矛盾：每个 AutoResearch 轨迹的两个组成部分（代理生成和环境执行）以非常不同的方式扩展，因为所有生成都通过批处理共享计算，而每个执行占用其专有的沙箱和真实机器时间。因此，环境执行在训练成本中占主导地位，并随着轨迹的增长而成为瓶颈。为了解决这种紧张关系，我们提出了世界模型强化学习（WMRL），它用世界模型代替环境执行来消除这个瓶颈。此外，世界模型可能是不完美的，因为它的奖励会被偏见和噪音破坏。因此，我们进一步为 WMRL 配备了两种缓解措施：在线去偏和逆方差去噪，分别抵消偏差和抑制噪声。从理论上讲，我们证明了 WMRL 的两种缓解措施都严格提高了收敛保证。根据经验，WMRL 将不同智能体规模的各种任务的训练速度提高了 3-4 倍，同时超过了标准 RL 基线的性能。此外，我们训练后的 4B 和 9B 智能体在测试基准上的表现优于更大的开放权重智能体 48B 和 120B。除了 AutoResearch 之外，WMRL 还转移到训练后体现的 VLA 策略，这证明了我们方法的通用性。
+
+</details>
+
+---
+
+## 11. Governed Persistent Memory: Source-Bound State Semantics and Fail-Closed Release for Long-Horizon Agents / 受控持久内存：长视野代理的源绑定状态语义和故障关闭释放
+
+**Date**: 2026-08-12 | **arXiv**: [2608.12476v1](http://arxiv.org/abs/2608.12476v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12476v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-term agent memory is usually treated as select--store--retrieve, but retrieval does not decide whether contradictory, superseded, retracted, deleted, or stale records may support an outgoing claim. We introduce Governed Persistent Memory (GPM), an auditable bitemporal state-transition model with source-bound admission, derived lifecycle state, current public barriers, and fail-closed structured release. Five executable clauses cover ledger integrity, source binding, conflict isolation, non-revival after retraction or deletion, and exact claim closure over a fresh view at one verified head.   On a prespecified hash-frozen 3,600-case GPM-ReleaseBench, GPM matches all complete outcomes; the strongest of three intentionally simple complete policies matches 1,800/3,600 and makes unmatched releases on 50% of violation cases. A separate sealed end-to-end service evaluation exercises real ingestion and release across eight query families. In its publicly disclosed V3 arm, the governed lane is correct on 2,400/2,400 clusters versus 600/2,400 for ungoverned local Qwen2.5-7B; it repairs all 1,800 baseline failures with no regression (one-sided 95% lower bounds 99.875% and 99.834%). A later V5 reseal over Chinese- and English-command arms, with generation-date pinning and no post-freeze reducer amendment, again obtains 2,400/2,400 per arm. A production-code-independent finite model explores 331,776 semantic and 1,990,656 query states without a full-contract counterexample, and a 100,000-trace three-engine differential yields zero mismatches.   These are bounded contract and implementation results, not open-world model accuracy or evidence of world truth. Governed answers in the sealed service evaluation are deterministic service outputs; the 7B result is the ungoverned comparison, not a claim that a language model itself became perfectly accurate.
+
+长期代理记忆通常被视为选择-存储-检索，但检索并不能决定矛盾的、被取代的、撤消的、删除的或过时的记录是否可以支持传出的声明。我们引入了治理持久内存（GPM），这是一种可审计的双时态状态转换模型，具有源绑定准入、派生生命周期状态、当前公共屏障和故障关闭结构化发布。五个可执行条款涵盖账本完整性、源绑定、冲突隔离、撤回或删除后不可恢复，以及在一个经过验证的头部通过新视图进行精确索赔关闭。   在预先指定的哈希冻结 3,600 例 GPM-ReleaseBench 上，GPM 匹配所有完整结果；三个故意简单的完整策略中最强的一个匹配 1,800/3,600，并对 50% 的违规案例做出无与伦比的释放。单独的密封端到端服务评估在八个查询系列中进行了真正的摄取和释放。在其公开披露的 V3 分支中，受治理的车道在 2,400/2,400 个集群上是正确的，而对于不受监管的本地 Qwen2.5-7B，则为 600/2,400 个集群；它修复了所有 1,800 个基线故障，且没有回归（单侧 95% 下限 99.875% 和 99.834%）。后来的 V5 对中文和英文命令臂重新封装，具有生成日期固定且没有冻结后减速器修正，再次获得每臂 2,400/2,400。与生产代码无关的有限模型在没有完整合约反例的情况下探索 331,776 个语义和 1,990,656 个查询状态，并且 100,000 条轨迹的三引擎差分产生零不匹配。   这些是有限制的合同和实施结果，而不是开放世界模型的准确性或世界真理的证据。密封服务评估中的受控答案是确定性的服务输出； 7B 结果是不受控制的比较，而不是声称语言模型本身变得完全准确。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-14 (3 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-08-14
