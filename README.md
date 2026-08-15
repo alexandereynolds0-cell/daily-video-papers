@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-15](papers/2026-08-15.md) - 18 papers
 - [2026-08-14](papers/2026-08-14.md) - 15 papers
 - [2026-08-13](papers/2026-08-13.md) - 14 papers
 - [2026-08-12](papers/2026-08-12.md) - 20 papers
@@ -137,6 +138,308 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-15 (18 papers)</b></summary>
+
+# arXiv Video Papers - 2026-08-15
+
+**Paper Count**: 18
+
+---
+
+## 1. V-RAE: Rethinking Video Latent Spaces for Generation / V-RAE：重新思考视频潜在空间的生成
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13556v1](http://arxiv.org/abs/2608.13556v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13556v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent video generation relies on autoencoders to define a compact space in which generative models operate. Although video autoencoder architectures have evolved substantially, their latent spaces are still optimized primarily for pixel-level reconstruction and provide limited high-level semantic organization. A reconstruction-optimal latent space, however, need not be well suited to generative modeling. We propose V-RAE, a video representation autoencoder that builds compact generative latents on top of frozen vision foundation model representations. A lightweight temporal pooling module removes temporal redundancy while preserving semantic structure, and a video decoder reconstructs continuous motion from the compressed features. We evaluate V-RAE with four representative frozen encoders on video reconstruction, semantic probing, and class-conditional generation. V-RAE achieves 2.13 rFVD on K600, outperforming all evaluated large-scale pretrained video VAEs. Its latents retain substantially more semantic information than conventional video tokenizer latents. Under matched generation settings, our best variant achieves gFVD scores of 117.86 and 19.16 on UCF101 and K600, respectively, while converging up to 6x faster}. We further show that reconstruction quality alone is insufficient to characterize generative utility and introduce tFVD, a temporal-coherence diagnostic that correlates more reliably with downstream generation quality. Beyond video generation, V-RAE also improves future video prediction on Cityscapes over the Wan 2.2 VAE latent space under matched prediction settings. Taken together, the experiments show that frozen semantic representations can support video reconstruction, generation, and predictive modeling. The project page: https://v-rae.github.io/.
+
+潜在视频生成依赖于自动编码器来定义生成模型运行的紧凑空间。尽管视频自动编码器架构已经有了很大的发展，但它们的潜在空间仍然主要针对像素级重建进行优化，并提供有限的高级语义组织。然而，重建最佳的潜在空间不一定非常适合生成建模。我们提出了 V-RAE，一种视频表示自动编码器，它在冻结视觉基础模型表示之上构建紧凑的生成潜伏。轻量级时间池模块在保留语义结构的同时消除时间冗余，视频解码器从压缩特征中重建连续运动。我们使用四个具有代表性的冻结编码器在视频重建、语义探测和类条件生成方面评估 V-RAE。 V-RAE 在 K600 上实现了 2.13 rFVD，优于所有评估的大规模预训练视频 VAE。与传统的视频分词器潜在变量相比，它的潜在变量保留了更多的语义信息。在匹配的生成设置下，我们的最佳变体在 UCF101 和 K600 上分别实现了 117.86 和 19.16 的 gFVD 分数，同时收敛速度提高了 6 倍}。我们进一步表明，仅重建质量不足以表征生成效用，并引入了 tFVD，这是一种与下游生成质量更可靠相关的时间相干诊断。除了视频生成之外，V-RAE 还改进了匹配预测设置下的 Wan 2.2 VAE 潜在空间上城市景观的未来视频预测。总而言之，实验表明冻结语义表示可以支持视频重建、生成和预测建模。项目页面：https://v-rae.github.io/。
+
+</details>
+
+---
+
+## 2. TraVEL: Trajectory-Guided Video Embedding Learning for Driving-Video Retrieval / TraVEL：用于驾驶视频检索的轨迹引导视频嵌入学习
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13495v1](http://arxiv.org/abs/2608.13495v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13495v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Efficiently retrieving relevant clips from large-scale driving logs is essential for data curation, model development, and safety analysis. Structured and rule-based retrieval systems can explicitly target driving events, but typically require expert-defined rules, auxiliary data, and multi-stage perception pipelines. Multimodal embedding models offer a simpler and more efficient alternative by representing each video with a single searchable vector. However, general-purpose models often rely on shortcuts from static scene context and struggle to distinguish motion-centric events, such as turning left versus right or accelerating versus decelerating. In this work, we study how to adapt a general-purpose multimodal embedding model to driving-video retrieval. We first fine-tune Qwen3-VL-Embedding on paired clips and reasoning traces from nuReasoning using an InfoNCE objective. While this stage substantially improves overall retrieval, caption supervision alone remains insufficient for fine-grained motion understanding. We therefore introduce TraVEL (Trajectory-Guided Video Embedding Learning), a motion-aware fine-tuning framework that uses ego-trajectory similarity as a reward within Group Relative Policy Optimization. Trajectories serve only as privileged training supervision; retrieval still operates on single-vector video embeddings without ego poses, expert rules, or auxiliary perception outputs. We further construct a driving-video retrieval benchmark from nuReasoning. Experiments show that TraVEL improves motion-centric retrieval across model scales: relative to SFT, it raises longitudinal and lateral mAP by 9.8 and 4.7 points at 2B, with corresponding gains of 7.2 and 1.5 points at 8B. TraVEL thus combines physically grounded supervision with efficient embedding-based search.
+
+从大规模驾驶日志中有效检索相关片段对于数据管理、模型开发和安全分析至关重要。结构化和基于规则的检索系统可以明确地针对驾驶事件，但通常需要专家定义的规则、辅助数据和多级感知管道。多模态嵌入模型通过用单个可搜索向量表示每个视频，提供了一种更简单、更有效的替代方案。然而，通用模型通常依赖于静态场景上下文的快捷方式，并且难以区分以运动为中心的事件，例如左转与右转或加速与减速。在这项工作中，我们研究如何将通用多模态嵌入模型应用于驾驶视频检索。我们首先使用 InfoNCE 目标在配对剪辑和 nuReasoning 的推理轨迹上微调 Qwen3-VL-Embedding。虽然这个阶段大大改善了整体检索，但仅靠字幕监督仍然不足以实现细粒度的运动理解。因此，我们引入了 TraVEL（轨迹引导视频嵌入学习），这是一种运动感知微调框架，它使用自我轨迹相似性作为组相对策略优化中的奖励。轨迹仅作为特权训练监督；检索仍然在单向量视频嵌入上运行，没有自我姿势、专家规则或辅助感知输出。我们进一步构建了 nuReasoning 的驾驶视频检索基准。实验表明，TraVEL 改进了跨模型尺度的以运动为中心的检索：相对于 SFT，它在 2B 处将纵向和横向 mAP 提高了 9.8 点和 4.7 点，在 8B 处相应增益为 7.2 点和 1.5 点。因此，TraVEL 将物理基础监督与高效的基于嵌入的搜索结合起来。
+
+</details>
+
+---
+
+## 3. SNM-VFI: Symmetric Nonlinear Motion-Guided Generative Video Frame Interpolation / SNM-VFI：对称非线性运动引导生成视频帧插值
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13460v1](http://arxiv.org/abs/2608.13460v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13460v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We propose Symmetric Nonlinear Motion-guided Generative Video Frame Interpolation (SNM-VFI), a training-free framework for motion-controllable generative video frame interpolation with pre-trained optical flow and video diffusion models. Unlike conventional diffusion-based VFI methods that synthesize intermediate frames from random noise, SNM-VFI guides the generative process with correspondence-aware frames produced by a symmetric nonlinear motion model. Specifically, we first utilize a pre-trained optical flow model to construct multi-frame nonlinear flow-based intermediate frames and confidence maps. These flow-guided frames are then encoded as latent priors to initialize and iteratively guide a pre-trained Video Diffusion model, enabling the diffusion model to preserve dense motion correspondence while improving perceptual realism. To further enhance output quality, we employ confidence maps to fuse structurally reliable flow-based predictions with diffusion-generated details in uncertain regions such as occlusions and object boundaries. Extensive evaluations on challenging benchmarks, including DAVIS, Sintel, and KITTI, demonstrate that SNM-VFI achieves strong perceptual quality, competitive reconstruction accuracy, and robust temporal coherence across diverse motion scenarios.
+
+我们提出了对称非线性运动引导生成视频帧插值（SNM-VFI），这是一种免训练框架，用于使用预训练的光流和视频扩散模型进行运动可控生成视频帧插值。与从随机噪声合成中间帧的传统基于扩散的 VFI 方法不同，SNM-VFI 使用对称非线性运动模型生成的对应感知帧来指导生成过程。具体来说，我们首先利用预训练的光流模型来构造基于多帧非线性流的中间帧和置信图。然后，这些流引导帧被编码为潜在先验，以初始化并迭代引导预先训练的视频扩散模型，使扩散模型能够保留密集的运动对应关系，同时提高感知真实感。为了进一步提高输出质量，我们采用置信图将结构可靠的基于流的预测与不确定区域（例如遮挡和对象边界）中扩散生成的细节融合起来。对 DAVIS、Sintel 和 KITTI 等具有挑战性的基准的广泛评估表明，SNM-VFI 在不同的运动场景中实现了强大的感知质量、有竞争力的重建精度和强大的时间相干性。
+
+</details>
+
+---
+
+## 4. ContactGuard: Pre-Contact Execution Monitoring with Action-Conditioned Latent World Models / ContactGuard：使用动作条件潜在世界模型进行接触前执行监控
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13438v1](http://arxiv.org/abs/2608.13438v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13438v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Contact-rich manipulation failures are often detected only after the robot has committed to contact. This is especially limiting in wrist-camera setups: close gripper--object views help observe contact, but a poor approach may already push, miss, slip, or disturb the object before conventional detectors react. We introduce \emph{ContactGuard}, a pre-contact execution monitor for chunked visuomotor policies. Given the policy's planned action chunk, ContactGuard predicts its short-horizon consequence in latent visual space and aborts if the predicted future latent indicates likely failure. Its latent world model is trained from unlabelled robot trajectories to predict compact multi-view visual embeddings under planned actions, avoiding pixel-level video prediction. A lightweight failure probe is then trained from a small labelled set of pre-contact clips. At deployment, ContactGuard anchors prediction before an imminent contact event, rolls the model forward under the policy's own actions, and verifies the predicted post-contact latent. Across real-world contact-rich manipulation tasks, ContactGuard predicts failure more accurately than direct and corrupted-action ablations, and transfers to live robot as a pre-contact abort signal without modifying the underlying policy.
+
+富含接触的操作故障通常只有在机器人进行接触后才会被检测到。这在手腕相机设置中尤其受到限制：近距离的抓手——物体视图有助于观察接触，但不良的方法可能在传统探测器做出反应之前就已经推动、错过、滑动或干扰物体。我们引入了 \emph{ContactGuard}，一个用于分块视觉运动策略的接触前执行监视器。考虑到策略的计划行动块，ContactGuard 会预测其在潜在视觉空间中的短期后果，并在预测的未来潜在表明可能失败时中止。其潜在世界模型是根据未标记的机器人轨迹进行训练的，可以在计划的动作下预测紧凑的多视图视觉嵌入，从而避免像素级视频预测。然后从一小组标记的预接触夹中训练一个轻量级故障探针。在部署时，ContactGuard 在即将发生的接触事件之前锚定预测，在策略自身的操作下向前滚动模型，并验证预测的接触后潜伏。在现实世界中接触丰富的操作任务中，ContactGuard 比直接和损坏的动作消融更准确地预测失败，并在不修改底层策略的情况下将其作为预接触中止信号传输到实时机器人。
+
+</details>
+
+---
+
+## 5. StreamTTT: Reconciling Real-Time Perception and Long-Term Memory in Streaming VLMs / StreamTTT：协调流式 VLM 中的实时感知和长期记忆
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13416v1](http://arxiv.org/abs/2608.13416v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13416v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Humans effortlessly perceive the present while remembering the past, yet streaming VLMs often trade off real-time perception against long-term memory. Prior work shows that shortening the context can sharpen current-scene perception at the expense of long-range recall. To reconcile these abilities, we introduce StreamTTT, which writes long-range history into online-updated fast weights outside the attention context. This leaves a short sliding key-value cache dedicated to recent evidence, mitigating attention dilution. We train StreamTTT jointly on offline long-video QA and a newly constructed real-time QA corpus. On OVO-Bench, StreamTTT-4B outperforms SimpleStream-4B by 1.4 points in real-time perception and 3.7 points in backward tracing. It also remains competitive with the larger SimpleStream-8B on the Real-Time Visual Understanding (RTVU) subset of StreamingBench. Our code will be released.
+
+人类在记住过去的同时可以毫不费力地感知现在，但流式 VLM 常常会在实时感知与长期记忆之间进行权衡。先前的研究表明，缩短上下文可以增强当前场景的感知，但会牺牲远距离回忆。为了协调这些能力，我们引入了 StreamTTT，它将长期历史记录写入注意力上下文之外的在线更新的快速权重中。这留下了一个专门用于最近证据的短滑动键值缓存，从而减轻了注意力稀释。我们在离线长视频 QA 和新构建的实时 QA 语料库上联合训练 StreamTTT。在 OVO-Bench 上，StreamTTT-4B 在实时感知方面优于 SimpleStream-4B 1.4 分，在向后跟踪方面优于 SimpleStream-4B 3.7 分。它还在 StreamingBench 的实时视觉理解 (RTVU) 子集上与更大的 SimpleStream-8B 保持竞争力。我们的代码将被发布。
+
+</details>
+
+---
+
+## 6. Context-Matched Distillation: Teacher Causality for Autoregressive Video Distillation / 上下文匹配蒸馏：自回归视频蒸馏的教师因果关系
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13391v1](http://arxiv.org/abs/2608.13391v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13391v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Interactive autoregressive video generation demands both low-latency rollouts and precise online control. Few-step distillation accelerates generation by reducing denoising steps, while online control imposes a causal constraint: frames and blocks should depend on history and controls available during generation. Existing video distribution matching distillation (DMD) pipelines, however, often supervise causal few-step students using bidirectional teachers that score complete clips. The score for a target can therefore depend on future frames and controls that were unavailable when the student generated it, misaligning teacher supervision with the student's causal information set. We introduce Context-Matched Distillation (CMD), a causal DMD framework that aligns teacher supervision with the information available when each target is generated. CMD replaces bidirectional full-clip scoring with a causal teacher that evaluates each target without access to future frames or controls. The same causal teacher initializes the few-step student, establishing a consistent causal formulation across teacher training, student distillation, and inference. Beyond aligning the temporal information boundary, Prefix Scoring matches supervision to the student's realized rollout context by evaluating each target under the cached student-generated prefix that produced it. Prefix Corruption further stabilizes training by perturbing unreliable prefixes produced early in training while preserving this target-context alignment. With a simple causal formulation, CMD naturally extends to frame-wise and chunk-wise generation, long video distillation, and camera-conditioned distillation. Experiments demonstrate state-of-the-art aggregate performance among autoregressive methods on both short- and long-video benchmarks, together with substantially improved adherence to time-varying camera controls.
+
+交互式自回归视频生成需要低延迟推出和精确的在线控制。少步蒸馏通过减少去噪步骤来加速生成，而在线控制则施加因果约束：帧和块应取决于生成期间可用的历史和控制。然而，现有的视频分发匹配蒸馏（DMD）管道通常使用对完整剪辑进行评分的双向教师来监督因果几步的学生。因此，目标的分数可能取决于学生生成目标时不可用的未来框架和控制，从而使教师监督与学生的因果信息集不一致。我们引入了上下文匹配蒸馏（CMD），这是一种因果 DMD 框架，可将教师监督与生成每个目标时可用的信息保持一致。 CMD 用因果教师取代了双向全剪辑评分，该教师可以评估每个目标，而无需访问未来的帧或控件。同一个因果教师初始化了几个步骤的学生，在教师培训、学生蒸馏和推理过程中建立了一致的因果表述。除了对齐时间信息边界之外，前缀评分还通过评估缓存的学生生成的前缀下的每个目标，将监督与学生实现的部署上下文相匹配。前缀损坏通过扰乱训练早期产生的不可靠前缀，同时保持目标上下文对齐，进一步稳定训练。通过简单的因果公式，CMD 自然地扩展到逐帧和逐块生成、长视频蒸馏和相机条件蒸馏。实验证明了自回归方法在短视频和长视频基准上的最先进的总体性能，以及对时变相机控制的遵守程度的显着提高。
+
+</details>
+
+---
+
+## 7. Sign Language Video Synthesis via Loss-Guided Multi-Expert GANs / 通过损失引导多专家 GAN 进行手语视频合成
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13368v1](http://arxiv.org/abs/2608.13368v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13368v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This preliminary technical report presents a framework for sign language video synthesis using a loss-guided multi-expert Generative Adversarial Network (GAN) to enhance communication for individuals with hearing impairments. Three specialized discriminators -- global, hand, and head -- each guide a corresponding expert branch in the generator toward a distinct visual region, enabling implicit feature specialization without explicit diversity losses. To stabilize this multi-discriminator system, whose early-phase training otherwise exhibits chaotic dynamics, we introduce a United Loss consensus mechanism that regularizes each discriminator toward the ensemble average at a 10% weight. Each branch further adopts a dual-pathway convolutional-transformer design with learnable AdaptiveFeatureFusion, balancing the stability of convolutions against the detail of windowed self-attention. The generator is trained using an alternating three-mode schedule (discriminator, holistic generation, branch-specialized generation). On a custom 156GB dataset with a filtered test set that removes easy and repetitive samples, our 0.2B-parameter variant achieves 29.8 PSNR and the 1.3B-parameter variant achieves 30.7 PSNR, with inference VRAM footprints of 1.5 GB and 8 GB respectively, enabling deployment on consumer-grade hardware. Full ablation studies remain ongoing due to the 2-3 month training cycle on a single GPU. The system was showcased at the 2025 Hong Kong Frontier Technology Summit.
+
+这份初步技术报告提出了一个手语视频合成框架，使用损失引导的多专家生成对抗网络 (GAN) 来增强听力障碍人士的沟通。三个专门的鉴别器（全局鉴别器、手鉴别器和头部鉴别器）分别引导生成器中相应的专家分支走向不同的视觉区域，从而实现隐式特征专业化，而不会造成显式多样性损失。为了稳定这个多判别器系统，该系统的早期训练否则会表现出混沌动态，我们引入了联合损失共识机制，该机制将每个判别器以 10% 的权重调整为整体平均值。每个分支进一步采用具有可学习的 AdaptiveFeatureFusion 的双通道卷积变换器设计，平衡卷积的稳定性与窗口自注意力的细节。生成器使用交替三模式调度（鉴别器、整体生成、分支专业生成）进行训练。在具有删除简单和重复样本的过滤测试集的自定义 156GB 数据集上，我们的 0.2B 参数变体实现了 29.8 PSNR，1.3B 参数变体实现了 30.7 PSNR，推理 VRAM 占用空间分别为 1.5 GB 和 8 GB，支持在消费级硬件上部署。由于单个 GPU 上的训练周期为 2-3 个月，完整的消融研究仍在进行中。该系统在2025香港前沿科技峰会上进行了展示。
+
+</details>
+
+---
+
+## 8. HPSD: Hybrid-Policy Self-Distillation for Text-Image-to-Video Diffusion Models / HPSD：文本-图像-视频扩散模型的混合策略自蒸馏
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13205v1](http://arxiv.org/abs/2608.13205v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13205v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-Image-to-Video (TI2V) models are an emerging unified architecture, where a single model simultaneously supports text-to-video (T2V) and image-to-video (I2V) generation. Given a high-quality first frame or a detailed textual prompt, TI2V models unlock substantially better visual quality than their T2V mode, raising a natural question: can the capability elicited by such privileged conditions be internalized into the model's own base generation ability? A common approach toward this goal is model self-distillation. However, the most straightforward solution, supervised fine-tuning, follows an off-policy strategy: its supervision is confined to teacher-generated endpoints from a fixed offline distribution rather than student-visited states, lacking precise correction tailored to the evolving policy. Recent on-policy distillation methods instead suffer from condition-state mismatch, where supervision is steered toward the given first frame instead of the student's actual content, misleading the correction. To achieve self-distillation that absorbs the teacher's privileged prior while retaining precise policy correction, in this work, we propose Hybrid-Policy Self-Distillation (HPSD), a novel self-distillation framework where a single TI2V model acts as both teacher and student under different conditions: the teacher operates in TI2V mode with a high-quality first frame and an enhanced prompt, while the student runs in the base T2V mode with only the vanilla prompt. Specifically, the student inherits off-policy teacher trajectory points as anchors, locally refines them toward its own policy, and finally receives velocity-level supervision on these self-generated roll-outs. Extensive experiments demonstrate that HPSD significantly improves T2V performance while also delivering notable TI2V gains, effectively strengthening the model's base generation ability.
+
+文本图像到视频 (TI2V) 模型是一种新兴的统一架构，其中单个模型同时支持文本到视频 (T2V) 和图像到视频 (I2V) 的生成。给定高质量的第一帧或详细的文本提示，TI2V 模型可以解锁比 T2V 模式更好的视觉质量，这就提出了一个自然的问题：这种特权条件引发的能力是否可以内化到模型自身的基础生成能力中？实现这一目标的常见方法是模型自蒸馏。然而，最直接的解决方案，监督微调，遵循离政策策略：其监督仅限于来自固定离线分布的教师生成的端点，而不是学生访问的状态，缺乏针对不断发展的政策的精确修正。最近的策略蒸馏方法反而遭受条件状态不匹配的困扰，其中监督被引导到给定的第一帧而不是学生的实际内容，从而误导了纠正。为了实现吸收教师特权先验的自蒸馏，同时保留精确的策略修正，在这项工作中，我们提出了混合策略自蒸馏（HPSD），这是一种新颖的自蒸馏框架，其中单个 TI2V 模型在不同条件下既充当教师又充当学生：教师在 TI2V 模式下运行，具有高质量的第一帧和增强的提示，而学生在基本 T2V 模式下运行，只有普通提示。具体来说，学生继承了偏离策略的教师轨迹点作为锚点，根据自己的策略对其进行局部细化，并最终接受对这些自我生成的推出的速度级别监督。大量实验表明，HPSD 显着提高了 T2V 性能，同时还带来了显着的 TI2V 增益，有效增强了模型的基础生成能力。
+
+</details>
+
+---
+
+## 9. A Controlled Study of Self-Supervised Image and Video Pretraining under Limited Resources / 有限资源下自监督图像和视频预训练的对照研究
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13183v1](http://arxiv.org/abs/2608.13183v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13183v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual foundation models are a cornerstone of image and video understanding but typically require large amounts of data and computation. The current scale required for pretraining visual foundation models may be unsustainable or unnecessary, and significant benefits arise when effective models can be obtained with fewer resources. To better understand how self-supervised learning (SSL) objectives behave under resource constraints, we conduct a controlled study of image and video SSL objectives under matched data, architecture, and compute budgets. We compare contrastive, reconstruction, feature-prediction, and diffusion objectives and evaluate both standalone and jointly trained image-video SSL formulations across a diverse set of image and video understanding tasks. Our results show that DINOv2-style pretraining consistently provides the strongest overall performance under limited resources. Furthermore, combining DINOv2 with video SSL objectives such as VideoMAE substantially improves image classification and segmentation performance, but degrades video tracking and camera-pose estimation performance, revealing an important tradeoff between semantic and geometric representation learning. These findings suggest that combining image and video SSL objectives can be beneficial in resource-limited settings, while highlighting the need for improved methods that better balance semantic, temporal, and geometric supervision.
+
+视觉基础模型是图像和视频理解的基石，但通常需要大量数据和计算。当前预训练视觉基础模型所需的规模可能是不可持续或不必要的，当可以用更少的资源获得有效的模型时，就会产生显着的好处。为了更好地了解自监督学习 (SSL) 目标在资源限制下的表现，我们在匹配的数据、架构和计算预算下对图像和视频 SSL 目标进行了受控研究。我们比较对比、重建、特征预测和扩散目标，并在不同的图像和视频理解任务中评估独立和联合训练的图像视频 SSL 公式。我们的结果表明，DINOv2 式的预训练在有限的资源下始终能提供最强的整体性能。此外，将 DINOv2 与 VideoMAE 等视频 SSL 目标相结合可显着提高图像分类和分割性能，但会降低视频跟踪和相机姿态估计性能，揭示语义和几何表示学习之间的重要权衡。这些发现表明，结合图像和视频 SSL 目标在资源有限的环境中可能是有益的，同时强调需要改进方法，以更好地平衡语义、时间和几何监督。
+
+</details>
+
+---
+
+## 10. EgoMonth: A Month-Level Egocentric Video Benchmark for Long-Term Spatiotemporal Memory / EgoMonth：长期时空记忆的月级自我中心视频基准
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13113v1](http://arxiv.org/abs/2608.13113v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13113v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in Multimodal Large Language Models (MLLMs) have led to substantial progress in video understanding, accompanied by a growing number of long video benchmarks. However, existing benchmarks rely predominantly on web-sourced videos that lack inter-clip spatiotemporal continuity, making it difficult to assess whether models can maintain consistent memory across days or weeks of real-world experience. We introduce EgoMonth, the first month-level egocentric video understanding benchmark. EgoMonth comprises over 300 hours of first-person daily-life recordings from 20 participants spanning 20 to 120 days, paired with 1,443 human-crafted multiple-choice question-answer pairs. We design a cognitively grounded 14-task evaluation framework organized into three hierarchical cognitive levels: Schema Consolidation, Episodic Indexing, and Cascading Reasoning. Evaluation of state-of-the-art open-source and closed-source MLLMs reveals that even the best-performing model, Gemini 2.5 Pro, achieves only 71.8% macro-average accuracy, remaining 22.4 percentage points below the corrected human baseline of 94.2%. Several models perform near or below the 25% chance level on tasks such as Route Reasoning, Cross-view Spatial Reasoning, and Direction Judgement, while even the strongest closed-source model remains substantially below human performance. These results indicate that current MLLMs function as lossy summarizers rather than faithful memorizers, highlighting the need for architectures with genuine long-term spatiotemporal memory.
+
+多模态大语言模型（MLLM）的最新进展导致视频理解方面取得了实质性进展，同时长视频基准的数量也不断增加。然而，现有的基准主要依赖于缺乏剪辑间时空连续性的网络视频，因此很难评估模型是否能够在数天或数周的现实世界体验中保持一致的记忆。我们推出了 EgoMonth，这是第一个月级自我中心视频理解基准。 EgoMonth 包含 20 名参与者在 20 至 120 天内录制的超过 300 小时的第一人称日常生活录音，并配有 1,443 个人工制作的多项选择题答案对。我们设计了一个基于认知的 14 项任务评估框架，该框架分为三个层次认知级别：图式整合、情景索引和级联推理。对最先进的开源和闭源 MLLM 的评估表明，即使是性能最好的模型 Gemini 2.5 Pro，其宏观平均准确率也仅为 71.8%，比修正后的人类基线 94.2% 低 22.4 个百分点。一些模型在路线推理、跨视图空间推理和方向判断等任务上的表现接近或低于 25% 的机会水平，而即使是最强大的闭源模型仍然大大低于人类表现。这些结果表明，当前 MLLM 的功能是有损总结器，而不是忠实的记忆器，这凸显了对具有真正长期时空记忆的架构的需求。
+
+</details>
+
+---
+
+## 11. H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models / H2R-Bench：世界模型中人机操作视频生成的基准测试
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13049v1](http://arxiv.org/abs/2608.13049v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13049v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large-scale manipulation data is essential for robot learning, yet collecting robot demonstrations remains expensive and difficult to scale. Meanwhile, abundant egocentric human manipulation videos provide rich behavioral experiences, but transferring them across embodiments remains challenging due to differences between human hands and robotic end-effectors. Recent advances in video world models offer a promising pathway to synthesize robot-centric manipulation videos from human observations, while their cross-embodiment transfer capability remains largely unexplored. Therefore, we introduce H2R-Bench, a benchmark for evaluating cross-embodiment human-to-robot manipulation video generation, where models transform egocentric human demonstrations into robot manipulation videos under specified embodiments. Each benchmark instance contains a human demonstration video, target embodiment constraints, and source-grounded annotations covering task goals, action events, functional contacts, and object responses. H2R-Bench evaluates generated videos through five dimensions, including goal-state completion, action-event completion, functional contact transfer, embodiment correctness, and general video quality. We benchmark eleven state-of-the-art video generation models across six manipulation families and two robot embodiments. Our evaluation reveals that current video world models remain limited in human-to-robot manipulation transfer: even leading models often fail in embodiment consistency, functional interaction, and task execution. H2R-Bench provides a systematic diagnostic framework for evaluating whether video world models can bridge the human-to-robot embodiment gap and convert human manipulation observations into robot-centric training resources.
+
+大规模操作数据对于机器人学习至关重要，但收集机器人演示仍然昂贵且难以扩展。与此同时，丰富的以自我为中心的人类操作视频提供了丰富的行为体验，但由于人手和机器人末端执行器之间的差异，将它们跨实施例转移仍然具有挑战性。视频世界模型的最新进展为根据人类观察合成以机器人为中心的操作视频提供了一条有前途的途径，而它们的跨实体传输能力在很大程度上仍未得到探索。因此，我们引入了 H2R-Bench，一个用于评估跨实施例人机操作视频生成的基准，其中模型将以自我为中心的人类演示转换为指定实施例下的机器人操作视频。每个基准实例都包含人类演示视频、目标实施例约束以及涵盖任务目标、动作事件、功能接触和对象响应的基于源的注释。 H2R-Bench 通过五个维度评估生成的视频，包括目标状态完成度、动作事件完成度、功能性接触转移、体现正确性和一般视频质量。我们对六个操纵系列和两个机器人实施例中的十一个最先进的视频生成模型进行了基准测试。我们的评估表明，当前的视频世界模型在人机交互操作方面仍然受到限制：即使是领先的模型也常常在体现一致性、功能交互和任务执行方面失败。 H2R-Bench 提供了一个系统的诊断框架，用于评估视频世界模型是否可以弥合人与机器人的具体差距，并将人类操作观察结果转化为以机器人为中心的训练资源。
+
+</details>
+
+---
+
+## 12. From Local Mismatch to Global Impact: Optimizing Cache Reuse Policy for Efficient Diffusion / 从局部不匹配到全局影响：优化缓存重用策略以实现高效扩散
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13043v1](http://arxiv.org/abs/2608.13043v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13043v1)
+
+**Categories**: cs.AI, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion models have achieved dominant performance in visual generation but suffer from substantial inference overhead. While cache-based acceleration has emerged as a promising solution, existing policies rely on local similarity heuristics, which we identify as being significantly misaligned with final generation quality. This discrepancy stems from the non-uniform propagation and accumulation of errors along the denoising trajectory. To address this, we propose Global-Impact Cache (GCache). We first establish a rigorous theoretical characterization of the error propagation upper bound. Recognizing that this bound can be overly conservative for complex, highly non-convex diffusion models, we further reparameterize the propagation exponent with a Bernstein form and reformulate cache policy search as a bilevel optimization problem. In detail, GCache identifies an optimal reuse policy in the inner objective while aligning the error-weighting function with generation quality loss in the outer objective. This framework effectively reconciles theoretical rigor with empirical performance, learning to prioritize computation where it most impacts visual fidelity. Extensive experiments demonstrate that GCache consistently outperforms prior caching strategies on both video and image generation. Notably, on the state-of-the-art Wan2.1 video diffusion model, GCache maintains a 2.17x speedup while significantly enhancing generation quality, reducing LPIPS from 0.1095 to 0.0316.
+
+扩散模型在视觉生成方面取得了主导性能，但面临着巨大的推理开销。虽然基于缓存的加速已成为一种有前景的解决方案，但现有策略依赖于局部相似性启发法，我们认为这种方法与最终生成质量明显不一致。这种差异源于沿去噪轨迹的不均匀传播和误差累积。为了解决这个问题，我们提出了全局影响缓存（GCache）。我们首先建立误差传播上限的严格理论表征。认识到这个界限对于复杂的、高度非凸的扩散模型来说可能过于保守，我们进一步用 Bernstein 形式重新参数化传播指数，并将缓存策略搜索重新表述为双层优化问题。具体来说，GCache 在内部目标中确定最佳重用策略，同时将错误加权函数与外部目标中的生成质量损失对齐。该框架有效地协调了理论严谨性与经验性能，学会在最影响视觉保真度的地方优先计算计算。大量实验表明，GCache 在视频和图像生成方面始终优于先前的缓存策略。值得注意的是，在最先进的 Wan2.1 视频扩散模型上，GCache 保持了 2.17 倍的加速，同时显着提高了生成质量，将 LPIPS 从 0.1095 降低到 0.0316。
+
+</details>
+
+---
+
+## 13. Spatially-Grounded Text-to-Video Generation via Inference-Time Gradient-Free Optimization / 通过推理时间无梯度优化生成空间接地文本到视频
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13037v1](http://arxiv.org/abs/2608.13037v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13037v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion Transformer Text-to-Video models have achieved remarkable synthesis quality, yet fine-grained spatial controllability remains a significant challenge. While existing training-free methods produce solid overall results in spatially grounded generation, \ie, placing a specific object in a designated location, they rely on gradient-based optimization techniques that incur prohibitive computational overhead, a bottleneck amplified in modern large-scale architectures. To address this limitation, we present Gradient-free Analytical Trajectory Optimization Video Generation (GATO-Vid), a novel training-free and gradient-free approach for precise spatial guidance. Rather than relying on costly backward passes, we introduce an alternative cross-attention score and solve it analytically to obtain an exact, closed-form solution. To use our analytical solution, we propose an on-the-fly injection mechanism tailored to the topological manifold of the transformer's latent space. Our experiments demonstrate that GATO-Vid significantly outperforms existing baselines in localization accuracy while introducing minimal computational overhead.
+
+Diffusion Transformer 文本到视频模型已经实现了卓越的合成质量，但细粒度的空间可控性仍然是一个重大挑战。虽然现有的免训练方法在空间接地生成（即将特定对象放置在指定位置）中产生了可靠的总体结果，但它们依赖于基于梯度的优化技术，这些技术会产生过高的计算开销，这是现代大规模体系结构中放大的瓶颈。为了解决这一限制，我们提出了无梯度分析轨迹优化视频生成（GATO-Vid），这是一种用于精确空间引导的新型无训练和无梯度方法。我们不依赖于昂贵的向后传递，而是引入了另一种交叉注意力分数并对其进行分析求解以获得精确的封闭式解决方案。为了使用我们的分析解决方案，我们提出了一种针对变压器潜在空间的拓扑流形定制的动态注入机制。我们的实验表明，GATO-Vid 在定位精度方面显着优于现有基线，同时引入最小的计算开销。
+
+</details>
+
+---
+
+## 14. UniTraffic-Agent: Unified Traffic Video Reasoning for AI City Challenge 2026 Track 3 with Two Out-of-Domain Evaluations / UniTraffic-Agent：2026 年人工智能城市挑战赛第 3 轨道的统一交通视频推理，包含两项域外评估
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13031v1](http://arxiv.org/abs/2608.13031v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13031v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/Roclp/UniTraffic-Agent.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Traffic video understanding has become an important problem in intelligent transportation, as road videos provide direct evidence for accidents, violations, and interactions between vehicles and vulnerable road users. A useful system should explain how a traffic event develops, why it happens, and when the relevant interaction occurs, yet this remains difficult for multimodal large language models (MLLMs) because traffic videos contain sparse events and varied viewpoints. We introduce UniTraffic-Agent, the MR-CAS solution for Track~3 of the 10th AI City Challenge, which includes Traffic Anomaly Reasoning (TAR) and two out-of-domain evaluations: FETV for fisheye traffic events and PSI-VQA for pedestrian intention reasoning. UniTraffic-Agent follows an observe--reason--act--verify workflow that samples timestamped visual evidence, reasons over all questions from the same clip in one request, and converts responses through task-specific action adapters. On the official Public leaderboards, MR-CAS ranks 16th on TAR with a score of 0.5780, 2nd on FETV with 0.4884, and 4th on PSI-VQA with 64.4161. The code is available at https://github.com/Roclp/UniTraffic-Agent.
+
+交通视频理解已成为智能交通中的一个重要问题，因为道路视频为事故、违规以及车辆与弱势道路使用者之间的互动提供了直接证据。一个有用的系统应该解释交通事件如何发展、为什么会发生以及相关交互何时发生，但这对于多模态大语言模型（MLLM）来说仍然很困难，因为交通视频包含稀疏事件和不同的观点。我们介绍 UniTraffic-Agent，这是第十届人工智能城市挑战赛 Track~3 的 MR-CAS 解决方案，其中包括交通异常推理 (TAR) 和两个域外评估：用于鱼眼交通事件的 FETV 和用于行人意图推理的 PSI-VQA。 UniTraffic-Agent 遵循观察-推理-行动-验证工作流程，对带时间戳的视觉证据进行采样，对一个请求中同一剪辑中的所有问题进行推理，并通过特定于任务的操作适配器转换响应。在官方公共排行榜上，MR-CAS 在 TAR 上排名第 16 位，得分为 0.5780，在 FETV 上排名第二，得分为 0.4884，在 PSI-VQA 上排名第四，得分为 64.4161。该代码可在 https://github.com/Roclp/UniTraffic-Agent 获取。
+
+</details>
+
+---
+
+## 15. RGB-D Video Generation for Improving Human-to-Robot Object Handover Prediction / 用于改进人机对象交接预测的 RGB-D 视频生成
+
+**Date**: 2026-08-13 | **arXiv**: [2608.13028v1](http://arxiv.org/abs/2608.13028v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13028v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human-to-robot (H2R) object handover is a fundamental capability for human-robot collaboration, yet progress is hindered by the scarcity of large-scale, human-centric datasets and the significant sim-to-real gap. To address these challenges, we introduce Hand2Bot, an RGB-D video dataset that provides rich contextual information such as body posture and facial expressions, specifically collected for handover scenarios with real-world noise patterns. We further propose PassGen, a generative pipeline that leverages stable video diffusion and an Intention-Aware Temporal Face Encoder to synthesize realistic handover sequences while ensuring hand-object consistency. To bridge the sim-to-real gap, we implement a morphology-based depth editing strategy that replicates realistic sensor noise found in physical depth maps. Experimental evaluations demonstrate that our framework achieves high intention identification accuracy and low false trigger rates in both ablation studies and real-world deployment on a physical robot platform. Our results confirm that training on PassGen allows for robust zero-shot transfer and earlier intention anticipation compared to traditional hand-centric baselines, effectively enabling socially aware robotic behavior in shared workspaces.
+
+人机（H2R）对象切换是人机协作的一项基本功能，但由于大规模、以人为中心的数据集的稀缺以及模拟与真实之间的巨大差距，阻碍了进展。为了应对这些挑战，我们引入了 Hand2Bot，这是一个 RGB-D 视频数据集，它提供丰富的上下文信息，例如身体姿势和面部表情，专门针对具有真实世界噪声模式的切换场景收集。我们进一步提出了 PassGen，这是一种生成管道，利用稳定的视频扩散和意图感知的时间面部编码器来合成真实的切换序列，同时确保手部对象的一致性。为了弥补模拟与真实之间的差距，我们实施了一种基于形态的深度编辑策略，该策略复制了物理深度图中发现的真实传感器噪声。实验评估表明，我们的框架在消融研究和物理机器人平台上的实际部署中均实现了较高的意图识别准确性和较低的错误触发率。我们的结果证实，与传统的以手为中心的基线相比，PassGen 上的训练可以实现强大的零样本传输和更早的意图预期，从而有效地在共享工作空间中实现具有社交意识的机器人行为。
+
+</details>
+
+---
+
+## 16. TennisVAR: A Stroke-Evidence-Grounded Multimodal Large Language Model for Tactical Reasoning in Tennis Videos / TennisVAR：基于击球证据的多模态大语言模型，用于网球视频中的战术推理
+
+**Date**: 2026-08-13 | **arXiv**: [2608.12920v1](http://arxiv.org/abs/2608.12920v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12920v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Sports-video understanding is moving beyond event recognition toward explaining how actions collectively shape match progression, however, existing tennis-video methods either perceive individual strokes without modeling their tactical dependencies or generate high-level analyses without grounding them in the underlying events. To bridge this perception-to-understanding gap, we formulate stroke-evidence-grounded tactical reasoning, a new rally-level task that requires models to jointly predict an open-ended answer, a hierarchical tactic label, an ordered sequence of supporting strokes, and decisive key actions, with each evidence stroke anchored to its racket-ball contact frame. We further introduce TRACE (Tactical Reasoning with Action-Chain Evidence in Tennis), a large-scale expert-annotated benchmark containing 11,189 rally videos, 41,485 stroke events, 25,429 tactical units, and 11,189 question-answer pairs, which unifies fine-grained stroke attributes, cross-stroke tactical relations, hierarchical tactic annotations, and evidence-grounded questions across factual perception, tactical understanding, and decision reasoning. Building on TRACE, we propose TennisVAR (Tennis Video Action-chain Reasoner), an evidence-grounded multimodal large language model that follows an "event-relation-evidence-tactic" reasoning paradigm, where an Event Parsing Module converts continuous rallies into explicit stroke-event sequences while a Tactical Graph-Guided Temporal Reasoner jointly models rally progression and same-player decision dependencies to identify question-relevant evidence and decisive actions.
+
+体育视频理解正在超越事件识别，转向解释动作如何共同塑造比赛进程，然而，现有的网球视频方法要么感知单个击球，而不对其战术依赖性进行建模，要么生成高级分析，而不将它们扎根于潜在事件。为了弥合这种感知与理解之间的差距，我们制定了基于击球证据的战术推理，这是一项新的集会级任务，需要模型共同预测开放式答案、分层战术标签、支持击球的有序序列和决定性的关键动作，每个证据击球都锚定到其球拍接触框架。我们进一步介绍了 TRACE（Tactical Reasoning with Action-Chain Evidence in Tennis），这是一个大规模的专家注释基准，包含 11,189 个拉力赛视频、41,485 个击球事件、25,429 个战术单元和 11,189 个问答对，它统一了细粒度的击球属性、跨击球战术关系、分层战术注释以及跨越事实感知、战术理解和决策的基于证据的问题推理。在TRACE的基础上，我们提出了TennisVAR（网球视频动作链推理器），这是一种基于证据的多模态大语言模型，遵循“事件-关系-证据-策略”推理范式，其中事件解析模块将连续的集会转换为明确的击球事件序列，而战术图引导的时间推理器联合模拟集会进展和同一玩家决策依赖性，以识别与问题相关的证据和决定性的行动。
+
+</details>
+
+---
+
+## 17. VOS-Agent: The 1st Place Solution for the 8th LSVOS Challenge (MOSEv2 Track) / VOS-Agent：第八届 LSVOS 挑战赛（MOSEv2 赛道）第一名的解决方案
+
+**Date**: 2026-08-13 | **arXiv**: [2608.12721v1](http://arxiv.org/abs/2608.12721v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12721v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Complex video object segmentation requires robust target propagation under severe occlusion, disappearance and reappearance. Although SAM3 provides strong promptable mask propagation, a uniform inference path remains unreliable for tiny targets with insufficient visual evidence and semantic-dominated targets whose identities depend on explicit attributes. To this end, we present VOS-Agent, a collaborative framework that retains SAM3 as the shared dense segmentation module and conditionally activates specialized agents according to target characteristics. A Target Perception and Routing Agent assigns each sequence to a regular, tiny, or semantic-dominated route. Tiny targets are supported by a Visual Tracking Agent through confidence-aware box prompts, while semantic-dominated targets are handled by an MLLM-based Semantic Agent through description-guided localization and candidate verification. On the MOSEv2 test set, VOS-Agent achieves 69.82% on the official $\mathcal{J}\&\dot{\mathcal{F}}$ metric and ranks first in the MOSEv2 Track of the 8th LSVOS Challenge at ECCV 2026.
+
+复杂的视频对象分割需要在严重遮挡、消失和再现的情况下具有鲁棒的目标传播。尽管 SAM3 提供了强大的即时掩码传播，但对于视觉证据不足的微小目标和其身份依赖于显式属性的语义主导目标来说，统一的推理路径仍然不可靠。为此，我们提出了 VOS-Agent，这是一个协作框架，保留 SAM3 作为共享密集分割模块，并根据目标特征有条件地激活专门代理。目标感知和路由代理将每个序列分配给常规的、微小的或语义主导的路由。视觉跟踪代理通过置信感知框提示支持微小目标，而语义主导的目标则由基于 MLLM 的语义代理通过描述引导的本地化和候选验证来处理。在 MOSEv2 测试集上，VOS-Agent 在官方 $\mathcal{J}\&\dot{\mathcal{F}}$ 指标上取得了 69.82% 的成绩，并在 ECCV 2026 第八届 LSVOS 挑战赛的 MOSEv2 赛道中排名第一。
+
+</details>
+
+---
+
+## 18. StrAD: A Streaming Method and Benchmark for Audio Description Generation for Long-form Videos / StrAD：长视频音频描述生成的流媒体方法和基准
+
+**Date**: 2026-08-12 | **arXiv**: [2608.12549v1](http://arxiv.org/abs/2608.12549v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12549v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual content is the dominant medium of communication, yet without audio descriptions (ADs), it remains inaccessible to blind and low-vision people. ADs narrate context-relevant visual events during natural audio pauses. Manually creating ADs is expensive, limiting coverage to a small fraction of available content. Most existing automatic AD generation methods frame the task as video clip captioning, requiring ground-truth timestamps and additional context cues such as character databases. Current benchmarks reinforce this framing, consisting of short video segments paired with automatic or task-mismatched annotations. We introduce StrAD, a benchmark for long-form AD generation on full-length videos spanning diverse genres such as movies, documentaries, short films, performances, and video games. We reformulate AD generation as streaming dense video captioning. Our approach processes full-length videos with a sliding window, inserting ADs into existing transcripts without ground-truth timestamps, and supports both fine-tuned models and zero-shot prompting of vision-language models. On the segment-level task with given timestamps, our fine-tuned StrAD-FT sets the state of the art on CMD-AD with 36.3 CIDEr (+10.0 over Shot-by-shot), establishes a reference point on StrAD (51.0 CIDEr), and remains competitive on MAD-Eval at 24.9 CIDEr. On the full-video streaming task, StrAD-FT reaches a SODA score of 2.4 against 1.1 for our zero-shot baseline StrAD-Zero, though both exhibit limitations in temporal localization and narrative coherence. While prior work has tackled full-video AD generation in an offline, multi-stage fashion, ours is the first streaming approach, generating ADs on the fly without ground-truth timestamps. StrAD makes progress on full-video AD generation measurable, a prerequisite for scaling accessibility.
+
+视觉内容是主要的交流媒介，但如果没有音频描述 (AD)，盲人和弱视人士仍然无法访问它。广告在自然音频暂停期间叙述与上下文相关的视觉事件。手动创建 AD 的成本很高，且覆盖范围仅限于一小部分可用内容。大多数现有的自动广告生成方法将任务设计为视频剪辑字幕，需要真实时间戳和其他上下文线索（例如字符数据库）。当前的基准测试强化了这种框架，由短视频片段与自动或任务不匹配的注释配对组成。我们推出了 StrAD，这是针对电影、纪录片、短片、表演和视频游戏等不同类型的长视频生成长篇广告的基准。我们将广告生成重新定义为流式密集视频字幕。我们的方法使用滑动窗口处理完整长度的视频，将广告插入到现有的记录中，而无需地面实况时间戳，并支持微调模型和视觉语言模型的零样本提示。在给定时间戳的分段级任务上，我们经过微调的 StrAD-FT 在 CMD-AD 上以 36.3 CIDEr（比逐镜头 +10.0）设定了最先进的水平，在 StrAD (51.0 CIDEr) 上建立了参考点，并在 MAD-Eval 上保持了 24.9 CIDEr 的竞争力。在全视频流任务中，StrAD-FT 的 SODA 得分为 2.4，而我们的零镜头基线 StrAD-Zero 为 1.1，尽管两者在时间定位和叙事连贯性方面都表现出局限性。虽然之前的工作以离线、多阶段的方式解决了全视频广告生成问题，但我们的工作是第一个流媒体方法，可以在没有地面真实时间戳的情况下动态生成广告。 StrAD 在全视频广告生成方面取得了可衡量的进展，这是扩展可访问性的先决条件。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-14 (15 papers)</b></summary>
 
 # arXiv Video Papers - 2026-08-14
