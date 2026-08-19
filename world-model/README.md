@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-19](papers/2026-08-19.md) - 6 papers
 - [2026-08-15](papers/2026-08-15.md) - 11 papers
 - [2026-08-14](papers/2026-08-14.md) - 3 papers
 - [2026-08-13](papers/2026-08-13.md) - 12 papers
@@ -134,6 +135,116 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-19 (6 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-08-19
+
+**Paper Count**: 6
+
+---
+
+## 1. $τ_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation / $τ_0$-VLA：具有世界模型引导测试时间计算的分层机器人基础模型
+
+**Date**: 2026-08-17 | **arXiv**: [2608.16885v1](http://arxiv.org/abs/2608.16885v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.16885v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon robot manipulation requires a robot to both execute individual skills reliably and sequence them coherently over extended tasks. Most hierarchical vision-language-action (VLA) models make each such decision with a single forward pass, leaving no mechanism to allocate additional computation to difficult or consequential choices. We introduce $τ_0$-VLA, a hierarchical robot foundation model that formulates high-level subtask generation as a compute-scalable inference problem through world-model-guided test-time computation. At each inference step, the high-level policy uses execution memory to generate a subtask and, when needed, searches over alternatives before committing to its output. A low-level policy then executes the generated subtask across multiple robot embodiments. The policy is trained on 40,115 hours of heterogeneous real-world data with multimodal co-training. Across in-domain and distribution-shifted settings, allocating additional test-time computation substantially improves next-subtask prediction accuracy, and these gains translate into higher closed-loop success on long-horizon robot manipulation tasks.
+
+长视野机器人操作要求机器人既能可靠地执行个人技能，又能在扩展任务中连贯地对它们进行排序。大多数分层视觉-语言-动作（VLA）模型通过一次前向传递做出每个此类决策，没有留下任何机制来为困难或后果性的选择分配额外的计算。我们引入了 $τ_0$-VLA，这是一种分层机器人基础模型，它通过世界模型引导的测试时间计算将高级子任务生成制定为计算可扩展的推理问题。在每个推理步骤中，高级策略使用执行内存来生成子任务，并在需要时在提交其输出之前搜索替代方案。然后，低级策略跨多个机器人实施例执行生成的子任务。该策略接受了 40,115 小时的异构现实世界数据和多模式协同训练的训练。在域内和分布转移的设置中，分配额外的测试时间计算大大提高了下一个子任务的预测准确性，并且这些收益转化为长视野机器人操作任务的更高闭环成功率。
+
+</details>
+
+---
+
+## 2. CaliBench: Are the Stochastic Dynamics of Video World Models Physically Calibrated? / CaliBench：视频世界模型的随机动力学是否经过物理校准？
+
+**Date**: 2026-08-17 | **arXiv**: [2608.16829v1](http://arxiv.org/abs/2608.16829v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.16829v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video world models approximate the stochastic distribution of physical outcomes through generative sampling, but existing benchmarks score individual generations or compare distributions coarsely over a whole dataset, leaving the fine-grained aleatoric uncertainty of specific phenomena untested. We introduce CaliBench, which scores outcomes in a physically interpretable discrete space - a bin index, a die face, a suit, a colour - rather than a learned feature space such as in FID, so the distance from a known reference distribution is measured directly. We curate outcome spaces whose reference is known in closed form (binomial Galton boards, Bernoulli forks, uniform dice/cards/lottery, a skewed European-roulette colour), enabling an exact calibration test. We decompose performance into two orthogonal axes that a single accuracy metric conflates: scorability, the fraction of generations yielding a scoreable outcome, and calibration, the total variation distance from the reference on that sample. A chi-squared test assesses significance; as calibration is its null hypothesis it can evidence only miscalibration, and at N=32 per cell detects only large deviations. We apply it to nine scenes and six image-to-video models (WAN-2.7, SeeDance-2.0, HappyHorse-1.0, Veo 3.1, Runway Gen-4.5, Cosmos3-Super), 32 generations each. Models consistently concentrate probability mass on a few outcomes rather than reproducing the reference. Most scene-model combinations are significantly miscalibrated, in the extreme collapsing to one outcome, as Veo 3.1 does on dice. On roulette, generations often leave the ball ambiguously placed, giving several models low scorability. Performance varies by scene: no model dominates all nine. We release the protocol and a metric (mean normalised total variation, mnTV) for comparing new models against our results.
+
+视频世界模型通过生成采样来近似物理结果的随机分布，但现有的基准对各个代进行评分或粗略地比较整个数据集的分布，从而使特定现象的细粒度随意不确定性未经测试。我们引入了 CaliBench，它在物理上可解释的离散空间（bin 索引、骰子面、西装、颜色）中对结果进行评分，而不是在 FID 中学习的特征空间，因此可以直接测量与已知参考分布的距离。我们策划结果空间，其参考以封闭形式已知（二项式高尔顿板、伯努利叉子、统一的骰子/卡片/彩票、倾斜的欧式轮盘赌颜色），从而实现精确的校准测试。我们将性能分解为两个正交轴，将单个精度指标合并为两个正交轴：可评分性（产生可评分结果的代分数）和校准（与该样本的参考值的总变异距离）。卡方检验评估显着性；由于校准是其零假设，因此它只能证明校准错误，并且在 N=32 时，每个单元仅检测到较大偏差。我们将其应用于 9 个场景和 6 个图像到视频模型（WAN-2.7、SeeDance-2.0、HappyHorse-1.0、Veo 3.1、Runway Gen-4.5、Cosmos3-Super），每个模型 32 代。模型始终将概率质量集中在少数结果上，而不是复制参考。大多数场景模型组合都严重错误校准，在极端情况下会崩溃为一种结果，就像 Veo 3.1 在骰子上所做的那样。在轮盘赌上，几代人经常将球放置得不明确，导致某些模型的得分较低。性能因场景而异：没有一个模型能够主宰所有九个场景。我们发布了协议和指标（平均归一化总变异，mnTV），用于将新模型与我们的结果进行比较。
+
+</details>
+
+---
+
+## 3. Orbit-Planner: Towards Latent World Models for On-Orbit Obstacle Avoidance of Satellite Agents / Orbit-Planner：面向卫星代理在轨避障的潜在世界模型
+
+**Date**: 2026-08-17 | **arXiv**: [2608.16651v1](http://arxiv.org/abs/2608.16651v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.16651v1)
+
+**Categories**: cs.RO, cs.AI
+
+**Code**: https://github.com/ZhijianLi2003/Orbit_Planner.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Satellite agents for on-orbit navigation tasks need to predict collision risks using limited onboard observations. However, conventional planners often rely on predefined maps and fixed environmental assumptions, limiting their adaptability in dynamic on-orbit scenarios. In this paper, we propose Orbit-Planner, a two-stage latent world model for on-orbit obstacle avoidance. Orbit-Planner learns action-conditioned spacecraft dynamics to perform future-state rollouts in latent space, and introduces a Physics Probe to decode physical state changes from imagined latent trajectories. Experiments demonstrate that Orbit-Planner can perform long-horizon latent rollouts and recover physical states from imagined trajectories. In closed-loop obstacle-avoidance navigation in Isaac Sim, it attains a success rate of 91.7%. Code is available at https://github.com/ZhijianLi2003/Orbit_Planner.
+
+在轨导航任务的卫星代理需要利用有限的星载观测来预测碰撞风险。然而，传统的规划者通常依赖于预定义的地图和固定的环境假设，限制了它们在动态在轨场景中的适应性。在本文中，我们提出了 Orbit-Planner，一种用于在轨避障的两阶段潜在世界模型。 Orbit-Planner 学习以动作为条件的航天器动力学，以在潜在空间中执行未来状态的推出，并引入物理探测器来解码来自想象的潜在轨迹的物理状态变化。实验表明，Orbit-Planner 可以执行长视野潜在推出并从想象的轨迹恢复物理状态。在Isaac Sim的闭环避障导航中，其成功率高达91.7%。代码可在 https://github.com/ZhijianLi2003/Orbit_Planner 获取。
+
+</details>
+
+---
+
+## 4. DriveCache: Action-Aware Caching for Driving World Model Inference / DriveCache：用于驱动世界模型推理的动作感知缓存
+
+**Date**: 2026-08-17 | **arXiv**: [2608.16354v1](http://arxiv.org/abs/2608.16354v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.16354v1)
+
+**Categories**: cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Driving video generation models support autonomous-driving development by predicting controllable future scenes for simulation, planning evaluation, and offline data generation. Diffusion-based driving generators repeatedly evaluate large backbones across denoising steps, which limits generation throughput. Existing diffusion acceleration methods reduce this cost, but general-purpose designs omit driving signals available before generation, such as ego speed and planned trajectories. Experiments across driving motions show that cache tolerance varies with ego translation and rotation, denoising progress, and consecutive reuse length. We propose DriveCache, a training-free, action-aware controller that uses planned motion to allocate reuse across scenes and dynamic programming to place it across denoising steps under a calibrated response budget. A causal drift check refreshes features and replans the remaining schedule when generation departs from calibration. Across three generator configurations, DriveCache improves the overall fidelity-efficiency trade-off over evaluated cache methods. Our code will be publicly available.
+
+驾驶视频生成模型通过预测可控的未来场景进行仿真、规划评估和离线数据生成来支持自动驾驶开发。基于扩散的驱动生成器在去噪步骤中重复评估大型骨干网，这限制了生成吞吐量。现有的扩散加速方法降低了这种成本，但通用设计忽略了生成之前可用的驱动信号，例如自我速度和计划轨迹。跨驾驶运动的实验表明，缓存容错性随着自我平移和旋转、降噪进度和连续重用长度而变化。我们提出了 DriveCache，这是一种免训练、动作感知的控制器，它使用计划的运动来跨场景分配重用，并使用动态编程将其放置在校准响应预算下的去噪步骤中。当发电偏离校准时，因果漂移检查会刷新功能并重新规划剩余的时间表。在三种生成器配置中，DriveCache 改进了评估的缓存方法的整体保真度与效率的权衡。我们的代码将公开。
+
+</details>
+
+---
+
+## 5. SCALE: State-Calibrated Latent Embeddings for JEPA Planning in the Right Geometry / SCALE：状态校准的潜在嵌入，用于正确几何形状的 JEPA 规划
+
+**Date**: 2026-08-17 | **arXiv**: [2608.16287v1](http://arxiv.org/abs/2608.16287v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.16287v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint-embedding predictive world models plan by scoring predicted terminal embeddings against a goal embedding using a cost defined on the representation itself. Two prominent strategies for obtaining non-collapsed representations are to inherit a pretrained feature space, as in DINO-WM, and to learn an embedding end to end with anti-collapse regularization, as in LeWorldModel (LeWM) with SIGReg. These strategies show complementary strengths across tasks. Although task-relevant state is decodable from the full embeddings of both models, DINO-WM's leading principal components usually retain substantially more state information than LeWM's. Because Euclidean planning costs are dominated by high-variance directions, this difference affects how strongly state can influence candidate selection. We propose SCALE (State-CAlibrated Latent Embeddings) to give the end-to-end LeWM representation the favorable geometric property observed in DINO-WM. SCALE induces this property by correlating sampled pairwise latent distances with distances in a standardized task-relevant state space, without replacing LeWM's learned encoder. Across five tasks, three planning solvers, and five compute budgets, SCALE improves every task--solver average over LeWM. A latent-to-state regression control matches or exceeds SCALE's full-embedding decodability yet leaves latent--state distance alignment essentially unchanged and yields less consistent planning gains. SCALE adds a single lightweight training-time regularizer and no planning-time overhead. These results show that planning depends not only on whether task-relevant information is present, but also on whether it shapes the geometry consumed by the planner.
+
+联合嵌入预测世界模型通过使用表示本身定义的成本根据目标嵌入对预测的终端嵌入进行评分来进行计划。获得非折叠表示的两个重要策略是继承预训练的特征空间（如 DINO-WM），以及学习具有抗折叠正则化的端到端嵌入（如使用 SIGReg 的 LeWorldModel (LeWM)）。这些策略显示了跨任务的互补优势。尽管任务相关状态可以从两个模型的完整嵌入中解码，但 DINO-WM 的主要主成分通常比 LeWM 保留更多的状态信息。由于欧几里得规划成本主要由高方差方向决定，因此这种差异会影响状态对候选选择的影响程度。我们提出 SCALE（状态校准潜在嵌入）来为端到端 LeWM 表示提供在 DINO-WM 中观察到的有利几何特性。 SCALE 通过将采样的成对潜在距离与标准化任务相关状态空间中的距离相关联来引入此属性，而无需替换 LeWM 的学习编码器。在五个任务、三个规划求解器和五个计算预算中，SCALE 比 LeWM 提高了每个任务求解器的平均值。潜在状态回归控制匹配或超过 SCALE 的完全嵌入可解码性，但使潜在状态距离对齐基本不变，并产生不太一致的规划增益。 SCALE 添加了一个轻量级训练时间正则化器，并且没有规划时间开销。这些结果表明，规划不仅取决于任务相关信息是否存在，还取决于它是否塑造了规划器所消耗的几何形状。
+
+</details>
+
+---
+
+## 6. Pluralistic Human-Robot Interaction: Designing for Robot Interaction with Diverse Communities / 多元人机交互：设计机器人与多元化社区的交互
+
+**Date**: 2026-08-17 | **arXiv**: [2608.16049v1](http://arxiv.org/abs/2608.16049v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.16049v1)
+
+**Categories**: cs.HC, cs.CY, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Social robots are being developed for homes, schools, and other environments where they will interact with diverse users. While Human-Robot Interaction (HRI) research often emphasizes natural communication, engagement, personalization, and task success, these goals do not fully address the social complexity of real-world deployment. This paper proposes \emph{Pluralistic HRI}, a framework for designing social robots that treat human diversity as a foundational design concern. The framework brings together pluralism, civic dialogue, perspective-taking, empathy, intercultural competence, cultural humility, and moral imagination to guide inclusive, adaptive, and ethically grounded interaction. We outline how pluralistic HRI can inform design, evaluation, and deployment in diverse human communities.
+
+社交机器人正在为家庭、学校和其他环境开发，它们将在其中与不同的用户互动。虽然人机交互 (HRI) 研究通常强调自然沟通、参与、个性化和任务成功，但这些目标并没有完全解决现实世界部署的社会复杂性。本文提出了 \emph{Pluralistic HRI}，一个用于设计社交机器人的框架，该框架将人类多样性视为基本的设计关注点。该框架汇集了多元化、公民对话、观点采择、同理心、跨文化能力、文化谦逊和道德想象力，以指导包容性、适应性和道德基础的互动。我们概述了多元化的 HRI 如何为不同人类社区的设计、评估和部署提供信息。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-15 (11 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-08-15
