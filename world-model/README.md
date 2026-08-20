@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-20](papers/2026-08-20.md) - 6 papers
 - [2026-08-19](papers/2026-08-19.md) - 6 papers
 - [2026-08-15](papers/2026-08-15.md) - 11 papers
 - [2026-08-14](papers/2026-08-14.md) - 3 papers
@@ -135,6 +136,116 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-20 (6 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-08-20
+
+**Paper Count**: 6
+
+---
+
+## 1. Hydra-0: Action Flow for Generalist World Modeling and Control / Hydra-0：通用世界建模和控制的行动流程
+
+**Date**: 2026-08-18 | **arXiv**: [2608.18077v1](http://arxiv.org/abs/2608.18077v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.18077v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce Hydra-0, a generalist world model conditioned on action flow, which represents robot actions as pixel motion. This shared visual interface enables generalist world modeling and control by learning action consequences across embodiments, tasks, environments, and video-generation backbones. Our best configuration achieves 90.4% lower robot-motion error and 60.2% lower object-motion error than our action-conditioned baseline, while supporting zero-shot composition and data-efficient adaptation. On the RoboLab benchmark, Hydra-0 achieves a Pearson correlation of r=0.96 between replayed and reference success rates. Finally, we uncover an emergent inverse mode of this interface: a world action model that predicts compatible robot motion from desired object flow transferred from a human demonstration. A trained action head maps the resulting latent features to executable actions without requiring task-specific expert robot demonstrations. Together, these results demonstrate the potential of action flow as a shared control interface connecting heterogeneous training data, open-loop policy evaluation, and robot control.
+
+我们引入 Hydra-0，这是一种以动作流为条件的通用世界模型，它将机器人动作表示为像素运动。这种共享的视觉界面通过学习跨实施例、任务、环境和视频生成主干的动作结果来实现通用的世界建模和控制。与我们的动作条件基线相比，我们的最佳配置实现了机器人运动误差降低 90.4% 和物体运动误差降低 60.2%，同时支持零镜头合成和数据高效适应。在 RoboLab 基准测试中，Hydra-0 在重放成功率和参考成功率之间实现了 r=0.96 的皮尔逊相关性。最后，我们发现了该界面的一种新兴逆模式：一种世界动作模型，可以根据从人类演示传输的所需对象流来预测兼容的机器人运动。经过训练的动作头将产生的潜在特征映射到可执行动作，而不需要特定于任务的专家机器人演示。总之，这些结果证明了动作流作为连接异构训练数据、开环策略评估和机器人控制的共享控制接口的潜力。
+
+</details>
+
+---
+
+## 2. Towards Zero-Shot Task Transfer with Neurosymbolic World Models / 使用神经符号世界模型实现零样本任务转移
+
+**Date**: 2026-08-18 | **arXiv**: [2608.17959v1](http://arxiv.org/abs/2608.17959v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.17959v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+State-of-the-art model-based reinforcement learning methods learn neural world models that allow policy improvement by planning in a latent space, without assumptions on the structure of the underlying environment. While expressive, these models are generally task-dependent: they learn uninterpretable latent representations that are tied to the training task and thus hard to generalize to new tasks. In this work, we present a novel world model formulation where the reward prediction only depends on a subset of structured, symbolic components of the whole latent state. Decoupling observation reconstruction and reward prediction allows us to learn world models that can adapt zero-shot, i.e. without further environment interactions, to new reward functions defined over the same symbolic state space. We discuss the main advantages and challenges of learning these neurosymbolic world models and demonstrate the strong generalisation properties of our approach over purely neural methods.
+
+最先进的基于模型的强化学习方法学习神经世界模型，通过在潜在空间中进行规划来改进策略，而无需对底层环境的结构进行假设。虽然富有表现力，但这些模型通常依赖于任务：它们学习与训练任务相关的不可解释的潜在表示，因此很难推广到新任务。在这项工作中，我们提出了一种新颖的世界模型公式，其中奖励预测仅取决于整个潜在状态的结构化、符号组件的子集。观察重建和奖励预测的解耦使我们能够学习能够适应零样本（即无需进一步的环境交互）的世界模型，以适应在同一符号状态空间上定义的新奖励函数。我们讨论了学习这些神经符号世界模型的主要优点和挑战，并证明了我们的方法相对于纯神经方法的强大泛化特性。
+
+</details>
+
+---
+
+## 3. An Omitted Mode Is a Rare Rule: The Sampling-Verification Danger Law in Continuous Code World Models / 省略的模式是罕见的规则：连续代码世界模型中的采样验证危险定律
+
+**Date**: 2026-08-18 | **arXiv**: [2608.17956v1](http://arxiv.org/abs/2608.17956v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.17956v1)
+
+**Categories**: cs.LG, cs.AI, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In the Code World Model paradigm an LLM synthesizes an executable world model that a classical planner searches, and the model is accepted when it reproduces sampled transitions. We ask what that acceptance certifies in continuous control. We define the pipeline's danger as an expected risk and isolate its exact factor: the probability that N i.i.d. gate rollouts all miss a critical event of probability r is exactly (1-r)^N; an independent acceptance sample adds its budget to the exponent. On three hybrid instruments the accepted mode-blind model is exploited: the planner is pinned at the mode boundary at a regret of nearly the whole attainable return. We prove a localization budget, valid at boundary points: models with Lipschitz constant at most L differing by eta at a point disagree above tolerance eps on a region of volume at least kappa((eta-eps)/L)^(d+m); the discontinuous reset modes studied pay no such budget. With real LLM synthesis, GPT-5.x repairs an omitted 1D clamp in 105 of 111 mode-containing draws -- every attempt exact on 50 of 56 instrument-stream blocks (95% CI [0.781, 0.960]). On 2D regions no artifact recovers the rule (0/156); eight targeted interventions leave the failure in place, and positive controls locate it: a located rule is not induced, while given form and location the constants follow exactly. A version-space certificate proves identification is class-relative: at the widest dose the declared fit succeeds in 20/20 blocks and every sample-consistent circle is within tolerance in 18/20. We prove a class of entry rules exactly consistent with every sample yet harmless at play, so identifiability is a measurable property of the instrument. Re-scoring all 1034 artifacts on independent samples confirms acceptance certifies sample consistency and no more: where the gate is provably informative it covers about two percent of the exploited planner's queries.
+
+在代码世界模型范式中，法学硕士合成了经典规划者搜索的可执行世界模型，并且当该模型再现采样的转换时，该模型被接受。我们询问这种接受在持续控制中证明了什么。我们将管道的危险定义为预期风险，并隔离其确切因素：N i.i.d. 的概率。门的推出都错过了概率 r 恰好为 (1-r)^N 的关键事件；独立验收样本将其预算添加到指数中。在三种混合工具上，利用了公认的模式盲模型：规划器被固定在模式边界上，遗憾的是几乎所有可达到的回报。我们证明了一个本地化预算，在边界点有效：Lipschitz 常数最大为 L 的模型在某个点上与 eta 的差异不大于公差 eps，体积区域至少为 kappa((eta-eps)/L)^(d+m)；研究的不连续重置模式不支付这样的预算。通过真正的 LLM 合成，GPT-5.x 在 111 个包含模式的绘图中的 105 个中修复了遗漏的一维钳位 - 每次尝试都在 56 个仪器流块中的 50 个上精确（95% CI [0.781, 0.960]）。在 2D 区域上，没有工件恢复规则 (0/156)；八个有针对性的干预措施将故障留在原地，而积极的控制则对其进行定位：不诱导定位规则，而给定的形式和位置则常数完全遵循。版本空间证书证明识别是与类相关的：在最宽剂量下，声明的拟合在 20/20 块中成功，并且每个样本一致的圆都在 18/20 的公差范围内。我们证明了一类输入规则与每个样本完全一致，但在发挥作用时无害，因此可识别性是仪器的可测量属性。对独立样本上的所有 1034 个工件重新评分，确认验收证明了样本一致性，仅此而已：门可证明信息丰富，它覆盖了所利用规划器查询的大约 2%。
+
+</details>
+
+---
+
+## 4. No Gaussian Required: Contrastive Inverse Dynamics for JEPA World Models / 无需高斯：JEPA 世界模型的对比逆动力学
+
+**Date**: 2026-08-18 | **arXiv**: [2608.17542v1](http://arxiv.org/abs/2608.17542v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.17542v1)
+
+**Categories**: cs.LG, cs.AI
+
+**Code**: https://github.com/jackboyla/action-contrastive-jepa
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint-Embedding Predictive Architectures (JEPAs) learn world models by predicting future embeddings, but the objective admits a trivial solution of a constant encoder, so every practical system adds an anti-collapse mechanism (LeCun, 2022; Assran et al., 2023; Bardes et al., 2022; 2024). LeWorldModel (LeWM) prevents collapse with SIGReg, a regularizer that forces the latent distribution to match an isotropic Gaussian: the representation is stabilized by prescribing what it must look like, independently of the environment it models. We argue that the anti-collapse pressure can instead come from the transition data itself. Action-Contrastive Masked Transition Modeling (AC-MTM) keeps LeWM's forward latent-prediction objective and adds a training-only inverse-dynamics head trained with Action-NCE: each latent transition must identify the action that produced it among the other actions in the batch, a discrimination task that a collapsed encoder provably fails. The inverse branch is discarded after training, leaving test-time encoding, forward prediction, planning, and compute identical to LeWM. On four standard pixel-control tasks under a matched planning protocol, AC-MTM trains stably from scratch and matches SIGReg on average. On the harder multi-object OGBench Visual Scene task, results are consistent with the prescribed geometry becoming a bottleneck: AC-MTM reaches 80.0$\pm$2.0% success versus 58.0$\pm$2.0% for SIGReg, improving by 20-24 points in each training seed. A single 50-episode random-policy run gives a 52% baseline estimate. Contrastive inverse dynamics thus provides a distribution-free anti-collapse signal that requires no target network, stop-gradient, pretrained encoder, or reconstruction objective, and we characterize the action-space and observability assumptions under which it holds. We make our code available at https://github.com/jackboyla/action-contrastive-jepa
+
+联合嵌入预测架构（JEPA）通过预测未来嵌入来学习世界模型，但目标承认常数编码器的简单解决方案，因此每个实用系统都添加了防崩溃机制（LeCun，2022；Assran 等人，2023；Bardes 等人，2022；2024）。 LeWorldModel (LeWM) 使用 SIGReg 来防止崩溃，SIGReg 是一种正则化器，强制潜在分布与各向同性高斯分布相匹配：通过规定表示的外观来稳定其必须的样子，而与它建模的环境无关。我们认为，抗崩溃压力可以来自转换数据本身。动作对比掩码转换模型 (AC-MTM) 保留了 LeWM 的前向潜在预测目标，并添加了一个仅训练的逆动态头，该头经过 Action-NCE 训练：每个潜在转换必须在批次中的其他动作中识别出产生它的动作，这是一个折叠编码器可能会失败的判别任务。训练后丢弃逆分支，使测试时编码、前向预测、规划和计算与 LeWM 相同。在匹配的规划协议下的四个标准像素控制任务中，AC-MTM 从头开始​​稳定地训练，并且平均匹配 SIGReg。在更难的多对象 OGBench 视觉场景任务上，结果与成为瓶颈的规定几何形状一致：AC-MTM 达到 80.0$\pm$2.0% 成功率，而 SIGReg 为 58.0$\pm$2.0%，每个训练种子提高 20-24 点。单次 50 集随机策略运行给出 52% 的基线估计。因此，对比逆动力学提供了一种无分布的抗崩溃信号，不需要目标网络、停止梯度、预训练编码器或重建目标，并且我们描述了它所持有的动作空间和可观察性假设。我们在 https://github.com/jackboyla/action-contrastive-jepa 提供我们的代码
+
+</details>
+
+---
+
+## 5. Calibrated Predictive Safety for Heterogeneous Robots: An Action-Conditioned JEPA Framework with Model-Based Safety Shields / 异构机器人的校准预测安全：具有基于模型的安全防护罩的动作条件 JEPA 框架
+
+**Date**: 2026-08-18 | **arXiv**: [2608.17496v1](http://arxiv.org/abs/2608.17496v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.17496v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language-action policies generalize broadly but provide no execution-time guarantees; classical model-based planners respect kinematic and geometric constraints but generalize poorly. We study whether an action-conditioned Joint-Embedding Predictive Architecture (JEPA) world model can predict, before execution, both task progress and physical risk for candidate action chunks, and whether coupling these predictions to an embodiment-specific model-based safety shield yields a deployable pipeline for heterogeneous robots.   We propose a receding-horizon decision pipeline: (1) a proposer produces K candidate action chunks; (2) an action-conditioned JEPA rolls each candidate forward in a frozen-encoder latent space conditioned on an embodiment embedding; (3) calibrated risk and progress heads score each rollout and report uncertainty; (4) a deterministic per-embodiment safety shield filters inadmissible candidates; (5) a fallback ladder handles empty-admissible-set cases. The learned ranking only reorders admissible candidates; enforcement guarantees come from the deterministic shield and fallback ladder.   We evaluate with a pre-registered protocol in simulation (LIBERO-Long). In 600-episode configurations the full framework improved success over a shield-only baseline and reduced collision false negatives at matched recall. Deployment-efficiency measurements on target on-robot and edge accelerators are included. Real-robot experiments and an offline reranking significance test remain future work; see the paper for disclosures.
+
+愿景-语言-行动政策具有广泛的普遍性，但不提供执行时间保证；经典的基于模型的规划器尊重运动学和几何约束，但泛化能力较差。我们研究动作条件联合嵌入预测架构（JEPA）世界模型是否可以在执行之前预测候选动作块的任务进度和物理风险，以及将这些预测耦合到基于特定实施例的模型的安全防护罩是否会为异构机器人产生可部署的管道。   我们提出了一个后退决策管道：（1）提议者产生 K 个候选动作块； (2) 以动作为条件的 JEPA 将每个候选者在以实施例嵌入为条件的冻结编码器潜在空间中前滚； (3) 经过校准的风险和进度负责人对每次推出进行评分并报告不确定性； (4)确定性的每实施例安全防护罩过滤不可接受的候选者； (5) 后备梯子处理空可接受的情况。学习排名仅对可接受的候选人重新排序；执行保证来自确定性防护罩和后备梯。   我们使用预先注册的模拟协议（LIBERO-Long）进行评估。在 600 集配置中，完整框架比仅屏蔽基线提高了成功率，并减少了匹配召回时的碰撞漏报。包括对目标机器人和边缘加速器的部署效率测量。真实的机器人实验和离线重排序显着性测试仍然是未来的工作；请参阅论文的披露信息。
+
+</details>
+
+---
+
+## 6. Q-Learning With World Models / 使用世界模型进行 Q 学习
+
+**Date**: 2026-08-17 | **arXiv**: [2608.17163v1](http://arxiv.org/abs/2608.17163v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.17163v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Off-policy reinforcement learning (RL) has become increasingly sample-efficient, enabling applications such as RL fine-tuning of Vision-Language-Action models into reliable, high-performing policies. World models offer a further lever for sample efficiency, as they predict state changes rather than actions alone, but their success has largely been confined to supervised policy learning. Prior model-based RL methods often optimize the policy or value function directly on imagined rollouts, which is prone to compounding bias and struggles to scale to large, high-dimensional problems such as real-world robotics, a problem that worsens with task horizon and visual complexity. In this work, we instead ask whether we can leverage world models directly on top of standard Q-learning to improve performance, while remaining trained and grounded in the real, online setting. We propose QWM, a framework that leverages world models to perform test-time search over imagined trajectories on top of Q-learning to select high-value actions during both online rollouts and evaluation. Since the policy and value function are trained only on real transitions, QWM avoids compounding model bias while still gaining the sample-efficiency benefits of predictive search. On challenging manipulation benchmarks Robomimic and LIBERO, QWM significantly outperforms strong prior state-of-the-art methods on both sample efficiency and performance.
+
+离策略强化学习 (RL) 的样本效率越来越高，使得 RL 等应用能够将视觉-语言-动作模型微调为可靠、高性能的策略。世界模型为样本效率提供了进一步的杠杆，因为它们预测状态变化而不是单独的行动，但它们的成功在很大程度上仅限于监督政策学习。先前基于模型的强化学习方法通​​常直接在想象的部署上优化策略或价值函数，这很容易产生复合偏差，并且难以扩展到大型、高维问题，例如现实世界的机器人技术，该问题随着任务范围和视觉复杂性而恶化。在这项工作中，我们转而询问是否可以直接利用标准 Q 学习之上的世界模型来提高性能，同时在真实的在线环境中保持训练和基础。我们提出了 QWM，一个框架，利用世界模型在 Q 学习之上对想象的轨迹执行测试时搜索，以在在线推出和评估期间选择高价值的操作。由于策略和价值函数仅在实际转换上进行训练，因此 QWM 避免了复合模型偏差，同时仍然获得预测搜索的样本效率优势。在具有挑战性的操作基准 Robomimic 和 LIBERO 上，QWM 在样本效率和性能方面都显着优于先前最先进的方法。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-19 (6 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-08-19
