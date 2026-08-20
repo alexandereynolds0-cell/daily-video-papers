@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-20](papers/2026-08-20.md) - 10 papers
 - [2026-08-19](papers/2026-08-19.md) - 22 papers
 - [2026-08-15](papers/2026-08-15.md) - 18 papers
 - [2026-08-14](papers/2026-08-14.md) - 15 papers
@@ -139,6 +140,182 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-20 (10 papers)</b></summary>
+
+# arXiv Video Papers - 2026-08-20
+
+**Paper Count**: 10
+
+---
+
+## 1. LinCa: Accelerating Diffusion Models via Learnable Decomposed Feature Caching / LinCa：通过可学习的分解特征缓存加速扩散模型
+
+**Date**: 2026-08-18 | **arXiv**: [2608.17973v1](http://arxiv.org/abs/2608.17973v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.17973v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/QHR69/LinCa
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion models have achieved remarkable success in image and video generation, yet the high computational cost of iterative sampling remains a critical bottleneck for practical deployment. Feature caching has emerged as a promising acceleration paradigm by reusing or predicting intermediate features across timesteps. However, existing training-free methods apply uniform prediction strategies that cannot adapt to the heterogeneous feature dynamics, causing significant quality degradation under high acceleration ratios. We propose LinCa, a feature caching framework based on learnable invertible networks. LinCa decomposes cached features into sub-components with distinct continuity properties via a lightweight invertible network and applies differentiated prediction orders matched to each component. The strict invertibility guarantees lossless reconstruction back to the original feature space, forming a unified Decompose-Predict-Reconstruct pipeline. By training separate predictors for different models and timestep segments, LinCa adapts to heterogeneous feature dynamics. Experiments on FLUX, Qwen-Image, and HunyuanVideo demonstrate that LinCa, with less than 0.2% additional parameters, significantly outperforms existing methods and maintains near-lossless quality at 5-7x speedup. Code: https://github.com/QHR69/LinCa
+
+扩散模型在图像和视频生成方面取得了显着的成功，但迭代采样的高计算成本仍然是实际部署的关键瓶颈。通过跨时间步重用或预测中间特征，特征缓存已成为一种有前景的加速范例。然而，现有的免训练方法采用统一的预测策略，无法适应异构特征动态，导致高加速比下质量显着下降。我们提出了 LinCa，一种基于可学习可逆网络的特征缓存框架。 LinCa 通过轻量级可逆网络将缓存的特征分解为具有不同连续性属性的子组件，并应用与每个组件匹配的差异化预测顺序。严格的可逆性保证了无损重建回到原始特征空间，形成统一的分解-预测-重建管道。通过为不同模型和时间步段训练单独的预测器，LinCa 能够适应异构特征动态。在 FLUX、Qwen-Image 和 HunyuanVideo 上的实验表明，LinCa 在附加参数不到 0.2% 的情况下，明显优于现有方法，并在 5-7 倍的加速下保持近乎无损的质量。代码：https://github.com/QHR69/LinCa
+
+</details>
+
+---
+
+## 2. Beyond Instrument Motion: Recognizing Tissue Tension Toward Surgical Skill Assessment / 超越器械运动：识别组织张力以评估手术技能
+
+**Date**: 2026-08-18 | **arXiv**: [2608.17935v1](http://arxiv.org/abs/2608.17935v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.17935v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Surgical performance assessment in minimally invasive surgery largely relies on manual expert review, making it time-consuming, subjective, and difficult to scale. While existing surgical video understanding methods address tasks such as instrument segmentation, surgical phase recognition, and action recognition, they do not explicitly capture fine-grained tissue handling, a key indicator of surgical quality. To address this gap, we introduce tissue tension recognition, a new clinically motivated video understanding task for laparoscopic and robot-assisted rectal cancer surgery. To support this task, we construct SurgTension, the first expert-annotated tissue tension dataset, providing a benchmark for objective tissue tension recognition. We further propose TensionTRAC, a lightweight trajectory-based framework that models tissue tension from sparse point trajectories. Using a compact trajectory encoder, TensionTRAC achieves competitive performance against strong pretrained video backbones.
+
+微创手术的手术表现评估很大程度上依赖于专家的人工评审，耗时、主观且难以规模化。虽然现有的手术视频理解方法可以解决器械分割、手术阶段识别和动作识别等任务，但它们没有明确捕获细粒度的组织处理，而细粒度的组织处理是手术质量的关键指标。为了解决这一差距，我们引入了组织张力识别，这是一种新的临床驱动的视频理解任务，用于腹腔镜和机器人辅助直肠癌手术。为了支持这项任务，我们构建了 SurgTension，这是第一个专家注释的组织张力数据集，为客观组织张力识别提供了基准。我们进一步提出 TensionTRAC，一种基于轨迹的轻量级框架，可以根据稀疏点轨迹对组织张力进行建模。 TensionTRAC 使用紧凑的轨迹编码器，实现了与强大的预训练视频主干相比的竞争性能。
+
+</details>
+
+---
+
+## 3. Magnitude-Direction Decoupling for Fast Video Generation with Flow Matching Models / 使用流匹配模型快速生成视频的幅度方向解耦
+
+**Date**: 2026-08-18 | **arXiv**: [2608.17695v1](http://arxiv.org/abs/2608.17695v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.17695v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Flow matching models for video generation achieve impressive performance but suffer from high computational overhead due to iterative denoising. In fact, the original model is not necessary for all denoising steps, allowing some steps to use lightweight alternatives for faster sampling. However, directly using caching or lightweight models can deviate from the original denoising trajectory, resulting in suboptimal performance. Through empirical analysis, we find that lightweight models can robustly capture the magnitude components of the original model's output, while caching provides reliable directional guidance. Building on this insight, we propose the Magnitude-Direction Decoupling (MDD) method, which adaptively employs a direction-calibrated lightweight model as a substitute for the original model to accelerate inference and effectively correct deviations in the denoising trajectory. Moreover, MDD further reduces inference costs by reusing magnitude information under classifier-free guidance (CFG). As a result, MDD offers a more reliable and lightweight solution to accelerate sampling. Experiments show that MDD outperforms existing acceleration methods, delivering promising speedups (e.g., up to 2.95x on Wan2.1) while preserving high visual fidelity and content richness.
+
+用于视频生成的流匹配模型实现了令人印象深刻的性能，但由于迭代去噪而遭受高计算开销。事实上，原始模型并不是所有去噪步骤都必需的，允许某些步骤使用轻量级替代方案来实现更快的采样。然而，直接使用缓存或轻量级模型可能会偏离原始的去噪轨迹，导致性能不佳。通过实证分析，我们发现轻量级模型可以稳健地捕获原始模型输出的幅度分量，而缓存则提供可靠的方向指导。基于这一见解，我们提出了幅度-方向解耦（MDD）方法，该方法自适应地采用方向校准的轻量级模型作为原始模型的替代品，以加速推理并有效纠正去噪轨迹中的偏差。此外，MDD 通过在无分类器指导（CFG）下重用幅度信息，进一步降低了推理成本。因此，MDD 提供了更可靠、更轻量的解决方案来加速采样。实验表明，MDD 的性能优于现有的加速方法，在保持高视觉保真度和内容丰富度的同时，提供了令人鼓舞的加速（例如，在 Wan2.1 上高达 2.95 倍）。
+
+</details>
+
+---
+
+## 4. CoinVE-200K: A Large-Scale High-Quality Dataset for Compositional Instruction-Guided Video Editing / CoinVE-200K：用于合成指令引导视频编辑的大规模高质量数据集
+
+**Date**: 2026-08-18 | **arXiv**: [2608.17566v1](http://arxiv.org/abs/2608.17566v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.17566v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The quality and diversity of instruction-based video editing datasets are steadily improving, yet existing datasets mainly focus on single editing operations and fall short in supporting compositional instruction-guided video editing. In particular, multiple editing intents must be jointly understood and faithfully executed within the same video. To address this issue, we introduce CoinVE-200K, a large-scale, high-quality dataset for Compositional Instruction-Guided Video Editing. CoinVE-200K contains 1080p video-editing pairs of up to 201 frames, covering diverse compositional scenarios where each sample involves 2 to 5 atomic editing operations. The instructions target humans, objects, and backgrounds, and cover edit types such as addition, removal, modification, and stylization. All samples are built through a carefully designed generation and filtering pipeline to ensure instruction faithfulness, visual quality, temporal consistency, and compositional diversity. We also introduce CoinVE-Bench, a benchmark for compositional-instruction video editing across diverse subjects, operation types, and instruction complexities. Furthermore, we present CoinVE-Edit, a 22B compositional video editing model built upon Wan2.1-T2V-14B and Qwen3-VL-8B-Instruct. CoinVE-Edit disentangles region-aware attention for different editing instructions, enabling precise multi-region editing while preserving irrelevant content and temporal coherence. Experiments on CoinVE-Bench show that CoinVE-Edit achieves strong performance in instruction following, compositional editing accuracy, visual quality, and temporal consistency.
+
+基于指令的视频编辑数据集的质量和多样性正在稳步提高，但现有的数据集主要集中于单一的编辑操作，在支持合成指令引导的视频编辑方面存在不足。特别是，必须在同一视频中共同理解并忠实执行多个编辑意图。为了解决这个问题，我们引入了 CoinVE-200K，这是一个用于合成指令引导视频编辑的大规模、高质量数据集。 CoinVE-200K 包含最多 201 帧的 1080p 视频编辑对，涵盖不同的合成场景，其中每个样本涉及 2 到 5 个原子编辑操作。这些说明针对人物、物体和背景，涵盖添加、删除、修改和风格化等编辑类型。所有样本都是通过精心设计的生成和过滤管道构建的，以确保指令的忠实性、视觉质量、时间一致性和成分多样性。我们还推出了 CoinVE-Bench，这是针对不同主题、操作类型和教学复杂性的作曲教学视频编辑的基准。此外，我们还推出了 CoinVE-Edit，这是一种基于 Wan2.1-T2V-14B 和 Qwen3-VL-8B-Instruct 构建的 22B 合成视频编辑模型。 CoinVE-Edit 消除了对不同编辑指令的区域感知注意力，从而实现精确的多区域编辑，同时保留不相关的内容和时间连贯性。 CoinVE-Bench 上的实验表明，CoinVE-Edit 在指令跟随、构图编辑准确性、视觉质量和时间一致性方面均取得了强劲的表现。
+
+</details>
+
+---
+
+## 5. MSEditor: Toward Consistent Multi-Shot Video Editing / MSEditor：实现一致的多镜头视频编辑
+
+**Date**: 2026-08-18 | **arXiv**: [2608.17559v1](http://arxiv.org/abs/2608.17559v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.17559v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In this paper, we tackle the problem of performing consistent, unified modifications to a multi-shot video sequence. This task is particularly challenging because multi-shot videos consist of discontinuous temporal segments that vary significantly in viewpoint, camera scale, and subject pose, leading to severe identity drift and cumulative error propagation. Achieving coherent edits requires establishing reliable cross-shot semantic awareness to maintain stable subject appearance and visual continuity across these disjointed boundaries. To address this, we propose MSEditor, the first framework designed specifically for consistent multi-shot video editing. To overcome the scarcity of high-quality multi-shot training data, we repurpose existing multi-view video datasets to provide robust cross-shot supervision. Architecturally, we introduce a Supervisory Adapter that injects this cross-shot information into the diffusion backbone, enabling the model to learn identity-consistent representations. Furthermore, to effectively mitigate cumulative errors and ensure long-range temporal coherence, we design a Cross-Shot Packing strategy that dynamically aggregates information from semantically related shots within the self-attention window. Extensive experiments demonstrate that MSEditor significantly outperforms existing methods on our curated multi-shot video editing benchmark in terms of identity preservation, temporal stability, and overall visual quality.
+
+在本文中，我们解决了对多镜头视频序列执行一致、统一修改的问题。这项任务特别具有挑战性，因为多镜头视频由不连续的时间段组成，这些时间段在视点、相机比例和主体姿势方面变化很大，导致严重的身份漂移和累积错误传播。实现连贯的编辑需要建立可靠的跨镜头语义意识，以在这些脱节的边界上保持稳定的主题外观和视觉连续性。为了解决这个问题，我们提出了 MSEditor，这是第一个专为一致的多镜头视频编辑而设计的框架。为了克服高质量多镜头训练数据的稀缺性，我们重新利用现有的多视图视频数据集以提供强大的交叉镜头监督。在架构上，我们引入了一个监督适配器，它将交叉镜头信息注入到扩散主干中，使模型能够学习身份一致的表示。此外，为了有效减少累积错误并确保长程时间一致性，我们设计了一种交叉镜头打包策略，该策略可动态聚合自注意力窗口内语义相关镜头的信息。大量实验表明，在我们策划的多镜头视频编辑基准测试中，MSEditor 在身份保留、时间稳定性和整体视觉质量方面显着优于现有方法。
+
+</details>
+
+---
+
+## 6. SemComp-Bench: Benchmarking Semantic Task Completion in Video Generation / SemComp-Bench：视频生成中语义任务完成的基准测试
+
+**Date**: 2026-08-18 | **arXiv**: [2608.17426v1](http://arxiv.org/abs/2608.17426v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.17426v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce Semantic Task Completion Video Generation, an outcome-oriented video generation task. Under this formulation, success requires both achievement of the intended outcome and semantic grounding. Semantic grounding characterizes the correspondence between the reference image and the generated outcome in terms of high-level semantics relevant to the task. Evaluation focuses on the generated outcome and requires neither the presentation of a complete sequence of intermediate task steps nor conventional appearance consistency with the reference image. To support systematic evaluation, we construct SemComp-Data, an evaluation dataset covering six domains. Each instance comprises a reference image, a detailed instruction, a brief instruction, and an outcome-centric video clip. A scalable four-stage curation pipeline converts raw videos into standardized SemComp-Data instances. We further introduce SemComp-Bench, an evaluation protocol that uses a vision-language model (VLM) to answer structured binary questions. SemComp-Bench reports the OA Score and the GR Score for Outcome Achievement and Generation Reliability, respectively. Experiments on representative video generation models show that achieving intended outcomes while maintaining task-relevant semantic grounding in reference images remains challenging.
+
+我们引入语义任务完成视频生成，这是一种面向结果的视频生成任务。根据这种表述，成功需要实现预期结果和语义基础。语义基础根据与任务相关的高级语义来表征参考图像和生成的结果之间的对应关系。评估侧重于生成的结果，既不需要呈现完整的中间任务步骤序列，也不需要与参考图像的传统外观一致性。为了支持系统评估，我们构建了 SemComp-Data，一个涵盖六个领域的评估数据集。每个实例都包含参考图像、详细说明、简要说明和以结果为中心的视频剪辑。可扩展的四阶段管理管道将原始视频转换为标准化的 SemComp-Data 实例。我们进一步介绍了 SemComp-Bench，这是一种使用视觉语言模型（VLM）来回答结构化二进制问题的评估协议。 SemComp-Bench 分别报告成果成就和发电可靠性的 OA 分数和 GR 分数。对代表性视频生成模型的实验表明，在保持参考图像中与任务相关的语义基础的同时实现预期结果仍然具有挑战性。
+
+</details>
+
+---
+
+## 7. TF-CADE: Foreground-Concentrated Text-Video Alignment for Zero-Shot Temporal Action Detection / TF-CADE：用于零样本时间动作检测的前景集中文本视频对齐
+
+**Date**: 2026-08-18 | **arXiv**: [2608.17422v1](http://arxiv.org/abs/2608.17422v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.17422v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Zero-Shot Temporal Action Detection (ZSTAD) aims to lo- calize and recognize action instances from unseen action categories in untrimmed videos. Although existing meth- ods have shown effectiveness by advancing architectural text-video alignment, they still struggle with capturing se- mantic distinctions between action classes, resulting in text- irrelevant predictions. To address this issue, we propose a Text-Foreground Concentrated Alignment for zero-shot temporal action DEtector (TF-CADE) that explicitly aligns textual information with action-relevant foreground regions. Specifically, we introduce Action Concentrate Aggregation (ACA), which extracts action concentrate scores to aggregate temporally informative video segments into a foreground- weighted video embedding. This foreground concentrated alignment enhances the semantic consistency between text and video features and improves inter-class discriminabil- ity. In addition, a Certainty-based Confidence Re-weighting (CCR) strategy refines per-snippet confidence scores by lever- aging foreground-aware similarity, effectively suppressing irrelevant action classes during inference. Extensive evalua- tions show that our TF-CADE not only achieves state-of-the- art performance under in-distribution settings but also excels in cross-dataset generalization to unseen action classes.
+
+零样本时间动作检测（ZSTAD）旨在定位和识别未修剪视频中未见过的动作类别中的动作实例。尽管现有方法通过推进架构文本视频对齐而显示出有效性，但它们仍然难以捕获动作类之间的语义区别，从而导致与文本无关的预测。为了解决这个问题，我们提出了一种零样本时间动作检测器的文本前景集中对齐（TF-CADE），它可以将文本信息与动作相关的前景区域明确对齐。具体来说，我们引入了动作集中聚合（ACA），它提取动作集中分数，将时间信息视频片段聚合到前景加权视频嵌入中。这种前景集中对齐增强了文本和视频特征之间的语义一致性，并提高了类间可辨别性。此外，基于确定性的置信度重新加权（CCR）策略通过利用前景感知的相似性来细化每个片段的置信度分数，从而在推理过程中有效地抑制不相关的动作类别。广泛的评估表明，我们的 TF-CADE 不仅在分布内设置下实现了最先进的性能，而且在跨数据集泛化到未见过的动作类方面也表现出色。
+
+</details>
+
+---
+
+## 8. SPVC: Structured and Panoptic Video Fixing for Cross-Dataset Driving Scene Rendering / SPVC：用于跨数据集驾驶场景渲染的结构化和全景视频修复
+
+**Date**: 2026-08-18 | **arXiv**: [2608.17420v1](http://arxiv.org/abs/2608.17420v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.17420v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Driving scene reconstruction and rendering, especially with 3D Gaussian Splatting, has become an important component of autonomous driving simulation. However, rendered views often degrade under extrapolated ego trajectories and scene edits, producing blurry structures, temporal flicker, and foreground-background misalignment. Existing refinement methods are commonly designed for a specific setting, such as image-level novel-view repair or object-editing correction. In this paper, we introduce SPVC, a structured and panoptic video fixing framework for cross-dataset driving scene rendering. The name summarizes four design principles. (1) Structured fixing denotes the use of explicit spatial conditions, including camera pose, 3D bounding boxes, and HD maps, to guide the repair process and reduce uncontrolled hallucination. (2) Panoptic fixing refers to correcting both background rendering artifacts, such as distorted roads, buildings, and lanes, and foreground vehicle artifacts introduced by scene editing, such as inconsistent object appearance. (3) Video fixing means that the model operates on driving sequences rather than isolated frames, allowing temporal cues to be used during artifact correction. (4) Cross-dataset fixing means that a single shared network is trained and applied across multiple driving datasets, reducing the need for dataset-specific or scene-specific fixers. Concretely, we construct paired degraded-clean training data by simulating under-constrained 3DGS rendering and foreground vehicle insertion artifacts, and train a two-stage controllable video diffusion model that first addresses video-level appearance and then refines scene layout with structured controls.
+
+驾驶场景重建和渲染，尤其是3D高斯溅射，已成为自动驾驶仿真的重要组成部分。然而，渲染的视图通常会在外推的自我轨迹和场景编辑下退化，产生模糊的结构、时间闪烁和前景-背景错位。现有的细化方法通常是针对特定设置而设计的，例如图像级小说视图修复或对象编辑校正。在本文中，我们介绍了 SPVC，一种用于跨数据集驾驶场景渲染的结构化全景视频修复框架。这个名字总结了四个设计原则。 (1) 结构化修复是指使用明确的空间条件，包括相机姿态、3D 边界框和高清地图，来指导修复过程并减少不受控制的幻觉。 (2)全景修复是指校正背景渲染伪影，例如扭曲的道路、建筑物和车道，以及场景编辑引入的前景车辆伪影，例如不一致的对象外观。 (3) 视频修复意味着模型在驱动序列而不是孤立帧上运行，从而允许在伪像校正期间使用时间线索。 (4) 跨数据集修复意味着单个共享网络在多个驾驶数据集上进行训练和应用，减少了对特定数据集或特定场景修复程序的需求。具体来说，我们通过模拟欠约束的 3DGS 渲染和前景车辆插入伪影来构建配对的降级清洁训练数据，并训练一个两阶段可控视频扩散模型，该模型首先解决视频级外观，然后通过结构化控制细化场景布局。
+
+</details>
+
+---
+
+## 9. MoE-ViE: Mixture of Experts Vision Encoder for Efficient Image and Video Understanding / MoE-ViE：用于高效图像和视频理解的专家视觉编码器混合
+
+**Date**: 2026-08-18 | **arXiv**: [2608.17402v1](http://arxiv.org/abs/2608.17402v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.17402v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/facebookresearch/moe_vie.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision encoders are a critical component of vision-language models, and scaling their capacity effectively improves performance. However, dense scaling increases compute cost and inference latency. Mixture-of-Experts (MoE) architectures offer a compelling alternative, having enabled efficient scaling in LLMs, yet the MoE design space for CLIP-style vision encoders remains underexplored at State-of-the-Art (SOTA) levels. In this work, we systematically study MoE designs for vision encoder scaling and find that fine-grained MoE topologies yield substantial gains over both dense and standard MoE counterparts. We further propose an auxiliary-loss-free balancing variant for better expert utilization, and design a specialized MoE kernel to mitigate inference latency overhead. To enhance video capabilities while preserving image knowledge, we introduce frame-level distillation paired with a novel freezing mechanism. We pretrain a series of Mixture-of-Experts Vision Encoders (MoE-ViE) across a range of sizes, all consistently outperforming their dense counterparts. Our largest model matches the zero-shot performance of a SOTA encoder 1.7x its size at 76% of its latency. When aligned with an LLM, MoE-ViE surpasses all compared encoders on image and video benchmarks, including those with up to 5x more activated parameters. Code is available at https://github.com/facebookresearch/moe_vie.
+
+视觉编码器是视觉语言模型的关键组件，扩展其容量可以有效提高性能。然而，密集扩展会增加计算成本和推理延迟。专家混合 (MoE) 架构提供了一种引人注目的替代方案，在法学硕士中实现了高效扩展，但 CLIP 式视觉编码器的 MoE 设计空间在最先进 (SOTA) 水平上仍然没有得到充分探索。在这项工作中，我们系统地研究了用于视觉编码器缩放的 MoE 设计，并发现细粒度 MoE 拓扑比密集和标准 MoE 拓扑产生了显着的增益。我们进一步提出了一种辅助无损平衡变体，以更好地利用专家，并设计一个专门的 MoE 内核来减轻推理延迟开销。为了在保留图像知识的同时增强视频功能，我们引入了帧级蒸馏与新颖的冻结机制。我们预训练了一系列不同尺寸的专家混合视觉编码器 (MoE-ViE)，所有这些编码器的性能始终优于密集型编码器。我们最大的模型与 1.7 倍大小的 SOTA 编码器的零样本性能相匹配，延迟仅为 76%。当与 LLM 一致时，MoE-ViE 在图像和视频基准测试中超越了所有比较的编码器，包括那些激活参数多出 5 倍的编码器。代码可在 https://github.com/facebookresearch/moe_vie 获取。
+
+</details>
+
+---
+
+## 10. Probing Association Instability with Track-State Perturbations for Clip-Level Active Learning in Query-Propagation Multi-Object Tracking / 查询传播多目标跟踪中剪辑级主动学习的轨迹状态扰动探测关联不稳定性
+
+**Date**: 2026-08-18 | **arXiv**: [2608.17224v1](http://arxiv.org/abs/2608.17224v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.17224v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Training query-propagation end-to-end multi-object tracking (MOT) models requires dense bounding-box and identity annotations across video sequences, making dataset construction expensive. Clip-level active learning reduces this cost by selecting video clips for annotation, but prior acquisition criteria based on output-level temporal uncertainty may miss clips whose informativeness comes from association instability in propagated track states. We propose QPID (Query-Propagation Instability and Diversity), a clip acquisition method for query-propagation MOT that targets association instability in propagated track states. QPID estimates this instability by applying two-sided perturbations to internal track states and measuring prediction differences from a clean reference branch. The key idea is that, in stable clips, each propagated track should continue to follow the same target under small perturbations, whereas in ambiguous clips, small changes in the track state can alter which target the track follows, leading to changes in localization or confidence. QPID measures these perturbation-induced prediction differences with two metrics: Localization Drift and Entropy-Weighted Confidence Discrepancy. These metrics are aggregated into a clip-level association-instability score. To avoid redundant uncertainty-only selection, QPID selects a representative annotation batch from high-instability clips using Uncertainty-Weighted Visual Coverage with track-level visual prototypes. Experiments on DanceTrack and SportsMOT with MeMOTR and SambaMOTR show that QPID achieves strong performance compared with active learning baselines under the same annotation budget.
+
+训练查询传播端到端多对象跟踪 (MOT) 模型需要跨视频序列的密集边界框和身份注释，这使得数据集构建成本高昂。剪辑级主动学习通过选择视频剪辑进行注释来降低这种成本，但基于输出级时间不确定性的先前采集标准可能会错过其信息量来自传播轨道状态中的关联不稳定性的剪辑。我们提出了 QPID（查询传播不稳定性和多样性），这是一种用于查询传播 MOT 的剪辑获取方法，其目标是传播轨道状态中的关联不稳定性。 QPID 通过对内部轨道状态应用两侧扰动并测量与干净参考分支的预测差异来估计这种不稳定性。关键思想是，在稳定的剪辑中，每个传播的轨迹应在小扰动下继续遵循相同的目标，而在模糊的剪辑中，轨迹状态的微小变化可以改变轨迹遵循的目标，从而导致定位或置信度的变化。 QPID 使用两个指标来衡量这些扰动引起的预测差异：定位漂移和熵加权置信度差异。这些指标被聚合成剪辑级关联不稳定得分。为了避免冗余的仅不确定性选择，QPID 使用不确定性加权视觉覆盖和轨道级视觉原型从高不稳定剪辑中选择代表性注释批次。使用 MeMOTR 和 SambaMOTR 在 DanceTrack 和 SportsMOT 上进行的实验表明，在相同注释预算下，与主动学习基线相比，QPID 取得了强劲的性能。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-19 (22 papers)</b></summary>
 
 # arXiv Video Papers - 2026-08-19
