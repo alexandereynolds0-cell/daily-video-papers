@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-22](papers/2026-08-22.md) - 10 papers
 - [2026-08-21](papers/2026-08-21.md) - 8 papers
 - [2026-08-20](papers/2026-08-20.md) - 10 papers
 - [2026-08-19](papers/2026-08-19.md) - 22 papers
@@ -141,6 +142,178 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-22 (10 papers)</b></summary>
+
+# arXiv Video Papers - 2026-08-22
+
+**Paper Count**: 10
+
+---
+
+## 1. 4DAnyone: Create Anyone in 4D from a Casual Monocular Video / 4DAnyone：通过休闲单眼视频以 4D 形式创建任何人
+
+**Date**: 2026-08-20 | **arXiv**: [2608.20335v1](http://arxiv.org/abs/2608.20335v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.20335v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present 4DAnyone, a framework for reconstructing 4D humans from an uncalibrated monocular video by generating reconstruction-grade multiview-consistent videos and lifting them into 4D Gaussian Splatting (4DGS). Existing camera-controlled video diffusion models synthesize plausible novel-view videos but fail to maintain consistency when scaled to the tens of target views required for 4DGS reconstruction. We identify this failure as a bounded-attention-context problem: when target views exceed the capacity of a single DiT forward pass, they must be split into groups, exposing two coupled bottlenecks. On the reference-context side, conditioning on all previously generated views grows as $O(N)$, weakening cross-view appearance guidance. On the target-context side, disjoint groups cannot directly exchange information, causing global structural drift. 4DAnyone addresses both bottlenecks with two complementary designs: Reference Context Packing (RCP) compresses growing reference views into a fixed-length mixed-resolution context with $O(1)$ reference-context complexity, while Target Context Routing (TCR) rotates target-view groupings during denoising to share context across groups at high-noise steps and stabilize details at low-noise steps. We further build the MVGameHuman dataset using our in-house game engine and combine it with light-stage and in-the-wild video datasets for training. Experiments on DNA-Rendering and DyMVHumans show that 4DAnyone outperforms prior methods in both novel-view video quality and downstream 4DGS reconstruction, with robust in-the-wild generalization. See our project page for video results and source code: https://4danyone.github.io.
+
+我们提出了 4DAnyone，这是一个框架，用于通过生成重建级多视图一致视频并将其提升为 4D 高斯泼溅 (4DGS)，从未经校准的单眼视频重建 4D 人类。现有的摄像机控制视频扩散模型可以合成合理的新颖视图视频，但在扩展到 4DGS 重建所需的数十个目标视图时无法保持一致性。我们将这种失败视为有界注意力上下文问题：当目标视图超过单个 DiT 前向传递的容量时，它们必须分成组，从而暴露两个耦合的瓶颈。在参考上下文方面，对所有先前生成的视图的调节随着 $O(N)$ 增长，削弱了跨视图外观指导。在目标上下文方面，不相交的群体无法直接交换信息，导致全局结构漂移。 4DAnyone 通过两种互补的设计解决了这两个瓶颈：参考上下文打包 (RCP) 将不断增长的参考视图压缩为固定长度的混合分辨率上下文，参考上下文复杂度为 $O(1)$，而目标上下文路由 (TCR) 在去噪期间旋转目标视图分组，以在高噪声步骤中跨组共享上下文，并在低噪声步骤中稳定细节。我们使用我们的内部游戏引擎进一步构建 MVGameHuman 数据集，并将其与光舞台和野外视频数据集相结合进行训练。 DNA-Rendering 和 DyMVHumans 的实验表明，4DAnyone 在新视角视频质量和下游 4DGS 重建方面均优于现有方法，并具有强大的野外泛化能力。请参阅我们的项目页面以获取视频结果和源代码：https://4danone.github.io。
+
+</details>
+
+---
+
+## 2. DreamHand: Repurposing Video Diffusion Models for Occlusion-Robust Egocentric 3D Hand Motion Recovery / DreamHand：重新利用视频扩散模型以实现遮挡稳健的以自我为中心的 3D 手部运动恢复
+
+**Date**: 2026-08-20 | **arXiv**: [2608.20308v1](http://arxiv.org/abs/2608.20308v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.20308v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Egocentric video offers scalable manipulation data for embodied AI, yet recovering metric 3D hand trajectories remains challenging due to severe object occlusion and frequent out-of-sight gaps. Existing single-frame and windowed temporal regressors fail when hand shortly leaves the frame, while recent video diffusion models (VDMs) rely on heavy, stochastic multi-step sampling as pixel-space renderers. We instead repurpose VDM into a deterministic geometry encoder. A single forward pass over the clean latent exposes scene content beyond current observations, including occluded and out-of-sight hands. We introduce DreamHand, an offline clip-level framework that extracts features via a Deterministic Clean-Latent Encoder and decodes them with a Bidirectional Spatiotemporal Decoder. DreamHand recovers continuous bimanual trajectories with metric placement and no external detector, while a Ray-Based Camera Solver supports a second configuration that needs no test-time camera intrinsics. Across five egocentric benchmarks, DreamHand sets a new state of the art, cutting MPJPE-p by 30% on occlusion-heavy ARCTIC and 40% on HOT3D. These gains reach 46%-61% once out-of-sight hands are included in the evaluation, offering a scalable path from everyday human video to robot manipulation data.
+
+以自我为中心的视频为嵌入式人工智能提供了可扩展的操作数据，但由于严重的物体遮挡和频繁的视线外间隙，恢复公制 3D 手部轨迹仍然具有挑战性。当手短暂离开帧时，现有的单帧和窗口时间回归器会失败，而最近的视频扩散模型（VDM）依赖于大量随机多步采样作为像素空间渲染器。相反，我们将 VDM 重新调整为确定性几何编码器。对干净潜伏的单次前向传播会暴露当前观察范围之外的场景内容，包括被遮挡和视线外的手。我们引入了 DreamHand，一个离线剪辑级框架，它通过确定性干净潜在编码器提取特征，并使用双向时空解码器对其进行解码。 DreamHand 通过度量放置恢复连续双手轨迹，无需外部检测器，而基于射线的相机解算器支持无需测试时相机内部函数的第二种配置。在五个以自我为中心的基准测试中，DreamHand 树立了新的技术水平，在遮挡严重的 ARCTIC 上将 MPJPE-p 降低了 30%，在 HOT3D 上将 MPJPE-p 降低了 40%。一旦将视线外的手纳入评估中，这些增益将达到 46%-61%，从而提供从日常人类视频到机器人操作数据的可扩展路径。
+
+</details>
+
+---
+
+## 3. G3Ego: Gaze-Guided Graphs for Egocentric Action Understanding / G3Ego：用于理解自我中心行为的凝视引导图
+
+**Date**: 2026-08-20 | **arXiv**: [2608.20157v1](http://arxiv.org/abs/2608.20157v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.20157v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Egocentric action understanding is often addressed using large video models pretrained on extensive exocentric datasets. However, many first-person actions depend on a small number of hand-object interactions involving only a few relevant entities.   We propose G3Ego, a graph-based framework for egocentric action understanding that uses gaze as a structural cue to identify action-relevant entities in the scene. From sparsely sampled frames, G3Ego constructs action scene graphs from vision-language descriptions, grounded objects, and hand cues, and then prunes irrelevant entities using the camera wearer's gaze.   The resulting graph embeddings are temporally aggregated for action recognition and anticipation. Unlike prior work that uses gaze primarily as an auxiliary modality or attention signal, G3Ego incorporates gaze directly into graph construction, producing efficient and interpretable representations focused on action-relevant interactions.   Experiments on EGTEA Gaze+ and MECCANO show that G3Ego achieves competitive performance compared with video-based approaches and consistently improves Macro-F1 under class-imbalanced evaluation, while avoiding reliance on computationally expensive video pretraining. These results demonstrate the effectiveness of gaze-guided graph representations for egocentric action understanding.
+
+通常使用在广泛的外中心数据集上预训练的大型视频模型来解决以自我为中心的动作理解。然而，许多第一人称动作依赖于仅涉及少数相关实体的少量手部物体交互。   我们提出了 G3Ego，一个基于图的框架，用于理解以自我为中心的动作，它使用凝视作为结构线索来识别场景中与动作相关的实体。 G3Ego 根据稀疏采样的帧，根据视觉语言描述、接地物体和手势构建动作场景图，然后使用相机佩戴者的视线修剪不相关的实体。   生成的图嵌入会暂时聚合以进行动作识别和预测。与之前的工作主要使用凝视作为辅助方式或注意信号不同，G3Ego 将凝视直接纳入图形构建中，产生专注于动作相关交互的高效且可解释的表示。   EGTEA Gaze+ 和 MECCANO 上的实验表明，与基于视频的方法相比，G3Ego 实现了有竞争力的性能，并在类不平衡评估下持续改进 Macro-F1，同时避免了对计算成本昂贵的视频预训练的依赖。这些结果证明了凝视引导图形表示对于自我中心行为理解的有效性。
+
+</details>
+
+---
+
+## 4. DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation / DECOWAM：用于腿部移动操纵的解耦全身世界动作模型
+
+**Date**: 2026-08-20 | **arXiv**: [2608.20114v1](http://arxiv.org/abs/2608.20114v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.20114v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Mobile manipulation requires a robot to predict how locomotion and arm motion jointly alter future observations and control. Existing world-action models, developed largely for fixed-base platforms, do not explicitly distinguish camera ego-motion from base and arm actions. Here we introduce DECOWAM, a whole-body world-action model that separates these factors through dedicated conditional interfaces. DECOWAM freezes an adapted FastWAM backbone and trains residual adapters, an action-equivalent future bottleneck distilled from privileged observations, adversarially separated base and arm latents, and base-velocity conditioning for video prediction. We further introduce ARMDOG, a real-robot dataset that synchronizes video, whole-body state and action, and language. On a fixed replay protocol, DECOWAM improved both future-video and action prediction over FastWAM, reducing action MSE by 21.7% with 25.95M trainable adaptation parameters. Across 79 closed-loop trials per method, it achieved the highest observed whole-body coordination and base-displacement robustness among the compared systems, while task completion remained comparable to the strongest baseline. These results show that embodiment-aware factorization can support parameter-efficient joint visual prediction and whole-body control under moving viewpoints.
+
+移动操纵需要机器人预测运动和手臂运动如何共同改变未来的观察和控制。现有的世界动作模型主要是为固定底座平台开发的，没有明确区分相机自我运动与底座和手臂动作。在这里，我们介绍 DECOWAM，一种全身世界动作模型，它通过专用条件接口分离这些因素。 DECOWAM 冻结了适应的 FastWAM 主干并训练残差适配器，这是从特权观察中提取的相当于动作的未来瓶颈、对抗性分离的基础和臂潜伏以及用于视频预测的基础速度调节。我们进一步介绍了 ARMDOG，一个同步视频、全身状态和动作以及语言的真实机器人数据集。在固定重放协议上，DECOWAM 比 FastWAM 改进了未来视频和动作预测，通过 2595 万个可训练的自适应参数将动作 MSE 降低了 21.7%。在每种方法的 79 次闭环试验中，它在比较系统中实现了观察到的最高的全身协调性和基础位移稳健性，同时任务完成情况仍与最强基线相当。这些结果表明，实施例感知分解可以支持移动视点下的参数高效联合视觉预测和全身控制。
+
+</details>
+
+---
+
+## 5. AvatarDynamizer: From Static to Dynamic Human Avatars via Generative Dynamic Textures / AvatarDynamizer：通过生成动态纹理从静态到动态人体头像
+
+**Date**: 2026-08-20 | **arXiv**: [2608.19900v1](http://arxiv.org/abs/2608.19900v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.19900v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+For full-body avatars, modeling surface dynamics is crucial for overcoming the uncanny valley and achieving perceptual realism. Person-agnostic methods recover static 3D avatars from monocular images, videos, or text prompts, but their skeleton-driven animations lack realistic surface dynamics such as clothing wrinkles. In contrast, person-specific methods achieve high-quality rendering and realistic dynamics, but require expensive multi-view captures for each individual. Recent generalizable dynamic avatar methods struggle to embed surface dynamics, leading to either limited multi-view consistency or dynamic expressiveness. To this end, we propose AvatarDynamizer, a generative method that transforms an off-the-shelf static 3D avatar into a controllable, realistic, and multi-view-consistent 4D avatar. We introduce a novel texture-space surface-dynamics embedding and formulate avatar dynamics modeling as conditional texture generation. Our encoder--decoder representation embeds pose-dependent dynamics into dynamic texture maps, enabling compatibility with pre-trained video diffusion models while decoding them into 3D Gaussians for multi-view consistent rendering. Since existing datasets are limited in scale, sequence length, or motion diversity, we collect a large-scale multi-view dataset with long sequences covering diverse skeletal motions and surface dynamics. Experiments show that our method effectively animates static avatars with faithful surface dynamics and outperforms competing generalizable methods in visual fidelity, especially under limited dynamic training data.
+
+对于全身化身来说，表面动力学建模对于克服恐怖谷和实现感知真实感至关重要。与人无关的方法从单眼图像、视频或文本提示中恢复静态 3D 头像，但其骨骼驱动的动画缺乏真实的表面动态，例如衣服皱纹。相比之下，特定于人的方法可以实现高质量的渲染和逼真的动态，但需要为每个人进行昂贵的多视图捕获。最近的通用动态化身方法难以嵌入表面动力学，导致多视图一致性或动态表现力有限。为此，我们提出了 AvatarDynamizer，这是一种生成方法，可将现成的静态 3D 头像转换为可控、逼真且多视图一致的 4D 头像。我们引入了一种新颖的纹理空间表面动力学嵌入，并将化身动力学建模制定为条件纹理生成。我们的编码器-解码器表示将与姿势相关的动态嵌入到动态纹理图中，从而与预先训练的视频扩散模型兼容，同时将它们解码为 3D 高斯模型以实现多视图一致渲染。由于现有数据集在规模、序列长度或运动多样性方面受到限制，我们收集了一个大规模多视图数据集，其中包含涵盖不同骨骼运动和表面动力学的长序列。实验表明，我们的方法有效地以忠实的表面动力学对静态化身进行动画处理，并且在视觉保真度方面优于竞争的可推广方法，特别是在有限的动态训练数据下。
+
+</details>
+
+---
+
+## 6. TempJail: Temporal Jailbreak Attack against Large Vision-Language Models via Subtitle Scheduling / TempJail：通过字幕调度对大型视觉语言模型进行临时越狱攻击
+
+**Date**: 2026-08-20 | **arXiv**: [2608.19737v1](http://arxiv.org/abs/2608.19737v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.19737v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large vision-language models (LVLMs) have achieved remarkable progress in video understanding and reasoning. Despite extensive studies on text- and image-based jailbreaks, video jailbreaks against LVLMs remain largely unexplored. Existing video jailbreak methods mainly manipulate textual content embedded in videos, while overlooking how such information is organized over time. Our analysis reveals that jailbreak effectiveness depends not only on the semantics of textual information but also on its temporal presentation, including duration and timing-slot allocation. Motivated by this finding, we use subtitles, which are common in real-world videos and allow semantic content to be presented under precise temporal control without appearing visually intrusive, as a natural attack medium. Based on this insight, we propose TempJail, a black-box video-based jailbreak framework that constructs query-aligned dialogue-style subtitle sequences and optimizes their temporal scheduling to exploit temporal vulnerabilities in LVLMs and elicit responses that satisfy the harmful intent of the source query. Extensive experiments on four representative LVLMs and two datasets demonstrate that TempJail achieves the highest attack success rate across all evaluated model--dataset settings, outperforming the strongest baseline by 53 and 18 percentage points in dataset-averaged ASR on GPT-5 and Gemini 3.5-Flash, respectively.
+
+大型视觉语言模型（LVLM）在视频理解和推理方面取得了显着的进步。尽管对基于文本和图像的越狱进行了广泛的研究，但针对 LVLM 的视频越狱仍然很大程度上未被探索。现有的视频越狱方法主要操纵视频中嵌入的文本内容，而忽略了这些信息随着时间的推移如何组织。我们的分析表明，越狱的有效性不仅取决于文本信息的语义，还取决于其时间表示，包括持续时间和时隙分配。受这一发现的启发，我们使用字幕作为一种自然的攻击媒介，字幕在现实世界的视频中很常见，并且允许在精确的时间控制下呈现语义内容，而不会显得视觉侵入。基于这一见解，我们提出了 TempJail，一种基于黑盒视频的越狱框架，它构建查询对齐的对话式字幕序列并优化其时间调度，以利用 LVLM 中的时间漏洞并引发满足源查询的有害意图的响应。对四个代表性 LVLM 和两个数据集进行的大量实验表明，TempJail 在所有评估的模型数据集设置中实现了最高的攻击成功率，在 GPT-5 和 Gemini 3.5-Flash 上的数据集平均 ASR 方面分别比最强基线高出 53 个和 18 个百分点。
+
+</details>
+
+---
+
+## 7. StreamSoccer: Event-Driven Memory for Streaming Soccer Commentary / StreamSoccer：用于流媒体足球评论的事件驱动内存
+
+**Date**: 2026-08-20 | **arXiv**: [2608.19723v1](http://arxiv.org/abs/2608.19723v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.19723v1)
+
+**Categories**: cs.CV, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Streaming video understanding requires models to causally update state as video arrives and organize growing history into semantic units that can evolve, persist, and be recalled under bounded computation and memory. This challenge is pronounced in live soccer commentary, where a system must describe completed events, summarize recent play, recall earlier events, or remain silent using only information available before each utterance. We present StreamSoccer, an event-driven system that uses event memory as its intermediate representation. A fixed-budget active memory integrates the stream; completed event states are retained locally and consolidated into retrievable historical records. A unified generator uses current, recent, and historical context to produce three commentary modes, while a rule-assisted scheduler selects a mode or silence. Unlike streaming video-language models organized around frames, visual tokens, or caches, and soccer-commentary methods based on predefined clips or output timestamps, StreamSoccer explicitly models event lifecycles. We construct a three-track streaming soccer commentary dataset and a layered evaluation protocol. At common reference anchors, StreamSoccer obtains CIDEr scores of 38.62, 23.96, and 17.39 for current-event, recent-window, and historical-memory commentary, ranking first on the current-event and historical-memory tracks and second on recent-window. Controlled ablations show that local completed events improve all tracks and that the full system performs best on all three. Across 174 raw-video runs on 58 matches, per-minute RTF p95 ranges from 0.10 to 0.22 without sustained growth with match history. These results indicate that event memory supports streaming soccer commentary across temporal scopes while controlling long-history computation.
+
+流视频理解需要模型在视频到达时因果性地更新状态，并将不断增长的历史组织成可以在有限的计算和内存下演化、持续和调用的语义单元。这一挑战在现场足球评论中尤为明显，系统必须描述已完成的事件、总结最近的比赛、回忆之前的事件，或者仅使用每次发言之前可用的信息保持沉默。我们提出了 StreamSoccer，一个事件驱动的系统，使用事件内存作为其中间表示。固定预算的主动存储器集成了流；已完成的事件状态保留在本地并合并到可检索的历史记录中。统一生成器使用当前、最近和历史上下文来生成三种评论模式，而规则辅助调度程序则选择一种模式或静音。与围绕帧、视觉令牌或缓存组织的流视频语言模型以及基于预定义剪辑或输出时间戳的足球解说方法不同，StreamSoccer 显式地对事件生命周期进行建模。我们构建了一个三轨流媒体足球评论数据集和分层评估协议。在常用参考锚点上，StreamSoccer 在当前事件、最近窗口和历史记忆评论方面获得了 38.62、23.96 和 17.39 的 CIDEr 分数，在当前事件和历史记忆轨道上排名第一，在最近窗口上排名第二。受控消融表明，本地完成的事件改善了所有赛道，并且整个系统在所有三个赛道上都表现最佳。在 58 场比赛的 174 个原始视频中，每分钟 RTF p95 的范围从 0.10 到 0.22，并且没有随着比赛历史持续增长。这些结果表明事件内存支持跨时间范围的流式足球评论，同时控制长历史计算。
+
+</details>
+
+---
+
+## 8. PL-NBA: A Possession-level Universal Basketball Video Dataset Supporting Multiple Visual Understanding Tasks / PL-NBA：支持多种视觉理解任务的控球级通用篮球视频数据集
+
+**Date**: 2026-08-20 | **arXiv**: [2608.19646v1](http://arxiv.org/abs/2608.19646v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.19646v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual understanding in sports has emerged as a hot topic in computer vision in recent years. Most existing basketball video datasets adopt single action or activity as sample, which can neither preserve the temporal continuity of game events nor support complex tasks such as action anticipation. To address this issue, this paper constructs the first possession-level basketball video dataset (PL-NBA), in which each sample is composed of a complete NBA offensive possession. Collected from 60 NBA games, PL-NBA contains 11,000 valid offensive possession clips and 31,567 annotated events with player names, captions, event types and timestamps. Each video clip includes multiple events and preserves the continuity of events, which is helpful for analysis of tactic. Experiment is conducted on multiple visual understanding tasks, including event recognition, video captioning, temporal action localization and action anticipation. Experimental results show that existing methods achieve limited performance on above four tasks, demonstrating that PL-NBA is a challenging benchmark for sports video understanding.
+
+近年来，体育运动中的视觉理解已成为计算机视觉领域的热门话题。现有的篮球视频数据集大多采用单一动作或活动作为样本，既不能保持比赛事件的时间连续性，也不能支持动作预测等复杂任务。为了解决这个问题，本文构建了第一个控球级别的篮球视频数据集（PL-NBA），其中每个样本都由完整的NBA进攻控球组成。 PL-NBA 收集自 60 场 NBA 比赛，包含 11,000 个有效的进攻控球片段和 31,567 个带注释的事件，其中包含球员姓名、标题、事件类型和时间戳。每个视频片段包含多个事件，并保持事件的连续性，有利于战术分析。在多个视觉理解任务上进行了实验，包括事件识别、视频字幕、时间动作定位和动作预期。实验结果表明，现有方法在上述四个任务上的性能有限，表明 PL-NBA 是体育视频理解的一个具有挑战性的基准。
+
+</details>
+
+---
+
+## 9. VGI-BENCH: Probing Visual Intelligence in Video Generation Models / VGI-BENCH：探索视频生成模型中的视觉智能
+
+**Date**: 2026-08-20 | **arXiv**: [2608.19583v1](http://arxiv.org/abs/2608.19583v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.19583v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent studies suggest that video generation models can exhibit certain forms of zero-shot visual reasoning through generated frames. Yet reliable evaluation remains challenging: benchmarks should adopt inputs aligned with the visual priors of current video models, require valid evolving processes rather than only plausible final states, and calibrate task difficulty to remain challenging yet partly feasible. To this end, we introduce VGI-bench, containing 27 tasks and 810 instances, organized by a two-level taxonomy of task domains and skill tags for fine-grained evaluation of visual reasoning capabilities of video generation models. Our evaluations show that current generative systems can solve a subset of visually grounded reasoning tasks, but remain far from reliable, with even the strongest model, Seedance~2.0, achieving only 51.0% under our evaluation criteria. Our analysis further explore the output failure modes, input condition sensitivity, performance transfer boundary from synthetic fine-tuning, and internal denoising perspective revealing limited self-correction, where later steps mainly refine early hypotheses rather than correct reasoning errors. We hope VGI-bench will help stimulate the development of next-generation video generation models. We will release our code and data.
+
+最近的研究表明，视频生成模型可以通过生成的帧展示某些形式的零镜头视觉推理。然而，可靠的评估仍然具有挑战性：基准测试应采用与当前视频模型的视觉先验一致的输入，需要有效的演变过程而不仅仅是合理的最终状态，并校准任务难度以保持挑战性但部分可行。为此，我们引入了 VGI-bench，包含 27 个任务和 810 个实例，由任务域和技能标签的两级分类法组织，用于细粒度评估视频生成模型的视觉推理能力。我们的评估表明，当前的生成系统可以解决一部分基于视觉的推理任务，但仍然远不可靠，即使是最强的模型 Seedance~2.0，在我们的评估标准下也只能达到 51.0%。我们的分析进一步探索了输出故障模式、输入条件敏感性、综合微调的性能转移边界，以及揭示有限自我校正的内部去噪视角，其中后续步骤主要完善早期假设而不是纠正推理错误。我们希望 VGI-bench 将有助于刺激下一代视频生成模型的开发。我们将发布我们的代码和数据。
+
+</details>
+
+---
+
+## 10. Stream4D: 4D-Consistency for Streaming Autoregressive Diffusion Video Models / Stream4D：流式自回归扩散视频模型的 4D 一致性
+
+**Date**: 2026-08-20 | **arXiv**: [2608.19556v1](http://arxiv.org/abs/2608.19556v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.19556v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Streaming autoregressive diffusion models enable real-time, long-horizon video generation, but their training objectives optimize local frame prediction rather than the geometry and dynamics of a coherent world: long rollouts accumulate geometric drift and degrade into static or unnatural motion. Recent bidirectional approaches address this problem using rewards signals built upon 3D Gaussian-Splatting reconstruction. However, a single rigid 3d reconstruction cannot model a dynamic scene, so this critic penalizes genuine object motion as reconstruction error and is maximized by freezing the video. This shortcut is especially detrimental in the AR setting, where each chunk can propagate an already-static configuration. In this work, we propose Stream4D, which replaces the static critic with a feed-forward 4D reconstruction reward that explicitly models scene dynamics, allowing coherent motion to receive high consistency rewards. To further guide motion magnitude and quality, we add a motion prior that rewards natural scene-flow magnitude while penalizing jitter and non-rigid artifacts. Our final recipe combines these two terms with a lightweight perceptual anchor. Across various autoregressive video backbones and various generation horizons, Stream4D improves 4D reconstruction quality, preserves motion more effectively, and achieves higher human-aligned preference. Project page: https://banyuanhao.github.io/Stream4D/
+
+流式自回归扩散模型可以实现实时、长视野的视频生成，但其训练目标是优化局部帧预测，而不是优化连贯世界的几何和动态：长时间的推出会累积几何漂移并退化为静态或不自然的运动。最近的双向方法使用基于 3D Gaussian-Splatting 重建的奖励信号解决了这个问题。然而，单个刚性 3D 重建无法对动态场景进行建模，因此该评论家将真实的对象运动作为重建误差进行惩罚，并通过冻结视频来最大化。这种快捷方式在 AR 设置中尤其有害，因为每个块都可以传播已经静态的配置。在这项工作中，我们提出了 Stream4D，它用前馈 4D 重建奖励取代了静态批评家，该奖励显式地模拟场景动态，从而允许连贯运动获得高一致性奖励。为了进一步指导运动幅度和质量，我们添加了一个运动先验，奖励自然场景流幅度，同时惩罚抖动和非刚性伪影。我们的最终方案将这两个术语与轻量级感知锚结合起来。跨越各种自回归视频主干和各种生成视野，Stream4D 提高了 4D 重建质量，更有效地保留运动，并实现了更高的人类对齐偏好。项目页面：https://banyuanhao.github.io/Stream4D/
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-21 (8 papers)</b></summary>
 
 # arXiv Video Papers - 2026-08-21
