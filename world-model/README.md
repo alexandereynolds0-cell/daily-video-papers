@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-22](papers/2026-08-22.md) - 8 papers
 - [2026-08-21](papers/2026-08-21.md) - 7 papers
 - [2026-08-20](papers/2026-08-20.md) - 6 papers
 - [2026-08-19](papers/2026-08-19.md) - 6 papers
@@ -137,6 +138,146 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-22 (8 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-08-22
+
+**Paper Count**: 8
+
+---
+
+## 1. Planning-Oriented End-to-End Autonomous Driving: Architectures, Evaluation, and Emerging Paradigms / 面向规划的端到端自动驾驶：架构、评估和新兴范例
+
+**Date**: 2026-08-20 | **arXiv**: [2608.20111v1](http://arxiv.org/abs/2608.20111v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.20111v1)
+
+**Categories**: cs.RO, cs.ET
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+End-to-end autonomous driving has evolved from camera-to-control regression toward planning-oriented systems that use structured representations, trajectory-level outputs, and increasingly realistic evaluation protocols. This survey reviews this transition across behavior cloning, conditional imitation learning, privileged distillation, BEV and vectorized planning, unified perception-prediction-planning architectures, world-model-based planners, and vision-language-action systems. We argue that the key distinction in modern end-to-end driving is not whether intermediate representations are used, but whether they are learned, supervised, and evaluated to support safe, feasible, and route-compliant planning. To organize the literature, we synthesize existing methods along four axes: input representation, planning output, supervision signal, and evaluation protocol. We further examine the benchmark shift from open-loop trajectory matching to closed-loop simulation, non-reactive real-log evaluation, long-tail testing, and human-preference-aware metrics. Our analysis highlights that architectural progress is difficult to interpret without benchmark-consistent evaluation, and that displacement-based open-loop metrics alone provide limited evidence for safe and human-aligned driving. We conclude with open challenges in uncertainty-aware planning, learner-expert mismatch, runtime safety assurance, language-action grounding, world-model validation, and reproducible benchmarking.
+
+端到端自动驾驶已经从相机到控制回归发展到使用结构化表示、轨迹级输出和日益现实的评估协议的面向规划的系统。这项调查回顾了行为克隆、条件模仿学习、特权蒸馏、BEV 和矢量化规划、统一感知-预测-规划架构、基于世界模型的规划器和视觉-语言-动作系统的转变。我们认为，现代端到端驾驶的关键区别不在于是否使用中间表示，而在于是否对它们进行学习、监督和评估以支持安全、可行和符合路线的规划。为了组织文献，我们沿着四个轴综合了现有的方法：输入表示、规划输出、监督信号和评估协议。我们进一步研究了从开环轨迹匹配到闭环模拟、非反应性真实日志评估、长尾测试和人类偏好感知指标的基准转变。我们的分析强调，如果没有基准一致的评估，很难解释架构的进步，并且基于位移的开环指标本身为安全和人性化驾驶提供的证据有限。最后，我们提出了不确定性感知规划、学习者与专家不匹配、运行时安全保证、语言动作基础、世界模型验证和可重复基准测试等方面的开放挑战。
+
+</details>
+
+---
+
+## 2. Orthogonal JEPA: Factorized Predictive States for Latent World Models / 正交 JEPA：潜在世界模型的因式分解预测状态
+
+**Date**: 2026-08-20 | **arXiv**: [2608.20065v1](http://arxiv.org/abs/2608.20065v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.20065v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models construct latent states that support prediction, planning, and reasoning about an underlying system. Joint-embedding predictive architectures (JEPAs) offer a direct way to learn such states by predicting targets in representation space instead of reconstructing every detail of the observation. Standard JEPAs, however, organize all predictable content through one target embedding and one prediction pathway. In complex systems, this monolithic state can allocate redundant capacity to dominant signals while providing weak or conflicting gradients to less dominant predictive structure. We introduce \method, a latent world-modeling framework based on orthogonal predictive factorization. Learned basis matrices analyze each target state into multiple components, and a dedicated prediction branch estimates each component from a shared context representation. Predictive regression preserves the factor magnitudes required for state synthesis, an orthogonality objective discourages repeated directions, factor-activity regularization maintains variation in projected targets, and online variance regularization discourages coordinate-wise encoder collapse. Predicted components are synthesized into a complete latent state that can be used by a readout, decoder, planner, or autoregressive rollout. The same predictive-state mechanism applies when the target is temporally future, spatially hidden, or another partial observation of the same system. Experiments on controlled vision, single-cell transcriptomics, longitudinal health records, continuous control, and molecular dynamics evaluate representation quality, forecasting, planning, and long-horizon stability.
+
+世界模型构建支持对底层系统进行预测、规划和推理的潜在状态。联合嵌入预测架构（JEPA）提供了一种通过预测表示空间中的目标而不是重建观察的每个细节来学习此类状态的直接方法。然而，标准 JEPA 通过一种目标嵌入和一种预测路径来组织所有可预测的内容。在复杂系统中，这种整体状态可以将冗余容量分配给主导信号，同时为不太主导的预测结构提供弱或冲突的梯度。我们引入 \method，一种基于正交预测分解的潜在世界建模框架。学习的基础矩阵将每个目标状态分析为多个组件，并且专用预测分支根据共享上下文表示估计每个组件。预测回归保留状态合成所需的因子大小，正交目标阻止重复方向，因子活动正则化保持预测目标的变化，在线方差正则化阻止坐标编码器崩溃。预测的组件被合成为完整的潜在状态，可供读出器、解码器、规划器或自回归推出使用。当目标在时间上是未来的、在空间上是隐藏的或同一系统的另一个部分观察时，同样的预测状态机制适用。受控视觉、单细胞转录组学、纵向健康记录、连续控制和分子动力学实验评估表征质量、预测、规划和长期稳定性。
+
+</details>
+
+---
+
+## 3. ADAPT: Physics-Aware Diffusion-based World Models for Adaptive Predictive Transferable HVAC Control / ADAPT：用于自适应预测可转移 HVAC 控制的基于物理感知扩散的世界模型
+
+**Date**: 2026-08-20 | **arXiv**: [2608.19804v1](http://arxiv.org/abs/2608.19804v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.19804v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Buildings account for roughly one-third of global energy consumption and CO$_2$ emissions. Optimizing indoor climate systems plays a critical role for urban climate mitigation aligned with UN Sustainable Development Goals 11 and 13. However, indoor delayed thermodynamic responses and partial observability severely hinder existing methods, which are primarily limited by implicit thermal inertia, occupancy dynamic prediction, and cumulative prediction errors, especially for out-of-distribution environments. In practice, these challenges are further exacerbated by the high cost and privacy burden of dense indoor sensing, forcing operators to collect only limited data in a single operating regime while expecting controllers to generalize reliably across unseen seasons and climate regions. To address this problem, we propose ADAPT, a physics-aware conditional diffusion indoor environmental world model for HVAC control. The model predicts a short-horizon held-action thermal baseline to capture the latent thermal inertia of the buildings. The diffusion backbone utilizes the robustness of generative models, while a learnable multi-zone heat-balance regularizer constrains generated trajectories to satisfy transferable building thermodynamics without requiring known building geometry or manually calibrated thermal parameters. A credit assignment is then design for the downstream reinforcement learning. Extensive experiments on SemibuildingSim and Sinergym demonstrate that ADAPT reduces HVAC energy consumption by 7.3\% and occupant discomfort by 30.2\% compared with state-of-the-art baselines under IID control. Under OOD control scenarios spanning unseen seasons and climate regions, ADAPT maintains robust performance with only marginal degradation relative to its IID performance, substantially outperforming existing methods in transfer robustness.
+
+建筑物约占全球能源消耗和 CO$_2$ 排放量的三分之一。优化室内气候系统对于实现联合国可持续发展目标 11 和 13 的城市气候缓解至关重要。然而，室内延迟热力学响应和部分可观测性严重阻碍了现有方法，这些方法主要受到隐式热惯性、占用动态预测和累积预测误差的限制，特别是对于分布外的环境。在实践中，密集室内传感的高成本和隐私负担进一步加剧了这些挑战，迫使操作员在单一操作机制中仅收集有限的数据，同时期望控制器能够在看不见的季节和气候区域中可靠地进行概括。为了解决这个问题，我们提出了 ADAPT，一种用于 HVAC 控制的物理感知条件扩散室内环境世界模型。该模型预测短视野保持作用热基线，以捕获建筑物的潜在热惯性。扩散主干利用生成模型的鲁棒性，而可学习的多区域热平衡正则器约束生成的轨迹以满足可转移的建筑热力学，而不需要已知的建筑几何形状或手动校准的热参数。然后为下游强化学习设计学分分配。 SemibuildingSim 和 Sinergym 上的大量实验表明，与 IID 控制下的最先进基线相比，ADAPT 可将 HVAC 能耗降低 7.3%，将居住者不适度降低 30.2%。在跨越未见季节和气候区域的 OOD 控制场景下，ADAPT 保持了稳健的性能，相对于其 IID 性能仅略有下降，在传输稳健性方面大大优于现有方法。
+
+</details>
+
+---
+
+## 4. An Irreducible Quantum Advantage in Aligning World Models with Reality / 将世界模型与现实结合起来的不可减少的量子优势
+
+**Date**: 2026-08-20 | **arXiv**: [2608.19779v1](http://arxiv.org/abs/2608.19779v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.19779v1)
+
+**Categories**: quant-ph, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models provide digital simulacra of the true world, allowing agents to be trained and tested before costly real-world deployment. At each time step, they receive an action and generate an observation and reward matching the statistics of the true world. In complex environments where present outcomes depend on events far in the past, this requires memory. One might expect that, by increasing memory, we can always build a model accurately enough to align the optimal agent policies of the real and virtual worlds. We show that this is false for classical world models, even when the true world itself is classical. We construct true worlds for which every finite classical model fails along the same possible trajectory: it either loses the ability to distinguish actions when the true world clearly prefers one, or repeatedly assigns the highest expected reward to suboptimal actions. Its expected-reward estimates also retain a nonvanishing average error. In contrast, each such true world admits a quantum world model using a single qutrit that reproduces it exactly: its reward estimates and preferred actions always match those of the true world, ensuring that the optimal policies of the real and virtual worlds remain perfectly aligned.
+
+世界模型提供了真实世界的数字模拟，允许在昂贵的现实世界部署之前对代理进行培训和测试。在每个时间步骤，他们都会收到一个动作并生成与真实世界的统计数据相匹配的观察和奖励。在当前结果取决于遥远过去的事件的复杂环境中，这需要记忆。人们可能期望，通过增加内存，我们总是可以足够准确地构建模型来协调现实和虚拟世界的最佳代理策略。我们证明，这对于经典世界模型来说是错误的，即使真实世界本身是经典的。我们构建了真实世界，其中每个有限经典模型都沿着相同的可能轨迹失败：当真实世界明显更喜欢某个动作时，它要么失去区分动作的能力，要么重复地将最高预期奖励分配给次优动作。它的预期回报估计也保留了非零平均误差。相比之下，每个这样的真实世界都承认使用单个 qutrit 的量子世界模型可以准确地再现它：其奖励估计和首选行动始终与真实世界相匹配，从而确保真实世界和虚拟世界的最优策略保持完美一致。
+
+</details>
+
+---
+
+## 5. World-Model-Grounded LLM Planning for AUV and ASV Navigation Near Offshore Wind Farms / 基于世界模型的法学硕士规划近海风电场 AUV 和 ASV 导航
+
+**Date**: 2026-08-20 | **arXiv**: [2608.19661v1](http://arxiv.org/abs/2608.19661v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.19661v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models can turn a natural-language mission into a sequence of robot actions, but they do not have a sense of physics: they cannot judge how long a command should run, or whether it will make the robot drift into an obstacle. We proposed the use of a world model to expand the capabilities of Large Language model-based planners. Our method has three components: a physics-grounded neural world model, a three-phase gradient-based trajectory optimizer, and a Model Predictive Controller (MPC)-style closed-loop replanner with a trust-region guard. The language model decides what to do, and the world model decides how long, whether that means driving eight thrusters through 6 DOF or two differential thrusters through 3 DOF. We evaluate two marine vehicle classes operating near offshore wind infrastructure: a 6-DOF Autonomous Underwater Vehicle (AUV) and a 3-DOF differential-drive Autonomous Surface Vehicle (ASV). In five benchmark missions per platform, both vehicles reach every goal with zero predicted collisions, and both transfer to GazeboSim under ocean current, waves, and thruster dynamics, remaining collision-free and cutting GazeboSim goal-distance error versus the ungrounded baseline by 70-82% (ASV) and roughly 93% (AUV), after a residual fine-tuning pass that separately reduces surrogate rollout Root Mean Square Error (RMSE) by 60% (AUV) and 69% (ASV). For the ASV we further demonstrate a Vision language model (VLM)-assisted semantic-mapping pipeline that extracts obstacles and environmental context from satellite imagery, nautical charts, and forecast Application Programming Interface (API) instead of onboard sensors, reaching 96% navigability accuracy as a drop-in replacement for hand-specified obstacle geometry.
+
+大型语言模型可以将自然语言任务转化为机器人的一系列动作，但它们没有物理感：它们无法判断命令应该运行多长时间，或者是否会让机器人漂移到障碍物中。我们建议使用世界模型来扩展基于大语言模型的规划器的能力。我们的方法具有三个组成部分：基于物理的神经世界模型、基于梯度的三相轨迹优化器和具有信任区域保护的模型预测控制器（MPC）式闭环重新规划器。语言模型决定做什么，世界模型决定多长时间，无论这意味着通过 6 DOF 驱动八个推进器还是通过 3 DOF 驱动两个差分推进器。我们评估了在海上风电基础设施附近运行的两类海洋车辆：六自由度自主水下航行器（AUV）和三自由度差动驱动自主水面航行器（ASV）。在每个平台的五个基准任务中，两辆车都以零预测碰撞的方式达到了每个目标，并且都在洋流、波浪和推进器动力学下转移到 GazeboSim，保持无碰撞，并将 GazeboSim 目标距离误差相对于未接地基线减少了 70-82% (ASV) 和大约 93% (AUV)，在剩余微调过程中分别将代理推出均方根误差 (RMSE) 减少了 60% (AUV) 和 69% (ASV)。对于 ASV，我们进一步展示了视觉语言模型 (VLM) 辅助的语义映射管道，该管道可从卫星图像、海图和预测应用程序编程接口 (API)（而不是机载传感器）中提取障碍物和环境背景，从而达到 96% 的导航精度，作为手动指定障碍物几何形状的直接替代品。
+
+</details>
+
+---
+
+## 6. Beyond Multimodal Alignment: Certifying Physical Language through Response Substitution and Ordered Execution / 超越多模态对齐：通过响应替换和有序执行来验证物理语言
+
+**Date**: 2026-08-19 | **arXiv**: [2608.19492v1](http://arxiv.org/abs/2608.19492v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.19492v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models increasingly treat compact multimodal representations as interfaces between perception and physical interaction, yet existing probes do not establish whether different sensors carry the same executable meaning or whether that meaning survives a new action composition. We introduce an operational capability hierarchy and the Disjoint-Bridge Operator-Substitution Certificate (DBOSC), which asks whether independently trained modality compilers enter a frozen response chart interchangeably on evidence outside their training panels. On Cluster Haptic, audio and acceleration representations of the same unseen surface are 4.5x closer in response space than wrong-surface pairings, with the gap holding for all 19 held-out surfaces; unsealing withheld responses confirms that every branch predicts the physics better than the population chart. We then test ordered execution in a controlled elastoplastic system with complementary modality blind spots. At the pre-registered budget, the prerequisite refuses the stack because the frozen executor cannot advance even an exact chart coordinate through a held-out program. At a converged budget, the same rank-three chart executes those programs (oracle NMSE 0.18), fusion improves on both modalities, and 14 of 16 registered checks pass; the two failures arise because a diagonal restriction of the fused information matrix performs as well as the full one. Clearing the gate is a property of the executor, not the chart: an executor emitting whole programs instead of shared per-step dynamics is 38x worse than an entity-blind predictor on the same chart. A matching non-identifiability result explains why compression and fusion alone cannot determine an unseen composition law. These results separate attribute access, response substitution, fusion closure, and ordered execution into distinct, separately testable achievements.
+
+世界模型越来越多地将紧凑的多模态表示视为感知和物理交互之间的接口，但现有的探针无法确定不同的传感器是否具有相同的可执行含义，或者该含义是否在新的动作组合中仍然存在。我们引入了操作能力层次结构和不相交桥操作员替代证书（DBOSC），它询问独立训练的模态编译器是否根据其培训小组之外的证据可互换地输入冻结响应图。在 Cluster Haptic 上，同一看不见的表面的音频和加速度表示在响应空间中比错误的表面配对更接近 4.5 倍，并且所有 19 个保留表面都保持间隙；解封保留的回复证实每个分支对物理的预测都比人口图更好。然后，我们在具有互补模态盲点的受控弹塑性系统中测试有序执行。在预先注册的预算中，先决条件拒绝堆栈，因为冻结的执行器甚至无法通过保留的程序推进精确的图表坐标。在收敛预算下，相同的三级图表执行这些程序（oracle NMSE 0.18），两种模式的融合得到改进，16 个注册检查中有 14 个通过；出现这两种失败是因为融合信息矩阵的对角线限制与完整信息矩阵的性能一样好。清除门是执行器的属性，而不是图表的属性：发出整个程序而不是共享每步动态的执行器比同一图表上的实体盲预测器差 38 倍。匹配的不可识别性结果解释了为什么仅压缩和融合无法确定看不见的合成定律。这些结果将属性访问、响应替换、融合闭包和有序执行分离为不同的、可单独测试的成果。
+
+</details>
+
+---
+
+## 7. Learning the Right Abstraction: Neural Reduced Dynamics for Complex Robot Control / 学习正确的抽象：复杂机器人控制的神经简化动力学
+
+**Date**: 2026-08-19 | **arXiv**: [2608.19375v1](http://arxiv.org/abs/2608.19375v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.19375v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+High-fidelity embodied AI simulators provide realistic evaluation of complex robotic systems, but their computational cost limits their direct use for large-scale reinforcement learning campaigns. We advocate the use of less accurate but more expeditious simulations, which might draw on data-driven, e.g., neural dynamics, models. This contribution argues that the practical value of a neural dynamics model for complex robot control lies in learning the \emph{right abstraction}: a reduced state that preserves the control-relevant physics of the high-fidelity system while enabling high-throughput policy learning. We develop a neural reduced dynamics (NRD) framework that separates the state the model propagates from what can be supplied as an input or recovered analytically, trains policies entirely inside the frozen learned model, and validates them back in the high-fidelity simulator. Two case studies instantiate it across three control tasks: terrain-aware HMMWV trajectory tracking on rigid, bumpy and deformable Continuum Representation Model (CRM) terrain; and goal reaching for a stock tracked vehicle and its front-mounted articulated arm. Every policy transfers back to the high-fidelity simulator. A single policy trained inside the terrain-conditioned dynamics model, and given no terrain input of its own, attains lower median and mean tracking error than both single-terrain specialists on all three terrains, including zero-shot bumpy terrain. Quantitatively, the tracked vehicle reaches 100 of 100 goals and the arm 97 of 100, with zero contacts or joint-limit violations. The NRD models advance roughly four orders of magnitude faster in simulated time than the high-fidelity simulator scenes they replace, making iterative on-policy learning practical and supporting neural reduced dynamics as a bridge between accurate but expensive physics simulation and scalable robot learning.
+
+高保真人工智能模拟器可以对复杂的机器人系统进行真实的评估，但其计算成本限制了它们在大规模强化学习活动中的直接使用。我们提倡使用不太准确但更快速的模拟，这可能会利用数据驱动的模型，例如神经动力学模型。该贡献认为，复杂机器人控制的神经动力学模型的实用价值在于学习\emph{正确的抽象}：一种保留高保真系统的控制相关物理特性，同时实现高吞吐量策略学习的简化状态。我们开发了一个神经简化动态（NRD）框架，将模型传播的状态与可作为输入提供或通过分析恢复的状态分开，完全在冻结的学习模型内训练策略，并在高保真模拟器中验证它们。两个案例研究通过三个控制任务实例化了它：在刚性、崎岖不平和可变形连续表示模型 (CRM) 地形上进行地形感知 HMMWV 轨迹跟踪；目标是实现库存履带式车辆及其前置铰接臂。每个策略都会传输回高保真模拟器。在地形条件动力学模型中训练的单一策略，在没有自己的地形输入的情况下，在所有三种地形（包括零射击崎岖地形）上获得比单地形专家更低的中值和平均跟踪误差。从数量上看，履带式车辆达到了 100 个目标中的 100 个，手臂达到了 100 个目标中的 97 个，且零接触或违反关节限制。 NRD 模型在模拟时间上的推进速度比它们所取代的高保真模拟器场景快大约四个数量级，这使得迭代策略学习变得实用，并支持神经简化动力学，作为准确但昂贵的物理模拟和可扩展机器人学习之间的桥梁。
+
+</details>
+
+---
+
+## 8. DA-WAM: Decision-Aligned Future Latents for Driving World Models / DA-WAM：驱动世界模型的决策一致的未来潜力
+
+**Date**: 2026-08-19 | **arXiv**: [2608.19085v2](http://arxiv.org/abs/2608.19085v2) | **PDF**: [Link](http://arxiv.org/pdf/2608.19085v2)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Anticipating how scenes evolve under ego actions is fundamental to safe autonomous driving, yet the full potential of world models for decision-making remains unrealized. The critical challenge lies in ensuring that future modeling is not merely predictive, but decision-informative: the predicted future must directly shape which trajectory is selected. Existing approaches decouple future representation learning from planning optimization, or share predicted states across trajectory candidates, thereby diluting the action-specific consequences that ought to guide selection. To bridge this gap, we propose DA-WAM, a framework that unifies predictive representation learning, action-conditioned future modeling, and trajectory scoring under a single decision-making objective. DA-WAM maintains predictive supervision throughout planner optimization via an online encoder and a stable momentum target, allowing future representations to co-evolve with the driving task. An action-conditioned predictor generates a distinct future latent state per trajectory candidate, which is then evaluated by a future-latent-conditioned factorized scorer. For the expert-matched trajectory, the predicted future latent is supervised by the observed future representation, while safety-critical hard negatives provide additional supervision near planning boundaries. Extensive experiments on NAVSIM-v1 and NAVSIM-v2 demonstrate state-of-the-art performance, while ablations and diagnostic analyses validate the key components.
+
+预测场景在自我行为下如何演变是安全自动驾驶的基础，但决策世界模型的全部潜力仍未实现。关键的挑战在于确保未来建模不仅具有预测性，而且具有决策信息性：预测的未来必须直接决定选择哪种轨迹。现有的方法将未来的表示学习与规划优化分离，或者在候选轨迹之间共享预测状态，从而淡化了应该指导选择的特定于动作的结果。为了弥补这一差距，我们提出了 DA-WAM，这是一个将预测表示学习、动作条件未来建模和单一决策目标下的轨迹评分相结合的框架。 DA-WAM 通过在线编码器和稳定的动量目标在整个规划器优化过程中保持预测监督，从而允许未来的表示与驾驶任务共同进化。动作条件预测器为每个候选轨迹生成一个不同的未来潜在状态，然后由未来潜在条件分解评分器对其进行评估。对于专家匹配的轨迹，预测的未来潜伏由观察到的未来表示来监督，而安全关键的硬否定在规划边界附近提供额外的监督。 NAVSIM-v1 和 NAVSIM-v2 上的大量实验证明了最先进的性能，而消融和诊断分析则验证了关键组件。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-21 (7 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-08-21
