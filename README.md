@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-26](papers/2026-08-26.md) - 16 papers
 - [2026-08-22](papers/2026-08-22.md) - 10 papers
 - [2026-08-21](papers/2026-08-21.md) - 8 papers
 - [2026-08-20](papers/2026-08-20.md) - 10 papers
@@ -142,6 +143,276 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-26 (16 papers)</b></summary>
+
+# arXiv Video Papers - 2026-08-26
+
+**Paper Count**: 16
+
+---
+
+## 1. FixAnything: 3D-Consistent Rendering Refinement via Video Generative Priors / FixAnything ：通过视频生成Preors进行3D一致性渲染细化
+
+**Date**: 2026-08-24 | **arXiv**: [2608.23549v1](http://arxiv.org/abs/2608.23549v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.23549v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Rendering views using 3D scene representations such as Gaussian Splatting (3DGS), Neural Radiance Fields (NeRF), meshes, or even point clouds produces artifacts when input views are sparse or target views lie far from the input. Recent work mitigates these artifacts using diffusion-based generative priors, but is specialized to individual representations and require custom architectures or extensive retraining. We present FixAnything, a single model for fixing a wide range of rendering artifacts. It does so by repurposing a pretrained video generative model, leveraging its implicit multi-view priors with only minimal modification and lightweight finetuning. Our key insight is that even noisily-rendered sequences preserve camera motion and coarse scene structure, allowing cleanup to be formulated as video-to-video translation. To control what scene structure should be preserved, we introduce a binary mask denoting the clean pixels, enabling the model to anchor its output to high-quality inputs (e.g. training views) while refining the rest. To encourage FixAnything to produce 3D-consistent renderings that support downstream reconstruction, we use camera pose accuracy (recovered via structure-from-motion) as a reward signal for direct preference optimization (DPO). Across four distinct 3D representations, FixAnything consistently improves rendering quality with lightweight finetuning, demonstrating that a single generalist video prior can replace multiple specialist refinement pipelines. The simplicity of the framework enables immediate adoption of stronger future video models without architectural redesign.
+
+当输入视图稀疏或目标视图远离输入时，使用3D场景表示（如高斯光斑（ 3DGS ）、神经辐射场（ NeRF ）、网格甚至点云）渲染视图会产生伪影。 最近的工作使用基于扩散的生成先验来缓解这些伪影，但专门针对个体表示，需要自定义架构或广泛的再培训。 我们展示了FixAnything ，这是一个用于修复各种渲染伪影的单一模型。 它通过重新利用预训练的视频生成模型，利用其隐含的多视图先验，仅进行最小的修改和轻量级微调来实现这一目标。 我们的关键见解是，即使是噪声渲染的序列也能保留摄像机运动和粗糙的场景结构，从而可以将清理表述为视频到视频的翻译。 为了控制应该保留的场景结构，我们引入了一个表示干净像素的二进制遮罩，使模型能够在优化其余部分的同时将其输出锚定到高质量输入（例如训练视图）。 为了鼓励FixAnything生成支持下游重建的3D一致渲染，我们使用相机姿态精度（通过运动结构恢复）作为直接偏好优化（ DPO ）的奖励信号。 在四个不同的3D表现形式中， FixAnything始终如一地通过轻量级微调提高渲染质量，证明之前的单个通才视频可以取代多个专业细化
+
+</details>
+
+---
+
+## 2. Long-Horizon Audio-Visual Generation for Persistent Stories and Interactive Worlds / 持久故事和互动世界的长视野视听生成
+
+**Date**: 2026-08-24 | **arXiv**: [2608.23383v1](http://arxiv.org/abs/2608.23383v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.23383v1)
+
+**Categories**: cs.CV
+
+**Project**: https://echo-team-joy-future-academy-jd.github.io/Echo-1.5-Page/.  <details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation is progressing beyond isolated clips toward long-form narratives and interactive worlds, requiring models to preserve identities, follow user controls, and remain stable over extended rollouts. We present JoyAI-Echo-1.5, a unified audio-visual generation system with two purpose-built variants. The long-video variant introduces composable cross-shot memory that aggregates visual evidence across multiple prior shots and speaker cues derived from speech-filtered full-shot audio, enabling persistent character appearance and voice identity across flexible combinations of text, image, and memory conditioning. The world-model variant converts heterogeneous navigation inputs into calibrated metric 6-DoF camera trajectories and injects them through a geometry-aware conditioning pathway, enabling controller-agnostic interaction across flexible viewpoints. To support efficient long-horizon generation, we transform a bidirectional audio-visual backbone into a causal few-step generator using progressive teacher forcing and short- and long-horizon Self-Gradient Forcing on self-generated rollouts. Experiments demonstrate strong performance in both settings. JoyAI-Echo-1.5 achieves improvements over existing long-video baselines in cross-shot consistency, visual quality, text alignment, and speech fidelity. Its world-model variant ranks first on WBench, with an average score of 81.7, and achieves leading visual quality and long-horizon persistence on SANA-WM-Bench. Together, these results indicate that memory, geometric control, and rollout-aware training provide a practical foundation for generating coherent stories and continuously evolving interactive worlds. Project page: https://echo-team-joy-future-academy-jd.github.io/Echo-1.5-Page/.
+
+视频生成正在超越孤立的剪辑，向长篇叙事和互动世界发展，要求模型保留身份，遵循用户控制，并在扩展推出时保持稳定。 我们推出了JoyAI-Echo-1.5 ，这是一个统一的视听生成系统，有两个专门构建的变体。 长视频变体引入了可组合的交叉镜头内存，该内存将来自语音过滤全镜头音频的多个先前镜头和扬声器线索的视觉证据聚合在一起，从而在文本、图像和记忆调节的灵活组合中实现持久的角色外观和语音身份。 世界模型变体将异构导航输入转换为校准的度量6自由度相机轨迹，并通过几何感知调节路径注入它们，从而实现跨灵活视点的控制器无关交互。 为了支持高效的长视野生成，我们使用渐进式教师强制和短视野自我梯度强制将双向视听主干转换为因果少步生成器。 实验表明，在这两种环境下都有很强的性能。 JoyAI-Echo-1.5在交叉镜头一致性、视觉质量、文本对齐和语音保真度方面优于现有的长视频基线。 其世界型号变体在WBench上排名第一，平均得分为81.7 ，并在SANA-WM-Bench上实现了领先的视觉质量和长视野持久性。
+
+</details>
+
+---
+
+## 3. IntentQA: Intent Question Answering in Videos by Cognitive Context Reasoning / IntentQA ：通过认知语境推理在视频中回答意图问题
+
+**Date**: 2026-08-24 | **arXiv**: [2608.23330v1](http://arxiv.org/abs/2608.23330v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.23330v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video understanding requires intelligent agents to transcend mere recognition of visual facts and comprehend the underlying intents behind human actions (often termed the "dark matter" of social intelligence). To bridge the gap between visual observation and intent reasoning, we introduce a novel task, IntentQA, and contribute a large-scale VideoQA dataset specifically tailored for this purpose. However, recognizing that standard metrics may overestimate capabilities due to dataset biases, we go beyond simple accuracy to rigorously evaluate model robustness. We augment the benchmark by generating five distinct contrast sets via Large Language Models (LLMs) and introducing a "Contrast Performance Decline" metric. We propose the X-CaVIR (eXplainable Context-aware Video Intent Reasoning) framework, which leverages three types of "Cognitive Context" to enhance video analysis: i) Situational Context via a cross-modal Video Query Language (VQL) module, ii) Contrastive Context via a Contrastive Learning module, and iii) Commonsense Context via a Commonsense Reasoning module. Crucially, to overcome the opacity of traditional black-box models, we refine the integration of LLMs within X-CaVIR by employing a transparent pipeline that synergizes video captions with VQA model outputs. This approach not only improves performance by effectively utilizing rich commonsense knowledge but also renders the reasoning process explicitly interpretable. Extensive experiments demonstrate the effectiveness of our components, the superiority of X-CaVIR over state-of-the-art baselines, and its stability against perturbations on the contrast sets.
+
+视频理解需要智能代理超越对视觉事实的单纯识别，并理解人类行为背后的潜在意图（通常被称为社会智能的“暗物质” ）。 为了弥合视觉观察和意图推理之间的差距，我们引入了一项新任务IntentQA ，并提供了专门为此目的量身定制的大规模VideoQA数据集。 然而，认识到由于数据集偏差，标准指标可能会高估能力，我们不仅仅是简单的准确性，而是严格评估模型的鲁棒性。 我们通过大型语言模型（ LLM ）生成五个不同的对比度集并引入“对比度性能下降”指标来增强基准。 我们提出了X-CaVIR （可解释上下文感知视频意图推理）框架，该框架利用三种类型的“认知上下文”来增强视频分析： i ）通过跨模态视频查询语言（ VQL ）模块的情境上下文， ii ）通过对比学习模块的对比上下文，以及iii ）通过常识推理模块的常识上下文。 至关重要的是，为了克服传统黑盒模型的不透明性，我们通过采用将视频字幕与VQA模型输出协同作用的透明管道来改进LLM在X-CaVIR中的集成。 这种方法不仅通过有效利用丰富的常识知识来提高绩效，而且还使推理过程显式可解释。 大量的实验表明，
+
+</details>
+
+---
+
+## 4. Thinking Beyond Videos: Unifying Video Reasoning and Deep Research for Open-World Video Agents / 超越视频思维：统一视频推理和开放世界视频代理的深入研究
+
+**Date**: 2026-08-24 | **arXiv**: [2608.23329v1](http://arxiv.org/abs/2608.23329v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.23329v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Open-world video understanding often requires a model to locate sparse visual evidence and acquire external knowledge that is absent from the video and its parametric memory. While Thinking-with-Videos enables active temporal perception and Deep Research supports multi-step information seeking, the two capabilities are typically developed in isolation. We introduce VideoRover, a unified Video Deep Research framework that iteratively coordinates video cropping, multimodal search, and webpage browsing. Given a video-question pair, VideoRover uses each tool result to select the next action, so localized video clips guide external retrieval and retrieved evidence triggers further video inspection and verification. To develop this capability, we construct an automated data curation pipeline, producing 26K verified SFT trajectories and 3K challenging RL instances. We also introduce VideoRover-Bench, a benchmark stratified by video duration and research difficulty. Experiments on VideoDR and VideoRover-Bench show that our VideoRover-8B-RL achieves performance comparable to proprietary models in the direct-answer setting without tool use while outperforming larger open-source models equipped with the same tool suite. Ablation studies and training dynamics further validate the complementary roles of active video grounding, external retrieval, and long-horizon reinforcement learning.
+
+开放世界视频理解通常需要一个模型来定位稀疏的视觉证据，并获取视频及其参数记忆中缺少的外部知识。 虽然Thinking-with-Videos能够实现主动的时间感知， Deep Research支持多步骤信息搜索，但这两种功能通常是孤立开发的。 我们介绍了VideoRover ，这是一个统一的视频深度研究框架，可迭代协调视频裁剪、多模式搜索和网页浏览。 给定视频问题对， VideoRover使用每个工具结果来选择下一个操作，因此本地化的视频剪辑指导外部检索，检索的证据会触发进一步的视频检查和验证。 为了开发这种能力，我们构建了一个自动化的数据管理管道，生成了26K个经过验证的SFT轨迹和3K个具有挑战性的RL实例。 我们还介绍了VideoRover-Bench ，这是一个按视频持续时间和研究难度分层的基准。 在VideoDR和VideoRover-Bench上的实验表明，我们的VideoRover-8B-RL在不使用工具的情况下，在直接应答设置中实现了与专有模型相媲美的性能，同时优于配备相同工具套件的较大型开源模型。 消融研究和训练动力学进一步验证了主动视频接地、外部检索和长视野强化学习的互补作用。
+
+</details>
+
+---
+
+## 5. MLLM-Assisted Audio VOS: A 3rd Place Report for the MeViS-Audio Track, 8th LSVOS Challenge / MLLM辅助音频VOS ：第八届LSVOS挑战赛MeViS音频轨道第三名报告
+
+**Date**: 2026-08-24 | **arXiv**: [2608.23234v1](http://arxiv.org/abs/2608.23234v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.23234v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In this technical report, we present a training-free framework for audio-guided video object segmentation, which integrates Multimodal Large Language Models (MLLMs) with SAM-based segmentation models. We decompose the task into several stages and identify suitable foundation models for each stage. Without introducing additional model training or task-specific fine-tuning, our approach leverages the strong multimodal reasoning capabilities of MLLMs to model text-visual correspondence and employs SAM-based models for accurate object mask generation. The proposed framework demonstrates the effectiveness of leveraging foundation models for audio-guided video segmentation and achieves competitive performance in the MeViS-Audio Track of the 8th LSVOS Challenge.
+
+在本技术报告中，我们提出了一个音频引导视频对象分割的无训练框架，该框架将多模态大型语言模型（ MLLM ）与基于SAM的分割模型集成在一起。我们将任务分解为几个阶段，并为每个阶段确定合适的基础模型。在不引入额外的模型训练或任务特定微调的情况下，我们的方法利用MLLM强大的多模态推理能力来建模文本-视觉对应关系，并采用基于SAM的模型来生成准确的对象掩码。所提出的框架展示了利用基础模型进行音频引导视频分割的有效性，并在第8届LSVOS挑战赛的MeViS-Audio Track中实现了有竞争力的性能。
+
+</details>
+
+---
+
+## 6. Loopy: Seamless Video Loop Generation via Anchored Looping Shift of Positional Embedding / LOOPY ：通过位置嵌入的锚定循环移位进行无缝视频循环生成
+
+**Date**: 2026-08-24 | **arXiv**: [2608.23090v1](http://arxiv.org/abs/2608.23090v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.23090v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Looping videos are essential for practical applications such as web graphics, game development, and social media. However, existing approaches typically fail to generate high-quality looping videos due to the neglect of how video generation models perceive temporal order and how this relates to the looping behavior. In this work, we are the first to reveal that position embedding at different attention layers within DiT exhibits varying levels of positional control, with the most pronounced layer acting as an anchor. We formulate this anchored layer as the reference point of the looping video, offering strong contextual priors for the remaining layers to facilitate the generation of seamless and coherent video content. Based on this insight, we propose an anchored position embedding shifting strategy that applies layer-specific shift lengths according to each layer's temporal control effect, effectively transforming DiT's temporal perception from a straight line to a circle. Leveraging this strategy, we develop a general framework, Loopy, for high-quality looping video generation, supporting both RGB and RGBA videos, while also enabling advanced AIGC features such as identity control and style transfer. Experiments demonstrate that our approach significantly improves temporal consistency and visual fidelity in generated looping videos. The released model is available on our website: https://donghaotian123.github.io/Loopy.
+
+循环视频对于网络图形、游戏开发和社交媒体等实际应用至关重要。 然而，由于忽略了视频生成模型如何感知时间顺序以及这与循环行为的关系，现有方法通常无法生成高质量的循环视频。 在这项工作中，我们首次揭示了DiT中不同注意力层的位置嵌入表现出不同程度的位置控制，其中最明显的层充当锚点。 我们将此锚定层制定为循环视频的参考点，为剩余层提供强大的上下文先验，以促进生成无缝和连贯的视频内容。 基于这一见解，我们提出了一种锚定位置嵌入移位策略，根据每层的时间控制效果应用层特定的移位长度，有效地将DiT的时间感知从直线转换为圆形。 利用这一策略，我们开发了一个通用框架Loopy ，用于高质量的循环视频生成，支持RGB和RGBA视频，同时还支持身份控制和样式转换等高级AIGC功能。 实验表明，我们的方法显著提高了生成的循环视频的时间一致性和视觉保真度。 发布的型号可在我们的网站上获得： https://donghaotian123.github.io/Loopy。
+
+</details>
+
+---
+
+## 7. From Generation to Simulation: How Far Are World Models from Being True Simulators? / 从生成到模拟：世界模型距离成为真正的模拟器还有多远？
+
+**Date**: 2026-08-24 | **arXiv**: [2608.23070v1](http://arxiv.org/abs/2608.23070v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.23070v1)
+
+**Categories**: cs.AI, cs.CV
+
+**Code**: https://github.com/AtongWang/world-model-simulators
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+With the rapid progress of diffusion models and large-scale video generation, generative world models are increasingly expected to replace traditional simulators, including physics engines, game engines, and reinforcement-learning environments. Yet the remaining distance from generation to simulation lacks a systematic assessment. We present a capability-based study using an external yardstick: eight capabilities of a traditional simulator, namely asset construction, physics engine, interaction, controllability, stability, state feedback, diversity, and evaluation metrics. We trace three main technical routes--latent dynamics, video generation, and joint-embedding prediction--and map exactly 200 representative works published from 2018 to June 2026 onto these capabilities. Our analysis shows that world models have achieved functional substitution in interaction and controllability for specific scenarios, but remain short of traditional simulators in formal guarantees of physical laws, structured state feedback, and reproducible long-horizon evolution. State feedback is the most neglected cross-route shortcoming: only 6 of 163 implementation papers expose a runtime interface for querying entity states or physical parameters. We identify six research directions: formalized physics, a unified action interface, first-class state feedback, long-horizon stability, downstream-utility evaluation, and cross-route hybridization. Project page: https://github.com/AtongWang/world-model-simulators
+
+随着扩散模型和大规模视频生成的快速发展，生成世界模型越来越有望取代传统的模拟器，包括物理引擎、游戏引擎和强化学习环境。 然而，从一代到模拟的剩余距离缺乏系统的评估。 我们使用外部标准进行了基于能力的研究：传统模拟器的八种功能，即资产构建、物理引擎、交互、可控性、稳定性、状态反馈、多样性和评估指标。 我们追溯了三条主要的技术路线--延迟动态、视频生成和联合嵌入预测--并将2018年至2026年6月发表的200篇代表性作品映射到这些功能上。 我们的分析表明，世界模型在特定场景的交互和可控性方面实现了功能替代，但在物理定律、结构化状态反馈和可重复长视野进化的形式保证方面仍然缺乏传统的模拟器。 状态反馈是最被忽视的跨路由缺点： 163个实现论文中只有6篇公开了用于查询实体状态或物理参数的运行时接口。 我们确定了六个研究方向：形式化物理、统一的动作界面、一流的状态反馈、远视稳定性、下游效用评估和交叉路由杂交。项目页面：
+
+</details>
+
+---
+
+## 8. Coarse Indexing, Fine Evidence: Decoupling Temporal Granularity in Long-Video RAG / 粗索引，精细证据：在长视频抹布中解耦时间粒度
+
+**Date**: 2026-08-24 | **arXiv**: [2608.23011v1](http://arxiv.org/abs/2608.23011v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.23011v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Graph-based retrieval-augmented generation (RAG) provides a scalable paradigm for long-video understanding, but existing systems typically inherit a fixed temporal granularity from video segmentation when constructing their retrieval index. We argue that this design unnecessarily couples indexing granularity with evidence granularity: coarse representations can often suffice for locating relevant temporal regions, while fine-grained evidence remains important for downstream reasoning. We propose \textbf{Density-Aware Graph Construction (DAGC)}, a training-free approach that decouples a query-independent coarse retrieval index from the original fine-grained evidence space. DAGC constructs a compact, density-adaptive graph index by merging visually redundant neighboring chunks, while preserving mappings to the original temporal units. Retrieved coarse regions are subsequently expanded back to the original chunk granularity for fine-grained evidence refinement and answer generation. Experiments on MLVU, VideoMME, and LongVideoBench show that DAGC retains only about 40--50\% of the original graph nodes and achieves $1.3$--$1.7\times$ end-to-end wall-clock acceleration while preserving approximately 99\% of the original QA performance. The gains transfer across different LVLM backbones and video RAG pipelines, suggesting that long-video RAG need not maintain the same temporal granularity for indexing and evidence reasoning.
+
+基于图的检索增强生成（ RAG ）为长视频理解提供了可扩展的范例，但现有系统在构建检索索引时通常会从视频分割中继承固定的时间粒度。 我们认为，这种设计不必要地将索引粒度与证据粒度相结合：粗略表示通常足以定位相关的时间区域，而细粒度的证据对于下游推理仍然很重要。 我们提出了\ textbf {Density-Aware Graph Construction (DAGC)} ，这是一种无训练方法，将查询无关的粗略检索索引与原始细粒度证据空间分离。 DAGC通过合并视觉上冗余的邻近块来构建一个紧凑的、密度自适应的图索引，同时保留到原始时间单元的映射。 随后将检索到的粗略区域扩展回原始块粒度，以进行细粒度的证据细化和答案生成。 在MLVU、VideoMME和LongVideoBench上的实验表明， DAGC仅保留了原始图形节点的约40-50\ % ，实现了$ 1.3 $ -- $ 1.7\倍$的端到端时钟加速，同时保留了约99\ %的原始QA性能。 GAIN在不同的LVLM骨干和视频RAG管道之间传输，这表明长视频RAG不需要在索引和证据推理中保持相同的时间粒度。
+
+</details>
+
+---
+
+## 9. Following Motion for Sequential Modeling in Video Frame Interpolation / 视频帧插值中顺序建模的跟随运动
+
+**Date**: 2026-08-24 | **arXiv**: [2608.22861v1](http://arxiv.org/abs/2608.22861v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.22861v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+State Space Models (SSMs) have surfaced as a promising architecture in Video Frame Interpolation (VFI), as they can capture long-range dependencies with linear computational complexity. However, their predefined scanning order limits their effectiveness in modeling the dynamic motion trajectories inherent in VFI problems. To tackle this challenge, we propose Motion-Guided Mamba for Video Frame Interpolation (MGMVFI), an adaptation of the selective state space model tailored explicitly for VFI. MGMVFI introduces Motion-Guided Serialization (MGS), which leverages optical flow to define a motion-adaptive 1D input order for the SSM. This aligns the causal state updates with semantically related tokens, enabling motion-consistent feature propagation, particularly for large and dynamic motions. Additionally, to mitigate the unreliable feature representations caused by inaccurate optical flow estimates, we introduce contextual synthesis that utilizes the surrounding spatial context for robust inter-frame feature synthesis. These components are seamlessly integrated within our tailored Mamba architecture, which also employs a lightweight refinement block to enhance local detail reconstruction at a reduced computational cost. Extensive experiments on standard VFI benchmarks demonstrate that MGMVFI achievesstate-of-the-artperformance,particularly on complex and dynamic motions, thereby establishing a new direction for sequence modeling in video interpolation.
+
+状态空间模型（ SSM ）已经成为视频帧插值（ VFI ）中一个有前途的架构，因为它们可以捕获具有线性计算复杂度的远程依赖关系。 然而，它们预定义的扫描顺序限制了它们对VFI问题固有的动态运动轨迹建模的有效性。 为了应对这一挑战，我们提出了用于视频帧插值的运动引导曼巴（ MGMVFI ） ，这是对专门为VFI量身定制的选择性状态空间模型的适应。 MGMVFI引入了运动引导序列化（ MGS ） ，它利用光流为SSM定义运动自适应一维输入顺序。 这使因果状态更新与语义相关的令牌保持一致，从而实现运动一致的特征传播，特别是对于大型和动态运动。 此外，为了减轻由不准确的光流估计引起的不可靠的特征表示，我们引入了利用周围空间上下文进行鲁棒帧间特征合成的上下文合成。 这些组件无缝集成在我们量身定制的Mamba架构中，该架构还采用轻量级细化模块，以更低的计算成本增强局部细节重建。 在标准VFI基准上的大量实验表明， MGMVFI实现了最佳性能状态，特别是在复杂和动态运动上，从而为视频插值中的序列建模建立了新的方向。
+
+</details>
+
+---
+
+## 10. Direct, Parallel, or Sequential? A Comparative Study of Training-Free Multi-Subject Image-to-Video Generation / 直接、并行还是顺序？无训练多学科图像视频生成对比研究
+
+**Date**: 2026-08-24 | **arXiv**: [2608.22819v1](http://arxiv.org/abs/2608.22819v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.22819v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-conditioned image-to-video (I2V) generation has advanced rapidly, yet generating videos with multiple subjects remains challenging. A model must simultaneously preserve the appearance of each subject, assign distinct motions, and maintain coherent spatial and temporal interactions. This paper presents a systematic study of three representative paradigms for training-free multi-subject I2V generation: direct, parallel, and sequential generation. Direct generation applies a pretrained I2V model to the complete reference image and prompt, requiring all subjects and motions to be synthesized jointly. Parallel and sequential generation instead decompose the reference image and prompt into subject-specific visual and textual conditions. Parallel generation synthesizes each subject independently and subsequently composes the resulting videos, reducing the complexity of each generation step at the cost of weaker inter-subject context. Sequential generation first synthesizes a background video and then progressively introduces individual subjects. This preserves accumulated scene context but introduces sensitivity to subject ordering and error propagation. We empirically evaluate the three paradigms across diverse multi-subject scenes, comparing appearance preservation, motion fidelity, temporal consistency, and inter-subject coherence, while also characterizing their distinct failure modes. Our findings reveal the strengths and limitations of each paradigm and offer practical insights for designing controllable multi-subject video generation systems.
+
+文本条件图像到视频（ I2V ）的生成进展迅速，但生成具有多个主题的视频仍然具有挑战性。 模型必须同时保留每个受试者的外观，分配不同的运动，并保持连贯的空间和时间相互作用。 本文对无训练多学科I2V生成的三种代表性范式进行了系统研究：直接生成、并行生成和顺序生成。 直接生成将预训练的I2V模型应用于完整的参考图像和提示，要求所有主体和运动共同合成。 相反，并行和顺序生成会将参考图像分解并提示为特定主题的视觉和文本条件。 并行生成独立合成每个受试者，然后合成生成的视频，以较弱的受试者间上下文为代价降低每个生成步骤的复杂性。 顺序生成首先合成背景视频，然后逐渐引入单个受试者。 这保留了累积的场景上下文，但引入了对受试者排序和错误传播的敏感性。 我们在不同的多学科场景中对三种范式进行了实证评估，比较了外观保持、运动保真度、时间一致性和学科间一致性，同时也表征了它们不同的失败模式。 我们的研究结果揭示了每种范式的优势和局限性，并提供了实用的
+
+</details>
+
+---
+
+## 11. AI-based worker guidance in assembly and disassembly operations using multimodal ego/exo-centric data capture and structured task knowledge / 使用多模式自我/外向型数据捕获和结构化任务知识，在装配和拆卸操作中进行基于人工智能的工人指导
+
+**Date**: 2026-08-23 | **arXiv**: [2608.22617v1](http://arxiv.org/abs/2608.22617v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.22617v1)
+
+**Categories**: cs.CV, cs.AI, cs.HC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Assembly and disassembly processes rely on expert knowledge that is difficult to document, reuse, and transfer. This paper presents a data-centric approach for extracting structured task knowledge from expert demonstrations using egocentric and exocentric recordings. Temporal and multimodal information from video and narration is jointly encoded to derive structured task representations that enable procedural documentation and context-aware worker guidance. The approach is evaluated on a real-world disassembly case study, demonstrating that video-based representations capture procedural structure and execution context beyond static image-based methods. The results highlight the potential of egocentric video understanding for repair, training, and circular manufacturing applications. Project website: https://indego-assistant.github.io/
+
+组装和拆卸过程依赖于难以记录、重复使用和转移的专业知识。本文提出了一种以数据为中心的方法，用于使用自我中心和外部中心记录从专家演示中提取结构化任务知识。来自视频和旁白的时间和多模式信息被联合编码，以获得结构化的任务表示，从而实现程序文档和上下文感知工作者指导。该方法在真实世界的反汇编案例研究中进行了评估，表明基于视频的表示捕获了基于静态图像的方法之外的程序结构和执行上下文。结果凸显了以自我为中心的视频理解在维修、培训和循环制造应用中的潜力。项目网站： https://indego-assistant.github.io/
+
+</details>
+
+---
+
+## 12. RS$^3$-Prune: Read-Sparse, Store-Sparse Token Pruning for Video Object Segmentation / RS $ ^ 3 $ -Prune ：视频对象分割的读稀疏、存储稀疏令牌修剪
+
+**Date**: 2026-08-23 | **arXiv**: [2608.22526v1](http://arxiv.org/abs/2608.22526v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.22526v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce RS$^3$-Prune, a training-free token-pruning recipe that instantiates as a small set of inference time hooks atop existing video object segmentation (VOS) networks. Modern VOS models have converged on a common, expensive design: an image encoder produces a dense token grid for every frame, and a memory bank accumulates these tokens across all previously processed frames to condition future predictions. As a video grows longer, the resulting token budget governs both per-frame latency and peak GPU memory. Hence these models break on use cases such as --- long-form video or real-time deployment on memory-bounded accelerators. In this work we argue that the right axis along which to compress memory-bank VOS is the token budget itself. RS$^3$-Prune operates in two precise locations within an arbitrary memory-bank VOS pipeline: at the boundary between the image encoder and the memory-attention readout, where we restrict the queries that participate in the cross-frame attention to only a small, geometrically informed subset; and at the boundary between the memory encoder and the memory bank, where we restrict which tokens are ever permitted to enter the bank to those that lie within the object's spatial extent. Over various established benchmarks, RS$^3$-Prune delivers up to $38.8\%$ FPS speedup and reduces $13.1\%$ peak memory usage, while preserving a competitive $\mathcal{J}$&$\mathcal{F}$ compared to the unmodified VOS networks.
+
+我们引入了RS $ ^ 3 $ -Prune ，这是一种无需训练的令牌修剪配方，可实例化为现有视频对象分割(VOS)网络上的一小组推理时间挂钩。 现代VOS模型已经收敛到一个常见且昂贵的设计：图像编码器为每个帧生成一个密集的令牌网格，而存储库则在之前处理的所有帧中积累这些令牌，以调节未来的预测。 随着视频的增长，由此产生的令牌预算决定了每帧延迟和峰值GPU内存。 因此，这些模型打破了用例，例如---长视频或在内存受限的加速器上的实时部署。 在这项工作中，我们认为压缩记忆库VOS的右轴是令牌预算本身。 RS $ ^ 3 $ -Prune在任意内存库VOS管道内的两个精确位置操作：在图像编码器和内存注意读出之间的边界处，我们将参与交叉帧注意的查询仅限于一个小的、几何知情的子集；在内存编码器和内存库之间的边界处，我们将哪些代币被允许进入库限制在对象的空间范围内。 与各种既定基准相比， RS $ ^ 3 $ -Prune可提供高达$ 38.8\ % $ FPS的加速，并降低$ 13.1\ % $峰值内存使用率，同时与未修改的VOS网络相比，保留了具有竞争力的$\ mathcal {J} $和$\ mathcal {F} $。
+
+</details>
+
+---
+
+## 13. TRACE: Temporal Retrieval with Anchored and Convergent Evidence for Long-Horizon Video Understanding / TRACE ：使用锚定和收敛证据进行时间检索，以实现长视野视频理解
+
+**Date**: 2026-08-23 | **arXiv**: [2608.22516v1](http://arxiv.org/abs/2608.22516v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.22516v1)
+
+**Categories**: cs.CV, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A long-video answer is evidence-supported only when the frames decoded from the video cover every event the answer depends on. Existing evaluations score final-answer correctness or predicted evidence intervals, but the frames a method decodes before answering are rarely audited, so correct answers can still rest on incomplete observation. We introduce VES-Bench, a 600-question benchmark of Temporal Ordering and Event Counting items over 348 public long videos. Each item carries a jointly necessary set of evidence intervals, letting us audit at three strictness levels whether a method's decoded frames cover every one of them. We also propose TRACE, a training-free agent that grounds answers in raw visual clips, builds an evidence bundle round by round, and stops only when the answer stabilises as the bundle grows and a final pass over the same clips returns the same answer. Under a same-backbone audit, TRACE answers 50.7% of questions correctly with at least two decoded frames inside every evidence interval, at 98.7 frames per question: over 10 points above uniform decoding at 128 frames (40.2%), and within 2.6 points of uniform decoding at 256 frames at 0.39x its frame cost, while reaching the highest answer accuracy in the audit (63.5%). TRACE also stays competitive on Video-MME (86.1), LVBench (75.6), and LongVideoBench (75.1).
+
+只有当从视频中解码的帧覆盖了答案所依赖的每个事件时，长视频答案才有证据支持。 现有评估对最终答案的正确性或预测的证据间隔进行评分，但方法在回答之前解码的帧很少经过审计，因此正确答案仍然取决于不完整的观察。 我们推出了VES-Bench ，这是一个包含600个问题的临时排序和事件计数项目基准，超过348个公开长视频。 每个项目携带一组共同必要的证据间隔，让我们在三个严格级别上审核方法的解码帧是否覆盖了它们中的每一个。 我们还提出了TRACE ，这是一种无需训练的代理，可以在原始视觉剪辑中为答案奠定基础，逐轮构建证据捆绑包，只有当答案随着捆绑包的增长而稳定，并且最终通过相同的剪辑返回相同的答案时才会停止。 在同一骨干审计中， TRACE在每个证据间隔内使用至少两个解码帧正确回答50.7%的问题，每个问题98.7帧：在128帧（ 40.2% ）时高于统一解码10分，在256帧（ 0.39倍帧成本）时高于统一解码2.6分，同时在审计中达到最高答案准确率（ 63.5% ）。 TRACE还在Video-MME （ 86.1 ）、LVBench （ 75.6 ）和LongVideoBench （ 75.1 ）上保持竞争力。
+
+</details>
+
+---
+
+## 14. Learning Sample-wise Rank-aware Interpolation Weights for Composed Visual Data Retrieval / 用于组合视觉数据检索的学习样本排名感知插值权重
+
+**Date**: 2026-08-23 | **arXiv**: [2608.22500v1](http://arxiv.org/abs/2608.22500v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.22500v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+At the heart of composed visual data retrieval is the fusion of a reference visual input and a textual modification into a single query. While current state-of-the-art methods utilize multimodal large language models for this fusion, their complexity introduces prohibitive querytime latency, limiting their scalability. We instead revisit the efficacy of simple linear interpolation within an embedding space, and introduce SRAIN, the first framework that dynamically predicts query-specific interpolation weights. The key challenge lies in the fact that the quality of an interpolation weight should be measured by the interpolated embedding's discriminability from negatives as well as its proximity to true targets; this makes collecting and predicting optimal weights intractable. We overcome this bottleneck through two key innovations: batch-wise rank-aware weight estimation during training, and a compact memory bank that synthesizes hard negatives during inference. SRAIN achieves the best in composed video retrieval and matches the current state of the art in composed image retrieval, all while substantially reducing querytime latency compared to MLLM-based alternatives.
+
+组合视觉数据检索的核心是将参考视觉输入和文本修改融合为单个查询。 虽然目前最先进的方法利用多模态大型语言模型进行这种融合，但它们的复杂性引入了令人望而却步的查询时间延迟，限制了它们的可扩展性。 相反，我们重新审视了嵌入空间中简单线性插值的有效性，并引入了SRAIN ，这是第一个动态预测查询特定插值权重的框架。 关键的挑战在于，插值权重的质量应该通过插值嵌入与负值的区分性以及它与真实目标的接近度来衡量；这使得收集和预测最佳权重变得棘手。 我们通过两项关键创新克服了这一瓶颈：训练期间的批量排名感知权重估计，以及在推理期间合成硬负数的紧凑型记忆库。 与基于MLLM的替代方案相比， SRAIN实现了组合视频检索的最佳效果，并与组合图像检索的当前状态相匹配，同时大大降低了查询时间延迟。
+
+</details>
+
+---
+
+## 15. LD4WAM: Learning Latent Dynamics from Human Videos for World Action Models / LD4WAM ：从人类视频中学习世界动作模型的潜在动态
+
+**Date**: 2026-08-23 | **arXiv**: [2608.22403v1](http://arxiv.org/abs/2608.22403v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.22403v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human video is playing an increasingly central role in training World Action Models (WAMs), owing to its diversity and low collection cost relative to teleoperated robot data. However, most WAMs learn from such video only by predicting pixel-level future frames, giving dynamics that are not directly actionable, whereas motion retargeting recovers directly actionable actions but leaves a large visual gap across embodiments. We therefore propose motion-aligned latent dynamics as an embodiment-agnostic representation to bridge video priors and low-level actions. We further present LD4WAM, which pairs a Latent Dynamics Model trained with semantic reconstruction and real motion alignment with a World Dynamics Action Model built as a mixture-of-transformers (MoT), which preserves full future-video generation and uses learnable queries to distill these latent dynamics from generated futures for action conditioning. Pretrained on our curated unified dataset of over 5{,}000 hours of human and robot data, LD4WAM performs strongly in RoboTwin simulation and on real robots equipped with both grippers and dexterous hands, while generalizing well to unseen objects and backgrounds.
+
+由于其相对于远程操作机器人数据的多样性和低收集成本，人类视频在训练世界行动模型（ WAM ）方面发挥着越来越重要的作用。 然而，大多数WAM仅通过预测像素级未来帧来从此类视频中学习，从而提供不直接可操作的动态，而运动重定向可直接恢复可操作的动作，但在各实施例中留下很大的视觉差距。 因此，我们提出了运动对齐的潜在动力学作为一种与实施例无关的表示，以桥接视频先验和低级动作。 我们进一步介绍了LD4WAM ，它将经过语义重构和真实运动对齐训练的潜在动力学模型与作为变换器混合体（ MoT ）构建的世界动力学动作模型配对，该模型保留了完整的未来视频生成，并使用可学习查询从生成的未来中提取这些潜在动力学以进行动作调节。 LD4WAM在我们精心策划的超过5 {,} 000小时的人类和机器人数据的统一数据集上进行了预训练，在RoboTwin模拟和配备抓手和灵巧手的真实机器人上表现出色，同时能够很好地推广到看不见的物体和背景。
+
+</details>
+
+---
+
+## 16. Motion-Aware Reasoning from Speech to Mask Tracks: Runner-up Solution for the MeViS-Audio Track of the 8th LSVOS Challenge 2026 / 从语音到面具音轨的运动感知推理： 2026年第八届LSVOS挑战赛MeViS音频音轨的亚军解决方案
+
+**Date**: 2026-08-23 | **arXiv**: [2608.22337v1](http://arxiv.org/abs/2608.22337v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.22337v1)
+
+**Categories**: cs.MM, cs.CV, cs.SD
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Speech-guided referring video object segmentation aims to recover the mask tracks of objects specified by a spoken motion description. Here, speech carries a linguistic instruction rather than acoustic evidence from a sounding object, so a solution must connect speech recognition, motion-centric temporal grounding, mask tracking, and explicit no-target handling. We introduce Speech2MaskTrack, our approach for the MeViS-Audio track of the 8th LSVOS Challenge. Speech2MaskTrack transcribes the spoken query and compiles it into structured constraints over category, count, direction, interaction role, and temporal phase. SAM3.1 enumerates multiple instance tracks, which TRACE ranks using complete-trajectory motion and relation evidence. A frozen lexical presence gate may suppress the ranked SAM3.1 base prediction. When the gate predicts that a target is present, an available full-expression-conditioned SaSaSa2VA track replaces the SAM3.1 mask. Only outputs that remain empty enter GPT-assisted recovery, which invokes SaSaSa2VA again under query- and mask-level verification. Speech2MaskTrack achieved second place in the official challenge ranking.
+
+语音引导参考视频对象分割旨在恢复语音运动描述指定的对象的遮罩轨迹。 在这里，语音携带的是语言指令，而不是来自发声对象的声学证据，因此解决方案必须将语音识别、以运动为中心的时间接地、掩码跟踪和明确的无目标处理联系起来。 我们介绍了Speech2MaskTrack ，这是我们为第8届LSVOS挑战赛的MeViS-Audio赛道提供的方法。 Speech2MaskTrack转录语音查询，并将其编译为类别、计数、方向、交互角色和时间阶段的结构化约束。 SAM3.1枚举多个实例轨道，这些轨道使用完整轨迹运动和关系证据进行跟踪。 冻结的词汇存在门可以抑制排序的SAM3.1基础预测。 当门预测存在目标时，可用的全表达式条件SaSaSa2VA轨道替换SAM3.1掩码。 仅保留为空的输出进入GPT辅助恢复，该恢复在查询和掩码级别验证下再次调用SaSaSa2VA。 Speech2MaskTrack在官方挑战赛排名中获得第二名。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-22 (10 papers)</b></summary>
 
 # arXiv Video Papers - 2026-08-22
