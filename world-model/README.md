@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-28](papers/2026-08-28.md) - 5 papers
 - [2026-08-27](papers/2026-08-27.md) - 13 papers
 - [2026-08-26](papers/2026-08-26.md) - 13 papers
 - [2026-08-22](papers/2026-08-22.md) - 8 papers
@@ -140,6 +141,98 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-28 (5 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-08-28
+
+**Paper Count**: 5
+
+---
+
+## 1. CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators / CLAP ：交叉体验视频世界模型是零拍摄物理模拟器
+
+**Date**: 2026-08-27 | **arXiv**: [2608.27406v1](http://arxiv.org/abs/2608.27406v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.27406v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+State-of-the-art action-conditioned video models are typically restricted to a single robot embodiment, preventing them from leveraging the vast corpus of heterogeneous video data that contains rich signals for learning generalizable physics. To bridge this gap, we introduce CLAP, a framework for cross-embodiment action-conditioned video generation capable of being trained on diverse, internet-scale videos across human and robotic agents. CLAP is grounded in the insight that universal physical laws govern spatiotemporal dynamics regardless of the actor. However, cross-embodiment learning is non-trivial because action representations vary sharply across robot platforms and are typically absent in human videos. CLAP addresses this fundamental challenge through the following core contributions. First, CLAP reconciles disparate action spaces using end-effector poses, language instructions, and latent actions. Second, to resolve their individual limitations, CLAP introduces a curriculum-based cross-embodiment learning recipe that first learns foundational physical priors across unlabeled video data using latent actions and subsequently grounds them in end-effector action spaces for zero-shot deployment to real-world tasks. Crucially, CLAP approaches or surpasses state-of-the-art single-embodiment video models in challenging environments like DROID. These performance advantages compound via few-shot adaptation to establish a novel paradigm for training single-embodiment video world models. Ultimately, CLAP delivers the most comprehensive suite of action-conditioned video world models to date - spanning diverse action-conditioning spaces (end-effector, language, and latent) and robot morphologies (including cross-embodiment, DROID, Bridge, bimanual YAM robots, and G1 humanoids). We open-source all code and models. Project Website at https://omni-clap.github.io .
+
+最先进的动作条件视频模型通常仅限于单个机器人实施例，防止它们利用包含丰富信号的大量异构视频数据来学习可广义物理。 为了弥合这一差距，我们引入了CLAP ，这是一个跨体验的动作条件视频生成框架，可以在人类和机器人代理的多样化互联网规模视频上进行培训。 CLAP基于这样一种见解，即宇宙物理定律支配着时空动力学，而不管参与者是谁。 然而，交叉实施例学习并非轻而易举，因为动作表示在机器人平台之间差异很大，并且通常在人类视频中不存在。 CLAP通过以下核心贡献来应对这一根本性挑战。 首先， CLAP使用末端执行器姿势、语言指令和潜在动作来协调不同的动作空间。 其次，为了解决他们的个人局限性， CLAP引入了一种基于课程的跨实体学习配方，该配方首先使用潜在动作学习未标记视频数据的基础物理先验，然后将其基于末端执行器动作空间，以便将零镜头部署到现实世界的任务中。 至关重要的是，在机器人等具有挑战性的环境中，拍手接近或超越最先进的单个实施视频模型。 这些性能优势通过少镜头自适应复合，为训练单个实施例视频建立一个新的范例
+
+</details>
+
+---
+
+## 2. Successive Capacity Growth: Task-Complexity-Driven Width and Depth Expansion for Vision Transformer Encoders in JEPA World Models / 连续容量增长： JEPA World模型中视觉变压器编码器的任务复杂性驱动的宽度和深度扩展
+
+**Date**: 2026-08-27 | **arXiv**: [2608.27367v1](http://arxiv.org/abs/2608.27367v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.27367v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint-Embedding Predictive Architectures (JEPAs) for world modeling typically employ fixed-size Vision Transformer encoders that are over-provisioned for simple tasks and under-provisioned for complex ones, with significant redundancy across attention heads. We propose Successive Capacity Growth (SCG), a method that starts from a minimal encoder (1 head, 2 layers, 283K parameters) and grows incrementally in width (adding attention heads for low-level semantic capacity) or depth (adding transformer blocks for higher-order semantic abstraction), driven by a task-agnostic test-and-verify mechanism that exploits function-preserving expansion to safely trial architectural changes and roll back if they do not improve prediction loss. The Sketched Isotropic Gaussian Regularizer (SIGReg) ensures that all learned semantic dimensions remain statistically independent and aligned with the predictive objective, preventing collapse even as the architecture grows. On a 60-dimensional multi-object dynamics task, SCG naturally triggers depth expansion, improving prediction loss by 20.3% over the fixed small baseline with 56 times greater parameter efficiency than scaling to the fixed large model; on a 2D navigation task, a single width expansion yields even an 23% improvement over the fixed large model. Across all three tested environments of increasing complexity, the adaptive encoder matches or exceeds the fixed small baseline, with zero false-positive expansions and bit-exact function preservation (ratio = 1.0, absolute difference = 0.0). The take-away is that JEPA world model encoders need not be pre-allocated at maximum capacity - they can grow successively as the task demands, achieving significant compute and data efficiency while maintaining representation quality.
+
+用于世界建模的联合嵌入式预测架构（ JEPA ）通常采用固定尺寸的视觉变压器编码器，这些编码器为简单任务过度配置，为复杂任务配置不足，注意力头之间存在显著冗余。 我们提出了连续容量增长（ SCG ） ，该方法从最小编码器（ 1头、2层、283K参数）开始，在宽度（为低级语义容量添加注意力头）或深度（为高阶语义抽象添加变压器块）上逐渐增长，由任务无关的测试和验证机制驱动，该机制利用功能保留扩展来安全地尝试架构更改，如果它们不改善预测损失，则回滚。 Sketched Isotropic Gaussian Regularizer （ SIGReg ）确保所有学习的语义维度在统计上保持独立并与预测目标保持一致，即使在架构增长时也能防止崩溃。 在60维多对象动态任务中， SCG自然触发深度扩展，在固定小基线上将预测损失提高20.3% ，参数效率是缩放到固定大模型的56倍；在2D导航任务中，单宽度扩展甚至比固定大模型提高23%。 在所有三个日益复杂的测试环境中，自适应编码器匹配或超过固定的小基线，具有零假阳性扩展和位精确函数
+
+</details>
+
+---
+
+## 3. PAWBench: How Far Are We from Probabilistically Aligned World Modeling? / PAWBench ：我们距离概率一致的世界建模还有多远？
+
+**Date**: 2026-08-27 | **arXiv**: [2608.27345v1](http://arxiv.org/abs/2608.27345v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.27345v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent video generation models are increasingly framed as world models. Many physical processes can unfold in more than one valid way. Therefore, a world model should reproduce not only a plausible trajectory, but also the distribution of possible behaviors under the same initial observation and action. We call this distribution-level requirement probabilistic alignment. However, existing evaluations largely assess individual-video plausibility and do not test whether repeated generations recover the correct distribution. This raises a central question: how far are current video generators from probabilistically aligned world modeling? To answer it, we formalize probabilistic alignment as a distributional criterion for world models and introduce PAWBench, a benchmark for evaluating video generators as stochastic samplers of world dynamics. We further introduce PAWEval, an outcome-level protocol that converts repeated video rollouts into empirical distributions over possible physical behaviors. Across 50 scenarios and eleven current systems, no model consistently matches the reference probabilities while recovering the range of valid behaviors. Having established this gap, we test whether language prompts, initial noise sampling, or model training can reshape the model's predictive distribution. We believe our work can serve as a foundation for future efforts to move towards probabilistically aligned world modeling.
+
+最近的视频生成模型越来越多地被构建为世界模型。 许多物理过程可以以不止一种有效的方式展开。 因此，世界模型不仅应该再现合理的轨迹，还应该再现相同初始观察和行动下可能行为的分布。 我们称之为分布级需求概率对齐。 然而，现有的评估在很大程度上评估了个体-视频的合理性，并没有测试重复世代是否恢复了正确的分布。 这就提出了一个核心问题：当前的视频生成器距离概率一致的世界建模还有多远？ 为了回答这个问题，我们将概率对齐形式化为世界模型的分布标准，并引入PAWBench ，这是评估视频生成器作为世界动态随机采样的基准。 我们进一步介绍了PAWEval ，这是一种结果级协议，可将重复的视频推出转换为可能的物理行为上的经验分布。 在50个场景和11个当前系统中，没有一个模型在恢复有效行为范围的同时始终匹配参考概率。 确定了这一差距后，我们测试语言提示、初始噪声采样或模型训练是否可以重塑模型的预测分布。 我们相信，我们的工作可以作为未来努力实现概率一致的世界建模的基础。
+
+</details>
+
+---
+
+## 4. Decoupling Planning and Control for Instructable Agents / 可指导代理的脱钩计划和控制
+
+**Date**: 2026-08-27 | **arXiv**: [2608.26788v1](http://arxiv.org/abs/2608.26788v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.26788v1)
+
+**Categories**: cs.AI, cs.CL, cs.MA, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent work shows that pre-trained, instruction-tuned vision-language models (VLMs) perform well at mapping from instructions and observations to high-level plans, but struggle to realize such plans as reliable low-latency action sequences in unfamiliar environments. At the same time, world-model controllers excel at fast observation-to-action control, but lack open-ended task guidance. In this work, we combine these strengths into a single system, Instruct-to-Act, where we train a world-model controller to act autonomously at high frequency when conditioned on sparse, higher-latency, and high-level text instructions generated by a VLM planner. To train controllers to be language-instructable, we relabel segments of controller policy rollouts with synthetic instructions and jointly optimize a behavior-cloning objective along with existing reward-maximizing and world-modeling objectives. We evaluate our proposed approach across seven embodied environments, including three multi-agent environments where VLM planners coordinate through language while trained controllers serve as their actuators. Under matched observation and action spaces, our decoupled approach consistently outperforms controller-only and direct VLM action-generation variants, preserves fast control, and lets us swap in different pretrained VLM planners without fine-tuning, while remaining competitive with strong vision-language-action and multi-agent RL baselines on six of seven tasks.
+
+最近的研究表明，预训练、指令调整的视觉语言模型（ VLM ）在从指令和观察到高级计划的映射方面表现良好，但在陌生环境中很难实现可靠的低延迟动作序列等计划。 同时，世界模型控制器擅长快速观察到行动控制，但缺乏开放式任务指导。 在这项工作中，我们将这些优势结合到一个单一的系统Instruct-to-Act中，在这个系统中，我们训练一个世界模型控制器，在VLM规划器生成的稀疏、高延迟和高级文本指令的条件下，以高频率自主行动。 为了训练控制器的语言可指导性，我们使用合成指令重新标记控制器策略推出的部分，并联合优化行为克隆目标以及现有的奖励最大化和世界建模目标。 我们在七个具体的环境中评估我们提出的方法，包括三个多代理环境，其中VLM规划人员通过语言进行协调，而训练有素的控制器充当他们的执行器。 在匹配的观察和行动空间下，我们的解耦方法始终优于仅控制器和直接VLM动作生成变体，保持快速控制，并允许我们在不进行微调的情况下交换不同的预先训练的VLM规划器，同时在七个任务中的六个任务上通过强大的视觉-语言-行动和多代理RL基线保持竞争力。
+
+</details>
+
+---
+
+## 5. Approved Too Late: Verdict Staleness in LLM-Guarded Self-Adaptive Systems / 批准为时已晚： LLM自适应系统中的判决失效
+
+**Date**: 2026-08-26 | **arXiv**: [2608.26306v1](http://arxiv.org/abs/2608.26306v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.26306v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A large language model (LLM) guardrail for a self-adaptive system (SAS) may issue an approval that is correct at check time but stale by actuation. This creates an Execute-stage time-of-check to time-of-use (TOCTOU) hazard. We study verdict freshness: whether a guardrail verdict remains valid when used. We distinguish three quantities that answer different questions: all-candidate verdict change under fixed-action replay, oracle-labeled approval expiry on recorded closed-loop trajectories, and judge-conditioned use-time invalidity. Across five reproducible SAS environments, all-candidate verdict-change rates span 5.3-48.4% at a common replay shift of eight simulator steps. We introduce the Freshness-Bounded Shield (FBS), which estimates each approval's validity horizon from its safe-side margin and recent feature volatility, without an explicit plant-dynamics model. Using fixed settings documented in the artifact, FBS reduces oracle-labeled approval-expiry rates from 3.4-24.7% to 0-1.8% at the same shift. A separate audit of four LLM judges finds nonzero judge-conditioned use-time invalidity in every approval stream. We formulate a freshness contract: every approval must be correct at check time and remain valid at use time.
+
+自适应系统（ SAS ）的大型语言模型（ LLM ）护栏可能会在检查时发出正确但因致动而过时的批准。 这会产生执行阶段的检查时间到使用时间(TOCTOU)危险。 我们研究判决的新鲜度：护栏判决在使用时是否仍然有效。 我们区分了回答不同问题的三个数量：固定动作重播下的所有候选人判决变更，记录的闭环轨迹上的预言机标签批准到期，以及判断条件使用时间无效。 在五个可重现的SAS环境中，在八个模拟器步骤的常见重播偏移下，所有候选人的判决更改率跨越5.3-48.4%。 我们引入了Freshness-Bounded Shield （ FBS ） ，它在没有明确的植物动力学模型的情况下，从其安全边际和最近的特征波动性来估计每个审批的有效期。 使用制品中记录的固定设置， FBS在同一班次将预言机标记的批准过期率从3.4-24.7%降低到0-1.8%。 对四名法学硕士法官的独立审计发现，每个审批流中的法官条件使用时间无效为非零。 我们制定一份新鲜度合同：每次审批都必须在检查时正确无误，并在使用时保持有效。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-27 (13 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-08-27
