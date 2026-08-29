@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-29](papers/2026-08-29.md) - 8 papers
 - [2026-08-28](papers/2026-08-28.md) - 30 papers
 - [2026-08-27](papers/2026-08-27.md) - 43 papers
 - [2026-08-26](papers/2026-08-26.md) - 37 papers
@@ -150,6 +151,150 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-29 (8 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-08-29
+
+**Paper Count**: 8
+
+---
+
+## 1. INTENT-AS-A-TOOL Makes it Easy to Track Agentic Misalignment / 意图作为工具可以轻松跟踪代理错位
+
+**Date**: 2026-08-27 | **arXiv**: [2608.27348v1](http://arxiv.org/abs/2608.27348v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.27348v1)
+
+**Categories**: cs.CL
+
+**Code**: https://github.com/RebeccaZhang22/intent-as-a-tool.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As large language models (LLMs) are deployed as autonomous agents, safety failures increasingly involve consequential actions. We study agentic misalignment, where agents take harmful actions under goal conflicts and pressures. Using chain-of-thought (CoT) monitoring, we find that harmful execution is often preceded by intent signals in reasoning. However, post-hoc CoT labels are too coarse to show how intent changes during generation. We introduce INTENT-AS-A-TOOL, an approach that adds intent-targeted tools to give the model a dedicated channel for expressing commitment to a target behavior. The probability of calling an intent tool provides a judge-free, fine-grained signal of the model's tendency to pursue that behavior. Our results show that INTENT-AS-A-TOOL complements CoT monitoring, expands post-hoc CoT labels into dense trajectories, and identifies critical steps for online intervention. These findings suggest that action preferences are useful for tracking agentic misalignment during reasoning. Our code and data are accessible: https://github.com/RebeccaZhang22/intent-as-a-tool.
+
+随着大型语言模型 (LLM) 被部署为自主代理，安全故障越来越多地涉及后续行动。我们研究主体失调，即主体在目标冲突和压力下采取有害行动。使用思想链（CoT）监控，我们发现有害执行通常先于推理中的意图信号。然而，事后 CoT 标签太粗糙，无法显示生成过程中意图的变化。我们引入了 INTENT-AS-A-TOOL，这种方法添加了针对意图的工具，为模型提供了表达对目标行为的承诺的专用渠道。调用意图工具的概率提供了一个无需判断的、细粒度的信号，表明模型追求该行为的倾向。我们的结果表明，INTENT-AS-A-TOOL 补充了 CoT 监控，将事后 CoT 标签扩展到密集轨迹，并确定在线干预的关键步骤。这些发现表明，行动偏好对于跟踪推理过程中的主体失调很有用。我们的代码和数据可访问：https://github.com/RebeccaZhang22/intent-as-a-tool。
+
+</details>
+
+---
+
+## 2. BALMS: Benchmarking Agentic LLMs for Longitudinal Mental Health Sensing / BALMS：纵向心理健康感知的代理法学硕士基准测试
+
+**Date**: 2026-08-27 | **arXiv**: [2608.27219v1](http://arxiv.org/abs/2608.27219v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.27219v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Mental health assessment relies on episodic self-report scales, which convert subjective states such as stress into numerical scores but provide only sparse snapshots of wellbeing. Wearable devices offer longitudinal behavioral and physiological signals for continuous, low-burden monitoring. Recent LLM-driven personal-health agents enable natural language queries over wearable signals, but mainly handle short-term, retrieval-based lookups (e.g., highest step count over a week). They do not evaluate whether agents can reason over long-term signals to predict wellbeing scores paired with evidence-grounded rationales. To address this gap, we introduce BALMS, the first systematic benchmark of LLM-based agentic systems for longitudinal mental health sensing. BALMS spans 3 real-world longitudinal datasets, 2 task families (closed-form wellbeing-score prediction and rationale generation auto-graded by an LLM-as-Judge), 3 agentic paradigms evaluated across 5 open- and closed-source LLM backbones. We find that zero-shot agents rarely outperform a simple mean baseline, except with stronger backbones or compact, semantically meaningful features. Chain-of-thought prompting improves reasoning-oriented backbones, but does not guarantee temporal grounding or numerical correctness. Together with more analysis on efficiency and temporal scaling, BALMS highlights the need for longitudinal mental health agents that selectively retrieve history, ground temporal evidence, and reason over interpretable behavioral features.
+
+心理健康评估依赖于情景自我报告量表，它将压力等主观状态转化为数字分数，但仅提供稀疏的幸福感快照。可穿戴设备提供纵向行为和生理信号，用于连续、低负担的监测。最近的法学硕士驱动的个人健康代理可以通过可穿戴信号进行自然语言查询，但主要处理短期的、基于检索的查找（例如，一周内的最高步数）。他们没有评估代理人是否可以根据长期信号进行推理，以预测与基于证据的基本原理相结合的健康分数。为了解决这一差距，我们引入了 BALMS，这是第一个基于 LLM 的纵向心理健康感知代理系统的系统基准。 BALMS 涵盖 3 个真实世界的纵向数据集、2 个任务系列（封闭式幸福评分预测和由 LLM 作为法官自动评分的基本原理生成）、跨 5 个开源和闭源 LLM 骨干评估的 3 个代理范式。我们发现，零样本代理很少能超越简单的平均基线，除非具有更强的骨干网或紧凑的、语义上有意义的特征。思维链提示可以改善以推理为导向的主干，但不能保证时间基础或数字正确性。结合对效率和时间尺度的更多分析，BALMS 强调了对纵向心理健康代理的需求，这些代理可以选择性地检索历史、地面时间证据，并对可解释的行为特征进行推理。
+
+</details>
+
+---
+
+## 3. Dynamic Haven Selection for Multi-Agent Pickup and Delivery in Constrained Warehouses / 受限仓库中多代理提货和配送的动态避难所选择
+
+**Date**: 2026-08-27 | **arXiv**: [2608.26939v1](http://arxiv.org/abs/2608.26939v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.26939v1)
+
+**Categories**: cs.MA, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Space-efficient warehouse layouts often contain single-agent-width aisles and dead-end workstations where robots have few places to wait without blocking others. In Multi-Agent Pickup and Delivery (MAPD) on such constrained layouts, robots must accept online pickup-delivery tasks while preserving protected waiting locations called Havens. The Safe HAven Retreat Planner (SHARP) introduced a mechanism that extends each committed task path with a validated retreat to the agent's dedicated initial Haven, but fixed-Haven commitments can send agents toward distant Havens after deliveries. We present A-sharp (Adaptive SHARP), which changes an agent's retreat target at task assignment time. A naive switch can cause two agents to rely on the same waiting location or let another committed path pass through a location that is still occupied or reserved. A-sharp prevents these failures with an availability test for candidate Havens and a pending-release rule that keeps the previous Haven protected until the agent departs. Under explicit Haven-structure and Safe Interval Path Planning (SIPP) assumptions, we prove invariant preservation and finite-release completeness: every task in any finite release sequence is delivered in finite time. Across 72,000 runs on 14,400 paired map-agent-count-rate-seed cases over four maps, both SHARP and A-sharp complete their respective 14,400 runs. For makespan (final delivery time), a prespecified paired comparison with Holm correction over all 138 configurations with more Havens than agents finds A-sharp significantly better in 107 configurations and never significantly worse than SHARP; on the tested tree map, the median reduction is 16.7%.
+
+节省空间的仓库布局通常包含单人员宽度的过道和死胡同工作站，在这些工作站中，机器人几乎没有地方可以在不妨碍其他人的情况下等待。在这种受限布局的多代理取货和送货 (MAPD)​​ 中，机器人必须接受在线取货送货任务，同时保留称为避风港的受保护等待位置。安全避难所撤退规划器 (SHARP) 引入了一种机制，通过经过验证的撤退到代理的专用初始避难所来扩展每个已提交的任务路径，但固定避难所承诺可以在交付后将代理发送到遥远的避难所。我们提出了 A-sharp（自适应 SHARP），它可以在任务分配时改变代理的撤退目标。幼稚切换可能会导致两个代理依赖相同的等待位置，或者让另一条提交的路径通过仍被占用或保留的位置。 A-sharp 通过对候选避难所进行可用性测试以及在代理离开之前保护先前避难所的待发布规则来防止这些故障。在显式避风港结构和安全间隔路径规划（SIPP）假设下，我们证明了不变保存和有限发布完整性：任何有限发布序列中的每个任务都在有限时间内交付。在四张地图上 14,400 个配对的地图-代理-计数-率-种子案例上的 72,000 次运行中，SHARP 和 A-sharp 都完成了各自的 14,400 次运行。对于完工时间（最终交付时间），对所有 138 个配置进行预先指定的 Holm 校正配对比较，避风港数量多于代理，发现 A-sharp 在 107 个配置中明显更好，并且从未明显比 SHARP 差；在测试的树图上，平均减少量为 16.7%。
+
+</details>
+
+---
+
+## 4. CGS-SLAM: Collaborative Gaussian Splatting based SLAM for Multi-Agent Reconstruction / CGS-SLAM：基于协作高斯泼溅的 SLAM，用于多智能体重建
+
+**Date**: 2026-08-27 | **arXiv**: [2608.26868v1](http://arxiv.org/abs/2608.26868v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.26868v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in SLAM have leveraged 3DGS for photorealistic reconstruction and novel view synthesis. However, most methods rely on RGB-D input, which is unavailable on consumer-grade smartphones, and few integrate 3DGS within a collaborative framework. Therefore, we present CGS-SLAM, a hybrid decentralized/centralized system enabling multi-agent 3DGS SLAM using only RGB and inertial data. Each agent performs local tracking with inertial data as a motion prior and reconstructs a scaled map using a metric monocular depth estimator (Depth Pro). Keyframe encodings are shared among agents, enabling dynamic keyframing in regions of spatial overlaps with other agents, enhancing submap alignment. Afterwards, a central server aligns submaps using VGGT as a view alignment model. This bidirectional communication keeps communication cost low during mapping and global reconstruction in difficult GNSS-denied environments. Experiments on multiple datasets demonstrate competitive tracking performance, improved rendering quality over state-of-the-art methods, and accurate submap alignment.
+
+SLAM 的最新进展利用 3DGS 进行真实感重建和新颖的视图合成。然而，大多数方法依赖于 RGB-D 输入，这在消费级智能手机上不可用，而且很少有方法将 3DGS 集成到协作框架中。因此，我们提出了 CGS-SLAM，这是一种混合分散式/集中式系统，仅使用 RGB 和惯性数据即可实现多代理 3DGS SLAM。每个代理使用惯性数据作为运动先验执行局部跟踪，并使用度量单目深度估计器 (Depth Pro) 重建缩放地图。关键帧编码在代理之间共享，从而能够在与其他代理空间重叠的区域中进行动态关键帧，从而增强子图对齐。然后，中央服务器使用 VGGT 作为视图对齐模型来对齐子图。在 GNSS 拒绝的困难环境中，这种双向通信可在测绘和全局重建过程中保持较低的通信成本。对多个数据集的实验证明了具有竞争力的跟踪性能、比最先进的方法更高的渲染质量以及准确的子图对齐。
+
+</details>
+
+---
+
+## 5. Fixed-Haven Reservation for Online Multi-Agent Pickup and Delivery in Dense Warehouses / 密集仓库在线多代理提货的固定避难所预订
+
+**Date**: 2026-08-27 | **arXiv**: [2608.26759v1](http://arxiv.org/abs/2608.26759v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.26759v1)
+
+**Categories**: cs.MA, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Dense warehouses often contain single-lane aisles, dead ends, and tree-like guidepaths that leave little room for idle agents to wait without blocking others. Existing Multi-Agent Pickup and Delivery (MAPD) guarantees for completing all finitely released tasks typically rely on extra waiting endpoints that planned paths can avoid, or on biconnected topology; these assumptions may fail in such layouts. We study fixed-Haven reservation for online MAPD, where pickup-delivery tasks are released over time. Each agent owns a fixed Safe Haven (Haven for short), usually its start cell, that only the owner may occupy and that other agents treat as blocked. For finite task releases, we prove that this fixed-Haven contract completes all released tasks under Haven-Reachability and explicit planning/progress assumptions. We implement the contract in SHARP, a Safe-Haven Retreat Planner that keeps every busy or retreating agent on a collision-free reserved route ending at its Haven. We compare SHARP with representative TP and PIBT-family MAPD baselines: Token Passing (TP), Priority Inheritance with Backtracking (PIBT), and PIBT with Temporary Priority and Temporary Avoidance (PIBTTP-TA) for biconnected main areas with attached trees. In the robustness sweep, SHARP is the only method with 100% success on all tested configurations, at substantially higher centralized planning cost on tree-like layouts. A TP-style fixed-home-return counterfactual with full-route validation also recovers robustness on tested tree-like layouts, suggesting that fixed return is a central robustness mechanism there. A no-overwrite variant shows that disabling mid-retreat reassignment worsens service time (release-to-delivery latency) by 1.89 times and makespan by 1.53 times in the tested high-load tree condition.
+
+密集的仓库通常包含单车道过道、死胡同和树状引导道，几乎没有空间让闲置的工作人员等待而不妨碍其他工作人员。现有的多代理拾取和交付 (MAPD)​​ 保证完成所有有限发布的任务通常依赖于计划路径可以避免的额外等待端点，或者依赖于双连接拓扑；这些假设在这种布局中可能会失败。我们研究了在线 MAPD 的固定避风港预订，其中取货-送货任务随着时间的推移而释放。每个特工都拥有一个固定的避风港（简称避难所），通常是其起始单元，只有所有者可以占用，其他特工将其视为封锁。对于有限的任务发布，我们证明这个固定的避风港合约在避风港可达性和明确的计划/进度假设下完成了所有发布的任务。我们在 SHARP 中实施合同，SHARP 是一个避风港撤退规划器，使每个忙碌或撤退的代理都遵循以避风港为终点的无碰撞保留路线。我们将 SHARP 与具有代表性的 TP 和 PIBT 系列 MAPD 基线进行比较：令牌传递 (TP)、带回溯的优先级继承 (PIBT) 以及具有临时优先级和临时回避的 PIBT (PIBTTP-TA)，适用于带有附加树的双连接主要区域。在鲁棒性扫描中，SHARP 是唯一在所有测试配置上都取得 100% 成功的方法，而树状布局的集中规划成本要高得多。具有全路径验证的 TP 式固定返回反事实也恢复了经过测试的树状布局的鲁棒性，这表明固定返回是那里的核心鲁棒性机制。无覆盖变体表明，在测试的高负载树条件下，禁用中间撤退重新分配会使服务时间（发布到交付延迟）恶化 1.89 倍，使完工时间缩短 1.53 倍。
+
+</details>
+
+---
+
+## 6. SPT: Skills as Pre-Training Data for Agentic Language Models / SPT：作为代理语言模型预训练数据的技能
+
+**Date**: 2026-08-27 | **arXiv**: [2608.26563v1](http://arxiv.org/abs/2608.26563v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.26563v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic (tool-using) language models are mainly trained on tool-call traces and agent trajectories during post-training. These data provide direct behavioral supervision, but producing them requires task environments, execution, and verification, making broad tool and task coverage expensive. Publicly available skills offer another source of training data: they encode reusable tool semantics and workflows but are typically used only as inference-time context. We introduce Skill Pre-Training (SPT), a mid-training method that applies causal language modeling to SkillCorpus, a collection of public multi-file skill packages, optionally mixed with general data. To preserve relations among files within each package, we also introduce Reference Insert, a reference-aware assembly strategy that places supporting files near their mentions in the primary instruction. Experiments across multiple model scales and post-training recipes show that SPT consistently improves agentic performance over mid-training on general or trajectory data, while largely preserving general performance. Data mixture experiments show additional benefits from combining skill data with general annealing corpora. These results indicate that skill packages are a valuable data source for pre-training agentic language models.
+
+代理（使用工具）语言模型主要在训练后的工具调用轨迹和代理轨迹上进行训练。这些数据提供直接的行为监督，但生成它们需要任务环境、执行和验证，使得广泛的工具和任务覆盖范围变得昂贵。公开可用的技能提供了训练数据的另一个来源：它们编码可重用的工具语义和工作流程，但通常仅用作推理时间上下文。我们引入了技能预训练 (SPT)，这是一种将因果语言建模应用于 SkillCorpus 的中期训练方法，SkillCorpus 是公共多文件技能包的集合，可以选择与一般数据混合。为了保留每个包内文件之间的关系，我们还引入了引用插入，这是一种引用感知汇编策略，可将支持文件放置在主指令中提及的位置附近。跨多个模型规模和训练后配方的实验表明，与一般或轨迹数据的训练中期相比，SPT 持续提高了代理性能，同时在很大程度上保留了一般性能。数据混合实验显示了将技能数据与一般退火语料库相结合的额外好处。这些结果表明技能包是预训练代理语言模型的宝贵数据源。
+
+</details>
+
+---
+
+## 7. Finding the Right Evidence: Factor-Guided Coarse-to-Fine Reasoning for Long Videos / 寻找正确的证据：长视频的因素引导粗到细推理
+
+**Date**: 2026-08-26 | **arXiv**: [2608.26355v1](http://arxiv.org/abs/2608.26355v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.26355v1)
+
+**Categories**: cs.CV, cs.LG
+
+**Code**: https://github.com/HKUST-KnowComp/PACE.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While LVLMs rapidly improve, long-video question answering still remains challenging: relevant evidence is sparse, and question-relevant context often fails to provide cues that discriminate the correct answer from plausible alternatives. Diagnostic analysis on a manually annotated subset of MMR-V shows that prior agentic systems substantially improve cue retrieval over direct VLM inference yet fail to achieve a corresponding gain in answer accuracy, indicating that the bottleneck lies in option-discriminative evidence rather than topical relevance alone. We propose PACE (Progressive Acquisition of Critical Evidence), a factor-guided framework for long-video evidence acquisition. PACE proceeds in two stages: it first indexes clip-level descriptions guided by question-derived factors without observing the candidate answers; it then uses the candidate answers to derive contrastive cues and queries the index for verification. On MMR-V with the open-source Qwen3-VL backbone, PACE achieves 42.6% accuracy, outperforming direct inference and prior agentic baselines including Deep Video Discovery (DVD). On the same diagnostic subset, PACE recovers 66.9% of the annotated cues, providing empirical evidence that its gains are associated with improved evidence recovery rather than stronger answer-side priors alone. Consistent gains over DVD on LVBench, Video-MME, EgoSchema, and LongVideoBench suggest that option-aware evidence acquisition transfers beyond MMR-V. Code is available at https://github.com/HKUST-KnowComp/PACE.
+
+虽然 LVLM 迅速改进，但长视频问答仍然具有挑战性：相关证据很少，而且与问题相关的上下文通常无法提供区分正确答案和合理答案的线索。对 MMR-V 手动注释子集的诊断分析表明，先前的代理系统比直接 VLM 推理显着改善了线索检索，但未能在答案准确性方面实现相应的增益，这表明瓶颈在于选项判别性证据，而不仅仅是主题相关性。我们提出了 PACE（关键证据的渐进式获取），这是一种用于长视频证据获取的因素引导框架。 PACE 分两个阶段进行：首先，在不观察候选答案的情况下，根据问题衍生因素对剪辑级别的描述进行索引；然后，它使用候选答案来得出对比线索并查询索引以进行验证。在具有开源 Qwen3-VL 主干的 MMR-V 上，PACE 实现了 42.6% 的准确率，优于直接推理和包括 Deep Video Discovery (DVD) 在内的先前代理基线。在同一诊断子集上，PACE 恢复了 66.9% 的带注释线索，提供了经验证据，表明其收益与改进的证据恢复相关，而不仅仅是与更强的答案方先验相关。在 LVBench、Video-MME、EgoSchema 和 LongVideoBench 上持续优于 DVD 的结果表明，选项感知证据获取超越了 MMR-V。代码可在 https://github.com/HKUST-KnowComp/PACE 获取。
+
+</details>
+
+---
+
+## 8. VISA: Agentic Self-Evolving Data Synthesis for Multimodal Instruction Following / VISA：用于多模式指令跟踪的代理自进化数据合成
+
+**Date**: 2026-08-26 | **arXiv**: [2608.26013v2](http://arxiv.org/abs/2608.26013v2) | **PDF**: [Link](http://arxiv.org/pdf/2608.26013v2)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal instruction-following models require training data that is accurate, diverse, verifiable, and challenging. Existing synthesis pipelines typically follow a one-pass generate-and-filter paradigm, discarding feedback from failed samples, verifier outcomes, and target-model errors. We present VISA (Visual Instruction Synthesis Agent), an agentic framework that reformulates multimodal instruction synthesis as a self-evolving loop. At each round, VISA analyzes an image to filter incompatible constraints and discover new verifiable ones, samples diversity- and difficulty-aware constraint sets from persistent memory, generates candidate instructions, and verifies the resulting samples with executable tools and structured large language model judges. Failed samples trigger diagnostic-guided recovery, while accepted samples are probed against the target model to estimate difficulty. The resulting verifier signals and target-model failure profiles are written back to memory, allowing subsequent rounds to adaptively expand the constraint space, reduce template repetition, and focus on unresolved model weaknesses. The same verifier contracts further provide reward signals for reinforcement learning without a separately trained reward model. Experiments on MM-IFEval show that VISA consistently improves multimodal instruction following over strong baselines, while preserving general multimodal capability across seven public benchmarks.
+
+多模式指令跟踪模型需要准确、多样化、可验证且具有挑战性的训练数据。现有的综合管道通常遵循一次性生成和过滤范例，丢弃来自失败样本、验证器结果和目标模型错误的反馈。我们提出了 VISA（视觉指令合成代理），这是一种代理框架，它将多模式指令合成重新表述为一个自我进化的循环。在每一轮中，VISA 都会分析图像以过滤不兼容的约束并发现新的可验证约束，从持久内存中对多样性和难度感知约束集进行采样，生成候选指令，并使用可执行工具和结构化大型语言模型判断器验证生成的样本。失败的样本会触发诊断引导的恢复，而接受的样本则根据目标模型进行探测以估计难度。生成的验证器信号和目标模型故障配置文件被写回内存，允许后续轮次自适应地扩展约束空间，减少模板重复，并专注于未解决的模型弱点。相同的验证者合约进一步为强化学习提供奖励信号，而无需单独训练的奖励模型。 MM-IFEval 实验表明，VISA 在强基线上持续改进多模态指令，同时在七个公共基准中保留一般多模态能力。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-28 (30 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-08-28
