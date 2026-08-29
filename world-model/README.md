@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-29](papers/2026-08-29.md) - 3 papers
 - [2026-08-28](papers/2026-08-28.md) - 5 papers
 - [2026-08-27](papers/2026-08-27.md) - 13 papers
 - [2026-08-26](papers/2026-08-26.md) - 13 papers
@@ -141,6 +142,66 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-29 (3 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-08-29
+
+**Paper Count**: 3
+
+---
+
+## 1. Task-space model-based control of pneumatic soft actuators / 基于任务空间模型的气动软执行器控制
+
+**Date**: 2026-08-27 | **arXiv**: [2608.27186v1](http://arxiv.org/abs/2608.27186v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.27186v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Soft actuators enable dexterous and compliant interaction, but closed-loop task-space control remains challenging due to strong nonlinearities, distributed deformation, and uncertainty in their dynamics. This paper presents a real-time dynamic-model-based task-space feedback and estimation framework based on a non-minimal coordinate discrete elastic rod model formulated in absolute coordinates with holonomic constraints. The resulting structure preserves distributed mechanics while maintaining computational efficiency through sparse system matrices, enabling real-time control with up to 10 discretized rods. A quasi-static feedforward inverse model is combined with a task-space PI controller and a dynamic observer that fuses measurement residuals as virtual forces, enabling full-state estimation from sparse sensing. The approach is experimentally validated on three planar pneumatic soft actuators with varying geometries. Across five tasks, including drawing the digits 0-9 across the workspace (3-18 mm/s tip speed), tracking periodic motion (up to 37 cm/s), cross-platform generalization, reduced sensing conditions, and real-time user-defined references, our method achieves 1.5-2.3 mm root mean square error (RMSE) for precision motions and 5.5-12.4 mm RMSE at 1-2 Hz. Results demonstrate that structured, non-minimal dynamic models can enable real-time, high-precision, moderate-bandwidth task-space control of planar soft pneumatic actuators in free space.
+
+软执行器可实现灵巧且顺应的交互，但由于强非线性、分布式变形和动态不确定性，闭环任务空间控制仍然具有挑战性。本文提出了一种基于实时动态模型的任务空间反馈和估计框架，该框架基于在具有完整约束的绝对坐标中制定的非最小坐标离散弹性杆模型。由此产生的结构保留了分布式力学，同时通过稀疏系统矩阵保持计算效率，从而实现对多达 10 个离散杆的实时控制。准静态前馈逆模型与任务空间 PI 控制器和动态观测器相结合，将测量残差融合为虚拟力，从而实现稀疏传感的全状态估计。该方法在具有不同几何形状的三个平面气动软执行器上进行了实验验证。在五个任务中，包括在工作空间中绘制数字 0-9（3-18 mm/s 尖端速度）、跟踪周期性运动（高达 37 cm/s）、跨平台泛化、简化的传感条件和实时用户定义的参考，我们的方法在精确运动方面实现了 1.5-2.3 mm 均方根误差 (RMSE)，在 1-2 Hz 时实现了 5.5-12.4 mm RMSE。结果表明，结构化的非最小动态模型可以实现自由空间中平面软气动执行器的实时、高精度、中等带宽任务空间控制。
+
+</details>
+
+---
+
+## 2. MeshPriorDiT: Hierarchical Modeling for Action-Conditioned Cloth Dynamics / MeshPriorDiT：动作条件布料动力学的分层建模
+
+**Date**: 2026-08-27 | **arXiv**: [2608.26766v1](http://arxiv.org/abs/2608.26766v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.26766v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Action-conditioned cloth dynamics prediction requires both locally plausible deformation and long-range coordination. Existing approaches largely follow two paradigms. Mesh-based GNNs capture local physical responses through material connectivity. However, their finite message-passing range limits coordination between topologically distant regions, while autoregressive rollouts tend to accumulate prediction errors. Transformer-based dynamics models capture long-range interactions through global attention, but often operate without explicit material connectivity and must learn local topological responses directly from data. We propose MeshPriorDiT, a hierarchical dynamics model that decomposes future cloth motion into a structured mesh prior and a generative residual. An action-conditioned mesh GNN first predicts multi-step vertex displacements, yielding a reference trajectory that respects material topology and grasp constraints. Conditioned on historical states, planned actions, and the mesh prior, a Residual DiT then uses conditional flow matching to jointly generate the residual motion not captured by the prior. The generated residual is further rescaled and decoded using material adjacency to coordinate corrections across neighboring vertices. We evaluate MeshPriorDiT on 15-step autoregressive rollouts across three cloth manipulation tasks. Averaged over the three tasks, MeshPriorDiT reduces average Global MSE by 43.42% relative to the GNN-Only baseline and by 75.03% relative to the DiT-DDPM baseline, while maintaining a favorable Edge-strain MSE comparable to that of GNN-Only.
+
+动作条件布料动力学预测需要局部合理的变形和远程协调。现有方法主要遵循两种范式。基于网格的 GNN 通过材料连通性捕获局部物理响应。然而，它们有限的消息传递范围限制了拓扑遥远区域之间的协调，而自回归的推出往往会累积预测误差。基于 Transformer 的动力学模型通过全局注意力捕获远程交互，但通常在没有明确的材料连接的情况下运行，并且必须直接从数据中学习局部拓扑响应。我们提出了 MeshPriorDiT，这是一种分层动力学模型，它将未来的布料运动分解为结构化网格先验和生成残差。动作条件网格 GNN 首先预测多步顶点位移，产生尊重材料拓扑和抓取约束的参考轨迹。以历史状态、计划动作和网格先验为条件，Residual DiT 然后使用条件流匹配来共同生成先验未捕获的残余运动。使用材质邻接对生成的残差进行进一步重新缩放和解码，以协调相邻顶点的校正。我们通过三个布料操作任务的 15 步自回归部署来评估 MeshPriorDiT。对这三个任务进行平均，MeshPriorDiT 相对于仅 GNN 基线降低了 43.42% 的平均全局 MSE，相对于 DiT-DDPM 基线降低了 75.03%，同时保持了与仅 GNN 相当的有利的边缘应变 MSE。
+
+</details>
+
+---
+
+## 3. WALL-SS: Scaling Long-horizon World Models via Next-Scale Autoregression / WALL-SS：通过下一代自回归扩展长期世界模型
+
+**Date**: 2026-08-26 | **arXiv**: [2608.26239v1](http://arxiv.org/abs/2608.26239v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.26239v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative world models provide robots with predictive models of how the world evolves under interaction, with growing potential for simulation, planning, policy evaluation, and robot learning. Beyond clip-level future prediction, a unified generative formulation should relate actions to consequences, support flexible horizons and continuous interaction, and enable reward-driven optimization. We introduce WALL-SS, a world model that generates visual futures through Scale-wise autoregressive Scaling, enabling action-controllable and long-horizon robotic simulation. WALL-SS represents embodied trajectories as causal sequences of temporally interleaved observations and actions, making action-dependent state transitions explicit while naturally supporting variable-length generation, streaming extension through reusable causal states, and direct optimization through sequence probabilities. To make this formulation effective over long horizons, we generate each future observation in a coarse-to-fine manner and develop three complementary components within the same hierarchy. Action-conditioned next-scale prediction injects scale-aligned action representations to improve action-future coupling and model both successful and failed behaviors. Scale-compressed long-horizon memory retains recent interactions at fine resolution while compressing distant observations and actions, with scale-wise dream forcing enhancing robustness to self-generated context. Finally, on-policy alignment optimizes autoregressive visual dynamics with action-following and long-term consistency rewards while preserving the pretrained visual distribution. Experiments show that WALL-SS improves action following and trajectory accuracy, supports coherent minute-long streaming rollout under bounded memory, and consistently benefits from on-policy alignment in reducing action drift and long-horizon inconsistency.
+
+生成世界模型为机器人提供了世界在交互下如何演变的预测模型，在模拟、规划、政策评估和机器人学习方面具有越来越大的潜力。除了剪辑级别的未来预测之外，统一的生成公式应该将行动与结果联系起来，支持灵活的视野和持续的交互，并实现奖励驱动的优化。我们引入了 WALL-SS，这是一种世界模型，它通过按比例自回归缩放生成视觉未来，从而实现动作可控和长视野机器人模拟。 WALL-SS 将具体轨迹表示为时间交错的观察和动作的因果序列，使依赖于动作的状态转换变得明确，同时自然地支持可变长度生成、通过可重用因果状态进行流式扩展以及通过序列概率进行直接优化。为了使这个公式在长期范围内有效，我们以从粗到细的方式生成每个未来的观察结果，并在同一层次结构中开发三个互补的组件。以动作为条件的下一尺度预测注入了尺度一致的动作表示，以改善动作与未来的耦合，并对成功和失败的行为进行建模。尺度压缩的长视野记忆以高分辨率保留最近的相互作用，同时压缩遥远的观察和行动，尺度上的梦想迫使增强对自我生成的上下文的鲁棒性。最后，策略对齐通过动作跟踪和长期一致性奖励来优化自回归视觉动态，同时保留预先训练的视觉分布。实验表明，WALL-SS 提高了动作跟踪和轨迹准确性，支持有限内存下连贯的一分钟长流式部署，并始终受益于策略对齐，减少动作漂移和长期不一致。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-28 (5 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-08-28
