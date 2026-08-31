@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-31](papers/2026-08-31.md) - 8 papers
 - [2026-08-29](papers/2026-08-29.md) - 8 papers
 - [2026-08-28](papers/2026-08-28.md) - 30 papers
 - [2026-08-27](papers/2026-08-27.md) - 43 papers
@@ -151,6 +152,148 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-31 (8 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-08-31
+
+**Paper Count**: 8
+
+---
+
+## 1. ContextPilot: Teaching Agents for Proactive Context Management via Fine-grained RL / ContextPilot ：通过细粒度RL进行前瞻性情境管理的教学代理
+
+**Date**: 2026-08-28 | **arXiv**: [2608.28476v1](http://arxiv.org/abs/2608.28476v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.28476v1)
+
+**Categories**: cs.CL
+
+**Code**: https://github.com/Tencent/ContextPilot.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon agentic tasks require large language models (LLMs) to iteratively retrieve, integrate, and maintain dispersed information across multi-turn interactions, but preserving all interaction histories leads to a continuously growing working context. Recent proactive context management methods allow models to edit their own working context with specialized tools, yet they still face three key limitations: (1) a limited toolset restricted to search, deletion, and summarization, with no support for global planning, long-term memory, and adaptive compression; (2) inefficient exploration that treats context management actions uniformly despite their heterogeneous impacts on final outcomes; and (3) coarse-grained credit assignment that assigns the final trajectory-level reward to all intermediate context editing actions during RL. To bridge these gaps, we introduce ContextPilot, a proactive context management framework for long-horizon agentic reasoning. Our approach systematically augments the toolset with planning, long-term memory, and soft context offloading tools. We further propose an RL method tailored for context management, which uses context and entropy variation to identify critical editing decisions for branch sampling and estimates action-level advantages from all branched trajectories that pass through the corresponding context editing action. Experiments on long-context QA and deep search tasks show that ContextPilot achieves stronger performance with a more compact working context, consistently outperforming existing baselines across various base models and benchmarks. Code is available at https://github.com/Tencent/ContextPilot.
+
+长期代理任务需要大型语言模型（ LLM ）来迭代检索、整合和维护多轮交互中的分散信息，但保留所有交互历史会导致工作环境不断增长。 最近的主动上下文管理方法允许模型使用专业工具编辑自己的工作上下文，但它们仍然面临三个关键限制： （ 1 ）有限的工具集，仅限于搜索、删除和总结，不支持全局规划、长期记忆和自适应压缩； （ 2 ）低效的探索，尽管上下文管理行动对最终结果有异质性影响，但统一处理上下文管理行动； （ 3 ）粗粒度信用分配，将最终轨迹级奖励分配给RL期间的所有中间上下文编辑行动。 为了弥合这些差距，我们引入了ContextPilot ，这是一种用于长期代理推理的主动上下文管理框架。 我们的方法通过规划、长期记忆和软上下文卸载工具系统地增强了工具集。 我们进一步提出了一种为上下文管理量身定制的RL方法，该方法使用上下文和熵变化来识别分支采样的关键编辑决策，并从通过相应上下文编辑操作的所有分支轨迹中估计动作级优势。 针对长上下文QA和深度搜索任务的实验表明， ContextPilot在
+
+</details>
+
+---
+
+## 2. COVER: Identifiable Evaluation of Coalition Routing / 封面：联盟路线的可识别评估
+
+**Date**: 2026-08-28 | **arXiv**: [2608.28475v1](http://arxiv.org/abs/2608.28475v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.28475v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+When a multi-agent system changes its team, it also changes the messages and final answer it produces, so an end-to-end accuracy gap does not by itself identify a routing effect. We introduce method, an evaluation contract that fixes a public information boundary, downstream stack G, and finite legal team family before outcomes are generated. Complete coverage identifies exact finite-benchmark oracle regret conditional on that stack. For any finite collection of frozen policies, executing the union of their distinct selected teams is the minimal assumption-free support for every pairwise policy contrast, though not for absolute oracle regret. Two controlled tables with source-ID-disjoint splits test the instrument. On MuSiQue-12, a pre-specified privileged positive control improves regret from 0.532 to 0.402; a later public-interface control reaches 0.424 versus 0.554 but is retrospective. On HotpotQA-4, a pre-specified public direct scorer improves regret from 0.313 to 0.110. In fixed-stack Llama execution, verified route regret improves by 0.190, while the raw-answer gain is 0.010 with an interval crossing zero. A five-family ToolSandbox variant-shift validation exhaustively evaluates 16 declared teams on 14 untouched task variants (224/224 valid rows): the declared-family oracle reaches 0.768 safe-evidence completion, while the prospectively frozen router gets 0.637 (regret 0.131), failing the predeclared 0.10 criterion. A later retrospective comparator reaches 0.655, matching all-workers with 4.57 versus 5.00 workers on average. Thus COVER exposes selection headroom without manufacturing a routing win. A crossed-stack diagnostic shows absolute scores depend on G but finds no detectable router-by-finalizer interaction. COVER is an auditable measurement methodology, not a claim of stack-invariant or universal agent-routing superiority.
+
+当多代理系统更换其团队时，它也会更改其生成的消息和最终答案，因此端到端的准确性差距本身并不能识别路由效果。 我们引入了方法，即在生成结果之前修复公共信息边界、下游堆栈G和有限法律团队家族的评估合同。 完全覆盖标识该堆栈上的确切有限基准预言机后悔条件。 对于任何有限的冻结策略集合，执行其不同选定团队的联合是对每个成对策略对比的最小无假设支持，尽管不是绝对的神谕遗憾。 两个带有源ID分离拆分的受控表测试仪器。 在MuSiQue-12上，预先指定的特权阳性对照将遗憾从0.532提高到0.402 ；后来的公共接口对照达到0.424而不是0.554 ，但具有回顾性。 在HotpotQA-4上，预先指定的公共直接评分员将后悔从0.313提高到0.110。 在固定栈LLAMA执行中，验证路由后悔改善0.190 ，而原始应答增益为0.010 ，间隔跨过零。 五族ToolSandbox变体移位验证在14个未触及的任务变体（ 224/224有效行）上详尽评估了16个已声明的团队：已声明的家族预言机达到0.768安全证据完成，而前瞻性冻结的路由器获得0.637 （后悔0.131 ） ，不符合预先声明的0.10标准。 后来的回顾性比较器达到0.655 ，
+
+</details>
+
+---
+
+## 3. Learning to Use Tools: Reinforcement Learning for Tool-Integrated Mathematical Reasoning / 学习使用工具：用于工具集成数学推理的强化学习
+
+**Date**: 2026-08-28 | **arXiv**: [2608.28447v1](http://arxiv.org/abs/2608.28447v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.28447v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current large language models (LLMs) increasingly benefit from external tool integration, especially for tasks requiring reliable computation and verification. Motivated by this, we study calculator tool calling for improving mathematical reasoning on the Countdown task. We first analyze reasoning failures and find that calculation errors account for a substantial portion of incorrect responses. We then construct supervised fine-tuning datasets to teach the model useful tool-use patterns and how to interpret returned outputs. Building on this tool-formatted policy, we apply several on-policy reinforcement learning methods, including RLOO, RLOO++, GRPO, and DAPO, using automatically verifiable final-answer rewards. To enable a more reliable evaluation, we construct a fresh 1,024-problem held-out Countdown benchmark with no exact overlap with the training data. Our results show that calculator tool integration consistently improves both SFT and RL baselines, yielding roughly 10 percentage-point gains across pass@k. Among the RL methods, Tool-DAPO achieves the strongest performance, improving pass@1 from 35.8% for Tool-SFT to 66.0%. Further analysis shows that RL encourages more effective tool use even when only final-answer rewards are provided. These findings suggest that tool integration reduces arithmetic and verification errors, while RL increases the probability of correct reasoning traces.
+
+当前的大型语言模型（ LLM ）越来越多地受益于外部工具集成，特别是对于需要可靠计算和验证的任务。 出于这一动机，我们研究了计算器工具，该工具呼吁改进倒计时任务的数学推理。 我们首先分析推理失败，发现计算错误占错误回答的很大一部分。 然后，我们构建有监督的微调数据集，以教授模型有用的工具使用模式以及如何解释返回的输出。 在此工具格式政策的基础上，我们应用了几种随机强化学习方法，包括RLOO、RLOO + +、GRPO和DAPO ，使用可自动验证的最终答案奖励。 为了实现更可靠的评估，我们构建了一个新的1,024个问题保留倒计时基准，与培训数据没有确切的重叠。 我们的结果表明，计算器工具集成不断改善SFT和RL基线，在通过@ k时产生大约10个百分点的收益。 在RL方法中， Tool-DAPO实现了最强的性能，将PASS @ 1从Tool-SFT的35.8%提高到66.0%。 进一步的分析表明，即使只提供最终答案奖励，强化学习也会鼓励更有效的工具使用。 这些发现表明，工具集成减少了算术和验证错误，而RL增加了正确推理轨迹的概率。
+
+</details>
+
+---
+
+## 4. Fidelity Is Not Enough: Dispatch-Level Instrumentation for Agentic Datasheet Extraction / 保真度不够：用于代理数据表提取的派遣级仪器
+
+**Date**: 2026-08-28 | **arXiv**: [2608.28439v1](http://arxiv.org/abs/2608.28439v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.28439v1)
+
+**Categories**: cs.CL, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+One model passed our fidelity check without ever opening the datasheet. We found it while qualifying models for an internal extraction service: a structured-output constraint had silently disabled tool use, and the model answered anyway, with fabricated source text. Only the per-tool trace exposed it. Fidelity -- whether an extracted value matches the source -- is the standard measure for agentic document extraction, and it scores that run a success. We therefore log every tool call in an agentic benchmark of 25 hand-curated claims over three components, with 12 more on a fourth, 37 in all. From that dispatch record we build two instruments: a rule-based failure-attribution classifier, and a silent-failure detector whose two rules check only which tools were called, never the extracted value. The detector raises no flag on 207 clean fidelity-passing extractions across three model families, and recovers all 50 planted faults that withhold exactly the tools its rules check. The two results are not symmetric: the first bounds the false-positive rate, the second is recall by construction, and detection power against runs that call their tools and still answer wrongly is unmeasured. A second, independent oracle, a causal chamber that tests whether the datasheet's claims hold under physical measurement, is intentionally partial: it confirms only what the apparatus can exercise, a verifiable envelope of 2 of those 37 claims, and we give a taxonomy of why the rest are not physically gradable. Under a controlled perturbation, fidelity passes throughout while the chamber verdict flips exactly at the measurement uncertainty. Across three deployed model stacks (one destabilised by its serving stack, not by any capability gap) the tool layer buys portability and observability rather than accuracy, and earns its premium only once a document outgrows the context window.
+
+有一个型号通过了我们的保真度检查，但从未打开过数据表。 我们在为内部提取服务限定模型时发现了它：结构化输出约束已静默禁用工具使用，并且模型仍然使用伪造的源文本进行回答。 只有每个工具的痕迹暴露了它。 保真度（提取的值是否与源匹配）是代理文档提取的标准度量，其得分为成功运行。 因此，我们将每个工具调用记录在代理基准中，该基准包括三个组成部分的25个手工策划的索赔，第四个部分还有12个，总共37个。 根据调度记录，我们构建了两个工具：一个基于规则的故障归因分类器和一个无声故障检测器，其两个规则仅检查调用的工具，而不检查提取的值。 该探测器在三个模型家族的207次干净保真提取中没有引发标记，并恢复了所有50个种植故障，这些故障完全保留了其规则检查的工具。 这两个结果是不对称的：第一个限制了假阳性率，第二个是通过构造召回，以及对调用其工具但仍然错误回答的运行的检测能力是不可测量的。 第二个独立的预言机是一个因果室，用于测试数据表的主张是否在物理测量下成立，这是故意偏颇的：它仅确认设备可以行使的内容，这37个主张中的2个是可验证的信封，我们给出了为什么其余的主张在物理上不是
+
+</details>
+
+---
+
+## 5. LUCID: An Agentic AI Framework on Digital-Twin in the Loop for QoS-Guaranteeing Robotic Control / LUCID ：用于保证QoS的机器人控制的循环中数字双胞胎的代理人工智能框架
+
+**Date**: 2026-08-28 | **arXiv**: [2608.28437v1](http://arxiv.org/abs/2608.28437v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.28437v1)
+
+**Categories**: eess.SY, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cloud robotics relies on the timely uplink of high-volume sensing streams, yet dynamic environments continually shift the feasible combinations of trajectories, active-robot count, and per-robot QoS. Because existing approaches formulate trajectory planning (TP) and radio resource management (RRM) as a single fixed optimization problem, they cannot reconfigure these coupled decisions as conditions evolve, resulting in transient QoS violations. However, evolving operator intents change which quantities-such as the active-robot count and per-robot QoS-are fixed, optimized, or relaxed. Furthermore, the computational cost of evaluating trajectory-dependent wireless conflicts has made it difficult to build large-scale Digital-Twin-in-the-Loop (DITL) testbeds responsive enough for such dynamic orchestration. We present LUCID, an LLM-agent--orchestrated, uplink-aware cloud-robotics pipeline that moves TP--RRM from solving a fixed formulation to dynamically orchestrating optimization problem schemas within a DITL environment. Driven by the operator's high-level intent, LUCID treats the TP--RRM formulation as a bounded template whose variables, objectives, and constraints are dynamically configured, while SimBridge enables repeated ray-tracing evaluation by converting large-scale robotics scenes into wireless-ready DTs. By integrating collision-free path planning with a spectral-radius RRM validator, LUCID identifies wireless bottlenecks and restructures the problem schema on the fly to efficiently find the verified feasible state. Experiments confirm that LUCID robustly adapts to changing intents, active-robot counts, and scenes, while a multimodal surrogate model, FastConfigNet, reduces planning latency.
+
+云机器人技术依赖于高容量传感流的及时上行链路，但动态环境不断改变轨迹、主动机器人计数和每个机器人QoS的可行组合。 由于现有方法将轨迹规划（ TP ）和无线电资源管理（ RRM ）制定为单个固定优化问题，因此它们无法随着条件的演变而重新配置这些耦合决策，从而导致瞬时QoS违规。 但是，不断发展的运营商意图会改变固定、优化或放宽的数量，例如活动机器人数量和每个机器人的QoS。 此外，评估依赖于轨迹的无线冲突的计算成本使得难以构建足够响应此类动态编排的大规模数字双环（ DITL ）测试平台。 我们介绍了LUCID ，这是一种LLM代理编排、上行链路感知的云机器人流水线，它将TP--RRM从解决固定配方转变为在DITL环境中动态编排优化问题架构。 在运营商的高级意图的驱动下， LUCID将TP-RRM公式视为一个有界模板，其变量、目标和约束是动态配置的，而SimBridge通过将大规模机器人场景转换为无线就绪的DT ，实现了反复的光线追踪评估。 通过将无碰撞路径规划与频谱半径RRM验证器集成， LUCID可以识别无线瓶颈并实时重构问题架构
+
+</details>
+
+---
+
+## 6. PersonaForge: Realistic Multi-Turn User Simulation for Agentic Systems / PersonaForge ： Agentic系统的逼真多圈用户模拟
+
+**Date**: 2026-08-28 | **arXiv**: [2608.28378v1](http://arxiv.org/abs/2608.28378v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.28378v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models are increasingly used as agentic workflow executors, yet existing training data and benchmarks largely assume informationally complete, single-turn queries. Our analysis of 16K real-world sessions shows that 75.9% of interactions are multi-turn, revealing a substantial gap between how users interact with agents and how such systems are trained and evaluated. We introduce \textbf{PersonaForge}, a user simulation framework for synthesizing realistic multi-turn user--agent interactions. PersonaForge combines a four-dimensional persona space, SOUL-driven behavioral control calibrated to real-user statistics, and Reverse Deep Construction grounded in authentic seed queries. Using PersonaForge, we construct a 6.3K-record training dataset and \textbf{PersonaForge-Bench}, a manually annotated 138-task benchmark spanning over 20 professional domains with four-dimensional scoring. Experiments on Qwen3.5-27B show that PersonaForge training improves the composite score by +4.1%, with gains across all four dimensions and the largest improvements in Task Completion (+6.0%) and Response Quality (+6.8%). Further analyses show that PersonaForge-trained agents use fewer turns and tool calls, suggesting improved interaction efficiency, while ablations confirm the contribution of SOUL components and adaptive simulation. Together, PersonaForge and PersonaForge-Bench establish a foundation for training and evaluating agents under realistic multi-turn user interaction.
+
+大型语言模型越来越多地被用作代理工作流执行器，但现有的训练数据和基准在很大程度上假设信息完整、单轮查询。 我们对16000个真实世界会话的分析显示， 75.9%的交互是多轮的，这揭示了用户与客服代表的交互方式与此类系统的培训和评估方式之间存在巨大差距。 我们引入了\ textbf {PersonaForge} ，这是一个用于合成逼真多回合用户-代理交互的用户模拟框架。 PersonaForge结合了四维角色空间、针对真实用户统计进行校准的SOUL驱动行为控制，以及基于真实种子查询的反向深度构建。 使用PersonaForge ，我们构建了一个6.3K记录的训练数据集和\ textbf {PersonaForge-Bench} ，这是一个手动注释的138项任务基准，跨越20多个具有四维评分的专业领域。 在Qwen3.5-27B上的实验表明， PersonaForge培训将综合得分提高了+4.1% ，在所有四个维度上都有所改善，在任务完成（ +6.0% ）和响应质量（ +6.8% ）方面的改进最大。 进一步的分析表明， PersonaForge训练的代理使用更少的回合和工具调用，这表明提高了交互效率，而消融证实了SOUL组件和自适应模拟的贡献。 PersonaForge和PersonaForge-Bench共同为在现实的多回合用户交互下训练和评估座席奠定了基础。
+
+</details>
+
+---
+
+## 7. CoCoBench: A Cooperative Coordination Benchmark for Embodied Multi-Agent Task Planning / CoCoBench ：体现多Agent任务规划的合作协调基准
+
+**Date**: 2026-08-28 | **arXiv**: [2608.28266v1](http://arxiv.org/abs/2608.28266v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.28266v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agent systems powered by multimodal large language models (MLLMs) have advanced rapidly in recent years, yet existing embodied-agent benchmarks still lack fine-grained diagnostics for multi-agent coordination. Most benchmarks either focus on single-agent task completion or summarize multi-agent behavior with overall task success rates, which can obscure coordination failures such as duplicated work, violations of ordering constraints, resource contention, and desynchronized handoffs. In this paper, we introduce CoCoBench, a construct-level benchmark for evaluating multi-agent embodied coordination in executable household tasks. CoCoBench contains 897 oracle-validated instances organized around four recurring coordination constructs: task allocation, sequential ordering, mutual exclusion, and handoff coordination. In addition to task success rate, CoCoBench provides construct-level scores that measure whether agents coordinate effectively. We evaluate 11 leading MLLMs across different coordination modes, observation inputs, and numbers of agents. The results show that coordination ability is highly construct-specific: strong overall performance does not imply balanced competence across different coordination types. These findings point to new directions for designing targeted model architectures and improving multi-agent coordination ability.
+
+近年来，由多模态大型语言模型（ MLLM ）提供支持的Agent系统发展迅速，但现有的嵌入式Agent基准仍然缺乏用于多Agent协调的细粒度诊断。 大多数基准要么专注于单代理任务完成，要么总结具有整体任务成功率的多代理行为，这可能会掩盖协调失败，例如重复工作、违反订单约束、资源争用和非同步交接。 在本文中，我们介绍了CoCoBench ，这是一个用于评估可执行家庭任务中多智能体具体协调的构造级基准。 CoCoBench包含897个经过预言机验证的实例，这些实例围绕四个循环协调结构进行组织：任务分配、顺序排序、互斥和移交协调。 除了任务成功率外， CoCoBench还提供构造级分数，用于衡量代理是否有效地协调。 我们评估了跨不同协调模式、观察输入和药剂数量的11个领先的MLLM。 结果表明，协调能力具有高度构造特定性：强大的整体绩效并不意味着跨不同协调类型的平衡能力。 这些发现为设计有针对性的模型架构和提高多智能体协调能力指明了新的方向。
+
+</details>
+
+---
+
+## 8. Finding Where the Buck Stops: An Automated Failure Attribution-Based Reflection Framework for Multi-Agent Collaboration / 找出问题所在：用于多代理协作的基于故障归因的自动反思框架
+
+**Date**: 2026-08-28 | **arXiv**: [2608.28264v1](http://arxiv.org/abs/2608.28264v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.28264v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent systems (MAS) powered by large language models have shown promise for complex tasks but suffer from high failure rates. Current self-reflection methods for MAS require all agents to reflect upon failure, overlooking a critical reality: failures typically stem from a specific agent leading the task astray, namely the decisive error agent, while others merely fulfill their regular duties. Forcing regular-behaving agents to reflect contaminates their memory with wrong insights. Hence, we propose DoCtOR (Diagnose-then-Correct PPO-enhanced Reflection), a novel reflection framework that enhances multi-agent collaboration. DoCtOR first identifies the decisive error step and decisive error agent through automated failure attribution, then employs counterfactual reasoning to generate a corrected decisive error step, and finally engages only the decisive error agent to produce targeted reflections. Experimental results show DoCtOR achieves 22%, 26%, and 27% improvements over initial success rates on HotPotQA, ChartQAPro, and Mind2Web datasets, outperforming Reflexion, Retroformer, and COPPER. We further establish the generalizability of our diagnose-then-correct paradigm and demonstrate that in low-resource settings, focusing reflection on reasoning steps after the decisive error step achieves comparable quality to reflecting on the complete failure trajectory.
+
+由大型语言模型提供支持的多智能体系统（ MAS ）已显示出对复杂任务的承诺，但存在高故障率。 MAS目前的自我反思方法要求所有代理人反思失败，忽略了一个关键现实：失败通常源于特定代理人导致任务误入歧途，即决定性错误代理人，而其他代理人只是履行其常规职责。 强迫行为正常的客服代表反思会用错误的见解污染他们的记忆。 因此，我们提出了DoCtOR （ Diagnose-then-Correct PPO-enhanced Reflection ） ，这是一种增强多智能体协作的新型反射框架。 DoCtOR首先通过自动故障归因识别决定性错误步骤和决定性错误代理，然后采用反事实推理生成纠正的决定性错误步骤，最后仅使用决定性错误代理产生有针对性的反射。 实验结果显示， DoCtOR在HotPotQA、ChartQAPro和Mind2Web数据集上的初始成功率比初始成功率提高了22%、26%和27% ，优于Reflexion、Retroformer和铜。 我们进一步建立了我们的诊断-然后-正确范式的普遍性，并证明在低资源环境中，在决定性错误步骤之后，专注于推理步骤的反思可以达到与反映完整故障轨迹相当的质量。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-29 (8 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-08-29
