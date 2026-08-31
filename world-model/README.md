@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-31](papers/2026-08-31.md) - 1 papers
 - [2026-08-29](papers/2026-08-29.md) - 3 papers
 - [2026-08-28](papers/2026-08-28.md) - 5 papers
 - [2026-08-27](papers/2026-08-27.md) - 13 papers
@@ -142,6 +143,34 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-31 (1 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-08-31
+
+**Paper Count**: 1
+
+---
+
+## 1. ChainSplat: A Physics-Inspired Screw-Theoretic Model for Learning Deformable Linear Object Dynamics from Multi-View RGB Videos / ChainSplat ：从多视图RGB视频学习可变形线性物体动力学的物理启发螺旋理论模型
+
+**Date**: 2026-08-28 | **arXiv**: [2608.28570v1](http://arxiv.org/abs/2608.28570v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.28570v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Identifying the underlying dynamics and 3D geometry of deformable linear objects (DLOs), such as cables, ropes, and hoses, is essential for accurate robotic manipulation, but remains challenging due to their high-dimensional configuration spaces and diverse behaviors arising from varying material properties. Existing methods often rely on multi-stage pipelines and auxiliary depth inputs, which are prone to errors under dynamic interactions, while their high-dimensional state representations make model-based control computationally expensive. In this paper, we introduce ChainSplat, a physics-inspired framework that jointly learns the 3D geometry, appearance, kinematics, and dynamics of DLOs solely from multi-view RGB videos. ChainSplat represents a DLO as an open-chain structure of rigid links connected by revolute joints, yielding an analytic, screw-theoretic model with a compact state representation parameterized by joint configurations. By integrating this formulation with Gaussian splatting, ChainSplat jointly recovers DLO dynamics, kinematics-aware 3D geometry, and appearance, while enabling high-fidelity RGB rendering from arbitrary states. Through real-world experiments, we demonstrate that ChainSplat achieves state-of-the-art performance in dynamics predictions, 3D geometry reconstruction, and RGB rendering across dynamic interactions. ChainSplat further enables real-time state and force estimation, as well as accurate model-based trajectory optimization, highlighting its practical utility for real-world robotic manipulation of DLOs. Accompanying source code and video are available at: https://chainsplat.github.io.
+
+识别可变形线性物体（ DLO ） （如电缆、绳索和软管）的底层动态和三维几何形状对于精确的机器人操作至关重要，但由于其高维配置空间和不同材料特性引起的不同行为，因此仍然具有挑战性。 现有方法通常依赖于多级流水线和辅助深度输入，这些方法在动态交互下容易出错，而它们的高维状态表示使得基于模型的控制在计算上昂贵。 在本文中，我们介绍了ChainSplat ，这是一个受物理学启发的框架，仅从多视图RGB视频中共同学习DLO的三维几何形状、外观、运动学和动力学。 ChainSplat将DLO表示为通过旋转接头连接的刚性链节的开放链结构，从而产生一个分析的螺旋理论模型，该模型具有通过接头配置参数的紧凑状态表示。 通过将此配方与高斯溅射相结合， ChainSplat可联合恢复DLO动态、运动感知3D几何形状和外观，同时实现任意状态的高保真RGB渲染。 通过真实世界的实验，我们证明了ChainSplat在动态交互的动力学预测、三维几何重建和RGB渲染方面实现了最先进的性能。 ChainSplat进一步实现了实时状态和力估计，以及基于模型的精确轨迹优化，
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-29 (3 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-08-29
