@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-31](papers/2026-08-31.md) - 1 papers
 - [2026-08-29](papers/2026-08-29.md) - 1 papers
 - [2026-08-28](papers/2026-08-28.md) - 18 papers
 - [2026-08-27](papers/2026-08-27.md) - 23 papers
@@ -146,6 +147,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-31 (1 papers)</b></summary>
+
+# arXiv Video Papers - 2026-08-31
+
+**Paper Count**: 1
+
+---
+
+## 1. AcrossVAM1.0: Particle World Modeling for Text-Assisted Robot Video Prediction / AcrossVAM1.0 ：文本辅助机器人视频预测的粒子世界建模
+
+**Date**: 2026-08-28 | **arXiv**: [2608.28491v1](http://arxiv.org/abs/2608.28491v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.28491v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Predicting robot videos requires both precise motion reasoning and preservation of high-frequency appearance, yet monolithic pixel models entangle these objectives and often conceal their progress behind a strong last-frame baseline. We present AcrossVAM1.0, a lightweight, text-assisted video action model that factorizes future prediction into object-centric motion and dense appearance. A frozen SAM3-DLP codec decomposes four context frames into semantic particles for the robot, arm, and gripper, together with a background latent. A 0.28M-parameter spatio-temporal Transformer aligns particle identities, rolls their states forward, and is modulated by a frozen OpenCLIP instruction embedding through FiLM. A causal dual-stream decoder combines particle-rendered motion with appearance encoded exclusively from the last observed frame; a residual refiner and learned delivery mask produce five future frames without access to future appearance. On our VRS benchmark constructed from diverse real-robot trajectories, particle dynamics reduce trajectory error by 21.0\% over persistence. Across three delivery-mask seeds, AcrossVAM1.0 improves future-frame PSNR/SSIM from 19.97/0.796 to 20.573/0.8004, while raw particle generation improves motion-region PSNR from 11.89 to 13.23. The delivered model does not yet beat persistence in LPIPS, and correct-versus- shuffled language changes trajectory error by only 2.8--3.1%. We report these limitations alongside oracle, negative-control, multi-seed, and per-robot analyses. The results show that explicit particle dynamics are a promising low-dimensional interface for robot video prediction, while robust language grounding and appearance delivery remain the principal open challenges.
+
+预测机器人视频需要精确的运动推理和保持高频外观，但单片像素模型将这些目标纠缠在一起，并经常将它们的进展隐藏在强大的最后一帧基线之后。 我们提出了AcrossVAM1.0 ，这是一种轻量级的文本辅助视频动作模型，将未来预测分解为以对象为中心的运动和密集的外观。 冻结的SAM3-DLP编解码器将四个上下文帧分解为机器人、ARM和抓取器的语义粒子，以及背景潜在。 0.28 M参数的时空变压器对齐粒子身份，向前滚动其状态，并通过FiLM嵌入的冻结OpenCLIP指令进行调制。 因果双流解码器将粒子渲染的运动与仅从最后观察到的帧编码的外观相结合；残留精简器和学习的交付掩码产生五个未来的帧，而无法访问未来的外观。 在我们由不同的实际机器人轨迹构建的VRS基准上，粒子动力学比持久性减少了21.0\ %的轨迹误差。 在三个传递掩模种子中， AcrossVAM1.0将未来帧PSNR/SSIM从19.97/0 .796提高到20.573/0 .8004 ，而原始粒子生成将运动区域PSNR从11.89提高到13.23。 交付的模型尚未超过LPIPS中的持久性，正确与洗牌的语言仅改变了2.8--3.1%的轨迹误差。 我们将这些限制与甲骨文、负面控制、
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-29 (1 papers)</b></summary>
 
 # arXiv Video Papers - 2026-08-29
