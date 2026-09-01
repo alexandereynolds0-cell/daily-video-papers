@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-01](papers/2026-09-01.md) - 11 papers
 - [2026-08-31](papers/2026-08-31.md) - 1 papers
 - [2026-08-29](papers/2026-08-29.md) - 1 papers
 - [2026-08-28](papers/2026-08-28.md) - 18 papers
@@ -147,6 +148,196 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-01 (11 papers)</b></summary>
+
+# arXiv Video Papers - 2026-09-01
+
+**Paper Count**: 11
+
+---
+
+## 1. FlowVVTON: Flow-Guided Mask-Free Video Virtual Try-On / FlowVVTON ：流式引导无掩码视频虚拟试用
+
+**Date**: 2026-08-31 | **arXiv**: [2608.30450v1](http://arxiv.org/abs/2608.30450v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.30450v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video virtual try-on aims to transfer a target garment onto a moving person across video frames. Current methods rely on human parsing masks or pose keypoints that frequently fail under large motions and occlusions, causing boundary artifacts and temporal inconsistency. A further limitation is that most approaches rely solely on attention mechanisms for temporal modeling, providing no explicit motion supervision. We propose FlowVVTON, a mask-free framework that eliminates parsing mask dependency entirely. Optical flow is used solely as a training-time supervision signal: a flow-warped latent loss, applied across all layers of the generation model, enforces multi-scale temporal consistency by aligning adjacent-frame features under explicit physical motion constraints. A two-stage training strategy establishes mask-free spatial alignment before introducing flow-guided temporal supervision. Experiments on TikTokDress show that FlowVVTON outperforms baselines by substantial margins, particularly in temporal consistency (5.7$\times$ VFID-R improvement over SwiftTry), while requiring no segmentation masks, pose keypoints, or region annotations at any stage.
+
+视频虚拟试穿旨在通过视频帧将目标服装转移到移动的人身上。 目前的方法依赖于人工解析掩码或在大运动和遮挡下经常失败的姿势关键点，导致边界伪影和时间不一致。 另一个局限性是，大多数方法仅依赖于时间建模的注意机制，没有提供明确的运动监督。 我们提出了FlowVVTON ，这是一个完全消除了解析掩码依赖性的无掩码框架。 光流仅用作训练时间监督信号：在生成模型的所有层上应用的流扭曲潜在损失，通过在显式物理运动约束下对齐相邻帧特征来强制实现多尺度时间一致性。 在引入流动引导的时间监督之前，两阶段训练策略建立无掩模空间对齐。 TikTokDress上的实验表明， FlowVVTON的性能明显优于基线，特别是在时间一致性方面（比SwiftTry提高了5.7 $\ times $ VFID-R ） ，同时在任何阶段都不需要分割掩码、姿势关键点或区域注释。
+
+</details>
+
+---
+
+## 2. Dynamic Hub-and-Spoke Memory for Streaming Video Understanding / 用于理解流媒体视频的动态集线器和辐条内存
+
+**Date**: 2026-08-31 | **arXiv**: [2608.30294v1](http://arxiv.org/abs/2608.30294v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.30294v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Streaming video understanding requires answering questions at arbitrary times over a continuously growing visual stream. The central challenge is to compactly remember long-range history while effectively retrieving question-relevant evidence. We propose Dynamic Hub-and-Spoke Memory (D-HSM), a training-free framework that represents distant history as structured textual memory while preserving the recent frames as visual tokens for fine-grained perception. Specifically, D-HSM turns selected historical video chunks into typed textual observations and stores them in an entity-centered hub-and-spoke memory, with entities as hubs and related evidence as spokes. When answering a question, D-HSM dynamically retrieves a compact question-aware memory subset, expands it through hub-and-spoke links, and combines it with the recent visual window for frozen-VLM answer prediction. Extensive experiments on both streaming and long video benchmarks show that D-HSM consistently and substantially improves VLM backbones and outperforms other state-of-the-art online and offline video understanding baselines.
+
+流媒体视频理解需要在不断增长的视觉流中任意回答问题。 核心挑战是紧凑地记住长期历史，同时有效地检索与问题相关的证据。 我们提出了动态中心辐射记忆（ D-HSM ） ，这是一个无需训练的框架，将遥远的历史表示为结构化的文本记忆，同时将最近的帧保留为视觉令牌，以实现细粒度的感知。 具体而言， D-HSM将选定的历史视频块转换为类型化的文本观察，并将其存储在以实体为中心的集线器和辐条存储器中，实体作为集线器，相关证据作为辐条。 在回答问题时， D-HSM会动态检索一个紧凑的问题感知内存子集，通过中心辐射链接对其进行扩展，并将其与最近用于冻结-VLM答案预测的可视窗口相结合。 在流媒体和长视频基准上的广泛实验表明， D-HSM始终如一地大幅改善了VLM主干，并优于其他最先进的在线和离线视频理解基线。
+
+</details>
+
+---
+
+## 3. Motion-Saliency Complementary Masked Modeling for Point Cloud Video Understanding / 用于理解点云视频的运动咸度互补掩蔽建模
+
+**Date**: 2026-08-31 | **arXiv**: [2608.30279v1](http://arxiv.org/abs/2608.30279v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.30279v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Point cloud video representation learning is crucial for 3D dynamic scene understanding. In this paper, we propose MoSaiC, a novel Motion-Saliency Complementary masked modeling framework for self-supervised point cloud video representation learning. MoSaiC couples three components: Curriculum Motion-Saliency Masking (CMSM), which guides the masking process toward motion-salient tokens under a curriculum schedule; Normal-Flow Motion (NFM) modeling, which supervises the local rigid rotation of each token in the Lie algebra so(3) as an explicit geometric motion target; and Cross-view Token Consistency Prediction (CTCP), which enforces consistency between two complementary masked views at the token level. Together, these components allow MoSaiC to effectively capture both appearance and motion dynamics. Extensive experiments on multiple downstream tasks, including action recognition, temporal action segmentation, and point-level semantic segmentation, demonstrate the effectiveness of our approach.
+
+点云视频表示学习对于三维动态场景理解至关重要。 在本文中，我们提出了MoSaiC ，一种用于自监督点云视频表示学习的新型Motion-Saliency Complementary掩模建模框架。 MoSaiC将三个组成部分耦合在一起：课程运动咸度掩蔽（ CMSM ） ，它将掩蔽过程引导到课程计划下的运动咸度令牌；正常流动运动（ NFM ）建模，它监督李代数中每个令牌的局部刚性旋转，因此（ 3 ）作为显式的几何运动目标；以及交叉视图令牌一致性预测（ CTCP ） ，它在令牌级别强制执行两个互补的掩蔽视图之间的一致性。 总之，这些组件使MoSaiC能够有效地捕捉外观和运动动态。 针对多个下游任务（包括动作识别、时间动作分割和点级语义分割）的大量实验证明了我们方法的有效性。
+
+</details>
+
+---
+
+## 4. ReLViC: Loss-Resilient Learned Video Coding with Dispersed Packetization and Controllable Packet Dependencies / ReLViC ：具有分散分组和可控分组依赖性的丢失恢复学习视频编码
+
+**Date**: 2026-08-31 | **arXiv**: [2608.30202v1](http://arxiv.org/abs/2608.30202v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.30202v1)
+
+**Categories**: eess.IV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Packet loss can severely impair learned video coding because missing latent tokens compromise both spatial reconstruction and temporal prediction. We present ReLViC, a loss-resilient learned video coding framework that jointly addresses latent coding and packet-loss recovery. ReLViC disperses spatially adjacent latent tokens across packets and employs a dual-purpose Transformer to estimate entropy-model parameters during coding and reconstruct missing latent tokens at the receiver. It controls packet dependencies through a periodic-reset packet-context topology parameterized by the segment length, thereby tuning the trade-off between compression efficiency and error-propagation range without retraining. A three-stage progressive training procedure establishes single-frame coding, learns temporal context for entropy modeling, and then optimizes the recovery of masked latent tokens under simulated packet loss. Experiments using burst-loss traces evaluate ReLViC against H.265 protected by Reed--Solomon forward error correction (FEC) and GRACE, a loss-resilient learned video codec. ReLViC delivers more stable reconstruction and outperforms both baselines under severe packet loss.
+
+丢包会严重损害学习到的视频编码，因为丢失的潜在令牌会损害空间重建和时间预测。 我们提出了ReLViC ，这是一种具有损失恢复能力的学习视频编码框架，共同解决潜在编码和丢包恢复问题。 ReLViC将空间相邻的潜在令牌分散在数据包中，并采用双用途变压器在编码过程中估计熵模型参数，并在接收器处重建缺失的潜在令牌。 它通过由段长度参数化的周期性重置数据包上下文拓扑来控制数据包依赖性，从而在不重新训练的情况下调整压缩效率和错误传播范围之间的权衡。 三阶段渐进训练过程建立单帧编码，学习熵建模的时间上下文，然后在模拟丢包情况下优化隐藏令牌的恢复。 使用突发损失跟踪的实验评估了Reed-Solomon前向纠错（ FEC ）和GRACE （一种具有损失恢复能力的学习视频编解码器）保护的H.265的ReLViC。 ReLViC可提供更稳定的重建，并且在严重丢包的情况下优于两个基线。
+
+</details>
+
+---
+
+## 5. NoisEasier: Test-Time Noise Optimization for Text-to-Video Generation / NoisEasier ：针对文本到视频生成的测试时噪声优化
+
+**Date**: 2026-08-31 | **arXiv**: [2608.30194v1](http://arxiv.org/abs/2608.30194v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.30194v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion models have recently advanced text-to-video (T2V) generation, yet they still struggle with fine-grained compositional alignment, such as attribute binding, spatial relations, and object interactions. While reward-based fine-tuning improves alignment, it is susceptible to reward hacking and adapts poorly to new prompt distributions. In this work, we propose NoisEasier, a test-time scaling framework that improves T2V generation through differentiable reward-guided noise optimization without modifying the underlying model. By combining efficient short-step generators with a multi-objective reward formulation, NoisEasier enables stable and practical test-time optimization under realistic inference budgets. Our key insight is that jointly optimizing the entire stochastic trajectory accelerates reward convergence and improves compositional alignment over optimizing only the initial latent, with negligible additional computational and time cost. Experiments on VBench and T2V-CompBench demonstrate consistent improvements across multiple backbones, achieving over 10% average gains on challenging dimensions such as attribute binding, object interaction, and numeracy. Overall, NoisEasier serves as both a flexible alternative and a complementary enhancement to reward-based fine-tuning, establishing test-time scaling as an effective paradigm for controllable text-to-video generation.
+
+扩散模型最近已经先进的文本到视频（ T2V ）生成，但它们仍然难以进行精细的组合对齐，例如属性绑定、空间关系和对象交互。 虽然基于奖励的微调可以提高一致性，但它很容易奖励黑客，并且很难适应新的提示分布。 在这项工作中，我们提出了NoisEasier ，这是一个测试时间缩放框架，通过可微分奖励引导的噪声优化来改善T2V生成，而无需修改底层模型。 通过将高效的短步生成器与多目标奖励公式相结合， NoisEasier能够在现实的推理预算下实现稳定而实用的测试时间优化。 我们的关键见解是，联合优化整个随机轨迹可以加速奖励收敛，并改善组合对齐，而不是仅优化初始潜伏期，而额外的计算和时间成本可以忽略不计。 在VBench和T2V-CompBench上进行的实验表明，在多个骨干网上实现了一致的改进，在属性绑定、对象交互和计算能力等具有挑战性的维度上实现了超过10%的平均收益。 总体而言， NoisEasier既是基于奖励的微调的灵活替代品，也是其补充增强功能，将测试时间缩放作为可控文本到视频生成的有效范例。
+
+</details>
+
+---
+
+## 6. RIDGE: Region-Informed Derivative-Guided Evidence Selection for Long Video Understanding / RIDGE ：区域知情衍生品引导证据选择，实现长期视频理解
+
+**Date**: 2026-08-30 | **arXiv**: [2608.29958v1](http://arxiv.org/abs/2608.29958v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.29958v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long videos contain far more visual content than Large Vision-Language Models (LVLMs) can process under a fixed visual-token budget, making frame selection essential. Existing query-aware selectors usually estimate frame-query relevance and build a compact subset from high-scoring frames. Although their mechanisms differ, the similarity sequence is still often treated primarily as values to rank or sample from, rather than as an ordered signal whose shape reflects how query-relevant evidence emerges, peaks, and fades over time. This can obscure frames that explain, contextualize, or follow an event, because such evidence may lie on the rising or falling sides of a nearby relevance peak and receive lower absolute scores. We propose RIDGE, a frame selection framework that reads the frame-query similarity curve as a temporal signal. By using local changes and curvature, RIDGE partitions the timeline into structural regions and applies region-specific selection to preserve event cores, transitions, buildup, aftermath, and contextual frames under a fixed budget. It is a lightweight post-processing step on precomputed frame-query scores and requires neither training nor iterative LVLM calls. Across four long-video benchmarks and three backbones, RIDGE achieves the best performance in most settings and remains competitive in the others.
+
+长视频包含的视觉内容远远超过大型视觉语言模型（ LVLM ）在固定的视觉代币预算下可以处理的内容，因此帧选择至关重要。 现有的查询感知选择器通常会估计帧查询的相关性，并从高分帧中构建一个紧凑的子集。 尽管它们的机制不同，但相似性序列仍然通常主要被视为要排序或采样的值，而不是作为有序信号，其形状反映了查询相关证据如何随着时间的推移出现、达到峰值和褪色。 这可能会模糊解释、语境化或跟踪事件的框架，因为此类证据可能位于附近相关性峰值的上升或下降侧，并获得较低的绝对分数。 我们提出了RIDGE ，这是一种将帧查询相似性曲线读取为时间信号的帧选择框架。 通过使用局部变化和曲率， RIDGE将时间轴划分为结构区域，并应用特定于区域的选择，以在固定预算下保留事件核心、转换、积累、余波和上下文帧。 这是对预先计算的帧查询分数的轻量级后处理步骤，既不需要训练也不需要迭代LVLM调用。 在四个长视频基准和三个骨干中， RIDGE在大多数环境中实现了最佳性能，并在其他环境中保持竞争力。
+
+</details>
+
+---
+
+## 7. Matrix-Game 3.5: Enhancing Real-Time Streaming Interactive World Models with Patch Memory / Matrix-Game 3.5 ：使用补丁内存增强实时流媒体交互式世界模型
+
+**Date**: 2026-08-30 | **arXiv**: [2608.29910v1](http://arxiv.org/abs/2608.29910v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.29910v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Interactive world models extend video generation from offline clip synthesis toward persistent simulation of interactive virtual worlds, enabling applications in games, robotics, embodied agents, and XR. Achieving stable long-horizon interactive generation, however, remains challenging, as the model must simultaneously preserve scene geometry, dynamic consistency, and camera control while supporting real-time autoregressive generation. Building upon Matrix-Game 3.0, we present Matrix-Game 3.5, as shown in Figure 1, which advances real-time interactive world generation toward geometry-aware and long-horizon consistent simulation through three key improvements. First, we propose a unified geometry-aware memory framework, whose patch-memory and tiled-PRoPE components introduce no additional learnable parameters, combining explicit 3D patch retrieval with projective camera conditioning to enable geometry-consistent camera control and faithful long-horizon scene recall. Second, we introduce a static-dynamic disentangled world representation that separately models static scene geometry and dynamic subjects, preserving both geometric consistency and subject identity throughout long-horizon generation. Third, we develop a two-stage progressive real-time distillation framework that converts a bidirectional diffusion model into a few-step causal generator through Perceptual Flow Matching and curriculum based Self-Rollout DMD, enabling minute-long real-time interactive generation. Extensive experiments demonstrate that, with a unified training corpus spanning Unreal simulation environments, open-world games, and internet videos, MatrixGame 3.5 achieves strong performance in long-horizon scene recall, precise camera control, subject consistency, prompt-driven world generation, and stable real-time open-world interaction.
+
+交互式世界模型将视频生成从离线剪辑合成扩展到交互式虚拟世界的持续模拟，从而实现游戏、机器人、嵌入式代理和XR中的应用。 然而，实现稳定的长视野交互生成仍然具有挑战性，因为模型必须同时保留场景几何形状、动态一致性和相机控制，同时支持实时自回归生成。 在Matrix-Game 3.0的基础上，我们提出了Matrix-Game 3.5 ，如图1所示，它通过三个关键改进，将实时交互式世界生成推进到几何感知和长视野一致性模拟。 首先，我们提出了一个统一的几何感知内存框架，其补丁内存和平铺PRoPE组件不引入额外的可学习参数，将显式3D补丁检索与投影摄像机调节相结合，实现几何一致的摄像机控制和忠实的长视野场景召回。 其次，我们引入了静态-动态解开的世界表示，分别对静态场景几何和动态主体进行建模，在整个长视野生成过程中保持几何一致性和主体身份。 第三，我们开发了一个两阶段渐进式实时蒸馏框架，通过感知流匹配和基于课程的自滚动DMD将双向扩散模型转换为几步因果生成器，实现了长达一分钟的实时交互生成。
+
+</details>
+
+---
+
+## 8. CineForge: Self-Improving Agents for Long-Horizon Video Generation / CineForge ：用于长视野视频生成的自我改进代理
+
+**Date**: 2026-08-30 | **arXiv**: [2608.29621v1](http://arxiv.org/abs/2608.29621v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.29621v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon story-driven video generation requires a production agent to coordinate narrative decomposition, state tracking, shot design, prompt construction, rendering, and revision across interdependent scenes. Existing adaptive video systems primarily refine requests or reusable skills, leaving recurring production failures disconnected from persistent, stage-targeted improvements across stories. We introduce CineForge, a self-evolving video-production agent framework that couples CineForge-Produce for video generation with CineForge-Evolve for cross-story policy evolution. CineForge-Produce organizes each source story into typed narrative, character, spatial, and cinematic states, uses them to coordinate asset and clip generation, and records the process as a canonical production trajectory. CineForge-Evolve applies Case-to-Pattern-to-Policy Evolution (CPPE) to review trajectory evidence, consolidate recurrent findings into bounded stage-local patches, and deploy validated updates through structural replay and confidence-controlled paired evaluation. To measure complete story realization, we introduce CineScope, which combines a 100-script CineScope-Data suite with a human-aligned, multiscale CineScope-Metric spanning causal state, directorial orchestration, pacing and resource allocation, and character arc. Across CineScope-Data and two public benchmarks, the evolved CineForge policy improves CineScope-Metric from 4.024 to 4.380, outperforms three long-video baselines with consistent gains under ScriptAgent, and reduces review LLM calls by 37.0% on new stories. These results establish production trajectories as actionable experience for video agents that improve cumulatively across long-form storytelling tasks.
+
+长视野故事驱动的视频生成需要制作代理在相互依赖的场景中协调叙事分解、状态跟踪、镜头设计、提示构建、渲染和修订。 现有的自适应视频系统主要改进请求或可重复使用的技能，使反复出现的生产故障与跨故事的持续、有针对性的改进脱节。 我们介绍了CineForge ，这是一个自我演进的视频制作代理框架，它将CineForge-Produce与CineForge-Evolve相结合，用于视频生成，以实现跨故事的策略演进。 CineForge-Produce将每个源故事组织成类型化的叙事、角色、空间和电影状态，使用它们来协调资产和剪辑生成，并将该过程记录为规范的生产轨迹。 CineForge-Evolve应用Case-to-Pattern-to-Policy Evolution （ CPPE ）来审查轨迹证据，将反复出现的发现整合到有界的阶段性局部补丁中，并通过结构重放和置信度控制配对评估部署经过验证的更新。 为了衡量完整的故事实现，我们引入了CineScope ，它将100个脚本的CineScope-Data套件与人类对齐的多尺度CineScope-Metric跨越因果状态、导演编排、起搏和资源分配以及字符弧线相结合。 在CineScope-Data和两个公共基准中，演进的CineForge政策将CineScope-Metric从4.024提高到4.380 ，优于三个长视频基线
+
+</details>
+
+---
+
+## 9. On the Resilience of Text-to-Video Diffusion Models to Hardware Faults / 论文本视频扩散模型对硬件故障的弹性
+
+**Date**: 2026-08-30 | **arXiv**: [2608.29598v1](http://arxiv.org/abs/2608.29598v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.29598v1)
+
+**Categories**: cs.LG
+
+**Code**: https://github.com/ztcoalson/T2V-Resilience
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present the first systematic study of the resilience of text-to-video (T2V) diffusion models under random hardware-level faults. While T2V models are widely used for automated video generation due to their ability to produce high-quality, temporally coherent, and realistic videos, their iterative denoising process and spatiotemporal dependencies introduce unique failure modes. We perform an extensive fault-injection study covering both computational and memory faults across three T2V models and a representative benchmark. Our results show that (1) a single fault can degrade overall performance by up to 3.7\%, with semantic correctness more affected than perceptual quality; (2) memory faults are more damaging than computational faults, high-order exponent bits are particularly vulnerable, and the widely-used bfloat16 is more susceptible than alternative formats; and (3) 7-28\% of faults cause visible artifacts, including semantic changes such as added objects, suggesting that single faults are sufficient to alter output semantics. Our findings reveal reliability risks in deployed T2V systems and motivate further research on improving fault resilience. Code: \href{https://github.com/ztcoalson/T2V-Resilience}{https://github.com/ztcoalson/T2V-Resilience}.
+
+我们首次系统地研究了随机硬件级故障下文本到视频（ T2V ）扩散模型的弹性。 虽然T2V模型由于能够生成高质量、时间连贯和逼真的视频而被广泛用于自动视频生成，但其迭代去噪过程和时空依赖性引入了独特的故障模式。 我们进行了广泛的故障注入研究，涵盖了三种T2V模型和代表性基准的计算和内存故障。 我们的结果表明： （ 1 ）单个故障可使整体性能下降3.7\ % ，语义正确性比感知质量受到的影响更大； （ 2 ）记忆故障比计算故障更具破坏性，高阶指数位特别容易受到攻击，广泛使用的bfloat16比其他格式更容易受到影响； （ 3 ） 7-28\ %的故障会导致可见伪影，包括添加对象等语义变化，这表明单个故障足以改变输出语义。 我们的研究结果揭示了部署的T2V系统的可靠性风险，并激励进一步研究如何提高故障恢复能力。 代码：\ href {https://github.com/ztcoalson/T2V-Resilience} {https://github.com/ztcoalson/T2V-Resilience}。
+
+</details>
+
+---
+
+## 10. Neural video codecs quality assessment dataset and benchmark / 神经视频编解码器质量评估数据集和基准
+
+**Date**: 2026-08-29 | **arXiv**: [2608.29331v1](http://arxiv.org/abs/2608.29331v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.29331v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video traffic constitutes a significant share of global web traffic. To reduce its volume, video codecs have been developed and continuously improved. While the industry has achieved substantial progress in traditional video coding, neural video codecs (NVCs) have recently emerged as a new approach that applies deep learning to video compression. This creates new challenges for compression quality assessment, which is essential for the further development and improvement of such codecs. In particular, it is important to evaluate the novel temporal compression paradigms introduced by NVCs. In this work, we present a large-scale subjective dataset of videos compressed with both neural and traditional video codecs. The subjective scores were collected through crowd-sourced pairwise comparisons. The proposed dataset provides a valuable resource for the development and benchmarking of video quality metrics tailored to neural video codecs. The dataset is available at the following link: https://videoprocessing.github.io/nvc-dataset-benchmark
+
+视频流量占全球网络流量的很大一部分。 为了减少音量，视频编解码器已经开发并不断改进。 虽然该行业在传统视频编码方面取得了实质性进展，但神经视频编解码器（ NVC ）最近已成为一种将深度学习应用于视频压缩的新方法。 这给压缩质量评估带来了新的挑战，这对于进一步开发和改进此类编解码器至关重要。 特别是，评估NVC引入的新型时间压缩范式非常重要。 在这项工作中，我们展示了一个使用神经和传统视频编解码器压缩的大规模主观视频数据集。 通过众包成对比较收集主观分数。 所提出的数据集为针对神经视频编解码器量身定制的视频质量指标的开发和基准测试提供了宝贵的资源。 数据集可在以下链接获得： https://videoprocessing.github.io/nvc-dataset-benchmark
+
+</details>
+
+---
+
+## 11. Test-Time Scaling for Video Diffusion Models via Diagnosis-Guided Candidate Recycling / 通过诊断指导候选回收对视频扩散模型进行测试时间缩放
+
+**Date**: 2026-08-29 | **arXiv**: [2608.29322v1](http://arxiv.org/abs/2608.29322v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.29322v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent video diffusion models have achieved remarkable generation quality, but high-fidelity results still largely depend on closed-source systems or costly large-scale infrastructure. Test-time scaling (TTS) offers a training-free way to improve lightweight generators by spending additional inference compute, yet existing methods mostly remain within a noise-search paradigm: they sample, select, or perturb denoising trajectories and discard low-scoring candidates after expensive generation. This generate-and-discard process wastes not only computation but also the partial motion, layout, or appearance structure already encoded in recoverable samples. We present \textbf{GEARS} (\textbf{G}uided \textbf{E}diting for \textbf{A}daptive \textbf{R}ecycling \textbf{S}earch), a training-free framework that introduces {diagnosis-guided candidate recycling} into video TTS by turning such candidates into editable priors through a generation-evaluation-editing loop. GEARS consists of two collaborative components. The \textbf{Stage-Aware Scheduler} determines what to repair, when to repair it, and which candidates should be preserved, recycled, or discarded. The \textbf{Candidate Recycler} diagnoses recoverable failures from keyframes and multi-dimensional reward feedback, derives candidate-specific repair prompts, and repairs the corresponding candidates through manifold-aware latent SDEdit. The repaired candidates are recycled into the search pool, creating refinement paths beyond standard noise perturbation while preserving useful structure. Under matched NFE budgets, GEARS consistently outperforms existing video TTS methods on VBench, bringing a 1.3B model to a total score comparable to a 14B counterpart, and ablations verify the necessity of adaptive scheduling, diagnosis-conditioned editing, and manifold-aware re-denoising. Code is available on GitHub.
+
+最近的视频扩散模型取得了显着的生成质量，但高保真结果仍然在很大程度上取决于闭源系统或昂贵的大规模基础设施。 测试时间缩放（ TTS ）提供了一种无需训练的方法，通过花费额外的推理计算来改进轻量级生成器，但现有的方法大多停留在噪声搜索范式中：它们对去噪轨迹进行采样、选择或扰动，并在昂贵的生成后丢弃得分较低的候选者。 这种生成和丢弃过程不仅浪费了计算，还浪费了可恢复样本中已编码的部分运动、布局或外观结构。 我们提出\ textbf {gears} (\ textbf {G} uided\ textbf {E} diting for\ textbf {A} daptive\ textbf {R} ecycling\ textbf {S} earch) ，这是一个无需训练的框架，通过生成评估编辑循环将这些候选者转化为可编辑的先验，从而将{诊断引导的候选者回收}引入视频TTS。 GEARS由两个协作组件组成。 \ textbf {Stage-Aware Scheduler}决定修复什么，何时修复，以及应该保留、回收或丢弃哪些候选者。 \ textbf {Candidate Recycler}从关键帧和多维奖励反馈中诊断可恢复的故障，导出特定于候选人的修复提示，并通过流形感知的潜在SDEdit修复相应的候选人。 修复的候选人被回收到搜索池中，从而创建超越
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-31 (1 papers)</b></summary>
 
 # arXiv Video Papers - 2026-08-31
