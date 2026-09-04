@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-04](papers/2026-09-04.md) - 18 papers
 - [2026-09-01](papers/2026-09-01.md) - 9 papers
 - [2026-08-31](papers/2026-08-31.md) - 1 papers
 - [2026-08-29](papers/2026-08-29.md) - 3 papers
@@ -144,6 +145,308 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-04 (18 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-09-04
+
+**Paper Count**: 18
+
+---
+
+## 1. Toward Unified Robot Learning: Bridging Representation, Vision-Language-Action, and World Models / 迈向统一机器人学习：桥接表征、视觉-语言-动作和世界模型
+
+**Date**: 2026-09-03 | **arXiv**: [2609.03927v1](http://arxiv.org/abs/2609.03927v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.03927v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+For robots to operate reliably in real-world environments, they need to perceive their surroundings, act, and reason about the consequences of those actions. Rapid progress in the domains of representation learning, VLA models, and world models has significantly enhanced the capabilities of robot learning systems, enabling robots to work in increasingly complex environments. However, these paradigms are typically developed in isolation, resulting in fragmented systems that struggle with generalization, long-horizon temporal reasoning and planning, and deployment in unstructured environments. In this survey, we present a unified perspective on robot learning by organizing the existing methods along three complementary axes: understanding through representation learning, acting through VLA models, and reasoning through world models. We introduce a structured taxonomy that captures key design choices in environment representation, policy learning, and predictive modeling, and summarize the recent progress in these domains. Beyond classifying the existing works, we analyze how these components interact, discuss common limitations, and highlight emerging trends towards more integrated systems. Through this lens, we identify the challenges in the domain of robot learning, including uncertainty quantification, out-of-distribution generalization, cross-embodiment transfer, long-context understanding, and long-horizon planning. We argue that these challenges arise not only from limitations within individual components but also from the lack of integration across perception, action, and reasoning. Building on this analysis, we outline future directions towards unified, physically grounded, and probabilistic robot learning to develop robust robotic systems that maintain consistent internal representations and support decision making over extended interactions in real-world environments.
+
+为了让机器人在现实环境中可靠地运行，它们需要感知周围的环境、采取行动并推理这些行动的后果。表示学习、VLA模型和世界模型领域的快速进展显着增强了机器人学习系统的能力，使机器人能够在日益复杂的环境中工作。然而，这些范式通常是孤立开发的，导致系统碎片化，难以泛化、长期时间推理和规划以及在非结构化环境中的部署。在本次调查中，我们通过沿三个互补轴组织现有方法，提出了机器人学习的统一视角：通过表示学习进行理解、通过 VLA 模型进行操作以及通过世界模型进行推理。我们引入了一种结构化分类法，该分类法捕获了环境表示、策略学习和预测建模中的关键设计选择，并总结了这些领域的最新进展。除了对现有作品进行分类之外，我们还分析了这些组件如何相互作用，讨论常见的局限性，并强调了更加集成的系统的新兴趋势。通过这个视角，我们确定了机器人学习领域的挑战，包括不确定性量化、分布外泛化、跨实体迁移、长上下文理解和长视野规划。我们认为，这些挑战不仅源于各个组成部分的局限性，还源于感知、行动和推理之间缺乏整合。在此分析的基础上，我们概述了统一、物理基础和概率机器人学习的未来方向，以开发强大的机器人系统，保持一致的内部表示并支持现实环境中扩展交互的决策。
+
+</details>
+
+---
+
+## 2. A hybrid pipeline for dynamic ontology-based semantic mapping / 基于动态本体的语义映射的混合管道
+
+**Date**: 2026-09-03 | **arXiv**: [2609.03891v1](http://arxiv.org/abs/2609.03891v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.03891v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Semantic mapping plays a crucial role in the ability of a robot to interact with objects, operate and navigate a complex environment. The most common pipeline for semantic mapping consists of geometric mapping and localization (SLAM), perception, semantic fusion and semantic representation. However, more recent works also integrate a form of prior knowledge in their application, most notably knowledge graphs or semantic scene graphs, to improve contextual understanding of the environment. In this paper, we present a hybrid pipeline for semantic mapping. Our system incorporates an external calibrated camera using homography projection for geometric mapping and localization, combined with object detection, persistent object tracking and ontology driven semantic updates to build a dynamic semantic world model. Linear regression models are also used for correction of the estimated values of real world coordinates. The system continuously updates object instances, spatial properties and semantic relations based on real time sensory data. Ontologies are selected as form of knowledge representation due to their hierarchical structure, semantic expressiveness and support for dynamic world modelling.
+
+语义映射对于机器人与物体交互、操作和导航复杂环境的能力起着至关重要的作用。最常见的语义映射流程包括几何映射和定位（SLAM）、感知、语义融合和语义表示。然而，最近的作品还在其应用中集成了某种形式的先验知识，最显着的是知识图或语义场景图，以提高对环境的上下文理解。在本文中，我们提出了一种用于语义映射的混合管道。我们的系统结合了外部校准相机，使用单应投影进行几何映射和定位，并结合对象检测、持久对象跟踪和本体驱动的语义更新来构建动态语义世界模型。线性回归模型也用于校正现实世界坐标的估计值。系统根据实时感知数据不断更新对象实例、空间属性和语义关系。由于本体的层次结构、语义表达能力和对动态世界建模的支持，本体被选择作为知识表示的形式。
+
+</details>
+
+---
+
+## 3. Semantic Bayesian World Models / 语义贝叶斯世界模型
+
+**Date**: 2026-09-03 | **arXiv**: [2609.03834v1](http://arxiv.org/abs/2609.03834v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.03834v1)
+
+**Categories**: cs.AI, cs.DB, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Knowledge graphs describe reality in crisp assertions, while the systems now consuming them, foundation models and autonomous agents, reason natively in probabilities. We argue that this mismatch is why the integration of language models and knowledge graphs remains a data-feeding pipeline rather than a unified reasoning architecture. We envision Semantic Bayesian World Models (SBWMs): a Web that describes the world not as a database of facts but as a shared, evolving fabric of beliefs over knowledge graphs, where ontological axioms constrain priors, observations update beliefs by Bayesian conditioning, and actions intervene upon the world. We work through what an agent gains from such a model: a home-security agent deciding whether the figure at the gate is a courier or a burglar, an actuarial estimate aggregated by entailment rather than by string frequency, a planning task that language models reliably fail, and the estimation of quantities that no document has ever stated. We then set out what the community must build to make them possible: belief annotation over RDF~1.2, probabilistic entailment regimes, semantic calibration layers, and protocols by which agents that have never met can exchange, and disagree over, calibrated beliefs.
+
+知识图以清晰的断言描述现实，而现在使用它们的系统、基础模型和自主代理则以概率进行本地推理。我们认为，这种不匹配是语言模型和知识图的集成仍然是数据馈送管道而不是统一推理架构的原因。我们设想语义贝叶斯世界模型（SBWM）：一个网络，它不是将世界描述为事实数据库，而是知识图谱上共享的、不断发展的信念结构，其中本体公理限制先验，观察通过贝叶斯条件更新信念，行动干预世界。我们研究代理从这样的模型中获得的收益：家庭安全代理决定门口的人是快递员还是窃贼，通过蕴涵而不是字符串频率聚合的精算估计，语言模型可靠地失败的规划任务，以及没有文档说明过的数量估计。然后，我们列出了社区必须构建哪些内容才能使它们成为可能：RDF~1.2 上的信念注释、概率蕴涵机制、语义校准层以及从未见过面的代理可以交换和不同意校准信念的协议。
+
+</details>
+
+---
+
+## 4. Rethinking World Models for Safety-Critical Embodied Systems / 重新思考安全关键型体现系统的世界模型
+
+**Date**: 2026-09-03 | **arXiv**: [2609.03774v1](http://arxiv.org/abs/2609.03774v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.03774v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models have progressed from compact latent dynamics to generative, controllable, and interactive simulators of embodied environments. However, high predictive likelihood and visual fidelity do not necessarily ensure that a model preserves the evidence required for safe decision-making. This perspective identifies three structural mismatches in current world modeling: likelihood versus risk, prediction versus intervention, and finite-horizon prediction versus accumulated consequences. We propose the Risk-Informed World Model (RIWM) as a decision-centric research direction for safety-critical embodied systems. RIWM organizes world modeling around consequences, intervention, epistemic uncertainty, and recoverability, and integrates four interdependent capabilities: decision-relevant representation, counterfactual reasoning, safety-critical episodic memory, and runtime safety assurance. It distinguishes physical, social, and operational consequences while using epistemic uncertainty to qualify the evidence supporting action. We further discuss open challenges in identifying consequential futures, validating counterfactual reasoning, maintaining revisable safety memories, translating learned consequences into executable constraints, and determining when evidence is sufficient to act. This perspective argues that future world models should move beyond predicting likely futures toward identifying which futures matter, revising judgments through experience, and recognizing when to act, revise, sense, defer, or abstain.
+
+世界模型已经从紧凑的潜在动力学发展为具体环境的生成、可控和交互式模拟器。然而，高预测可能性和视觉保真度并不一定能确保模型保留安全决策所需的证据。这种观点确定了当前世界模型中的三种结构性不匹配：可能性与风险、预测与干预、有限范围预测与累积后果。我们提出风险知情世界模型（RIWM）作为安全关键型体现系统的以决策为中心的研究方向。 RIWM 围绕后果、干预、认知不确定性和可恢复性组织世界建模，并集成了四种相互依赖的功能：决策相关表示、反事实推理、安全关键情景记忆和运行时安全保证。它区分物理、社会和操作后果，同时使用认知不确定性来限定支持行动的证据。我们进一步讨论了在识别后果性未来、验证反事实推理、维护可修改的安全记忆、将学到的后果转化为可执行的约束以及确定证据何时足以采取行动等方面的开放挑战。这种观点认为，未来世界模型应该超越预测可能的未来，转向识别哪些未来重要，通过经验修正判断，并识别何时采取行动、修正、感知、推迟或放弃。
+
+</details>
+
+---
+
+## 5. WISE: World-model-guided Imagination Scheduling for Efficient Post-training of Vision-Language-Action Models / WISE：世界模型引导的想象力调度，用于视觉-语言-动作模型的高效后期训练
+
+**Date**: 2026-09-03 | **arXiv**: [2609.03681v1](http://arxiv.org/abs/2609.03681v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.03681v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Post-training VLA policies typically rely on supervised fine-tuning with costly expert demonstrations or reinforcement learning with expensive and potentially unstable real-world exploration. World models offer a promising alternative by evaluating candidate behaviors through imagined futures, yet effective post-training requires more than accurate prediction: imagination must be scheduled where it is useful, bounded within reliable horizons, and translated into trustworthy policy supervision. In robotic manipulation, the value of imagination varies substantially across execution stages, while extended rollouts can accumulate prediction errors and introduce unreliable learning signals. We introduce WISE (World-model-guided Imagination Scheduling for Efficient Post-training of Vision-Language-Action Models), a unified framework that coordinates when and how world-model imagination is used during policy refinement. WISE selectively invokes imagination at interaction-relevant states, performs bounded multi-view rollouts, evaluates candidate futures using progress and completion signals, and uses their relative outcomes to refine actions generated from real interaction contexts. Extensive experiments with both $π_0$ and $π_{0.5}$ demonstrate consistent improvements across diverse manipulation tasks while reducing GPU computation time by approximately 80% compared with full imagination. Real-world evaluations further show substantial gains in robustness and generalization under diverse real-world distribution shifts.
+
+训练后的 VLA 策略通常依赖于通过昂贵的专家演示进行监督微调，或者通过昂贵且可能不稳定的现实世界探索进行强化学习。世界模型通过想象的未来评估候选人的行为，提供了一种有前途的替代方案，但有效的后培训需要的不仅仅是准确的预测：想象力必须安排在有用的地方，限制在可靠的范围内，并转化为值得信赖的政策监督。在机器人操作中，想象力的价值在不同的执行阶段有很大差异，而延长的推出可能会累积预测错误并引入不可靠的学习信号。我们引入了 WISE（用于高效视觉-语言-行动模型后期训练的世界模型引导想象力调度），这是一个统一的框架，用于协调在政策细化过程中何时以及如何使用世界模型想象力。 WISE 有选择地在交互相关状态下调用想象力，执行有界多视图推出，使用进度和完成信号评估候选未来，并使用它们的相对结果来完善从真实交互上下文中生成的操作。使用 $π_0$ 和 $π_{0.5}$ 进行的广泛实验表明，与完全想象相比，在不同的操作任务中都取得了一致的改进，同时将 GPU 计算时间减少了约 80%。现实世界的评估进一步表明，在不同的现实世界分布变化下，鲁棒性和泛化性有了显着的提高。
+
+</details>
+
+---
+
+## 6. SV-WAM: An Efficient Surround-View World-Action Model for End-to-End Autonomous Driving / SV-WAM：用于端到端自动驾驶的高效环视世界动作模型
+
+**Date**: 2026-09-03 | **arXiv**: [2609.03602v1](http://arxiv.org/abs/2609.03602v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.03602v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models (WMs) have demonstrated strong potential for end-to-end autonomous driving by learning predictive representations of future scene dynamics. However, generating future videos during inference introduces substantial computational overhead, leading many recent driving WMs to adopt a single front camera as input for efficient deployment. This design restricts spatial coverage in safety-critical maneuvers such as lane changes, merges, and turns. To address this limitation, we propose SV-WAM, a surround-view world-action model (WAM) that preserves full six-camera observations while maintaining efficient inference. SV-WAM leverages future-video prediction as dense training supervision for action learning within a shared generative model, rather than as an inference-time output. At the core of this design is an action-centered causal mask that prevents action tokens from attending to future-video tokens during joint action-video denoising. Consequently, the video branch can be discarded at deployment, enabling efficient action-only planning. Furthermore, we introduce a differentiable drivable-area compliance regularizer that penalizes vehicle-footprint corners approaching or crossing drivable boundaries, improving planning safety and boundary awareness. Extensive experiments on the closed-loop NAVSIMv2 benchmark and the open-loop nuScenes benchmark demonstrate that SV-WAM achieves state-of-the-art planning performance with low inference latency and competitive zero-shot transfer capability.
+
+世界模型（WM）通过学习未来场景动态的预测表示，展示了端到端自动驾驶的强大潜力。然而，在推理过程中生成未来视频会带来大量的计算开销，导致许多最近的驾驶 WM 采用单个前置摄像头作为高效部署的输入。这种设计限制了变道、并道和转弯等安全关键操作的空间覆盖范围。为了解决这一限制，我们提出了 SV-WAM，这是一种环视世界动作模型 (WAM)，它可以保留完整的六摄像头观察结果，同时保持高效的推理。 SV-WAM 利用未来视频预测作为共享生成模型中动作学习的密集训练监督，而不是作为推理时间输出。该设计的核心是一个以动作为中心的因果掩码，可防止动作令牌在联合动作视频去噪期间参与未来视频令牌。因此，视频分支可以在部署时被丢弃，从而实现高效的仅行动规划。此外，我们引入了可微分的可行驶区域合规性正则化器，可以惩罚接近或跨越可行驶边界的车辆足迹角，从而提高规划安全性和边界意识。对闭环 NAVSIMv2 基准和开环 nuScenes 基准的大量实验表明，SV-WAM 实现了最先进的规划性能、低推理延迟和具有竞争力的零样本传输能力。
+
+</details>
+
+---
+
+## 7. Toward Physically Grounded JEPA World Models for Goal-Conditioned Robotic Planning / 面向目标条件机器人规划的物理接地 JEPA 世界模型
+
+**Date**: 2026-09-03 | **arXiv**: [2609.03565v1](http://arxiv.org/abs/2609.03565v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.03565v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Action-conditioned JEPA world models enable planning toward visually specified goals without reconstructing future pixels, yet latent prediction alone does not explicitly encourage the learned representations to retain information relevant to robotic control. We introduce an end-to-end JEPA world model that augments latent prediction with inverse dynamics (IDM) and state alignment (SA). While inverse dynamics discourages latent collapse and makes latent transitions informative of the actions that produced them, state alignment grounds consecutive representations in their associated physical configuration and motion. Across four benchmark tasks, our model attains the highest success rates on TwoRoom (100%), PushT (98%), and OGBench-Cube (87%), while performing comparably to LeWorldModel on Reacher. Our ablation further shows that adding state alignment consistently improves planning success over IDM alone across all four tasks. Although LeWorldModel, our primary baseline, attains higher average straightening on OGBench-Cube, transition-subspace analysis shows that its transition energy is concentrated in a substantially lower-dimensional subspace. Our state-aligned model exhibits a higher effective transition dimension than LeWorldModel and improves planning over IDM alone, supporting state alignment as an effective complement to inverse dynamics for robotic planning.
+
+动作条件 JEPA 世界模型可以在不重建未来像素的情况下实现视觉指定目标的规划，但单独的潜在预测并不能明确鼓励学习的表示保留与机器人控制相关的信息。我们引入了一个端到端的 JEPA 世界模型，该模型通过逆动力学 (IDM) 和状态对齐 (SA) 增强潜在预测。虽然逆动力学阻止了潜在的崩溃，并使潜在的转变为产生它们的动作提供信息，但状态对齐在其相关的物理配置和运动中建立了连续的表示。在四个基准任务中，我们的模型在 TwoRoom (100%)、PushT (98%) 和 OGBench-Cube (87%) 上获得了最高的成功率，同时在 Reacher 上的表现与 LeWorldModel 相当。我们的消融进一步表明，在所有四项任务中，与单独的 IDM 相比，添加状态一致性能够持续提高规划成功率。尽管我们的主要基线 LeWorldModel 在 OGBench-Cube 上获得了更高的平均矫直度，但过渡子空间分析表明，其过渡能量集中在低维子空间中。我们的状态对齐模型比 LeWorldModel 表现出更高的有效转换维度，并改进了单独 IDM 的规划，支持状态对齐作为机器人规划逆动态的有效补充。
+
+</details>
+
+---
+
+## 8. Latent Energy Action Planning with World Models / 使用世界模型进行潜在能量行动规划
+
+**Date**: 2026-09-03 | **arXiv**: [2609.03294v1](http://arxiv.org/abs/2609.03294v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.03294v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models support efficient model predictive control from high-dimensional observations, yet optimizing a single learned latent objective can favor action sequences whose decoder-predicted terminal descriptor does not match the goal descriptor. We introduce Latent Energy Action Planning (LEAP), which treats the complete action horizon as a differentiable variable and optimizes it through a frozen LeWorldModel (LeWM). LEAP couples terminal latent goal matching with a terminal-window state energy. Low energy requires the predicted terminal latent to agree with the goal latent and the decoder-predicted terminal descriptor to agree with the goal descriptor. A frozen goal-conditioned proposal initializes the search, a quasi-Newton solver refines actions through the autoregressive rollout, and post-optimization projection enforces the admissible action range. Across four control domains using the officially released LeWM checkpoints, the complete LEAP planning system raises mean success from 77.5% for LeWM planned with the cross-entropy method (LeWM+CEM) to 94.8% under a matched protocol, a 17.3-percentage-point improvement, while retaining the frozen LeWM representation and predictor.
+
+潜在世界模型支持来自高维观察的有效模型预测控制，但优化单个学习的潜在目标可能有利于解码器预测的终端描述符与目标描述符不匹配的动作序列。我们引入了潜在能量行动计划 (LEAP)，它将完整的行动视野视为可微变量，并通过冻结的 LeWorldModel (LeWM) 对其进行优化。 LEAP 将终端潜在目标匹配与终端窗口状态能量耦合起来。低能量要求预测的终端潜在特征与目标潜在特征一致，并且解码器预测的终端描述符与目标描述符一致。冻结的目标条件提案初始化搜索，拟牛顿求解器通过自回归推出细化操作，优化后投影强制执行可接受的操作范围。在使用官方发布的 LeWM 检查点的四个控制域中，完整的 LEAP 规划系统将使用交叉熵方法 (LeWM+CEM) 规划的 LeWM 的平均成功率从 77.5% 提高到匹配协议下的 94.8%，提高了 17.3 个百分点，同时保留了冻结的 LeWM 表示和预测器。
+
+</details>
+
+---
+
+## 9. Long-Horizon Consistent and Interaction-Aware World Models for Multi-Style End-to-End Driving / 用于多风格端到端驾驶的长视野一致和交互感知的世界模型
+
+**Date**: 2026-09-03 | **arXiv**: [2609.03225v1](http://arxiv.org/abs/2609.03225v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.03225v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+End-to-end autonomous driving has increasingly adopted world model-based reinforcement learning frameworks to improve learning efficiency through \textit{imagined rollouts}. However, existing world models suffer from three key limitations: temporal inconsistency in long-horizon imagined rollouts, inadequate modeling of ego-environment interactions, and limited adaptability to diverse driving styles. To address these challenges, we propose \textit{StyleDrive}, a world-model-based learning framework that jointly enforces long-horizon consistency, explicitly disentangles interactive traffic states, and supports multi-style policy optimization within a unified learning paradigm. First, we introduce a temporal consistency regularization that integrates historical latent states through gated cross-attention, stabilizing long-horizon imagined rollouts and mitigating error accumulation. Second, we design an explicit state disentanglement module that separates ego-relevant from ego-irrelevant interactive states, enabling more interpretable and efficient decision-making in complex traffic scenarios. Third, we enable multi-style driving behaviors through Group Relative Policy Optimization, which replaces per-step reward optimization with trajectory-wise relative advantages, reducing reward variance and supporting diverse driving styles without retraining. We evaluate StyleDrive on the Bench2Drive closed-loop driving benchmark, achieving a driving score of 88.44 (+17.08 over the previous best world model-based method) and a success rate of 66.82 (+16.58). Furthermore, we deploy StyleDrive on a real automated guided vehicle platform and demonstrate promising sim-to-real transfer capability in dynamic driving scenarios.
+
+端到端自动驾驶越来越多地采用基于世界模型的强化学习框架，通过 \textit{imagined rollouts} 来提高学习效率。然而，现有的世界模型面临三个关键限制：长期想象中的时间不一致、自我与环境相互作用的建模不足以及对不同驾驶风格的适应性有限。为了应对这些挑战，我们提出了 \textit{StyleDrive}，这是一个基于世界模型的学习框架，它共同强制执行长期一致性，明确地解开交互式流量状态，并在统一的学习范式中支持多样式策略优化。首先，我们引入了一种时间一致性正则化，它通过门控交叉注意力整合历史潜在状态，稳定长期想象的推出并减轻错误积累。其次，我们设计了一个显式的状态解开模块，将与自我相关的交互状态与与自我无关的交互状态分开，从而在复杂的交通场景中实现更可解释和更高效的决策。第三，我们通过组相对策略优化实现多风格驾驶行为，用轨迹相对优势取代每步奖励优化，减少奖励方差并支持多种驾驶风格而无需重新训练。我们在 Bench2Drive 闭环驾驶基准上对 StyleDrive 进行了评估，获得了 88.44 的驾驶分数（比之前最好的基于模型的方法+17.08）和 66.82 的成功率（+16.58）。此外，我们将 StyleDrive 部署在真实的自动引导车辆平台上，并在动态驾驶场景中展示了有前途的模拟到真实的传输能力。
+
+</details>
+
+---
+
+## 10. GPU-Accelerated Astrodynamics World Models for Spacecraft Rendezvous and Proximity Operations / 用于航天器交会和邻近操作的 GPU 加速天体动力学世界模型
+
+**Date**: 2026-09-02 | **arXiv**: [2609.03067v1](http://arxiv.org/abs/2609.03067v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.03067v1)
+
+**Categories**: cs.RO, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models are an emerging paradigm in representation learning in which an agent jointly learns state-action dynamics and observation models from offline trajectory data, enabling multi-step planning and trajectory prediction with uncertainty estimates. They have shown strong results in robotics and game environments, but, to the best of our knowledge, have not previously been applied to the space domain. This paper introduces a world model-based approach to cooperative and non-cooperative spacecraft rendezvous and proximity operations. First, we introduce an open-source, JAX-based International Space Station (ISS) docking environment supporting parallel GPU simulation of spacecraft orbit and attitude dynamics, generating the thousands of state-action transitions that world model training requires. Second, we introduce Out-of-this-World-Model, a transformer-based world model that encodes relative kinematic states and body-fixed camera imagery into a latent state and predicts its evolution under commanded thrusts and torques using one-step flow matching. It produces a distribution over future observations, capturing stochastic dynamics and per-timestep uncertainty, and outperforms DreamerV3-style posterior-correction baselines with fewer trainable parameters and hyperparameters. Third, we apply the approach to a capsule autonomously docking with the ISS under keep-out-zone constraints, demonstrating improved sample efficiency and task performance over reinforcement learning baselines (53% versus 29% docking success across ports), better out-of-distribution generalization (on held-out ports the world model more than doubles baseline success, 40% versus 17%), and detection of anomalous objects encountered during approach with 98% classification accuracy. We open-source the simulation environment and model architecture to enable further study of this paradigm.
+
+世界模型是表示学习中的一种新兴范例，其中代理从离线轨迹数据中共同学习状态动作动力学和观察模型，从而实现具有不确定性估计的多步规划和轨迹预测。它们在机器人和游戏环境中表现出了强大的成果，但据我们所知，之前尚未应用于太空领域。本文介绍了一种基于世界模型的合作和非合作航天器交会和接近操作方法。首先，我们引入一个基于 JAX 的开源国际空间站 (ISS) 对接环境，支持航天器轨道和姿态动力学的并行 GPU 模拟，生成世界模型训练所需的数千个状态动作转换。其次，我们引入了 Out-of-this-World-Model，这是一种基于变压器的世界模型，它将相对运动状态和身体固定相机图像编码为潜在状态，并使用一步流匹配来预测其在指令推力和扭矩下的演变。它产生未来观测的分布，捕获随机动态和每个时间步的不确定性，并且在可训练参数和超参数较少的情况下优于 DreamerV3 式后验校正基线。第三，我们将该方法应用于在禁区限制下与国际空间站自主对接的胶囊，证明了与强化学习基线相比样本效率和任务性能的提高（跨端口对接成功率分别为 53% 和 29%）、更好的分布外泛化（在保留端口上，世界模型使基线成功率增加了一倍以上，分别为 40% 和 17%），并且以 98% 的分类准确率检测接近过程中遇到的异常物体。我们开源仿真环境和模型架构，以便进一步研究这一范式。
+
+</details>
+
+---
+
+## 11. Discriminative World Models for Web Agents / Web 代理的判别世界模型
+
+**Date**: 2026-09-02 | **arXiv**: [2609.02885v1](http://arxiv.org/abs/2609.02885v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.02885v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent web agents use world models for test-time action selection by sampling candidate actions, predicting the resulting web states, and ranking them with a ranker model or a Process Reward Model (PRM). These world models are typically trained via supervised next-state prediction to generate fixed representations like HTML or AXTree snapshots. However, this objective is misaligned with the downstream ranker, which relies on predicted states being discriminative across candidates to accurately score them. To address this, we introduce predicted-state matching, a training objective where the predicted representation must distinguish the true resulting state from those reached by alternative actions. We train these models using a branching web-agent dataset derived from WebArena Go-Browse trajectories, where every decision point contains multiple alternative actions and their resulting states. Experiments on our held-out predicted-state matching benchmark show that our approach outperforms world models trained with supervised next-state prediction. We further show that our approach improves PRM-style action ranking on WebPRMBench compared with action-only PRMs and PRMs augmented with supervised-next-state world models. Finally, on WebArena-Lite, using our world model for test-time action selection improves end-to-end task success. Our project page is available at: https://dhruvpendharkar.github.io/dwm/.
+
+最近的 Web 代理使用世界模型进行测试时操作选择，方法是对候选操作进行采样、预测生成的 Web 状态，并使用排名模型或过程奖励模型 (PRM) 对它们进行排名。这些世界模型通常通过受监督的下一状态预测进行训练，以生成固定的表示形式，例如 HTML 或 AXTree 快照。然而，这个目标与下游排名器不一致，下游排名器依赖于对候选者进行区分的预测状态来准确地对它们进行评分。为了解决这个问题，我们引入了预测状态匹配，这是一个训练目标，其中预测表示必须区分真实的结果状态和替代动作所达到的状态。我们使用源自 WebArena Go-Browse 轨迹的分支网络代理数据集来训练这些模型，其中每个决策点都包含多个替代操作及其结果状态。对我们保留的预测状态匹配基准的实验表明，我们的方法优于经过监督的下一状态预测训练的世界模型。我们进一步表明，与仅采取行动的 PRM 和使用受监督的下一状态世界模型增强的 PRM 相比，我们的方法提高了 WebPRMBench 上 PRM 式行动的排名。最后，在 WebArena-Lite 上，使用我们的世界模型进行测试时操作选择可以提高端到端任务的成功率。我们的项目页面位于：https://dhruvpendharkar.github.io/dwm/。
+
+</details>
+
+---
+
+## 12. Do Better Imagined Rollouts Mean Better Robot Control? A Controlled Study of World-Model Evaluation Under Feedback / 更好的想象是否意味着更好的机器人控制？反馈下世界模型评估的对照研究
+
+**Date**: 2026-09-02 | **arXiv**: [2609.02811v1](http://arxiv.org/abs/2609.02811v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.02811v1)
+
+**Categories**: cs.RO
+
+**Code**: https://github.com/rdharini2001/Robot_World_Model
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Predictive models are increasingly used in robotics for state estimation, planning, control, and policy evaluation, yet they are often judged by open-loop prediction accuracy over a fixed horizon. In closed-loop operation, a robot repeatedly acts, receives new measurements, updates its state estimate, and recomputes control. We study this difference in a differential-drive path-tracking task with biased odometry and intermittent landmark sensing. Six state estimators are evaluated across 24 sensing conditions using trajectory replay, a 20-step measurement-free rollout, and closed-loop tracking. Replay position RMSE correlates more strongly with closed-loop cross-track RMSE than rollout error (Spearman rho = 0.923 vs. 0.774) and selects a different estimator from the closed-loop optimum in 5/24 conditions, compared with 18/24 for the rollout metric. We then vary rollout horizon and measurement-update interval. With H=20, rank agreement decreases from rho = 0.916 with measurements at every step to rho = 0.774 with no measurements. A horizon-update grid shows that long prediction horizons remain informative when regular corrections are retained, whereas long rollouts without correction can produce rankings that differ substantially from closed-loop behavior. We also test recurrent estimators trained on longer sensing outages. This improves the EKF-anchored models under combined sensing degradation, reducing GRU-EKF cross-track RMSE from 1.72 m to 1.06 m, but the gain is not consistent across isolated outages or estimator architectures. These results show that predictive-model evaluation in robotics should specify both prediction horizon and measurement-update schedule. For models used in feedback, offline rollouts are most informative when their sensing and correction pattern reflects closed-loop operation. Code is available at https://github.com/rdharini2001/Robot_World_Model
+
+预测模型越来越多地用于机器人技术中的状态估计、规划、控制和策略评估，但它们通常是通过固定范围内的开环预测精度来判断的。在闭环操作中，机器人重复动作、接收新的测量结果、更新其状态估计并重新计算控制。我们通过偏置里程计和间歇性地标传感来研究差分驱动路径跟踪任务中的这种差异。使用轨迹回放、20 步免测量推出和闭环跟踪，在 24 种传感条件下评估六个状态估计器。重放位置 RMSE 与闭环跨轨 RMSE 的相关性比转出误差的相关性更强（Spearman rho = 0.923 vs. 0.774），并且在 5/24 条件下从闭环最优值中选择不同的估计器，而转出指标为 18/24。然后我们改变推出范围和测量更新间隔。当 H=20 时，排序一致性从每一步都有测量的 rho = 0.916 下降到没有测量的 rho = 0.774。水平更新网格表明，当保留定期校正时，长预测水平仍能提供信息，而没有校正的长时间推出可能会产生与闭环行为显着不同的排名。我们还测试了经过较长时间传感中断训练的循环估计器。这改进了组合传感退化下的 EKF 锚定模型，将 GRU-EKF 跨轨 RMSE 从 1.72 m 降低到 1.06 m，但增益在隔离中断或估计器架构中并不一致。这些结果表明，机器人技术中的预测模型评估应指定预测范围和测量更新时间表。对于反馈中使用的模型，当其传感和校正模式反映闭环操作时，离线推出的信息最为丰富。代码可在 https://github.com/rdharini2001/Robot_World_Model 获取
+
+</details>
+
+---
+
+## 13. Dutch Books for Language Models / 荷兰语语言模型书籍
+
+**Date**: 2026-09-02 | **arXiv**: [2609.02797v1](http://arxiv.org/abs/2609.02797v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.02797v1)
+
+**Categories**: econ.GN, cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+People increasingly use language models to support life decisions. Many such decisions involve a probabilistic forecast: How likely is a major life event, a natural disaster, or an economic outcome? Users of language models may implicitly trust that these forecasts fall out of a coherent world model. In this paper, we evaluate the coherence of language model probabilistic forecasts through a procedure that builds on a theorem due to de Finetti. We elicit forecasts from language models across events generated from stock returns data. We then use linear programs to compute the largest Dutch-book profit - the profit an arbitrageur could guarantee by betting against model-generated probabilities - which we use as a measure of incoherence. Our procedure does not require outcome labels, so we can evaluate coherence even in settings where outcomes are not observed or have not yet resolved. We find substantial evidence of incoherence in language model forecasts. Such incoherence increases when there are richer logical relationships between events, and irrelevant contextual details can increase incoherence by an order of magnitude. We conclude by discussing how alternative training strategies may improve probabilistic coherence.
+
+人们越来越多地使用语言模型来支持生活决策。许多此类决策都涉及概率预测：重大生活事件、自然灾害或经济结果的可能性有多大？语言模型的用户可能隐含地相信这些预测不符合连贯的世界模型。在本文中，我们通过基于 de Finetti 定理的程序来评估语言模型概率预测的一致性。我们通过语言模型对股票收益数据生成的事件进行预测。然后，我们使用线性程序来计算最大的荷兰书利润 - 套利者可以通过对模型生成的概率下注来保证的利润 - 我们将其用作不连贯性的衡量标准。我们的程序不需要结果标签，因此即使在未观察到或尚未解决结果的情况下，我们也可以评估一致性。我们发现了语言模型预测不一致的大量证据。当事件之间存在更丰富的逻辑关系时，这种不连贯性就会增加，并且不相关的上下文细节可能会增加一个数量级的不连贯性。最后，我们讨论替代训练策略如何提高概率一致性。
+
+</details>
+
+---
+
+## 14. From Proxy Learning to Driving Decisions: A Transfer-Based Framework for Evaluating Future-Aware Autonomous Driving Planners / 从代理学习到驾驶决策：用于评估具有未来意识的自动驾驶规划者的基于迁移的框架
+
+**Date**: 2026-09-02 | **arXiv**: [2609.02688v1](http://arxiv.org/abs/2609.02688v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.02688v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Future-aware representations and world models are increasingly used in proposal-based autonomous-driving planners to improve trajectory selection. However, improvements in proxy objectives or restricted subsets are often interpreted as planning gains without verifying proposal ordering, selected trajectories, full-scale utility, and critical driving components. We propose the Proxy-to-Decision Transfer (PDT) Framework, an analysis framework that evaluates when learned future information supports a reliable driving-performance improvement claim. Its Decision-Transfer Decomposition Module localizes value loss through score margins, switch-conditioned utility, and support-versus-selection regret. Its Reliability-Constrained Validation Module requires exact pairing, a minimum meaningful effect, scale-expanded confirmation, safety non-compensation, sequential comparability, and family-level robustness. On a representative future-aware planner evaluated with NAVSIM-v1, component BCE decreases from 0.705 to 0.530 while held selected PDM decreases from 0.963 to 0.961. A separate candidate improves a 512-record prefix by 0.00909, with a scene-bootstrap 95% interval of [0.000744, 0.0177], but its 2048-record and complete-support intervals include zero. A proposal-level replay further confirms the switch-utility decomposition, yet none of 432 screened configurations passes the two-half, two-seed robustness gate. PDT therefore identifies where decision transfer fails or remains indeterminate across proxy, subset, aggregate, and selection evidence.
+
+未来感知表示和世界模型越来越多地用于基于提案的自动驾驶规划器中，以改进轨迹选择。然而，代理目标或受限子集的改进通常被解释为规划收益，而无需验证提案排序、选定的轨迹、全面效用和关键驱动组件。我们提出了代理决策转移（PDT）框架，这是一种分析框架，用于评估所学到的未来信息何时支持可靠的驾驶性能改进主张。其决策转移分解模块通过分数差、切换条件效用以及支持与选择遗憾来定位价值损失。其可靠性约束验证模块需要精确配对、最小有意义的影响、规模扩展确认、安全无补偿、顺序可比性和系列级稳健性。在使用 NAVSIM-v1 评估的具有代表性的未来感知规划器上，组件 BCE 从 0.705 下降到 0.530，而选定的 PDM 从 0.963 下降到 0.961。一个单独的候选者将 512 条记录前缀改进了 0.00909，场景引导 95% 间隔为 [0.000744, 0.0177]，但其 2048 条记录和完全支持间隔包括零。提案级重播进一步证实了开关效用分解，但 432 个筛选配置均未通过二分半、两种子稳健性门。因此，PDT 可以识别代理、子集、聚合和选择证据中决策转移失败或仍然不确定的地方。
+
+</details>
+
+---
+
+## 15. World-Model-Augmented Visual Locomotion for Humanoids on Foothold-Constrained Terrain / 立足点受限地形上的人形机器人的世界模型增强视觉运动
+
+**Date**: 2026-09-02 | **arXiv**: [2609.02542v1](http://arxiv.org/abs/2609.02542v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.02542v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Foothold-constrained terrain is characterized by sparse, discontinuous, or geometrically restricted feasible foot contacts, as encountered on stepping stones, across gaps, and on narrow stair treads. On such terrain, a single misstep often leaves little room to recover, so policies that base foot-placement decisions primarily on the immediately visible terrain are prone to failure. We ask whether a learned predictive summary of near-future observations and rewards can provide the anticipatory information required in such settings. We present World-Model-Augmented Visual Locomotion (WM-LOCO), which jointly trains a recurrent world model and a PPO policy. Conditioned on proprioception and a single onboard depth image, the world model produces a predictive recurrent feature that guides the policy, without explicit foothold labels. In simulation, WM-LOCO succeeds on gaps and stepping stones where a matched baseline fails completely, and matches the baseline's success rate on stairs while improving stride efficiency and reducing pelvis acceleration. We deploy the same policy onboard a physical Unitree G1 humanoid using onboard proprioception and a single depth stream; it traverses all three terrain classes with an average success rate of 93.3%.
+
+立足点受限地形的特点是稀疏、不连续或几何形状受限的可行脚部接触，如在踏脚石、跨越间隙和狭窄的楼梯踏板上遇到的情况。在这样的地形上，一次失误往往几乎没有恢复的空间，因此主要根据立即可见的地形做出脚步放置决策的策略很容易失败。我们询问对近期观察和奖励的学习预测总结是否可以提供此类环境中所需的预期信息。我们提出了世界模型增强视觉运动（WM-LOCO），它联合训练循环世界模型和 PPO 策略。以本体感觉和单个机载深度图像为条件，世界模型会产生指导策略的预测性循环特征，而无需明确的立足点标签。在模拟中，WM-LOCO 在匹配基线完全失败的间隙和垫脚石上取得了成功，并在楼梯上匹配基线的成功率，同时提高了步幅效率并减少了骨盆加速度。我们使用板载本体感觉和单个深度流在物理 Unitree G1 人形机器人上部署相同的策略；它穿越了所有三个地形类别，平均成功率为 93.3%。
+
+</details>
+
+---
+
+## 16. Spatially Aware World Action Model via Geometric Latent Diffusion / 通过几何潜在扩散的空间感知世界行动模型
+
+**Date**: 2026-09-02 | **arXiv**: [2609.02531v1](http://arxiv.org/abs/2609.02531v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.02531v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) leverage the capabilities of large-scale pretrained video diffusion models to jointly predict future observations and actions, inheriting rich visual and physical priors from internet-scale video. This has made them a promising paradigm for robot policy learning, yet the prevailing models operate exclusively on RGB observations and do not leverage 3D information. To bridge this gap, we introduce a Spatially Aware World Action Model (SA-WAM), which repurposes a pretrained video model for joint action, RGB, and depth prediction, enabling 3D-aware world modeling and action prediction within a single diffusion backbone. We use a nonlinear encoding that maps the unbounded depth signal into the bounded input domain expected by the frozen VAE tokenizer. This allows us to reuse the tokenizer without 3D-specific fine-tuning, incorporating geometric information without sacrificing the pretrained priors. SA-WAM achieves state-of-the-art results on the RoboCasa and LIBERO-Plus benchmarks, while simultaneously improving future-state predictions. Furthermore, SA-WAM outperforms strong baselines in real-world evaluation using a UR5 robotic arm, with strong gains in randomized environments. We analyze the correlation between world model prediction quality and rollout success, providing insights into WAM performance and avenues for its improvement.
+
+世界行动模型 (WAM) 利用大规模预训练视频传播模型的功能来联合预测未来的观察和行动，继承互联网规模视频的丰富视觉和物理先验。这使它们成为机器人策略学习的有前途的范例，但流行的模型仅在 RGB 观察上运行，并且不利用 3D 信息。为了弥补这一差距，我们引入了空间感知世界动作模型 (SA-WAM)，它将预训练视频模型重新用于联合动作、RGB 和深度预测，从而在单个扩散主干中实现 3D 感知世界建模和动作预测。我们使用非线性编码将无界深度信号映射到冻结 VAE 标记器期望的有界输入域。这使我们能够重用分词器，而无需进行 3D 特定的微调，在不牺牲预训练先验的情况下合并几何信息。 SA-WAM 在 RoboCasa 和 LIBERO-Plus 基准上取得了最先进的结果，同时改进了未来状态预测。此外，SA-WAM 在使用 UR5 机械臂的现实世界评估中表现优于强大的基线，在随机环境中取得了巨大的进步。我们分析世界模型预测质量与部署成功之间的相关性，提供有关 WAM 性能及其改进途径的见解。
+
+</details>
+
+---
+
+## 17. Modeling What Changes: Sparse, Residual World Models for Object-Centric Manipulation / 对变化进行建模：用于以对象为中心的操作的稀疏残差世界模型
+
+**Date**: 2026-09-02 | **arXiv**: [2609.02046v1](http://arxiv.org/abs/2609.02046v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.02046v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Monolithic world models predict the entire next state at every step, spending capacity re-predicting the static majority of a scene and injecting error into it. We ask whether explicitly modeling change (a per-object change gate plus a residual delta head that perturbs only the objects the gate flags) is a more effective and interpretable bias for physical prediction and control. On a MuJoCo tabletop pushing benchmark scaling from 3 to 8 objects, the sparse/residual model predicts next-state poses 2.5 to 4.6 times more accurately than a dense multilayer perceptron at 8.6 to 11.1 times fewer parameters, sustains change-detection F1 of 0.80 to 0.87 where the dense baseline is degenerate, transfers across object counts with zero retraining (99.4 percent F1 retention), and reaches about 90 percent of its full-data accuracy with a quarter of the data. In autoregressive rollout it compounds far less error, hugging the no-motion floor while the dense model drifts. Finally, inside a sampling-based planner, prediction-only models fail (though a true-simulator oracle solves the task with the identical planner, confirming the planner is sound), but once featurized and trained for the states a planner visits, the sparse model begins to plan (0.23 plus or minus 0.06 success over three seeds) while the dense monolith stays at zero at every seed. Modeling what changes, rather than re-predicting the whole world, is a simple, effective bias for object-centric physical AI; code, data generators, and all checkpoints will be released upon publication.
+
+整体世界模型在每一步都预测整个下一个状态，花费能力重新预测场景的静态大部分并向其中注入错误。我们询问显式建模变化（每个对象变化门加上仅扰乱门标记的对象的残余增量头）是否是物理预测和控制的更有效和可解释的偏差。在将基准缩放从 3 到 8 个对象的 MuJoCo 桌面上，稀疏/残差模型预测下一状态姿势的准确度比密集多层感知器准确 2.5 到 4.6 倍，参数减少 8.6 到 11.1 倍，在密集基线退化的情况下维持 0.80 到 0.87 的变化检测 F1，在零再训练的情况下跨对象计数传输（99.4% F1 保留），用四分之一的数据就可以达到全数据准确率的 90% 左右。在自回归推出中，它的误差要小得多，在密集模型漂移时紧贴不动地板。最后，在基于采样的规划器中，仅预测模型会失败（尽管真正的模拟器预言机使用相同的规划器解决了任务，确认规划器是健全的），但一旦针对规划器访问的状态进行特征化和训练，稀疏模型开始规划（三个种子的成功率为 0.23 正负 0.06），而密集的整体在每个种子处保持为零。对变化的事物进行建模，而不是重新预测整个世界，是以对象为中心的物理人工智能的一个简单而有效的偏见；代码、数据生成器和所有检查点将在发布后发布。
+
+</details>
+
+---
+
+## 18. REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs / REFACTOR-VLA：类型化运动程序的无监督库学习
+
+**Date**: 2026-09-01 | **arXiv**: [2609.01215v1](http://arxiv.org/abs/2609.01215v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.01215v1)
+
+**Categories**: cs.LG, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Most vision-language-action (VLA) models -- OpenVLA, $π_0$, RT-2, RDT-1B -- are monolithic: they emit raw motor commands or short action chunks without organizing behavior into reusable abstractions, so they degrade on long-horizon tasks and resist interpretation. Existing skill-discovery methods sidestep the core question of when two action sequences are behaviorally equivalent, either clustering contrastive embeddings or delegating the judgment to a language model uncalibrated to the robot's dynamics. We introduce REFACTOR-VLA, a wake/sleep system for learning reusable skills. Its sleep phase clusters motor-program fragments under a Behavioral-Equivalence Kernel (BEK) computed from rollouts of a learned latent world model $M_φ$; its wake phase emits typed lambda terms over a Hindley--Milner-inspired vocabulary, consumed by a library-conditioned rectified-flow action decoder. Abstractions are admitted only if they pass Minimum Description Length and return-preservation gates. On LIBERO we report two findings. First, enlarging the world model from 188M to 430M parameters worsened performance on 4 of 4 suites, so capacity alone does not help. Second, the training objective matters far more: adding an auxiliary supervised contrastive (InfoNCE) loss during world-model warmup substantially improves sleep-phase clustering, giving Normalized Mutual Information at $n=3$ seeds of $0.462 \pm 0.021$ (object), $0.867 \pm 0.025$ (spatial), $0.915 \pm 0.013$ (goal) and $0.754 \pm 0.010$ (LIBERO-10), and beating the strongest published baseline on all 4 suites by a mean $Δ= +0.184$. Across providers ($n=12$) the 95% bootstrap confidence interval for mean pairwise NMI is $[0.683, 0.729]$ (mean $0.705$). The sleep phase also yields the first real-LIBERO task-language library: the decoder uses 2 of 3 admitted abstractions and rewrites all 256 sampled demonstrations.
+
+大多数视觉语言动作（VLA）模型——OpenVLA、$π_0$、RT-2、RDT-1B——都是单一的：它们发出原始运动命令或短动作块，而不将行为组织成可重用的抽象，因此它们在长期任务上性能下降并抵制解释。现有的技能发现方法回避了两个动作序列何时行为等效的核心问题，要么对对比嵌入进行聚类，要么将判断委托给未根据机器人动力学进行校准的语言模型。我们推出了 REFACTOR-VLA，这是一种用于学习可重用技能的唤醒/睡眠系统。它的睡眠阶段将运动程序片段聚集在行为等效内核 (BEK) 下，该内核是通过学习的潜在世界模型 $M_φ$ 的推出计算得出的；它的唤醒阶段通过 Hindley-Milner 启发的词汇发出类型化的 lambda 术语，并由库条件整流流动作解码器使用。仅当抽象通过最小描述长度和返回保留门时才被允许。我们在 LIBERO 上报告了两项发现。首先，将世界模型从 188M 参数扩大到 430M 会使 4 个套件中的 4 个套件的性能恶化，因此仅靠容量并没有帮助。其次，训练目标更为重要：在世界模型预热期间添加辅助监督对比（InfoNCE）损失可显着改善睡眠阶段聚类，在 $n=3$ 种子处提供标准化互信息，分别为 $0.462 \pm 0.021$（对象）、$0.867 \pm 0.025$（空间）、$0.915 \pm 0.013$（目标）和 $0.754 \pm 0.010$ (LIBERO-10)，并且以平均 $Δ= +0.184$ 的成绩击败了所有 4 个套件中最强的已发布基线。跨提供商 ($n=12$)，平均成对 NMI 的 95% 引导置信区间为 $[0.683, 0.729]$（平均 $0.705$）。睡眠阶段还产生第一个真正的 LIBERO 任务语言库：解码器使用 3 个公认的抽象中的 2 个，并重写所有 256 个采样演示。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-01 (9 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-09-01
