@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-05](papers/2026-09-05.md) - 5 papers
 - [2026-09-04](papers/2026-09-04.md) - 16 papers
 - [2026-09-03](papers/2026-09-03.md) - 15 papers
 - [2026-09-02](papers/2026-09-02.md) - 2 papers
@@ -151,6 +152,98 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-05 (5 papers)</b></summary>
+
+# arXiv Video Papers - 2026-09-05
+
+**Paper Count**: 5
+
+---
+
+## 1. One Editor, Many Edits: A Unified Training-Free Framework for Diverse Video Editing / 一位编辑，多次编辑：多样化视频编辑的统一免培训框架
+
+**Date**: 2026-09-03 | **arXiv**: [2609.04190v1](http://arxiv.org/abs/2609.04190v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.04190v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video editing spans diverse editing paradigms, yet achieving high-quality instruction-guided and subject-guided editing within a single unified framework remains challenging. We introduce EditVid, a training-free framework combining sparse causal memory for local coherence, correspondence-based post-attention token injection for long-range identity preservation, and soft latent blending for edit locality. The same framework supports instruction-guided and reference-guided edits, including style transfer, attribute modification, object insertion, part-level editing, and subject replacement. On FiVE, EditVid achieves 78.16 FiVE-Acc, compared with 58.95 for the strongest evaluated training-free baseline, while obtaining competitive results on IVEBench. A user study further shows a 51.8\% overall preference for EditVid over 7 competing methods.
+
+视频编辑跨越不同的编辑范式，但在单一统一框架内实现高质量的指令引导和主题引导编辑仍然具有挑战性。我们引入了 EditVid，这是一个免训练框架，结合了用于局部连贯性的稀疏因果记忆、用于远程身份保存的基于对应的后注意令牌注入以及用于编辑局部性的软潜在混合。同一框架支持指令引导和参考引导编辑，包括样式转换、属性修改、对象插入、部分级编辑和主题替换。在 FiVE 上，EditVid 获得了 78.16 FiVE-Acc，而最强评估的无训练基线为 58.95，同时在 IVEBench 上获得了有竞争力的结果。一项用户研究进一步显示，与 7 种竞争方法相比，EditVid 的总体偏好率为 51.8%。
+
+</details>
+
+---
+
+## 2. Seeing Before Synthesizing: VLM-Guided Transition Event Discovery for Weakly-Supervised Dense Video Captioning / 先看后合成：VLM 引导的弱监督密集视频字幕的转换事件发现
+
+**Date**: 2026-09-03 | **arXiv**: [2609.04183v1](http://arxiv.org/abs/2609.04183v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.04183v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Weakly-Supervised Dense Video Captioning aims to localize and describe multiple events in untrimmed videos given only an ordered set of event-level captions per video. Recent work synthesizes auxiliary transition captions via LLM to provide additional vision-language alignment, but these captions lack visual grounding and are rigidly assigned to every inter-event gap at a fixed location and duration. To address these, we propose Seeing Before Synthesizing (SBS), a framework that adaptively provides visually grounded linguistic guidance only where warranted. Leveraging a VLM, we generate frame-level narratives for the inter-event gaps and detect transitions from the semantic variation across them. For identified transitions, we then refine inter-event temporal masks by blending the temporal midpoint with the semantic change point and selecting the width that maximizes vision-language alignment. Experiments on ActivityNet Captions and YouCook2 demonstrate state-of-the-art performance in both captioning and localization.
+
+弱监督密集视频字幕旨在定位和描述未经修剪的视频中的多个事件，而每个视频仅给出一组有序的事件级字幕。最近的工作通过法学硕士合成辅助过渡字幕，以提供额外的视觉语言对齐，但这些字幕缺乏视觉基础，并且被严格分配到固定位置和持续时间的每个事件间间隙。为了解决这些问题，我们提出了先见后综合（SBS），这是一个框架，仅在必要时自适应地提供基于视觉的语言指导。利用 VLM，我们为事件间间隙生成帧级叙述，并检测它们之间的语义变化的转换。对于识别的转换，我们然后通过将时间中点与语义变化点混合并选择最大化视觉语言对齐的宽度来细化事件间时间掩模。 ActivityNet Captions 和 YouCook2 上的实验展示了字幕和本地化方面最先进的性能。
+
+</details>
+
+---
+
+## 3. Beyond Retrieval: Progressive Latent Memory Evolution for Streaming Video Understanding / 超越检索：流视频理解的渐进式潜在记忆进化
+
+**Date**: 2026-09-03 | **arXiv**: [2609.04131v1](http://arxiv.org/abs/2609.04131v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.04131v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Streaming video understanding requires multimodal large language models (MLLMs) to process continuous visual inputs and respond to user queries under strict causality and bounded memory. Existing approaches typically compress historical observations into an external memory bank and retrieve query-relevant evidence as additional visual context. Though effective, this store-and-retrieve paradigm keeps historical evidence as external visual context, preventing it from being internalized into a compact, evolving latent memory that can continuously guide streaming reasoning. To bridge this gap, we introduce LatentStream, a progressive latent working memory framework that shifts streaming memory from store-and-retrieve to retrieve-and-internalize. Specifically, LatentStream comprises three coordinated components. First, Query-agnostic Hierarchical Streaming Memory organizes visual history into short-, mid-, and long-term levels under a fixed memory budget through Jenks-guided adaptive consolidation. Once a query arrives, Hierarchical Latent Memory Evolution equips groups of latent memory tokens with progressively expanding memory receptive fields, enabling them to iteratively retrieve historical evidence from their corresponding scopes and internalize it into a compact, fixed-length latent memory. Finally, Progressive Confidence-guided Latent Memory Optimization constructs a hierarchical progression reward from group-wise predictive entropy and jointly refines the latent memory tokens and retrieved evidence, encouraging increasingly confident streaming reasoning. Extensive experiments demonstrate that LatentStream achieves new state-of-the-art results on existing online and offline video benchmarks.
+
+流视频理解需要多模态大语言模型（MLLM）来处理连续的视觉输入并在严格的因果关系和有限的内存下响应用户查询。现有的方法通常将历史观察结果压缩到外部存储库中，并检索与查询相关的证据作为附加的视觉上下文。虽然有效，但这种存储和检索范式将历史证据保留为外部视觉上下文，防止其内化为紧凑的、不断发展的潜在记忆，从而持续指导流式推理。为了弥补这一差距，我们引入了 LatentStream，这是一种渐进式潜在工作记忆框架，它将流式内存从存储和检索转变为检索和内化。具体来说，LatentStream 包含三个协调的组件。首先，与查询无关的分层流式内存通过 Jenks 引导的自适应整合，在固定内存预算下将视觉历史组织为短期、中期和长期级别。一旦查询到达，分层潜在记忆进化就会为潜在记忆标记组配备逐渐扩展的记忆接受域，使它们能够从相应的范围中迭代地检索历史证据，并将其内化为紧凑的、固定长度的潜在记忆。最后，渐进信心引导的潜在记忆优化从分组预测熵构建了分层进展奖励，并共同细化潜在记忆标记和检索的证据，鼓励越来越自信的流式推理。大量实验表明 LatentStream 在现有在线和离线视频基准测试中取得了最先进的结果。
+
+</details>
+
+---
+
+## 4. BooM-VVT: Boosting Mask-Free Video Virtual Try-On with Image-Level Pseudo Data / BooM-VVT：利用图像级伪数据增强无掩模视频虚拟试戴
+
+**Date**: 2026-09-03 | **arXiv**: [2609.04120v1](http://arxiv.org/abs/2609.04120v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.04120v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video virtual try-on (VVT) aims to generate realistic videos of a person wearing a target garment. Recent methods leverage a keyframe-driven video generation paradigm to improve in-the-wild performance, yet they still rely on masks to localize try-on regions, making them vulnerable to large motions and severe occlusions. Although mask-free image-based try-on methods have shown promising results by leveraging large-scale pseudo data, extending this paradigm to videos remains difficult, as constructing video-level pseudo data is prohibitively expensive. Furthermore, coarse keyframe sampling and the scarcity of multi-view try-on data limit existing keyframe-driven methods in maintaining garment consistency and handling diverse try-on tasks.   To address these challenges, we propose BooM-VVT, a mask-free VVT framework built upon the keyframe-driven paradigm. To achieve mask-free VVT, we introduce a multi-stage training strategy that leverages image-level pseudo data for mask-free localization learning, substantially reducing the need for costly video-level pseudo data. To improve garment consistency, we propose Garment-Sensitive Keyframe Sampling, which selects keyframes based on garment-relevant body regions to better capture garment appearance. We further introduce Frame-Shared 3D-RoPE to establish spatiotemporal correspondences between keyframes and target video frames for accurate garment-detail transfer. Finally, we construct OmniView, a large-scale multi-view try-on dataset to support reliable try-on video generation under complex camera viewpoints and diverse try-on tasks. Extensive experiments demonstrate that BooM-VVT achieves superior temporal consistency and garment fidelity over existing methods. Project page: https://boomvvt.github.io/boomvvt.
+
+视频虚拟试穿 (VVT) 旨在生成穿着目标服装的真实视频。最近的方法利用关键帧驱动的视频生成范例来提高野外性能，但它们仍然依赖掩模来定位试穿区域，这使得它们容易受到大运动和严重遮挡的影响。尽管基于无掩模图像的试戴方法通过利用大规模伪数据已经显示出有希望的结果，但将这种范例扩展到视频仍然很困难，因为构建视频级伪数据的成本过高。此外，粗糙的关键帧采样和多视图试穿数据的稀缺限制了现有的关键帧驱动方法在保持服装一致性和处理多样化试穿任务方面。   为了应对这些挑战，我们提出了 BooM-VVT，这是一种基于关键帧驱动范例构建的无掩模 VVT 框架。为了实现无掩模 VVT，我们引入了一种多阶段训练策略，利用图像级伪数据进行无掩模定位学习，大大减少了对昂贵的视频级伪数据的需求。为了提高服装的一致性，我们提出了服装敏感关键帧采样，它根据服装相关的身体区域选择关键帧，以更好地捕捉服装外观。我们进一步引入帧共享 3D-RoPE 来建立关键帧和目标视频帧之间的时空对应关系，以实现准确的服装细节传输。最后，我们构建了大规模多视图试穿数据集 OmniView，以支持复杂相机视点和多样化试穿任务下可靠的试穿视频生成。大量实验表明，与现有方法相比，BooM-VVT 实现了卓越的时间一致性和服装保真度。项目页面：https://boomvvt.github.io/boomvvt。
+
+</details>
+
+---
+
+## 5. DSAQuant: Denoising-Stage-Aligned Quantization-Aware Training for Video Generation / DSAQuant：用于视频生成的去噪阶段对齐量化感知训练
+
+**Date**: 2026-09-03 | **arXiv**: [2609.04031v1](http://arxiv.org/abs/2609.04031v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.04031v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video diffusion models (VDMs) have achieved impressive progress in text-to-video generation, but their high memory and computational costs hinder practical deployment. Quantization-aware training (QAT) is an effective solution for compressing and accelerating advanced generative models without runtime overhead at inference. However, existing QAT methods suffer from a distinctive challenge in VDMs: while they often preserve prompt semantics, global layout, and coarse motion, the quantized model severely degrades visual details, texture fidelity, and sharpness. In this paper, we trace this degradation to the timestep-agnostic design of conventional quantization pipelines, which overlooks the stage-wise functionality of video denoising. In VDMs, early denoising steps mainly establish global structure and motion, whereas middle and late steps refine local appearance and high-frequency details. Based on this insight, we propose DSAQuant, a Denoising-Stage-Aligned Quantization-aware training framework for VDMs. During training, Denoising-Stage Oriented Supervision preserves teacher distillation in early steps for stable structure planning, while shifting later steps toward target-driven optimization to enhance detail reconstruction. During inference, Denoising-Stage Gated Guidance disables CFG in the final denoising steps to prevent it from amplifying quantization-induced errors into high-frequency artifacts. Extensive experiments on the Wan and CogVideoX families under W4A4 and W3A3 settings show that DSAQuant consistently outperforms the SOTA QAT baseline, improving the VBench average score by up to 6.60 under aggressive W3A3 quantization while preserving strong text-video alignment. These results demonstrate that effective VDM quantization requires not only reducing quantization error, but also aligning quantization training and inference with the stage-wise nature of video diffusion.
+
+视频扩散模型（VDM）在文本到视频生成方面取得了令人瞩目的进展，但其高内存和计算成本阻碍了实际部署。量化感知训练 (QAT) 是压缩和加速高级生成模型的有效解决方案，无需推理时的运行时开销。然而，现有的 QAT 方法在 VDM 中面临着一个独特的挑战：虽然它们通常保留提示语义、全局布局和粗略运动，但量化模型严重降低了视觉细节、纹理保真度和清晰度。在本文中，我们将这种退化追溯到传统量化管道的时间步长不可知设计，该设计忽略了视频降噪的分阶段功能。在VDM中，早期的去噪步骤主要建立全局结构和运动，而中后期的步骤则细化局部外观和高频细节。基于这一见解，我们提出了 DSAQuant，一种用于 VDM 的去噪阶段对齐量化感知训练框架。在训练过程中，面向去噪阶段的监督在早期步骤中保留了教师蒸馏以实现稳定的结构规划，同时将后期步骤转向目标驱动的优化以增强细节重建。在推理过程中，去噪阶段门控指导会在最终去噪步骤中禁用 CFG，以防止其将量化引起的误差放大为高频伪影。在 W4A4 和 W3A3 设置下对 Wan 和 CogVideoX 系列进行的大量实验表明，DSAQuant 始终优于 SOTA QAT 基线，在激进的 W3A3 量化下将 VBench 平均得分提高了 6.60，同时保持了强大的文本视频对齐。这些结果表明，有效的 VDM 量化不仅需要减少量化误差，还需要将量化训练和推理与视频扩散的阶段性性质保持一致。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-04 (16 papers)</b></summary>
 
 # arXiv Video Papers - 2026-09-04
