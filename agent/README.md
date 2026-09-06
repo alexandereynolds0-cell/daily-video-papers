@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-06](papers/2026-09-06.md) - 1 papers
 - [2026-09-05](papers/2026-09-05.md) - 3 papers
 - [2026-09-04](papers/2026-09-04.md) - 41 papers
 - [2026-09-02](papers/2026-09-02.md) - 13 papers
@@ -156,6 +157,34 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-06 (1 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-09-06
+
+**Paper Count**: 1
+
+---
+
+## 1. Formation Matrix and Energy-based Control of Multi-Agent Systems / 多智能体系统的编队矩阵和基于能量的控制
+
+**Date**: 2026-09-03 | **arXiv**: [2609.04158v1](http://arxiv.org/abs/2609.04158v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.04158v1)
+
+**Categories**: eess.SY, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper presents an energy-based controller for a multiagent robotic system designed to achieve and maintain a specific formation while moving on a plane and avoiding collisions between agents. The controller emulates a network of elementary spring-damper modules connecting pairs of agents. This network, with its de-energized states representing the desired formation, determines the system's dynamics, which is fully encapsulated by a bond graph model. The modeling is further enhanced through the introduction of a formation matrix, using a graph-theoretic approach, that describes both the distances and relative velocities among the agents of the arrangement. This matrix mathematically represents the interconnection and energy-exchange structure of the bond graph, allowing us to put it in correspondence with the control-by-interconnection CbI-scheme of the IDA-PBC theory, facilitating the solution of the formation control problem within the port-Hamiltonian system framework. Furthermore, the paper presents leader-following and position-based formation control systems based on the CbI scheme, including a stability analysis of the corresponding closed-loop systems. The theoretical findings are validated through numerical simulations across various scenarios.
+
+本文提出了一种用于多智能体机器人系统的基于能量的控制器，旨在在平面上移动时实现并保持特定的队形并避免智能体之间的碰撞。控制器模拟连接成对代理的基本弹簧阻尼器模块网络。该网络的断电状态代表所需的形成，决定了系统的动力学，该动力学完全由键合图模型封装。通过使用图论方法引入编队矩阵进一步增强了建模，该矩阵描述了布置中的代理之间的距离和相对速度。该矩阵在数学上表示了键图的互连和能量交换结构，使我们能够将其与IDA-PBC理论的互连控制CbI方案相对应，从而有助于在端口哈密尔顿系统框架内解决编队控制问题。此外，本文还提出了基于 CbI 方案的引导者跟随和基于位置的编队控制系统，包括相应闭环系统的稳定性分析。理论研究结果通过各种场景的数值模拟得到验证。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-05 (3 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-09-05
