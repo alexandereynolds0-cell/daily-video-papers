@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-09](papers/2026-09-09.md) - 4 papers
 - [2026-09-07](papers/2026-09-07.md) - 9 papers
 - [2026-09-06](papers/2026-09-06.md) - 1 papers
 - [2026-09-05](papers/2026-09-05.md) - 3 papers
@@ -158,6 +159,82 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-09 (4 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-09-09
+
+**Paper Count**: 4
+
+---
+
+## 1. Decentralized Safe Multi-Agent Reinforcement Learning via Predictive Shielding / 通过预测屏蔽进行分散式安全多智能体强化学习
+
+**Date**: 2026-09-07 | **arXiv**: [2609.07618v1](http://arxiv.org/abs/2609.07618v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.07618v1)
+
+**Categories**: eess.SY, cs.AI, cs.MA, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Environments are increasingly populated by multiple robots performing independent tasks with limited prior knowledge of each other. Deploying such multi-agent systems presents significant challenges. Specifically, shifts in deployment states compared to training data can lead to poor policy performance and compromised safety. While safety shields exist to mitigate these risks, they are typically reactive, which degrades performance near unseen obstacles,and centralized, limiting their scalability. To address this, we propose a decentralized framework that integrates predictive shielding with model-based finite horizon Q-learning. This approach allows agents to safely adapt their pre-trained policies during deployment. Furthermore, to mitigate livelocks in symmetric scenarios, we introduce a communication- free protocol for conflict resolution
+
+环境中越来越多的机器人执行独立的任务，而彼此的先验知识有限。部署此类多代理系统提出了重大挑战。具体来说，与训练数据相比，部署状态的变化可能会导致策略性能不佳和安全性受损。虽然安全防护罩可以减轻这些风险，但它们通常是反应性的，这会降低看不见的障碍物附近的性能，而且它们是集中的，限制了它们的可扩展性。为了解决这个问题，我们提出了一个去中心化框架，它将预测屏蔽与基于模型的有限水平 Q 学习相结合。这种方法允许代理在部署期间安全地调整其预先训练的策略。此外，为了减轻对称场景中的活锁，我们引入了一种无通信协议来解决冲突
+
+</details>
+
+---
+
+## 2. SMaRT-Tug: Structured Multi-Agent Reinforcement Learning for Physics-Based Tugboat-Barge Collaborative Manipulation / SMaRT-Tug：基于物理的拖船-驳船协作操纵的结构化多智能体强化学习
+
+**Date**: 2026-09-07 | **arXiv**: [2609.07445v1](http://arxiv.org/abs/2609.07445v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.07445v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous tugboating is central for automating maritime operations such as port logistics and vessel maneuvering, where multiple tugboats must cooperatively transport/manipulate a larger vessel. Collaborative pushing in this setting is challenging due to coupled hydrodynamics, low resistance, strong environmental disturbances, underactuated barge dynamics, and contact-rich interactions. Conventional control methods often rely on simplified models and fixed configurations, which limit their adaptability, while learning-based approaches are constrained by the lack of scalable and physically realistic training environments. We address these challenges by introducing a physics-based, GPU-accelerated simulation and learning framework for collaborative tugboat manipulation. Our simulator incorporates a customized buoyancy model, wave modeling, and hydrodynamic resistance, and supports large-scale multi-agent training under marine dynamics. In this simulator, we train a decentralized MAPPO (Multi-Agent PPO) policy augmented with a structured control prior (SCP) to improve training stability and maintain feasible pushing configurations. We evaluate our learned policy on straight-line transit, turning, and deceleration tasks, where we show that our decentralized framework yields more reliable and accurate maneuvering performance compared to a PID-based controller and a centralized PPO baseline. We further demonstrate zero-shot generalization to more challenging sea states and advanced maneuvers, as well as zero-shot scalability to larger teams of three and four tugboats despite training with only two agents.
+
+自主拖船是港口物流和船舶操纵等海上作业自动化的核心，其中多艘拖船必须合作运输/操纵更大的船只。由于耦合流体动力学、低阻力、强烈的环境干扰、欠驱动的驳船动力学和接触丰富的相互作用，在这种情况下的协作推动具有挑战性。传统的控制方法通常依赖于简化的模型和固定的配置，这限制了它们的适应性，而基于学习的方法则因缺乏可扩展和物理真实的训练环境而受到限制。我们通过引入基于物理、GPU 加速的仿真和学习框架来解决这些挑战，用于协作拖船操纵。我们的模拟器融合了定制的浮力模型、波浪建模和水动力阻力，支持海洋动力学下的大规模多智能体训练。在这个模拟器中，我们训练了一个分散的 MAPPO（多代理 PPO）策略，并通过结构化先验控制（SCP）进行增强，以提高训练稳定性并保持可行的推送配置。我们评估了我们在直线交通、转弯和减速任务上学到的策略，结果表明，与基于 PID 的控制器和集中式 PPO 基线相比，我们的去中心化框架可产生更可靠、更准确的操纵性能。我们进一步展示了对更具挑战性的海况和先进机动的零样本泛化，以及对三艘和四艘拖船组成的大型团队的零样本可扩展性，尽管只用两个代理进行训练。
+
+</details>
+
+---
+
+## 3. Eventually Optimal and Scalable Multi-Agent Planning for Block Cave Mining / 最终最优且可扩展的块洞采矿多智能体规划
+
+**Date**: 2026-09-07 | **arXiv**: [2609.07109v1](http://arxiv.org/abs/2609.07109v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.07109v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Automation in underground mining has the potential to significantly enhance safety, operational efficiency, and sustainability. However, effectively coordinating fleets of autonomous vehicles in dynamic mine environments introduces substantial challenges in both optimization and motion planning. To address these challenges, we introduce and formalize the \emph{Block Cave Mining (BCM)} problem, which focuses on computing a transport plan that maximizes ore throughput while satisfying draw ratio constraints. To solve this problem, we propose SAMM, an eventually optimal anytime solver that jointly integrates task assignment, scheduling, and path planning via a mixed-integer linear programming formulation. To improve scalability, we also introduce SAMMS, a variant of SAMM that trades optimality guarantees for efficiency by decomposing the problem into shorter planning subcycles. Experimental evaluations using realistic industrial mine scenarios demonstrate that SAMMS achieves near-optimal throughput and scales effectively to larger fleets and mine layouts.
+
+地下采矿自动化有可能显着提高安全性、运营效率和可持续性。然而，在动态矿山环境中有效协调自动驾驶车队给优化和运动规划带来了巨大的挑战。为了解决这些挑战，我们引入并形式化了 \emph{Block Cave Mining (BCM)} 问题，该问题侧重于计算一个运输计划，在满足拉深比约束的同时最大化矿石吞吐量。为了解决这个问题，我们提出了 SAMM，一种最终最优的随时求解器，它通过混合整数线性规划公式联合集成了任务分配、调度和路径规划。为了提高可扩展性，我们还引入了 SAMMS，这是 SAMM 的一种变体，它通过将问题分解为更短的规划子周期来以最优性保证换取效率。使用真实工业矿山场景进行的实验评估表明，SAMMS 实现了接近最佳的吞吐量，并可有效扩展到更大的车队和矿山布局。
+
+</details>
+
+---
+
+## 4. Distributed Dexterous Manipulation with Spatially Conditioned Multi-Agent Transformers / 使用空间条件多智能体变压器进行分布式灵巧操作
+
+**Date**: 2026-09-07 | **arXiv**: [2609.06930v1](http://arxiv.org/abs/2609.06930v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.06930v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Distributed Dexterous Manipulation (DDM) is a novel paradigm that presents significant control challenges due to high action-space redundancy, inter-robot cooperation, and dynamic object-robot interactions. This paper introduces a framework based on spatially conditioned Multi-Agent Transformers (MATs) to efficiently learn robust control policies for a DDM system grounded in an array of 64 soft delta robots arranged in an 8x8 grid. Our three core contributions are: (i) an MAT with adaptive layer norm for compute efficiency, (ii) spatial contrastive embeddings to ground transformer embeddings in the spatial configuration of the robots, and (iii) an MAT-based behavior cloning method fine-tuned using Soft Actor Critic. We also propose an action selection formulation to analyze the trade-off between task performance and the number of robots utilized. Our experiments show that MATs iteratively refine their actions through the stacked attention blocks. This further informs the benefit of spatial conditioning in transformers to learn DDM policies. We demonstrate long-horizon planar manipulation tasks with objects of various geometries in simulation and real-world. Finally, we show how action selection mitigates robot maintenance by reducing wear and tear due to inter-robot collisions while maintaining the ability to manipulate objects along various trajectories in the real-world, achieving an average error of ~1.5 cm, while using ~65% fewer robots.
+
+分布式灵巧操纵（DDM）是一种新颖的范例，由于高动作空间冗余、机器人间合作和动态物体与机器人交互而带来了重大的控制挑战。本文介绍了一种基于空间条件多智能体变压器 (MAT) 的框架，可有效学习基于 8x8 网格中排列的 64 个软 Delta 机器人阵列的 DDM 系统的鲁棒控制策略。我们的三个核心贡献是：（i）具有自适应层规范的 MAT 以提高计算效率，（ii）机器人空间配置中与地面变压器嵌入的空间对比嵌入，以及（iii）使用 Soft Actor Critic 微调的基于 MAT 的行为克隆方法。我们还提出了一种动作选择公式来分析任务绩效和所使用的机器人数量之间的权衡。我们的实验表明，MAT 通过堆叠的注意力块迭代地完善其行为。这进一步说明了变压器空间调节对于学习 DDM 策略的好处。我们在模拟和现实世界中演示了具有各种几何形状的对象的长视野平面操纵任务。最后，我们展示了动作选择如何通过减少机器人间碰撞造成的磨损来减轻机器人维护，同时保持在现实世界中沿各种轨迹操纵物体的能力，实现约 1.5 厘米的平均误差，同时减少约 65% 的机器人使用。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-07 (9 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-09-07
