@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-11](papers/2026-09-11.md) - 2 papers
 - [2026-09-10](papers/2026-09-10.md) - 15 papers
 - [2026-09-04](papers/2026-09-04.md) - 18 papers
 - [2026-09-01](papers/2026-09-01.md) - 9 papers
@@ -146,6 +147,50 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-11 (2 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-09-11
+
+**Paper Count**: 2
+
+---
+
+## 1. Distributed Optimization of Modular Production Systems using Model-based Reinforcement Learning with Inverse Models / 使用基于模型的强化学习和逆模型对模块化生产系统进行分布式优化
+
+**Date**: 2026-09-10 | **arXiv**: [2609.11615v1](http://arxiv.org/abs/2609.11615v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.11615v1)
+
+**Categories**: cs.AI, cs.LG, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper presents a novel approach for data-driven self-learning control of highly flexible, modular manufacturing systems. Specifically, we employ a novel framework for model-based reinforcement learning which introduces approximate inverse process models within the training of reinforcement policies. This approach disentangles the learning of actuation dynamics and the dynamics in state space, resulting in RL-based training solely within the task space. We propose a lightweight feedforward architecture for approximate inverse models and integrate them within the policy network of standard RL algorithms. We apply the approach to a laboratory modular production testbed with heterogeneous production modules. The results underline the efficiency improvements for modular manufacturing units in terms of both performance and training speed, particularly for off-policy algorithms.
+
+本文提出了一种高度灵活的模块化制造系统的数据驱动自学习控制的新方法。具体来说，我们采用了一种基于模型的强化学习的新颖框架，该框架在强化策略的训练中引入了近似逆过程模型。这种方法将驱动动力学和状态空间动力学的学习分开，从而仅在任务空间内进行基于强化学习的训练。我们提出了一种用于近似逆模型的轻量级前馈架构，并将其集成到标准强化学习算法的策略网络中。我们将该方法应用于具有异构生产模块的实验室模块化生产测试台。结果强调了模块化制造单元在性能和训练速度方面的效率提高，特别是对于离策略算法。
+
+</details>
+
+---
+
+## 2. Semigroup-JEPA: Latent Dynamics Consistency for Zero-Shot Physics Generalization / Semigroup-JEPA：零样本物理推广的潜在动力学一致性
+
+**Date**: 2026-09-09 | **arXiv**: [2609.10464v1](http://arxiv.org/abs/2609.10464v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.10464v1)
+
+**Categories**: cs.LG, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint-Embedding Predictive Architecture (JEPA) world models learn a compact latent representation of the world that supports prediction and planning, but their capability to learn physics and generate physically realistic dynamics remains hitherto untested. In this work, we introduce SemiGroup-JEPA (SG-JEPA), which extends the LeWorldModel framework by supplying the parameter governing the physics to the temporal model via action-conditioning and jointly training an encoder and predictor through an autoregressive latent rollout. To evaluate the model's ability to generalize out of distribution, we design dynamical tasks under different gravitational fields that, despite obeying the same physical law, exhibit qualitatively different dynamics, ranging from floating motion in weak gravitational fields to rapid bouncing in strong ones. In contrast to DINO-WM, SG-JEPA reduces open-loop prediction error by up to 2 times on two-dimensional datasets, and increases control success rate up to 2.5 times for three-dimensional robotic datasets, for which we train independent diffusion policies. To explain this advantage, we develop a linear feature model that separates local law-conditioned error from its recursive amplification under rollout. Guided by this model, we find that back-propagating the multi-step rollout loss into the representation trains the encoder to keep the features that the predictor can carry forward, and that those are the features the dynamics depend on, so most of the gain comes from the encoder learning better features rather than from the predictor learning better dynamics. See project page at https://sg-jepa.github.io.
+
+联合嵌入预测架构 (JEPA) 世界模型学习支持预测和规划的世界的紧凑潜在表示，但其学习物理和生成物理真实动态的能力迄今尚未经过测试。在这项工作中，我们引入了 SemiGroup-JEPA (SG-JEPA)，它通过动作调节向时间模型提供控制物理的参数，并通过自回归潜在推出联合训练编码器和预测器，从而扩展了 LeWorldModel 框架。为了评估模型泛化分布外的能力，我们设计了不同引力场下的动力学任务，尽管遵循相同的物理定律，但表现出性质不同的动力学，范围从弱引力场中的漂浮运动到强引力场中的快速弹跳。与 DINO-WM 相比，SG-JEPA 在二维数据集上将开环预测误差降低了 2 倍，在三维机器人数据集上将控制成功率提高了 2.5 倍，为此我们训练了独立的扩散策略。为了解释这一优势，我们开发了一个线性特征模型，将局部规律条件误差与其在推出时的递归放大分开。在这个模型的指导下，我们发现将多步推出损失反向传播到表示中可以训练编码器保留预测器可以继承的特征，而这些特征是动态所依赖的，因此大部分增益来自编码器学习更好的特征，而不是来自预测器学习更好的动态。请参阅项目页面 https://sg-jepa.github.io。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-10 (15 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-09-10
