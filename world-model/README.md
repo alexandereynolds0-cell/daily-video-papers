@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-17](papers/2026-09-17.md) - 12 papers
 - [2026-09-16](papers/2026-09-16.md) - 14 papers
 - [2026-09-15](papers/2026-09-15.md) - 4 papers
 - [2026-09-11](papers/2026-09-11.md) - 2 papers
@@ -149,6 +150,212 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-17 (12 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-09-17
+
+**Paper Count**: 12
+
+---
+
+## 1. PointZero: 3D Point Track Completion for Learning Transferable 3D Dynamics / PointZero：用于学习可迁移 3D 动力学的 3D 点轨迹完成
+
+**Date**: 2026-09-16 | **arXiv**: [2609.19142v1](http://arxiv.org/abs/2609.19142v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.19142v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models endow perceptual systems with the ability to predict how scenes evolve under interaction. They are most beneficial when trained on diverse volumes of data, to instill a rich prior into downstream applications. Existing methods typically require robot action labels to learn action-conditioned 3D dynamics, which excludes web video data from the training pool. We study 3D point track completion as a pre-training objective for learning transferable 3D dynamics without robot data. Given a single RGB-D observation and sparse partial 3D trajectories (tracks), we predict future 3D tracks of all observed points. We show this objective produces a rich 3D dynamics prior, without requiring robot action labels. We contribute a diverse dataset of 2.9 million synthetic frames spanning deformable, articulated, and rigid objects, and use it to train PointZero. We show that a flexible and expressive transformer, PointZero, outperforms prior methods on the same data. We demonstrate the utility of our pre-training objective by post-training PointZero for two downstream applications: (1) action-conditioned 3D dynamics prediction and (2) imitation learning. When fine-tuned to condition on end-effector pose, PointZero outperforms the baselines on the recent PGND 3D dynamics benchmark. When fine-tuned to predict robot actions and 3D tracks, PointZero outperforms or matches the baselines on 6/7 simulated and real-world robot manipulation tasks. We furthermore evaluate training PointZero from scratch to isolate the benefits of our proposed architecture from those of our proposed pre-training objective and dataset. We release the dataset, checkpoints, and full training recipe.
+
+世界模型赋予感知系统预测场景在交互下如何演变的能力。当对不同数量的数据进行训练时，它们最有益，可以将丰富的先验知识灌输到下游应用程序中。现有方法通常需要机器人动作标签来学习动作条件 3D 动态，这从训练池中排除了网络视频数据。我们研究 3D 点轨迹完成作为预训练目标，以便在没有机器人数据的情况下学习可转移的 3D 动力学。给定单个 RGB-D 观察和稀疏的部分 3D 轨迹（轨迹），我们预测所有观察点的未来 3D 轨迹。我们证明这个目标可以产生丰富的 3D 动态先验，而不需要机器人动作标签。我们贡献了包含 290 万个合成框架的多样化数据集，涵盖可变形、铰接和刚性物体，并用它来训练 PointZero。我们证明了灵活且富有表现力的转换器 PointZero 在相同数据上优于先前的方法。我们通过对 PointZero 进行后训练来展示我们的预训练目标对于两个下游应用的实用性：(1) 动作条件 3D 动态预测和 (2) 模仿学习。当根据末端执行器姿态条件进行微调时，PointZero 的性能优于最近的 PGND 3D 动态基准测试的基线。当经过微调来预测机器人动作和 3D 轨迹时，PointZero 在 6/7 模拟和现实机器人操作任务上的表现优于或匹配基线。此外，我们还从头开始评估训练 PointZero，以将我们提出的架构的优点与我们提出的预训练目标和数据集的优点分开。我们发布数据集、检查点和完整的训练方法。
+
+</details>
+
+---
+
+## 2. ForwardDLO: Model-Based Bimanual Shape Matching of Unconstrained Deformable Linear Objects / ForwardDLO：基于模型的无约束可变形线性物体的双手形状匹配
+
+**Date**: 2026-09-16 | **arXiv**: [2609.18455v1](http://arxiv.org/abs/2609.18455v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.18455v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Ropes, cables, and other deformable linear objects appear in tasks from untangling to cable routing and suturing, yet controlling their shape remains a challenge in robot manipulation. We study model-based shape control in a general setting: the object lies unfixated on a support surface and two arms may grasp and move it anywhere along its length. Because each arm chooses a grasp point, direction, and magnitude, the joint action space is combinatorially large, and the dynamics model's per-prediction cost bounds how much of it a planner can search. We present ForwardDLO, a recurrent latent dynamics model for this unfixated bimanual setting that predicts per-segment displacements grounded in the observed rope state at every step. Our model reaches accuracy comparable to more expensive baselines while containing no explicit segment-to-segment operations, which makes batched evaluation of candidate actions cheap. On open-loop prediction of real rope motion it reaches the lowest error of the learned models we evaluate, 13% below the strongest baseline. Within a fixed time budget it scores 8 to 22 times more candidate actions than models of comparable accuracy while matching them in real-world shape matching; and on a simulated routing task at a 30Hz control rate, this throughput converts into 98% task success versus at most 30% for the baselines at their own budgets. We release the model, code, and a dataset of 2.42 million simulated and 14,107 real rope transitions at https://anonymous.4open.science/r/ForwardDLO/
+
+绳索、电缆和其他可变形线性物体出现在从解开电缆到电缆布线和缝合的任务中，但控制它们的形状仍然是机器人操作的一个挑战。我们在一般环境中研究基于模型的形状控制：物体未固定在支撑表面上，两只手臂可以抓住物体并将其移动到其长度上的任何位置。由于每个手臂都会选择一个抓握点、方向和大小，因此联合动作空间组合很大，并且动力学模型的每次预测成本限制了规划器可以搜索的范围。我们提出了 ForwardDLO，这是一种针对这种非固定双手设置的循环潜在动力学模型，它可以预测基于每一步观察到的绳索状态的每节位移。我们的模型达到了与更昂贵的基线相当的准确性，同时不包含显式的分段到分段操作，这使得对候选动作的批量评估变得便宜。在对真实绳索运动的开环预测中，它达到了我们评估的学习模型的最低误差，比最强基线低 13%。在固定的时间预算内，当在现实世界的形状匹配中进行匹配时，它对候选动作的得分比具有同等精度的模型多 8 到 22 倍；在 30Hz 控制速率的模拟路由任务中，该吞吐量可转化为 98% 的任务成功率，而在自己的预算基准下，最多只能实现 30% 的任务成功率。我们在 https://anonymous.4open.science/r/ForwardDLO/ 上发布了模型、代码和包含 242 万个模拟绳索转换和 14,107 个真实绳索转换的数据集
+
+</details>
+
+---
+
+## 3. UAVs Meet Embodied Intelligence: Bridging Human Intents and Flying Dynamics Via Harnessing Physical-Digital AI Agents / 无人机满足实体智能：通过利用物理数字人工智能代理桥接人类意图和飞行动力学
+
+**Date**: 2026-09-16 | **arXiv**: [2609.18326v1](http://arxiv.org/abs/2609.18326v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.18326v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Unmanned aerial vehicles (UAVs) extend embodied intelligence into continuous three-dimensional space, where perception, reasoning, physical embodiment, and action are tightly coupled through flight and environmental interaction. Recent advances in foundation models, world models, and AI agents are shifting UAV autonomy from task-specific perception and control toward systems that can interpret human intent, understand open environments, reason about physical consequences, and organize complex behaviors under embodiment and flight-dynamic constraints. We characterize this emerging paradigm as UAV embodied intelligence (UAV EI) and distinguish it from its system realization, the embodied-intelligent UAV (EI UAV). To provide a unified view of the field, we introduce a 5+5 framework that describes UAV EI through five capability dimensions and EI UAVs through five architectural layers spanning physical embodiment, general cognition, embodied skills, external interaction, and system harnessing. Based on this framework, we systematically review recent progress in embodied morphology, embodied perception, world models, embodied planning, vision-language navigation, embodied manipulation, and embodied collaboration. We further identify long-horizon autonomy, predictive physical reasoning, test-time skill acquisition, and autonomous capability evolution as key challenges toward more general aerial embodied intelligence. Finally, we argue that harnessing physical-digital AI agents, through persistent coupling of digital intelligence with physical sensing, dynamics, action, and feedback, provides a system-level pathway toward adaptive and continuously evolving UAV autonomy. Project resources are available at our project website and GitHub repository.
+
+无人机 (UAV) 将体现智能扩展到连续的三维空间，其中感知、推理、物理体现和行动通过飞行和环境交互紧密耦合。基础模型、世界模型和人工智能代理的最新进展正在将无人机自主性从特定任务的感知和控制转向能够解释人类意图、理解开放环境、推理物理后果以及在体现和飞行动态约束下组织复杂行为的系统。我们将这种新兴范式描述为无人机体现智能（UAV EI），并将其与其系统实现——体现智能无人机（EI UAV）区分开来。为了提供该领域的统一视图，我们引入了一个 5+5 框架，该框架通过五个能力维度描述无人机 EI，并通过跨越物理体现、一般认知、体现技能、外部交互和系统利用的五个架构层来描述无人机 EI。基于这个框架，我们系统地回顾了具身形态、具身感知、世界模型、具身规划、视觉语言导航、具身操纵和具身协作等方面的最新进展。我们进一步确定长视距自主、预测物理推理、测试时技能获取和自主能力进化是实现更通用的航空体现智能的关键挑战。最后，我们认为，通过数字智能与物理传感、动力学、动作和反馈的持续耦合，利用物理数字人工智能代理，为实现自适应和不断发展的无人机自主提供了一条系统级途径。项目资源可在我们的项目网站和 GitHub 存储库中获取。
+
+</details>
+
+---
+
+## 4. UMI-Bridge: Action-Anchored Latent Alignment across Human and Robot Manipulation Data / UMI-Bridge：跨人类和机器人操作数据的动作锚定潜在对齐
+
+**Date**: 2026-09-16 | **arXiv**: [2609.18232v1](http://arxiv.org/abs/2609.18232v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.18232v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Real-robot demonstrations are limited, motivating the use of human manipulation data collected without robots, including egocentric videos and handheld Universal Manipulation Interface (UMI) demonstrations. However, differences in viewpoint, embodiment, and available action supervision make it difficult to align representations across these sources according to manipulation motion rather than visual appearance. We introduce UMI-Bridge, which uses UMI as an intermediate domain to align representations according to action equivalence rather than pixel similarity. UMI action supervision anchors the latent representation to end-effector motion and gripper behavior, while synchronized head-wrist observations and paired ego-UMI clips support alignment across views and domains. We train a dual-view latent action model (LAM) on human manipulation data without robot demonstrations, then freeze its wrist teacher and dynamics model to regularize vision-language-action (VLA) post-training on UMI and robot data. The shared wrist interface enables this training-time supervision across both domains while preserving the policy's standard inference architecture. Across three real-robot tasks, UMI-Bridge achieves 91.7% mean success versus 73.3% for Naive Co-training with matched UMI and robot data. On two data-efficiency tasks, it surpasses a full-data Robot-only baseline using 25% of the robot demonstrations together with UMI data. It also achieves 85% and 90% success on two additional tasks learned from UMI demonstrations without task-specific robot demonstrations. These results support action-anchored latent alignment for data-efficient robot learning and UMI-to-robot task transfer.
+
+真实的机器人演示是有限的，这促使人们使用在没有机器人的情况下收集的人类操作数据，包括以自我为中心的视频和手持式通用操作界面（UMI）演示。然而，视点、实施例和可用动作监督的差异使得很难根据操纵运动而不是视觉外观来对齐这些源之间的表示。我们引入了 UMI-Bridge，它使用 UMI 作为中间域，根据动作等效性而不是像素相似性来对齐表示。 UMI 动作监督将潜在表示锚定于末端执行器运动和夹具行为，而同步头腕观察和配对的自我 UMI 剪辑支持跨视图和域的对齐。我们在没有机器人演示的情况下，在人类操作数据上训练双视图潜在动作模型（LAM），然后冻结其手腕教师和动力学模型，以规范 UMI 和机器人数据的视觉语言动作（VLA）后训练。共享手腕界面可以跨两个域进行训练时监督，同时保留策略的标准推理架构。在三个真实机器人任务中，UMI-Bridge 的平均成功率为 91.7%，而使用匹配的 UMI 和机器人数据进行 Naive Co-training 的平均成功率为 73.3%。在两项数据效率任务中，它超越了仅使用 25% 的机器人演示和 UMI 数据的全数据机器人基线。它还在从 UMI 演示中学到的两项附加任务上取得了 85% 和 90% 的成功，而无需特定任务的机器人演示。这些结果支持基于动作的潜在对齐，以实现数据高效的机器人学习和 UMI 到机器人的任务转移。
+
+</details>
+
+---
+
+## 5. WAVE-Go: World-Model Navigation with Adaptive Execution for Wheel-Legged Robots / WAVE-Go：轮腿机器人的世界模型导航和自适应执行
+
+**Date**: 2026-09-16 | **arXiv**: [2609.18193v1](http://arxiv.org/abs/2609.18193v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.18193v1)
+
+**Categories**: cs.RO
+
+**Code**: https://github.com/vigorlee/wave-go.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models can anticipate the consequences of navigation actions, but predicted action sequences may become invalid during execution, especially when wheel-legged robots encounter dynamic obstacles or change locomotion modes. We propose WAVE-Go, an image-goal navigation framework that separates world-action prediction from interruptible command execution. Its executor adaptively selects an action prefix and cancels pending commands when updated observations invalidate execution. A conditional-risk formulation specifies prefix selection under an estimated cumulative failure budget, while posture and locomotion-mode transitions require clearance, stability, and task-evidence checks. In the reported navigation evaluation, WAVE-Go achieves 74.1% in-distribution success and 63.3% dynamic out-of-distribution success, exceeding the strongest baseline by 4.7 and 7.7 percentage points, respectively, while reducing collisions from 4.4 to 2.9 per 100 m. Compared with interruptible fixed four-command execution, WAVE-Go raises success by 4.0 percentage points while reducing replanning frequency by 51.2% and collision rate by 6.5%. Execution ablations also show that runtime interruption improves success, collision rate, and reaction latency at the cost of additional replanning. These results support adaptive, interruptible execution as a means of balancing navigation performance and planning overhead. Code is available at https://github.com/vigorlee/wave-go.
+
+世界模型可以预测导航动作的后果，但预测的动作序列在执行过程中可能会变得无效，特别是当轮腿机器人遇到动态障碍物或改变运动模式时。我们提出了 WAVE-Go，一种图像目标导航框架，它将世界动作预测与可中断命令执行分开。当更新的观察结果使执行无效时，它的执行器自适应地选择一个操作前缀并取消挂起的命令。条件风险公式指定了估计累积故障预算下的前缀选择，而姿势和运动模式转换需要间隙、稳定性和任务证据检查。在报告的导航评估中，WAVE-Go 实现了 74.1% 的分布内成功率和 63.3% 的动态分布外成功率，分别超过最强基线 4.7 和 7.7 个百分点，同时将碰撞次数从每 100 m 4.4 次减少到 2.9 次。与可中断的固定四命令执行相比，WAVE-Go 的成功率提高了 4.0 个百分点，同时重新规划频率降低了 51.2%，冲突率降低了 6.5%。执行消融还表明，运行时中断可以提高成功率、冲突率和反应延迟，但代价是额外的重新计划。这些结果支持自适应、可中断执行，作为平衡导航性能和规划开销的一种手段。代码可在 https://github.com/vigorlee/wave-go 获取。
+
+</details>
+
+---
+
+## 6. Characterizing Replay Retention Under Dynamics Shift in Model-Based Reinforcement Learning / 基于模型的强化学习中动态变化下重放保留的特征
+
+**Date**: 2026-09-16 | **arXiv**: [2609.18167v1](http://arxiv.org/abs/2609.18167v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.18167v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Adapting to changes in robot dynamics requires learning from new data without discarding experience that may still be useful. In continual model-based reinforcement learning (RL), replay collected before a dynamics change can slow adaptation, while removing it unnecessarily reduces available training data and can be especially costly if earlier dynamics return. We study when recent transitions are preferable to the full replay history. Two quantities characterize this trade-off: change magnitude and age-staleness area under the curve (AUC), measuring how well transition age separates stale from fresh data. Forgetting stale data helps after large permanent shifts but hurts when dynamics recur and older data becomes useful again. Choosing a replay strategy therefore depends on predicting when older data will help or hurt. We test these effects across two locomotion morphologies, two model-based RL algorithms, and Real-World RL benchmark perturbations. Because ground-truth staleness labels are unavailable on deployed robots, we evaluate whether an estimator built from interaction data can still provide the quantities needed to choose a replay strategy after permanent changes. Our results show that replay retention depends on change magnitude and on how the dynamics evolve.
+
+适应机器人动力学的变化需要从新数据中学习，同时又不放弃可能仍然有用的经验。在基于模型的持续强化学习 (RL) 中，在动态变化之前收集的重播可能会减慢适应速度，而不必要地删除它会减少可用的训练数据，并且如果较早的动态恢复，成本可能会特别高。我们研究最近的转换何时比完整的重播历史更可取。有两个量表征了这种权衡：变化幅度和年龄-陈旧曲线下面积 (AUC)，用于衡量过渡年龄将陈旧数据与新鲜数据区分开来的程度。忘记陈旧的数据在发生大规模的永久性转变后会有所帮助，但当动态再次出现并且旧数据再次变得有用时就会受到伤害。因此，选择重放策略取决于预测旧数据何时会有所帮助或有害。我们通过两种运动形态、两种基于模型的 RL 算法和真实世界 RL 基准扰动来测试这些效果。由于部署的机器人无法使用真实的过时标签，因此我们评估根据交互数据构建的估计器是否仍然可以提供在永久更改后选择重放策略所需的数量。我们的结果表明，重播保留率取决于变化幅度以及动态的演变方式。
+
+</details>
+
+---
+
+## 7. Energy-Regularized Imitation Learning for Force- and Work-Aware Robotic Manipulation / 用于力和工作感知机器人操作的能量调节模仿学习
+
+**Date**: 2026-09-16 | **arXiv**: [2609.18164v1](http://arxiv.org/abs/2609.18164v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.18164v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper studies energy-aware manipulation as a physically grounded learning problem. We define a joint-space mechanical-work proxy from joint torque and angular displacement, and train a differentiable energy predictor that estimates this work from robot states and actions. The predictor converts a non-differentiable simulator-side physical quantity into a differentiable regularizer for fine-tuning a pretrained manipulation policy. We instantiate the framework with RVT-2 on RLBench and evaluate 12 manipulation tasks involving object contact, articulated motion, placement, pushing, and sweeping. The proposed fine-tuning reduces the average mechanical work from 208.8J to 204.4J (i.e., 2.1% reduction), while the mean task success rate also increases slightly from 86.2% to 86.9%. These results show that work-aware policy optimization can suppress physically inefficient motion without requiring an explicit differentiable dynamics model.
+
+本文将能量感知操纵作为一个物理基础的学习问题进行研究。我们根据关节扭矩和角位移定义关节空间机械功代理，并训练可微能量预测器，根据机器人状态和动作估计该功。预测器将不可微的模拟器侧物理量转换为可微的正则化器，以微调预训练的操纵策略。我们在 RLBench 上使用 RVT-2 实例化该框架，并评估涉及对象接触、关节运动、放置、推动和扫掠的 12 种操作任务。所提出的微调将平均机械功从 208.8J 减少到 204.4J（即减少 2.1%），而平均任务成功率也从 86.2% 略有增加到 86.9%。这些结果表明，工作感知策略优化可以抑制物理上低效的运动，而不需要显式的可微动力学模型。
+
+</details>
+
+---
+
+## 8. Mixed-Integer Nonlinear Differentiable Predictive Control for Underground Pumped Hydro Energy Storage Systems / 地下抽水蓄能系统的混合整数非线性可微预测控制
+
+**Date**: 2026-09-16 | **arXiv**: [2609.17964v1](http://arxiv.org/abs/2609.17964v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.17964v1)
+
+**Categories**: eess.SY, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper extends Mixed-Integer Differentiable Predictive Control (MI-DPC) to multi-modal discrete decisions and nonconvex polynomial dynamics arising in Underground Pumped Hydro Energy Storage Systems (UPHES). A neural policy mapping problem parameters to continuous setpoints and integer mode selections via a Gumbel-Softmax layer is trained in a self-supervised manner by differentiating the expectation of the finite horizon control objective through the nonlinear dynamics model. Three methodological contributions enable this extension: a parallel differentiable simulator that preserves gradient magnitude, a Transformer encoder that captures long-range temporal dependencies, and a Gumbel-Softmax temperature annealing schedule that regularizes the combinatorial search. We demonstrate the framework on day-ahead scheduling of a UPHES, a large-scale mixed-integer optimal control problem with nonlinear unit performance curves and volume-head coupling. MI-DPC achieves only 1.6% suboptimality relative to a piecewise mixed-integer quadratic programming baseline, while providing five orders of magnitude speedup in online scheduling time.
+
+本文将混合整数可微分预测控制（MI-DPC）扩展到地下抽水蓄能系统（UPHES）中出现的多模态离散决策和非凸多项式动力学。通过 Gumbel-Softmax 层将问题参数映射到连续设定点和整数模式选择的神经策略通过非线性动力学模型区分有限范围控制目标的期望，以自监督方式进行训练。三个方法贡献实现了这一扩展：保留梯度大小的并行可微模拟器、捕获长范围时间依赖性的 Transformer 编码器以及规范组合搜索的 Gumbel-Softmax 温度退火计划。我们演示了 UPHES 日前调度框架，这是一个具有非线性机组性能曲线和体积水头耦合的大规模混合整数最优控制问题。相对于分段混合整数二次规划基线，MI-DPC 仅实现 1.6% 的次优，同时在线调度时间提供五个数量级的加速。
+
+</details>
+
+---
+
+## 9. Zing-0.5: Toward Playable Worlds with Real-Time Joint Action and Text Control / Zing-0.5：通过实时联合动作和文本控制迈向可玩的世界
+
+**Date**: 2026-09-15 | **arXiv**: [2609.17909v1](http://arxiv.org/abs/2609.17909v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.17909v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce Zing-0.5, a 5B autoregressive world model designed for playability: users can explore generated worlds, influence unfolding events, and respond to the resulting feedback through joint keyboard and online text control. Our approach brings together three technical contributions: (1) Unified action and text conditioning, combining magnitude-aware keyboard inputs with temporally aligned text instructions and jointly annotated videos to learn navigation and event control within the same sequence; (2) Event-scale supervision for incremental generation, using a segment-level teacher trained on connected multi-prompt videos to supervise a block-level causal student through distribution-matching distillation; and (3) Low-cost real-time interaction, combining four-step generation with context-preserving streaming to support 832 x 480 inference at 24 FPS at an estimated server rental cost of approximately USD 0.009 per stream-minute. Zing-0.5 achieves an overall score of 81.0 and a consistency score of 88.5 across 158 WBench Navigation cases. A joint-control demonstration shows a text-directed event change during continued navigation without restarting generation. We release the model weights, inference code, and Zing-SGLang serving implementation to support further work on playable generated worlds.
+
+我们推出了 Zing-0.5，这是一种专为可玩性而设计的 5B 自回归世界模型：用户可以探索生成的世界，影响展开的事件，并通过联合键盘和在线文本控制对由此产生的反馈做出响应。我们的方法汇集了三个技术贡献：（1）统一动作和文本调节，将幅度感知键盘输入与时间对齐的文本指令和联合注释视频相结合，以学习同一序列内的导航和事件控制； （2）增量生成的事件规模监督，使用经过连接多提示视频训练的段级教师通过分布匹配蒸馏来监督块级因果学生； (3) 低成本实时交互，将四步生成与上下文保留流相结合，支持 24 FPS 的 832 x 480 推理，估计服务器租赁成本约为每流分钟 0.009 美元。 Zing-0.5 在 158 个 WBench Navigation 案例中的总体得分为 81.0，一致性得分为 88.5。联合控制演示显示了连续导航期间文本引导的事件变化，而无需重新启动生成。我们发布了模型权重、推理代码和 Zing-SGLang 服务实现，以支持可玩生成世界的进一步工作。
+
+</details>
+
+---
+
+## 10. Intrinsic Motivation in Reinforcement Learning: A Research Agenda for Adaptive Self-Organisation / 强化学习的内在动机：自适应自组织的研究议程
+
+**Date**: 2026-09-15 | **arXiv**: [2609.17325v1](http://arxiv.org/abs/2609.17325v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.17325v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Biological cells can be viewed as individual, interacting agents whose collective dynamics give rise to adaptive behaviour at multiple levels of organisation, from individual cells through tissues to whole multicellular organisms. In this perspective and tutorial article we discuss whether intrinsic rewards in artificial neural systems can support adaptation, functional specialisation and higher-level self-organisation without a shared external objective. We review empowerment, curiosity, learning progress, information gain, unsupervised skill discovery, mutual information estimation and the use of world models for intrinsic reward computation. Particular attention is given to failure modes showing when such objectives do not produce sustained exploration or increasingly complex behaviour. We argue that more capable systems may require complementary objectives, communication, memory, learning at multiple temporal scales and environmental constraints. Based on this perspective, we outline three experimental directions. These include a resource-constrained environment in which otherwise stable behavioural attractors become unsustainable, allowing us to test whether environmental constraints can mitigate characteristic failure modes of intrinsic objectives. The network of recurrent agents with per-agent intrinsic rewards, and a hierarchical world-model agent in which exploratory motor competence develops before goal-directed behaviour. These experiments are intended to test whether intrinsic learning can lead to adaptive organisation at progressively higher levels.
+
+生物细胞可以被视为个体、相互作用的媒介，其集体动态在组织的多个层面上产生适应性行为，从个体细胞到组织再到整个多细胞生物体。在这篇观点和教程文章中，我们讨论人工神经系统中的内在奖励是否可以在没有共享外部目标的情况下支持适应、功能专业化和更高层次的自组织。我们回顾了赋权、好奇心、学习进度、信息获取、无监督技能发现、互信息估计以及使用世界模型进行内在奖励计算。特别关注失败模式，显示这些目标何时无法产生持续的探索或日益复杂的行为。我们认为，更强大的系统可能需要互补的目标、沟通、记忆、多个时间尺度的学习和环境限制。基于这个观点，我们概述了三个实验方向。其中包括资源受限的环境，在该环境中，原本稳定的行为吸引子变得不可持续，这使我们能够测试环境约束是否可以减轻内在目标的特征失败模式。具有每个智能体内在奖励的循环智能体网络，以及一个分层世界模型智能体，其中探索性运动能力在目标导向行为之前发展。这些实验旨在测试内在学习是否可以导致逐步更高水平的适应性组织。
+
+</details>
+
+---
+
+## 11. Visual Cue Guided Video Planning for Generalizable Robot Navigation / 用于通用机器人导航的视觉提示引导视频规划
+
+**Date**: 2026-09-15 | **arXiv**: [2609.16737v2](http://arxiv.org/abs/2609.16737v2) | **PDF**: [Link](http://arxiv.org/pdf/2609.16737v2)
+
+**Categories**: cs.RO, cs.AI, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative video models can serve as a promising backbone for robot navigation by predicting future observations as video plans. Recent approaches often condition video planning on short-horizon guidance and recover geometric waypoints through scene reconstruction, leaving longer-horizon planning and precise video-to-action translation less explored. We present CueNav, a video model-based navigation framework combining visual cue guided video planning with an embodiment-specific Inverse-Dynamics Model (IDM). As visual cues, we use a Bird's-Eye View (BEV) map to convey global task context and retain part of the robot body in the egocentric observation to expose embodiment context. These cues guide the video planner, while the IDM translates dense flow fields extracted from the video plan into robot actions. With the visual cue encoding global task context, CueNav achieves nearly 2x higher success in maze navigation than planning without the cue. The body-aware view with the IDM enables precise navigation with 70% success in a narrow passage where comparison methods largely fail to complete the task. We further demonstrate zero-shot semantic-conditioned navigation and deployment of the same video planner across different robot platforms. Our results show that visual cue-guided video planning with embodiment-specific action grounding paves the way toward a generalizable navigation framework for longer-horizon planning and embodiment-aware control. Additional results and code are available on our project website: https://cuenav.github.io.
+
+通过将未来的观察结果预测为视频计划，生成视频模型可以作为机器人导航的有前景的支柱。最近的方法通常以短视距引导为条件进行视频规划，并通过场景重建恢复几何航路点，而对较长视距规划和精确的视频到动作转换的探索较少。我们提出了 CueNav，一种基于视频模型的导航框架，将视觉提示引导的视频规划与特定于实施例的逆动态模型（IDM）相结合。作为视觉提示，我们使用鸟瞰图（BEV）来传达全局任务上下文，并在以自我为中心的观察中保留机器人身体的一部分以暴露具体上下文。这些线索指导视频规划器，而 IDM 将从视频规划中提取的密集流场转换为机器人动作。通过对全局任务上下文进行编码的视觉提示，CueNav 在迷宫导航中取得的成功率比没有提示的规划高出近 2 倍。 IDM 的身体感知视图可在比较方法基本上无法完成任务的狭窄通道中实现精确导航，成功率为 70%。我们进一步演示了零镜头语义条件导航以及在不同机器人平台上部署相同的视频规划器。我们的结果表明，具有特定实施例动作基础的视觉提示引导视频规划为实现长期规划和实施例感知控制的通用导航框架铺平了道路。其他结果和代码可在我们的项目网站上找到：https://cuenav.github.io。
+
+</details>
+
+---
+
+## 12. CorrRisk-WM: Corridor-Conditioned Risk World Modeling for Safety-Critical Trajectory Planning / CorrRisk-WM：用于安全关键轨迹规划的走廊条件风险世界建模
+
+**Date**: 2026-09-15 | **arXiv**: [2609.16724v2](http://arxiv.org/abs/2609.16724v2) | **PDF**: [Link](http://arxiv.org/pdf/2609.16724v2)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Safe local planning requires forecasting surrounding-agent motion and evaluating candidate-specific risks, since identical agent motion can pose different risks to different ego trajectories. We present CorrRisk-WM, a planning-oriented partial world model coupling environment evolution with supervised intrusion and near-miss prediction over bounded candidate-trajectory corridors. A latent environment model recursively predicts agent states and updates agent-agent and agent-map interactions. Each candidate queries the evolving environment through footprint- aware geometry and learned agent-corridor representations. A lightweight recurrent risk module uses temporal context to estimate per-slice hazards; survival aggregation yields first-entry and horizon-level event probabilities. On 29,176 scenarios from 100 Waymo validation shards, CorrRisk-WM achieves intrusion average precision (AP) of 0.8567 and 1-m near-miss first-entry AP of 0.8671. In baseline comparisons, it attains the highest near-miss AP at all three distance thresholds and the lowest observed open-loop collision rate (4.88%), with route progress of 15.35 m. Across three seeds, removing dynamic environment modeling or candidate-conditioned geometric interaction reduces mean intrusion AP from 0.8590 to 0.7624 and 0.7252, respectively. These results support coupling environment evolution with candidate-conditioned geometric reasoning for risk prediction and safety-oriented candidate selection.
+
+安全的局部规划需要预测周围智能体的运动并评估特定于候选者的风险，因为相同的智能体运动可能会给不同的自我轨迹带来不同的风险。我们提出了 CorrRisk-WM，一种面向规划的部分世界模型，将环境演化与有界候选轨迹走廊上的监督入侵和未遂预测相耦合。潜在环境模型递归地预测智能体状态并更新智能体-智能体和智能体-地图交互。每个候选人通过足迹感知几何和学习的代理走廊表示来查询不断变化的环境。轻量级的经常性风险模块使用时间上下文来估计每切片的危险；生存聚合产生首次进入和地平线级别的事件概率。在 100 个 Waymo 验证分片的 29,176 个场景中，CorrRisk-WM 实现了 0.8567 的入侵平均精度 (AP) 和 0.8671 的 1 米近距离首次进入 AP。在基线比较中，它在所有三个距离阈值下均获得了最高的未遂 AP 和观察到的最低开环碰撞率 (4.88%)，路线进度为 15.35 m。在三个种子中，删除动态环境建模或候选条件几何相互作用可将平均入侵 AP 分别从 0.8590 降低至 0.7624 和 0.7252。这些结果支持将环境演化与候选条件几何推理耦合起来，以进行风险预测和面向安全的候选选择。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-16 (14 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-09-16
