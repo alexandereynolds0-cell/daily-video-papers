@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-22](papers/2026-09-22.md) - 7 papers
 - [2026-09-18](papers/2026-09-18.md) - 34 papers
 - [2026-09-17](papers/2026-09-17.md) - 43 papers
 - [2026-09-16](papers/2026-09-16.md) - 42 papers
@@ -165,6 +166,130 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-22 (7 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-09-22
+
+**Paper Count**: 7
+
+---
+
+## 1. One to More, More to One: Category-Aware Iterative Expert Training for Software Engineering Agents / 一对多，多对一：软件工程代理的类别感知迭代专家培训
+
+**Date**: 2026-09-20 | **arXiv**: [2609.23377v1](http://arxiv.org/abs/2609.23377v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.23377v1)
+
+**Categories**: cs.SE, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Repository-level software engineering (SWE) comprises heterogeneous task categories, whose progress under pooled agentic reinforcement learning can be uneven: gains in some categories coincide with regressions in others, while aggregate resolution obscures these changes. Motivated by this category see-saw, we develop a category-aware expert-training and policy-integration framework. Executable task construction and SWE Labeler, an evidence-grounded multi-axis labeling system, organize the training pools. Initial category-specific RL improves average training success while leaving uneven instance-level progress, motivating explicit consolidation of successful behavior and policy-adaptive task selection. Same-origin category experts alternate long-horizon Agentic-miniRL with Refresh-Repair-Expand (RRE): the updated policy refreshes instance mastery, reuses its own verified successful trajectories for Repair SFT, and reselects tasks for further RL. Label-routed multi-teacher on-policy distillation (MOPD) consolidates the experts into one deployable student, with ReLU-gated reward extrapolation keeping only each teacher's improving direction over the reference. Expert training and policy integration require no external model to provide solution trajectories or action targets. We evaluate Pooled RL and Balanced RL, expert development, and single-model integration through aggregate and per-category resolution, the minimum category lift over each joint-RL baseline, and expert-gain recovery. The final MOPD policy achieves mean resolution of 58.04% on Pro-618 and 59.00% on SWE-bench Multilingual, improving over the base model by 5.39 and 2.78 percentage points, respectively.
+
+存储库级软件工程（SWE）由异构任务类别组成，其在池代理强化学习下的进展可能不平衡：某些类别的收益与其他类别的回归一致，而聚合分辨率掩盖了这些变化。在这种类别拉锯的推动下，我们开发了一个类别感知的专家培训和政策整合框架。可执行任务构建和 SWE Labeler（一种基于证据的多轴标签系统）组织了培训池。初始特定类别的 RL 提高了平均训练成功率，同时留下了不均匀的实例级进度，从而激励成功行为和策略自适应任务选择的明确整合。同源类别专家将长视野 Agentic-miniRL 与刷新-修复-扩展 (RRE) 交替使用：更新的策略刷新实例掌握情况，重用其自己验证的成功轨迹进行修复 SFT，并重新选择任务以进行进一步的 RL。标签路由的多教师策略蒸馏 (MOPD) 将专家整合为一名可部署的学生，ReLU 门控奖励外推仅保留每位教师相对于参考的改进方向。专家培训和政策整合不需要外部模型来提供解决方案轨迹或行动目标。我们通过聚合和按类别分辨率、每个联合强化学习基线的最小类别提升以及专家增益恢复来评估池化强化学习和平衡强化学习、专家开发和单模型集成。最终的 MOPD 策略在 Pro-618 上实现了 58.04% 的平均分辨率，在 SWE-bench Multilingual 上实现了 59.00% 的平均分辨率，分别比基本模型提高了 5.39 和 2.78 个百分点。
+
+</details>
+
+---
+
+## 2. Latent Telepathy: Multi-Robot Communication with Self-Supervised Perceptual Latents / 潜在心灵感应：具有自我监督感知潜伏的多机器人通信
+
+**Date**: 2026-09-20 | **arXiv**: [2609.23269v1](http://arxiv.org/abs/2609.23269v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.23269v1)
+
+**Categories**: cs.RO, cs.LG, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In a decentralized multi-robot team under partial observability, the fact that decides a robot's next action is often visible only to a teammate. Existing decentralized methods communicate kinematic information, such as position or planned trajectory, which cannot convey what the teammate perceives. Learned communication in multi-agent reinforcement learning (MARL) can carry perceptual content, but the resulting messages are task-coupled and opaque. We propose Latent Telepathy. Each robot broadcasts the perceptual latent vector it already computes for its own use, the output of an encoder trained with a self-supervised joint-embedding predictive objective, frozen, and shared across the team. A teammate learns to act on it from task reward alone. Because the encoder already runs for perception, the message costs no additional computation and a single compact vector of bandwidth. Because the encoder is frozen before any policy is trained, the message means the same thing to every robot, and the receiving robot is never told what it means. We evaluate Latent Telepathy with a content-controlled protocol in which bandwidth, latency, topology and receiver are held fixed and only the message content varies. Broadcasting the latent lets a navigator avoid an occluded hazard in 99.7% of episodes, matching a noiseless hand-designed message. Position and trajectory messages remain at chance, and the raw camera image, 186 times wider, is less reliable than the compressed latent. The result holds from a discrete gridworld to rendered pixels under continuous velocity control, and the encoder decodes the hazard from a physical robot's camera in 102 of 102 live decisions. We also identify a requirement for porting MARL communication results to continuous control, that the decision a message informs must remain reachable by exploration, and show how to restore it.
+
+在部分可观察性下的去中心化多机器人团队中，决定机器人下一步行动的事实通常只有队友可见。现有的分散方法传达运动信息，例如位置或计划轨迹，这些信息无法传达队友的感知。多智能体强化学习（MARL）中的学习交流可以携带感知内容，但生成的消息是任务耦合的且不透明的。我们提出潜在心灵感应。每个机器人都会广播它已经计算出来供自己使用的感知潜在向量，这是使用自监督联合嵌入预测目标进行训练的编码器的输出，冻结并在整个团队中共享。队友仅从任务奖励中学习采取行动。由于编码器已经运行用于感知，因此该消息不需要额外的计算和单个紧凑的带宽向量。由于编码器在训练任何策略之前就被冻结，因此该消息对每个机器人来说都意味着同样的事情，并且接收机器人永远不会被告知它的含义。我们使用内容控制协议来评估潜在心灵感应，其中带宽、延迟、拓扑和接收器保持固定，只有消息内容发生变化。广播潜在的信息可以让导航员在 99.7% 的事件中避免被遮挡的危险，这与无噪音的手工设计消息相匹配。位置和轨迹信息仍然存在偶然性，原始相机图像宽 186 倍，可靠性不如压缩后的潜在图像。结果适用于连续速度控制下的离散网格世界和渲染像素，并且编码器在 102 个实时决策中的 102 个中解码来自物理机器人相机的危险。我们还确定了将 MARL 通信结果移植到持续控制的要求，即消息通知的决策必须通过探索保持可达性，并展示如何恢复它。
+
+</details>
+
+---
+
+## 3. Triggers and Diagnostics for LLM-Based Interpretability Failures in Active Inference Agents / 主动推理代理中基于 LLM 的可解释性故障的触发器和诊断
+
+**Date**: 2026-09-19 | **arXiv**: [2609.23215v1](http://arxiv.org/abs/2609.23215v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.23215v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM explainers are increasingly attached to autonomous agents as runtime oversight, with operators reading a generated account of the agent's beliefs and actions rather than its internal state. We audit the account itself, pairing an Active Inference (AIF) agent that tracks German grid demand and adjusts generation with an LLM explainer on three backends (GPT-4o, Claude-3-Opus, Gemini), and probing the pair with three black-box triggers. Corrupting the observation stream by 600 MW per step moves the agent's posterior by 490 MW, roughly 0.9% of grid capacity. None of the 30 explanations produced during the injection flag anything under a stated rubric, and each narrates the corrupted belief fluently. On timesteps where the agent takes an objectively wrong action, all three explainers produce a sycophantic rationalization 80-95% of the time (n = 20 per backend). Attacker-controlled text in the observation metadata field steers the explainer, with susceptibility differing by provider and data exfiltration succeeding on all three. We propose mitigations for each failure but do not evaluate them. In every failure we observed, the explanation was fluent and wrong. Moreover, nothing in the explainer architecture checks whether an explanation is true before an operator acts on it. Testing the explainer therefore belongs in any audit of an agentic deployment.
+
+LLM 解释器越来越依赖自主代理作为运行时监督，操作员读取生成的代理信念和行为的描述，而不是其内部状态。我们审核账户本身，将跟踪德国电网需求并调整发电量的主动推理 (AIF) 代理与三个后端（GPT-4o、Claude-3-Opus、Gemini）上的 LLM 解释器配对，并使用三个黑盒触发器探测这对代理。每步破坏观测流 600 MW 会使代理的后部移动 490 MW，大约是网格容量的 0.9%。注射过程中产生的 30 种解释中没有一种是在规定的标题下标记任何内容的，而且每一种都流利地叙述了被破坏的信仰。在智能体采取客观错误行为的时间步上，所有三个解释器在 80-95% 的时间内都会产生阿谀奉承的合理化（每个后端 n = 20）。观察元数据字段中由攻击者控制的文本引导解释器，其敏感性因提供商而异，并且数据泄露在所有三个方面都成功。我们针对每个故障提出缓解措施，但不对其进行评估。在我们观察到的每一次失败中，解释都是流畅而错误的。此外，在操作员对其进行操作之前，解释器架构中不会检查解释是否正确。因此，测试解释器属于代理部署的任何审计。
+
+</details>
+
+---
+
+## 4. Measured Joules, Learned Routes: Learning to Route for Energy-Efficient LLM Serving / 测量的焦耳，学习的路线：学习路线以实现节能的法学硕士服务
+
+**Date**: 2026-09-19 | **arXiv**: [2609.23085v1](http://arxiv.org/abs/2609.23085v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.23085v1)
+
+**Categories**: cs.PF, cs.DC, cs.LG, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) and agentic AI systems are creating rapidly growing inference energy demands as model sizes grow and reasoning trajectories extend. While in practice, many queries do not require the capabilities of the largest available model, and routinely directing such queries to a high-capability model can introduce unnecessary, considerable computation and energy consumption. In this paper, we investigate whether adaptive routing across a heterogeneous pool of LLMs can reduce this energy burden without substantially compromising task performance. We design a language-model-based router that reads in each query and selects an answer model from a fixed candidate pool. The candidate models are first profiled through an offline tournament that records their correctness, latency, power, and GPU energy for each query. Using these measurements, the router is trained through supervised fine-tuning followed by group relative policy optimization (GRPO) with the tailored paradigms. Results demonstrate that learned routing can selectively allocate expensive model capacity based on query context and improve the accuracy-energy tradeoff in multi-LLM serving. Across seven benchmark tasks, we also observe a sharp accuracy-energy phase transition among routers, providing practical insights into improving energy efficiency while maintaining LLM performance.
+
+随着模型规模的增长和推理轨迹的扩展，大型语言模型 (LLM) 和代理人工智能系统正在创造快速增长的推理能量需求。然而在实践中，许多查询不需要最大可用模型的功能，并且例行地将此类查询定向到高性能模型可能会引入不必要的、大量的计算和能耗。在本文中，我们研究了跨 LLM 异构池的自适应路由是否可以在不显着影响任务性能的情况下减少这种能源负担。我们设计了一个基于语言模型的路由器，它读取每个查询并从固定的候选池中选择一个答案模型。首先通过离线锦标赛对候选模型进行分析，记录每个查询的正确性、延迟、功耗和 GPU 能量。使用这些测量，路由器通过监督微调进行训练，然后使用定制的范例进行组相对策略优化（GRPO）。结果表明，学习路由可以根据查询上下文有选择地分配昂贵的模型容量，并改善多 LLM 服务中的准确性与能量权衡。在七个基准测试任务中，我们还观察到路由器之间急剧的精度-能量相变，为在保持 LLM 性能的同时提高能源效率提供了实用的见解。
+
+</details>
+
+---
+
+## 5. Bridging Static and Agentic RAG for Taiwanese Historical Question Answering / 连接静态和代理 RAG 进行台湾历史问答
+
+**Date**: 2026-09-19 | **arXiv**: [2609.23056v1](http://arxiv.org/abs/2609.23056v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.23056v1)
+
+**Categories**: cs.CL, cs.IR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic retrieval-augmented generation (RAG) enables language models to adapt retrieval based on previously retrieved evidence, but it remains unclear whether such adaptive orchestration consistently outperforms well-designed static pipelines. We conduct a controlled comparison of agentic and static RAG for Taiwanese historical question answering, sharing the same generator and hybrid retrieval backend. Despite similar aggregate performance, the two pipelines differ on 70.83% of questions, with their advantages largely canceling out when averaged. An oracle that selects the better response per question improves the composite score by 0.2417 over the better individual pipeline, revealing substantial headroom for question-level selection. We therefore introduce a post-hoc selector that compares the two responses and their cited evidence, significantly outperforming either individual pipeline and recovering 60.34% of the oracle headroom. These results show that aggregate comparisons can obscure meaningful question-level differences between retrieval strategies, suggesting that exploiting their complementarity may be more fruitful than seeking a universally superior pipeline.
+
+代理检索增强生成（RAG）使语言模型能够根据先前检索到的证据来调整检索，但目前尚不清楚这种自适应编排是否始终优于精心设计的静态管道。我们对台湾历史问答的代理和静态 RAG 进行了受控比较，共享相同的生成器和混合检索后端。尽管总体性能相似，但这两个管道在 70.83% 的问题上存在差异，平均时它们的优势基本上被抵消了。为每个问题选择更好的答案的预言机将综合得分比更好的单个管道提高了 0.2417，揭示了问题级别选择的巨大空间。因此，我们引入了一个事后选择器来比较两个响应及其引用的证据，显着优于单个管道并恢复了 60.34% 的预言机空间。这些结果表明，总体比较可以掩盖检索策略之间有意义的问题级别差异，这表明利用它们的互补性可能比寻求普遍优越的管道更富有成效。
+
+</details>
+
+---
+
+## 6. AgentRouter: Heterogeneous Model Routing for Cost-Optimal Multi-Step Agentic Workflows / AgentRouter：用于成本优化的多步骤代理工作流的异构模型路由
+
+**Date**: 2026-09-19 | **arXiv**: [2609.22951v1](http://arxiv.org/abs/2609.22951v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.22951v1)
+
+**Categories**: cs.AI, cs.CL, cs.LG, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Enterprise agentic systems that route every trajectory step to a frontier model waste 60-80% of their inference budget on subtasks that smaller models handle equally well. Existing routing solutions optimize single-turn query assignment but ignore a property unique to agentic workflows: subtask complexity varies widely within a single trajectory. A planning step may require frontier-class reasoning while a subsequent formatting step needs only a 7B model. We formalize step-level model routing as a sequential assignment problem over agent trajectories and propose AgentRouter, a lightweight classifier (12M parameters, <5ms overhead per step on an A100 GPU) that maps each trajectory step to one of four model tiers using five features extractable at routing time. Trained on 50,000 annotated agent trajectory steps spanning planning, coding, research, and data analysis tasks, AgentRouter achieves 72% cost reduction relative to frontier-only baselines, retaining 97.3% of frontier-only quality (less than 3% degradation in end-to-end task completion); per-step routing accuracy reaches 91% on minimal-complexity steps and 85% on efficient-tier steps, with 76-82% on the harder mid-range and frontier tiers. On the same benchmarks, RouteLLM and FrugalGPT (applied per-step) achieve only 31% and 44% cost reduction respectively, because their single-turn training signal misses trajectory-level quality dependencies.
+
+将每个轨迹步骤路由到前沿模型的企业代理系统将 60-80% 的推理预算浪费在较小模型处理同样好的子任务上。现有的路由解决方案优化单轮查询分配，但忽略了代理工作流程特有的属性：子任务复杂性在单个轨迹内变化很大。规划步骤可能需要前沿级推理，而后续格式化步骤仅需要 7B 模型。我们将步骤级模型路由形式化为智能体轨迹上的顺序分配问题，并提出了 AgentRouter，这是一种轻量级分类器（12M 参数，A100 GPU 上每步的开销 <5 毫秒），它使用路由时可提取的五个特征将每个轨迹步骤映射到四个模型层之一。 AgentRouter 在涵盖规划、编码、研究和数据分析任务的 50,000 个带注释的智能体轨迹步骤上进行训练，相对于仅前沿基线，实现了 72% 的成本降低，保留了 97.3% 的仅前沿质量（端到端任务完成率下降不到 3%）；每步路由精度在最低复杂度步骤上达到 91%，在高效层步骤上达到 85%，在较难的中档和前沿层上达到 76-82%。在相同的基准上，RouteLLM 和 FrugalGPT（每步应用）仅分别实现了 31% 和 44% 的成本降低，因为它们的单轮训练信号错过了轨迹级质量依赖性。
+
+</details>
+
+---
+
+## 7. Beyond Single-Model Injection: A Threat Model and Defense Architecture for Prompt Injection in Multi-Agent Systems / 超越单模型注入：多代理系统中快速注入的威胁模型和防御架构
+
+**Date**: 2026-09-19 | **arXiv**: [2609.22949v1](http://arxiv.org/abs/2609.22949v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.22949v1)
+
+**Categories**: cs.CR, cs.AI, cs.CL, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing prompt injection research focuses on single-model chatbot scenarios, where an attacker manipulates one LLM through crafted input. Multi-agent systems amplify this threat through three mechanisms absent from single-model settings: inter-agent message passing creates injection channels invisible to perimeter defenses, shared tool access enables privilege escalation across agent boundaries, and trust propagation allows a compromised agent to influence upstream orchestrators. We construct a threat model enumerating 14 attack vectors across four categories: direct injection via user input (3 vectors), indirect injection via tool outputs (4 vectors), inter-agent injection via message passing (4 vectors), and cascading injection through orchestrator manipulation (3 vectors). Testing all 14 vectors against a 6-agent production-representative system, we find that 67% of agents are vulnerable to at least one scope violation even with system-prompt-level guardrails, and indirect injection via tool outputs succeeds in 43% of attempts. Four architectural defenses reduce overall injection success from 31.2% to 4.2%: message signing with provenance tracking (inter-agent injection down 91%), input/output sanitization at agent boundaries (indirect injection down 78%), privilege-scoped tool access per agent role (privilege escalation eliminated entirely), and anomaly detection on inter-agent communication patterns (84% of cascading attempts caught).
+
+现有的提示注入研究主要集中在单模型聊天机器人场景，其中攻击者通过精心设计的输入来操纵一个 LLM。多代理系统通过单模型设置中不存在的三种机制放大了这种威胁：代理间消息传递创建了外围防御不可见的注入通道，共享工具访问可以跨代理边界进行权限升级，信任传播允许受感染的代理影响上游协调器。我们构建了一个威胁模型，枚举了四个类别的 14 个攻击向量：通过用户输入的直接注入（3 个向量）、通过工具输出的间接注入（4 个向量）、通过消息传递的代理间注入（4 个向量）以及通过协调器操作的级联注入（3 个向量）。针对 6 代理生产代表系统测试所有 14 个向量，我们发现即使有系统提示级护栏，67% 的代理也容易受到至少一种范围违规的影响，并且通过工具输出的间接注入在 43% 的尝试中成功。四种架构防御将整体注入成功率从 31.2% 降低到 4.2%：具有来源跟踪的消息签名（代理间注入下降 91%）、代理边界的输入/输出清理（间接注入下降 78%）、每个代理角色的特权范围工具访问（完全消除了特权升级）以及代理间通信模式的异常检测（捕获了 84% 的级联尝试）。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-18 (34 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-09-18
