@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-24](papers/2026-09-24.md) - 6 papers
 - [2026-09-23](papers/2026-09-23.md) - 7 papers
 - [2026-09-18](papers/2026-09-18.md) - 8 papers
 - [2026-09-17](papers/2026-09-17.md) - 3 papers
@@ -159,6 +160,114 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-24 (6 papers)</b></summary>
+
+# arXiv Video Papers - 2026-09-24
+
+**Paper Count**: 6
+
+---
+
+## 1. Beyond Future Prediction: Denoising as Generative Adaptation for Robot Control / 超越未来预测：去噪作为机器人控制的生成适应
+
+**Date**: 2026-09-23 | **arXiv**: [2609.28339v1](http://arxiv.org/abs/2609.28339v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28339v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pretrained generative Diffusion Transformers (DiTs) capture rich pixel-level visual and language-conditioned structure through large-scale image and video generation training. A growing line of robot policies builds on this generative prior, but how it should be transferred to control remains unclear, and existing approaches commonly instantiate this transfer through future visual prediction. We ask a more basic question: what a pretrained generative DiT actually contributes to action learning, and how this prior should be adapted for control. We introduce NowWAM, a future-target-free co-training formulation that denoises the current observation and predicts robot actions from the same visual stream, directly coupling the native generative objective to the action-facing representation across the denoising trajectory. Under matched controlled settings, past and future visual targets perform comparably, while restricting training to the clean endpoint substantially reduces robustness, suggesting that a separate future target is not essential for generative adaptation, while the denoising trajectory remains an effective interface for control. On LIBERO-Plus, NowWAM reaches 87.7% with FLUX2-Klein, improving over the future-target co-training baseline by 6.1 points while halving training visual tokens (784 to 392) and reducing step time from 2.85 s to 1.63 s, a 1.8x speedup. With the pure text-to-image Z-Image backbone, NowWAM further reaches 87.8%, showing that strong control adaptation is not tied to video generation or image-editing backbones.
+
+预训练的生成扩散变压器 (DiT) 通过大规模图像和视频生成训练来捕获丰富的像素级视觉和语言条件结构。越来越多的机器人策略建立在这种生成先验的基础上，但如何将其转移到控制仍不清楚，现有的方法通常通过未来的视觉预测来实例化这种转移。我们提出一个更基本的问题：预训练的生成 DiT 实际上对动作学习有何贡献，以及如何调整该先验以进行控制。我们引入了 NowWAM，这是一种未来无目标的协同训练公式，可以对当前观察进行去噪，并从同一视觉流中预测机器人动作，直接将本机生成目标与去噪轨迹上面向动作的表示耦合起来。在匹配的受控设置下，过去和未来的视觉目标表现相当，而将训练限制在干净的终点会大大降低鲁棒性，这表明单独的未来目标对于生成适应并不重要，而去噪轨迹仍然是控制的有效界面。在 LIBERO-Plus 上，NowWAM 通过 FLUX2-Klein 达到 87.7%，比未来目标协同训练基线提高了 6.1 个点，同时将训练视觉标记减半（784 到 392），并将步骤时间从 2.85 秒减少到 1.63 秒，加速了 1.8 倍。凭借纯文本​​到图像的 Z-Image 主干，NowWAM 进一步达到 87.8%，这表明强大的控制适应与视频生成或图像编辑主干无关。
+
+</details>
+
+---
+
+## 2. LAYERSCOPE: A Layerwise Characterization of Video and Multimodal Learned Representations / LAYERSCOPE：视频和多模态学习表示的分层表征
+
+**Date**: 2026-09-23 | **arXiv**: [2609.28086v1](http://arxiv.org/abs/2609.28086v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28086v1)
+
+**Categories**: cs.LG, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We propose LAYERSCOPE, a label-free, layerwise framework that aims to characterize a model's learned representations in video and multimodal settings. Evaluating downstream performance using representations from final or intermediate layers typically requires large amounts of labeled data, repeated task-specific evaluations, and substantial computation. To address these limitations, LAYERSCOPE uses local, global, distributional, and correspondence-based geometric metrics to compare layerwise representation structure within and across models without requiring task-specific labels. We evaluate seven architecturally diverse models across video and multimodal classification, clustering, and text-to-video retrieval tasks from MVEB/MVEB+. We find that intermediate-layer representations can outperform final-layer and model-default outputs. We also find that no single geometric metric consistently predicts downstream performance, but note that distinct layerwise geometric signatures emerge across model families. LID shows task-dependent relationships with performance, while RankMe provides the strongest measure for classification and clustering, but is not a universal layer selector. We also find that pairing-aware metrics explain retrieval better than distributional distances alone. LAYERSCOPE therefore offers a framework for comparing representations across models and layers, enabling a more systematic evaluation in video and multimodal settings.
+
+我们提出了 LAYERSCOPE，这是一种无标签的分层框架，旨在表征模型在视频和多模态设置中学习到的表示。使用最终层或中间层的表示来评估下游性能通常需要大量标记数据、重复的特定于任务的评估和大量计算。为了解决这些限制，LAYERSCOPE 使用局部、全局、分布和基于对应的几何度量来比较模型内部和模型之间的分层表示结构，而不需要特定于任务的标签。我们评估了来自 MVEB/MVEB+ 的视频和多模态分类、聚类以及文本到视频检索任务的七个架构不同的模型。我们发现中间层表示可以优于最终层和模型默认输出。我们还发现没有单一的几何指标能够一致地预测下游性能，但请注意，模型系列中出现了不同的分层几何特征。 LID 显示了任务依赖与性能的关系，而 RankMe 提供了最强的分类和聚类度量，但不是通用的层选择器。我们还发现，配对感知指标比单独的分布距离更好地解释检索。因此，LAYERSCOPE 提供了一个用于比较模型和层之间的表示的框架，从而能够在视频和多模式设置中进行更系统的评估。
+
+</details>
+
+---
+
+## 3. Prompt, Probe, Train, or Annotate? Single-camera sports video understanding in amateur settings / 提示、探测、训练还是注释？业余环境下的单摄像头体育视频理解
+
+**Date**: 2026-09-23 | **arXiv**: [2609.28049v1](http://arxiv.org/abs/2609.28049v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28049v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video understanding is usually benchmarked on curated, single-actor, or professionally filmed clips, and a strong score there is routinely read as evidence a model is robust enough for deployment. Amateur team sport is a useful, largely untested place to check that assumption: over eight million students played a school sport in the United States in 2024-25 alone, almost none of it filmed by more than a single fixed camera, with several candidate actors crowded into frame and no operator or second angle to fall back on. Using volleyball as a test case, we ask whether strong performance on general video and world-model benchmarks translates into reliable, per-player attribution once footage is this chaotic, turning footage into statistics through a chain of tasks from finding play boundaries to naming who did what. We evaluate four approaches (prompting and agentic reasoning over frontier vision-language models, classical computer vision with small trained specialists, self-supervised video world models, and manual annotation) at every stage, on 66 amateur matches with 46,648 human-labelled contacts, filmed under conditions no published benchmark uses. No single paradigm wins every stage, and static, single-frame computer vision is not competitive at any stage involving motion or identity. A prompted model segments matches well, yet a far smaller trained model beats it at spotting contacts for a fraction of the cost, and the sport's own rules recover rally outcomes the pixels cannot. Identity is where every automated approach struggles: a jersey number is a static fact temporal reasoning cannot recover if never visible, unlike sporting action, a repeated motor pattern a temporal model can exploit, which is why holistic reasoning improves event detection while identity stays unchanged. We close with where each approach earns its cost, and what transfers beyond volleyball to amateur sport.
+
+视频理解通常以策划的、单演员或专业拍摄的剪辑为基准，并且那里的高分通常被视为模型足够强大以进行部署的证据。业余团队运动是一个有用的、基本上未经测试的地方来检验这一假设：仅在 2024-25 年，美国就有超过 800 万学生参加了学校运动，几乎没有一个运动是由多个固定摄像机拍摄的，几个候选演员挤在画面中，没有操作员或第二个角度可以依靠。使用排球作为测试案例，我们询问一旦镜头如此混乱，一般视频和世界模型基准上的强劲表现是否会转化为可靠的、每个玩家的归因，通过从寻找比赛边界到命名谁做了什么的一系列任务将镜头转化为统计数据。我们在每个阶段评估了四种方法（对前沿视觉语言模型的提示和代理推理、由小型训练有素的专家进行的经典计算机视觉、自我监督的视频世界模型和手动注释），在 66 场业余比赛中与 46,648 个人类标记的联系人进行了拍摄，这些比赛是在没有发布基准使用的条件下拍摄的。没有任何单一范式能够赢得每个阶段，并且静态、单帧计算机视觉在涉及运动或身份的任何阶段都没有竞争力。提示模型片段匹配得很好，但一个小得多的训练模型在发现接触方面比它要好，而且成本只是它的一小部分，而且这项运动自己的规则可以恢复像素无法恢复的拉力赛结果。身份是每个自动化方法都面临的难题：球衣号码是一个静态事实，时间推理如果不可见就无法恢复，与体育运动不同，时间模型可以利用重复的运动模式，这就是为什么整体推理可以在身份保持不变的情况下改善事件检测。最后我们将讨论每种方法的成本所在，以及从排球到业余运动的影响。
+
+</details>
+
+---
+
+## 4. Latent evolving World Action Model / 潜在演变的世界行动模型
+
+**Date**: 2026-09-23 | **arXiv**: [2609.27455v1](http://arxiv.org/abs/2609.27455v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.27455v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) jointly model action generation and environment dynamics and are mostly built on pretrained Video Diffusion Models (VDMs). In VDM-based WAMs, observations are first encoded by a VAE, and the resulting compressed latents are then processed by large video diffusion backbones to extract effective features for action generation. However, this paradigm ties WAM performance and training cost to large-scale video generation pretraining, limiting WAM efficiency and scalability. In this paper, we theoretically and empirically investigate how visual representations affect action generation in WAMs. Our results show that predictive embeddings from Joint-Embedding Predictive Architecture (JEPA) encoders better support action generation than compressed VAE latents, with I-JEPA performing best in our encoder comparison. Based on these findings, we propose LeWAM, which conditions action generation on JEPA embeddings and models environment evolution by predicting future embeddings in the same space, without relying on a video diffusion backbone. We further find that imitation learning matches demonstrated actions but does not distinguish better actions from worse ones, even though small action deviations can greatly affect task success. To address this limitation without additional environment interaction or the human oversight required for resets and safety, we introduce Demonstration-Guided DPO (DemoDPO), an offline preference refinement stage that derives preference supervision directly from demonstrations.With only 0.4B trainable parameters, LeWAM achieves an average success rate of 92.28\% on RoboTwin 2.0, comparable to that of state-of-the-art VLAs and WAMs, and maintains practical effectiveness on real-world manipulation tasks.
+
+世界动作模型 (WAM) 联合模拟动作生成和环境动态，并且主要建立在预训练的视频扩散模型 (VDM) 之上。在基于 VDM 的 WAM 中，观察结果首先由 VAE 进行编码，然后由大型视频扩散主干处理生成的压缩潜在变量，以提取用于动作生成的有效特征。然而，这种范例将 WAM 性能和训练成本与大规模视频生成预训练联系在一起，限制了 WAM 效率和可扩展性。在本文中，我们从理论上和实证上研究了视觉表征如何影响 WAM 中的动作生成。我们的结果表明，联合嵌入预测架构 (JEPA) 编码器的预测嵌入比压缩的 VAE 潜伏更好地支持动作生成，其中 I-JEPA 在我们的编码器比较中表现最佳。基于这些发现，我们提出了 LeWAM，它通过预测同一空间中的未来嵌入来调节 JEPA 嵌入的动作生成并模拟环境演化，而不依赖于视频扩散主干。我们进一步发现，模仿学习与演示的动作相匹配，但无法区分更好的动作和更差的动作，尽管小的动作偏差会极大地影响任务的成功。为了解决这一限制，无需额外的环境交互或重置和安全所需的人工监督，我们引入了演示引导 DPO (DemoDPO)，这是一个离线偏好细化阶段，直接从演示中得出偏好监督。LeWAM 仅用 0.4B 可训练参数，在 RoboTwin 2.0 上实现了 92.28% 的平均成功率，与最先进的 VLA 和 WAM 相当，并保持了实际有效性现实世界的操纵任务。
+
+</details>
+
+---
+
+## 5. A Hierarchy-Aware Video-Language Model Evaluation and Hyperbolic Baseline for Surgery / 具有层次意识的视频语言模型评估和手术双曲线基线
+
+**Date**: 2026-09-22 | **arXiv**: [2609.27139v1](http://arxiv.org/abs/2609.27139v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.27139v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Surgical procedures follow a phase-to-step hierarchy, yet the video-language models used to recognize them are evaluated with flat per-level metrics that ignore cross-level coherence and error structure. In this paper we make two contributions to address this problem, (i) we introduce SurgHiBench, the first hierarchy-aware evaluation suite for surgical video understanding, with three tasks measuring recognition, consistency, and severity across granularity levels. We evaluate a general-purpose CLIP model, a Euclidean surgical model, and, as second contribution: (ii) HyperSurg, a new hyperbolic model that enforces phase-step containment via entailment cones, across four (existing) datasets spanning three procedure types. The suite reveals that two models with the same accuracy can produce predictions of very different error severity, ranging from sibling confusions within the correct phase to unrelated cross-phase predictions. Hyperbolic geometry shifts predictions toward the correct procedural neighborhood, and these gains scale with the tree-likeness of each dataset's annotation hierarchy, providing a principled indicator when hierarchy-aware geometry helps.
+
+外科手术遵循阶段到步骤的层次结构，但用于识别它们的视频语言模型是使用扁平的每级指标进行评估的，忽略了跨级一致性和错误结构。在本文中，我们为解决这个问题做出了两项贡献，（i）我们引入了 SurgHiBench，这是第一个用于手术视频理解的层次感知评估套件，其中三个任务测量跨粒度级别的识别、一致性和严重性。我们评估了通用 CLIP 模型、欧几里得手术模型，以及第二个贡献：(ii) HyperSurg，一种新的双曲线模型，通过涵盖锥体的四个（现有）数据集跨越三种手术类型强制执行相步遏制。该套件表明，具有相同精度的两个模型可以产生截然不同的错误严重性的预测，范围从正确阶段内的同级混淆到不相关的跨阶段预测。双曲几何将预测转向正确的程序邻域，并且这些增益随着每个数据集注释层次结构的树状性而缩放，从而在层次感知几何有所帮助时提供原则性指标。
+
+</details>
+
+---
+
+## 6. QuantWM: Temporally Consistent 2-Bit KV Cache Quantization for World Models and Video Generation / QuantWM：用于世界模型和视频生成的时间一致的 2 位 KV 缓存量化
+
+**Date**: 2026-09-22 | **arXiv**: [2609.26425v2](http://arxiv.org/abs/2609.26425v2) | **PDF**: [Link](http://arxiv.org/pdf/2609.26425v2)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+KV cache memory has become a major deployment bottleneck for video generation and world models, which motivates low-bit quantization study for efficiency. Existing 2-bit KV cache quantization methods can achieve nearly lossless performance on video benchmarks such as VBench, however, we find that they still cause severe temporal flickering and visual degradation. Meanwhile, deeper investigates show that Key quantization produces smaller reconstruction errors than Value, but surprisingly leads to much larger output degradation. We trace this discrepancy to attention: small Key perturbations can change the attention logits, i.e., QK^\top, and shift the temporal-spatial tokens selected by Queries. These observations motivate us to explicitly preserve attention logits and temporal-spatial token selection during KV cache quantization to alleviate the visual degradation problem. To address this issue, we present QuantWM, a training-free and strictly causal 2-bit KV cache quantization framework. QuantWM introduces two complementary techniques to mitigate the attention shifts. Firstly, quantization-sensitivity-aware clustering (QSAC) jointly considers historical Query sensitivity and residual ranges to select INT2-friendly Key centroids, which reduces quantization errors in channels that are more critical to attention. In addition, principal-subspace attention compensation (PSAC) restores the remaining Key errors along the dominant Query subspace using low-rank projections, which provides a direct and efficient correction to stabilize attention logits. Extensive experiments on Causal-Forcing, LingBot-World-v2, HY-World 1.5, Matrix-Game-2 and Longcat-Video demonstrate that QuantWM significantly improves visual quality and temporal consistency, while outperforming existing methods across image and video quality metrics with up to 6.20x KV cache memory compression and limited additional overhead.
+
+KV 缓存已成为视频生成和世界模型的主要部署瓶颈，这激发了低位量化研究的效率。现有的 2 位 KV 缓存量化方法可以在 VBench 等视频基准上实现近乎无损的性能，但是我们发现它们仍然会导致严重的时间闪烁和视觉退化。同时，更深入的研究表明，关键量化产生的重建误差比值更小，但令人惊讶的是导致更大的输出退化。我们将这种差异追溯到注意力：小的关键扰动可以改变注意力逻辑，即 QK^\top，并移动查询选择的时空标记。这些观察结果促使我们在 KV 缓存量化期间明确保留注意力逻辑和时空标记选择，以缓解视觉退化问题。为了解决这个问题，我们提出了 QuantWM，一个免训练且严格因果的 2 位 KV 缓存量化框架。 QuantWM 引入了两种互补技术来减轻注意力转移。首先，量化敏感度感知聚类（QSAC）联合考虑历史查询敏感度和残差范围来选择INT2友好的关键质心，这减少了对关注更关键的通道中的量化误差。此外，主子空间注意力补偿（PSAC）使用低秩投影恢复占主导的查询子空间的剩余关键错误，这提供了直接有效的校正来稳定注意力逻辑。对 Causal-Forcing、LingBot-World-v2、HY-World 1.5、Matrix-Game-2 和 Longcat-Video 的大量实验表明，QuantWM 显着提高了视觉质量和时间一致性，同时在图像和视频质量指标方面优于现有方法，具有高达 6.20 倍的 KV 缓存内存压缩和有限的额外开销。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-23 (7 papers)</b></summary>
 
 # arXiv Video Papers - 2026-09-23
