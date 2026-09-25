@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-25](papers/2026-09-25.md) - 13 papers
 - [2026-09-24](papers/2026-09-24.md) - 28 papers
 - [2026-09-23](papers/2026-09-23.md) - 28 papers
 - [2026-09-22](papers/2026-09-22.md) - 7 papers
@@ -168,6 +169,226 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-25 (13 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-09-25
+
+**Paper Count**: 13
+
+---
+
+## 1. Agentic Detection of Online Conspiracies / 在线阴谋的代理检测
+
+**Date**: 2026-09-24 | **arXiv**: [2609.30250v1](http://arxiv.org/abs/2609.30250v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.30250v1)
+
+**Categories**: cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Conspiratorial discourse on social media is not always expressed through explicit claims or stable lexical markers. The same surface content may express endorsement, legitimate concerns, criticism, satire, or mockery. The main challenge is therefore not only recognizing conspiracy-related claims, but inferring the speaker's intent -- the utterance's illocutionary force. We argue that this can be achieved through the use of relevant social contexts and propose an agentic framework, equipped with a set of tools supporting social queries.   We demonstrate the benefits of our approach on a unique dataset of Hebrew tweets, covering 80\%--90\% of the public Hebrew tweets published over a four-year span (late 2018-- early 2023), encompassing several election cycles as well as the COVID pandemic years and related vaccination campaigns. This extensive coverage can be used in recovering different social contexts. Evaluating our framework on a manually-annotated adversarial dataset, we find that context-aware workflows consistently outperform text-only classification and that the agentic framework performs significantly better than other frameworks and settings, including a non-agentic model exposed to the same contexts available to the agent. We further provide an analysis of the results, the errors and efficiency (token economy) tradeoffs.   These findings support viewing the task of conspiracy detection as a socially embedded interpretation task, in which effective classification depends not only on access to contexts, but also on adaptive reasoning in which the agent uses tools on a per-case basis, asking only for evidence relevant to its current reasoning step.
+
+社交媒体上的阴谋言论并不总是通过明确的主张或稳定的词汇标记来表达。相同的表面内容可能表达认可、合理的担忧、批评、讽刺或嘲笑。因此，主要的挑战不仅是识别与阴谋相关的主张，还要推断说话者的意图——话语的言外之力。我们认为，这可以通过使用相关的社交背景来实现，并提出一个代理框架，配备一套支持社交查询的工具。   我们在独特的希伯来语推文数据集上展示了我们的方法的好处，该数据集涵盖了四年内（2018 年底 - 2023 年初）发布的公开希伯来语推文的 80%--90%，涵盖了多个选举周期以及新冠大流行年份和相关疫苗接种活动。这种广泛的覆盖范围可用于恢复不同的社会背景。在手动注释的对抗数据集上评估我们的框架，我们发现上下文感知工作流程始终优于纯文本分类，并且代理框架的性能明显优于其他框架和设置，包括暴露于代理可用的相同上下文的非代理模型。我们进一步对结果、错误和效率（代币经济）权衡进行分析。   这些发现支持将阴谋检测任务视为一项嵌入社会的解释任务，其中有效的分类不仅取决于对上下文的访问，还取决于自适应推理，其中代理根据每个案例使用工具，只要求提供与其当前推理步骤相关的证据。
+
+</details>
+
+---
+
+## 2. Graph-Based Inference and Topology-Aware Multi-Agent Reinforcement Learning for Large-Scale Railway Network Management / 用于大规模铁路网络管理的基于图的推理和拓扑感知多智能体强化学习
+
+**Date**: 2026-09-24 | **arXiv**: [2609.30150v1](http://arxiv.org/abs/2609.30150v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.30150v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern infrastructure asset management constitutes a complex sequential decision-making problem, characterized by long planning horizons and system-level interactions, such as spatial deterioration correlations and economies of scale. While deep reinforcement learning has shown promise in optimizing maintenance policies, scaling to real-world networks remains challenging. Centralized approaches become computationally intractable in large-scale systems, whereas decentralized approaches often fail to capture essential coordination mechanisms. To address these challenges, we propose a graph-based framework that integrates accurate environment modeling with scalable decision support. First, we employ a hierarchical Bayesian model leveraging a Gaussian Process on Graph kernel to infer a realistic, spatially correlated networked environment of railway maintenance planning from real-world data provided by the Swiss Federal Railways. Second, we introduce a topology-aware Multi-Agent Reinforcement Learning (MARL) framework by integrating graph neural networks and graph Transformers to optimize network-level policies. A central contribution of this work is the demonstration of scalability through zero-shot transfer learning: graph-based agents, trained only on small network portions, are successfully deployed in a zero-shot manner on large-scale unseen networks without any retraining. Numerical results indicate that the proposed method significantly outperforms optimized heuristics and standard MARL baselines, reducing computational training time while maintaining superior performance on large-scale networks.
+
+现代基础设施资产管理构成了一个复杂的顺序决策问题，其特点是长期规划视野和系统级相互作用，例如空间恶化相关性和规模经济。虽然深度强化学习在优化维护策略方面显示出了希望，但扩展到现实世界网络仍然具有挑战性。在大规模系统中，集中式方法在计算上变得难以处理，而分散式方法通常无法捕获必要的协调机制。为了应对这些挑战，我们提出了一个基于图形的框架，它将准确的环境建模与可扩展的决策支持集成在一起。首先，我们采用分层贝叶斯模型，利用图内核上的高斯过程，从瑞士联邦铁路提供的真实数据推断出铁路维护规划的现实的、空间相关的网络环境。其次，我们通过集成图神经网络和图 Transformer 来优化网络级策略，引入拓扑感知的多智能体强化学习（MARL）框架。这项工作的一个核心贡献是通过零样本迁移学习演示了可扩展性：仅在小型网络部分上进行训练的基于图的代理，可以以零样本的方式成功部署在大规模的看不见的网络上，而无需任何重新训练。数值结果表明，所提出的方法显着优于优化启发式和标准 MARL 基线，减少了计算训练时间，同时保持了大规模网络的卓越性能。
+
+</details>
+
+---
+
+## 3. GRASP: Generating, Revising, and Assessing for Strategic Planning with Agentic AI / 掌握：利用代理人工智能生成、修改和评估战略规划
+
+**Date**: 2026-09-24 | **arXiv**: [2609.30147v1](http://arxiv.org/abs/2609.30147v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.30147v1)
+
+**Categories**: cs.AI, cs.CL, cs.LG, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large Language Models (LLMs) typically exhibit a performance profile where reliability degrades as task complexity increases. We address the challenge of generating high-quality natural language executable plans for complex tasks by introducing $\textbf{GRASP}$, a strategy-aware, multi-stage planning framework. GRASP decouples the planning pipeline across specialized, context-isolated modules: it pre-compiles global macro-guidelines (GenPlan), explores alternative localized strategies within isolated context windows (RevPlan), and independently evaluates trajectories using a multi-criteria discriminator (VerPlan). Empirical evaluations show that GRASP consistently establishes a new state-of-the-art frontier across diverse datasets, yielding substantial accuracy gains over direct LLM planners on Natural Plan Calendar Scheduling ($\sim$12.4$\%$$\uparrow$), ZebraLogic ($\sim$30.8$\%$$\uparrow$), and SciBench Math. Crucially, under multi-task scaling-where standard planners suffer immediate performance collapse-GRASP completely flattens the multi-task degradation penalty. In interleaved dual-task environments, GRASP achieves an absolute accuracy gain of up to 16.7$\%$ over direct LLM planners. Furthermore, by isolating context and enforcing strict macro-regularization, GRASP outperforms frontier reasoning models (such as GPT-5-mini) by a margin of 14.5$\%$.
+
+大型语言模型 (LLM) 通常表现出随着任务复杂性增加而可靠性下降的性能概况。我们通过引入 $\textbf{GRASP}$（一种策略感知的多阶段规划框架）来解决为复杂任务生成高质量自然语言可执行计划的挑战。 GRASP 将规划流程解耦到专门的、上下文隔离的模块中：它预编译全局宏观指南 (GenPlan)，在隔离的上下文窗口 (RevPlan) 中探索替代的本地化策略，并使用多标准判别器 (VerPlan) 独立评估轨迹。实证评估表明，GRASP 始终在不同的数据集上建立了一个新的最先进的前沿，在自然计划日历安排 ($\sim$12.4$\%$$\uparrow$)、ZebraLogic ($\sim$30.8$\%$$\uparrow$) 和 SciBench Math 方面比直接 LLM 规划者获得了显着的准确性提升。至关重要的是，在多任务扩展下（标准规划器会立即遭受性能崩溃），GRASP 完全消除了多任务退化损失。在交错的双任务环境中，GRASP 比直接 LLM 规划者获得高达 16.7$\%$ 的绝对精度增益。此外，通过隔离上下文并执行严格的宏观正则化，GRASP 的性能优于前沿推理模型（例如 GPT-5-mini）14.5$\%$。
+
+</details>
+
+---
+
+## 4. Screen Before You Serve: Simulation for Production Customer Experience AI Agents at 140M Scale / 服务前筛查：140M 规模的生产客户体验 AI 代理模拟
+
+**Date**: 2026-09-24 | **arXiv**: [2609.30137v1](http://arxiv.org/abs/2609.30137v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.30137v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Customer experience (CX) agents use tools and large language models to address customer requests and guide conversational interactions with an organization's products. Improving these agents, especially in regulated industries, is difficult: they must detect intent, follow complex operational policies and use tools reliably. Manual end-to-end testing offers limited coverage, while live experiments expose customers to failures that can erode trust.   We present a hypothesis-driven simulation workflow for screening candidate CX agents before deployment. Synthetic customers react to agent responses and simulated tool outputs enable multi-step agentic workflows without invoking production backends. We use the Snowglobe simulator on Nubank's Card Delivery agent and its expanded successor, Card Management - Nubank's highest-volume chat-support agent in Brazil. Across 4 deployed versions, simulated and production version-level binary evaluator scores show high correlation. Simulation-guided iteration increased transactional net promoter score (tNPS) by 36.69 points in a live A/B test. We also screened open-weight configurations in over 16,000 simulated conversations. In a subsequent live A/B test, the selected model increased self-service rate (SSR) by 8.82 percentage points to the highest level observed at Nubank, with no statistically significant change in tNPS. Simulation made broad exploration of models, reasoning settings, and prompts feasible without customer exposure, enabling production improvements that would have been impractical to pursue through live experimentation alone.
+
+客户体验 (CX) 代理使用工具和大型语言模型来解决客户请求并指导与组织产品的对话交互。改进这些代理，特别是在受监管的行业中，是很困难的：它们必须检测意图、遵循复杂的操作策略并可靠地使用工具。手动端到端测试的覆盖范围有限，而现场实验会让客户面临可能削弱信任的故障。   我们提出了一个假设驱动的模拟工作流程，用于在部署之前筛选候选 CX 代理。综合客户对代理响应做出反应，模拟工具输出可实现多步骤代理工作流程，而无需调用生产后端。我们在 Nubank 的卡交付代理及其扩展后继者卡管理（Nubank 在巴西容量最大的聊天支持代理）上使用 Snowglobe 模拟器。在 4 个部署版本中，模拟和生产版本级二进制评估器分数显示出高度相关性。在实时 A/B 测试中，模拟引导的迭代将交易净推荐值 (tNPS) 提高了 36.69 分。我们还在 16,000 多个模拟对话中筛选了开放重量配置。在随后的实时 A/B 测试中，所选模型将自助服务率 (SSR) 提高了 8.82 个百分点，达到 Nubank 观察到的最高水平，而 tNPS 没有统计上的显着变化。仿真使对模型、推理设置和提示的广泛探索变得可行，而无需客户接触，从而实现了仅通过现场实验来实现的生产改进。
+
+</details>
+
+---
+
+## 5. KernelOPT: Dispatch-Aware Agentic Search for GPU Kernel Optimization / KernelOPT：用于 GPU 内核优化的调度感知代理搜索
+
+**Date**: 2026-09-24 | **arXiv**: [2609.30059v1](http://arxiv.org/abs/2609.30059v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.30059v1)
+
+**Categories**: cs.DC, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Deep learning inference and training performance depends critically on GPU kernel efficiency. Modern compilers such as PyTorch Inductor automatically generate GPU kernels from high-level model code, but frequently underperform expert-written implementations by wide margins. Recent LLM-assisted kernel optimizers can close this gap for standalone kernels, yet treat compiled models as black boxes, generally optimizing individual standalone kernels without respecting the compiler's structural decisions or verifying the model end-to-end. We present KernelOPT, a multi-agent system that treats compiled models as structured artifacts. It preserves vendor library calls (cuBLAS, cuDNN) and exclusively targets generated Triton sub-kernels using five profiling-guided LLM agents. A four-gate verification cascade of static validation, multi-seed correctness, model-level float64-fallback verification, and performance gating filters candidates during optimization and verifies the re-stitched model end-to-end. If no candidate passes all four gates, the system preserves the compiler baseline. The system accepts PyTorch nn.Modules, standalone Triton kernels, and Helion kernels. Evaluated on 250 KernelBench problems, KernelOPT achieves geometric mean speedups over \texttt{torch.compile} of 1.40$\times$ (Level 1: 51/100), 1.15$\times$ (Level 2: 31/100), and 1.07$\times$ (Level 3: 12/50) across all problems.
+
+深度学习推理和训练性能关键取决于 GPU 内核效率。 PyTorch Inductor 等现代编译器会自动从高级模型代码生成 GPU 内核，但其性能常常远远低于专家编写的实现。最近的 LLM 辅助内核优化器可以缩小独立内核的这一差距，但将编译模型视为黑匣子，通常优化单个独立内核，而不考虑编译器的结构决策或端到端验证模型。我们提出 KernelOPT，一个多代理系统，它将编译的模型视为结构化工件。它保留了供应商库调用（cuBLAS、cuDNN），并专门针对使用五个分析引导的 LLM 代理生成的 Triton 子内核。静态验证、多种子正确性、模型级 float64 回退验证和性能门控的四门验证级联在优化期间过滤候选对象，并端到端验证重新缝合的模型。如果没有候选人通过所有四个门，系统将保留编译器基线。该系统接受 PyTorch nn.Modules、独立 Triton 内核和 Helion 内核。对 250 个 KernelBench 问题进行评估后，KernelOPT 在所有问题上均实现了 1.40$\times$（级别 1：51/100）、1.15$\times$（级别 2：31/100）和 1.07$\times$（级别 3：12/50）的几何平均加速。
+
+</details>
+
+---
+
+## 6. Multi-Dimensional Matching / 多维匹配
+
+**Date**: 2026-09-24 | **arXiv**: [2609.29958v1](http://arxiv.org/abs/2609.29958v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.29958v1)
+
+**Categories**: econ.EM, cs.GT, cs.LG, cs.MA, econ.TH
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We study a matching mechanism where agents and objects are described by features rather than complete rankings. A single spectral projection reduces the problem to a one-dimensional sort, computable in O(N log N) time. We prove that on descaled features and preferences, our algorithm obtains the exact Nash Social Welfare (NSW) optimum within the projected space, with an unconditional utilitarian-welfare guarantee and a conditional NSW guarantee. The proposed mechanism is stable against exogenous noise but not strategy-proof; we provide an explicit profitable misreport. On an agentic AI shopping application, the diagnostics correctly anticipate both a success and a failure case. A 100-instance robustness study confirms the findings.
+
+我们研究了一种匹配机制，其中代理和对象是通过特征而不是完整的排名来描述的。单个光谱投影将问题简化为一维排序，可在 O(N log N) 时间内计算。我们证明，在去尺度特征和偏好上，我们的算法在投影空间内获得了精确的纳什社会福利（NSW）最优值，并具有无条件的功利主义福利保证和有条件的 NSW 保证。所提出的机制对于外源噪声是稳定的，但不是策略证明的；我们提供了明确的盈利误报。在代理人工智能购物应用程序中，诊断可以正确预测成功和失败的情况。 100 个实例的稳健性研究证实了这一发现。
+
+</details>
+
+---
+
+## 7. PUBG Ally: A Conversational Embodied Agent as an AI Teammate / PUBG Ally：作为 AI 队友的对话式实体代理
+
+**Date**: 2026-09-24 | **arXiv**: [2609.29837v1](http://arxiv.org/abs/2609.29837v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.29837v1)
+
+**Categories**: cs.AI, cs.CL, cs.HC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce PUBG Ally, an embodied agent for PUBG: BATTLEGROUNDS that can reason, act autonomously, and play alongside players as a voice-enabled teammate. Building such a teammate requires combining two difficult capabilities: it must perceive and respond to a constantly changing game world under strict latency constraints while interacting naturally with players, keeping its speech synchronized with its actions. Ally therefore combines agentic tool use with real-time game control. A language-model agent uses a controlled interface to inspect game information, interpret player speech, maintain context, decide what to say, and issue high-level action choices that steer a faster control layer for movement, combat, and recovery. Because the player's and Ally's speech and actions continually shape each other and the course of the match, training requires data from actual gameplay. We therefore collect data across nearly 39k sessions in which real players play alongside Ally, recording gameplay, player speech, agent decisions, tool use, actions, and player feedback, and use these records for iterative training. To evaluate teammate quality, we use player feedback and preference comparisons to identify gaps between offline evaluations and player preferences, and iteratively refine the evaluation criteria. Deploying Ally in live service further requires low-latency on-device execution and safeguards for player-facing communication, which we address through model compression, context compaction, targeted safety training, runtime guardrails, and memory redaction. During the live service, we surveyed players in 141 countries. Among respondents whose play with Ally was confirmed in game records, positive responses exceeded negative responses by 25.1 percentage points when asked whether they would recommend Ally, with players describing Ally not only as a tool but also as a teammate or companion.
+
+我们推出了 PUBG Ally，它是《PUBG：绝地求生》的实体代理，可以推理、自主行动，并作为支持语音的队友与玩家并肩作战。构建这样的队友需要结合两种困难的能力：它必须在严格的延迟限制下感知和响应不断变化的游戏世界，同时与玩家自然交互，保持语音与动作同步。因此，Ally 将代理工具的使用与实时游戏控制结合起来。语言模型代理使用受控界面来检查游戏信息、解释玩家语音、维护上下文、决定要说什么，并发出高级操作选择，以引导更快的控制层进行移动、战斗和恢复。由于玩家和盟友的言语和行为不断地相互影响以及比赛的进程，因此训练需要来自实际游戏的数据。因此，我们收集了近 39,000 个真实玩家与 Ally 一起玩的会话中的数据，记录游戏玩法、玩家语音、代理决策、工具使用、操作和玩家反馈，并将这些记录用于迭代训练。为了评估队友的质量，我们利用玩家反馈和偏好比较来识别线下评估和玩家偏好之间的差距，并迭代完善评估标准。在实时服务中部署 Ally 还需要低延迟的设备上执行和面向玩家的通信保障，我们通过模型压缩、上下文压缩、有针对性的安全培训、运行时护栏和内存编辑来解决这个问题。在直播期间，我们对 141 个国家的玩家进行了调查。在游戏记录中确认与Ally一起玩过的受访者中，当被问及是否会推荐Ally时，正面回答比负面回答高出25.1个百分点，玩家将Ally描述为不仅是工具，而且是队友或同伴。
+
+</details>
+
+---
+
+## 8. WeatherDiagFlow: Evidence-Grounded Radar Nowcasting with Diagnostic Flow Refinement / WeatherDiagFlow：具有诊断流细化的循证雷达临近​​预报
+
+**Date**: 2026-09-24 | **arXiv**: [2609.29772v1](http://arxiv.org/abs/2609.29772v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.29772v1)
+
+**Categories**: cs.LG, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Radar nowcasting is essential for short-term warning and emergency response, yet conventional systems mainly return future radar fields and provide limited support for operational communication and post-event verification. We formulate radar nowcasting as an evidence-grounded forecast--bulletin--audit task, in which a numerical forecaster produces both future radar fields and structured diagnostic evidence. Forecast-time bulletins use only model-available evidence, whereas post-event audits incorporate future radar truth only after the forecast horizon is observed. Based on this task formulation, WeatherDiagFlow predicts motion, growth and decay, heavy-echo risk, and uncertainty to condition rolling flow refinement, while frozen-scaffold residual calibration improves long-lead strong-echo preservation. A multi-agent layer converts the structured evidence into operational bulletins and independently generates verification audits without feeding textual outputs back into the forecaster. Experiments on FJRADAR demonstrate competitive overall performance and improved strong-echo event skill. WeatherDiagFlow therefore connects numerical prediction, evidence-grounded reporting, and auditable verification under a leakage-controlled protocol.
+
+雷达临近预报对于短期预警和应急响应至关重要，但传统系统主要返回未来雷达场，为作战通信和事后验证提供有限支持。我们将雷达临近预报制定为一项基于证据的预测-公告-审计任务，其中数值预报器生成未来雷达场和结构化诊断证据。预测时间公告仅使用模型可用的证据，而事后审计仅在观察到预测范围后才纳入未来雷达真相。基于此任务制定，WeatherDiagFlow 可以预测运动、增长和衰减、重回波风险以及条件滚动流细化的不确定性，而冻结支架残差校准则可以改善长导程强回波保留。多代理层将结构化证据转换为操作公告，并独立生成验证审计，而无需将文本输出反馈给预测器。 FJRADAR 上的实验展示了具有竞争力的整体性能和改进的强回波事件技能。因此，WeatherDiagFlow 在泄漏控制协议下将数值预测、循证报告和可审计验证联系起来。
+
+</details>
+
+---
+
+## 9. agentic-ger: terminology recovery in long-form speech using global context / Agentic-ger：使用全局上下文进行长篇语音中的术语恢复
+
+**Date**: 2026-09-24 | **arXiv**: [2609.29428v1](http://arxiv.org/abs/2609.29428v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.29428v1)
+
+**Categories**: cs.CL, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in speech language models have improved automatic speech recognition (ASR) for long-form audio. However, accurately and consistently transcribing domain-specific terminology remains challenging. Motivated by the world knowledge and contextual capability of large language models (LLMs), we propose Agentic-GER, an LLM-based agent for terminology correction in long-form speech. The agent uses global context from the full transcript to identify suspicious terms and resolve ambiguous hypotheses. It selectively re-transcribes the source speech to check candidate corrections, and uses accepted edits to guide subsequent decisions. Experiments with four LLMs and two ASR systems on GigaSpeechBench show consistent terminology improvements in both Chinese and English, with and without thinking. On Chinese speech, Agentic-GER achieves up to a 36.8% relative reduction in biased character error rate (B-CER) over the Whisper baseline.
+
+语音语言模型的最新进展改进了长格式音频的自动语音识别 (ASR)。然而，准确一致地转录特定领域的术语仍然具有挑战性。受大型语言模型 (LLM) 的世界知识和上下文能力的推动，我们提出了 Agentic-GER，这是一种基于 LLM 的代理，用于长格式语音中的术语校正。该代理使用完整记录中的全局上下文来识别可疑术语并解决不明确的假设。它有选择地重新转录源语音以检查候选更正，并​​使用已接受的编辑来指导后续决策。在 GigaSpeechBench 上对四个法学硕士和两个 ASR 系统进行的实验表明，无论有没有思考，中文和英文的术语都有一致的改进。在中文语音方面，与 Whisper 基线相比，Agentic-GER 的偏差字符错误率 (B-CER) 相对降低了 36.8%。
+
+</details>
+
+---
+
+## 10. ASIRF: An Agentic Framework for Context-Dependent Sensitive Information Redaction / ASIRF：上下文相关敏感信息编辑的代理框架
+
+**Date**: 2026-09-24 | **arXiv**: [2609.29191v1](http://arxiv.org/abs/2609.29191v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.29191v1)
+
+**Categories**: cs.AI, cs.IR, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Sensitive information is defined by domain and intent, not a universal category, yet redaction systems such as privacy filters and named-entity recognizers fix a taxonomy at training time, requiring retraining for each new domain. We introduce ASIRF (Agentic Sensitive Information Redaction Framework), which retrieves domain-specific definitions based on the input's domain from a flexible knowledge base at inference time, needing no retraining to adapt. Two architectures, a three-call multi-agent pipeline and a single-agent variant, are evaluated across ten small open-weight models and eight datasets, including out-of-distribution fictional domains, against the OpenAI Privacy Filter (OPF) as a trained-classifier baseline. With only a few dozen expert-authored definitions per domain and no training data, ASIRF's recall exceeds OPF's in 68 of 80 model-domain combinations (85 percent), by at least one of the two architectures, with shortfalls confined mostly to OPF's training-distribution domains.
+
+敏感信息是按领域和意图定义的，而不是通用类别，但隐私过滤器和命名实体识别器等编辑系统会在训练时修复分类法，需要对每个新领域进行重新训练。我们引入了 ASIRF（代理敏感信息编辑框架），它在推理时从灵活的知识库中根据输入的域检索特定于域的定义，无需重新训练即可适应。两种架构（三调用多代理管道和单代理变体）通过 10 个小型开放权重模型和 8 个数据集（包括分布外虚构域）以 OpenAI 隐私过滤器 (OPF) 作为训练分类器基线进行评估。由于每个领域只有几十个专家编写的定义，并且没有训练数据，ASIRF 的召回率在 80 个模型域组合中的 68 个中超过了 OPF（85%），至少超过了两种架构中的一种，而不足主要局限于 OPF 的训练分布领域。
+
+</details>
+
+---
+
+## 11. MeshHeal: Two-Timescale Self-Healing for Gray Failures in Decentralized LLM Agent Networks / MeshHeal：去中心化 LLM 代理网络中灰色故障的两时间尺度自我修复
+
+**Date**: 2026-09-24 | **arXiv**: [2609.29015v1](http://arxiv.org/abs/2609.29015v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.29015v1)
+
+**Categories**: cs.AI, cs.CL, cs.DC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Decentralized LLM-based multi-agent systems coordinate through local interactions, but an agent can remain responsive while its task-solving quality persistently degrades. Such gray failures require protecting current tasks before sufficient evidence exists to alter future routing, while still allowing recovered agents to rejoin. We introduce MeshHeal, a fully decentralized self-healing framework that couples ability-matched peer review across two timescales. At the fast timescale, an adaptive hierarchy escalates uncertain or low-scoring outputs from repeated single-reviewer evaluation to committee deliberation and, when needed, correction before use. At the slow timescale, a task- and ability-conditioned peer-relative detector aggregates scores to distinguish persistent degradation from ordinary output variation, trigger mandatory committee review, and eventually exclude degraded agents from ordinary routing; recovery probes provide fresh evidence for reintegration. To faithfully evaluate routing, we introduce Model-Backed MAS Evaluation, which ties ability assignments to execution models, since prompt-based ability assignments alone can leave routing errors hidden. Across BBH, MATH, and MMLU-Pro, MeshHeal achieves 0.839 degraded-phase accuracy using 51k total model tokens per task, versus the strongest baseline Symphony's 0.807 accuracy using 115k per task. Under staggered degradation and recovery, MeshHeal isolates degraded agents, keeps them excluded from ordinary task execution until recovery, and returns them to normal routing.
+
+基于 LLM 的去中心化多智能体系统通过本地交互进行协调，但智能体可以在其任务解决质量持续下降的同时保持响应。这种灰色故障需要在有足够证据改变未来路由之前保护当前任务，同时仍然允许恢复的代理重新加入。我们引入了 MeshHeal，这是一个完全去中心化的自我修复框架，它将跨两个时间尺度的能力匹配的同行评审结合起来。在快速的时间尺度上，适应性层次结构将不确定或低分的输出从重复的单审稿人评估升级到委员会审议，并在需要时在使用前进行更正。在缓慢的时间尺度上，一个以任务和能力为条件的同行相关检测器汇总分数，以区分持续退化和普通输出变化，触发强制委员会审查，并最终将退化的代理排除在普通路由之外；康复调查为重返社会提供了新的证据。为了忠实地评估路由，我们引入了模型支持的 MAS 评估，它将能力分配与执行模型联系起来，因为仅基于提示的能力分配就可以隐藏路由错误。在 BBH、MATH 和 MMLU-Pro 中，MeshHeal 在每个任务使用 51k 总模型标记时实现了 0.839 的降级相位精度，而最强基线 Symphony 在每个任务使用 115k 时达到了 0.807 的精度。在交错降级和恢复的情况下，MeshHeal 会隔离降级的代理，将它们排除在正常任务执行之外，直到恢复，然后将它们返回到正常路由。
+
+</details>
+
+---
+
+## 12. When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse / 当花式驱逐失败时：重新考虑 LLM 前缀重用的缓存替换
+
+**Date**: 2026-09-24 | **arXiv**: [2609.28870v1](http://arxiv.org/abs/2609.28870v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28870v1)
+
+**Categories**: cs.DC, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-running LLM applications repeatedly send growing context, making prefix caching critical for reducing prefill cost. Yet prefix-cache behavior under agentic workloads remains poorly understood. We study production traces from two companies and evaluate 14 eviction algorithms across HBM-constrained and large memory-pool settings. Despite a large gap to Belady, sophisticated policies designed for traditional caches provide little benefit over LRU. The reason is structural: prefix reuse is dominated by the regular pacing of active sessions, making recency unusually predictive. Prefix caching nevertheless introduces new challenges, including heavy-tailed session footprints and highly variable miss costs as attention computation grows with sequence length. We introduce the compute-savings ratio and two offline oracles to quantify these effects. Our results show that effective prefix-cache management should retain recency as its foundation while selectively adding quick demotion for one-hit prefixes, compute-aware partial eviction for expensive misses, and capacity-dependent eviction granularity. We will release the traces and simulator to support future research.
+
+长时间运行的 LLM 应用程序会重复发送不断增长的上下文，这使得前缀缓存对于降低预填充成本至关重要。然而，代理工作负载下的前缀缓存行为仍然知之甚少。我们研究了两家公司的生产轨迹，并在 HBM 受限和大型内存池设置中评估了 14 种驱逐算法。尽管与 Belady 存在很大差距，但为传统缓存设计的复杂策略与 LRU 相比几乎没有什么优势。原因是结构性的：前缀重用主要由活动会话的常规节奏决定，这使得新近度具有异常可预测性。然而，前缀缓存引入了新的挑战，包括重尾会话足迹和高度可变的丢失成本，因为注意力计算随着序列长度的增长而增长。我们引入计算节省率和两个离线预言机来量化这些影响。我们的结果表明，有效的前缀缓存管理应保留新近度作为其基础，同时有选择地添加一击前缀的快速降级、针对昂贵的未命中的计算感知部分逐出以及与容量相关的逐出粒度。我们将发布痕迹和模拟器以支持未来的研究。
+
+</details>
+
+---
+
+## 13. ProCredit: From Outcome Rewards to Progress Credit in Agentic Reinforcement Learning / ProCredit：从结果奖励到代理强化学习中的进度信用
+
+**Date**: 2026-09-23 | **arXiv**: [2609.27532v2](http://arxiv.org/abs/2609.27532v2) | **PDF**: [Link](http://arxiv.org/pdf/2609.27532v2)
+
+**Categories**: cs.LG, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon agentic tasks require an agent to modify an environment through a sequence of tool calls, with success determined by the final state. The standard recipe assigns a single outcome reward at the end and compares trajectories sampled for the same task. As a result, a group with no successful trajectory yields no training signal, failed attempts cannot be told apart by how close they came to completion, and turns that advance the task receive the same credit as turns that only query the environment. Prior work refines the unit of comparison from the trajectory to the step, or trains a reward model to supply intermediate signal: the former still derives its signal from final success alone, and the latter estimates it with a model. We observe that the acceptance checks that decide success can also be run on intermediate states, so progress is as verifiable as the outcome. We propose ProCredit, which turns this verified progress into credit: it reruns the acceptance checks after each turn, rewards the turn by its change in progress, and uses these rewards to assign credit both across attempts at the same task and across the turns within a trajectory. Starting from Qwen3.5 base models at three scales on AppWorld, ProCredit outperforms outcome-reward baselines and progress-based baselines in task completion rate at every scale on both test sets, exceeding the strongest outcome-reward baseline by 4.1 percentage points at 4B, and results in a second environment show the same direction of improvement. Ablations show that adding the final progress to the trajectory score alone does not improve performance: the gain comes from crediting progress to the turn where it occurs.
+
+长期代理任务要求代理通过一系列工具调用来修改环境，成功与否取决于最终状态。标准配方在最后分配一个结果奖励，并比较同一任务的采样轨迹。因此，没有成功轨迹的组不会产生训练信号，失败的尝试无法通过它们距离完成的程度来区分，并且推进任务的回合与仅查询环境的回合获得相同的信用。先前的工作细化了从轨迹到步骤的比较单位，或者训练奖励模型来提供中间信号：前者仍然仅从最终成功中得出信号，而后者则用模型来估计它。我们观察到，决定成功的验收检查也可以在中间状态上运行，因此进展与结果一样可验证。我们提出 ProCredit，它将经过验证的进度转化为信用：它在每个回合后重新运行验收检查，通过进度的变化奖励该回合，并使用这些奖励在同一任务的尝试和轨迹内的回合之间分配信用。从 AppWorld 上三个尺度的 Qwen3.5 基础模型开始，ProCredit 在两个测试集上的每个尺度上的任务完成率均优于结果奖励基线和基于进度的基线，在 4B 时超出最强结果奖励基线 4.1 个百分点，并且第二个环境中的结果显示出相同的改进方向。消融表明，仅将最终进度添加到轨迹分数中并不能提高性能：收益来自于将进度计入发生转弯的位置。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-24 (28 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-09-24
