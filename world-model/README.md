@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-25](papers/2026-09-25.md) - 3 papers
 - [2026-09-24](papers/2026-09-24.md) - 9 papers
 - [2026-09-23](papers/2026-09-23.md) - 8 papers
 - [2026-09-22](papers/2026-09-22.md) - 2 papers
@@ -154,6 +155,66 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-25 (3 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-09-25
+
+**Paper Count**: 3
+
+---
+
+## 1. Aim Short to Reach Far: Your Frozen World Model Can Plan Better Than You Think / 志存高远：你的冰冻世界模型可以比你想象的更好地规划
+
+**Date**: 2026-09-24 | **arXiv**: [2609.30036v1](http://arxiv.org/abs/2609.30036v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.30036v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Planners built on visual world models commonly score each predicted outcome by its distance to the encoded goal image. We show that this target can limit control even with exact dynamics and globally optimal short-horizon search: reaching a goal may require actions that initially move away from it. With frozen LeWM models, intermediate targets substantially improve action synthesis and recorded-action ranking on Cube, PushT, Reacher, and TwoRoom. Learned targets and targets drawn from observed experience both produce these gains. We introduce Anchored Planning, which retrieves a recorded segment whose start and end resemble the current and goal observations, then aims at an observation shortly after its start. The frozen model scores actions toward this target from the current state. Without additional training, planning toward observed targets outperforms the released LeWM planner on every task in our long-range evaluation. Additional final-goal search falls short of the same gains. Lower successor-prediction error need not translate into better control. Success also depends on how far ahead the target is placed and on shrinking the retrieval span as execution advances. Changing only the target lets the same frozen model and planner reach goals that final-goal scoring misses.
+
+基于视觉世界模型的规划器通常根据每个预测结果与编码目标图像的距离对其进行评分。我们证明，即使使用精确的动态和全局最优的短期搜索，该目标也可以限制控制：达到目标可能需要最初远离目标的行动。借助冻结的 LeWM 模型，中间目标可显着改善 Cube、PushT、Reacher 和 TwoRoom 上的动作合成和记录动作排名。学到的目标和从观察到的经验中得出的目标都会产生这些收益。我们引入锚定计划，它检索开始和结束类似于当前观察和目标观察的记录片段，然后在开始后不久瞄准观察。冻结模型对当前状态下针对该目标的操作进行评分。在没有额外训练的情况下，针对观察到的目标进行的规划在我们的长期评估中的每项任务上都优于已发布的 LeWM 规划器。额外的最终目标搜索达不到相同的收益。较低的后继者预测误差不一定会转化为更好的控制。成功还取决于目标放置的距离以及随着执行的推进而缩小检索范围。仅更改目标即可让相同的冻结模型和规划器实现最终目标得分未达到的目标。
+
+</details>
+
+---
+
+## 2. DAWN: Noise-Robust Quadruped Parkour via Depth-Denoising World Models / DAWN：通过深度去噪世界模型实现抗噪四足跑酷
+
+**Date**: 2026-09-24 | **arXiv**: [2609.29092v1](http://arxiv.org/abs/2609.29092v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.29092v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-based legged locomotion methods assume clean depth at training time and rely on hand-tuned post-processing filters at deployment. However, filter parameters are rarely disclosed, hindering reproducibility, and performance degrades substantially when depth noise is left unaddressed. Building noise robustness directly into the learning pipeline would eliminate this dependency. While such robustness has been explored for proprioceptive inputs, analogous approaches for depth perception remain largely absent in legged locomotion. We propose DAWN (Denoising and Alignment in World models for Noise-robustness), a noise-robust perception framework for legged locomotion, which builds noise robustness directly into a world model via two modifications: (1) feeding noisy depth to the encoder while keeping clean depth as the reconstruction target, forcing the model to implicitly denoise its input; and (2) applying contrastive learning to align the latent states of noisy and clean depth. Importantly, DAWN is not tied to a specific noise model, requiring no manual tuning to the noise distribution at deployment. Furthermore, it incurs no additional inference cost over existing world model-based methods. Without any manual filter calibration -- relying solely on the learned noise-robust representation -- DAWN achieves zero-shot quadruped parkour on a Unitree Go1: traversing stairs up to 18 cm, clearing gaps up to 70 cm, and mounting steps up to 45 cm from raw depth observations. Ablation studies show that denoising and contrastive alignment contribute at complementary levels -- reconstruction and representation, respectively -- and yield additive gains when combined. Videos and code are available at: https://dawn-parkour.github.io/
+
+基于视觉的腿式运动方法在训练时假设干净的深度，并在部署时依赖于手动调整的后处理滤波器。然而，滤波器参数很少被公开，这阻碍了再现性，并且当深度噪声得不到解决时，性能会大幅下降。直接将噪声鲁棒性构建到学习管道中将消除这种依赖性。尽管已经针对本体感受输入探索了这种鲁棒性，但在腿部运动中仍然很大程度上缺乏类似的深度感知方法。我们提出了 DAWN（噪声鲁棒性世界模型中的去噪和对齐），这是一种用于腿部运动的噪声鲁棒性感知框架，它通过两个修改将噪声鲁棒性直接构建到世界模型中：（1）将噪声深度馈送到编码器，同时保持干净深度作为重建目标，迫使模型隐式对其输入进行去噪； (2)应用对比学习来调整噪声和干净深度的潜在状态。重要的是，DAWN 不依赖于特定的噪声模型，无需在部署时手动调整噪声分布。此外，与现有的基于世界模型的方法相比，它不会产生额外的推理成本。无需任何手动滤波器校准——仅依靠学习到的抗噪表示——DAWN 在 Unitree Go1 上实现了零射击四足跑酷：穿过高达 18 厘米的楼梯，清除高达 70 厘米的间隙，并根据原始深度观测安装高达 45 厘米的台阶。消融研究表明，去噪和对比对齐在互补层面上有所贡献——分别是重建和表示——并且在组合时产生附加增益。视频和代码可访问：https://dawn-parkour.github.io/
+
+</details>
+
+---
+
+## 3. Beyond Static Graph World Models: Learning Stochastic Latent Dynamics over Evolving Topologies / 超越静态图世界模型：学习演化拓扑中的随机潜在动态
+
+**Date**: 2026-09-23 | **arXiv**: [2609.28670v1](http://arxiv.org/abs/2609.28670v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28670v1)
+
+**Categories**: cs.LG, cs.AI, cs.SI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Graph-based world models have recently emerged as a means of learning transitions over relational state representations. However, existing approaches are largely limited to fixed-topology graphs or deterministic, fully observable environments. We propose the Graph Dynamics Model (GDM), a world model for graph-structured observations that is designed to handle the more general setting of evolving topologies in stochastic and partially observable environments. The GDM uses a sparse recurrent adjacency matrix to model topology updates and perform message passing, together with a recurrent state-space architecture for modelling stochastic transitions. Furthermore, we identify a gap in the evaluation of graph-based world models, as existing methods do not provide a means of comparing predicted and true distributions over the joint graph state comprising the interdependent topology, node features, and graph features. We therefore introduce the Graph Distribution Distance (GDD) metric, which uses maximum mean discrepancy with a graph kernel to comprehensively compare joint next-state distributions. We evaluate the GDM across several environments, including stochastic and partially observable settings. We demonstrate that GDM outperforms baseline models and displays zero-shot generalisation on large graphs.
+
+基于图的世界模型最近出现作为学习关系状态表示转换的一种手段。然而，现有的方法很大程度上局限于固定拓扑图或确定性、完全可观察的环境。我们提出了图动力学模型（GDM），这是一种用于图结构观测的世界模型，旨在处理随机和部分可观测环境中不断演变的拓扑的更一般设置。 GDM 使用稀疏循环邻接矩阵来建模拓扑更新并执行消息传递，并使用循环状态空间架构来建模随机转换。此外，我们发现基于图的世界模型的评估存在差距，因为现有方法没有提供比较包含相互依赖的拓扑、节点特征和图特征的联合图状态上的预测分布和真实分布的方法。因此，我们引入了图分布距离（GDD）度量，它使用图内核的最大平均差异来全面比较联合的下一状态分布。我们在多个环境中评估 GDM，包括随机和部分可观察的设置。我们证明 GDM 优于基线模型，并在大图上显示零样本泛化。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-24 (9 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-09-24
