@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-28](papers/2026-09-28.md) - 1 papers
 - [2026-09-25](papers/2026-09-25.md) - 13 papers
 - [2026-09-24](papers/2026-09-24.md) - 28 papers
 - [2026-09-23](papers/2026-09-23.md) - 28 papers
@@ -169,6 +170,34 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-28 (1 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-09-28
+
+**Paper Count**: 1
+
+---
+
+## 1. HySTAR: Anchored Hypergraphs for Stable Credit Assignment in Cooperative Multi-Agent Reinforcement Learning / HySTAR：用于协作多智能体强化学习中稳定信用分配的锚定超图
+
+**Date**: 2026-09-25 | **arXiv**: [2609.31531v1](http://arxiv.org/abs/2609.31531v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.31531v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cooperative multi-agent reinforcement learning under partial observability and shared rewards requires assigning team outcomes to individual agents and high-order coalitions. A MAPPO-style critic compresses joint behavior into one global value, while critics that dynamically reconstruct the grouping topology change the mapping from agents and coalitions to value components as interactions or active agents evolve. We refer to this inconsistency as structural target drift. We introduce HySTAR, a MAPPO-based framework that separates adaptive representation learning from a temporally consistent high-order value-decomposition basis. HySTAR anchors an overlapping sparse hypergraph as a uniformly covered decomposition scaffold, uses a spatiotemporal encoder to represent physical and task-dependent interactions, and combines temporal and structural relevance to construct agent-specific advantages. Experiments on SMAC, GRF, Traffic Junction, and MPE demonstrate consistent improvements over MAPPO-style, value-factorization, and dynamic-grouping baselines. On the hardest SMAC settings, HySTAR achieves relative gains of 16.7\% over MAPPO and 15.6\% over HYGMA, ranks first on all six GRF scenarios, reduces Traffic Junction convergence epochs by up to 40.2\% relative to MAGIC, and obtains the highest MPE episode rewards. Controlled topology, agent-death, neighborhood, and parameter analyses support the benefit of anchoring the decomposition scaffold while adapting the propagated representations.
+
+部分可观察性和共享奖励下的合作多智能体强化学习需要将团队结果分配给单个智能体和高阶联盟。 MAPPO 风格的批评家将联合行为压缩为一个全局值，而动态重建分组拓扑的批评家则随着交互或主动代理的发展，改变从代理和联盟到价值组件的映射。我们将这种不一致称为结构性目标漂移。我们引入了 HySTAR，这是一个基于 MAPPO 的框架，它将自适应表示学习与时间一致的高阶值分解基础分开。 HySTAR 将重叠的稀疏超图锚定为均匀覆盖的分解支架，使用时空编码器来表示物理和任务相关的交互，并结合时间和结构相关性来构建特定于代理的优势。 SMAC、GRF、Traffic Junction 和 MPE 上的实验表明，相对于 MAPPO 式、价值分解和动态分组基线，取得了一致的改进。在最难的 SMAC 设置上，HySTAR 比 MAPPO 获得了 16.7% 的相对收益，比 HYGMA 获得了 15.6% 的相对收益，在所有 6 个 GRF 场景中排名第一，相对于 MAGIC 减少了交通枢纽收敛周期高达 40.2%，并获得了最高的 MPE 情节奖励。受控拓扑、代理死亡、邻域和参数分析支持在调整传播表示的同时锚定分解支架的好处。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-25 (13 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-09-25
