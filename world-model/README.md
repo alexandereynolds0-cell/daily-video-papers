@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-28](papers/2026-09-28.md) - 1 papers
 - [2026-09-25](papers/2026-09-25.md) - 3 papers
 - [2026-09-24](papers/2026-09-24.md) - 9 papers
 - [2026-09-23](papers/2026-09-23.md) - 8 papers
@@ -155,6 +156,34 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-28 (1 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-09-28
+
+**Paper Count**: 1
+
+---
+
+## 1. I Act Therefore I Am: When Is JEPA's Action-Conditioning Enough to Learn Causal Mechanisms? / 我因我而行：JEPA 的动作调节何时足以学习因果机制？
+
+**Date**: 2026-09-25 | **arXiv**: [2609.31161v1](http://arxiv.org/abs/2609.31161v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.31161v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent empirical and theoretical advances suggest that joint-embedding predictive architectures (JEPAs) may learn meaningful representations for action-conditioned prediction of future outcomes, thus becoming one of the foundational structures for world models. However, accurate prediction does not, in general, necessarily imply recovery of underlying causal states that give rise to the observed dynamics. This work investigates when and how JEPAs can recover the underlying causal states from observations. We first introduce a latent variable model, in which high-dimensional observations are generated from latent causal states whose dynamics are governed by action-conditioned transition mechanisms. Based on this formulation, we develop a general information-theoretic objective that combines conditional likelihood maximization for learning transition dynamics with entropy maximization for preserving latent state information. We then establish identifiability conditions under which representations learned by this general objective recover the underlying latent causal states up to component-wise invertible transformations and permutation. One key condition for such identifiability is sufficient action-induced variation in the transition mechanisms. Guided by this finding, we instantiate the general objective with an action-modulated Gaussian additive-noise model, yielding action-modulated JEPA (A-JEPA). Experiments on synthetic environments verify the theoretical findings under the identifiability conditions and robustness to moderate violations, while visual benchmarks demonstrate improved state recovery and transfer to unseen transition mechanisms.
+
+最近的经验和理论进展表明，联合嵌入预测架构（JEPA）可以学习有意义的表示，以对未来结果进行动作条件预测，从而成为世界模型的基础结构之一。然而，一般来说，准确的预测并不一定意味着产生观察到的动态的潜在因果状态的恢复。这项工作研究了 JEPA 何时以及如何从观察中恢复潜在的因果状态。我们首先引入一个潜在变量模型，其中高维观察是从潜在因果状态生成的，其动态由动作条件转换机制控制。基于这个公式，我们开发了一个通用的信息论目标，它将用于学习过渡动力学的条件似然最大化与用于保留潜在状态信息的熵最大化相结合。然后，我们建立可识别性条件，在该条件下，通过该总体目标学习的表示可以恢复潜在的潜在因果状态，直至组件方面的可逆变换和排列。这种可识别性的一个关键条件是转换机制中有足够的动作引起的变化。在这一发现的指导下，我们用动作调制高斯加性噪声模型实例化总体目标，产生动作调制 JEPA (A-JEPA)。合成环境的实验验证了可识别性条件下的理论结果以及对适度违规的鲁棒性，而视觉基准则证明了状态恢复和转移到看不见的转换机制的改进。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-25 (3 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-09-25
