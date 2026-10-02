@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-02](papers/2026-10-02.md) - 21 papers
 - [2026-10-01](papers/2026-10-01.md) - 9 papers
 - [2026-09-30](papers/2026-09-30.md) - 11 papers
 - [2026-09-28](papers/2026-09-28.md) - 1 papers
@@ -158,6 +159,356 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-02 (21 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-10-02
+
+**Paper Count**: 21
+
+---
+
+## 1. On the Divergence of Accuracy and Mechanism Consistency in Time Series World Models / 时间序列世界模型精度与机制一致性的分歧
+
+**Date**: 2026-10-01 | **arXiv**: [2610.01842v1](http://arxiv.org/abs/2610.01842v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.01842v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A time series world model (TSWM) predicts a controlled system's state from its observed history and planned actions and exogenous inputs. Current approaches build forecasters with actions as covariates, trained and evaluated on prediction error under the executed plan. Yet world models compare unexecuted plans, but their responses to changed plans remain untested. We ask which design choices matter and whether accurate forecasters respond to changed plans as real systems do. We address both with a formalization and benchmark. The formalization separates state, actions and exogenous inputs, distinguishes continuous, mode and event actions, and introduces mechanism consistency, a metric built on declared action-state relations with known directions, such as a vasopressor raising blood pressure: it checks whether shifting an action moves the forecast in the declared direction. The benchmark consolidates eight public datasets with real actions from engineered infrastructure and clinical care, varying prediction space, plan fusion and plan encoding across seven backbones and five seeds. First, a frozen latent prediction space lowers MAE by 9.9% over observation space and gated output fusion lowers it by 12.7% over input concatenation on average, with both improving all eight datasets; temporal plan encoding changes average MAE by at most 2.2%. Second, prediction error and mechanism consistency diverge: the lowest-error configuration is at or below chance in consistency on four of five datasets with declared mechanisms, and no design choice avoids this. Finally, directional supervision, a loss penalizing the wrong-signed part of the response to a shifted action, significantly raises consistency on penalized mechanisms with no change in MAE. Together they give TSWMs a recipe: a frozen latent space and output-side fusion for accuracy, and a training objective for mechanism consistency.
+
+时间序列世界模型 (TSWM) 根据观察到的历史记录、计划的操作和外生输入来预测受控系统的状态。当前的方法使用行动作为协变量来构建预测器，根据执行计划对预测误差进行训练和评估。然而，世界模型比较了未执行的计划，但它们对改变计划的反应仍未经过检验。我们询问哪些设计选择很重要，以及准确的预测者是否像真实系统一样对更改后的计划做出反应。我们通过形式化和基准来解决这两个问题。形式化将状态、动作和外源输入分开，区分连续、模式和事件动作，并引入机制一致性，这是一种建立在已知方向的声明的动作-状态关系基础上的度量，例如升压药会升高血压：它检查改变动作是否会使预测朝着声明的方向移动。该基准整合了八个公共数据集，以及来自工程基础设施和临床护理的实际行动、不同的预测空间、计划融合和跨七个骨干网和五个种子的计划编码。首先，冻结的潜在预测空间比观察空间平均降低了 9.9% 的 MAE，而门控输出融合平均比输入串联降低了 12.7%，两者都改善了所有八个数据集；时间计划编码最多将平均 MAE 改变 2.2%。其次，预测误差和机制一致性存在分歧：最低误差配置在具有已声明机制的五个数据集中的四个上达到或低于一致性的机会，并且没有设计选择可以避免这种情况。最后，定向监督，即对转移动作的响应中错误签名部分进行惩罚的损失，显着提高了惩罚机制的一致性，而 MAE 没有变化。它们共同为 TSWM 提供了一个秘诀：冻结潜在空间和输出侧融合以实现准确性，以及机制一致性的训练目标。
+
+</details>
+
+---
+
+## 2. Completion Aware Guidance for World Action Models / 世界行动模型的完成意识指南
+
+**Date**: 2026-10-01 | **arXiv**: [2610.01559v1](http://arxiv.org/abs/2610.01559v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.01559v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) predict visual futures and robot actions, yet they remain susceptible to task-incomplete imagination, where plausible, action-consistent predictions omit the transition needed for task completion. In this paper, we show that this failure is not inherent to the world model backbone, but emerges when adapted for short-chunk control, which can repeatedly favor plausible local continuations over task-completing transitions. To address this, we introduce Completion Aware Guidance (CAG), a training-free sampling method that guides generation toward task completion. Across representative WAMs, CAG improves success from 64% to 70% on a RoboTwin 2.0 subset and from 69% to 75% in zero-shot simulation, while reducing task-incomplete imagination from 79% to 40%.
+
+世界动作模型（WAM）预测视觉未来和机器人动作，但它们仍然容易受到任务不完整想象的影响，其中合理的、动作一致的预测忽略了任务完成所需的过渡。在本文中，我们表明这种失败并不是世界模型主干所固有的，而是在适应短块控制时出现的，短块控制可能会反复支持合理的局部延续而不是完成任务的转换。为了解决这个问题，我们引入了完成感知指导（CAG），这是一种无需训练的采样方法，可以指导生成任务完成。在代表性的 WAM 中，CAG 将 RoboTwin 2.0 子集的成功率从 64% 提高到 70%，将零样本模拟的成功率从 69% 提高到 75%，同时将任务不完整的想象从 79% 降低到 40%。
+
+</details>
+
+---
+
+## 3. Learning Commute-Time-Preserving World Models for Planning / 学习节省通勤时间的世界模型进行规划
+
+**Date**: 2026-10-01 | **arXiv**: [2610.01373v1](http://arxiv.org/abs/2610.01373v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.01373v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models allow agents to plan in latent space by choosing a sequence of actions that most reduces the distance to a given goal state. Thus, planning can benefit from latent representations whose distances mirror commute-times in the environment. The spectral embedding space of the graph Laplacian provides such a representation, if it obeys a specific eigenvalue-dependent scaling. Unfortunately, instantiating the graph Laplacian is intractable in large, continuous environments. Self-supervised learning offers a natural route to such commute-time-preserving embeddings at scale. However, here we show that existing methods, which commonly encourage isotropic representations to prevent representational collapse, tend to degrade the "correct" eigenvalue-dependent scaling, leading to an inaccurate representation of commute times. To address this problem, we introduce Commute-Time-Preserving World Models (CTWMs), combining a latent displacement predictor and a log-determinant regularizer that prevents collapse, which provably recover the correctly scaled Laplacian representation under reversible deterministic dynamics and at the predictor's fixed point. In numerical simulations, CTWM matches or outperforms LeWM, a task-agnostic baseline, on several complex, continuous goal-reaching benchmarks, while using half the parameters.
+
+世界模型允许智能体通过选择一系列最能缩短与给定目标状态距离的动作序列来在潜在空间中进行规划。因此，规划可以受益于潜在表示，其距离反映了环境中的通勤时间。图拉普拉斯的谱嵌入空间提供了这样的表示，如果它遵循特定的依赖于特征值的缩放。不幸的是，在大型连续环境中实例化拉普拉斯图是很棘手的。自我监督学习为这种大规模的节省通勤时间的嵌入提供了一条自然途径。然而，在这里我们表明，现有的方法通常鼓励各向同性表示以防止表示崩溃，但往往会降低“正确”的特征值相关缩放，导致通勤时间的表示不准确。为了解决这个问题，我们引入了通勤时间保持世界模型（CTWM），它将潜在位移预测器和防止崩溃的对数行列式正则化器相结合，可证明在可逆确定性动力学和预测器固定点处恢复正确缩放的拉普拉斯表示。在数值模拟中，CTWM 在几个复杂的、连续的目标达成基准上匹配或优于 LeWM（一种与任务无关的基线），同时使用一半的参数。
+
+</details>
+
+---
+
+## 4. Cross-entropy optimization with prioritized constraints / 具有优先约束的交叉熵优化
+
+**Date**: 2026-10-01 | **arXiv**: [2610.01319v1](http://arxiv.org/abs/2610.01319v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.01319v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+When constraints conflict, an optimizer must determine which requirements to preserve and which to relax. On the one hand, a priority ordering specifies which requirements take precedence. On the other hand, penalty-based formulations encode their relative importance through numerical weights. Depending on these weights, a solution can improve its weighted score while violating intended priorities. We introduce TierCEM, a variant of the cross-entropy method that incorporates strict constraint priorities directly into elite selection without requiring per-constraint importance weights. TierCEM works by sequentially filtering sampled candidates, from highest- to lowest-priority constraint. If and when a constraint eliminates all remaining candidates, TierCEM returns to the last nonempty set and selects elites with the smallest violations of that blocking constraint, recursively preserving satisfaction of all higher-priority constraints. We evaluate TierCEM on 2D navigation and contact-rich pushing tasks in proprioceptive and learned world-model settings. Experiments show that reversing the constraint ordering changes which constraints are violated under conflict. Prioritizing progress toward the task objective also enables TierCEM to relax lower-priority constraints when they would otherwise prevent further progress.
+
+当约束发生冲突时，优化器必须确定保留哪些要求以及放宽哪些要求。一方面，优先级顺序指定哪些需求优先。另一方面，基于惩罚的公式通过数字权重来编码它们的相对重要性。根据这些权重，解决方案可以提高其加权分数，同时违反预期的优先级。我们引入了 TierCEM，它是交叉熵方法的一种变体，它将严格的约束优先级直接纳入精英选择中，而不需要每个约束的重要性权重。 TierCEM 的工作原理是按优先级从最高到最低的约束顺序过滤采样的候选者。如果约束消除了所有剩余的候选者，TierCEM 将返回到最后一个非空集合，并选择违反该阻塞约束最小的精英，从而递归地保留所有更高优先级约束的满足。我们在本体感受和学习的世界模型设置中评估 TierCEM 的 2D 导航和接触丰富的推动任务。实验表明，反转约束顺序会改变冲突时违反的约束。优先考虑任务目标的进展还使 TierCEM 能够放宽较低优先级的约束，否则这些约束会阻碍进一步的进展。
+
+</details>
+
+---
+
+## 5. Supervise What Decides Success: Criterion-Aligned Auxiliary Losses for Latent World-Model Planning / 监督决定成功的因素：潜在世界模型规划的标准对齐辅助损失
+
+**Date**: 2026-10-01 | **arXiv**: [2610.01224v1](http://arxiv.org/abs/2610.01224v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.01224v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models plan by scoring candidate action sequences with distances in latent space. However, task success is judged by physical quantities, which we call the success-criterion quantities. In all four latent world models we examine, the end-effector position is encoded in the latent state with an error larger than the success criterion allows. Such a latent state cannot separate successful candidates from failing ones. We propose an auxiliary loss that uses success-criterion quantities as training targets, whereas existing latent world models take them only as inputs. During training, a linear head on the encoder and predictor outputs regresses the success-criterion quantities, and the regression error is added to the training loss. The head is discarded after training, so the model, its cost, and its inputs at test time are unchanged. This loss alone improves the success rate on PushT and cube by 3.5% and 3.4% (absolute), respectively, and both improvements are statistically significant. A success criterion thus specifies what a world model must retain in its latent state, and we show that it can serve directly as a training target.
+
+潜在世界模型通过对潜在空间中的距离对候选动作序列进行评分来进行规划。然而，任务成功是通过物理量来判断的，我们称之为成功标准量。在我们检查的所有四个潜在世界模型中，末端执行器位置都在潜在状态中进行编码，其误差大于成功标准允许的误差。这种潜在状态无法将成功的候选人与失败的候选人区分开来。我们提出了一种辅助损失，它使用成功标准量作为训练目标，而现有的潜在世界模型仅将它们作为输入。在训练期间，编码器和预测器输出上的线性头对成功标准量进行回归，并将回归误差添加到训练损失中。训练后头部被丢弃，因此模型、其成本及其在测试时的输入保持不变。仅这一损失就将 PushT 和 Cube 的成功率分别提高了 3.5% 和 3.4%（绝对），并且这两项改进在统计上都是显着的。因此，成功标准指定了世界模型在其潜在状态中必须保留的内容，并且我们证明它可以直接作为训练目标。
+
+</details>
+
+---
+
+## 6. PhysicsLENS: Diagnosing Physical Property Blindness in Video Generation Models / PhysicsLENS：诊断视频生成模型中的物理属性盲目性
+
+**Date**: 2026-10-01 | **arXiv**: [2610.01162v1](http://arxiv.org/abs/2610.01162v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.01162v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reliable video world models could provide scalable predictive environments for robot learning, planning, and evaluation. However, generated robot videos can violate physical principles and complete tasks through physically implausible behavior, limiting their reliability for robot learning and planning. Current video-generation benchmarks exclude physics that are inherently hidden by visuals (e.g., weight, viscosity, friction). Due to this, video models are evaluated on the fidelity of physics, not the underlying accuracy of physics. We introduce PhysicsLENS, a dataset and benchmark for evaluating plausibility of physical properties grounded in robotics. PhysicsLENS uses matched scenario pairs that hold the same conditioning frame and task, while varying underlying physics in the scene description. Scenarios are curated from public robot video sources and annotated across seven physical domains: collision, gravity, momentum, friction, deformation, fluid, and causality. We evaluate across four video generation models, producing over 400 human-annotated labels. Results show that plausible-looking videos often ignore the stated property (34 of 47), and that stating the property lowers plausibility only slightly and not significantly.
+
+可靠的视频世界模型可以为机器人学习、规划和评估提供可扩展的预测环境。然而，生成的机器人视频可能违反物理原理并通过物理上难以置信的行为完成任务，从而限制了其机器人学习和规划的可靠性。当前的视频生成基准排除了视觉效果本身隐藏的物理特性（例如重量、粘度、摩擦力）。因此，视频模型是根据物理保真度而不是物理的基本准确性来评估的。我们介绍了PhysicsLENS，这是一个用于评估基于机器人技术的物理特性的合理性的数据集和基准。 PhysicsLENS 使用匹配的场景对，这些场景对具有相同的调节框架和任务，同时改变场景描述中的基础物理。场景是根据公共机器人视频源策划的，并在七个物理领域进行了注释：碰撞、重力、动量、摩擦、变形、流体和因果关系。我们评估了四种视频生成模型，生成了 400 多个人工注释的标签。结果显示，看似合理的视频通常会忽略所陈述的属性（47 个中的 34 个），并且陈述该属性只会略微降低可信度，但不会显着降低。
+
+</details>
+
+---
+
+## 7. Network World Models as Environments for Algorithm Design on Complex Systems / 网络世界模型作为复杂系统算法设计的环境
+
+**Date**: 2026-10-01 | **arXiv**: [2610.01048v1](http://arxiv.org/abs/2610.01048v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.01048v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models, which simulate an environment and predict how it changes under actions, are increasingly used in real-world applications such as robotics. Complex systems call for the same tool because the effect of an action is not immediate. Seeding nodes for a campaign, or immunizing nodes against an epidemic, changes little on its own; what matters is the outcome that unfolds over the steps that follow. Designing an algorithm that selects such actions to maximize expected performance on a task is inherently iterative, and every candidate must be scored by the outcome it produces. Obtaining that outcome has relied on simulation, whose cost becomes a bottleneck when candidates are evaluated over many sampled trajectories. We propose an action-conditioned Network World Model that learns a network's diffusion dynamics under interventions over time, applies each action to the network, and predicts the outcome that follows. It serves as a fast evaluator inside an algorithm design loop in which a coding agent designs and refines executable algorithms using feedback from full rollouts, action-level credit, and counterfactual probes over alternative interventions. Across eight network tasks and five diffusion models, the designed algorithms match or exceed the strongest reported baseline in 138 of 141 settings while enabling up to 14.5 times faster rollouts than Monte Carlo simulation. Code will be released upon acceptance.
+
+世界模型可以模拟环境并预测环境在动作下如何变化，越来越多地用于机器人等现实世界应用中。复杂的系统需要相同的工具，因为操作的效果不是立竿见影的。为一场活动播种节点，或对流行病进行免疫节点，其本身变化不大；重要的是接下来的步骤所呈现的结果。设计一种算法来选择此类操作以最大化任务的预期性能本质上是迭代的，并且必须根据其产生的结果对每个候选者进行评分。获得这一结果依赖于模拟，当在许多采样轨迹上评估候选人时，模拟的成本成为瓶颈。我们提出了一种以行动为条件的网络世界模型，该模型可以随着时间的推移学习干预下网络的扩散动态，将每个行动应用于网络，并预测随后的结果。它在算法设计循环中充当快速评估器，在该循环中，编码代理使用来自全面部署的反馈、行动级信用以及对替代干预措施的反事实调查来设计和完善可执行算法。在 8 个网络任务和 5 个扩散模型中，设计的算法在 141 个设置中的 138 个设置中匹配或超过了报告的最强基线，同时推出速度比蒙特卡罗模拟快 14.5 倍。代码将在接受后发布。
+
+</details>
+
+---
+
+## 8. FutureWorlds: Learning Robotic World Models from Alternative Futures / FutureWorlds：从替代未来中学习机器人世界模型
+
+**Date**: 2026-10-01 | **arXiv**: [2610.01019v1](http://arxiv.org/abs/2610.01019v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.01019v1)
+
+**Categories**: cs.CV, cs.RO
+
+**Code**: https://github.com/Alexander-wu/FutureWorlds.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robotic world models predict action-conditioned future scenes, providing a foundation for understanding action outcomes. However, turning alternative predictions into useful learning signals remains challenging: similar candidates limit informative quality comparisons, while diverging trajectories require persistent maintenance of their individual histories. We introduce FutureWorlds, a framework that unifies candidate construction, history maintenance, and learning from relative quality. Built on a multimodal discrete autoregressive model, FutureWorlds uses diverse beam search during reinforcement learning to construct candidate futures that balance confidence and diversity. Candidate-specific bounded memory preserves scene states and ensures that generation and policy scoring use matching histories. We further propose MemSPO (Memory-Conditioned Search-Guided Policy Optimization), which converts video trajectory rewards into group-relative advantages to optimize the world model. On RT-1, BridgeV2, and RoboCasa, FutureWorlds reduces LPIPS for 32-frame predictions by 14.78%, 20.84%, and 9.12%, respectively, relative to the strongest baseline on each dataset. Under fixed evaluation configurations, only 200 MemSPO updates further improve generation quality and support continued prediction beyond the training horizon. Memory ablations, decoding sensitivity analysis, and optical-flow evaluation show that these gains extend beyond visual quality to more accurate motion prediction and more consistent object states. Project page and code: https://github.com/Alexander-wu/FutureWorlds.
+
+机器人世界模型预测以动作为条件的未来场景，为理解动作结果提供基础。然而，将替代预测转化为有用的学习信号仍然具有挑战性：相似的候选者限制了信息质量的比较，而不同的轨迹需要持续维护其各自的历史。我们引入了 FutureWorlds，这是一个统一候选构建、历史维护和相对质量学习的框架。 FutureWorlds 基于多模态离散自回归模型构建，在强化学习期间使用多样化束搜索来构建平衡置信度和多样性的候选未来。特定于候选者的有界内存保留场景状态，并确保生成和策略评分使用匹配的历史记录。我们进一步提出MemSPO（内存条件搜索引导策略优化），它将视频轨迹奖励转化为群体相对优势，以优化世界模型。在 RT-1、BridgeV2 和 RoboCasa 上，相对于每个数据集的最强基线，FutureWorlds 将 32 帧预测的 LPIPS 分别降低了 14.78%、20.84% 和 9.12%。在固定评估配置下，只需 200 个 MemSPO 更新即可进一步提高生成质量并支持超出训练范围的持续预测。内存消融、解码灵敏度分析和光流评估表明，这些增益不仅限于视觉质量，还包括更准确的运动预测和更一致的物体状态。项目页面和代码：https://github.com/Alexander-wu/FutureWorlds。
+
+</details>
+
+---
+
+## 9. Calibration-risk routing for controlled world-model adaptation / 用于受控世界模型适应的校准风险路由
+
+**Date**: 2026-10-01 | **arXiv**: [2610.01001v1](http://arxiv.org/abs/2610.01001v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.01001v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Model-based reinforcement learning (MBRL) can exploit simulated experience, but a simulator-to-target shift creates a model-selection problem: correcting the simulator and fitting the target directly can each fail under limited target data. We introduce the Model-Corrected World Model (MC-WM), which separates initial target data into disjoint fit, selection, and calibration partitions and deploys the family with lower standardized calibration risk. A learned confidence signal and deterministic validity predicates weight one-step imagined policy updates without rewriting physical rewards. We evaluate 540 unique reported run cells across three controlled Multi-Joint dynamics with Contact (MuJoCo) shifts; one exact-routing cell was repeated after a pre-deployment artifact gate, giving 541 completed executions.
+
+基于模型的强化学习 (MBRL) 可以利用模拟经验，但模拟器到目标的转变会产生模型选择问题：在有限的目标数据下，校正模拟器和直接拟合目标都可能会失败。我们引入了模型校正世界模型（MC-WM），它将初始目标数据分为不相交的拟合、选择和校准分区，并部署具有较低标准化校准风险的系列。学习到的置信信号和确定性有效性谓词可以权衡一步想象的策略更新，而无需重写物理奖励。我们评估了三个受控多关节动力学与接触 (MuJoCo) 位移的 540 个独特报告的运行单元；在预部署工件门之后重复一个精确路由单元，给出 541 次完整的执行。
+
+</details>
+
+---
+
+## 10. In CEM, a World Model Is Also a Proposal Mechanism / 在CEM中，世界模型也是一种提案机制
+
+**Date**: 2026-10-01 | **arXiv**: [2610.00921v1](http://arxiv.org/abs/2610.00921v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.00921v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The cross-entropy method (CEM) uses world-model scores to select action sequences and fit the distribution sampled in its next iteration. A scoring error can therefore change both the present decision and the candidates considered later. We evaluate these two roles separately. Four types of predictive model generate CEM traces, and every model rescores every saved candidate pool. Executing the same candidates in the environment provides a reference elite set and proposal update.   Across twelve independently trained task-seed units on Walker and Cheetah, the pre-specified proposal distance falls from the first to the final CEM iteration in every unit. Proposal widths contract and fitted means separate relative to the remaining search width. Pairwise ranking agreement stays near chance on Walker and declines on Cheetah; elite-set agreement does not improve. This comparison shows greater variation between scorers than between pool sources on Cheetah; Walker has variation in both and in their pairings. We use the original six units to select Random nonlinear for a one-update intervention, without inspecting intervention outcomes. Replacing its first model-ranked update with an environment-ranked update lowers final realised selected-sequence cost in those six units and in six further units held out from the selection.
+
+交叉熵方法 (CEM) 使用世界模型分数来选择动作序列并拟合在下一次迭代中采样的分布。因此，评分错误可能会改变当前的决定以及以后考虑的候选人。我们分别评估这两个角色。四种类型的预测模型生成 CEM 轨迹，每个模型都会对每个保存的候选池重新评分。在环境中执行相同的候选人提供了参考精英集和提案更新。   在 Walker 和 Cheetah 上的 12 个独立训练的任务种子单元中，预先指定的提议距离从每个单元的第一次到最后一次 CEM 迭代都下降。建议宽度收缩和拟合意味着相对于剩余搜索宽度分离。 Walker 的配对排名一致接近机会，而 Cheetah 的配对排名一致下降；精英设定的协议并没有改善。这一比较表明，猎豹上得分者之间的差异比池源之间的差异更大；沃克在两者以及他们的配对中都有变化。我们使用原来的六个单元来选择随机非线性进行一次更新干预，而不检查干预结果。用环境排名更新替换其第一个模型排名更新降低了这六个单元以及未选择的另外六个单元的最终实现的选择序列成本。
+
+</details>
+
+---
+
+## 11. CF-JEPA: Improving Robustness of JEPA World Models via Controllability Factorization / CF-JEPA：通过可控性分解提高 JEPA 世界模型的鲁棒性
+
+**Date**: 2026-09-30 | **arXiv**: [2610.00727v1](http://arxiv.org/abs/2610.00727v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.00727v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Controlling an agent with vision requires being able to separate useful information from irrelevant background information. JEPA-style latent world models seem like a natural approach for this, as they do not perform pixel-level reconstruction; however, they are still sensitive to these distractor signals and experience latent collapse. In this work, we introduce Controllability Factorized JEPA (CF-JEPA), a JEPA-style world model which splits the latent space into controllable and uncontrollable subspaces. This factorization allows us to capture all the distractor information into the uncontrollable region, while we use the control-relevant latent information for our task. With this, we show comparable performance across 2D and 3D control tasks under nominal conditions and improved performance under distracted conditions, where CF-JEPA is the only model that does not experience latent collapse. We also validate our model under distracted conditions for a simulated robot task, highlighting the practical application of such a scheme.
+
+用视觉控制智能体需要能够将有用的信息与不相关的背景信息分开。 JEPA 风格的潜在世界模型似乎是一种自然的方法，因为它们不执行像素级重建；然而，他们仍然对这些干扰信号敏感并经历潜在的崩溃。在这项工作中，我们引入了可控性分解 JEPA（CF-JEPA），这是一种 JEPA 风格的世界模型，它将潜在空间划分为可控和不可控子空间。这种因式分解使我们能够将所有干扰信息捕获到不可控区域中，同时我们将与控制相关的潜在信息用于我们的任务。由此，我们在标称条件下展示了 2D 和 3D 控制任务的可比性能，并在分散注意力的条件下提高了性能，其中 CF-JEPA 是唯一不会经历潜在崩溃的模型。我们还在模拟机器人任务的分心条件下验证了我们的模型，强调了这种方案的实际应用。
+
+</details>
+
+---
+
+## 12. Token-World: World Modeling in Vision-Language Model Token Space for Robot Manipulation / Token-World：机器人操作的视觉语言模型令牌空间中的世界建模
+
+**Date**: 2026-09-30 | **arXiv**: [2610.00575v1](http://arxiv.org/abs/2610.00575v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.00575v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A common approach to world-model simulation for vision-language-action (VLA) systems is to predict future RGB observations and then re-encode them into policy inputs, introducing an indirect interface between simulation and downstream policy execution. We instead investigate whether world dynamics can be modeled in a compact, policy-oriented state derived from VLM visual tokens. A key challenge is that raw VLM visual tokens are high-dimensional, making efficient and accurate autoregressive dynamics modeling challenging. To address this, we introduce Token-World, an action-conditioned world model that compresses VLM features into a compact token state, learns future dynamics in this reduced space, and maps predicted states back to the original policy-facing representation for downstream use. Across manipulation benchmarks, Token-World improves open-loop feature fidelity and policy-action consistency over recent world-model simulators, with slower degradation over long rollout horizons. In closed-loop evaluation, its simulated policy performance correlates more strongly with reference policy performance than Ctrl-World ($r=0.794$ vs.\ $0.583$), while requiring lower simulation latency. Ablations further show that compact-representation design and dimensionality substantially affect future-state prediction. Code will be available at https://chuyaofu.github.io/Token-World/.
+
+视觉-语言-动作 (VLA) 系统的世界模型模拟的常见方法是预测未来的 RGB 观察结果，然后将它们重新编码为策略输入，从而在模拟和下游策略执行之间引入间接接口。相反，我们研究世界动态是否可以在源自 VLM 视觉令牌的紧凑的、面向策略的状态中建模。一个关键的挑战是原始 VLM 视觉标记是高维的，这使得高效且准确的自回归动力学建模具有挑战性。为了解决这个问题，我们引入了 Token-World，一种以动作为条件的世界模型，它将 VLM 特征压缩为紧凑的令牌状态，在这个缩小的空间中学习未来的动态，并将预测状态映射回原始的面向策略的表示以供下游使用。在操纵基准中，Token-World 比最近的世界模型模拟器提高了开环特征保真度和策略操作一致性，并且在长期部署范围内退化速度较慢。在闭环评估中，其模拟策略性能与参考策略性能的相关性比 Ctrl-World 更强（$r=0.794$ vs.\ $0.583$），同时要求较低的模拟延迟。消融进一步表明，紧凑表示设计和维度极大地影响未来状态预测。代码将在 https://chuyaofu.github.io/Token-World/ 提供。
+
+</details>
+
+---
+
+## 13. DeepJEPA: Scaling World Models from Within / DeepJEPA：从内部扩展世界模型
+
+**Date**: 2026-09-30 | **arXiv**: [2610.00368v1](http://arxiv.org/abs/2610.00368v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.00368v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World-model planners typically scale outward by rolling farther, sampling more trajectories, or optimizing longer, while assigning the same computation to every imagined transition. We show that making every transition uniformly deeper wastes computation and can degrade planning because useful refinement is concentrated at a small set of decision-critical events. We introduce DeepJEPA, a weight-tied joint-embedding predictive world model that treats transition depth as an inner test-time scaling axis and learns when another recurrent update is worth computing for each candidate and rollout step. Across five visual-control settings, DeepJEPA improves or matches the strongest fixed-depth planner while averaging only 1.00-1.26 updates per transition. Its additional computation concentrates at contact onset and sustained object interaction, where latent corrections can change which candidates enter the planner's elite set and which action is selected. Representation probes further show that improved planning does not require uniformly better object-state decodability. DeepJEPA therefore reframes world-model scaling as a problem of allocating internal computation where it can change the planner's decision: think deeper at decision-critical transitions instead of making every rollout uniformly deeper or longer.
+
+世界模型规划器通常通过滚动得更远、采样更多轨迹或优化更长时间来向外扩展，同时为每个想象的过渡分配相同的计算。我们表明，使每个过渡统一更深会浪费计算，并且会降低规划质量，因为有用的细化集中在一小部分决策关键事件上。我们引入了 DeepJEPA，这是一种权重联合嵌入的预测世界模型，它将转换深度视为内部测试时间缩放轴，并学习何时值得为每个候选和推出步骤计算另一个循环更新。在五种视觉控制设置中，DeepJEPA 改进或匹配最强的固定深度规划器，同时每次转换平均仅 1.00-1.26 次更新。它的额外计算集中在接触开始和持续的对象交互上，其中潜在的修正可以改变哪些候选者进入规划者的精英组以及选择哪个动作。表示探测进一步表明，改进的规划并不需要一致更好的对象状态可解码性。因此，DeepJEPA 将世界模型扩展重新定义为一个分配内部计算的问题，它可以改变规划者的决策：在决策关键转变时进行更深入的思考，而不是使每次部署都统一更深或更长。
+
+</details>
+
+---
+
+## 14. Social-WM: Safety-Aware Latent World Models for Robot Social Navigation / Social-WM：机器人社交导航的安全意识潜在世界模型
+
+**Date**: 2026-09-30 | **arXiv**: [2609.40177v2](http://arxiv.org/abs/2609.40177v2) | **PDF**: [Link](http://arxiv.org/pdf/2609.40177v2)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Safe social navigation requires a robot to anticipate not only the future consequences of its actions, but also whether a nominal action can actually be executed under surrounding physical and social constraints. We present Social-WM, an efficient latent world-model planning framework trained from egocentric RGB video sequences. Our key observation is that social-navigation experience contains a systematic discrepancy between the nominal action and the realizable action: a nominal forward action may be fully executed in free space, but needs to be constrained when heading towards a pedestrian or obstacle. Social-WM learns these safety-relevant consequences directly through action-conditioned future prediction, where the target is the actual observed future following each command. We further introduce a realizable inverse-dynamics objective that associates observed latent transitions with the action actually realized rather than the nominal one. At deployment, candidate actions are imagined through the latent world model, and the inverse dynamics model estimates their realizability; nominal--realizable discrepancy then provides a safety signal before execution. The learned dynamics and realizability model remain goal-independent and support both position- and image-goal navigation. On Social-HM3D, Social-WM achieves 63.77% success while reducing human collisions to 21.67%, and maintains strong performance under zero-shot transfer to Social-MP3D, without explicit pedestrian tracking, privileged human state, or online reinforcement learning.
+
+安全的社交导航要求机器人不仅要预测其行为的未来后果，还要预测名义上的行为是否可以在周围的物理和社会约束下实际执行。我们提出了 Social-WM，这是一种高效的潜在世界模型规划框架，由以自我为中心的 RGB 视频序列训练而成。我们的主要观察结果是，社交导航体验包含名义动作和可实现动作之间的系统差异：名义前向动作可以在自由空间中完全执行，但在朝向行人或障碍物时需要受到限制。社交管理直接通过以行动为条件的未来预测来学习这些与安全相关的后果，其中目标是每个命令之后实际观察到的未来。我们进一步引入了一种可实现的逆动态目标，它将观察到的潜在转变与实际实现的行动而不是名义行动联系起来。在部署时，通过潜在世界模型想象候选动作，逆动力学模型估计其可实现性；名义-可实现的差异然后在执行之前提供安全信号。学习到的动力学和可实现性模型保持目标独立性，并支持位置和图像目标导航。在 Social-HM3D 上，Social-WM 取得了 63.77% 的成功率，同时将人体碰撞减少到 21.67%，并且在零镜头转移到 Social-MP3D 的情况下保持了强劲的性能，无需显式行人跟踪、特权人类状态或在线强化学习。
+
+</details>
+
+---
+
+## 15. Dream4ACT: A Shared Visual Action Interface for Multi-Embodiment Video-Action Modeling / Dream4ACT：用于多实施例视频动作建模的共享视觉动作界面
+
+**Date**: 2026-09-30 | **arXiv**: [2609.40153v1](http://arxiv.org/abs/2609.40153v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.40153v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation models (VGMs) offer strong spatiotemporal priors for embodied observation--action modeling. However, joint-space action vectors lack explicit image-space structure and vary in dimensionality and semantics across embodiments, making it challenging to directly leverage the rich spatiotemporal priors of VGMs. End-effector visualizations provide an alternative but do not specify the full articulated configuration needed for robot execution. We present Dream4ACT, a world model built for joint video-action modeling across embodiments. To unify action representations across embodiments, we introduce a shared visual action interface, called action views, which render target joint configurations from four prescribed virtual cameras using URDF-based forward kinematics. This shared visual representation preserves embodiment-specific articulated geometry while allowing observation and action sequences to share a video autoencoder and diffusion transformer. Through masked flow-matching, our model supports forward dynamics, inverse dynamics, and joint observation--action generation within a single jointly trained model by varying which future sequences are corrupted. To recover executable action sequences from predicted action views, we propose a training-free, URDF-constrained multiview recovery mechanism, without a learned embodiment-specific decoder. Dream4ACT achieves an average success rate of 88.98\% on RoboTwin~2.0 and an overall score of 65.66 on TriWorldBench, supporting effective closed-loop manipulation and competitive action-conditioned multiview prediction through the visual action interface.
+
+视频生成模型（VGM）为具体观察动作建模提供了强大的时空先验。然而，关节空间动作向量缺乏明确的图像空间结构，并且在不同实施例的维度和语义上有所不同，使得直接利用 VGM 丰富的时空先验变得具有挑战性。末端执行器可视化提供了一种替代方案，但没有指定机器人执行所需的完整铰接配置。我们提出了 Dream4ACT，这是一个为跨实施例的联合视频动作建模而构建的世界模型。为了统一跨实施例的动作表示，我们引入了一个共享的视觉动作界面，称为动作视图，它使用基于 URDF 的正向运动学从四个规定的虚拟相机渲染目标关节配置。这种共享的视觉表示保留了特定于实施例的铰接几何形状，同时允许观察和动作序列共享视频自动编码器和扩散变换器。通过屏蔽流匹配，我们的模型支持正向动力学、逆向动力学和联合观察——通过改变未来序列被损坏的方式在单个联合训练模型中生成动作。为了从预测的动作视图恢复可执行的动作序列，我们提出了一种免训练、URDF约束的多视图恢复机制，无需学习的特定于实施例的解码器。 Dream4ACT在RoboTwin~2.0上的平均成功率为88.98％，在TriWorldBench上的总分为65.66，通过视觉动作界面支持有效的闭环操纵和竞争性动作条件多视图预测。
+
+</details>
+
+---
+
+## 16. Beyond Policy Alignment: Closing the Planning-Learning Loop for Robot Control with Learned World Models / 超越政策调整：通过学习世界模型关闭机器人控制的规划学习循环
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39751v1](http://arxiv.org/abs/2609.39751v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39751v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Planning with learned world models combines online trajectory optimization with learned value and policy functions for high-dimensional control. Because the planner determines the experience used for learning, while the learned critic and actor in turn score and propose future plans, planning and learning form a closed feedback loop. TD-MPC is a prominent instance of this design. Recent policy-constrained variants strengthen one part of the loop by aligning the learned policy with planner behavior. We introduce PL-MPC (Planning-Learning MPC), which additionally modifies critic supervision and planner terminal-value estimation. Hybrid multi-step TD targets expose critic updates to more realized rewards before bootstrapping; disagreement-aware terminal estimates reduce the influence of uncertain critic values during MPPI planning; and return-weighted actor distillation emphasizes planner-executed actions from high-return episodes. The world-model architecture and MPPI optimizer are otherwise unchanged. On HumanoidBench, the largest gains occur on \texttt{balance-hard}, where Total Average Return (TAR) increases from $98\pm18$ to $387\pm255$, and \texttt{hurdle}, from $199\pm13$ to $466\pm200$; performance across the broader benchmark remains task dependent, and PL-MPC remains competitive on DMControl. Controlled ablations show different component interactions across the two tasks. We further demonstrate zero-shot sim-to-real transfer on wrench-nut alignment with a 7-DoF KUKA IIWA14, obtaining higher observed success than TD-M(PC)^2 on the training object size and two unseen sizes. Code and data will be available at: https://pl-mpc-humanoid.github.io.
+
+使用学习世界模型进行规划将在线轨迹优化与学习值和策略函数结合起来，以实现高维控制。因为规划者决定用于学习的经验，而学习的批评者和行动者反过来评分并提出未来的计划，所以规划和学习形成了一个闭环反馈循环。 TD-MPC 是这种设计的一个突出实例。最近的策略约束变体通过将学习到的策略与规划者行为相结合来加强循环的一部分。我们引入了 PL-MPC（规划学习 MPC），它另外修改了批评者监督和规划者终值估计。混合多步骤 TD 目标在引导之前让批评者更新获得更多已实现的奖励；分歧感知终端估计减少了 MPPI 规划过程中不确定临界值的影响；回报加权演员蒸馏强调计划者从高回报事件中执行的行动。世界模型架构和 MPPI 优化器在其他方面保持不变。在 HumanoidBench 上，最大的收益出现在 \texttt{balance-hard} 上，其中总平均回报 (TAR) 从 $98\pm18$ 增加到 $387\pm255$，而 \texttt{hurdle} 从 $199\pm13$ 增加到 $466\pm200$；更广泛的基准测试中的性能仍然依赖于任务，并且 PL-MPC 在 DMControl 上仍然具有竞争力。受控消融显示了两个任务之间不同的组件交互。我们进一步演示了使用 7 自由度 KUKA IIWA14 进行扳手螺母对准的零射击模拟到真实的转换，在训练对象尺寸和两个未见过的尺寸上获得了比 TD-M(PC)^2 更高的观察成功率。代码和数据可在以下网址获取：https://pl-mpc- humanoid.github.io。
+
+</details>
+
+---
+
+## 17. ReWAM: Reciprocal World Action Models for Interactive Autonomous Driving / ReWAM：交互式自动驾驶的互惠世界行动模型
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39245v1](http://arxiv.org/abs/2609.39245v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39245v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In interactive scenarios, an autonomous driving system is required to generate ego actions under the influence of other agents' behaviors. Existing World Action Models (WAMs) typically model other agents as components of the world model rather than as decision-makers that fundamentally shape the action of the ego agent, which impairs their performance in dense interaction scenarios. We introduce Reciprocal World Action Models (ReWAM), a game-theoretic world action modeling framework that captures the reciprocal influence between the ego agent and other agents by representing them as conditional responders whose actions are mutually influenced. We instantiate this framework with a Level-$k$ response hierarchy, where role-specific ego and other action DiTs exchange compact strategy tokens through cross-agent attention while remaining grounded in a shared representation of the future driving world. To learn the response policy of the ego agent from demonstrations, we formulate expert actions as samples from the best response distribution and jointly optimize the entire hierarchy using conditional flow matching. Our framework is evaluated on the NAVSIM dataset and achieves state-of-the-art performance compared to baselines. The improvement is particularly significant in interactive scenarios, validating that modeling reciprocal responses provides a more effective foundation for interaction-aware world action generation.
+
+在交互场景中，自动驾驶系统需要在其他智能体行为的影响下产生自我行为。现有的世界行动模型（WAM）通常将其他智能体建模为世界模型的组成部分，而不是从根本上塑造自我智能体行为的决策者，这会损害它们在密集交互场景中的表现。我们引入了互惠世界行动模型（ReWAM），这是一种博弈论世界行动建模框架，通过将自我代理和其他代理表示为其行为相互影响的条件响应者来捕获自我代理和其他代理之间的相互影响。我们用 Level-$k$ 响应层次结构实例化这个框架，其中角色特定的自我和其他行动 DiT 通过跨代理注意力交换紧凑的策略令牌，同时保持扎根于未来驾驶世界的共享表示。为了从演示中学习自我代理的响应策略，我们将专家动作制定为最佳响应分布的样本，并使用条件流匹配共同优化整个层次结构。我们的框架在 NAVSIM 数据集上进行评估，与基线相比，实现了最先进的性能。这一改进在交互场景中尤其显着，验证了交互响应建模为交互感知世界动作生成提供了更有效的基础。
+
+</details>
+
+---
+
+## 18. The Planning Limits of Latent World Models / 潜在世界模型的规划限制
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39235v1](http://arxiv.org/abs/2609.39235v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39235v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models offer a promising way to help robots understand how the physical world evolves and plan complex behaviours through imagination. Yet existing studies mainly demonstrate what these models can accomplish, leaving unclear when their predictions remain useful for planning and where they fail. We study this question using action-conditioned predictors built on five frozen self-supervised visual backbones: V-JEPA 2, V-JEPA 2.1, VideoMAEv2, VideoPrism, and DINOv2. We use frozen backbones to test representations intended to transfer across environments. We evaluate these models on diverse Meta-World manipulation tasks and real-robot interactions from BridgeData V2. We find that a world model guides action selection reliably only when the goal lies within, or slightly beyond, the trajectory it imagines during planning. With five-step rollouts, the length the predictor was trained on, the world model ranks actions reliably only for targets five to ten control steps ahead, whereas task goals lie 16 to 53 steps away. Neither an 81-fold larger predictor nor longer-rollout training extends this range; the encoder affects both range and closed-loop success, with V-JEPA 2.1 performing most consistently. More fundamentally, the limit persists under perfect prediction: using the real simulator, success falls from 92% to 41% as the target moves from five to twenty steps ahead of a five-step rollout. Planning therefore requires either longer imagined trajectories or closer subgoals. For distant goals, pure imagination succeeds in 23% of episodes, planning with feedback (MPC) raises success to 30%, imagining as far as the goal to 47%, and nearby expert subgoals to 76%. Used within its plannable range, a world model can also improve a vision-language-action (VLA) policy: choosing among eight actions the VLA proposes raises its success from 65% to 77% across 16 different tasks.
+
+世界模型提供了一种有前途的方法来帮助机器人了解物理世界如何演变并通过想象力规划复杂的行为。然而现有的研究主要证明了这些模型可以实现什么，但不清楚它们的预测何时对规划有用以及它们在哪里失败。我们使用基于五个冻结的自我监督视觉主干的动作条件预测器来研究这个问题：V-JEPA 2、V-JEPA 2.1、VideoMAEv2、VideoPrism 和 DINOv2。我们使用冻结主干来测试旨在跨环境传输的表示。我们在各种元世界操作任务和 BridgeData V2 的真实机器人交互上评估这些模型。我们发现，只有当目标位于或稍微超出它在规划过程中想象的轨迹时，世界模型才能可靠地指导行动选择。通过五步推出（即预测器训练的长度），世界模型仅对领先 5 到 10 个控制步骤的目标可靠地排名操作，而任务目标则位于 16 到 53 步之外。 81 倍大的预测器和更长的推出训练都没有扩展这个范围；编码器会影响范围和闭环成功，其中 V-JEPA 2.1 的表现最为一致。更根本的是，在完美的预测下，限制仍然存在：使用真实的模拟器，当目标从五步推出前五步移动到二十步时，成功率从 92% 下降到 41%。因此，规划要么需要更长的想象轨迹，要么需要更接近的子目标。对于遥远的目标，纯粹的想象力在 23% 的情节中成功，带反馈的规划 (MPC) 将成功率提高到 30%，想象远方的目标达到 47%，附近的专家子目标达到 76%。在其可规划范围内使用世界模型还可以改进视觉-语言-行动 (VLA) 策略：在 VLA 提出的八个行动中进行选择，可以将 16 个不同任务的成功率从 65% 提高到 77%。
+
+</details>
+
+---
+
+## 19. LocoWM: High-Precision Locomotion through World-Model-Guided Residual Adaptation / LocoWM：通过世界模型引导的残差适应实现高精度运动
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39179v1](http://arxiv.org/abs/2609.39179v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39179v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+High-precision locomotion combines motion-command tracking with precise regulation of task-relevant physical states, enabling robots to interact reliably with their surroundings during motion. Joint end-to-end optimization can leave precision objectives insufficiently optimized, while reactive residual control adjusts actions only after deviations become observable. We present \textbf{LocoWM}, a world-model-guided preactive residual adaptation framework for high-precision locomotion. A base policy provides command-following locomotion, while an action-conditioned world model predicts a sequence of future physical states from proprioceptive history and the proposed base action. A residual adapter conditions on this predicted sequence to generate additive action corrections that compensate for anticipated deviations. Two-stage training first learns locomotion and action-conditioned dynamics, then freezes both modules while training the adapter, separating locomotion acquisition from precision adaptation. Experiments spanning terrain leveling, acceleration compensation, and push recovery demonstrate improved control precision and disturbance robustness over end-to-end and reactive residual baselines. Demos and code are available at: https://zhaozijie2022.github.io/LocoWM
+
+高精度运动将运动命令跟踪与任务相关物理状态的精确调节相结合，使机器人能够在运动过程中与周围环境可靠地交互。联合端到端优化可能会使精度目标优化不充分，而反应残差控制仅在可观察到偏差后才调整动作。我们提出了 \textbf{LocoWM}，一种用于高精度运动的世界模型引导的预主动残差适应框架。基本策略提供遵循命令的运动，而以动作为条件的世界模型则根据本体感受历史和建议的基本动作预测一系列未来的物理状态。残余适配器根据该预测序列生成附加作用校正，以补偿预期偏差。两阶段训练首先学习运动和动作条件动力学，然后在训练适配器时冻结两个模块，将运动获取与精确适应分开。涵盖地形平整、加速度补偿和推力恢复的实验表明，在端到端和反应性剩余基线上，控制精度和干扰鲁棒性得到了提高。演示和代码位于：https://zhaozijie2022.github.io/LocoWM
+
+</details>
+
+---
+
+## 20. Linear Recurrent Memory Suffices to Distil a World-Model Policy for Robot Air Hockey / 线性循环存储器足以提炼出机器人空气曲棍球的世界模型策略
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39151v1](http://arxiv.org/abs/2609.39151v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39151v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Does memory-dependent control need nonlinear recurrent dynamics? We study simulated air-hockey defence under temporary loss of puck tracking. A DreamerV3 teacher outperforms a memoryless policy under tracking loss, while resetting the teacher's recurrent state sharply reduces performance, which demonstrates that the task requires memory. We distil this teacher into compact recurrent policies with a 64 dimensional state, with a combination of a diagonal linear recurrence and an optional rank-$k$ nonlinear innovation while retaining nonlinear observation encoders and action heads. Across five matched seeds, the purely linear recurrent model ($k=0$) matches both the GRU baseline and the teacher throughout the tested range of tracking loss. Increasing nonlinear innovation rank providing no measured benefits. This result is obtained on a fresh test split, which will be only opened after all models and analyses are frozen. The linear model requires fewer recurrent parameters and less computation than GRU, but performs comparably. These results suggest that, for this memory dependent control task, nonlinear representation learning around a simple linear memory mechanism can be sufficient, and that nonlinear recurrent dynamics are not necessarily required. These conclusions are limited to the simulated task, teacher, state dimension, and blackout horizon considered here, and to policies whose observation encoder and action head remain nonlinear.
+
+依赖记忆的控制是否需要非线性循环动力学？我们研究了在冰球跟踪暂时丢失的情况下的模拟空气曲棍球防守。 DreamerV3 教师在跟踪损失时优于无记忆策略，而重置教师的循环状态会大幅降低性能，这表明该任务需要记忆。我们将这个教师提炼为具有 64 维状态的紧凑循环策略，结合对角线线性循环和可选的rank-$k$非线性创新，同时保留非线性观察编码器和动作头。在五个匹配的种子中，纯线性循环模型 ($k=0$) 在整个跟踪损失测试范围内匹配 GRU 基线和教师。非线性创新排名的提高并没有带来可衡量的效益。该结果是在新的测试拆分中获得的，只有在所有模型和分析都冻结后才会打开。与 GRU 相比，线性模型需要更少的循环参数和计算量，但性能相当。这些结果表明，对于这种依赖于记忆的控制任务，围绕简单的线性记忆机制的非线性表示学习就足够了，并且不一定需要非线性循环动力学。这些结论仅限于此处考虑的模拟任务、教师、状态维度和停电范围，以及观察编码器和行动头保持非线性的策略。
+
+</details>
+
+---
+
+## 21. Sparse-WAM: Accelerating World Action Models via Action-Guided Sparse Imagination / Sparse-WAM：通过行动引导的稀疏想象力加速世界行动模型
+
+**Date**: 2026-09-30 | **arXiv**: [2609.38984v1](http://arxiv.org/abs/2609.38984v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.38984v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World-action models (WAMs) leverage pretrained video models to improve generalization in robot control by jointly predicting future visual states and actions. This capability comes at a substantial inference cost, as dense future-frame tokens are repeatedly processed during denoising. Prior methods address this by token pruning that prioritizes visual fidelity to reduce denoising costs in video diffusion models. However, these methods do not use action relevance to determine which future-frame tokens to retain during joint denoising in WAMs. In this paper, we propose Sparse-WAM, a training-free framework for action-guided sparse imagination that selectively processes future-frame tokens to accelerate WAM inference. We observe substantial overlap in the spatial distribution of attention from action tokens to future-frame tokens (action-to-future attention) between consecutive denoising steps, despite continued updates to the future representations. Motivated by this, we develop Action-Guided Token Selection to retain frame-specific action-relevant regions together with cross-frame context. However, a naive implementation can incur attention-scoring and token-packing overhead that offsets the computational savings from pruning. We therefore introduce Pilot, an efficient engine that reduces sparse inference overhead through lightweight scoring and cross-step reuse of token selections. On LIBERO with FastWAM-Joint and RoboLab-120 with Cosmos 3 Edge, Sparse-WAM achieves inference speedups of approximately $2.0\times$ and $1.8\times$, respectively, over dense eager inference on an NVIDIA RTX 4090, while largely preserving task performance.
+
+世界动作模型 (WAM) 利用预训练的视频模型，通过联合预测未来的视觉状态和动作来提高机器人控制的泛化能力。这种能力需要付出巨大的推理成本，因为在去噪过程中会重复处理密集的未来帧标记。先前的方法通过标记修剪来解决这个问题，标记修剪优先考虑视觉保真度以减少视频扩散模型中的去噪成本。然而，这些方法不使用动作相关性来确定在 WAM 中联合去噪期间保留哪些未来帧标记。在本文中，我们提出了 Sparse-WAM，这是一种用于行动引导的稀疏想象力的免训练框架，它有选择地处理未来帧标记以加速 WAM 推理。我们观察到连续去噪步骤之间从动作标记到未来帧标记（动作到未来注意力）的注意力空间分布存在大量重叠，尽管未来表示不断更新。受此启发，我们开发了动作引导的令牌选择，以保留特定于框架的动作相关区域以及跨框架上下文。然而，简单的实现可能会产生注意力评分和令牌打包开销，从而抵消了剪枝带来的计算节省。因此，我们引入了 Pilot，这是一种高效的引擎，可以通过轻量级评分和令牌选择的跨步骤重用来减少稀疏推理开销。在采用 FastWAM-Joint 的 LIBERO 和采用 Cosmos 3 Edge 的 RoboLab-120 上，与 NVIDIA RTX 4090 上的密集热切推理相比，Sparse-WAM 的推理速度分别提高了约 2.0 美元和 1.8 美元，同时很大程度上保留了任务性能。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-01 (9 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-10-01
