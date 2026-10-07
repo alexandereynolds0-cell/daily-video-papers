@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-07](papers/2026-10-07.md) - 8 papers
 - [2026-10-06](papers/2026-10-06.md) - 48 papers
 - [2026-10-05](papers/2026-10-05.md) - 1 papers
 - [2026-10-02](papers/2026-10-02.md) - 46 papers
@@ -175,6 +176,146 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-07 (8 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-10-07
+
+**Paper Count**: 8
+
+---
+
+## 1. SquidAgent: Parallelize Wisely, Coordinate Efficiently / SquidAgent：明智地并行，高效地协调
+
+**Date**: 2026-10-06 | **arXiv**: [2610.08647v1](http://arxiv.org/abs/2610.08647v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.08647v1)
+
+**Categories**: cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM-based agents solve complex multi-step tasks, but sequential execution incurs substantial latency. In principle, parallelizing work across multiple agents should yield near-linear speedups. Yet existing parallel multi-agent systems often run slower than a single-agent baseline. We attribute this gap to two hidden costs that parallel execution incurs but a serial agent avoids. First, there is a re-exploration cost: redundant effort spent by parallel workers reconstructing context that the orchestrator already possesses, such as prior decisions, that would otherwise be inherited implicitly in a serial execution. Second, there is an alignment cost: the overhead required to reconcile inconsistencies across independently generated outputs. We thus derive a principled decision criterion: a layer should be parallelized only when its critical-path cost, plus re-exploration and alignment overheads, is lower than the corresponding serial cost. While this criterion is naturally expressed in wall-clock time, we observe that LLMs are poorly calibrated when asked to estimate task duration. To address this, we instead measure cost in predicted output tokens, which we empirically find LLMs can estimate substantially more reliably than wall-clock time. Building on this token-based criterion, we propose SquidAgent. It estimates all token budgets in a single planning step, forks each worker directly from the orchestrator's session to eliminate re-exploration cost, and replaces post-hoc reconciliation with a pre-generated shared convention block that converts alignment into a bounded upfront cost. A deterministic scheduler then applies the criterion layer by layer. Empirically, SquidAgent achieves a 2.2$\times$ mean throughput improvement and a 2.6$\times$ mean wall-time speedup over Claude Code, and a 2.0$\times$ throughput improvement over the strongest multi-agent baseline.
+
+基于 LLM 的代理可以解决复杂的多步骤任务，但顺序执行会产生大量延迟。原则上，跨多个代理的并行工作应该会产生近乎线性的加速。然而，现有的并行多代理系统的运行速度通常比单代理基线慢。我们将这种差距归因于并行执行产生但串行代理避免的两个隐性成本。首先，存在重新探索成本：并行工作人员花费多余的精力来重建编排器已经拥有的上下文，例如先前的决策，否则这些决策将在串行执行中隐式继承。其次，存在协调成本：协调独立生成的输出之间的不一致所需的开销。因此，我们得出了一个原则性的决策标准：只有当层的关键路径成本加上重新探索和对齐开销低于相应的串行成本时，才应该并行化层。虽然这个标准自然地用挂钟时间来表达，但我们观察到法学硕士在被要求估计任务持续时间时校准得很差。为了解决这个问题，我们改为测量预测输出代币的成本，根据经验，我们发现法学硕士可以比挂钟时间更可靠地估计成本。基于这个基于代币的标准，我们提出了 SquidAgent。它在单个规划步骤中估计所有代币预算，直接从编排器会话中分叉每个工作人员以消除重新探索成本，并用预先生成的共享约定块替换事后协调，该共享约定块将对齐转换为有限的前期成本。然后，确定性调度程序逐层应用该标准。根据经验，与 Claude Code 相比，SquidAgent 的平均吞吐量提高了 2.2$\times$，平均墙时加速提高了 2.6$\times$，与最强的多代理基线相比，吞吐量提高了 2.0$\times$。
+
+</details>
+
+---
+
+## 2. Agentic AutoRAG: RAG Pipeline Optimization through Reasoning-Driven Agents / Agentic AutoRAG：通过推理驱动代理进行 RAG 管道优化
+
+**Date**: 2026-10-06 | **arXiv**: [2610.08452v1](http://arxiv.org/abs/2610.08452v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.08452v1)
+
+**Categories**: cs.CL, cs.IR, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Retrieval-augmented generation (RAG) is a widely used approach for grounding large language models (LLMs) in external knowledge. However, configuring a pipeline is an expensive hyperparameter optimization problem over many interacting choices, from chunking and embedding model to reranking and generation. Existing optimizers, from greedy search to Bayesian optimization, reduce each trial to an aggregate score and search without modeling why a configuration performed as it did, even though the retrieved chunks already provide evidence about whether each failure occurred during retrieval or after it. We introduce Agentic AutoRAG, an LLM-agent optimizer for multi-objective RAG hyperparameter optimization with retrieval-versus-generation failure attribution. It proposes configurations scored on a frozen exam from the corpus: after each trial a Diagnoser attributes each failed question to retrieval or generation, and a Proposer, grounded in a knowledge base of model rankings and pricing, selects the next configuration, weighing accuracy against cost to trace a Pareto frontier. On three multi-hop QA benchmarks it reaches higher LLM-judge accuracy than every baseline we compare, and within its first 10 trials it matches or beats the statistical baselines' full 30-trial judge accuracy. In its cost-aware mode on a real-world healthcare corpus it reaches a median exam accuracy of 77%, above the strongest baseline's 71.5%, at about 58% of that baseline's cost per query, and it matches that 71.5% at about 22% of the cost.
+
+检索增强生成（RAG）是一种广泛使用的方法，用于将大型语言模型（LLM）建立在外部知识基础上。然而，在许多交互选择中，从分块和嵌入模型到重新排序和生成，配置管道是一个昂贵的超参数优化问题。现有的优化器，从贪婪搜索到贝叶斯优化，将每次试验减少到一个聚合分数和搜索，而不对配置执行的原因进行建模，即使检索到的块已经提供了有关每次失败是否发生在检索期间或之后的证据。我们引入了 Agentic AutoRAG，这是一种 LLM 代理优化器，用于通过检索与生成故障归因进行多目标 RAG 超参数优化。它提出了对语料库中的冻结考试进行评分的配置：每次试验后，诊断器将每个失败的问题归因于检索或生成，而基于模型排名和定价的知识库的提议者选择下一个配置，权衡准确性与成本以追踪帕累托前沿。在三个多跳 QA 基准上，它比我们比较的每个基线都达到了更高的 LLM 判断准确性，并且在前 10 次试验中，它匹配或超过了统计基线的完整 30 次试验判断准确性。在现实世界医疗保健语料库的成本感知模式下，它的中位检查准确率达到 77%，高于最强基线的 71.5%，每次查询成本约为该基线的 58%，并且它以约 22% 的成本达到该基线的 71.5%。
+
+</details>
+
+---
+
+## 3. LeanPlan: Optimal Planning with LLM-Generated Heuristics and Admissibility Proofs / LeanPlan：利用法学硕士生成的启发式方法和可接受性证明进行优化规划
+
+**Date**: 2026-10-06 | **arXiv**: [2610.08246v1](http://arxiv.org/abs/2610.08246v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.08246v1)
+
+**Categories**: cs.AI, cs.LG, cs.SC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Frontier large language models (LLMs) can generate heuristic functions that guide search to achieve state-of-the-art performance in satisficing planning, where any plan is acceptable. However, these heuristics are not guaranteed to be admissible and can lead to suboptimal plans. We introduce LeanPlan, the first planning system that finds optimal plans with LLM-generated heuristics whose admissibility is machine-checked. Given a domain description and training tasks, an agentic loop uses planner feedback to iteratively improve a reusable domain-specific heuristic, its admissibility proof and the required domain assumptions. LeanPlan implements the heuristic, its proof and an efficient planner with machine-checked grounding and search in Lean 4. We evaluate LeanPlan on ten domains from the International Planning Competition and three new domains, using test tasks with up to 57 times as many objects as the training tasks. With GPT-5.6 Sol in the agentic loop, we successfully generate heuristics and admissibility proofs for all these domains. With the resulting heuristics, LeanPlan usually expands fewer states than the state-of-the-art Scorpion planner and solves more tasks overall.
+
+前沿大语言模型 (LLM) 可以生成启发式函数，指导搜索在令人满意的规划中实现最先进的性能，其中任何计划都是可以接受的。然而，这些启发法并不能保证是可接受的，并且可能导致计划不理想。我们推出 LeanPlan，这是第一个利用 LLM 生成的启发式算法找到最佳计划的规划系统，其可接受性经过机器检查。给定域描述和训练任务，代理循环使用规划器反馈来迭代改进可重用的特定于域的启发式、其可接受性证明和所需的域假设。 LeanPlan 在 Lean 4 中通过机器检查的基础和搜索来实现启发式、其证明和高效规划器。我们在国际规划竞赛的 10 个领域和 3 个新领域上评估 LeanPlan，使用的测试任务的对象数量高达训练任务的 57 倍。通过代理循环中的 GPT-5.6 Sol，我们成功地为所有这些领域生成启发式和可接受性证明。通过由此产生的启发式方法，LeanPlan 通常比最先进的 Scorpion 规划器扩展更少的状态，并总体上解决更多任务。
+
+</details>
+
+---
+
+## 4. Self-Retrospection Distillation: Turning Post-hoc Experiences into Prior Foresight / 自我回顾蒸馏：将事后经验转化为事前预见
+
+**Date**: 2026-10-06 | **arXiv**: [2610.08077v1](http://arxiv.org/abs/2610.08077v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.08077v1)
+
+**Categories**: cs.AI, cs.CL, cs.IR, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning with verifiable rewards (RLVR) turns agent experience into learning signals primarily through scalar outcome rewards after interaction. For group-relative objectives, however, this signal vanishes when all rollouts receive the same reward, even though their trajectories may reveal useful information about what the task requires and how the agent fails. We ask a complementary question: can hindsight teach an agent what it could have anticipated before acting? We introduce prospective learning, which uses post-hoc experience to supervise foresight predictions from the pre-interaction view, and instantiate it with Self-Retrospection Distillation (SRD). Intuitively, a completed trajectory reveals knowledge that would have been useful and pitfalls that should be avoided; SRD distills this privileged hindsight into trajectory-blind foresight of the same policy. Foresight serves only as a training target and need not be explicitly generated at inference time. Across 10 tool-integrated reasoning and long-horizon agentic tasks, SRD complements RLVR and self-distillation baselines with gains of up to $24.2$ pp. Its advantage is especially pronounced when reward contrast is scarce: when $37$--$98\%$ of rollout groups are reward-uniform across model scales, yet SRD can still exploit learning signal from sampled trajectories. In the 2B setting, where $98\%$ of groups are all-failure, the RLVR training ends up at $0.0\%$ success, while adding SRD reaches $60.6\%$ under the same rollout budget. Our results suggest that post-hoc agent experience is useful not only for evaluating or improving behavior, but also for shaping predictive representations before available interaction.
+
+具有可验证奖励的强化学习（RLVR）主要通过交互后的标量结果奖励将代理经验转化为学习信号。然而，对于与群体相关的目标，当所有部署都获得相同的奖励时，该信号就会消失，即使它们的轨迹可能会揭示有关任务需要什么以及代理如何失败的有用信息。我们提出一个补充问题：事后诸葛亮能否告诉代理人在行动之前可以预见到什么？我们引入了前瞻性学习，它使用事后经验从交互前的角度监督远见预测，并用自我回顾蒸馏（SRD）将其实例化。直观上，完整的轨迹揭示了有用的知识和应该避免的陷阱； SRD 将这种特权后见之明提炼成对同一政策的盲目轨迹的远见。 Foresight 仅作为训练目标，不需要在推理时显式生成。在 10 个工具集成推理和长期代理任务中，SRD 补充了 RLVR 和自蒸馏基线，收益高达 24.2 美元。当奖励对比稀缺时，其优势尤其明显：当 37 美元 - 98 美元\%$ 的部署组在模型尺度上奖励一致时，SRD 仍然可以利用来自采样轨迹的学习信号。在 2B 设置中，$98\%$ 的组全部失败，RLVR 训练最终以 $0.0\%$ 成功，而添加 SRD 在相同的部署预算下达到 $60.6\%$。我们的结果表明，事后代理体验不仅对于评估或改善行为有用，而且对于在可用交互之前形成预测表示也有用。
+
+</details>
+
+---
+
+## 5. DAEDALUS: Bootstrapping Agent Memory from Self-Generated Tasks / DAEDALUS：从自行生成的任务引导代理内存
+
+**Date**: 2026-10-06 | **arXiv**: [2610.08048v1](http://arxiv.org/abs/2610.08048v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.08048v1)
+
+**Categories**: cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM agents often lack the operational knowledge to act reliably in new environments, as they must discover specific tool behaviors or environment conventions on their own. Without memory of past attempts, they repeat the same mistakes across tasks, leading to more task failures and longer trajectories. To address this, agentic systems typically rely on human-written guidelines or on procedural memory built from training tasks and an oracle verifier, both of which require prior knowledge of the environment. We present DAEDALUS, a method for bootstrapping reusable agent memory from self-generated practice without existing tasks or oracle verifiers. DAEDALUS pairs two agents: an explorer that interacts with the environment to generate challenging yet solvable tasks, and a solver that attempts them. A heuristic is derived from each solver failure and accepted only after the solver repeatedly succeeds with that heuristic in context. These outcomes also provide feedback for the explorer to refine the difficulty of future tasks. Accepted heuristics are then consolidated into a memory bank for test-time use. Across AppWorld, $τ^2$-bench, and AutomationBench, DAEDALUS improves mean success rates by up to 15.9 points and pass^5 by up to 2.2x over a no-memory baseline, and is competitive with methods using training tasks, at a lower inference cost than most. We show that performance gains already emerge with a small exploration budget, and that its heuristics also benefit agents from other model families. Our ablations further reveal that solver traces provide the key information needed to derive effective heuristics, while factorizing early discoveries makes exploration more cost-efficient. Beyond memory construction, we find that the tasks generated by DAEDALUS can serve as a proxy for benchmark tasks when ranking models by performance. Code and artifacts: www.github.com/illuin-tech/daedalus.
+
+LLM 代理通常缺乏在新环境中可靠运行的操作知识，因为他们必须自己发现特定的工具行为或环境约定。由于不记得过去的尝试，他们会在任务中重复同样的错误，导致更多的任务失败和更长的轨迹。为了解决这个问题，代理系统通常依赖于人类编写的指南或基于训练任务和预言验证器构建的程序记忆，这两者都需要对环境的先验知识。我们提出了 DAEDALUS，一种从自我生成的实践中引导可重用代理内存的方法，无需现有任务或预言验证器。代达罗斯将两个代理配对：一个与环境交互以生成具有挑战性但可解决的任务的探索者，以及一个尝试这些任务的解决者。启发式是从每次求解器失败中得出的，并且只有在求解器在上下文中多次成功使用该启发式后才被接受。这些结果还为探索者提供反馈，以改进未来任务的难度。然后将接受的启发法合并到内存库中以供测试时使用。在 AppWorld、$τ^2$-bench 和 AutomationBench 中，DAEDALUS 将平均成功率提高了高达 15.9 个点，并且比无内存基线提高了高达 2.2 倍的 pass^5，并且与使用训练任务的方法相比具有竞争力，而且推理成本低于大多数方法。我们表明，只需少量的探索预算即可实现性能提升，并且其启发式方法也使其他模型系列的智能体受益。我们的消融进一步表明，求解器轨迹提供了导出有效启发式所需的关键信息，而分解早期发现使探索更具成本效益。除了内存构建之外，我们发现 DAEDALUS 生成的任务可以在按性能对模型进行排名时充当基准任务的代理。代码和工件：www.github.com/illuin-tech/daedalus。
+
+</details>
+
+---
+
+## 6. Persistent Memory in Multi-Agent LLM Inference: What It Costs, What It Buys, and When You Can Tell / 多代理 LLM 推理中的持久内存：它的成本、它购买什么以及何时可以知道
+
+**Date**: 2026-10-06 | **arXiv**: [2610.07782v1](http://arxiv.org/abs/2610.07782v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.07782v1)
+
+**Categories**: cs.AI, cs.CL, cs.DC, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Decomposing long-context inference across cooperating agents bounds the active KV cache per call rather than total evidence, which matters when KV-cache memory binds. Many such systems add a persistent tier storing and recalling reasoning traces, usually validated by an ablation reporting an accuracy gain. We measure both on one three-tier agent architecture. Decomposition delivers: peak KV working set of 14.3 MiB per query against 35.5 and 35.3 MiB for single-pass and retrieval-augmented baselines. The persistent tier does not: across eight controlled dataset pairs at n=100 per arm it costs +0.368 MiB [+0.167, +0.590] of peak cache and produces no detectable accuracy change (+0.015, 95% CI [-0.011, +0.046]). We argue the null is structural: single-question benchmarks supply each item with its own evidence and score it independently, and correctness requires resetting stored traces between conditions, so recall has nothing informative to retrieve. Reaching it took four measurement corrections -- three inflating the apparent benefit, the fourth making an effect that size look resolvable -- none visible in the results table. We give the conditions an agent-memory ablation must satisfy and detection procedures that need no knowledge of the specific defect.
+
+跨协作代理分解长上下文推理会限制每次调用的活动 KV 缓存，而不是总证据，这在 KV 缓存内存绑定时很重要。许多此类系统添加了一个持久层来存储和调用推理轨迹，通常通过报告准确性增益的消融来验证。我们在一个三层代理架构上对两者进行测量。分解提供：每个查询的峰值 KV 工作集为 14.3 MiB，而单遍和检索增强基线为 35.5 和 35.3 MiB。持久层则不然：在每臂 n=100 的八个受控数据集对中，它消耗了 +0.368 MiB [+0.167, +0.590] 的峰值缓存，并且不会产生可检测到的精度变化（+0.015，95% CI [-0.011, +0.046]）。我们认为零值是结构性的：单问题基准为每个项目提供自己的证据并对其进行独立评分，而正确性需要重置条件之间存储的痕迹，因此回忆没有任何信息可供检索。达到这个目标需要四次测量修正——其中三次夸大了明显的好处，第四次使尺寸看起来可以解析——在结果表中看不到任何结果。我们给出了代理记忆消融必须满足的条件以及不需要了解特定缺陷的检测程序。
+
+</details>
+
+---
+
+## 7. Independent Multi-Agent Reinforcement Learning with Counterfactual Semantic-Social World Models / 具有反事实语义社会世界模型的独立多智能体强化学习
+
+**Date**: 2026-10-06 | **arXiv**: [2610.07704v1](http://arxiv.org/abs/2610.07704v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.07704v1)
+
+**Categories**: cs.MA, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Fully decentralized multi-agent reinforcement learning (MARL), also referred to as independent learning, requires each agent to learn and act using only its local information and experience, without a centralized critic or inter-agent communication. Such a stringent information structure renders the conventional reward signal ambiguous. A poor return may result from an ineffective ego action, an incompatible teammate response, or an effective opponent response, yet scalar rewards alone do not reveal which explanation is responsible. We argue that agents can learn more effectively by prospectively comparing the consequences of candidate actions rather than diagnosing failures only from realized returns. We introduce CASTLE (Counterfactual Action-conditioned Semantic Tokens for Local Execution in Decentralized MARL), an offline-training, online-in-context guidance framework with two complementary world models. A Local Dynamics World Model, offline pre-trained over agents' local trajectories, summarizes the agent's local trajectory dynamics and partial observability, while a Semantic-Social World Model predicts compact short-horizon task and social consequences for each candidate ego action. The latter is trained from counterfactual simulator rollouts that expose plausible teammate and opponent responses to alternative actions taken from the same logged rollout state. During online learning and execution, both world models remain frozen and are queried by agents using only locally available information. Their prediction logits provide in-context guidance to an independent PPO policy. Across 30 matched seeds on Tag, Spread, and Adversary in the benchmark multi-particle environments, our proposed CASTLE achieves the highest mean final score among the evaluated methods, exceeding the strongest baseline on each task by 10.67, 6.46, and 0.33 normalized points, respectively.
+
+完全去中心化的多智能体强化学习（MARL），也称为独立学习，要求每个智能体仅使用其本地信息和经验来学习和行动，没有集中的批评者或智能体间的通信。这种严格的信息结构使得传统的奖励信号变得模糊。糟糕的回报可能是由于无效的自我行动、不相容的队友反应或有效的对手反应造成的，但仅凭标量奖励并不能揭示哪种解释是造成这种情况的原因。我们认为，代理人可以通过前瞻性地比较候选行动的后果来更有效地学习，而不是仅根据已实现的回报来诊断失败。我们引入了 CASTLE（用于去中心化 MARL 中本地执行的反事实动作条件语义标记），这是一个离线训练、在线上下文指导框架，具有两个互补的世界模型。局部动态世界模型，对智能体的局部轨迹进行离线预训练，总结了智能体的局部轨迹动态和部分可观察性，而语义-社会世界模型则预测每个候选自我行为的紧凑短期任务和社会后果。后者是通过反事实模拟器的首次展示进行训练的，该模拟器展示了队友和对手对从同一记录的首次展示状态采取的替代行动的合理反应。在在线学习和执行过程中，两个世界模型都保持冻结状态，并由代理仅使用本地可用信息进行查询。他们的预测逻辑为独立的 PPO 政策提供了上下文指导。在基准多粒子环境中，在 Tag、Spread 和 Adversary 上的 30 个匹配种子中，我们提出的 CASTLE 在评估方法中获得了最高的平均最终得分，分别超过每个任务的最强基线 10.67、6.46 和 0.33 标准化点。
+
+</details>
+
+---
+
+## 8. Joint Workflow and Prompt Optimization for User Behavior Simulation / 用户行为模拟的联合工作流程和提示优化
+
+**Date**: 2026-10-06 | **arXiv**: [2610.07663v1](http://arxiv.org/abs/2610.07663v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.07663v1)
+
+**Categories**: cs.MA, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+User behavior simulation is the computational modeling of user interactions within information systems through the use of simulated agents in place of live users. It supports system testing and evaluation, decision-making and forecasting, and user experience design. Existing simulators rely on hand-crafted rules or domain expertise that transfers poorly across tasks. SWORD (Simulation-driven Workflow and Prompt Optimization with Role-based Design) is introduced as a framework that jointly optimizes multi-agent workflow topology and natural-language prompts. It is guided solely by a scalar task metric, without domain initialization or task-specific engineering. The experimental results demonstrate that SWORD achieves statistically significant gains over prompt-only, workflow-only, and staged-optimization baselines under a controlled, identical-backbone comparison. Against the strongest published domain-specific baseline, SWORD further improves accuracy while using a smaller backbone model, substantially less training data, and a very reasonable API cost (\$4--\$6 for each dataset). Beyond predictive performance, SWORD autonomously discovers domain-relevant signals, review-sentiment mapping rules and epidemiological decay priors, purely from scalar error feedback, establishing textual gradients as a mechanism for unsupervised feature-importance discovery in user behavior modeling.
+
+用户行为模拟是通过使用模拟代理代替真实用户，对信息系统内的用户交互进行计算建模。它支持系统测试和评估、决策和预测以及用户体验设计。现有的模拟器依赖于手工制定的规则或领域专业知识，这些规则或领域的专业知识在任务之间的迁移效果很差。 SWORD（Simulation-driven Workflow and Prompt Optimization with Role-based Design）作为联合优化多智能体工作流拓扑和自然语言提示的框架被引入。它仅由标量任务指标引导，没有域初始化或特定于任务的工程。实验结果表明，在受控的相同骨干比较下，SWORD 比仅提示、仅工作流程和分阶段优化基线取得了统计上显着的增益。与已发布的最强的特定领域基线相比，SWORD 进一步提高了准确性，同时使用更小的主干模型、更少的训练数据以及非常合理的 API 成本（每个数据集 4--6 美元）。除了预测性能之外，SWORD 纯粹从标量误差反馈中自主发现领域相关信号、评论情绪映射规则和流行病学衰退先验，建立文本梯度作为用户行为建模中无监督特征重要性发现的机制。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-06 (48 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-10-06
