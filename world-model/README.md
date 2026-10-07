@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-07](papers/2026-10-07.md) - 3 papers
 - [2026-10-06](papers/2026-10-06.md) - 4 papers
 - [2026-10-05](papers/2026-10-05.md) - 1 papers
 - [2026-10-02](papers/2026-10-02.md) - 21 papers
@@ -161,6 +162,66 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-07 (3 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-10-07
+
+**Paper Count**: 3
+
+---
+
+## 1. AdvSim2Real : Training Web Agents Against Adaptive Prompt Injection in a Web World Model / AdvSim2Real：在网络世界模型中训练网络代理以应对自适应提示注入
+
+**Date**: 2026-10-06 | **arXiv**: [2610.08773v1](http://arxiv.org/abs/2610.08773v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.08773v1)
+
+**Categories**: cs.CL, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Web agents complete user requests by reading and acting on pages that third parties write, so an instruction planted on a page can redirect the agent away from the user's goal. The agent cannot simply ignore the page, because the page also holds the values and controls the task requires. Current defenses fine-tune the agent on injections fixed before training, and attackers that adapt to the trained model bypass them. Adversarial training lets the attacker adapt but keeps the tasks fixed, so a task stops teaching once the agent solves it. We introduce AdvSim2Real, which co-evolves a task curriculum, an injection adversary, and the agent inside a frozen web world model. The curriculum is rewarded for tasks the agent solves about half of the time, and the adversary only for a success flip, an injection that turns a judged success into a failure. Training in the simulator makes a 4B agent both more capable and more robust: its completion rises with and without attacks, holds against a frontier-model adversary it never trained against, and its capability gain carries over to a real browser. On 150 web tasks, AdvSim2Real raises completion under this unseen adversary by 33.6\% relative to the base agent.
+
+Web 代理通过读取第三方编写的页面并对其进行操作来完成用户请求，因此放置在页面上的指令可以将代理重定向到远离用户目标的方向。代理不能简单地忽略该页面，因为该页面还保存任务所需的值和控件。当前的防御措施会在训练前修复的注入上对代理进行微调，而适应训练模型的攻击者会绕过它们。对抗性训练让攻击者适应但保持任务固定，因此一旦代理解决了任务，任务就会停止教学。我们引入了 AdvSim2Real，它共同进化了任务课程、注入对手和冻结网络世界模型中的代理。课程会对智能体在大约一半时间内解决的任务进行奖励，而对手只对成功翻转（将判断的成功变成失败的注入）进行奖励。在模拟器中进行训练使 4B 代理的能力更强、更健壮：无论是否受到攻击，它的完成度都会提高，能够对抗从未训练过的前沿模型对手，并且其能力增益可以转移到真实的浏览器中。在 150 个 Web 任务中，相对于基础代理，AdvSim2Real 在这个看不见的对手下将完成度提高了 33.6%。
+
+</details>
+
+---
+
+## 2. Independent Multi-Agent Reinforcement Learning with Counterfactual Semantic-Social World Models / 具有反事实语义社会世界模型的独立多智能体强化学习
+
+**Date**: 2026-10-06 | **arXiv**: [2610.07704v1](http://arxiv.org/abs/2610.07704v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.07704v1)
+
+**Categories**: cs.MA, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Fully decentralized multi-agent reinforcement learning (MARL), also referred to as independent learning, requires each agent to learn and act using only its local information and experience, without a centralized critic or inter-agent communication. Such a stringent information structure renders the conventional reward signal ambiguous. A poor return may result from an ineffective ego action, an incompatible teammate response, or an effective opponent response, yet scalar rewards alone do not reveal which explanation is responsible. We argue that agents can learn more effectively by prospectively comparing the consequences of candidate actions rather than diagnosing failures only from realized returns. We introduce CASTLE (Counterfactual Action-conditioned Semantic Tokens for Local Execution in Decentralized MARL), an offline-training, online-in-context guidance framework with two complementary world models. A Local Dynamics World Model, offline pre-trained over agents' local trajectories, summarizes the agent's local trajectory dynamics and partial observability, while a Semantic-Social World Model predicts compact short-horizon task and social consequences for each candidate ego action. The latter is trained from counterfactual simulator rollouts that expose plausible teammate and opponent responses to alternative actions taken from the same logged rollout state. During online learning and execution, both world models remain frozen and are queried by agents using only locally available information. Their prediction logits provide in-context guidance to an independent PPO policy. Across 30 matched seeds on Tag, Spread, and Adversary in the benchmark multi-particle environments, our proposed CASTLE achieves the highest mean final score among the evaluated methods, exceeding the strongest baseline on each task by 10.67, 6.46, and 0.33 normalized points, respectively.
+
+完全去中心化的多智能体强化学习（MARL），也称为独立学习，要求每个智能体仅使用其本地信息和经验来学习和行动，没有集中的批评者或智能体间的通信。这种严格的信息结构使得传统的奖励信号变得模糊。糟糕的回报可能是由于无效的自我行动、不相容的队友反应或有效的对手反应造成的，但仅凭标量奖励并不能揭示哪种解释是造成这种情况的原因。我们认为，代理人可以通过前瞻性地比较候选行动的后果来更有效地学习，而不是仅根据已实现的回报来诊断失败。我们引入了 CASTLE（用于去中心化 MARL 中本地执行的反事实动作条件语义标记），这是一个离线训练、在线上下文指导框架，具有两个互补的世界模型。局部动态世界模型，对智能体的局部轨迹进行离线预训练，总结了智能体的局部轨迹动态和部分可观察性，而语义-社会世界模型则预测每个候选自我行为的紧凑短期任务和社会后果。后者是通过反事实模拟器的首次展示进行训练的，该模拟器展示了队友和对手对从同一记录的首次展示状态采取的替代行动的合理反应。在在线学习和执行过程中，两个世界模型都保持冻结状态，并由代理仅使用本地可用信息进行查询。他们的预测逻辑为独立的 PPO 政策提供了上下文指导。在基准多粒子环境中，在 Tag、Spread 和 Adversary 上的 30 个匹配种子中，我们提出的 CASTLE 在评估方法中获得了最高的平均最终得分，分别超过每个任务的最强基线 10.67、6.46 和 0.33 标准化点。
+
+</details>
+
+---
+
+## 3. Modeling Latent Disturbances for Robust Decision-Making in World Models / 在世界模型中对潜在干扰进行建模以实现稳健决策
+
+**Date**: 2026-10-06 | **arXiv**: [2610.07599v1](http://arxiv.org/abs/2610.07599v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.07599v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In this paper, we study robust decision-making in the latent space of world models (WMs). Robust optimization is a mathematical framework where, given explicitly specified dynamics and physically meaningful disturbances, a robot can select actions that remain effective even under worst-case disturbances. However, applying this principle to the learned latent space of WMs introduces a fundamental challenge: because WMs have fully learned state spaces and dynamics inferred from high-dimensional observations, it is unclear how to define latent-space disturbances that faithfully represent uncertainty in the underlying system. Our key idea is to model a latent-space disturbance as a perturbation to the learned latent dynamics that induces pessimistic but plausible transitions. Specifically, we construct a set of plausible latent dynamics by combining a dynamics-aware similarity metric that captures plausible transitions with out-of-distribution detection that excludes implausible latent states. We calibrate this uncertainty set over latent dynamics using conformal prediction, ensuring that WM imaginations induced by the latent disturbance remain plausible without becoming overly pessimistic. We then jointly optimize robust robot actions and the worst-case latent disturbances through game-theoretic optimization. We leverage this latent-space robust optimization to robustify policy steering, considering two paradigms: latent safety filtering and sample-and-verify steering of a generative control policy. Our controlled simulation experiments show that our latent disturbance enables robust decision-making directly in WM latent spaces, and hardware experiments with a Franka manipulator show that modeling latent disturbances enables robust policy steering, reducing failures by 70% in safety filtering and 54% in sampling-based policy steering. Project website: https://junwon.me/LatentDisturbance/.
+
+在本文中，我们研究了世界模型（WM）潜在空间中的稳健决策。鲁棒优化是一种数学框架，在给定明确指定的动力学和物理上有意义的干扰的情况下，机器人可以选择即使在最坏情况干扰下也保持有效的动作。然而，将这一原理应用于 WM 学习的潜在空间带来了一个根本性的挑战：因为 WM 已经完全学习了从高维观测推断出的状态空间和动态，所以目前尚不清楚如何定义忠实代表底层系统中不确定性的潜在空间扰动。我们的关键思想是将潜在空间扰动建模为对学习到的潜在动态的扰动，从而引发悲观但合理的转变。具体来说，我们通过结合动态感知相似性度量来构建一组合理的潜在动态，该度量捕获合理的转变，并通过分布外检测排除不合理的潜在状态。我们使用共形预测来校准潜在动力学上的这种不确定性，确保由潜在干扰引起的 WM 想象仍然合理，而不会变得过于悲观。然后，我们通过博弈论优化联合优化稳健的机器人动作和最坏情况的潜在干扰。我们利用这种潜在空间鲁棒优化来增强策略指导，考虑两种范式：潜在安全过滤和生成控制策略的采样和验证指导。我们的受控模拟实验表明，我们的潜在干扰能够直接在 WM 潜在空间中进行稳健的决策，而使用 Franka 操纵器进行的硬件实验表明，对潜在干扰进行建模可以实现稳健的策略引导，将安全过滤的失败率减少 70%，将基于采样的策略引导的失败率减少 54%。项目网站：https://junwon.me/LatentDisturbance/。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-06 (4 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-10-06
