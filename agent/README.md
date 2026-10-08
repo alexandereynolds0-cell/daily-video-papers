@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-08](papers/2026-10-08.md) - 18 papers
 - [2026-10-07](papers/2026-10-07.md) - 8 papers
 - [2026-10-06](papers/2026-10-06.md) - 48 papers
 - [2026-10-05](papers/2026-10-05.md) - 1 papers
@@ -176,6 +177,308 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-08 (18 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-10-08
+
+**Paper Count**: 18
+
+---
+
+## 1. A Good Self-Teacher Meets the Student Where They Are: Joint On-Policy Learning and Teaching / 优秀的自学者会在学生所在的地方与他们会面：联合政策学习和教学
+
+**Date**: 2026-10-07 | **arXiv**: [2610.10447v1](http://arxiv.org/abs/2610.10447v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.10447v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement Learning (RL) from outcome rewards suffers from sparse supervision, particularly on difficult, long-horizon tasks where successful trajectories are rare and costly to generate. On-Policy Distillation (OPD) offers an attractive alternative by providing dense token-level supervision from a stronger teacher along the student's own generations. Self-distillation methods further remove the need for a separate teacher model by conditioning the same policy on privileged information to serve as its own teacher. However, privileged conditioning alone does not guarantee that the resulting distillation update improves the student. Indeed, privileged information can lead the teacher to solve tasks through shortcuts unavailable to the student, producing supervision poorly matched to the student's current behavior. Consequently, even a higher-performing teacher can provide guidance that degrades student performance. To address this, we analyze how the choice of privileged teacher affects the student's update. We derive a necessary and sufficient condition for the teacher's local distillation update to be a positive multiple of the student's reward gradient. Our analysis suggests that the teacher should not only perform well on the task, but also provide guidance suited to the student's current capabilities. This characterization motivates a practical teacher-training surrogate that combines outcome rewards with token-level Kullback-Leibler (KL) regularization toward the student. Based on this result, we propose Joint On-Policy Learning and Teaching (JOLT), which jointly trains a single policy in two roles: a privileged teacher using a KL-regularized objective, and an unprivileged student using dense on-policy distillation. Across mathematical reasoning, coding, tool use, and terminal use, JOLT improves training efficiency and performance, with further gains from student rewards.
+
+结果奖励的强化学习 (RL) 受到监督稀疏的影响，特别是在困难的长期任务上，在这些任务中，成功的轨迹很少见且生成成本高昂。按策略蒸馏（OPD）提供了一种有吸引力的替代方案，它通过学生同代中更强大的老师提供密集的代币级监督。自蒸馏方法通过将相同的策略限制在特权信息上以充当自己的教师，从而进一步消除了对单独教师模型的需求。然而，单独的特权调节并不能保证最终的蒸馏更新能够提高学生的水平。事实上，特权信息可能导致教师通过学生无法使用的捷径来解决任务，从而产生与学生当前行为不匹配的监督。因此，即使是表现较好的教师也可能提供降低学生表现的指导。为了解决这个问题，我们分析了特权教师的选择如何影响学生的更新。我们推导出教师的局部蒸馏更新为学生奖励梯度的正倍数的充分必要条件。我们的分析表明，教师不仅应该出色地完成任务，还应该提供适合学生当前能力的指导。这种特征激发了一种实用的教师培训替代方案，它将结果奖励与针对学生的代币级 Kullback-Leibler (KL) 正则化相结合。基于这一结果，我们提出了联合在政策学习和教学（JOLT），它以两个角色联合训练单一政策：使用 KL 正则化目标的特权教师和使用密集在政策蒸馏的非特权学生。在数学推理、编码、工具使用和终端使用方面，JOLT 提高了训练效率和表现，并从学生奖励中获得进一步收益。
+
+</details>
+
+---
+
+## 2. SOTA: Stock Options Trading Agents Guided by Option-Implied Return Distributions / SOTA：以期权隐含收益分布为指导的股票期权交易代理
+
+**Date**: 2026-10-07 | **arXiv**: [2610.10407v1](http://arxiv.org/abs/2610.10407v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.10407v1)
+
+**Categories**: cs.AI, cs.LG, q-fin.PM, q-fin.TR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As option markets grow and AI advances, agentic systems for option trading are gaining increasing attention. Language-model-based agents can reason over contextual information such as news, but option trading presents a particularly challenging decision problem: a single stock can have thousands of contracts, and the agent must decide both which contracts to trade and how to combine them. Existing approaches often sidestep this complexity by restricting the policy to a fixed strategy structure, such as a straddle, limiting their ability to switch strategies as market conditions change. We present SOTA (Stock Options Trading Agents), an agentic trading framework for structured option-strategy selection. SOTA abstracts the large option universe into strategy-level decisions while deterministic resolvers handle portfolio implementation. We develop SOTA by post-training Qwen3.8-27B with supervised fine-tuning followed by reinforcement learning. SOTA is evaluated on options on nine large-cap U.S. equities and SPY against rule-based and machine-learning strategy selectors in the same trading environment. Over a six-month out-of-sample period, SOTA earns an 18.3% total return with a Sharpe ratio of 1.60 and a maximum drawdown of 8.96%. We also document an asymmetric role of news: news improves frontier-teacher trajectories, but retaining news during reinforcement learning reduces out-of-sample return from 18.3% to -2.7%.
+
+随着期权市场的发展和人工智能的进步，期权交易的代理系统越来越受到关注。基于语言模型的代理可以对新闻等上下文信息进行推理，但期权交易提出了一个特别具有挑战性的决策问题：一只股票可以有数千份合约，代理必须决定要交易哪些合约以及如何组合它们。现有的方法通常通过将策略限制为固定的策略结构（例如跨式策略）来回避这种复杂性，从而限制了它们随着市场条件变化而转换策略的能力。我们推出 SOTA（股票期权交易代理），这是一种用于结构化期权策略选择的代理交易框架。 SOTA 将大型期权领域抽象为策略级决策，而确定性解析器则处理投资组合实施。我们通过训练后 Qwen3.8-27B 进行监督微调和强化学习来开发 SOTA。 SOTA 是根据九种美国大盘股的期权以及相同交易环境中基于规则和机器学习策略选择器的 SPY 进行评估的。在六个月的样本外期间，SOTA 的总回报率为 18.3%，夏普比率为 1.60，最大回撤为 8.96%。我们还记录了新闻的不对称作用：新闻改善了前沿教师的轨迹，但在强化学习期间保留新闻将样本外回报率从 18.3% 降低到 -2.7%。
+
+</details>
+
+---
+
+## 3. Pathwise Information Certificates for Decentralized Adaptive Sensing / 分散式自适应传感的路径信息证书
+
+**Date**: 2026-10-07 | **arXiv**: [2610.10362v1](http://arxiv.org/abs/2610.10362v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.10362v1)
+
+**Categories**: cs.IT, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We study decentralized adaptive sensing, where multiple agents choose measurements from evolving local beliefs while exchanging information over a communication graph. We ask whether the measurements actually selected by an adaptive policy have collected enough evidence to distinguish the true target from every plausible alternative. We develop a pathwise certificate based on the Rényi--Chernoff information accumulated along the realized sensing trajectory. It yields nonasymptotic MAP-error bounds and an anytime, network-wide stopping rule for arbitrary history-dependent sensing policies, while separating accumulated statistical information from a bounded network-mixing transient. Linear growth of the information against the least-resolved competitor implies exponential decay of MAP and squared-localization error. A classical pairwise KL converse, specialized to the adaptive decentralized transcript, shows that insufficient information on any pair prevents a positive uniform error exponent, confirming the hardest competitor as a fundamental bottleneck. Across policies, graph topologies, sensor profiles, and seeds, the worst-competitor score correlates more strongly with localization speed than an average-pair proxy in both 1D ($r=0.89$ versus $0.40$) and structured 2D sensing ($r=0.77$ versus $0.48$). Our results provide a practical way to certify and diagnose adaptive multi-agent sensing systems using the evidence they actually collect.
+
+我们研究分散式自适应传感，其中多个代理从不断发展的本地信念中选择测量，同时通过通信图交换信息。我们询问适应性政策实际选择的衡量标准是否收集了足够的证据来区分真正的目标和每一个可能的替代方案。我们根据沿实现的传感轨迹积累的 Rényi-Chernoff 信息开发了路径证书。它为任意依赖于历史的传感策略生成非渐近 MAP 误差界限和任意时间的网络范围停止规则，同时将累积的统计信息与有界网络混合瞬态分开。针对最难解决的竞争对手的信息的线性增长意味着 MAP 和平方定位误差的指数衰减。专门针对自适应去中心化转录本的经典成对 KL 逆向表明，任何对的信息不足都会阻止正的统一误差指数，从而确认最难的竞争对手是根本瓶颈。在策略、图拓扑、传感器配置文件和种子方面，在 1D（$r=0.89$ 与 $0.40$）和结构化 2D 传感（$r=0.77$ 与 $0.48$）中，最差竞争对手得分与本地化速度的相关性比平均对代理更强。我们的结果提供了一种实用的方法，可以使用实际收集的证据来验证和诊断自适应多智能体传感系统。
+
+</details>
+
+---
+
+## 4. Continual Graph Multi-Agent Reinforcement Learning / 连续图多智能体强化学习
+
+**Date**: 2026-10-07 | **arXiv**: [2610.10302v1](http://arxiv.org/abs/2610.10302v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.10302v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In Continual Multi-Agent Reinforcement Learning (CMARL), agents learn cooperative policies across sequences of tasks, aiming to adapt effectively to new tasks while preserving the ability to solve previously encountered ones. In many applications, tasks differ in their underlying structure, which can represent, for example, distinct operational conditions or target configurations (e.g., different network topologies in power grids or arrangements in formation control). Existing CMARL methods lack dedicated mechanisms to leverage this structural information when learning new tasks, failing to promote transfer and mitigate forgetting. To fill this gap, we propose Continual Graph Multi-Agent Reinforcement Learning (CGMARL), a novel framework for CMARL problems in which task sequences are mapped into a series of attributed graphs, each modeling a task-specific structure. In CGMARL, each graph determines the environment dynamics (next states and/or rewards) and the number of agents for the corresponding task. Then, we present Graph-based Formation (GRAFO), the first CGMARL benchmark, and show how forgetting arises in this setting. Finally, to address this limitation, we propose Frozen Graph Encoder (FROG), a method that relies on a frozen graph backbone to preserve past structural information in graph-based CMARL policies. Experiments on GRAFO show that pairing FROG with existing CL methods substantially improves performance on multiple CGMARL scenarios.
+
+在持续多智能体强化学习（CMARL）中，智能体跨任务序列学习合作策略，旨在有效地适应新任务，同时保留解决以前遇到的任务的能力。在许多应用中，任务的底层结构不同，例如可以表示不同的操作条件或目标配置（例如，电网中的不同网络拓扑或编队控制中的布置）。现有的 CMARL 方法缺乏专门的机制来在学习新任务时利用这些结构信息，无法促进迁移和减轻遗忘。为了填补这一空白，我们提出了连续图多智能体强化学习（CGMARL），这是一种针对 CMARL 问题的新颖框架，其中任务序列被映射到一系列属性图，每个属性图都建模一个特定于任务的结构。在 CGMARL 中，每个图确定环境动态（下一个状态和/或奖励）以及相应任务的代理数量。然后，我们提出基于图的形成（GRAFO），第一个 CGMARL 基准，并展示在这种情况下遗忘是如何产生的。最后，为了解决这一限制，我们提出了冻结图编码器（FROG），这种方法依赖于冻结图主干来保留基于图的 CMARL 策略中过去的结构信息。 GRAFO 上的实验表明，将 FROG 与现有 CL 方法配对可显着提高多个 CGMARL 场景的性能。
+
+</details>
+
+---
+
+## 5. ExperienceIndex: Artifact-Grounded Memory / 经验指数：基于工件的记忆
+
+**Date**: 2026-10-07 | **arXiv**: [2610.10091v1](http://arxiv.org/abs/2610.10091v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.10091v1)
+
+**Categories**: cs.CL, cs.AI, cs.IR, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Knowledge-intensive tasks require answering many questions by reasoning about a shared corpus of artifacts (e.g., court cases, or scientific literature). As humans interact with these corpora, they naturally accumulate experiential knowledge about artifacts, enabling them to quickly identify the complete set of relevant artifacts for each new task. However, existing AI agents lack appropriate memory solutions to build or reuse such artifact-grounded experience, leading to lower answer quality and higher online cost. Existing memory solutions extract and reuse information from prior task-solving traces, but they primarily focus on user preferences, factual attributes, or abstract reasoning patterns rather than persistent artifact-specific knowledge. We introduce ExperienceIndex, a novel experience layer for AI agents that captures and reuses knowledge about artifacts based on prior reasoning traces. ExperienceIndex stores two complementary forms of experience: (i) single-artifact experiences that summarize an artifact's contribution to prior tasks and (ii) artifact-pair experiences that encode structural relationships discovered during past reasoning. Integrated as lightweight middleware, ExperienceIndex uses an experience retrieval mechanism to guide agents toward the complete set of relevant artifacts for new tasks, improving both answer quality and efficiency. Across diverse corpora and agentic solutions with different search frameworks, ExperienceIndex delivers consistent gains, raising answer quality by up to 11.0 points and reducing online dollar cost by up to 50.5%. We further demonstrate two benefits: (i) cross-task generalization, where experiences accumulated from text-to-SQL tasks transfer to factoid QA tasks over the same artifact corpus, and (ii) teacher-student learning, where experiences from a stronger model enable a weaker model to reach comparable performance.
+
+知识密集型任务需要通过推理共享的工件语料库（例如法庭案件或科学文献）来回答许多问题。当人类与这些语料库交互时，他们自然会积累有关工件的经验知识，使他们能够快速识别每个新任务的完整相关工件集。然而，现有的人工智能代理缺乏适当的内存解决方案来构建或重用这种基于工件的体验，导致答案质量较低和在线成本较高。现有的内存解决方案从先前的任务解决轨迹中提取和重用信息，但它们主要关注用户偏好、事实属性或抽象推理模式，而不是持久的特定于工件的知识。我们引入了 ExperienceIndex，这是一种针对人工智能代理的新颖体验层，它可以根据先前的推理轨迹捕获并重用有关工件的知识。 ExperienceIndex 存储两种互补形式的经验：(i) 总结工件对先前任务的贡献的单工件体验，以及 (ii) 编码过去推理过程中发现的结构关系的工件对经验。 ExperienceIndex 作为轻量级中间件集成，使用经验检索机制引导代理寻找新任务的完整相关工件集，从而提高答案质量和效率。在具有不同搜索框架的不同语料库和代理解决方案中，ExperienceIndex 提供了一致的收益，将答案质量提高了多达 11.0 个点，并将在线美元成本降低了多达 50.5%。我们进一步证明了两个好处：（i）跨任务泛化，从文本到 SQL 任务积累的经验转移到同一工件语料库上的事实 QA 任务，以及（ii）师生学习，其中来自较强模型的经验使较弱模型能够达到可比的性能。
+
+</details>
+
+---
+
+## 6. Multi-Agent Coordination via Support-Preserving Distillation / 通过支持保留蒸馏进行多智能体协调
+
+**Date**: 2026-10-07 | **arXiv**: [2610.10087v1](http://arxiv.org/abs/2610.10087v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.10087v1)
+
+**Categories**: cs.LG, cs.MA, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Offline MARL increasingly relies on generative policies to model multimodal joint behavior, typically by distilling a centralized teacher into decentralized one-step actors under the CTDE. We identify a failure mode at the teacher training stage: standard flow-based teachers pair noise with replay targets independently, so nearby noise samples can be routed toward conflicting coordination modes. The teacher then produces samples between valid modes, and because the distillation loss regresses each local actor onto the conditional mean of the teacher's output given local input, this error is not absorbed but propagated to the student. To remove this teacher-side artifact, we propose Mode-Support Semi-Discrete Optimal Transport (MoSDOT), which summarizes multimodal replay into a finite mode support with prescribed capacities and uses conditional semi-discrete optimal transport to assign each noise sample to a single mode before teacher training. We additionally study a shared-randomness variant that uses a shared noise component at execution to expose the residual gap intrinsic to strict-product execution. On controlled diagnostics and offline MARL benchmarks, MoSDOT improves endpoint quality and routing consistency, particularly on datasets exhibiting multimodal joint behavior.
+
+离线 MARL 越来越依赖生成策略来模拟多模式联合行为，通常是通过将集中式教师提炼为 CTDE 下分散的单步参与者。我们在教师培训阶段确定了一种失败模式：基于标准流程的教师独立地将噪声与重放目标配对，因此附近的噪声样本可以路由到冲突的协调模式。然后，教师在有效模式之间生成样本，并且由于蒸馏损失将每个本地参与者回归到给定本地输入的教师输出的条件平均值上，因此该误差不会被吸收而是传播给学生。为了消除这种教师端的伪影，我们提出了模式支持半离散最优传输（MoSDOT），它将多模态重放总结为具有规定容量的有限模式支持，并在教师培训之前使用条件半离散最优传输将每个噪声样本分配给单个模式。我们还研究了一种共享随机性变体，该变体在执行时使用共享噪声组件来暴露严格产品执行固有的剩余间隙。在受控诊断和离线 MARL 基准测试中，MoSDOT 提高了端点质量和路由一致性，特别是在表现出多模式联合行为的数据集上。
+
+</details>
+
+---
+
+## 7. LiveMACE: Process-Aware Evaluation of LLM Agent Capabilities in Evolving Markets / LiveMACE：不断变化的市场中法学硕士代理能力的流程感知评估
+
+**Date**: 2026-10-07 | **arXiv**: [2610.09872v1](http://arxiv.org/abs/2610.09872v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.09872v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Evaluating agents by outcomes alone can obscure the capabilities that produce them. This problem is especially pronounced in evolving environments, where outcomes reflect a closed-loop interaction between agent behavior and changing external conditions. We introduce LiveMACEBench, a process-aware benchmark that uses live financial markets as a naturally evolving testbed for persistent LLM agents. Five frontier LLMs operate along continuous trajectories under matched Tool Use, Persistent Memory, Rule Following, and Multi-Agent Collaboration configurations. We evaluate them through both realized outcomes and mechanism-specific diagnostics derived from complete decision traces. Across 30 days of live evaluation, we find a pronounced outcome-capability gap: realized returns often diverge from capability-specific measurements, and similar outcomes can arise from markedly different patterns of mechanism use. Trace-level diagnostics further expose distinct bottlenecks across capabilities, demonstrating that mechanism access, effective mechanism use, and downstream performance are not interchangeable measures of agent capability. LiveMACEBench makes this distinction measurable, turning live markets from a performance leaderboard into a diagnostic environment for agent capability
+
+仅根据结果来评估代理人可能会掩盖产生结果的能力。这个问题在不断变化的环境中尤其明显，其中结果反映了代理行为与不断变化的外部条件之间的闭环相互作用。我们推出了 LiveMACEBench，这是一种流程感知基准，它使用实时金融市场作为持久 LLM 代理的自然发展测试平台。五个前沿法学硕士在匹配的工具使用、持久内存、规则遵循和多代理协作配置下沿着连续的轨迹运行。我们通过已实现的结果和从完整决策跟踪中得出的特定机制诊断来评估它们。在 30 天的实时评估中，我们发现了明显的结果与能力差距：实现的回报通常与特定能力的测量结果不同，并且明显不同的机制使用模式可能会产生类似的结果。跟踪级诊断进一步暴露了跨功能的明显瓶颈，证明机制访问、有效机制使用和下游性能不是代理能力的可互换衡量标准。 LiveMACEBench 使这种区别变得可衡量，将实时市场从绩效排行榜转变为代理能力的诊断环境
+
+</details>
+
+---
+
+## 8. Homogenization in Multi-Agent Systems / 多智能体系统中的同质化
+
+**Date**: 2026-10-07 | **arXiv**: [2610.09824v1](http://arxiv.org/abs/2610.09824v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.09824v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent systems (MAS) leverage interactions between agents to perform complex tasks. Despite their success, we show that these interactions can also lead to homogenization, i.e., agents converging to similar behaviors. Homogenization in MAS can reduce agent diversity and reinforce shared failures. In this paper, we operationalize homogenization using three metrics: conformity to the majority, polarization towards extremes, and growing inertia against changes over subsequent interactions. We evaluate homogenization in MAS for code generation, hiring, and scientific peer review. Across these tasks, we show that homogenization translates to concrete downstream risks: in code generation, it hides and amplifies correlated errors which can create systemic vulnerabilities; in hiring, it allows the influence of biased agents to persist long after their removal; and in peer review, it creates uneven evaluation standards across research areas. Our results establish homogenization as a failure mode of MAS, demonstrating that MAS evaluations must move beyond aggregate performance to carefully analyze interaction dynamics. Finally, we show that simple approaches to increase diversity---leveraging sampling stochasticity and mixed-models MAS---fail to reduce homogenization risks, highlighting the need for strategies to effectively leverage agent diversity.
+
+多代理系统 (MAS) 利用代理之间的交互来执行复杂的任务。尽管取得了成功，但我们表明这些相互作用也可能导致同质化，即代理趋于相似的行为。 MAS 中的同质化会减少代理多样性并强化共享故障。在本文中，我们使用三个指标来实施同质化：服从多数、走向极端、以及对后续互动变化的不断增长的惯性。我们评估 MAS 中代码生成、招聘和科学同行评审的同质化情况。在这些任务中，我们表明同质化会转化为具体的下游风险：在代码生成中，它隐藏并放大了可能产生系统漏洞的相关错误；在招聘过程中，有偏见的代理人的影响在被解雇后仍能持续很长时间；在同行评审中，它在各个研究领域制定了不平衡的评估标准。我们的结果将同质化确定为 MAS 的一种失败模式，表明 MAS 评估必须超越总体性能，以仔细分析交互动态。最后，我们表明，增加多样性的简单方法——利用抽样随机性和混合模型 MAS——无法降低同质化风险，这凸显了有效利用代理多样性的策略的必要性。
+
+</details>
+
+---
+
+## 9. From Expert-Guided Proof Search to Automated Open-Problem Solving / 从专家指导的证明搜索到自动解决开放问题
+
+**Date**: 2026-10-07 | **arXiv**: [2610.09769v1](http://arxiv.org/abs/2610.09769v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.09769v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models are increasingly contributing to mathematical research, where progress often depends on efficient proof search, incremental improvements and careful verification. We describe Bolzano, a multi-agent open-source system that uses parallel prover agents with a verifier agent and maintains a human-readable research state. Initial manual use on expert-selected problems yielded 8 results whose proofs were checked by domain experts. Motivated by these case studies, we ran Bolzano without problem-specific human guidance on about 3,800 open problems extracted from four sets of papers, solving about 200 open problems. One experiment used papers accepted to STOC 2026, a top conference in theoretical computer science. There, we answered four questions raised in the papers, as confirmed by their authors.
+
+大型语言模型对数学研究的贡献越来越大，而数学研究的进展往往取决于有效的证明搜索、渐进式改进和仔细验证。我们描述了 Bolzano，一个多代理开源系统，它使用并行证明者代理和验证者代理，并维护人类可读的研究状态。最初手动使用专家选择的问题产生了 8 个结果，其证明由领域专家检查。受这些案例研究的启发，我们在没有针对具体问题的人工指导的情况下对从四组论文中提取的约 3,800 个开放问题运行了 Bolzano，解决了约 200 个开放问题。一项实验使用了理论计算机科学顶级会议 STOC 2026 接受的论文。在那里，我们回答了论文中提出的四个问题，并得到了作者的证实。
+
+</details>
+
+---
+
+## 10. From Pareto to Preference: Personalized Test-Time Scaling via Amortized Agentic Policy Discovery / 从帕累托到偏好：通过摊销代理策略发现实现个性化测试时间扩展
+
+**Date**: 2026-10-07 | **arXiv**: [2610.09684v1](http://arxiv.org/abs/2610.09684v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.09684v1)
+
+**Categories**: cs.CL, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Test-time scaling (TTS) improves the reasoning capabilities of large language models by allocating additional inference computation. Existing approaches to improving TTS efficiency largely optimize accuracy against one resource dimension at a time, advancing either the accuracy--cost or accuracy--latency Pareto frontier. Yet user requirements are multidimensional: users may specify accuracy, latency, and inference-cost requirements jointly, and different requirements can favor different controllers. We formulate Personalized Test-Time Scaling as discovering executable controllers that maximize the joint satisfaction rate of user-specific requirements. To reduce the overhead of repeated policy discovery for new user profiles, we propose PersonTTS, an amortized agentic policy-discovery framework that reuses prior search experience through requirement-matched controller initialization and source-distilled procedural guidance, while retaining target-profile evaluation for every candidate. Experiments on AIME and HMMT show that PersonTTS substantially outperforms strong TTS baselines in joint requirement satisfaction on unseen user profiles and held-out problems. Under the same candidate-evaluation budget, cross-user experience reuse further improves policy quality while substantially reducing discovery-agent time and cost.
+
+测试时间缩放（TTS）通过分配额外的推理计算来提高大型语言模型的推理能力。现有的提高 TTS 效率的方法主要是一次针对一个资源维度优化准确性，从而提高准确性（成本或准确性）延迟帕累托前沿。然而，用户需求是多维的：用户可以联合指定准确性、延迟和推理成本需求，并且不同的需求可能有利于不同的控制器。我们将个性化测试时间扩展制定为发现可执行控制器，最大限度地提高用户特定要求的联合满足率。为了减少新用户配置文件的重复策略发现的开销，我们提出了 PersonTTS，这是一种摊销代理策略发现框架，它通过需求匹配的控制器初始化和源提取的程序指导来重用先前的搜索经验，同时保留每个候选者的目标配置文件评估。 AIME 和 HMMT 上的实验表明，在未见过的用户配置文件和遗留问题的联合需求满足方面，PersonTTS 大大优于强大的 TTS 基线。在相同的候选评估预算下，跨用户体验重用进一步提高了策略质量，同时大大减少了发现代理的时间和成本。
+
+</details>
+
+---
+
+## 11. How Do Agentic LLMs Decide to Call Tools? A Tool-Call Vector Shaped by Suppression / 代理法学硕士如何决定调用工具？由抑制塑造的工具调用向量
+
+**Date**: 2026-10-07 | **arXiv**: [2610.09624v1](http://arxiv.org/abs/2610.09624v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.09624v1)
+
+**Categories**: cs.AI, cs.LG
+
+**Code**: https://github.com/XijieGo/MI4ToolCalling.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Tool calling, invoking external tools on demand, is central to agentic LLMs, yet the mechanism that decides whether a model calls a tool or responds directly remains poorly understood. Agentic prompts are long and heavily scaffolded, combining role instructions, tool schemas, format templates, and the user's request across hundreds of tokens, creating a noisy, highly entangled context in which no single controllable variable for mechanistic analysis is obvious. To obtain such a variable, we propose a method that converts complex agentic prompts into minimal contrastive pairs in which a single request verb determines the tool-call decision: replacing an execution-verb (e.g., \textit{write}) with an analysis-verb (e.g., \textit{discuss}) reliably flips the decision, suggesting it is mediated by a compact internal state. We construct 500 such paired prompts across Python, Java, and C++ (300 for mechanistic analysis, 200 held out for evaluation). We trace the decision to a vector, $μ_Δ$, that is both causally necessary and sufficient and generalizes beyond the discovery prompts to native multi-turn $τ^2$-Bench trajectories and verb-free requests. Behavioral ablations show that the scaffold establishes a tool-call prior; Transcoder decomposition then reveals that analysis verbs suppress this prior through features signaling that tool use is unnecessary, whereas execution verbs largely leave it intact. Downstream scaffold-reading attention heads and MLP features read out the resulting state, and the same mechanism recurs across seven models from the Qwen, Mistral, and Granite families. Our code is available at https://github.com/XijieGo/MI4ToolCalling.
+
+工具调用，即按需调用外部工具，是代理法学硕士的核心，但决定模型是调用工具还是直接响应的机制仍然知之甚少。代理提示很长且高度结构化，结合了角色指令、工具模式、格式模板和数百个令牌的用户请求，创建了一个嘈杂、高度复杂的上下文，其中没有明显的用于机械分析的单个可控变量。为了获得这样的变量，我们提出了一种方法，将复杂的代理提示转换为最小的对比对，其中单个请求动词决定工具调用决策：用分析动词（例如，\textit{discuss}）替换执行动词（例如，\textit{write}）可靠地翻转决策，表明它是由紧凑的内部状态调节的。我们在 Python、Java 和 C++ 中构建了 500 个这样的配对提示（300 个用于机械分析，200 个用于评估）。我们将决策追踪到一个向量 $μ_Δ$，它在因果上是必要的和充分的，并且超出了发现提示，概括为本地多轮 $τ^2$-Bench 轨迹和无动词请求。行为消融表明支架建立了工具调用先验；然后，转码器分解揭示了分析动词通过表明不需要使用工具的特征来抑制先验，而执行动词则基本上保持其完整。下游支架读取注意力头和 MLP 特征读出结果状态，并且相同的机制在 Qwen、Mistral 和 Granite 系列的七个模型中重复出现。我们的代码可在 https://github.com/XijieGo/MI4ToolCalling 获取。
+
+</details>
+
+---
+
+## 12. Goldsmith: Gold-Loss-Guided Definition Optimization with an Agentic Annotation Harness / Goldsmith：使用代理注释工具进行 Gold-Loss 引导的定义优化
+
+**Date**: 2026-10-07 | **arXiv**: [2610.09489v1](http://arxiv.org/abs/2610.09489v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.09489v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Many annotation projects begin before experts have a stable guideline or enough labels to train a task-specific model. We present Goldsmith, an agentic pipeline that turns a small gold set---expert-annotated calibration examples representing the intended task boundaries---into a reusable structured annotation definition. Goldsmith treats this definition as a trainable textual object. Candidate definitions are run on the same gold examples and scored with an executable structured loss, while the output schema, formatting, retrieval, repair, judging, and human review remain in an external harness. A large language model (LLM) editor converts the highest-loss failures into textual-gradient revisions, which are accepted only when the measured loss decreases. In prompt-optimization comparisons, Goldsmith improves over direct rewriting, OPRO, APE, and PromptBreeder under matched evaluation protocols. The resulting definition also improves downstream annotation when combined with retrieval, score-based routing, and human review across typed span, pair-level relation, and fixed-trigger event-argument tasks. These results show that scarce expert supervision can support both task-definition learning and scalable annotation.
+
+许多注释项目在专家拥有稳定的指南或足够的标签来训练特定于任务的模型之前就开始了。我们提出了 Goldsmith，这是一个代理管道，它将小型黄金集（代表预期任务边界的专家注释校准示例）转变为可重用的结构化注释定义。戈德史密斯将此定义视为可训练的文本对象。候选定义在相同的黄金示例上运行，并通过可执行的结构化损失进行评分，而输出模式、格式化、检索、修复、判断和人工审核仍保留在外部工具中。大型语言模型（LLM）编辑器将损失最高的失败转换为文本梯度修订，只有当测量到的损失减少时才接受这些修订。在提示优化比较中，Goldsmith 在匹配的评估协议下比直接重写、OPRO、APE 和 PromptBreeder 进行了改进。当与跨类型跨度、对级关系和固定触发事件参数任务的检索、基于分数的路由和人工审核相结合时，生成的定义还可以改进下游注释。这些结果表明，稀缺的专家监督可以支持任务定义学习和可扩展注释。
+
+</details>
+
+---
+
+## 13. ToolRACER: A Robust Agentic Conversation Emulation Resource for Agent Training and Evaluation / ToolRACER：用于代理培训和评估的强大代理对话仿真资源
+
+**Date**: 2026-10-06 | **arXiv**: [2610.09163v1](http://arxiv.org/abs/2610.09163v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.09163v1)
+
+**Categories**: cs.CL, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Task-oriented conversational agents remain fragile under real world conversation scenarios as they rarely follow a predictable script, especially when users exhibit non-cooperative behavior. Existing function-calling benchmarks often emphasize successful, cooperative interactions and underrepresent adversarial conversation trajectories, thereby limiting the training resources available for developing robust agents. We present ToolRACER, a synthetic data generation pipeline that coordinates user, assistant and tool emulation models to generate and validated multi-turn interactions between a user and an agent. Using \sysn, we construct ToolRACERBench a robust multi-turn conversation benchmark spanning six domains, ranging over 55 varied personas, generating a validated corpus of 5.6K conversation trajectories, with approximately 66\% of conversations containing failure-prone conversation scenarios. We inject adversarial behaviors, producing validated conversational interaction trajectories that capture realistic, robust scenarios. We evaluate models trained on ToolRACERBench against internal benchmarks, as well as on function calling benchmarks such as $τ^2$-bench, BFCLv3 and ACEBench to evaluate agentic accuracy and robustness. Models trained on ToolRACERBench improve end to end agentic accuracy across $τ^2$-bench and ACEBench, demonstrating significant gains when mixed with in-domain dataset in small language models for agent capability tasks.
+
+面向任务的会话代理在现实世界的会话场景中仍然脆弱，因为它们很少遵循可预测的脚本，特别是当用户表现出不合作行为时。现有的函数调用基准通常强调成功的合作交互，而低估了对抗性对话轨迹，从而限制了可用于开发强大代理的培训资源。我们提出了 ToolRACER，这是一种合成数据生成管道，可协调用户、助手和工具仿真模型，以生成并验证用户和代理之间的多轮交互。使用 \sysn，我们构建了 ToolRACERBench 一个强大的多回合对话基准，涵盖六个领域，涵盖超过 55 个不同的角色，生成经过验证的 5.6K 对话轨迹语料库，其中大约 66% 的对话包含容易失败的对话场景。我们注入对抗性行为，生成经过验证的对话交互轨迹，捕捉真实、稳健的场景。我们根据内部基准以及函数调用基准（例如 $τ^2$-bench、BFCLv3 和 ACEBench）评估在 ToolRACERBench 上训练的模型，以评估代理准确性和鲁棒性。在 ToolRACERBench 上训练的模型提高了 $τ^2$-bench 和 ACEBench 上的端到端代理准确性，证明了与小语言模型中的域内数据集混合用于代理能力任务时的显着收益。
+
+</details>
+
+---
+
+## 14. How Fragile Is On-Device Language Model Safety? Localizing Safety-Critical Parameters for Sparse Fault Analysis / 设备上语言模型安全有多脆弱？本地化稀疏故障分析的安全关键参数
+
+**Date**: 2026-10-06 | **arXiv**: [2610.09000v1](http://arxiv.org/abs/2610.09000v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.09000v1)
+
+**Categories**: cs.AI, cs.CL, cs.CR, cs.LG, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As small language models (SLMs) are increasingly deployed on resource-constrained and on-device platforms, including as components of agentic systems, the integrity of locally stored model parameters becomes an important safety concern. We investigate whether safety-sensitive behavior in LLaMA-2-7B-Chat is concentrated within a sparse subset of parameters, creating a reduced fault surface for targeted analysis. We study two complementary localization methods: low-rank safety-associated subspace analysis and parameter-level safety--utility importance filtering. Both approaches reveal highly non-uniform safety sensitivity across the network, with the MLP down_proj consistently emerging as a prominent safety-sensitive component and o_proj providing a smaller contribution. Using parameter-level localization, modifying only 0.19% of model weights in down_proj yields 53% Basic ASR and 56% GCG ASR, while tinyBenchmarks accuracy remains at 51.6% compared with a 52.2% unmodified baseline. These results motivate targeted fault analysis and selective integrity protection for language models deployed in resource-constrained, on-device, and agentic settings.
+
+随着小语言模型 (SLM) 越来越多地部署在资源受限的设备上平台上，包括作为代理系统的组件，本地存储的模型参数的完整性成为一个重要的安全问题。我们研究 LLaMA-2-7B-Chat 中的安全敏感行为是否集中在参数的稀疏子集中，从而为目标分析创建减少的故障面。我们研究了两种互补的定位方法：低秩安全相关子空间分析和参数级安全-效用重要性过滤。这两种方法都揭示了整个网络中高度不一致的安全敏感性，MLP down_proj 始终作为突出的安全敏感组件而出现，而 o_proj 提供了较小的贡献。使用参数级本地化，仅修改 down_proj 中模型权重的 0.19% 即可产生 53% 的基本 ASR 和 56% 的 GCG ASR，而与未修改的基线的 52.2% 相比，tinyBenchmarks 的准确率仍保持在 51.6%。这些结果激发了对部署在资源受限、设备上和代理设置中的语言模型进行有针对性的故障分析和选择性完整性保护。
+
+</details>
+
+---
+
+## 15. Structured but Silent: Probing Capability Requirements in LLM Hidden States / 结构化但沉默：法学硕士隐藏状态的探究能力要求
+
+**Date**: 2026-10-06 | **arXiv**: [2610.08018v1](http://arxiv.org/abs/2610.08018v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.08018v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reliable tool use requires more than triggering a mechanism or matching a query to an API description. Before selecting a specific tool, an agent must first infer the capability requirements implied by the user query. In this paper, we investigate whether these query-side capability requirements are linearly decodable from LLM hidden representations prior to generation, and how this hidden-state accessibility compares with explicit verbal classification. We introduce TACIT, a framework that decomposes external requirements along three fundamental axes: Source, Transformation, and World Effect, defining eight structurally distinct capability classes. Using 1,600 balanced training queries from benchmarks, synthetic examples, and new domain scenarios, we train linear probes on pre-generation hidden states from four open-weight LLM families. Our empirical results demonstrate that fine-grained capability structures are linearly decodable with high accuracy across all models. Crucially, however, we expose a representation-to-verbalization gap: these same models are significantly less reliable when asked to explicitly classify the same queries in natural language. This disconnect indicates that information about required external capabilities is linearly accessible in LLM hidden representations but not reliably expressed, a phenomenon we define as "structured but silent."
+
+可靠的工具使用需要的不仅仅是触发机制或将查询与 API 描述相匹配。在选择特定工具之前，代理必须首先推断用户查询所隐含的功能要求。在本文中，我们研究了这些查询端能力要求是否可以在生成之前从 LLM 隐藏表示中线性解码，以及这种隐藏状态可访问性与显式语言分类的比较如何。我们引入 TACIT，这是一个框架，它沿着三个基本轴分解外部需求：源、转换和世界效应，定义八个结构不同的能力类别。使用来自基准、综合示例和新领域场景的 1,600 个平衡训练查询，我们对来自四个开放权重 LLM 系列的预生成隐藏状态训练线性探针。我们的实证结果表明，细粒度的能力结构在所有模型中都可以高精度地线性解码。然而，至关重要的是，我们暴露了表示到语言化之间的差距：当要求用自然语言对相同的查询进行显式分类时，这些相同的模型的可靠性明显降低。这种脱节表明，有关所需外部能力的信息可以在 LLM 隐藏表示中线性访问，但无法可靠表达，我们将这种现象定义为“结构化但沉默”。
+
+</details>
+
+---
+
+## 16. Confidence Reasoning Graphs: Structured Confidence Estimation for LLM Agents / 置信推理图：LLM 代理的结构化置信度估计
+
+**Date**: 2026-10-06 | **arXiv**: [2610.07948v1](http://arxiv.org/abs/2610.07948v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.07948v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+When using an LLM agent in a consequential domain, making an informed decision about whether to trust its output or intervene requires calibrated confidence in the agent's success. Confidence estimation for agents is difficult because evidence about success is distributed across heterogeneous, interdependent steps of an agent's trajectory. Practical agentic deployments introduce further challenges: frontier LLMs often provide limited access to internal signals, agent roll-outs are costly, and training data may be unavailable or quickly become outdated. To address these challenges, we introduce Confidence Reasoning Graphs (CRGs), an inference-time framework that estimates the probability an agent accomplished its task from a single trajectory, without privileged model access or training data. Rather than compressing an execution into a single holistic judgment, a CRG begins with the claim that the agent accomplished its task, decomposes it into contextualized sub-claims grounded in trajectory evidence, estimates confidence for each terminal claim, and finally aggregates these into an overall confidence estimate. Across three agentic benchmarks, three backbone models, and three agent frameworks, CRGs yield better-calibrated confidence and stronger risk-aware decision making than verbalized, sampling-based, and white-box surrogate baselines. We further find that calibration error alone can be misleading: a white-box surrogate baseline appears well calibrated while providing near-chance discrimination. Ablations attribute CRG's improvements to claim-level confidence estimation and aggregation rather than graph construction alone. Finally, a CRG exposes the claims and trajectory evidence underlying each confidence estimate, enabling it to be audited at decision time.
+
+当在后果性领域使用法学硕士代理时，要就是否信任其输出或进行干预做出明智的决定，需要对代理的成功有校准的信心。对代理的置信度估计很困难，因为成功的证据分布在代理轨迹的异构、相互依赖的步骤中。实际的代理部署带来了进一步的挑战：前沿法学硕士通常提供对内部信号的有限访问，代理的推出成本高昂，并且培训数据可能不可用或很快就会过时。为了应对这些挑战，我们引入了置信推理图（CRG），这是一种推理时间框架，可以估计代理从单个轨迹完成其任务的概率，而无需特权模型访问或训练数据。 CRG 不是将执行压缩为单个整体判断，而是从代理完成其任务的声明开始，将其分解为基于轨迹证据的上下文子声明，估计每个最终声明的置信度，最后将它们聚合为总体置信估计。在三个代理基准、三个骨干模型和三个代理框架中，CRG 比口头、基于采样和白盒替代基线产生了更好的校准信心和更强的风险意识决策。我们进一步发现，单独的校准误差可能会产生误导：白盒替代基线看起来校准良好，同时提供了近乎机会的辨别力。 Ablations 将 CRG 的改进归因于声明级别的置信度估计和聚合，而不仅仅是图形构建。最后，CRG 公开每个置信估计背后的主张和轨迹证据，使其能够在决策时进行审核。
+
+</details>
+
+---
+
+## 17. Where Rules End and Judges Begin: Measuring the Judgment Boundary in Multi-Agent Systems Security / 规则结束和法官开始的地方：衡量多代理系统安全中的判断边界
+
+**Date**: 2026-10-06 | **arXiv**: [2610.07657v1](http://arxiv.org/abs/2610.07657v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.07657v1)
+
+**Categories**: cs.AI, cs.CL, cs.CR, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM-based multi-agent systems (MAS) engage tools, share memory, and delegate tasks, often encountering adversarial content. Current defenses for MAS are typically evaluated in isolation, focusing on one attack type at a time, which can lead to costly and hard-to-audit outcomes. This study organizes defenses into five principles, implementing them as DEFER1 (DEterministic-First Enforcement with Residual judgment), which includes a cascade of 28 checks that blocks what it can and refers the rest to a panel of four judges. In independent testing across four domains, attack success rates drop from about 30.0% to approximately 3.0%, with 78% of blocked attacks handled by deterministic checks. Only a quarter of proposals reach the judges in the security-operations domain, illustrating that the rules provide security for attacks violating clear policies, while judges manage those that only misrepresent intent. Both systems have weaknesses, such as a risk-score approval gate that inaccurately approves most attack proposals but few legitimate ones, highlighting the challenges in assessing threats accurately.
+
+基于 LLM 的多代理系统 (MAS) 使用工具、共享内存和委派任务，经常遇到对抗性内容。当前的 MAS 防御通常是孤立评估的，一次只关注一种攻击类型，这可能会导致成本高昂且难以审计的结果。这项研究将防御分为五项原则，并将其实施为 DEFER1（确定性优先执行与剩余判断），其中包括 28 项级联检查，阻止其所能阻止的内容，并将其余部分提交给由四名法官组成的小组。在跨四个域的独立测试中，攻击成功率从约 30.0% 下降至约 3.0%，其中 78% 的被阻止攻击是通过确定性检查处理的。只有四分之一的提案到达了安全运营领域的法官手中，这表明规则为违反明确政策的攻击提供了安全保障，而法官则管理那些仅歪曲意图的攻击。这两个系统都存在弱点，例如风险评分批准门不能准确批准大多数攻击建议，但很少批准合法的攻击建议，这凸显了准确评估威胁的挑战。
+
+</details>
+
+---
+
+## 18. Large Language Model Orchestration under Heterogeneous Preferences via Explicit Persona Inference / 通过显式角色推理在异构偏好下进行大型语言模型编排
+
+**Date**: 2026-10-06 | **arXiv**: [2610.07587v2](http://arxiv.org/abs/2610.07587v2) | **PDF**: [Link](http://arxiv.org/pdf/2610.07587v2)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM orchestration investigates how an orchestrator coordinates a group of autonomous agents to achieve common goals or maximize collective welfare. The agents are typically heterogeneous, each holding a private preference that it pursues but does not reveal. Inferring such hidden preferences from behavior has been a subject of long-standing research in game theory and multi-agent systems. The core challenge lies in maintaining a belief over every agent's preference and updating it from the agents' observed actions. Existing LLM orchestrators carry that belief as prompt text with no explicit update rule. This lets early errors persist and propagate rather than be corrected. We therefore propose \textbf{HARP} (Heterogeneous-preference Agent oRchestration via Preference inference), a novel framework that moves the belief out of the prompt. Specifically, HARP maintains one numeric posterior per agent over a finite set of candidate preferences and updates it in closed form by Bayes' rule. The language model supplies only actions and per-candidate likelihoods, so estimation is decoupled from its reasoning. We prove that HARP attains the same $\tilde O(\sqrt K)$ Bayesian regret as explicit joint inference when the factorization is exact. Furthermore, HARP\textsuperscript{+} augments planning with a bonus for actions that distinguish the candidates, so inference continues even when the optimal action is uninformative. Empirical results on three substrates, ranging from payoffs the preferences fully determine, through payoffs that depend on more than them, to scales where explicit joint inference is infeasible, demonstrate that HARP\textsuperscript{+} is the strongest non-oracle method across the class our theory identifies.
+
+LLM编排研究编排者如何协调一组自主代理以实现共同目标或最大化集体福利。代理人通常是异质的，每个人都有自己追求但不透露的私人偏好。从行为中推断出这种隐藏的偏好一直是博弈论和多智能体系统长期研究的主题。核心挑战在于保持对每个智能体偏好的信念，并根据智能体观察到的行为来更新它。现有的 LLM 协调器将这种信念作为提示文本携带，没有明确的更新规则。这使得早期错误持续存在并传播，而不是被纠正。因此，我们提出 \textbf{HARP} （通过偏好推理的异质偏好代理或切斯特），这是一种将信念从提示中移出的新颖框架。具体来说，HARP 在一组有限的候选偏好上为每个智能体维护一个数字后验，并根据贝叶斯规则以封闭形式更新它。语言模型仅提供动作和每个候选者的可能性，因此估计与其推理脱钩。我们证明，当分解精确时，HARP 获得与显式联合推理相同的 $\tilde O(\sqrt K)$ 贝叶斯遗憾。此外，HARP\textsuperscript{+} 通过对区分候选者的操作进行奖励来增强规划，因此即使最佳操作没有提供信息，推理也会继续进行。三个基础的实证结果，从偏好完全决定的回报，到依赖于偏好的回报，再到显式联合推理不可行的尺度，表明 HARP\textsuperscript{+} 是我们理论识别的类别中最强的非预言方法。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-07 (8 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-10-07
