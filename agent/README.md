@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-09](papers/2026-10-09.md) - 11 papers
 - [2026-10-08](papers/2026-10-08.md) - 18 papers
 - [2026-10-07](papers/2026-10-07.md) - 8 papers
 - [2026-10-06](papers/2026-10-06.md) - 48 papers
@@ -177,6 +178,196 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-09 (11 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-10-09
+
+**Paper Count**: 11
+
+---
+
+## 1. RESETTLE: Robotic Recovery through Disagreement-Triggered Retrieval and Efficient Corrective Control / RESETTLE：通过分歧触发检索和高效纠正控制进行机器人恢复
+
+**Date**: 2026-10-08 | **arXiv**: [2610.12185v1](http://arxiv.org/abs/2610.12185v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.12185v1)
+
+**Categories**: cs.RO
+
+**Code**: https://github.com/JIA-Lab-research/RESETTLE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reliable robotic manipulation requires timely intervention to correct emerging deviations and restore progress after execution errors. However, recovery methods based on repeated vision-language reasoning or iterative online optimization can incur substantial latency, delaying intervention. To address these challenges, we introduce RESETTLE(Robotic rEcovery through diSagrEement-Triggered reTrievaL and Efficient Corrective Control), a model-agnostic framework that provides computationally efficient recovery at the action-execution interface of frozen robot policies. RESETTLE triggers recovery when two action proposals independently sampled under identical conditioning persistently disagree. It retrieves a same-task demonstration reference using an adapted V-JEPA encoder and combines a state-servo prior with a guarded visual residual to execute one corrective action without online trajectory optimization or additional vision-language reasoning, then returns control to the base policy. Across six base policies in simulation, RESETTLE achieves up to 8.70%, 6.28%, and 6.83% absolute success-rate gains on LIBERO-Plus, Meta-World, and RoboCasa Tabletop, respectively, with further improvements on four real-world tasks using two policies. In QwenPI-based comparisons, its monitoring-and-recovery computation latency is 74.04%--93.57% lower than VoLoAgent's monitoring-and-planning latency for grasp and place tool calls. It also raises Harness VLA's LIBERO-Pro Swap success from 42% to 50%, demonstrating compatibility with high-level agentic planning. Code available at: https://github.com/JIA-Lab-research/RESETTLE
+
+可靠的机器人操作需要及时干预，以纠正新出现的偏差并在执行错误后恢复进度。然而，基于重复视觉语言推理或迭代在线优化的恢复方法可能会产生大量延迟，从而延迟干预。为了应对这些挑战，我们引入了 RESETTLE（通过损伤触发检索和高效校正控制进行机器人恢复），这是一个与模型无关的框架，可在冻结机器人策略的动作执行界面上提供计算上有效的恢复。当在相同条件下独立采样的两个行动建议持续不一致时，RESETTLE 会触发恢复。它使用改编的 V-JEPA 编码器检索相同任务的演示参考，并将状态伺服先验与受保护的视觉残差相结合，以执行一项纠正操作，无需在线轨迹优化或额外的视觉语言推理，然后将控制权返回到基本策略。在模拟中的六种基本策略中，RESETTLE 在 LIBERO-Plus、Meta-World 和 RoboCasa Tabletop 上分别实现了高达 8.70%、6.28% 和 6.83% 的绝对成功率增益，并使用两种策略进一步改进了四项现实世界任务。在基于 QwenPI 的比较中，其监控和恢复计算延迟比 VoLoAgent 的抓取和放置工具调用监控和规划延迟低 74.04%--93.57%。它还将 Harness VLA 的 LIBERO-Pro Swap 成功率从 42% 提高到 50%，证明了与高级代理规划的兼容性。代码位于：https://github.com/JIA-Lab-research/RESETTLE
+
+</details>
+
+---
+
+## 2. SuperNav: An Agentic Navigation System for Any Task in Any Scene / SuperNav：适用于任何场景任何任务的代理导航系统
+
+**Date**: 2026-10-08 | **arXiv**: [2610.12126v1](http://arxiv.org/abs/2610.12126v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.12126v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+General-purpose service robots need navigation systems that can handle diverse human requests in unfamiliar environments, combining task generality with scene generality. Some existing methods fine-tune multimodal large language models (MLLMs) to predict navigation actions, making their behavior dependent on the coverage of navigation training data and potentially limiting generalization to new requests and environments. Our key insight is to let the MLLM focus on interpreting requests, understanding scenes, and making decisions while preserving its general-purpose capabilities and delegating motion execution to navigation tools. To realize this idea, we introduce SuperNav, which equips a pretrained MLLM with a specialized agent harness without navigation-specific fine-tuning of the MLLM. Our harness supports these decisions with Navigation Skills, agent-oriented Tools for physical interaction, and task-progress and context management. A unified visual-point interface connects decision-making to motion by allowing the model to specify destinations directly in images and revise its decisions from execution feedback. Together, these components support sustained navigation across different task requirements and environments. SuperNav outperforms four evaluated baselines on instance-level, multi-object, and demand-driven tasks. Category-level evaluation on HM3D and deployment on a real quadruped robot further demonstrate its applicability across environments. Project Page: https://zju3dv.github.io/SuperNav/
+
+通用服务机器人需要导航系统能够在不熟悉的环境中处理不同的人类请求，将任务通用性与场景通用性结合起来。一些现有方法对多模态大语言模型（MLLM）进行微调来预测导航动作，使其行为依赖于导航训练数据的覆盖范围，并可能限制对新请求和环境的泛化。我们的主要见解是让 MLLM 专注于解释请求、理解场景和做出决策，同时保留其通用功能并将运动执行委托给导航工具。为了实现这个想法，我们引入了 SuperNav，它为预训练的 MLLM 配备了专门的代理工具，无需对 MLLM 进行特定于导航的微调。我们的安全带通过导航技能、面向代理的物理交互工具以及任务进度和上下文管理来支持这些决策。统一的视觉点界面允许模型直接在图像中指定目的地并根据执行反馈修改其决策，从而将决策与运动联系起来。这些组件共同支持跨不同任务要求和环境的持续导航。 SuperNav 在实例级、多对象和需求驱动任务方面优于四个评估基准。对 HM3D 的类别级评估以及在真实四足机器人上的部署进一步证明了其跨环境的适用性。项目页面：https://zju3dv.github.io/SuperNav/
+
+</details>
+
+---
+
+## 3. From Solo to Ensemble: A Hierarchical Framework for Composable Multi-Agent Human-Object Interaction / 从独奏到整体：可组合多智能体人机交互的分层框架
+
+**Date**: 2026-10-08 | **arXiv**: [2610.11722v1](http://arxiv.org/abs/2610.11722v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.11722v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Physics-based human-object interaction has achieved robust single-agent manipulation skills, yet extending them to multi-agent cooperative tasks remains challenging. Existing approaches typically adapt interaction policies through task-specific fine-tuning, which entangles low-level contact-rich execution with high-level coordination and limits reuse across object geometries, interaction types, and team sizes. We propose a hierarchical framework that converts a single-agent HOI policy into a reusable Object-oriented Motion Skill. Specifically, we reinterpret teacher rollouts as object-oriented action supervision by extracting short-horizon object-proxy motions from executed trajectories, and distill task-specific teachers into a low-level skill operating in an Object-oriented Action Space. For downstream tasks, the distilled skill is frozen as a reusable executor, while a high-level policy coordinates multiple agents by generating region-wise object-oriented actions conditioned on the shared object, task goal, agent states, and local manipulation regions. This formulation shifts multi-agent HOI learning from direct contact-rich full-body control to compact object-level proxy-motion coordination. Experiments on diverse HOI tasks show that the distilled Object-oriented Motion Skill supports robust proxy-motion execution and enables composable policy learning across different interaction types, object geometries, and team sizes.
+
+基于物理的人机交互已经实现了强大的单智能体操作技能，但将其扩展到多智能体协作任务仍然具有挑战性。现有方法通常通过特定于任务的微调来调整交互策略，这将低级别的丰富接触执行与高级协调结合起来，并限制了跨对象几何形状、交互类型和团队规模的重用。我们提出了一个分层框架，将单代理 HOI 策略转换为可重用的面向对象的运动技能。具体来说，我们通过从执行轨迹中提取短视野对象代理运动，将教师推出重新解释为面向对象的动作监督，并将特定于任务的教师提炼为在面向对象的动作空间中操作的低级技能。对于下游任务，提取的技能被冻结为可重用的执行器，而高级策略通过生成以共享对象、任务目标、代理状态和本地操作区域为条件的区域性面向对象的操作来协调多个代理。该公式将多智能体 HOI 学习从直接接触丰富的全身控制转变为紧凑的对象级代理运动协调。对各种 HOI 任务的实验表明，经过提炼的面向对象运动技能支持强大的代理运动执行，并支持跨不同交互类型、对象几何形状和团队规模的可组合策略学习。
+
+</details>
+
+---
+
+## 4. CoCam4D: Geometry-Aware Cooperative 4D Perception for Camera-Only Autonomous Driving / CoCam4D：用于仅摄像头自动驾驶的几何感知协作 4D 感知
+
+**Date**: 2026-10-08 | **arXiv**: [2610.11577v1](http://arxiv.org/abs/2610.11577v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.11577v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous vehicles often suffer from limited perception due to occlusions, blind spots, limited sensor range, and the complex nature of surrounding environments. Multi-agent collaborative perception (CP) addresses these challenges by allowing vehicles to share sensory information and reconstruct the scene cooperatively. However, camera-only perception remains fundamentally limited by the uncertainty of distance-dependent monocular depth estimation. We propose CoCam4D, a Bayesian framework for collaborative perception that explicitly models geometric uncertainty. It uses a VGGT-based feedforward network to generate 3D Gaussian scene representations with associated uncertainty estimates, enabling multiple vehicles or agents to efficiently combine their observations. By sharing compact Gaussian primitives, reliable observations from one agent can reduce the depth uncertainty of another without requiring LiDAR sensors. To support real-world deployment, we introduce Dynamic Object Primitives (DOPs), a compact 35-byte representation designed for efficient C-V2X communication. Extensive experiments show that our proposed method consistently outperforms recent vision-only methods, achieving improvements of 11.48% on OPV2V+ and 10.62% on DAIR-V2X-C, demonstrating the potential of geometrically grounded collaborative perception for LiDAR-free autonomous driving.
+
+由于遮挡、盲点、有限的传感器范围以及周围环境的复杂性，自动驾驶车辆的感知能力常常受到限制。多智能体协作感知（CP）通过允许车辆共享感知信息并协作重建场景来解决这些挑战。然而，仅使用相机的感知仍然从根本上受到距离相关的单目深度估计的不确定性的限制。我们提出了 CoCam4D，这是一种用于协作感知的贝叶斯框架，可以显式地模拟几何不确定性。它使用基于 VGGT 的前馈网络来生成具有相关不确定性估计的 3D 高斯场景表示，使多个车辆或代理能够有效地组合其观察结果。通过共享紧凑的高斯原语，一个代理的可靠观测可以减少另一个代理的深度不确定性，而无需激光雷达传感器。为了支持实际部署，我们引入了动态对象基元 (DOP)，这是一种紧凑的 35 字节表示形式，专为高效 C-V2X 通信而设计。大量实验表明，我们提出的方法始终优于最近的仅视觉方法，在 OPV2V+ 上实现了 11.48% 的改进，在 DAIR-V2X-C 上实现了 10.62% 的改进，展示了基于几何的协作感知在无 LiDAR 自动驾驶中的潜力。
+
+</details>
+
+---
+
+## 5. GATOR: Generative and Agentic 3D Object Reconstruction From Casual Images / GATOR：从随意图像中生成和代理 3D 对象重建
+
+**Date**: 2026-10-08 | **arXiv**: [2610.11215v1](http://arxiv.org/abs/2610.11215v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.11215v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reconstructing complete, scene-aligned 3D objects from casual images requires integrating sparse, uncertain observations and inferring surfaces hidden by occlusions. We present GATOR, a generative and agentic framework that recovers textured object assets and their scene-relative pose from one or more images. Our local modality mixer couples patch-aligned RGB, target-mask, and pointmap features before cross-view reasoning, preserving scene context while distinguishing the target from its surroundings. Text-guided semantic conditioning complements these spatial cues with category names and object captions through stage-specific adapters for structure, geometry, and appearance generation. The generated asset initializes a multimodal agent, providing instance-specific geometry and pose for targeted structural and texture refinement through an observation-guided edit-render-review loop. Across synthetic objects, cluttered tabletops, and indoor scenes, GATOR achieves strong geometric and appearance fidelity while recovering scene-relative pose from sparse observations. Time-budget comparisons and scene-level simulation further demonstrate the reconstruction efficiency and simulation readiness. Project page: https://research.nvidia.com/labs/lpr/gator/
+
+从随意图像中重建完整的、与场景对齐的 3D 对象需要集成稀疏、不确定的观察结果并推断被遮挡隐藏的表面。我们提出了 GATOR，这是一种生成式代理框架，可以从一张或多张图像中恢复纹理对象资产及其场景相关姿势。我们的局部模态混合器在跨视图推理之前耦合补丁对齐的 RGB、目标蒙版和点图特征，保留场景上下文，同时将目标与其周围环境区分开来。文本引导的语义条件通过用于结构、几何和外观生成的阶段特定适配器，用类别名称和对象标题补充这些空间线索。生成的资产初始化多模式代理，通过观察引导的编辑-渲染-审查循环提供特定于实例的几何形状和姿势，以实现目标结构和纹理细化。在合成物体、杂乱的桌面和室内场景中，GATOR 实现了强大的几何和外观保真度，同时从稀疏的观察中恢复场景相关的姿势。时间预算比较和场景级仿真进一步证明了重建效率和仿真准备度。项目页面：https://research.nvidia.com/labs/lpr/gator/
+
+</details>
+
+---
+
+## 6. iAm.md: Robot Skill Self-Assessment through Agentic Introspection for Unknown Open-Vocabulary Domains / iAm.md：通过未知开放词汇领域的代理内省进行机器人技能自我评估
+
+**Date**: 2026-10-07 | **arXiv**: [2610.10962v1](http://arxiv.org/abs/2610.10962v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.10962v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic AI based on Large Language Model generalization capabilities offers a wide range of potential applications, including planning for embodied tasks. For example, embodied agents based on Foundation models can generate plausible plans in autonomous robotics scenarios. Due to limited context windows or hallucinatory phenomena in the next-token prediction formulation, behaviors may be generated without establishing whether the deployed robot and the observed environment actually support the requested operation, in what we call a "grounding failure". Thanks to the recent improvements in reasoning capabilities of foundation models, autonomous robot behavior generation problem can be formulated as a code generation problem. We present iAm.md, a Markdown standard and generation framework, that allows anchoring this process in complementary forms of deployment evidence. Through open-vocabulary semantic mapping, we combine local vision-language detections and object segmentation and refer them to persistent object records in this intermediate standardized representation, allowing agentic introspection. We then study this new technique on a simulated TIAGo, on navigation-and-manipulation tasks, showing how this standardized representation jointly supports skill self-assessment and executable task generalization.
+
+基于大型语言模型泛化能力的代理人工智能提供了广泛的潜在应用，包括具体任务的规划。例如，基于基金会模型的实体代理可以在自主机器人场景中生成合理的计划。由于有限的上下文窗口或下一个令牌预测公式中的幻觉现象，可能会在未确定部署的机器人和观察到的环境是否真正支持所请求的操作的情况下生成行为，这就是我们所说的“接地故障”。由于基础模型推理能力的最新改进，自主机器人行为生成问题可以表述为代码生成问题。我们提出 iAm.md，一个 Markdown 标准和生成框架，允许以补充形式的部署证据来锚定此过程。通过开放词汇语义映射，我们将本地视觉语言检测和对象分割结合起来，并将它们引用到这种中间标准化表示中的持久对象记录，从而允许代理内省。然后，我们在模拟 TIAGo 上的导航和操作任务上研究这项新技术，展示这种标准化表示如何共同支持技能自我评估和可执行任务泛化。
+
+</details>
+
+---
+
+## 7. NavGPT-3: Harnessing Context in a Hierarchical Navigation Runtime / NavGPT-3：在分层导航运行时中利用上下文
+
+**Date**: 2026-10-07 | **arXiv**: [2610.10787v1](http://arxiv.org/abs/2610.10787v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.10787v1)
+
+**Categories**: cs.RO, cs.AI, cs.CL, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Language models trained with long-horizon agentic reinforcement learning can generalize knowledge through reasoning, express precise actions, and pursue goals over many steps, raising the ceiling on what an embodied agent can understand and decide. Physical interaction, however, remains the domain of action policies, which provide dense, low-latency control. We present NavGPT-3, a harness that connects the two models, with an OS-like runtime built above it: reasoning, acting, and monitoring run as threads with their own context, tools, and permissions, while the runtime schedules them and decides which thread controls the robot's motion, so that the robot can react to sudden real-world events through interruption and thread switching. Beneath it, our action policy NavGPT VLA, trained on 19.28M examples, allocates visual tokens using codec allocation, in proportion to scene change; its 8B model alone reaches 74.51 SR on R2R-CE and leads RxR-CE with 78.19 SR. With the complete harness, NavGPT-3 sets the state of the art on R2R-CE (81.51 SR) and, for the first time, brings an autonomous agent to human level: on RxR-CE it matches human followers in success (90.43 vs. 90.4 SR) and path fidelity (78.47 vs. 77.7 nDTW) at 1 min 22 s per episode, versus roughly 3 min for a human. We comprehensively ablate the harness design and the interaction between the two models, showing how tools and the action policy shape the path from language-model reasoning to physical control: when NavGPT VLA executes the route, the reasoning loop shortens and the system's minimum reaction time falls from 3-19 s per language-model decision to 0.5-1 s per action-policy step (1-2 Hz). These results show that designing this embodied interface is central to connecting frontier language-model intelligence with low-level physical control. We will release all models, code, and evaluation records.
+
+经过长视野代理强化学习训练的语言模型可以通过推理概括知识，表达精确的行动，并通过多个步骤追求目标，从而提高了实体代理可以理解和决定的上限。然而，物理交互仍然是行动策略的领域，它提供密集、低延迟的控制。我们提出了 NavGPT-3，一个连接两个模型的工具，在其之上构建了一个类似操作系统的运行时：推理、执行和监控作为具有自己的上下文、工具和权限的线程运行，而运行时则对它们进行调度并决定哪个线程控制机器人的运动，以便机器人可以通过中断和线程切换对突发的现实事件做出反应。在它下面，我们的动作策略 NavGPT VLA 经过 1928 万个示例的训练，使用编解码器分配来根据场景变化按比例分配视觉标记；仅其 8B 模型在 R2R-CE 上就达到了 74.51 SR，并以 78.19 SR 领先于 RxR-CE。凭借完整的工具，NavGPT-3 在 R2R-CE 上树立了最先进的技术（81.51 SR），并首次将自主智能体提升到人类水平：在 RxR-CE 上，它在每集 1 分 22 秒内与人类追随者成功匹配（90.43 比 90.4 SR）和路径保真度（78.47 比 77.7 nDTW），而每集大约需要 3 分钟。人类。我们全面消除了线束设计和两个模型之间的交互，展示了工具和动作策略如何塑造从语言模型推理到物理控制的路径：当 NavGPT VLA 执行路线时，推理循环缩短，系统的最小反应时间从每个语言模型决策 3-19 秒下降到每个动作策略步骤 0.5-1 秒（1-2 Hz）。这些结果表明，设计这种具体接口对于将前沿语言模型智能与低级物理控制连接起来至关重要。我们将发布所有模型、代码和评估记录。
+
+</details>
+
+---
+
+## 8. Agentic RSR: Real-to-Sim-to-Real through Scene Reconstruction and Execution-Grounded Robot Policies / Agentic RSR：通过场景重建和基于执行的机器人策略实现真实到模拟到真实
+
+**Date**: 2026-10-07 | **arXiv**: [2610.10479v1](http://arxiv.org/abs/2610.10479v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.10479v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A simulation of a real robot workspace must preserve task-relevant interactions, while policies developed in it must operate on observations available to the real robot. Yet scene reconstruction and policy development are often treated separately. We present Agentic Real-to-Sim-to-Real (Agentic RSR), a framework that links scene reconstruction, policy development, and real-robot execution through the same manipulation task. Given a workspace video, a task description, and a known robot model, an agent recovers metric scale, iteratively refines the scene using visual feedback, and checks task-relevant interactions in MuJoCo. A coding agent then develops an executable policy, progressing from privileged object poses to visual observations and randomized simulation. The policy can interleave multiple observations and actions within one invocation, while the agent uses execution feedback to continue, retry, or revise its approach. A shared task-level interface carries the policy and accumulated experience to the real robot, where fresh observations and safety checks guide execution. Across 18 reconstructed scenes involving two robots, the mean four-view Depth MAE against reference depth estimates is 0.1057 m, the mean Lab $ΔE_{76}$ is 11.04, and the mean grayscale SSIM is 0.6990. In real-robot experiments, the aggregate task success rate reaches 80% of the simulation task success rate, indicating substantial retention of simulated performance on hardware. Code and reconstructed scene data will be made publicly available.
+
+真实机器人工作空间的模拟必须保留与任务相关的交互，而其中制定的策略必须根据真实机器人可用的观察结果进行操作。然而场景重建和政策制定往往被分开对待。我们提出了 Agentic Real-to-Sim-to-Real (Agentic RSR)，这是一个通过相同的操作任务将场景重建、策略开发和真实机器人执行联系起来的框架。给定工作空间视频、任务描述和已知的机器人模型，代理恢复公制尺度，使用视觉反馈迭代地细化场景，并检查 MuJoCo 中与任务相关的交互。然后，编码代理开发可执行策略，从特权对象姿势发展到视觉观察和随机模拟。该策略可以在一次调用中交错多个观察和操作，而代理则使用执行反馈来继续、重试或修改其方法。共享的任务级界面将策略和积累的经验传递给真实的机器人，其中新的观察和安全检查指导执行。在涉及两个机器人的 18 个重建场景中，相对于参考深度估计的平均四视图深度 MAE 为 0.1057 m，平均 Lab $ΔE_{76}$ 为 11.04，平均灰度 SSIM 为 0.6990。在真实机器人实验中，总任务成功率达到模拟任务成功率的80%，表明硬件上模拟性能得到了大幅保留。代码和重建的场景数据将公开。
+
+</details>
+
+---
+
+## 9. Multi-Agent Coordination via Support-Preserving Distillation / 通过支持保留蒸馏进行多智能体协调
+
+**Date**: 2026-10-07 | **arXiv**: [2610.10087v2](http://arxiv.org/abs/2610.10087v2) | **PDF**: [Link](http://arxiv.org/pdf/2610.10087v2)
+
+**Categories**: cs.LG, cs.MA, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Offline MARL increasingly relies on generative policies to model multimodal joint behavior, typically by distilling a centralized teacher into decentralized one-step actors under the CTDE. We identify a failure mode at the teacher training stage: standard flow-based teachers pair noise with replay targets independently, so nearby noise samples can be routed toward conflicting coordination modes. The teacher then produces samples between valid modes, and because the distillation loss regresses each local actor onto the conditional mean of the teacher's output given local input, this error is not absorbed but propagated to the student. To remove this teacher-side artifact, we propose Mode-Support Semi-Discrete Optimal Transport (MoSDOT), which summarizes multimodal replay into a finite mode support with prescribed capacities and uses conditional semi-discrete optimal transport to assign each noise sample to a single mode before teacher training. We additionally study a shared-randomness variant that uses a shared noise component at execution to expose the residual gap intrinsic to strict-product execution. On controlled diagnostics and offline MARL benchmarks, MoSDOT improves endpoint quality and routing consistency, particularly on datasets exhibiting multimodal joint behavior.
+
+离线 MARL 越来越依赖生成策略来模拟多模式联合行为，通常是通过将集中式教师提炼为 CTDE 下分散的单步参与者。我们在教师培训阶段确定了一种失败模式：基于标准流程的教师独立地将噪声与重放目标配对，因此附近的噪声样本可以路由到冲突的协调模式。然后，教师在有效模式之间生成样本，并且由于蒸馏损失将每个本地参与者回归到给定本地输入的教师输出的条件平均值上，因此该误差不会被吸收而是传播给学生。为了消除这种教师端的伪影，我们提出了模式支持半离散最优传输（MoSDOT），它将多模态重放总结为具有规定容量的有限模式支持，并在教师培训之前使用条件半离散最优传输将每个噪声样本分配给单个模式。我们还研究了一种共享随机性变体，该变体在执行时使用共享噪声组件来暴露严格产品执行固有的剩余间隙。在受控诊断和离线 MARL 基准测试中，MoSDOT 提高了端点质量和路由一致性，特别是在表现出多模式联合行为的数据集上。
+
+</details>
+
+---
+
+## 10. AeroEval: Staged Program and Execution Validation for AI-Generated Drone Missions / AeroEval：人工智能生成的无人机任务的分阶段程序和执行验证
+
+**Date**: 2026-10-07 | **arXiv**: [2610.09764v1](http://arxiv.org/abs/2610.09764v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.09764v1)
+
+**Categories**: cs.RO, cs.DC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large Language Models (LLMs) can generate drone programs from natural-language mission descriptions, but syntactically valid programs may still violate user intent, environmental constraints, and mission-level behavior. This problem is pronounced in cyber-physical applications, where correctness depends on the interaction among generated code, mobile sensing, environmental geometry, event-driven analytics, and physical execution. Existing drone code-generation systems primarily use prompt guardrails or simulator outcomes and provide limited failure localization. We present AeroEval, an agent-assisted middleware for staged validation of AI-generated drone missions. AeroEval combines deterministic program analysis with context-grounded LLM agents. It first validates program syntax, platform API usage, and mission intent, and then evaluates the realized behavior using execution trajectories, mission requirements, and environmental context. Each stage returns structured failure information for iterative regeneration. In our evaluation using 20 navigation tasks and five analytical mission types over AirSim and Gazebo simulators, AeroEval improves navigation success from 55% to 95%. In a stagewise ablation study, our Code and Trajectory Validators by themselves achieve mean run-level success rates of 44% and 56%, respectively, while the full AeroEval pipeline achieves 88%; the stages detect complementary failures in program structure, API usage, mission intent, obstacle avoidance, altitude, coverage, and event-driven transitions and the guided regeneration corrects for them. Across the main analytics missions, AeroEval increases aggregate run-level success from 34% for one-shot AeroGen to 88% within the regeneration budget. These results demonstrate the benefit of combining program-level and execution-grounded agentic validation for AI-generated drone applications in the evaluated environment.
+
+大型语言模型 (LLM) 可以根据自然语言任务描述生成无人机程序，但语法上有效的程序仍然可能违反用户意图、环境约束和任务级行为。这个问题在网络物理应用中很明显，其中正确性取决于生成的代码、移动传感、环境几何、事件驱动分析和物理执行之间的交互。现有的无人机代码生成系统主要使用提示护栏或模拟器结果，并提供有限的故障定位。我们推出了 AeroEval，这是一种代理辅助中间件，用于对人工智能生成的无人机任务进行分阶段验证。 AeroEval 将确定性程序分析与基于上下文的 LLM 代理相结合。它首先验证程序语法、平台 API 使用和任务意图，然后使用执行轨迹、任务要求和环境上下文评估已实现的行为。每个阶段都会返回结构化的故障信息以进行迭代再生。在我们对 AirSim 和 Gazebo 模拟器使用 20 个导航任务和五种分析任务类型的评估中，AeroEval 将导航成功率从 55% 提高到 95%。在分阶段消融研究中，我们的代码和轨迹验证器本身分别实现了 44% 和 56% 的平均运行级成功率，而完整的 AeroEval 管道达到了 88%；这些阶段会检测程序结构、API 使用、任务意图、避障、高度、覆盖范围和事件驱动转换中的互补故障，并由引导再生进行纠正。在主要分析任务中，AeroEval 将总体运行水平成功率从一次性 AeroGen 的 34% 提高到再生预算内的 88%。这些结果证明了在评估环境中将程序级和基于执行的代理验证结合起来对人工智能生成的无人机应用程序的好处。
+
+</details>
+
+---
+
+## 11. Co-Evolving Robot Orchestrators and Policies through Deployment / 通过部署共同进化机器人协调器和策略
+
+**Date**: 2026-10-06 | **arXiv**: [2610.09228v1](http://arxiv.org/abs/2610.09228v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.09228v1)
+
+**Categories**: cs.RO, eess.SY
+
+**Project**: https://robo-cop.pages.dev/.  <details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language-action (VLA) policies trained on large datasets are capable within their training domains, yet they still fail to generalize to the variety of situations a robot meets in real-world deployment. Agentic robot systems complement the policy with a vision-language model (VLM) orchestrator that learns when to call the policy, how to instruct it, and when to use scripted skills instead. However, because the harness is built around a frozen policy that has limited language steerability, the orchestrator can avoid the policy's failures but never overcome them. The policy becomes the bottleneck of the whole system. Fine-tuning the policy can remove this bottleneck, but updating it alone decouples it from an orchestrator tuned to its old behavior. We propose Robo-COP, in which the orchestrator and policy co-evolve during deployment. Robo-COP curates skill demonstrations from its own executions, fine-tunes the policy when this data can address recurring failures, and adopts each new policy only after it improves the skills it was trained for. Across ten simulated RoboLab tasks, Robo-COP raises mean held-out success from 64.8% to 73.8% over the same harness with a frozen policy, while fine-tuning on a fixed schedule without verification reaches only 65.8%. On three real-world tasks, Robo-COP raises held-out success from 38.3% to 50.0%. Robo-COP turns deployment into a self-improving flywheel in which robots learn by doing, with each improvement in execution producing better data for the next round of learning. Videos and code are available at https://robo-cop.pages.dev/.
+
+在大型数据集上训练的视觉语言动作（VLA）策略在其训练领域内是有能力的，但它们仍然无法泛化到机器人在现实世界部署中遇到的各种情况。代理机器人系统通过视觉语言模型 (VLM) 协调器来补充策略，该协调器学习何时调用策略、如何指示策略以及何时使用脚本技能。然而，由于该工具是围绕语言可操纵性有限的冻结策略构建的，因此编排器可以避免策略的失败，但永远无法克服它们。政策成为整个系统的瓶颈。微调策略可以消除这个瓶颈，但单独更新它会使其与适应其旧行为的协调器脱钩。我们提出了 Robo-COP，其中协调器和策略在部署过程中共同演化。 Robo-COP 通过自己的执行来策划技能演示，当这些数据可以解决反复出现的故障时微调策略，并且只有在提高了所训练的技能后才采用每项新策略。在 10 项模拟 RoboLab 任务中，与采用冻结策略的相同工具相比，Robo-COP 将平均坚持成功率从 64.8% 提高到 73.8%，而在没有验证的情况下按固定时间表进行微调仅达到 65.8%。在三项现实任务中，Robo-COP 将坚持的成功率从 38.3% 提高到 50.0%。 Robo-COP 将部署变成一个自我改进的飞轮，机器人通过实践来学习，执行中的每一次改进都会为下一轮学习产生更好的数据。视频和代码可在 https://robo-cop.pages.dev/ 获取。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-08 (18 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-10-08
