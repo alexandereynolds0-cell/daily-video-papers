@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-11](papers/2026-10-11.md) - 2 papers
 - [2026-10-09](papers/2026-10-09.md) - 30 papers
 - [2026-10-08](papers/2026-10-08.md) - 3 papers
 - [2026-10-07](papers/2026-10-07.md) - 3 papers
@@ -164,6 +165,50 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-11 (2 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-10-11
+
+**Paper Count**: 2
+
+---
+
+## 1. WOVEN: Weaving Visual World Modeling into Multimodal LLMs / 编织：将视觉世界建模编织成多模态LLM
+
+**Date**: 2026-10-08 | **arXiv**: [2610.12417v1](http://arxiv.org/abs/2610.12417v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.12417v1)
+
+**Categories**: cs.CV, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal large language models (MLLMs) struggle with spatial, embodied, physical, and temporal reasoning. We hypothesize that these failures reflect a shared deficit in visual transition reasoning, and test whether this capability can serve as a shared training primitive, one that different models can learn from different supervision sources and reuse across different tasks, with a systematic training recipe. Existing benchmarks document these deficits separately but do not support controlled comparisons across scenes, actions, and reasoning operations. We therefore introduce WOVEN, a training source and benchmark for visual transition reasoning that organizes transition supervision by scene, action, and reasoning type, using diverse, realistic rollouts from video-pretrained generative models: 36,076 examples across 20 scene types, 5 action types, and 8 reasoning types. We first evaluate 38 frontier MLLMs (e.g., GPT-5.4 and Qwen3-VL-235B-A22B) and find a substantial and systematic deficit: even the strongest models fall far below humans, and the failures recur across model families and persist with scale. We then train MLLMs at multiple scales on WOVEN and find that they learn a shared capability that transfers broadly: training subsets of only about 2,000 items each collectively improve 22 of 26 external benchmarks by up to 27.3 percentage points, and WOVEN data can replace 30-50% of a task's own training data with comparable accuracy. Controlled comparisons further yield a training recipe for visual world modeling, validated prospectively on held-out benchmarks: select supervision by the reasoning operation it teaches rather than by the actions, scenes, or domains it shows, and prefer larger changes to the visual state for robustness. Our work establishes visual transition reasoning as a reusable foundation for systematic visual world-model training in MLLMs.
+
+多模态大型语言模型（ MLLM ）在空间、具体化、物理和时间推理方面苦苦挣扎。 我们假设这些失败反映了视觉转换推理中的共同缺陷，并测试这种能力是否可以作为一个共享的训练原语，不同的模型可以从不同的监督来源中学习，并在不同的任务中重复使用，并具有系统的训练配方。 现有基准分别记录了这些缺陷，但不支持在场景、行动和推理操作之间进行受控比较。 因此，我们引入了WOVEN ，这是一种可视化过渡推理的训练源和基准，它使用视频预训练生成模型的多样化、逼真的推出，按场景、动作和推理类型组织过渡监督：跨20种场景类型、5种动作类型和8种推理类型的36,076个示例。 我们首先评估了38个前沿MLM （例如， GPT-5.4和Qwen3-VL-235B-A22B ） ，并发现了一个重大而系统的缺陷：即使是最强的模型也远远低于人类，并且失败会在模型家族中复发并随着规模的增长而持续存在。 然后，我们在织造的多个尺度上对MLM进行培训，发现它们学习了广泛传输的共享能力：只有大约2,000个项目的训练子集，每个项目总共提高了26个外部基准中的22个，提高了27.3个百分点，而织造数据可以以相当的准确度替换任务自身训练数据的30-50%。 对照比较进一步产量
+
+</details>
+
+---
+
+## 2. Language Models as AI Research World Models / 语言模型作为人工智能研究世界模型
+
+**Date**: 2026-10-08 | **arXiv**: [2610.12235v1](http://arxiv.org/abs/2610.12235v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.12235v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI research agents automate the cycle of proposing, implementing, and evaluating experiments, opening a path toward recursive self-improvement. Yet their ability to propose experiments outpaces their capacity to execute them in real environments, making outcome prediction a key capability for sustained self-improvement under limited experimental budgets. We investigate language models as Research World Models (RWMs), which predict the outcomes of candidate interventions across research environments. Our evaluation draws on over 2,600 experimental records from nine research environments spanning pretraining, post-training, and inference, representing more than 171,000 H100 GPU-hours of experimentation. Research knowledge acquired from real experimental experience improves RWM predictions of unseen interventions within the same environment (Spearman +0.27), and can be reused across environments. For example, using only pretraining experience from OLMo3, Marin, and Nanochat, an RWM reduces selection regret in the Qwen3 environment by 78% compared with zero-experience setting. These benefits extend to multi-round Autoresearch under a fixed selection budget: RWMs with in-env and cross-env research knowledge increase the best gain achieved by 15.8% and 11.6%, respectively. Ablations across 13 language models used as RWMs show that adding research knowledge can improve intervention ranking more than changing models or increasing reasoning effort alone. These findings support language models as RWMs and motivate accumulating experimental data for future RWM training.
+
+人工智能研究代理人自动化了提出、实施和评估实验的循环，为递归自我改进开辟了道路。 然而，他们提出实验的能力超过了他们在真实环境中执行实验的能力，这使得结果预测成为在有限的实验预算下持续自我提升的关键能力。 我们将语言模型作为研究世界模型（ RWM ）进行研究，该模型预测了各种研究环境中候选干预措施的结果。 我们的评估利用了来自九个研究环境的2,600多个实验记录，涵盖预训练、训练后和推理，代表了超过171,000个H100 GPU小时的实验。 从真实的实验经验中获得的研究知识提高了RWM对同一环境中看不见的干预措施的预测（ Spearman +0.27 ） ，并且可以跨环境重复使用。 例如，仅使用OLMo3、Marin和Nanochat的预训练经验，与零经验设置相比， RWM将Qwen3环境中的选择遗憾减少了78%。 这些好处延伸到固定选择预算下的多轮Autresearch ：具有in-env和cross-env研究知识的RWM分别将实现的最佳收益提高了15.8%和11.6%。 用作RWM的13种语言模型的消融表明，与仅改变模型或增加推理工作相比，添加研究知识可以提高干预排名。这些研究结果支持
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-09 (30 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-10-09
