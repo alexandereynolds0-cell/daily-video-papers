@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-11](papers/2026-10-11.md) - 6 papers
 - [2026-10-09](papers/2026-10-09.md) - 11 papers
 - [2026-10-08](papers/2026-10-08.md) - 18 papers
 - [2026-10-07](papers/2026-10-07.md) - 8 papers
@@ -178,6 +179,114 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-11 (6 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-10-11
+
+**Paper Count**: 6
+
+---
+
+## 1. Accurate but Not Humble: Evaluating Epistemic Humility in LLM Agents under Knowledge Conflict / 准确但不谦逊：评估LLM客服代表在知识冲突中的认知谦逊
+
+**Date**: 2026-10-08 | **arXiv**: [2610.12360v1](http://arxiv.org/abs/2610.12360v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.12360v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+When retrieved evidence contradicts an agent's prior beliefs, does it revise its answer, acknowledge uncertainty, or persist with an incorrect conclusion? Existing evaluations of agentic systems focus primarily on task success, offering limited insight into how agents handle such conflicts. We propose to evaluate agents on epistemic humility (EH): the agent's willingness to recognize, act on, and communicate uncertainty during task execution. We operationalize EH through three trajectory-level behavioral dimensions: Identify, Solve, and Escalate (ISE). Through knowledge conflict, situations where the backbone language model's parametric knowledge contradicts the evidence it encounters, or where two contextual sources disagree, we evaluate two conflict settings: (1) controlled conflict and (2) naturally occurring conflict during multi-step agentic execution, each paired with matched no-conflict controls. Evaluating four agents, we find that higher task accuracy does not necessarily correspond to greater epistemic humility: some high-accuracy configurations recognize conflicts during execution but do not communicate unresolved uncertainty in their incorrect final answers. Trajectory-level analysis further reveals that agents frequently detect conflicts in early steps of execution but fail to maintain or resolve them in later steps. Finally, we show that model-level interventions can improve EH, but often at the cost of task accuracy, suggesting that epistemic humility emerges from the interaction among the backbone model, agent harness, and evaluation environment.
+
+当检索到的证据与客服代表的先前信念相矛盾时，客服代表是否修改了答案、承认不确定性或坚持错误的结论？ 对客服代表系统的现有评估主要侧重于任务成功，对客服代表如何处理此类冲突提供有限的见解。 我们建议对智能体进行认知谦逊（ EH ）评估：智能体在任务执行期间识别、行动和沟通不确定性的意愿。 我们通过三个轨迹层面的行为维度来实施EH ：识别、解决和上报（ ISE ）。 通过知识冲突，骨干语言模型的参数化知识与其遇到的证据相矛盾的情况，或者两个上下文来源不同的情况，我们评估了两种冲突设置： （ 1 ）受控冲突和（ 2 ）多步骤代理执行过程中自然发生的冲突，每种冲突都与匹配的无冲突对照配对。 通过评估四种智能体，我们发现更高的任务准确度并不一定对应于更大的认知谦逊度：一些高准确度的配置在执行过程中识别冲突，但在错误的最终答案中不会传达未解决的不确定性。 轨迹级分析进一步表明，代理在执行的早期阶段经常检测到冲突，但在后续步骤中未能维护或解决冲突。 最后，我们表明模型级干预措施可以改善EH ，但通常以牺牲任务准确性为代价，这表明认识谦逊的出现
+
+</details>
+
+---
+
+## 2. When Should Agents Think? Adaptive Reasoning via Cross-Turn Estimation / 客服代表什么时候应该考虑？通过交叉回合估计进行自适应推理
+
+**Date**: 2026-10-08 | **arXiv**: [2610.12061v1](http://arxiv.org/abs/2610.12061v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.12061v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language model (LLM)-based agents have demonstrated strong capabilities on complex tasks. They typically perform reasoning before each action throughout an interaction trajectory. However, reasoning may not be necessary at every turn, as reasoning produced earlier can continue to support subsequent actions. A key challenge is therefore to determine when existing reasoning remains sufficient and when a new reasoning step is needed, without relying on costly generation-based verification. We find that decreases in the likelihood of subsequent reference actions after removing additional reasoning closely track whether those actions remain recoverable given earlier reasoning, providing an effective and lightweight signal for estimating cross-turn action support. Based on this observation, we propose Reasoning Adaptation through Cross-Turn Estimation (RACE), a training approach for adaptive agent reasoning. RACE introduces a Likelihood-Guided Progressive Reasoning Cover Detection (LoGiC) procedure that progressively identifies reasoning turns whose removal has limited impact on the current and subsequent reference actions. The resulting removal signals are incorporated into both supervised fine-tuning and agentic reinforcement learning, enabling the policy to learn when to reason and when to act directly. Extensive experiments on four representative agent benchmarks show that RACE substantially reduces reasoning cost while maintaining or improving task performance.
+
+基于大型语言模型（ LLM ）的代理在复杂任务上表现出强大的能力。 他们通常在整个互动轨迹的每个动作之前进行推理。 但是，并非每次都需要推理，因为之前提出的推理可以继续支持后续行动。 因此，一个关键的挑战是确定现有的推理何时仍然足够，何时需要新的推理步骤，而不依赖于昂贵的基于生成的验证。 我们发现，在去除其他推理后，后续参考操作的可能性降低，密切跟踪这些操作在较早的推理中是否仍可恢复，为估计交叉转弯操作支持提供了有效的轻量级信号。 基于这一观察，我们提出了通过交叉回合估计（ RACE ）进行推理适应（ Reasoning Adaptation through Cross-Turn Estimation ， RACE ） ，这是一种自适应Agent推理的训练方法。 RACE引入了一种可能性引导渐进推理覆盖检测（ LoGiC ）程序，该程序逐渐识别推理转折，其删除对当前和后续参考操作的影响有限。 由此产生的移除信号被整合到监督微调和代理强化学习中，使政策能够学习何时推理和何时直接采取行动。 在四个具有代表性的代理基准上的广泛实验表明， RACE大大降低了推理成本，同时保持或提高了任务绩效。
+
+</details>
+
+---
+
+## 3. Agentic-TTT: Training test-time policy for test-time training / Agentic-TTT ：测试时间培训的培训测试时间策略
+
+**Date**: 2026-10-08 | **arXiv**: [2610.12002v1](http://arxiv.org/abs/2610.12002v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.12002v1)
+
+**Categories**: cs.LG, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Test-time training (TTT) adapts an LLM's parameters using signals derived from test inputs, and can make striking improvements in pre-specified settings such as IMO competitions or designated open problems. By turning deployment experience into parameter updates, TTT provides a direct mechanism for model-level self-improvement. Yet TTT is not universally beneficial: each TTT algorithm works in different settings, and applying an ill-suited method could waste test-time compute or even damage model performance. Therefore, such parameter-level self-improvement requires agency: the model must decide when TTT is warranted, which algorithm to invoke, and whether an existing skill can be reused. To fill this gap, we introduce Agentic-TTT, which learns a test-time policy to govern those decisions. Agentic-TTT turns TTT procedures into callable tools, treats accumulated skills as an evolving deployment environment, and trains its policy using the observed utility gains from its decisions. On our benchmark, Agentic-TTT nearly doubles the utility over the backbone model, learns to trade off utility against compute, and generalizes to domains unseen during training. Together, these results point toward autonomous self-improvement: models that can decide how to learn from their own deployment experience.
+
+测试时间培训（ TTT ）使用来自测试输入的信号来调整LLM的参数，并且可以在预先指定的设置（例如IMO比赛或指定的开放问题）中进行显着改进。 通过将部署体验转化为参数更新， TTT提供了模型级自我提升的直接机制。 然而， TTT并非普遍有益：每种TTT算法都在不同的设置下工作，应用不合适的方法可能会浪费测试时间计算甚至损害模型性能。 因此，这种参数级自我完善需要代理：模型必须决定何时保证TTT ，调用哪种算法，以及现有技能是否可以重复使用。 为了填补这一空白，我们引入了Agentic-TTT ，它学习测试时间策略来管理这些决策。 Agentic-TTT将TTT过程转化为可调用的工具，将积累的技能视为不断发展的部署环境，并使用从其决策中观察到的效用收益来训练其策略。 在我们的基准上， Agentic-TTT将骨干模型的效用几乎翻了一番，学会了将效用与计算进行权衡，并将其推广到培训期间看不见的领域。 这些结果共同指向自主自我改进：可以决定如何从自己的部署经验中学习的模型。
+
+</details>
+
+---
+
+## 4. MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement / MiMo-V2.6 ：扩展强化学习以实现自我完善
+
+**Date**: 2026-10-08 | **arXiv**: [2610.11959v1](http://arxiv.org/abs/2610.11959v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.11959v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning (RL) is the central training paradigm for advancing large foundation models towards self-improvement. This report introduces the MiMo-V2.6 series, an omni-modal family that pushes the frontier of model intelligence by scaling RL compute. Prior to RL, we conduct mid-training on a broad multimodal corpus to provide ample exploration space, and build a solid infrastructure on the pretrained hybrid-SWA architecture to support subsequent scale-up. We scale RL compute along three dimensions: (1) larger batches and higher throughput, with an asynchronous training that consumes 1,568 samples and 2.7-3.7B tokens per step at context lengths of up to 1M; (2) more diverse and complex environments, spanning code, general, visual, and cyber domains under a mixture of agent harnesses; and (3) more grader compute, via groupwise agentic grading that yields more accurate reward signals for long-horizon tasks and steers the model towards shorter, more token-efficient solutions. To keep training stable at scale, we freeze the MoE router and establish a multi-layer defense against reward hacking. We further build infrastructure for mixed-task agentic RL, including a unified trajectory representation, high-concurrency multi-framework rollout, decoupled control and data planes, and training-inference consistency. We open-source the training dynamics, RL environments, and RL framework to facilitate reproduction and further research on scaled RL and model self-improvement.
+
+强化学习（ RL ）是推动大型基础模型走向自我完善的核心培训范式。 本报告介绍了MiMo-V2.6系列，这是一个全模式系列，通过扩展RL计算来推动模型智能的前沿。 在RL之前，我们对广泛的多模态语料库进行中期培训，以提供充足的勘探空间，并在预先训练的混合-SWA架构上构建坚实的基础设施，以支持随后的扩展。 我们沿着三个维度扩展RL计算： （ 1 ）更大的批次和更高的吞吐量，异步训练每步消耗1,568个样本和2.7-3.7B个令牌，上下文长度高达1M ； （ 2 ）在代理线束的混合下，更多样化和复杂的环境，跨越代码、通用、可视化和网络域； （ 3 ）通过按组代理分级进行更多分级计算，为长期任务产生更准确的奖励信号，并将模型引导到更短、更具令牌效率的解决方案。 为了保持大规模训练的稳定性，我们冻结了MoE路由器，并建立了针对奖励黑客的多层防御。 我们进一步构建混合任务代理RL的基础设施，包括统一的轨迹表示、高并发多框架部署、解耦控制和数据平面以及训练-推理一致性。 我们开源了培训动态、强化学习环境和强化学习框架，以促进大规模强化学习和模型自我改进的再现和进一步研究。
+
+</details>
+
+---
+
+## 5. Project Greenhouse: Progress Toward Fully Open and Sovereign Agentic Search / 项目温室：朝向完全开放和主权代理搜索的进展
+
+**Date**: 2026-10-08 | **arXiv**: [2610.11922v1](http://arxiv.org/abs/2610.11922v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.11922v1)
+
+**Categories**: cs.IR, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Project Greenhouse represents our exploration of a simple thesis: We believe that it is possible to build fully open and sovereign models for agentic search with only modest computational resources. As a first milestone, we describe how to build a competitive pointwise decoder-only reranker using a simple two-step recipe comprising pre-training from scratch followed by supervised fine-tuning, starting only from commonly available datasets. Contrary to the dominant approach in the literature, we do not rely on existing open-weight backbones from third parties, and thus we are fully in control of model training, from end to end. We were able to accomplish the bulk of our experiments using no more than a handful of GPUs. This report articulates the importance and benefits of our approach, and we share artifacts that enable transparent, independent reproduction of all aspects of model training. Beyond data, code, and configurations that capture our efforts, we also release checkpoints for our family of Gaggle models, demonstrating the feasibility of our approach and providing a first step toward validating our broader thesis.
+
+Project Greenhouse代表了我们对一个简单论点的探索：我们相信，只有适度的计算资源，就可以构建完全开放的主权代理搜索模型。 作为第一个里程碑，我们描述了如何使用一个简单的两步法来构建一个有竞争力的仅点解码器的重新排序器，包括从头开始预训练，然后进行监督微调，仅从常用的数据集开始。 与文献中的主导方法相反，我们不依赖于第三方现有的开放式权重骨干，因此我们完全控制从端到端的模型训练。 我们能够使用不超过几个GPU完成大部分实验。 本报告阐述了我们方法的重要性和益处，我们分享了能够对模型培训的各个方面进行透明、独立复制的工件。 除了捕捉我们努力的数据、代码和配置之外，我们还发布了Gaggle模型系列的检查点，展示了我们方法的可行性，并为验证我们更广泛的论文提供了第一步。
+
+</details>
+
+---
+
+## 6. Forms of LLM-Integrated Applications from LLM-Chats to Autonomous AI Agent System / 从LLM-Chats到自主AI Agent系统的LLM集成应用程序的形式
+
+**Date**: 2026-10-08 | **arXiv**: [2610.11899v1](http://arxiv.org/abs/2610.11899v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.11899v1)
+
+**Categories**: cs.CL, cs.AI, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) are increasingly embedded as components in software systems, marketed under labels such as chatbot, copilot, retrieval-augmented generation, workflow, coding agent and AI agent. Whether these labels denote genuine architectural forms or serve as branding has not been assessed systematically.   In the sources surveyed, labels do carry architectural content, most clearly in vendor usage: copilot denotes a router-worker architecture operating a host application under step-by-step user confirmation, while the more recent shift to the label agent coincides with AI-planned multi-step execution of which the user sees only the outcome. The coding agents of four major providers share one architecture, a reason-and-act loop delegating to subagents.   This survey describes seven recurring forms---LLM chats, custom agents, retrieval-augmented generation (RAG), AI-enhanced workflows, copilots, coding agents, and, in part, agentic RAG---in a common vocabulary of agents and tools. Each is characterized along four structural dimensions (agentic RAG only partially): the architectural pattern, the control of execution and the point of user intervention, the number of agent calls per task, and tool use. An illustrative corpus of 22 systems from research publications and vendor documentation grounds the descriptions and shows where they reach their limit.
+
+大型语言模型（ LLM ）越来越多地作为组件嵌入到软件系统中，以聊天机器人、副驾驶、检索增强生成、工作流程、编码代理和人工智能代理等标签销售。 这些标签是否表示真正的建筑形式或作为品牌还没有得到系统的评估。   在接受调查的来源中，标签确实包含架构内容，在供应商用法中最明显： copilot表示在逐步用户确认下操作主机应用程序的路由器-工作者架构，而最近向标签代理的转变与AI计划的多步执行一致，用户只能看到结果。 四个主要提供商的编码代理共享一个架构，一个原因和行为循环委托给子代理。   本调查描述了七种经常性形式--LLM聊天、自定义代理、检索增强生成（ RAG ）、AI增强的工作流程、副驾驶、编码代理，以及部分代理RAG--在代理和工具的通用词汇中。 每个都沿着四个结构维度（仅部分代理RAG ）来表征：架构模式、执行控制和用户干预点、每个任务的代理调用数量以及工具使用。 来自研究出版物和供应商文档的22个系统的说明性语料库为描述提供了依据，并显示了它们在哪里达到了极限。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-09 (11 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-10-09
