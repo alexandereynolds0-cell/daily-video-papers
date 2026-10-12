@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-12](papers/2026-10-12.md) - 2 papers
 - [2026-10-11](papers/2026-10-11.md) - 2 papers
 - [2026-10-09](papers/2026-10-09.md) - 30 papers
 - [2026-10-08](papers/2026-10-08.md) - 3 papers
@@ -165,6 +166,50 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-12 (2 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-10-12
+
+**Paper Count**: 2
+
+---
+
+## 1. Dream to Remember: Continual Steering of Generalist Robot Policies with World Models / 值得记住的梦想：用世界模型持续指导通用机器人政策
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13816v1](http://arxiv.org/abs/2610.13816v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13816v1)
+
+**Categories**: cs.RO, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generalist robot policies are trained with imitation learning and are bounded by the quality and coverage of their demonstrations. Reinforcement learning can improve and extend them, either by fine-tuning the policy weights or by training a small module to steer the input noise of a frozen generative policy. When tasks arrive sequentially, both approaches suffer from catastrophic forgetting. Fine-tuning on a task degrades prior tasks, and steering only shifts forgetting to the shared steering module. We propose Dream to Remember (D2R), which continually steers a frozen generalist policy toward new tasks, while retaining its earlier skills. As the steering module learns a new task, a frozen pretrained world model rehearses prior tasks through imagined rollouts, anchoring the module to its earlier behavior without a replay buffer or new data. When the world model is faithful enough, D2R learns the new task entirely in imagination. Otherwise, it learns the task in the environment while using the world model only to rehearse prior tasks. On CALVIN, D2R improves eight tasks in sequence entirely in imagination, raising average success from 63.7% to 74.8%, while LoRA fine-tuning on the same sequence drops it to 11.7%. With a frozen off-the-shelf generalist policy and world model, $π_0$ and A2World, D2R learns unseen LIBERO-90 tasks in the environment while keeping $π_0$'s performance on the LIBERO suites it was fine-tuned on, even though the world model is not accurate enough for policy optimization. Finally, on a real Franka robot, D2R improves three tasks in sequence entirely in imagination while retaining the earlier improvements.
+
+通用机器人策略通过模仿学习进行训练，并受到其演示的质量和覆盖范围的限制。强化学习可以通过微调策略权重或训练一个小模块来引导冻结生成策略的输入噪声来改进和扩展它们。当任务依次到达时，这两种方法都会遭受灾难性遗忘。对任务进行微调会降低之前的任务，而转向只会将遗忘转移到共享转向模块。我们提出“铭记梦想”（D2R），它不断引导冻结的通才政策走向新任务，同时保留其早期技能。当转向模块学习新任务时，冻结的预训练世界模型通过想象的部署来演练先前的任务，将模块锚定到其早期行为，而无需重放缓冲区或新数据。当世界模型足够忠实时，D2R 完全在想象中学习新任务。否则，它会在环境中学习任务，同时仅使用世界模型来排练先前的任务。在 CALVIN 上，D2R 完全在想象中按顺序改进了 8 个任务，将平均成功率从 63.7% 提高到 74.8%，而 LoRA 对同一序列的微调则将其下降到 11.7%。借助冻结的现成通用策略和世界模型 $π_0$ 和 A2World，D2R 可以学习环境中未见过的 LIBERO-90 任务，同时保持 $π_0$ 在经过微调的 LIBERO 套件上的性能，即使世界模型对于策略优化来说不够准确。最后，在真正的 Franka 机器人上，D2R 完全在想象中按顺序改进了三个任务，同时保留了早期的改进。
+
+</details>
+
+---
+
+## 2. Beyond Temporal Proximity: Explanatory World Models for Credit Assignment in Reinforcement Learning / 超越时间邻近性：强化学习中信用分配的解释性世界模型
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13504v1](http://arxiv.org/abs/2610.13504v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13504v1)
+
+**Categories**: cs.LG, cs.AI, cs.IR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative Recommenders increasingly use Reinforcement Learning (RL) to optimize outcomes that may appear hundreds or thousands of interactions after a decision. Standard RL propagates reward according to temporal proximity rather than explicit relevance, attenuating the signal assigned to distant but important actions and creating a source of sample inefficiency. We introduce Explanatory World Models (EWM), an attribution framework that uses explanations to identify the earlier events that plausibly contributed to a realized outcome. We instantiate EWM with a frontier language model and use its explanations as learning signals using a conservative hierarchical operator that recursively redistributes reward while preserving the undiscounted episode return. To investigate what constitutes a useful explanation, we operationalize three complementary variants inspired by Halpern's actual causation, Lombrozo's explanatory simplicity, and Deutsch's hard-to-vary explanations. We evaluate EWM on two controlled long-horizon RL benchmarks, a public sequential-recommendation benchmark, and an industry-scale generative recommender. On Crafter and WordCraft, EWM substantially outperforms PPO and LaRe, with its largest gains when rewards are most delayed. On KuaiRand, EWM outperforms SFT and LaRe offline and A2C online. Finally, in an offline evaluation of an industry generative recommender, EWM considerably improves Recall and increases behavioral proxies. These results suggest that explanations can provide structured and reusable credit for learning from delayed outcomes.
+
+生成推荐器越来越多地使用强化学习 (RL) 来优化决策后可能出现数百或数千次交互的结果。标准强化学习根据时间邻近性而不是明确的相关性来传播奖励，从而削弱了分配给遥远但重要的动作的信号，并造成了样本效率低下的根源。我们引入解释性世界模型（EWM），这是一种归因框架，它使用解释来识别可能对实现结果做出贡献的早期事件。我们使用前沿语言模型实例化 EWM，并使用保守的分层运算符将其解释用作学习信号，该运算符递归地重新分配奖励，同时保留未贴现的剧集回报。为了研究什么构成了有用的解释，我们运用了三个互补的变体，这些变体受到哈尔彭的实际因果关系、隆布罗佐的解释简单性和多伊奇的难以改变的解释的启发。我们在两个受控的长期 RL 基准、一个公共顺序推荐基准和一个行业规模的生成推荐器上评估 EWM。在 Crafter 和 WordCraft 上，EWM 的表现明显优于 PPO 和 LaRe，当奖励延迟最严重时，EWM 的收益最大。在 KuaiRand 上，EWM 离线优于 SFT 和 LaRe，在线优于 A2C。最后，在对行业生成推荐器的离线评估中，EWM 显着提高了召回率并增加了行为代理。这些结果表明，解释可以为从延迟结果中学习提供结构化和可重复使用的信用。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-11 (2 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-10-11
