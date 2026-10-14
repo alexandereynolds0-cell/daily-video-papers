@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-14](papers/2026-10-14.md) - 6 papers
 - [2026-10-12](papers/2026-10-12.md) - 1 papers
 - [2026-10-09](papers/2026-10-09.md) - 36 papers
 - [2026-10-07](papers/2026-10-07.md) - 1 papers
@@ -168,6 +169,116 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-14 (6 papers)</b></summary>
+
+# arXiv Video Papers - 2026-10-14
+
+**Paper Count**: 6
+
+---
+
+## 1. EventLens: Event-Structure Reinforcement Learning for Video Understanding / EventLens：用于视频理解的事件结构强化学习
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16172v1](http://arxiv.org/abs/2610.16172v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16172v1)
+
+**Categories**: cs.CV, cs.AI, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent multimodal large language models (MLLMs) achieve strong results on video question answering, yet often fail to recover the temporal structure that makes a video coherent. They may merge neighboring events, miss single-event progression, or infer implausible relations across events. We study structured temporal understanding as the ability to recover event structure from visual evidence, including event boundaries, single-event progression, and multi-event relations. We argue that this gap arises from a mismatch between current post-training objectives and temporal reasoning, where caption-style supervision allows models to rely on language shortcuts rather than visual temporal grounding. To address this, we propose EventLens, a vision-centric reinforcement learning framework that learns video understanding through event-structure recovery. Instead of reconstructing captions, EventLens trains models to recover temporal structure under controlled perturbations, such as altered temporal granularity, reversed progression, and shuffled event order. We instantiate this framework with a three-level temporal ontology and derive three verifiable task families: event segmentation, progression discrimination, and multi-event relation reasoning. These tasks admit deterministic rewards, enabling task-specialized GRPO training without human preference labels or learned reward models. We further introduce multi-teacher on-policy distillation (MT-OPD) to consolidate specialized policies into a unified model. Experiments on Qwen3-VL backbones show consistent improvements on temporal grounding and event-sensitive reasoning benchmarks, while preserving general video-QA performance. Learning curves further demonstrate that EventLens achieves comparable downstream transfer with significantly reduced training cost compared to direct mixed RL optimization.
+
+最近的多模态大语言模型（MLLM）在视频问答方面取得了很好的成果，但往往无法恢复使视频连贯的时间结构。他们可能会合并相邻的事件，错过单个事件的进展，或者推断事件之间难以置信的关系。我们研究结构化时间理解，即从视觉证据中恢复事件结构的能力，包括事件边界、单事件进展和多事件关系。我们认为，这种差距是由于当前的训练后目标和时间推理之间的不匹配而产生的，其中标题式监督允许模型依赖于语言快捷方式而不是视觉时间基础。为了解决这个问题，我们提出了 EventLens，这是一个以视觉为中心的强化学习框架，可以通过事件结构恢复来学习视频理解。 EventLens 不是重建字幕，而是训练模型在受控扰动下恢复时间结构，例如改变时间粒度、反转进程和打乱事件顺序。我们用三级时间本体实例化该框架，并派生出三个可验证的任务族：事件分割、进展判别和多事件关系推理。这些任务允许确定性奖励，从而无需人类偏好标签或学习奖励模型即可实现任务专门的 GRPO 训练。我们进一步引入多教师策略蒸馏（MT-OPD），将专业策略整合为统一模型。 Qwen3-VL 主干上的实验表明，时间基础和事件敏感推理基准得到了持续改进，同时保留了一般视频 QA 性能。学习曲线进一步表明，与直接混合 RL 优化相比，EventLens 实现了可比的下游传输，同时显着降低了训练成本。
+
+</details>
+
+---
+
+## 2. Interactive 4D Volumetric Liquid Forecasting under Moving-Solid Interaction / 移动-固体相互作用下的交互式 4D 体积液体预测
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16167v1](http://arxiv.org/abs/2610.16167v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16167v1)
+
+**Categories**: cs.AI, cs.CE, cs.LG
+
+**Code**: https://github.com/jongwonryu/TIDE-TIDES.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We propose the task of Interactive 4D Volumetric Liquid Forecasting: predicting the spatiotemporal evolution of a future dense 3D liquid velocity field conditioned on how a solid object moves through it. This task provides an upstream physical forecasting primitive for systems that need to reason about motion-conditioned liquid response, including robotic liquid manipulation, digital twins, and rigid-fluid video generation. Existing works have made efforts in predicting flow around static or prescribed solid geometries and synthesizing visually plausible fluid motion. Yet these approaches provide limited coverage for interactive liquid dynamics, as they are not capable of forecasting how a moving solid induces a future full-domain liquid response. In this forecasting scenario, the hydrodynamic effect is condensed near an evolving liquid-solid interface, but the prediction target is a global spatiotemporal rollout. To address this challenge, we propose a two-level recurrent forecasting framework, TIDE/TIDES: TIDE isolates localized interface-driven forecasting, while TIDES adds transport-aware coupling and explicit stabilization to reduce accumulated rollout error. Across adapted neighboring baselines, controlled component ablations, motion/size OOD tests, and long-horizon evaluation, TIDES achieves the best forecasting performance and the ablations identify localized interaction, transport coupling, and stabilization as the key contributors. Together, our task formulation, benchmark, and TIDE/TIDES study establish a controlled foundation for moving-solid-conditioned dense liquid forecasting. The code is publicly available at https://github.com/jongwonryu/TIDE-TIDES.
+
+我们提出了交互式 4D 体积液体预测的任务：预测未来密集 3D 液体速度场的时空演化，以固体物体如何穿过它为条件。该任务为需要推理运动条件液体响应的系统提供了上游物理预测原语，包括机器人液体操纵、数字孪生和刚性流体视频生成。现有的工作致力于预测静态或规定的固体几何形状周围的流动，并合成视觉上合理的流体运动。然而，这些方法对交互式液体动力学的覆盖范围有限，因为它们无法预测移动的固体如何引起未来的全域液体响应。在这种预测场景中，流体动力学效应集中在不断变化的液-固界面附近，但预测目标是全球时空推广。为了应对这一挑战，我们提出了一个两级循环预测框架，TIDE/TIDES：TIDE 隔离本地化接口驱动的预测，而 TIDES 增加了传输感知耦合和显式稳定以减少累积的推出误差。通过调整邻近基线、受控组件消融、运动/尺寸 OOD 测试和长视野评估，TIDES 实现了最佳预测性能，并且消融将局部相互作用、传输耦合和稳定性确定为关键贡献者。我们的任务制定、基准测试和潮汐/潮汐研究共同为移动固体条件稠密液体预报奠定了受控基础。该代码可在 https://github.com/jongwonryu/TIDE-TIDES 上公开获取。
+
+</details>
+
+---
+
+## 3. Elephant in the Fridge: Constant-Memory Frame Packing for Long Video Understanding / 冰箱里的大象：用于长视频理解的恒定内存帧封装
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16118v1](http://arxiv.org/abs/2610.16118v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16118v1)
+
+**Categories**: cs.CV, cs.LG, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Hour-long videos, streaming feeds, and movie-length content are pushing vision-language models (VLMs) past their breaking point -- the standard recipe of encoding each frame into visual tokens yields sequences that grow linearly with video length, causing prohibitive memory consumption and inference latency. Existing approaches, such as token reduction and keyframe selection, shorten the token sequence but leave the O(n) scaling intact, failing to resolve the fundamental bottleneck. We propose FramePack-U, a strikingly simple, training-free frame packing framework that compresses arbitrarily long videos into a fixed size visual representation at constant memory cost. FramePack-U requires no fine-tuning or architectural modification -- it plugs directly into off-the-shelf VLMs at inference time. Inspired by FramePack from the generation literature, we propose a content-aware compression strategy for visual understanding under a fixed token budget. Specifically, FramePack-U (1) scores each frame by its semantic similarity to the text prompt and ranks frames in a diversity-driven manner, and (2) packs the selected frames at varying resolutions into a fixed-length context window. This concentrates the memory budget on frames that are both instruction-relevant and visually diverse. While FramePack-U can in theory pack arbitrarily many frames into the fixed budget, we identify an empirical instantiation that generalizes robustly across settings. Extensive experiments on LongVideoBench, MLVU, and Video-MME show that FramePack-U consistently outperforms full-resolution baselines and prior token reduction and keyframe selection methods across diverse model families, parameter scales, and frame budgets. Notably, on Qwen3.5-35B-A3B with a 128-frame budget, FramePack-U yields gains of +12.9\%, +10.6\%, and +9.7\% over the official model on the three benchmarks, respectively.
+
+长达一小时的视频、流媒体和电影长度的内容正在推动视觉语言模型 (VLM) 突破极限——将每帧编码为视觉标记的标准方法会产生随视频长度线性增长的序列，从而导致过高的内存消耗和推理延迟。现有的方法，例如令牌缩减和关键帧选择，缩短了令牌序列，但保持 O(n) 缩放不变，未能解决根本瓶颈。我们提出了 FramePack-U，这是一种非常简单、无需训练的帧打包框架，可以以恒定的内存成本将任意长的视频压缩为固定大小的视觉表示。 FramePack-U 不需要微调或架构修改——它在推理时直接插入现成的 VLM。受到生成文献中 FramePack 的启发，我们提出了一种内容感知压缩策略，用于在固定令牌预算下进行视觉理解。具体来说，FramePack-U (1) 根据每个帧与文本提示的语义相似性对每个帧进行评分，并以多样性驱动的方式对帧进行排名，(2) 将不同分辨率的选定帧打包到固定长度的上下文窗口中。这将内存预算集中在与指令相关且视觉上多样化的帧上。虽然 FramePack-U 理论上可以将任意多的帧打包到固定预算中，但我们确定了一个可以在设置中稳健推广的经验实例。 LongVideoBench、MLVU 和 Video-MME 上的大量实验表明，FramePack-U 在不同的模型系列、参数规模和帧预算中始终优于全分辨率基线以及先前的标记缩减和关键帧选择方法。值得注意的是，在具有 128 帧预算的 Qwen3.5-35B-A3B 上，FramePack-U 在三个基准测试中分别比官方模型获得 +12.9\%、+10.6\% 和 +9.7\% 的增益。
+
+</details>
+
+---
+
+## 4. Frequency-Step Cache: Separating Synchronization and Repair for Efficient Autoregressive Video Diffusion / 频率步长缓存：分离同步和修复以实现高效的自回归视频扩散
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15922v1](http://arxiv.org/abs/2610.15922v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15922v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive (AR) video generation enables long-horizon synthesis but requires repeated forward passes through large diffusion transformers. Training-free caching reduces this cost by reusing intermediate computation, yet existing controllers often couple two decisions: when to synchronize the cache exactly and how much computation to repair between synchronizations. We introduce Frequency-Step Cache (FSC), which separates these roles. FSC schedules exact full-computation anchors on a dense-to-sparse trajectory, while a lightweight latent-space risk based on frequency-resolved drift and token age controls inter-anchor repair through whole-step replay, selective token recomputation, or full repair. On SkyReels-V2, whole-step reuse provides most of the acceleration, while selective token computation is most effective as fidelity repair. A controlled ablation shows that using one reactive signal for both synchronization and repair reduces fidelity at matched latency, with the same separation advantage observed on FramePack and Matrix-Game. Across multiple autoregressive video backbones, FSC improves speed-quality trade-offs. On SkyReels-V2, FSC-Speed reaches 2.36x speedup versus MotionCache's 2.275x while improving SSIM by 0.019 and PSNR by 0.5 dB. At MotionCache-matched speed, FSC-Quality improves SSIM by 0.031 and PSNR by 1.0 dB and lowers LPIPS by 0.024. Without retuning, FSC-Quality transfers to SkyReels-V2 14B at 2.12x speedup versus 1.79x for MotionCache.
+
+自回归 (AR) 视频生成可实现长视野合成，但需要通过大型扩散变压器重复前向传递。免训练缓存通过重用中间计算来降低这种成本，但现有控制器通常结合两个决策：何时精确同步缓存以及在同步之间修复多少计算。我们引入了频率步长缓存（FSC），它将这些角色分开。 FSC 在从稠密到稀疏的轨迹上安排精确的全计算锚点，而基于频率解析漂移和令牌年龄的轻量级潜在空间风险通过全步重放、选择性令牌重新计算或完全修复来控制锚点间修复。在 SkyReels-V2 上，全步骤重用提供了大部分加速，而选择性令牌计算作为保真度修复最有效。受控消融表明，使用一个反应信号进行同步和修复会降低匹配延迟时的保真度，并且在 FramePack 和 Matrix-Game 上观察到相同的分离优势。在多个自回归视频主干上，FSC 改善了速度与质量的权衡。在 SkyReels-V2 上，FSC-Speed 的加速比 MotionCache 的 2.275 倍提高了 2.36 倍，同时 SSIM 提高了 0.019，PSNR 提高了 0.5 dB。在与 MotionCache 匹配的速度下，FSC-Quality 将 SSIM 提高了 0.031，将 PSNR 提高了 1.0 dB，并将 LPIPS 降低了 0.024。无需重新调整，FSC-Quality 即可以 2.12 倍的加速传输到 SkyReels-V2 14B，而 MotionCache 则为 1.79 倍。
+
+</details>
+
+---
+
+## 5. Gen Through the Lens: Camera-Controllable Video Generation via Cross-Coordinate Conditioning Fusion / Gen Through the Lens：通过跨坐标调节融合生成相机控制的视频
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15900v1](http://arxiv.org/abs/2610.15900v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15900v1)
+
+**Categories**: cs.CV, cs.AI, cs.GR, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present Gen Through the Lens, a camera-controllable image-to-video generation framework that synthesizes videos from a given reference image while enabling realistic and physically consistent camera operations. Unlike previous models that treat camera motion as abstract conditioning or rely on a single coordinate system, our approach explicitly decomposes and fuses control signals across three coordinate spaces: the camera coordinate (modeled by intrinsic parameters), the world coordinate (represented by spatial geometry hints), and the object coordinate (described by 3D bounding boxes of target subjects). Through cross-coordinate conditioning fusion, these heterogeneous cues are unified to guide the generative process, enabling precise control of camera motion, focus, and framing while preserving temporal and spatial coherence. Extensive experiments demonstrate that our method produces controllable and visually consistent results across diverse camera operations, outperforming existing approaches in both realism and editability.
+
+我们推出了 Gen Through the Lens，这是一种相机可控的图像到视频生成框架，可以从给定的参考图像合成视频，同时实现逼真且物理一致的相机操作。与之前将相机运动视为抽象条件或依赖于单个坐标系的模型不同，我们的方法明确地分解并融合了三个坐标空间的控制信号：相机坐标（由内在参数建模）、世界坐标（由空间几何提示表示）和对象坐标（由目标主体的 3D 边界框描述）。通过跨坐标调节融合，这些异质线索被统一起来以指导生成过程，从而能够精确控制相机运动、焦点和取景，同时保持时间和空间的一致性。大量的实验表明，我们的方法在不同的相机操作中产生了可控且视觉一致的结果，在真实性和可编辑性方面都优于现有方法。
+
+</details>
+
+---
+
+## 6. Hand2Robot: Object-Centric 4D Hand Reconstruction from Human Demonstrations for Robotics / Hand2Robot：根据机器人技术的人体演示进行以对象为中心的 4D 手部重建
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15769v1](http://arxiv.org/abs/2610.15769v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15769v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human demonstrations can capture task-relevant manipulation without using the target robot, but the recorded hand motions cannot directly serve as robot action supervision. Hand reconstruction and motion retargeting provide a direct route to such supervision, yet recovering hand motion alone does not ensure physically consistent hand-object interactions. To address this issue, we introduce Hand2Robot, an object-centric 4D hand reconstruction framework for robot policy post-training. Given videos of humans performing the target task, Hand2Robot extracts interaction clips, reconstructs object geometry, and generates robot action supervision through hand-object interaction optimization and motion retargeting. For object tracking, we combine observation confidence with temporal motion constraints to select a globally consistent object pose trajectory from per-frame pose candidates. For hand refinement, we use object geometry and motion as a reference and combine staged 2D alignment with object-local contact constraints to refine hand trajectories and finger joint configurations. Experiments on DexYCB and HO3D-v3 show improved object pose accuracy and hand-object interaction quality. Experiments on three real-robot dexterous manipulation tasks further show that reconstructed and retargeted human demonstrations can effectively supplement limited robot data for target-task policy post-training.
+
+人类演示可以在不使用目标机器人的情况下捕获任务相关的操作，但记录的手部动作不能直接用作机器人动作监督。手部重建和运动重定向提供了这种监督的直接途径，但单独恢复手部运动并不能确保手部与物体交互的物理一致性。为了解决这个问题，我们引入了 Hand2Robot，一个以对象为中心的 4D 手重建框架，用于机器人策略后训练。给定人类执行目标任务的视频，Hand2Robot 提取交互片段，重建对象几何形状，并通过手部对象交互优化和运动重定向生成机器人动作监督。对于对象跟踪，我们将观察置信度与时间运动约束相结合，从每帧候选姿势中选择全局一致的对象姿势轨迹。对于手部细化，我们使用对象几何和运动作为参考，并将分阶段 2D 对齐与对象局部接触约束相结合，以细化手部轨迹和手指关节配置。 DexYCB 和 HO3D-v3 上的实验表明，物体姿势精度和​​手-物体交互质量得到了提高。对三个真实机器人灵巧操作任务的实验进一步表明，重建和重新定位的人类演示可以有效补充目标任务策略训练后的有限机器人数据。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-12 (1 papers)</b></summary>
 
 # arXiv Video Papers - 2026-10-12
