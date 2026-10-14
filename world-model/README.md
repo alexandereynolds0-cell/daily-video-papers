@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-14](papers/2026-10-14.md) - 5 papers
 - [2026-10-12](papers/2026-10-12.md) - 2 papers
 - [2026-10-11](papers/2026-10-11.md) - 2 papers
 - [2026-10-09](papers/2026-10-09.md) - 30 papers
@@ -166,6 +167,98 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-14 (5 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-10-14
+
+**Paper Count**: 5
+
+---
+
+## 1. Directional Pullback Regularization for Long-Horizon Rollout of Latent World Models in Autonomous Driving / 自动驾驶潜在世界模型长期推出的定向回调正则化
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16139v1](http://arxiv.org/abs/2610.16139v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16139v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learned world models for autonomous driving operate in unconstrained latent spaces, yet the physical systems they represent are governed by strict non-holonomic constraints: ground vehicles cannot realize instantaneous pure lateral motion. We study long-horizon latent rollout modeling for autonomous driving and ask whether rollout quality can be improved by assigning a motion-aware geometry to latent transitions, rather than by redesigning the predictor architecture. Starting from an unconstrained latent rollout baseline, we introduce Directional Pullback Regularization (DPR), a training time method that defines a kinematics-aware anisotropic Riemannian metric in decoded state space and pulls it back through the decoder Jacobian to the latent manifold. The resulting latent-space metric assigns higher cost to latent directions that decode to lateral vehicle motion, while preserving the original encoder-dynamics-decoder backbone. This yields a clean three-way comparison among an Unconstrained Latent Rollout model (ULR), an Euclidean Pullback Regularization ablation (EPR), and the full directional method (DPR). We evaluate all models on open-loop ego-motion rollout over a common 10-second test horizon, using training rollout lengths of 1, 3, 5, and 10 steps. Across all four training regimes, DPR achieves lower 10-second final displacement error than both ULR and EPR. The strongest relative accuracy gain appears for models trained with 3-step rollout supervision, where DPR reduces the 10-second final displacement error by approximately 44 percent relative to ULR. The strongest overall control-relevant tradeoff is obtained for longer rollout-trained models, especially at 10 steps, where DPR simultaneously improves displacement error, lateral motion consistency, and forward motion preservation relative to both ULR and EPR.
+
+自动驾驶的学习世界模型在不受约束的潜在空间中运行，但它们所代表的物理系统受到严格的非完整约束的控制：地面车辆无法实现瞬时纯横向运动。我们研究了自动驾驶的长视野潜在推出模型，并询问是否可以通过将运动感知几何体分配给潜在转换来提高推出质量，而不是通过重新设计预测器架构。从无约束的潜在推出基线开始，我们引入了方向回拉正则化（DPR），这是一种训练时间方法，它在解码状态空间中定义运动学感知的各向异性黎曼度量，并将其通过解码器雅可比行列式拉回到潜在流形。由此产生的潜在空间度量将更高的成本分配给解码为车辆横向运动的潜在方向，同时保留原始的编码器动态解码器主干。这在无约束潜在推出模型 (ULR)、欧几里得回拉正则化消融 (EPR) 和全方向方法 (DPR) 之间产生了清晰的三向比较。我们使用 1、3、5 和 10 步的训练推出长度，在常见的 10 秒测试范围内评估开环自我运动推出的所有模型。在所有四种训练方案中，DPR 实现的 10 秒最终位移误差均低于 ULR 和 EPR。通过 3 步推出监督训练的模型出现了最强的相对精度增益，其中 DPR 相对于 ULR 将 10 秒最终位移误差减少了约 44%。对于较长的 rollout 训练模型，尤其是在 10 步时，获得了最强的总体控制相关权衡，其中 DPR 相对于 ULR 和 EPR 同时改善了位移误差、横向运动一致性和前向运动保持。
+
+</details>
+
+---
+
+## 2. Vision: "What Don't I Know About User's Preferences?" How Uncertainty Estimation Improves Proactive Assistant Alignment / 愿景：“关于用户偏好，我不知道什么？”不确定性估计如何改进主动助理对准
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15948v1](http://arxiv.org/abs/2610.15948v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15948v1)
+
+**Categories**: cs.AI, cs.HC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Proactive Smart Assistants (PSAs) increasingly use general knowledge, learned patterns from group-level data, patterns from individual user's data, and recent sensor observations to anticipate which action a user may prefer. Existing systems typically select actions from predicted user preference likelihoods, but these likelihoods alone do not reveal how reliable the prediction is, which evidence supports it, or why ambiguity remains. In this vision paper, we argue that uncertainty estimation can provide this missing information and substantially change appropriate downstream behavior. Using the example of a home assistant, we introduce the questions that uncertainty estimation aims to answer, i.e. how sure is the assistant about the predicted preference likelihood, whether the confidence come from group-level assumptions or individual's data, and whether likelihood ambiguity reflect the user's intrinsic preference variability or insufficient data for the particular situation. We further introduce uncertainty estimation applications in neighboring domains, such as human trajectory prediction, personalized activity recognition, information-collection, and model-based control. Finally, we draw on insights from neighboring domains to envision how future uncertainty-aware proactive assistants may address key challenges in proactive interaction.
+
+主动智能助理 (PSA) 越来越多地使用常识、从群体级数据中学习的模式、从单个用户的数据中学习的模式以及最近的传感器观察结果来预测用户可能喜欢的操作。现有系统通常根据预测的用户偏好可能性来选择操作，但这些可能性本身并不能揭示预测的可靠性、哪些证据支持它，或者为什么仍然存在模糊性。在这篇愿景论文中，我们认为不确定性估计可以提供这种缺失的信息并显着改变适当的下游行为。以家庭助理为例，我们介绍了不确定性估计旨在回答的问题，即助理对预测偏好可能性的确定性如何，置信度是否来自群体层面的假设或个人数据，以及可能性模糊性是否反映了用户的内在偏好变异性或特定情况下的数据不足。我们进一步介绍了邻近领域的不确定性估计应用，例如人体轨迹预测、个性化活动识别、信息收集和基于模型的控制。 Finally, we draw on insights from neighboring domains to envision how future uncertainty-aware proactive assistants may address key challenges in proactive interaction.
+
+</details>
+
+---
+
+## 3. Google Earth AI Geospatial Reasoning Agent: Capabilities and a Systematic Evaluation / Google Earth AI 地理空间推理代理：能力和系统评估
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15750v1](http://arxiv.org/abs/2610.15750v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15750v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Google Earth AI is a family of geospatial AI models, together with an agent that orchestrates them. We present this agent, Google Earth AI's Geospatial Reasoning agent (GRA), a Gemini-powered research system that combines geospatial data sources, foundation models, and tools to answer questions about our planet. GRA organizes these into modular domain skills and pairs them with upfront geospatial planning to decompose complex queries into multi-stage workflows. Evaluating such systems is hard: real-world problems admit multiple valid workflows, require data discovery across large catalogs, and rely on evolving ground truth. We introduce two benchmarks and release their development splits. GeoExpertQueries poses complex analytical problems grounded in practitioner use cases and refined by geospatial experts; each is paired with a consensus golden workflow from three independent experts and scored by a human-validated, tool-agnostic autorater. GeoKTools consists of templated queries with deterministic reference solvers that systematically vary the number of required tool types. We also use two external benchmarks, CBGB and UnivEARTH; the latter we find to be saturated. To isolate the contribution of GRA's tools and its agentic orchestration, we compare four configurations, each with Gemini 3.1 Pro and 3.8 Flash: a standalone LLM, the LLM with basic tools, the LLM with GRA's skills and tools but without its upfront planning and execution guidance, and GRA itself. With at most basic tools, an advanced model recovers much of the answer on templated queries but satisfies only a small fraction of the expert workflows on open-ended problems; GRA performs well on both. The largest step comes from GRA's skills and tools; on open-ended problems, its planning and execution guidance add a further gain with Gemini 3.8 Flash, letting Flash match or exceed Pro at lower cost.
+
+Google Earth AI 是一系列地理空间人工智能模型，以及协调它们的代理。我们推出了这个代理，即 Google Earth AI 的地理空间推理代理 (GRA)，这是一个由 Gemini 驱动的研究系统，它结合了地理空间数据源、基础模型和工具来回答有关我们星球的问题。 GRA 将这些组织成模块化领域技能，并将它们与前期地理空间规划配对，将复杂查询分解为多阶段工作流程。评估此类系统很困难：现实世界的问题需要多个有效的工作流程，需要跨大型目录的数据发现，并依赖于不断发展的基本事实。我们介绍了两个基准并发布了它们的开发划分。 GeoExpertQueries 提出了基于从业者用例并由地理空间专家改进的复杂分析问题；每个都与三位独立专家的共识黄金工作流程配对，并由经过人工验证、与工具无关的自动评分器进行评分。 GeoKTools 由模板化查询和确定性参考解算器组成，可系统地改变所需工具类型的数量。我们还使用两个外部基准测试，CBGB 和 UnivEARTH；我们发现后者已经饱和。为了区分 GRA 工具及其代理编排的贡献，我们比较了四种配置，每种配置均采用 Gemini 3.1 Pro 和 3.8 Flash：独立的 LLM、具有基本工具的 LLM、具有 GRA 技能和工具但没有前期规划和执行指导的 LLM，以及 GRA 本身。使用最基本的工具，高级模型可以恢复模板化查询的大部分答案，但只能满足开放式问题的一小部分专家工作流程； GRA 在这两方面都表现良好。最大的一步来自于GRA的技能和工具；在开放式问题上，其规划和执行指导为 Gemini 3.8 Flash 增添了进一步的增益，让 Flash 以更低的成本匹配或超过 Pro。
+
+</details>
+
+---
+
+## 4. StreamingWAM: Streaming World Action Modeling via Chunk-Wise Staircase Flow Matching / StreamingWAM：通过分块楼梯流匹配进行流世界动作建模
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15585v1](http://arxiv.org/abs/2610.15585v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15585v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs), often built upon pretrained video-generation world models, have emerged as a promising framework for general-purpose and open-ended robot control. However, their real-world deployment often suffers from discontinuous and jerky execution. Existing methods typically address this issue by either improving inference efficiency or enhancing action continuity across prediction chunks, without jointly addressing both challenges. To bridge this gap, we propose StreamingWAM, a streaming-diffusion framework for WAM-based robot control. StreamingWAM combines a noise ladder for chunk-wise action prediction, a prefix rollout module for cross-chunk continuity, and dense video-history memory for temporally consistent conditioning. Experiments on LIBERO, LIBERO-Plus, RoboTwin 2.0, and real-world robotic tasks demonstrate that StreamingWAM improves action continuity across static and dynamic settings, achieving competitive performance while reducing steady-state replanning latency to 72.9 ms in simulation and 57.3 ms on the real robot. The method also produces smoother action transitions, while the streaming staircase reduces sensitivity to the execution horizon K.
+
+世界动作模型（WAM）通常建立在预先训练的视频生成世界模型之上，已成为通用和开放式机器人控制的有前途的框架。然而，它们在现实世界中的部署经常会受到执行不连续和不稳定的影响。现有方法通常通过提高推理效率或增强预测块之间的动作连续性来解决这个问题，而不是共同解决这两个挑战。为了弥补这一差距，我们提出了 StreamingWAM，这是一种用于基于 WAM 的机器人控制的流扩散框架。 StreamingWAM 结合了用于块级动作预测的噪声阶梯、用于跨块连续性的前缀推出模块以及用于时间一致调节的密集视频历史内存。对 LIBERO、LIBERO-Plus、RoboTwin 2.0 和现实世界机器人任务的实验表明，StreamingWAM 提高了静态和动态设置中的动作连续性，实现了具有竞争力的性能，同时将模拟中的稳态重新规划延迟降低至 72.9 毫秒，在真实机器人上降低至 57.3 毫秒。该方法还产生更平滑的动作转换，而流式阶梯降低了对执行范围 K 的敏感度。
+
+</details>
+
+---
+
+## 5. Analytic Robot Self-Model: Learning Screw-Axis Kinematics for Rendering and Model-Based Control / 分析机器人自模型：学习用于渲染和基于模型的控制的螺杆轴运动学
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15558v1](http://arxiv.org/abs/2610.15558v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15558v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual self-modelling lets robots learn body models from observations, but such models usually encode kinematics implicitly rather than exposing metric joint parameters for computation and control. Moreover, a good fit to images does not by itself establish accurate kinematics. Here we present an explicit analytic robot self-model that requires neither deformation networks nor URDF/CAD templates. Multi-view images and joint readings establish Gaussian appearance and provide motion evidence for rigid link assignments, whereas sparse end-effector poses independently identify metric screw axes. The resulting closed-form forward kinematics and analytic Jacobian can be evaluated beyond the fitting ranges. We validate the model on a simulated seven-axis arm, a simulated twelve-joint quadruped and a real six-axis arm. In simulation, it achieves millimetre-level reaching and pick-and-place, as well as closed-loop quadruped walking. On the real arm, it renders held-out configurations, predicts end-effector positions with a median error of 6.4 mm, compared with 11.7 mm for a calibrated nominal model, and supports reaching with external marker feedback. A controlled comparison shows that image fit alone is not enough: two Panda models differing only in their joint axes are 0.54 dB apart in PSNR, yet their end-effector prediction errors differ 13.7-fold.
+
+视觉自建模让机器人从观察中学习身体模型，但此类模型通常隐式编码运动学，而不是暴露度量关节参数以进行计算和控制。此外，与图像的良好拟合本身并不能建立精确的运动学。在这里，我们提出了一个显式分析机器人自模型，既不需要变形网络，也不需要 URDF/CAD 模板。多视图图像和关节读数建立高斯外观并为刚性链接分配提供运动证据，而稀疏末端执行器则独立识别公制螺杆轴。由此产生的封闭式正向运动学和解析雅可比行列式可以在拟合范围之外进行评估。我们在模拟七轴手臂、模拟十二关节四足动物和真实六轴手臂上验证了模型。在仿真中，它实现了毫米级的到达和取放以及闭环四足行走。在真实手臂上，它呈现伸出配置，预测末端执行器位置，中位误差为 6.4 毫米，而校准标称模型的中位误差为 11.7 毫米，并支持通过外部标记反馈进行触及。受控比较表明，仅靠图像拟合是不够的：仅关节轴不同的两个 Panda 模型的 PSNR 相差 0.54 dB，但它们的末端执行器预测误差却相差 13.7 倍。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-12 (2 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-10-12
