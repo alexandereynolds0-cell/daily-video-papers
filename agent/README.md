@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-14](papers/2026-10-14.md) - 26 papers
 - [2026-10-12](papers/2026-10-12.md) - 6 papers
 - [2026-10-11](papers/2026-10-11.md) - 6 papers
 - [2026-10-09](papers/2026-10-09.md) - 11 papers
@@ -180,6 +181,438 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-14 (26 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-10-14
+
+**Paper Count**: 26
+
+---
+
+## 1. AutoNovo: Agentic Program Search Discovers Transferable Nucleic Acid Design Algorithms / AutoNovo：代理程序搜索发现可转移核酸设计算法
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16232v1](http://arxiv.org/abs/2610.16232v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16232v1)
+
+**Categories**: cs.LG, cs.AI, q-bio.QM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In-silico optimization of nucleic acids relies on predictive oracles that imperfectly capture biological function, so sequences optimized against one model may exploit model-specific artifacts and fail to generalize to independent models. Recent studies have shown that not all designers generalize equally well to independent models. In this work, we use agentic program search to iteratively propose, execute, evaluate, and revise code for nucleic-acid designers. We describe the successful strategies used to prompt the search. AutoNovo designers achieved the best observed mean among the evaluated methods on 3/3 DNA-design tasks in terms of in-silico performance, and 6/6 transfer tasks in terms of independent models. The designers come from a family of discovered nucleic acid designers rather than a single universal best designer. We plan to release the resulting designers. These results are the first steps in creating nucleic acid designers that maximize cross-model generalization, and thus improving the odds that in-silico designed sequences reflect real biology.
+
+核酸的计算机优化依赖于不能完美捕获生物功能的预测预言，因此针对一种模型优化的序列可能会利用模型特定的伪影，而无法推广到独立模型。最近的研究表明，并非所有设计师都能同样很好地推广独立模型。在这项工作中，我们使用代理程序搜索来迭代地为核酸设计者提出、执行、评估和修改代码。我们描述了用于促进搜索的成功策略。 AutoNovo 设计人员在计算机性能方面的 3/3 DNA 设计任务和独立模型方面的 6/6 转移任务的评估方法中实现了最佳观察平均值。这些设计者来自一个被发现的核酸设计者家族，而不是单一的通用最佳设计者。我们计划发布最终的设计师。这些结果是创建最大化跨模型泛化的核酸设计器的第一步，从而提高了计算机设计的序列反映真实生物学的可能性。
+
+</details>
+
+---
+
+## 2. Look Back to Move Forward: Learning to Revisit for Agentic Compositional Image Generation / 回顾过去，继续前进：学习重新审视代理组合图像生成
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16224v1](http://arxiv.org/abs/2610.16224v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16224v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-to-image models have made remarkable progress in visual fidelity and instruction following, yet complex compositional generation remains challenging. Existing agentic approaches address this limitation through iterative generation and editing, adapting their actions based on interaction history. However, they typically fix the continuation state (i.e., the image from which refinement proceeds) to the latest image. Since iterative editing is not necessarily monotonic, the agent may continue refining from the latest image even when it has already degraded. In this work, we introduce GenRevisit, an agentic framework that extends action selection to joint continuation-state and action selection. The agent can not only use interaction history to adjust editing instructions but also select an image candidate to edit, jointly deciding where to continue from and how to refine. We train GenRevisit with SFT followed by agentic reinforcement learning. To address the coarse credit assignment of final outcome reward in GRPO, which assigns the same trajectory-level advantage to all actions, we further propose Normalized Action Credit Assignment (NACA) to redistribute positive advantage according to each action's contribution to reducing the remaining objective. On GenEval2, GenRevisit achieves GM scores of 84.3 and 74.4 with Qwen-Image-2512 and Z-Image-Turbo, surpassing the strongest baselines using the same generators by 12.7 and 10.9 points respectively. GenRevisit achieves state-of-the-art performance on GenEval, GenEval++, and GenEval2 among baselines.
+
+文本到图像模型在视觉保真度和指令遵循方面取得了显着进步，但复杂的构图生成仍然具有挑战性。现有的代理方法通过迭代生成和编辑来解决这一限制，并根据交互历史来调整其动作。然而，它们通常将连续状态（即进行细化的图像）固定为最新图像。由于迭代编辑不一定是单调的，因此即使最新图像已经降级，代理也可以继续从最新图像中进行优化。在这项工作中，我们引入了 GenRevisit，一个代理框架，它将动作选择扩展到联合延续状态和动作选择。代理不仅可以使用交互历史来调整编辑指令，还可以选择要编辑的图像候选，共同决定从哪里继续以及如何细化。我们使用 SFT 训练 GenRevisit，然后进行代理强化学习。为了解决 GRPO 中最终结果奖励的粗略信用分配问题，即为所有行动分配相同的轨迹级别优势，我们进一步提出标准化行动信用分配（NACA），根据每个行动对减少剩余目标的贡献来重新分配积极优势。在 GenEval2 上，GenRevisit 使用 Qwen-Image-2512 和 Z-Image-Turbo 获得了 84.3 和 74.4 的 GM 分数，分别超过使用相同生成器的最强基线 12.7 和 10.9 分。 GenRevisit 在 GenEval、GenEval++ 和 GenEval2 基线上实现了最先进的性能。
+
+</details>
+
+---
+
+## 3. Think Before You Speak: Enabling Training-Free Latent Communication Between Language Models / 说话前先思考：实现语言模型之间的免训练潜在通信
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16165v1](http://arxiv.org/abs/2610.16165v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16165v1)
+
+**Categories**: cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) have demonstrated remarkable capabilities in solving complex tasks in coding, mathematical logic, and iterative reasoning, especially by coordinating effectively within multi-agent systems (MAS). However, language agents traditionally communicate via text exchange, which introduces a bottleneck in information transfer and adds prefill latency for downstream agents. Recent work proposes that directly sharing the key-value (KV) cache between language models can enable efficient latent collaboration, entirely bypassing standard text-based communication. To enable latent communication between heterogeneous models of different sizes, prior work introduces trained fusion adapters for each model pair, which limits practical deployment. We introduce CacheFuse, a training-free method which demonstrates that augmenting a downstream model with an upstream model's KV cache using linear interpolation consistently enables superior performance than the standalone downstream model can achieve. We systematically analyze CacheFuse across four reasoning and knowledge benchmarks and demonstrate up to 8.6 percentage points higher accuracy compared to single-model baselines and up to 12.2x TTFT speedup compared to text-based communication in multi-model inference.
+
+大型语言模型 (LLM) 在解决编码、数学逻辑和迭代推理等复杂任务方面表现出了卓越的能力，特别是通过在多智能体系统 (MAS) 内进行有效协调。然而，语言代理传统上通过文本交换进行通信，这引入了信息传输的瓶颈，并增加了下游代理的预填充延迟。最近的工作提出，在语言模型之间直接共享键值（KV）缓存可以实现高效的潜在协作，完全绕过标准的基于文本的通信。为了实现不同规模的异构模型之间的潜在通信，先前的工作为每个模型对引入了经过训练的融合适配器，这限制了实际部署。我们引入了 CacheFuse，这是一种免训练方法，它证明使用线性插值通过上游模型的 KV 缓存增强下游模型始终能够实现比独立下游模型更优越的性能。我们系统地分析了 CacheFuse 的四个推理和知识基准，结果表明，与单模型基线相比，准确度提高了 8.6 个百分点，与多模型推理中基于文本的通信相比，TTFT 速度提高了 12.2 倍。
+
+</details>
+
+---
+
+## 4. Unravel: Recovering an Interactive 3D Scene from a Single Image / Unravel：从单个图像恢复交互式 3D 场景
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16146v1](http://arxiv.org/abs/2610.16146v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16146v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present Unravel, a training-free framework that turns a single image into an interactive 3D scene, where every object is an independent and movable asset. Existing generators either produce one entangled geometry in which no object can be moved, or predict all objects in one feed-forward pass, where a wrong guess cannot be detected or repaired. Unravel instead takes a different approach: it first takes the scene apart, and then puts it back together. Starting from the input image, an agentic harness that iteratively peels the image layer by layer, and adopts point cloud as major modality for spatial relationship recovery. Specifically, a vision-language model plans which objects are fully visible, an image editor removes them and restores the occluded regions. Every edit is verified before being incorporated into the reconstruction. This process gradually turns occluded parts of the scene into direct observation, allowing objects to be reconstructed when they are best exposed rather than hallucinated from the original image alone. The scene is then rebuilt in reverse removal order, so that the supporting objects are naturally placed before the objects they support. Since a single-view image only reveals part of an object, we treat the observed points as a lower bound on its size: an asset may grow to cover its points, but can not shrink away from them. Finally, we physically settle the reconstructed scene to remove floating objects and interpenetrations, followed by an agentic audit that corrects remaining placement errors. Extensive experiments on diverse indoor scenes show that Unravel recovers more objects, places them more faithfully, and produces scenes that are more physically-plausible than existing methods.
+
+我们推出了 Unravel，这是一个无需培训的框架，可将单个图像转换为交互式 3D 场景，其中每个对象都是独立且可移动的资产。现有的生成器要么生成一种纠缠几何形状，其中任何对象都无法移动，要么在一次前馈传递中预测所有对象，其中无法检测或修复错误的猜测。相反，Unravel 采用了不同的方法：它首先将场景分开，然后将其重新组合在一起。从输入图像开始，一种代理工具，逐层迭代地剥离图像，并采用点云作为空间关系恢复的主要模式。具体来说，视觉语言模型计划哪些对象是完全可见的，图像编辑器将其删除并恢复被遮挡的区域。每个编辑在纳入重建之前都会经过验证。这个过程逐渐将场景中被遮挡的部分转变为直接观察，从而使物体能够在最佳曝光时被重建，而不是仅仅从原始图像中产生幻觉。然后以相反的移除顺序重建场景，以便支撑对象自然地放置在它们支撑的对象之前。由于单视图图像仅显示对象的一部分，因此我们将观察到的点视为其大小的下限：资产可能会增长以覆盖其点，但不能缩小远离它们。最后，我们对重建的场景进行物理处理，以去除浮动物体和相互渗透，然后进行代理审核，纠正剩余的放置错误。对不同室内场景的大量实验表明，Unravel 可以恢复更多对象，更忠实地放置它们，并生成比现有方法更符合物理合理性的场景。
+
+</details>
+
+---
+
+## 5. Scaling Multi-Agent Intelligence with Substrate-Centric Coordination / 通过以底层为中心的协调来扩展多智能体智能
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16120v1](http://arxiv.org/abs/2610.16120v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16120v1)
+
+**Categories**: cs.CL, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing large language model (LLM) based multi-agent systems have been shown to scale poorly, and we identify three problems: reading burden that grows with the group, useful information diluted by shared work of unknown quality, and fragility to failed agents. We argue that the problems are largely due to agent-centric designs: the coordination structure is wired into fixed workflows, central coordinators, or peer-to-peer messaging, and recent blackboard-style methods that move the coordination into a shared medium relieve only the last problem. To close the gaps, we build ScaleMAS, where asynchronous agents interact with a shared datastore of linked messages via three operations: publishing messages with optional references to earlier ones that they build on, searching for messages by content, and visiting messages by address. Search returns at most $k$ messages, so an agent's read stays bounded at any group size; results are ranked by relevance and by how often they are cited, which we find to be an effective proxy for quality; and messages persist after their producers leave, so the group carries on when individual agents fail. Across four agentic tasks, ScaleMAS outperforms agent-centric and blackboard-style baselines at lower inference compute, continues to scale up to 128 agents, and tolerates losing agents midway.
+
+现有的基于大语言模型（LLM）的多智能体系统已被证明扩展性很差，我们发现了三个问题：随着群体的增长而增加的阅读负担，未知质量的共享工作稀释了有用的信息，以及失败的智能体的脆弱性。我们认为，这些问题很大程度上是由于以代理为中心的设计造成的：协调结构被连接到固定的工作流程、中央协调器或点对点消息传递中，而最近将协调转移到共享介质中的黑板式方法只能缓解最后一个问题。为了弥补这一差距，我们构建了 ScaleMAS，其中异步代理通过三个操作与链接消息的共享数据存储进行交互：发布消息并可选引用其构建的早期消息、按内容搜索消息以及按地址访问消息。搜索最多返回 $k$ 条消息，因此代理的读取不受任何组大小的限制；结果按相关性和引用频率进行排名，我们发现这是质量的有效代表；并且消息在其生产者离开后仍然存在，因此当个别代理失败时，该组会继续运行。在四个代理任务中，ScaleMAS 在较低的推理计算下优于以代理为中心和黑板式基线，继续扩展到 128 个代理，并容忍中途丢失代理。
+
+</details>
+
+---
+
+## 6. Beyond Perfect Teammates: Multi-Agent Collaboration with Unreliable Colleagues / 超越完美的队友：与不可靠同事的多智能体协作
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16117v1](http://arxiv.org/abs/2610.16117v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16117v1)
+
+**Categories**: cs.AI, cs.MA
+
+**Code**: https://github.com/iNLP-Lab/UnCoBench.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM-based multi-agent collaboration is increasingly used to solve complex tasks by dividing work among specialized agents and integrating complementary expertise. Yet existing systems and evaluations largely rest on an implicit perfect-colleague assumption: collaborators provide correct and complete information and respond promptly to requests. In realistic teamwork, however, collaborators may return information that does not answer the intended question, provide insufficient detail to support a decision, or fail to respond to a request. To separate task-solving competence from the ability to recover an unreliable evidence-gathering process, we introduce the Unreliable Colleagues Benchmark (UnCoBench), which organizes behavioral failures through Misaligned, Incomplete, and Missed settings. The main agent need to verify contextual correctness, diagnose information gap and track unresolved dependencies in order to obtain the correct evidence for solving the task. We also introduce a verifiable and scalable automated generation pipeline that pairs LLM-based scenario generation with executable checks of answer uniqueness and role necessity. Results across ten models show that similar reliable-setting performance can result in different robustness to unreliable evidence. Trace analysis reveals frequent omissions of corrective follow-up, and the recovery behavior involves inefficient waiting and redundant queries. These findings show that robust collaboration requires not only sound reasoning, but also targeted action to diagnose evidence failures, recover relevant information, and integrate it into decisions. Our data and source code are available at https://github.com/iNLP-Lab/UnCoBench.
+
+基于法学硕士的多智能体协作越来越多地用于通过在专业智能体之间划分工作并集成互补的专业知识来解决复杂的任务。然而，现有的系统和评估在很大程度上依赖于隐含的完美同事假设：合作者提供正确和完整的信息并及时响应请求。然而，在现实的团队合作中，协作者可能返回的信息无法回答预期的问题，提供的详细信息不足以支持决策，或者无法响应请求。为了将解决任务的能力与恢复不可靠的证据收集过程的能力分开，我们引入了不可靠的同事基准（UnCoBench），它通过错位、不完整和错过的设置来组织行为失败。主代理需要验证上下文的正确性、诊断信息差距并跟踪未解决的依赖关系，以获得解决任务的正确证据。我们还引入了一个可验证且可扩展的自动生成管道，它将基于 LLM 的场景生成与对答案唯一性和角色必要性的可执行检查相结合。十个模型的结果表明，相似的可靠设置性能可能会导致对不可靠证据的鲁棒性不同。跟踪分析揭示了纠正后续行动的频繁遗漏，并且恢复行为涉及低效等待和冗余查询。这些发现表明，强有力的协作不仅需要合理的推理，还需要有针对性的行动来诊断证据失败、恢复相关信息并将其整合到决策中。我们的数据和源代码可在 https://github.com/iNLP-Lab/UnCoBench 获取。
+
+</details>
+
+---
+
+## 7. GUIDE: Computationally Augmented Consensus for Trustworthy Clinical Practice Guidelines / 指南：值得信赖的临床实践指南的计算增强共识
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16108v1](http://arxiv.org/abs/2610.16108v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16108v1)
+
+**Categories**: cs.AI, cs.CL, cs.HC, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Maintaining up-to-date clinical practice guidelines (CPGs) is essential for evidence-based medicine, but rapid evidence growth and complex expert consensus formation limit timely updates. We developed GUIDE, a multi-agent copilot system for human-AI collaborative guideline generation and updating. GUIDE delegates labor-intensive tasks to specialized AI agents while preserving expert judgment and final arbitration. In 12 NICE ophthalmology datasets, GUIDE achieved 88.85% literature recall, 86.06% alignment in certainty-of-evidence ratings, and 91.67% recommendation agreement, requiring 162.17 minutes per dataset on average (28.68% human intervention). Performance remained stable across 20 additional datasets from cardiology, endocrinology, gastroenterology, and respiratory medicine. Ablation analysis showed that removing expert intervention reduced performance in judgment-intensive steps such as Risk-of-Bias assessment. In six post-cutoff datasets, GUIDE maintained robust end-to-end performance on unseen evidence. Prospective real-world validation showed that GUIDE reduced expert workload and produced more clinically acceptable recommendations than the original decade-old guideline (mean score, 3.73 vs. 1.53; agreement, 66.7% vs. 13.3%), with outcomes comparable to human-only updating (P = 0.588) but substantially less time and effort. GUIDE offers a practical framework for timely, trustworthy, expert-centric guideline development and validates computationally augmented consensus.
+
+维护最新的临床实践指南 (CPG) 对于循证医学至关重要，但快速的证据增长和复杂的专家共识形成限制了及时更新。我们开发了 GUIDE，这是一个用于人类与人工智能协作指南生成和更新的多智能体副驾驶系统。 GUIDE 将劳动密集型任务委托给专门的人工智能代理，同时保留专家判断和最终仲裁。在 12 个 NICE 眼科数据集中，GUIDE 实现了 88.85% 的文献召回率、86.06% 的证据确定性评级一致性和 91.67% 的推荐一致性，每个数据集平均需要 162.17 分钟（28.68% 人工干预）。来自心脏病学、内分泌学、胃肠病学和呼吸医学的另外 20 个数据集的性能保持稳定。消融分析表明，取消专家干预会降低偏差风险评估等判断密集型步骤的绩效。在六个截断后数据集中，GUIDE 在未见证据上保持了稳健的端到端性能。前瞻性的真实世界验证表明，与十年前的原始指南相比，GUIDE 减少了专家的工作量，并产生了更多临床上可接受的建议（平均分，3.73 vs. 1.53；一致性，66.7% vs. 13.3%），其结果与仅人工更新相当（P = 0.588），但大大减少了时间和精力。 GUIDE 为及时、值得信赖、以专家为中心的指南开发提供了实用的框架，并验证了计算增强的共识。
+
+</details>
+
+---
+
+## 8. Heterogeneous Agentic Coevolution / 异质代理协同进化
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16078v1](http://arxiv.org/abs/2610.16078v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16078v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in self-improving LLM agents have demonstrated the potential of AI systems that drive their own intelligence. However, many domain-specific applications rely on specialized foundation models that possess strong domain expertise but remain dependent on human-designed improvements. Extending recursive self-improvement to these models presents a key challenge: as a specialist improves, the strategies used to advance it must also adapt. To address this challenge, we propose Heterogeneous Agentic CoEvolution (HACE), a framework that jointly evolves specialized foundation models and LLM agents through reciprocal learning. HACE improves the specialist through supervised learning while training the agent with on-policy reinforced self-training, guided by verified performance gains on the current specialist. The agent's exploration, in turn, informs subsequent specialist training, enabling both models to adapt to each other's progress. To sustain this reciprocal learning, HACE further employs evolutionary search to optimize their interaction harness, adapting how the models exchange information and select training experiences as their capabilities evolve. We evaluate HACE across three challenging domains: recommendation systems, protein function prediction in biology, and crystal stability prediction in material discovery. We show that HACE outperforms the evaluated self-improving methods on the primary task metrics across all three domains. These results shed light on heterogeneous coevolution as a universal approach to improving specialized foundation models through reciprocal interaction with a learning agent.
+
+自我改进的法学硕士代理人的最新进展证明了人工智能系统驱动自身智能的潜力。然而，许多特定领域的应用程序依赖于专门的基础模型，这些模型拥有强大的领域专业知识，但仍然依赖于人为设计的改进。将递归自我改进扩展到这些模型提出了一个关键挑战：随着专家的改进，用于推进它的策略也必须适应。为了应对这一挑战，我们提出了异构代理协同进化（HACE），这是一个通过互惠学习共同进化专业基础模型和 LLM 代理的框架。 HACE 通过监督学习来改进专家，同时通过策略强化自我训练来训练代理，以当前专家经过验证的性能增益为指导。代理的探索反过来又为后续的专业培训提供信息，使两个模型能够适应彼此的进展。为了维持这种相互学习，HACE 进一步采用进化搜索来优化其交互工具，随着模型能力的发展调整模型交换信息和选择培训经验的方式。我们在三个具有挑战性的领域评估 HACE：推荐系统、生物学中的蛋白质功能预测以及材料发现中的晶体稳定性预测。我们表明，HACE 在所有三个领域的主要任务指标上都优于评估的自我改进方法。这些结果揭示了异质协同进化是一种通过与学习代理相互交互来改进专业基础模型的通用方法。
+
+</details>
+
+---
+
+## 9. Dream2Discern: Learning from Hard Latent Variants for Runtime Failure Prediction in Multi-Agent Systems / Dream2Discern：从硬潜在变体中学习以预测多代理系统中的运行时故障
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16071v1](http://arxiv.org/abs/2610.16071v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16071v1)
+
+**Categories**: cs.LG, cs.AI, cs.CL, cs.MA
+
+**Project**: https://zbox1005.github.io/dream2discern-project/  <details><summary><b>Abstract / 摘要</b></summary>
+
+Reliable deployment of LLM-based multi-agent systems calls for runtime auditors that predict terminal outcomes from observed execution prefixes. These auditors typically learn from a limited corpus of trajectories with verified outcomes. Expanding this corpus requires costly execution and verification, yet broader failure coverage alone provides no explicit criterion for identifying prefixes that the current auditor finds difficult to classify. To this end, we propose Dream2Discern, a runtime auditor trained through implicit augmentation guided by its own prediction loss. During Dream, we select perturbations of the auditor's representation operators to increase prediction loss on recorded prefixes, yielding hard latent variants. During Discern, the auditor learns to predict execution outcomes from these variants using the original labels. The variants are regenerated as the auditor learns, turning a limited corpus into a renewable source of hard examples and requiring no additional trajectory collection or outcome verification. Extensive evaluations on AFTraj-2K and StepShield show that Dream2Discern outperforms competitive failure auditors and achieves over 90% trajectory-level weighted accuracy on both benchmarks while balancing prediction accuracy and timeliness. Project page: https://zbox1005.github.io/dream2discern-project/
+
+基于 LLM 的多代理系统的可靠部署需要运行时审核员根据观察到的执行前缀来预测最终结果。这些审计员通常从有限的轨迹库中学习并得到经过验证的结果。扩展这个语料库需要昂贵的执行和验证，但更广泛的故障覆盖范围本身并没有提供明确的标准来识别当前审计员发现难以分类的前缀。为此，我们提出了 Dream2Discern，这是一种运行时审计器，通过由其自身的预测损失引导的隐式增强进行训练。在 Dream 期间，我们选择审计员表示算子的扰动来增加记录前缀的预测损失，从而产生硬潜在变体。在辨别过程中，审计员学习使用原始标签来预测这些变体的执行结果。随着审计员的学习，变体会重新生成，将有限的语料库变成可再生的硬示例来源，并且不需要额外的轨迹收集或结果验证。对 AFTraj-2K 和 StepShield 的广泛评估表明，Dream2Discern 的表现优于竞争对手的故障审核员，在两个基准上实现了超过 90% 的轨迹级加权准确性，同时平衡了预测准确性和及时性。项目页面：https://zbox1005.github.io/dream2discern-project/
+
+</details>
+
+---
+
+## 10. Understanding and Reducing Misalignment in Persuasion Optimization / 了解并减少说服优化中的偏差
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16070v1](http://arxiv.org/abs/2610.16070v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16070v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Frontier models are now trained for complex multi-agent tasks, from running a company to engaging in negotiations. These tasks necessitate training models to be persuasive. But what does this optimization pressure mean for model alignment? In this work, we study how reinforcement learning (RL) training for persuasion affects models' use of misaligned strategies such as evidence fabrication and belief coercion, and what techniques can reduce such misalignment. We find that optimizing sender models solely for receiver belief shifts causes the average number of distinct misaligned strategies used per game to increase by more than 25%, and fabrications per game increase to more than 4 times relative to pre-RL models. We compare various mitigation approaches, including stronger strategy guidance, clean demonstrations, penalizing misaligned strategy usage, and improving the model's ability to detect fabrications. We find that navigating the persuasiveness-misalignment trade-off in this setting is challenging, with the best trade-offs coming from combining guidance on aligned persuasion strategies with reward penalties on misalignment. Overall, our work provides a testbed for assessing misalignment stemming from RL-based persuasion training and shows concrete paths for reducing misalignment. Importantly, it highlights that without direct intervention, persuasion-involved RL environments are likely to naturally lead to large increases in the use of misaligned strategies.
+
+前沿模型现在接受了复杂的多智能体任务的训练，从经营公司到参与谈判。这些任务需要训练模型具有说服力。但这种优化压力对于模型对齐意味着什么？在这项工作中，我们研究了用于说服的强化学习（RL）训练如何影响模型对证据伪造和信念强制等错位策略的使用，以及哪些技术可以减少这种错位。我们发现，仅针对接收者信念转变来优化发送者模型会导致每场比赛使用的不同错位策略的平均数量增加超过 25%，并且每场比赛的制造量相对于 RL 之前的模型增加到 4 倍以上。我们比较了各种缓解方法，包括更强的策略指导、干净的演示、惩罚未对齐的策略使用以及提高模型检测伪造的能力。我们发现，在这种情况下处理说服力与不一致的权衡具有挑战性，最好的权衡来自于将一致的说服策略的指导与对不一致的奖励惩罚相结合。总的来说，我们的工作提供了一个测试平台，用于评估基于强化学习的说服训练所产生的偏差，并展示了减少偏差的具体路径。重要的是，它强调，如果没有直接干预，涉及说服的强化学习环境很可能自然导致不一致策略的使用大幅增加。
+
+</details>
+
+---
+
+## 11. When Agents Talk, Secrets Travel: Topology-Driven Leakage and Recipient-Conditioned Sanitization in Multi-Agent LLM Systems / 当代理交谈时，秘密就会传播：多代理 LLM 系统中拓扑驱动的泄漏和收件人条件的清理
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16039v1](http://arxiv.org/abs/2610.16039v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16039v1)
+
+**Categories**: cs.CR, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent LLM systems (MALS) introduce a privacy-leakage problem that conventional sensitivity-based defenses miss, since information disclosed to one authorized agent can propagate through routine coordination to an unauthorized one, without compromise or malicious behavior. This motivates topology-aware enforcement that blocks unauthorized propagation while preserving authorized disclosure. We evaluate 485 scenarios across coordinator-worker, peer-to-peer, and hierarchical topologies, instrumenting seven communication channels and measuring surface leakage and disclosure to topology-introduced recipients. We introduce RECONS, a Detect -> Decide -> Transform sanitizer conditioning intervention on recipient and execution context rather than sensitivity alone. Topology changes where protected information propagates, with disclosure to topology-introduced recipients rising from 0% to 52.2% while surface leakage stays nearly flat at 60.6-62.8%. This effect persists across four generator models and a second orchestration framework, though magnitude and relay paths differ; framework choice separately drives a 150x leakage spread, so topology alone is not sufficient. RECONS reduces residual disclosure from 96.7% without sanitization to 29.25%, preserving 94.1% of authorized disclosures versus 20.5% under blanket redaction. Detection coverage is the dominant bottleneck, accounting for 95.5% of residual disclosures. These results show that privacy enforcement in MALS must reason about the recipient and communication path realized at runtime, not sensitivity or topology assumptions alone.
+
+多代理 LLM 系统 (MALS) 引入了传统的基于敏感度的防御措施所忽略的隐私泄露问题，因为向一个授权代理披露的信息可以通过例行协调传播给未经授权的代理，而不会出现妥协或恶意行为。这促使拓扑感知强制执行，阻止未经授权的传播，同时保留授权的披露。我们评估了跨协调员-工作人员、点对点和分层拓扑的 485 个场景，检测了七个通信通道并测量了表面泄漏和对拓扑引入的接收者的泄露。我们引入 RECONS，即检测 -> 决策 -> 转换对接收者和执行上下文的消毒剂调节干预，而不仅仅是敏感性。受保护信息传播的拓扑发生变化，向引入拓扑的接收者泄露的信息从 0% 上升到 52.2%，而表面泄漏几乎保持在 60.6-62.8% 的水平。尽管幅度和中继路径不同，但这种效应在四个生成器模型和第二个编排框架中持续存在；框架选择单独驱动 150 倍的泄漏扩散，因此仅靠拓扑是不够的。 RECONS 将剩余披露从未经清理的 96.7% 减少到 29.25%，保留了 94.1% 的授权披露，而在全面编辑的情况下保留了 20.5%。检测覆盖率是主要瓶颈，占剩余泄露的 95.5%。这些结果表明，MALS 中的隐私实施必须推理运行时实现的接收者和通信路径，而不仅仅是敏感性或拓扑假设。
+
+</details>
+
+---
+
+## 12. Computational Reflective Equilibrium for Agentic AI: A Rawlsian Alignment Scaffold for Governance / 代理人工智能的计算反射平衡：用于治理的罗尔斯对齐支架
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16015v1](http://arxiv.org/abs/2610.16015v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16015v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The rapid deployment of agentic AI has introduced complex challenges for the ethics and governance of AI systems. Agents built on large language models act through tools on behalf of people, and each deployment case brings its own instructions, policies, evidence, and stakeholders, so alignment must be formed case by case. To this end, this work proposes agentic reflective equilibrium (ARE), a computational reflective equilibrium framework that serves as an ethical alignment scaffold in the agent harness. Drawing inspiration from the reflective equilibrium of John Rawls, the scaffold links principles from the system prompt and operator policy, considered judgments, tool evidence, and candidate actions through typed support and attack relations, with provenance encoding the instruction hierarchy. The agent acts on an equilibrium of this state and calls tools or asks questions only while doing so is worth its cost, unless a due-diligence mandate requires them. Governance enters through value priorities, source authority, prohibitions, human-in-the-loop triggers, and mandates, and certificates attribute each action to the sources whose commitments drove it. We show that equilibria are Nash equilibria of a mutual-adjustment game and establish monotonicity, lexical priority, stability certificates, and a quarantine theorem for prompt injection. Two case studies illustrate the framework: a computer-use assistant told to win a refund "whatever it takes" files an honest warranty claim, refuses a fake review, and ignores an injected request for personal data; a hiring agent showcases how authority, oversight triggers, audit mandates, and hard prohibitions shape discrimination, privacy violations, and escalation. The framework offers traceability, coherence, and adaptivity, facilitating safe, secure, and trustworthy agentic AI.
+
+代理人工智能的快速部署给人工智能系统的道德和治理带来了复杂的挑战。基于大型语言模型构建的代理通过工具代表人们行事，每个部署案例都有自己的指令、策略、证据和利益相关者，因此必须逐案形成一致性。为此，这项工作提出了主体反射平衡（ARE），这是一种计算反射平衡框架，充当主体控制中的道德对齐支架。从约翰·罗尔斯的反思平衡中汲取灵感，脚手架将系统提示和操作员策略的原则、考虑的判断、工具证据和通过类型化支持和攻击关系的候选行动联系起来，并通过编码指令层次结构的出处。代理在此状态的平衡下采取行动，并且只有在值得付出成本的情况下才调用工具或提出问题，除非尽职调查任务要求这样做。治理通过价值优先级、来源权威、禁令、人机交互触发器和授权来进入，并且证书将每项行动归因于其承诺驱动该行动的来源。我们证明均衡是相互调整博弈的纳什均衡，并建立单调性、词汇优先级、稳定性证明和即时注入的隔离定理。两个案例研究说明了这个框架：一名计算机使用助理被告知“不惜一切代价”赢得退款，提出诚实的保修索赔，拒绝虚假评论，并忽略注入的个人数据请求；招聘代理展示了权威、监督触发因素、审计任务和硬性禁令如何形成歧视、侵犯隐私和升级。该框架提供可追溯性、一致性和适应性，促进安全、可靠和值得信赖的代理人工智能。
+
+</details>
+
+---
+
+## 13. PopGen: Generating Semantically Diverse Populations for Zero-Shot Coordination / PopGen：生成语义多样化的群体以实现零样本协调
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15969v1](http://arxiv.org/abs/2610.15969v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15969v1)
+
+**Categories**: cs.AI, cs.MA
+
+**Code**: https://github.com/labicon/PopGen.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In multi-agent reinforcement learning, exposing a cooperator to partners with diverse strategies during training is key to better collaboration at test time. However, existing methods typically rely on trajectory-level proxies to measure diversity, which may label two distinct trajectories of the same strategy as diverse. Instead, our key insight is to leverage LLMs' ability to describe behaviorally distinct agents in environments, similar to how humans can recognize high-level strategies. To this end, we introduce PopGen, a framework that synthesizes semantically diverse agents from scratch using LLMs. PopGen first generates a diverse set of textual descriptions of agent behaviors, then translates each behavior into a code policy that can be executed within the environment. We show that cooperators trained against PopGen populations achieve robust zero-shot cooperation with unseen partners, outperforming population-play baselines across four collaborative environments. We further show that semantic diversity scales with PopGen population size, improving the cooperator's worst-case performance, and we identify design choices that preserve population quality while maximizing diversity. Our code is available at https://github.com/labicon/PopGen.
+
+在多智能体强化学习中，在训练期间让合作者接触具有不同策略的合作伙伴是在测试时更好协作的关键。然而，现有的方法通常依赖于轨迹级代理来衡量多样性，这可能会将同一策略的两个不同轨迹标记为多样化。相反，我们的主要见解是利用法学硕士描述环境中行为不同的代理的能力，类似于人类识别高级策略的方式。为此，我们引入了 PopGen，这是一个使用 LLM 从头开始​​合成语义多样化代理的框架。 PopGen 首先生成一组不同的代理行为文本描述，然后将每个行为转换为可以在环境中执行的代码策略。我们表明，针对 PopGen 群体进行训练的合作者与看不见的合作伙伴实现了稳健的零样本合作，在四个协作环境中的表现优于群体游戏基线。我们进一步表明，语义多样性随着 PopGen 群体规模的大小而变化，从而改善了合作者的最坏情况性能，并且我们确定了在保持群体质量的同时最大化多样性的设计选择。我们的代码可在 https://github.com/labicon/PopGen 获取。
+
+</details>
+
+---
+
+## 14. More Reasoning Is Not Always Better: Executing Clinical Guidelines with LLMs and Rules / 更多推理并不总是更好：利用法学硕士和规则执行临床指南
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15912v1](http://arxiv.org/abs/2610.15912v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15912v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) have shown considerable promise in clinical decision support. However, existing approaches often rely on multi-step reasoning or multi-agent collaboration to execute clinical guidelines, introducing substantial computational overhead without reliably preventing decision errors. To address these limitations, we propose a framework for Medical Decision Execution (MedDEx) that integrates structured patient states with deterministic rule execution to support guideline-based treatment planning. MedDEx separates clinical record interpretation from guideline execution, leveraging LLMs to extract patient information and generate treatment plans while assigning guideline-defined decision logic to a rule executor. Experiments across multiple clinical guideline benchmarks demonstrate that MedDEx improves decision accuracy while reducing inference costs. Further analyses highlight the critical roles of structured patient representations and deterministic rule execution, suggesting that additional LLM reasoning does not necessarily translate into better guideline adherence.
+
+大语言模型（LLM）在临床决策支持方面显示出巨大的前景。然而，现有方法通常依赖于多步骤推理或多代理协作来执行临床指南，从而引入大量计算开销，而无法可靠地防止决策错误。为了解决这些限制，我们提出了一个医疗决策执行 (MedDEx) 框架，它将结构化患者状态与确定性规则执行相结合，以支持基于指南的治疗计划。 MedDEx 将临床记录解释与指南执行分开，利用法学硕士提取患者信息并生成治疗计划，同时将指南定义的决策逻辑分配给规则执行者。多个临床指南基准的实验表明，MedDEx 提高了决策准确性，同时降低了推理成本。进一步的分析强调了结构化患者表征和确定性规则执行的关键作用，表明额外的法学硕士推理并不一定会转化为更好的指南遵守情况。
+
+</details>
+
+---
+
+## 15. RIVO: Lightweight Adaptive Rerouting for Deep Research Agents / RIVO：深度研究代理的轻量级自适应重路由
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15910v1](http://arxiv.org/abs/2610.15910v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15910v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Deep Research agents rely on long-horizon reasoning and iterative tool use to solve complex information-seeking tasks. However, adaptive decision-making over these trajectories remains challenging, as agents may stop prematurely when further evidence is needed, continue unnecessarily after sufficient evidence has been gathered, or fail to redirect unproductive trajectories. Existing solutions either require costly model retraining and dense turn-level supervision, or rely on heuristic control rules that are not directly optimized for downstream research utility. This motivates a lightweight, utility-aware alternative for Deep Research control. We formulate adaptive rerouting in long-horizon Deep Research as a state-conditioned trajectory correction problem. Based on this view, we introduce RIVO, a lightweight plug-in framework for adaptive trajectory correction. The agent estimates its research state from lightweight signals and determines whether trajectory redirection is needed. Once triggered, the plug-in modifies the Host token logits to steer generation toward a more promising research direction. Theoretical analysis shows that, under a value-alignment condition and bounded local curvature, a sufficiently small logit intervention can locally improve expected downstream research utility. We further construct BrowseCore, a curated dataset with a paired local corpus, for efficient and controlled Deep Research experimentation. Building on this resource, the plug-in is trained from downstream outcomes, enabling it to learn corrections that improve subsequent research and final task performance. Extensive experiments across multiple Deep Research benchmarks and control settings demonstrate the effectiveness of our method, showing that lightweight logit intervention can improve long-horizon research without retraining the underlying Host model.
+
+深度研究代理依靠长期推理和迭代工具的使用来解决复杂的信息搜索任务。然而，对这些轨迹的适应性决策仍然具有挑战性，因为智能体可能在需要进一步证据时过早停止，在收集到足够的证据后不必要地继续，或者无法重定向非生产性轨迹。现有的解决方案要么需要昂贵的模型再训练和密集的轮级监督，要么依赖于未直接针对下游研究效用进行优化的启发式控制规则。这激发了深度研究控制的轻量级、实用感知替代方案。我们将长期深度研究中的自适应重路由制定为状态条件轨迹校正问题。基于这个观点，我们引入了RIVO，一个用于自适应轨迹校正的轻量级插件框架。代理根据轻量级信号估计其研究状态，并确定是否需要轨迹重定向。一旦触发，该插件就会修改主机令牌日志，以引导一代人朝着更有前途的研究方向发展。理论分析表明，在价值对齐条件和有界局部曲率下，足够小的 Logit 干预可以局部提高预期的下游研究效用。我们进一步构建了 BrowseCore，这是一个带有配对本地语料库的精选数据集，用于高效且受控的深度研究实验。在此资源的基础上，插件根据下游结果进行训练，使其能够学习改进后续研究和最终任务性能的修正。跨多个深度研究基准和控制设置的广泛实验证明了我们方法的有效性，表明轻量级 logit 干预可以改善长期研究，而无需重新训练底层主机模型。
+
+</details>
+
+---
+
+## 16. Variance-Optimal State Resampling for Reinforcement Learning with Verifiable Rewards / 用于具有可验证奖励的强化学习的方差最优状态重采样
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15888v1](http://arxiv.org/abs/2610.15888v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15888v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning with verifiable rewards spends much of its rollout budget on states that yield no learning signal. We recast this as a question about the sampling distribution itself: under a fixed rollout budget, which distribution over states minimizes the variance of the policy-gradient estimator? The answer admits a closed-form Neyman allocation, $μ_{\mathrm{var}}^π(s) \propto d^π(s)\,σ_π(s)$, which connects naturally to GRPO's group-relative advantage and induces an emergent reverse curriculum as the policy improves, with no externally imposed schedule. Building on this principle, we propose VSR (Variance-driven State Resampling), a plug-in modification to GRPO using a prefix replay buffer and a zero-cost variance proxy. On mathematical reasoning benchmarks and long-horizon agentic tasks (Sokoban, BabyAI), VSR outperforms GRPO and GiGPO on most benchmarks with fewer generated tokens per update.
+
+具有可验证奖励的强化学习将其大部分部署预算花费在不产生学习信号的状态上。我们将其重新定义为关于抽样分布本身的问题：在固定的推出预算下，状态上的哪种分布可以最小化策略梯度估计量的方差？答案承认封闭形式的内曼分配 $μ_{\mathrm{var}}^π(s) \propto d^π(s)\,σ_π(s)$，它自然地与 GRPO 的群体相对优势联系起来，并随着政策的改进而引入紧急反向课程，没有外部强加的时间表。在此原则的基础上，我们提出了 VSR（方差驱动状态重采样），这是一种使用前缀重播缓冲区和零成本方差代理对 GRPO 进行的插件修改。在数学推理基准和长期代理任务（Sokoban、BabyAI）上，VSR 在大多数基准上都优于 GRPO 和 GiGPO，且每次更新生成的令牌更少。
+
+</details>
+
+---
+
+## 17. RetryBench: Separating Retry Permission from Recovery Outcomes in GPT Tool Use / RetryBench：在 GPT 工具使用中将重试权限与恢复结果分开
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15884v1](http://arxiv.org/abs/2610.15884v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15884v1)
+
+**Categories**: cs.AI, cs.CR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+False retry permission (FRP) occurs when an agent retries a timed-out tool call without support from the visible contract. RetryBench separates this error from realized recovery. Successful protected recovery does not imply reliable rejection of unsupported retries. In a 720-response key control, valid keys usually enabled safe progress, but offered changed keys elicited unsupported retries in Sol (1/80), Terra (55/80), and Luna (60/80). A later 240-response control removed the candidate and required models to supply a key. Luna still made 8/80 unsupported dispatches; Sol and Terra made none in 80 responses each. Accepting a displayed bad key therefore cannot explain all observed errors, although changed output requirements and conditions preclude a pure display-effect comparison. Removing the weak-contract label increased retries in Sol and Terra's coded-action conditions in a six-endpoint study. A separate 1,536-response canonical-action block also found a positive Terra contrast (115/128 versus 124/128 retries), concentrated in two task/order conditions; the other five contrasts remained unresolved after multiplicity correction. An explicit-contract cue control elicited deferral in all 762 returned responses, leaving recovery unresolved. These results support reporting permission and recovery together across declared interface variants. The evidence covers four purposive tasks, fixed GPT endpoints, and one recovery decision; it identifies neither internal mechanisms nor episode-level safety.
+
+当代理在没有可见合约支持的情况下重试超时的工具调用时，就会发生错误重试许可（FRP）。 RetryBench 将此错误与已实现的恢复分开。成功的受保护恢复并不意味着可靠地拒绝不受支持的重试。在 720 响应密钥控制中，有效密钥通常可以实现安全进度，但提供更改的密钥会在 Sol (1/80)、Terra (55/80) 和 Luna (60/80) 中引发不受支持的重试。后来的 240 响应控制删除了候选者并要求模型提供密钥。卢娜仍然进行了 8/80 的无支援派遣； Sol 和 Terra 各自在 80 条回复中没有做出任何回应。因此，接受显示的坏键并不能解释所有观察到的错误，尽管改变的输出要求和条件排除了纯粹的显示效果比较。在六端点研究中，删除弱合约标签增加了 Sol 和 Terra 的编码操作条件的重试次数。一个单独的 1,536 响应规范操作块也发现了积极的 Terra 对比（115/128 与 124/128 重试），集中在两个任务/订单条件下；其他五个对比在多重校正后仍未解决。显式契约提示控制导致所有 762 个返回响应延迟，导致恢复问题悬而未决。这些结果支持跨声明的接口变体一起报告权限和恢复。证据涵盖四项有目的的任务、固定的 GPT 终点和一项恢复决策；它既不识别内部机制，也不识别事件级安全性。
+
+</details>
+
+---
+
+## 18. LLM Value Functions for Credit Assignment in Agentic RL / 用于 Agentic RL 中学分分配的 LLM 价值函数
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15840v1](http://arxiv.org/abs/2610.15840v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15840v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning (RL) for large language model (LLM) agents remains challenging in long-horizon tasks with sparse outcome rewards, where assigning credit to individual actions is difficult. Methods such as GRPO assign the same trajectory-level advantage to all actions, while critic-based methods require learning an additional value function that can be costly and unstable. We introduce LLM Value Function RL (LVRL), which uses the pretrained knowledge and in-context learning ability of an LLM to estimate policy-aware state values without finetuning a separate critic. LVRL conditions the value model on group context and calibrates its predictions using known values at the initial and terminal states, enabling step-level credit assignment from estimated value differences. We further extend this idea to learning from an expert policy through on-policy distillation (OPD), introducing LLM Value Function OPD (LVOPD), which focuses teacher supervision on actions associated with decreases in estimated value. We evaluate our approach across diverse agentic benchmarks: AppWorld, BabyAI, and SWE-bench Verified. Across policy scales (4B to 32B), LVRL consistently and substantially outperforms both GRPO and PPO. On AppWorld and SWE-bench Verified, LVRL yields absolute improvements of up to 13.6 and 8.6 percentage points over GRPO. Notably, on tasks requiring extended exploration like BabyAI, LVRL bridges the gap from total failure to 75.0% success. Furthermore, LVOPD yields consistent improvements over standard distillation baselines on AppWorld. Finally, Monte-Carlo analysis confirms that our frozen critic accurately identifies semantic pitfalls and recoveries, proving that LVRL extracts robust, policy-aware step-level credit from sparse terminal outcomes.
+
+大型语言模型 (LLM) 代理的强化学习 (RL) 在结果奖励稀疏的长期任务中仍然具有挑战性，在这些任务中，将功劳分配给个人行为很困难。 GRPO 等方法为所有动作分配相同的轨迹级别优势，而基于批评的方法需要学习额外的价值函数，该函数可能成本高昂且不稳定。我们引入了 LLM 价值函数 RL (LVR)，它使用 LLM 的预训练知识和上下文学习能力来估计政策感知状态值，而无需微调单独的批评者。 LVRL 根据群体背景调整价值模型，并使用初始状态和最终状态的已知值校准其预测，从而根据估计值差异进行阶梯级信用分配。我们进一步将这一想法扩展到通过政策蒸馏（OPD）向专家政策学习，引入LLM价值函数OPD（LVOPD），该政策将教师的监督重点放在与估计值下降相关的行动上。我们通过不同的代理基准评估我们的方法：AppWorld、BabyAI 和 SWE-bench Verified。在不同的政策尺度（4B 到 32B）中，LVRL 的表现始终显着优于 GRPO 和 PPO。在 AppWorld 和 SWE-bench Verified 上，LVRL 的绝对改进比 GRPO 高达 13.6 和 8.6 个百分点。值得注意的是，在 BabyAI 等需要长期探索的任务上，LVRL 弥补了从完全失败到 75.0% 成功的差距。此外，LVOPD 比 AppWorld 上的标准蒸馏基线产生了持续的改进。最后，蒙特卡洛分析证实，我们的冻结批评家准确地识别了语义陷阱和恢复，证明 LVRL 从稀疏的终端结果中提取了稳健的、具有政策意识的步骤级信用。
+
+</details>
+
+---
+
+## 19. RSIPO: Recursive Self-Improving Policy Optimization for Agentic Reinforcement Learning via Skill-Policy Co-Evolution / RSIPO：通过技能策略共同进化实现代理强化学习的递归自我改进策略优化
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15772v1](http://arxiv.org/abs/2610.15772v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15772v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent focus in agentic reinforcement learning (RL) seeks to improve credit assignment in long-horizon tasks. One promising direction combines reinforcement learning with verifiable rewards (RLVR) and on-policy self-distillation (OPSD), integrating trajectory-level advantages with dense token-level supervision. This line of work often conditions a teacher model on privileged context, such as agentic skills, to score tokens generated by the student policy. Despite their progress, they largely overlook the on-policy evolution of agentic skills and the reliability of teacher supervision. Towards this end, we introduce Recursive Self-Improving Policy Optimization (RSIPO), a self-evolving agentic RL framework that enables agentic skills and the policy model to co-evolve throughout the training process. Specifically, RSIPO enables the policy itself to extract skills from completed trajectories and explicitly optimizes its skill-generation capability through trajectory replay. It further employs empirical Bayes shrinkage to dynamically calibrate the student's trust in teacher scores, accounting for the fact that skill-enhanced teacher guidance can sometimes be less reliable. Experiments with Qwen-family models on embodied interaction and search-based agentic tasks demonstrate that RSIPO outperforms all the compared baseline approaches. With Qwen2.5-7B as the base model, RSIPO achieves an average success rate of 98.6\% on ALFWorld, yielding absolute improvements of 2.5\% and 17.4\% over the second-best baseline and standard GRPO, respectively.
+
+最近对代理强化学习（RL）的关注旨在改善长期任务中的学分分配。一个有前途的方向将强化学习与可验证奖励（RLVR）和策略自蒸馏（OPSD）相结合，将轨迹级优势与密集代币级监督相结合。这一系列工作通常会在特权上下文（例如代理技能）上条件化教师模型，以对学生策略生成的令牌进行评分。尽管取得了进步，但他们在很大程度上忽视了代理技能的政策演变和教师监督的可靠性。为此，我们引入了递归自我改进策略优化（RSIPO），这是一种自我进化的代理强化学习框架，使代理技能和策略模型能够在整个训练过程中共同进化。具体来说，RSIPO 使策略本身能够从完整的轨迹中提取技能，并通过轨迹重放明确优化其技能生成能力。它进一步采用经验贝叶斯收缩来动态校准学生对教师分数的信任，考虑到技能增强的教师指导有时可能不太可靠的事实。对 Qwen 系列模型在具体交互和基于搜索的代理任务上的实验表明，RSIPO 优于所有比较的基线方法。以 Qwen2.5-7B 为基础模型，RSIPO 在 ALFWorld 上的平均成功率达到 98.6%，比第二好的基线和标准 GRPO 分别提高了 2.5% 和 17.4%。
+
+</details>
+
+---
+
+## 20. Google Earth AI Geospatial Reasoning Agent: Capabilities and a Systematic Evaluation / Google Earth AI 地理空间推理代理：能力和系统评估
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15750v1](http://arxiv.org/abs/2610.15750v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15750v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Google Earth AI is a family of geospatial AI models, together with an agent that orchestrates them. We present this agent, Google Earth AI's Geospatial Reasoning agent (GRA), a Gemini-powered research system that combines geospatial data sources, foundation models, and tools to answer questions about our planet. GRA organizes these into modular domain skills and pairs them with upfront geospatial planning to decompose complex queries into multi-stage workflows. Evaluating such systems is hard: real-world problems admit multiple valid workflows, require data discovery across large catalogs, and rely on evolving ground truth. We introduce two benchmarks and release their development splits. GeoExpertQueries poses complex analytical problems grounded in practitioner use cases and refined by geospatial experts; each is paired with a consensus golden workflow from three independent experts and scored by a human-validated, tool-agnostic autorater. GeoKTools consists of templated queries with deterministic reference solvers that systematically vary the number of required tool types. We also use two external benchmarks, CBGB and UnivEARTH; the latter we find to be saturated. To isolate the contribution of GRA's tools and its agentic orchestration, we compare four configurations, each with Gemini 3.1 Pro and 3.8 Flash: a standalone LLM, the LLM with basic tools, the LLM with GRA's skills and tools but without its upfront planning and execution guidance, and GRA itself. With at most basic tools, an advanced model recovers much of the answer on templated queries but satisfies only a small fraction of the expert workflows on open-ended problems; GRA performs well on both. The largest step comes from GRA's skills and tools; on open-ended problems, its planning and execution guidance add a further gain with Gemini 3.8 Flash, letting Flash match or exceed Pro at lower cost.
+
+Google Earth AI 是一系列地理空间人工智能模型，以及协调它们的代理。我们推出了这个代理，即 Google Earth AI 的地理空间推理代理 (GRA)，这是一个由 Gemini 驱动的研究系统，它结合了地理空间数据源、基础模型和工具来回答有关我们星球的问题。 GRA 将这些组织成模块化领域技能，并将它们与前期地理空间规划配对，将复杂查询分解为多阶段工作流程。评估此类系统很困难：现实世界的问题需要多个有效的工作流程，需要跨大型目录的数据发现，并依赖于不断发展的基本事实。我们介绍了两个基准并发布了它们的开发划分。 GeoExpertQueries 提出了基于从业者用例并由地理空间专家改进的复杂分析问题；每个都与三位独立专家的共识黄金工作流程配对，并由经过人工验证、与工具无关的自动评分器进行评分。 GeoKTools 由模板化查询和确定性参考解算器组成，可系统地改变所需工具类型的数量。我们还使用两个外部基准测试，CBGB 和 UnivEARTH；我们发现后者已经饱和。为了区分 GRA 工具及其代理编排的贡献，我们比较了四种配置，每种配置均采用 Gemini 3.1 Pro 和 3.8 Flash：独立的 LLM、具有基本工具的 LLM、具有 GRA 技能和工具但没有前期规划和执行指导的 LLM，以及 GRA 本身。使用最基本的工具，高级模型可以恢复模板化查询的大部分答案，但只能满足开放式问题的一小部分专家工作流程； GRA 在这两方面都表现良好。最大的一步来自于GRA的技能和工具；在开放式问题上，其规划和执行指导为 Gemini 3.8 Flash 增添了进一步的增益，让 Flash 以更低的成本匹配或超过 Pro。
+
+</details>
+
+---
+
+## 21. Towards Autopilot Labeling for Short Video Content Governance / 走向短视频内容治理的自动驾驶标签
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15687v1](http://arxiv.org/abs/2610.15687v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15687v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The explosive growth of short videos has presented significant challenges to content governance. Traditional manual labeling is inefficient, slow to iterate, and costly. Therefore, we explore and develop a multi-stage autopilot labeling framework aimed at progressively increasing the level of automation in short video content annotation. To move beyond the heavy reliance on human expert labeling at the initial L0 stage, we first introduce a discriminative MLLM labeler at the L1 stage, which is fine-tuned with supervised data to directly predict labels for short videos. Advancing to the L2 stage, we shift to a domain-adaptive MLLM pretrained on short video data and use it for zero-shot labeling, enabling flexible generalization without task-specific supervision. In the L3 stage, we propose an agentic annotation workflow, and equip the agent with several key tools, which empower the agent to handle complex, unfamiliar, or vaguely defined cases, significantly reducing the need for human intervention. We conduct extensive experiments across various content issues, and results demonstrate that each stage of the autopilot labeling framework progressively improves labeling accuracy, and has significantly reduced manual labor costs in real-world applications by up to 85%.
+
+短视频的爆发式增长给内容治理带来了巨大挑战。传统的人工标注效率低、迭代慢、成本高。因此，我们探索并开发了一个多阶段自动驾驶标注框架，旨在逐步提高短视频内容标注的自动化水平。为了摆脱在初始 L0 阶段对人类专家标记的严重依赖，我们首先在 L1 阶段引入判别性 MLLM 标记器，该标记器使用监督数据进行微调，以直接预测短视频的标签。进入 L2 阶段，我们转向在短视频数据上预训练的领域自适应 MLLM，并将其用于零样本标记，从而无需特定任务的监督即可实现灵活的泛化。在L3阶段，我们提出了代理注释工作流程，并为代理配备了几个关键工具，使代理能够处理复杂、不熟悉或定义模糊的情况，从而显着减少人工干预的需要。我们针对各种内容问题进行了广泛的实验，结果表明，自动驾驶标注框架的每个阶段都在逐步提高标注准确性，并在实际应用中显着降低了高达 85% 的人工成本。
+
+</details>
+
+---
+
+## 22. A Persian Vision-Language-Action Dataset and Benchmark for Ambiguity- and Infeasibility-Aware Instruction-to-Plan Grounding / 波斯语视觉语言动作数据集和模糊性和不可行性感知指令到计划基础的基准
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15666v1](http://arxiv.org/abs/2610.15666v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15666v1)
+
+**Categories**: cs.CV, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Converting natural-language instructions into executable action plans conditioned on a scene image is a core capability for embodied human-robot interaction, but existing benchmarks target English, simulated or video-grounded environments, and largely assume instructions are clear and executable. We introduce the first Persian vision-language-action dataset for this task: 258 instances over 230 real household/office photographs, annotated with reference plans, deliberate ambiguity and infeasibility labels, disambiguating question-answer pairs, and an auto-generated chain-of-thought rationale for training. Using this resource, we ablate retrieval-augmentation, chain-of-thought prompting, and an agentic disambiguation step, evaluated with an LLM-as-judge protocol and a new metric, PGOS-FA, extending prior work (PG2S) with step-order sensitivity, an over-generation penalty, and Persian-adapted embeddings. Paired statistical testing across 36 comparisons shows retrieval-augmentation is a large, robustly significant effect, while finer-grained additions are directionally consistent but not statistically distinguishable from noise at this scale, and the LLM-judge metric has near-zero power where PGOS-FA succeeds. A blind human-correlation study on 79 real outputs shows PGOS-FA tracks human judgment at least as closely as the LLM-judge. Testing generalization beyond the ablation's single backbone, we find that most of the gap between an open-weight and a substantially stronger closed planner is attributable to open-weight model generation rather than to the closed model's capability specifically, and that our best configuration significantly outperforms an independently reproduced external baseline despite a weaker backbone. The dataset, PGOS-FA implementation, and evaluation code will be made available upon reasonable request.
+
+将自然语言指令转换为以场景图像为条件的可执行行动计划是具体人机交互的核心能力，但现有的基准测试针对英语、模拟或视频环境，并且在很大程度上假设指令是清晰且可执行的。我们为此任务引入了第一个波斯语视觉-语言-动作数据集：超过 230 张真实家庭/办公室照片的 258 个实例，用参考计划、故意的歧义和不可行性标签、消除歧义的问答对以及自动生成的训练思路原理进行注释。使用此资源，我们消除了检索增强、思维链提示和代理消歧步骤，并使用 LLM 作为法官协议和新指标 PGOS-FA 进行评估，通过步骤顺序敏感性、过度生成惩罚和波斯语适应嵌入扩展了先前的工作 (PG2S)。 36 项比较的配对统计测试表明，检索增强是一种大而稳健的显着效应，而更细粒度的添加在方向上是一致的，但在这种规模上与噪声在统计上无法区分，并且在 PGOS-FA 成功的情况下，LLM 判断指标的功效接近于零。对 79 个真实输出进行的盲人相关研究表明，PGOS-FA 跟踪人类判断的程度至少与 LLM 法官一样密切。测试超越消融单一主干的泛化能力，我们发现开放权重和更强的封闭式规划器之间的大部分差距可归因于开放权重模型的生成，而不是特定于封闭模型的能力，并且我们的最佳配置显着优于独立复制的外部基线，尽管主干较弱。数据集、PGOS-FA 实施和评估代码将根据合理请求提供。
+
+</details>
+
+---
+
+## 23. Dynamic Conflict Clustering with Lightweight Learning and Strategic Repair for Distributed Constraint Satisfaction / 动态冲突聚类与轻量级学习和分布式约束满足的策略修复
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15658v1](http://arxiv.org/abs/2610.15658v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15658v1)
+
+**Categories**: cs.MA, cs.AI, cs.DM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Distributed Constraint Satisfaction Problems (DCSPs) model distributed decision-making in multi-agent systems, where agents assign values to local variables while satisfying shared constraints. However, many DCSP solvers still rely on broad, repeated peer-to-peer communication and are largely reactive, with limited support for strategic coordination or learning. This increases communication overhead, can lead to stagnation, and reduces the success of hard instances. Hence, we propose Dynamic Conflict Clustering-Incomplete (DCC-Incomplete), a repair-based solver that combines conflict-centred decomposition, structured coordination, strategic repair, and lightweight learning for stagnation recovery. DCC-Incomplete groups the unsolved part of the problem into conflict clusters and restricts communication via a coordination layer to agents within the same conflict region. It also introduces memory-guided restart, enabling agents and clusters to pause, revise, and adapt repairs based on neighbouring conflict states. A thorough evaluation of DCC-Incomplete on distributed graph-colouring benchmarks with planted satisfying assignments shows that its memory-guided restart improves the success rate from 37.50% to 61.11%, reduces median runtime from 0.565s to 0.367s, and cuts median communication from 12.493 to 6.503 messages per constraint. These results suggest that dynamic conflict clustering, combined with lightweight strategic and learning-guided repair, improves both communication efficiency and robustness in incomplete DCSP solving.
+
+分布式约束满足问题 (DCSP) 对多智能体系统中的分布式决策进行建模，其中智能体在满足共享约束的同时为局部变量分配值。然而，许多 DCSP 求解器仍然依赖于广泛、重复的点对点通信，并且很大程度上是被动的，对战略协调或学习的支持有限。这会增加通信开销，可能导致停滞，并降低硬实例的成功率。因此，我们提出了动态冲突聚类-不完整（DCC-Incomplete），这是一种基于修复的求解器，结合了以冲突为中心的分解、结构化协调、策略修复和用于停滞恢复的轻量级学习。 DCC-Incomplete 将问题的未解决部分分组为冲突集群，并限制通过协调层与同一冲突区域内的代理进行通信。它还引入了内存引导重启，使代理和集群能够根据相邻冲突状态暂停、修改和调整修复。在分布式图着色基准上对 DCC-Incomplete 进行的彻底评估表明，其内存引导的重新启动将成功率从 37.50% 提高到 61.11%，将中位运行时间从 0.565 秒减少到 0.367 秒，并将每个约束的中位通信消息从 12.493 条减少到 6.503 条。这些结果表明，动态冲突聚类与轻量级策略和学习引导修复相结合，可以提高不完整 DCSP 解决方案的通信效率和鲁棒性。
+
+</details>
+
+---
+
+## 24. Inverse Garment Design with Visual Agents / 使用视觉代理进行逆向服装设计
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15582v1](http://arxiv.org/abs/2610.15582v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15582v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We study the problem of inverse garment design, reconstructing simulation-ready 3D outfits with arbitrary layers from a single image, with visual agents. Unlike differentiable optimization that is time-consuming, or feed-forward methods limited by training data, we introduce DressAgent, a hierarchical agentic system that recovers garment sewing patterns through planning and closed-loop refinement grounded in physical simulation. To this end, we first present an enhanced representation based on GarmentCode for diverse styles and arbitrary dressing layers, and build the first multi-layer sewing pattern dataset with over 15K outfits for supervision and benchmarking. Inverse design then proceeds coarse to fine: In layer planning and coarse estimation, agents infer layer order and relations, peel each layer into its own view, and estimate coarse patterns. In fine-grained refinement, an agentic trio of Tailor, Critic, and Orchestrator refines patterns in a closed loop of editing, simulating, and judging against the reference with visual and measured evidence. Carefully designed tools and an evolving memory make this refinement converge on the target geometry. We also design an agentic generation method for high-fidelity textures. DressAgent outperforms feed-forward methods by a large margin, surpasses or matches differentiable optimization in a fraction of the time, and generalizes to complex layering, diverse poses, and body shapes.
+
+我们研究逆向服装设计问题，利用视觉代理从单个图像中重建具有任意层的模拟就绪 3D 服装。与耗时的可微分优化或受训练数据限制的前馈方法不同，我们引入了 DressAgent，这是一种分层代理系统，可通过基于物理模拟的规划和闭环细化来恢复服装缝纫图案。为此，我们首先提出了基于 GarmentCode 的针对不同风格和任意着装层的增强表示，并构建了第一个包含超过 15K 服装的多层缝纫图案数据集，用于监督和基准测试。然后逆向设计从粗到细进行：在层规划和粗略估计中，代理推断层顺序和关系，将每个层剥离到自己的视图中，并估计粗略模式。在细粒度的细化中，Tailor、Critic 和 Orchestrator 的代理三人组在编辑、模拟和根据视觉和测量证据的参考进行判断的闭环中细化模式。精心设计的工具和不断发展的内存使这种细化集中在目标几何形状上。我们还设计了一种高保真纹理的代理生成方法。 DressAgent 的性能大幅优于前馈方法，在短时间内超越或匹配可微分优化，并可推广到复杂的分层、多样化的姿势和体型。
+
+</details>
+
+---
+
+## 25. SIGN-MAPPO: State-Intent-Aware Graph Multi-Agent Reinforcement Learning for Cooperative Driving under Imperfect V2X / SIGN-MAPPO：不完美 V2X 下合作驾驶的状态意图感知图多智能体强化学习
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15577v1](http://arxiv.org/abs/2610.15577v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15577v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cooperative driving at mixed-traffic unsignalized intersections is challenged by imperfect vehicle-to-everything (V2X) communication, human-driven vehicle (HV) intentions that cannot be directly communicated, and the potential incompatibility of independently generated crossing decisions. This paper proposes State-Intent-Aware Graph Multi-Agent Reinforcement Learning for Cooperative Driving under Imperfect V2X (SIGN-MAPPO) to address these challenges through three coordinated mechanisms. Each decision-eligible connected and automated vehicle (CAV) first reconstructs a receiver-specific traffic graph from its ego state and the peer-state records available to it, from which a shared graph-attention policy generates a raw Stop/Go intention augmented with predicted HV-intent features. CAV intentions are then exchanged through timestamped vehicle-to-vehicle (V2V) messages, and a local conflict-aware arbitration layer converts each CAV's intention into a safe executable action despite potentially inconsistent peer information. In the principal Simulation of Urban MObility (SUMO) evaluation, SIGN-MAPPO achieves a 97.53% completion rate, a 0.10% collision rate, and a mean intersection traversal time of 35.28 s. Ablation studies further confirm the complementary contributions of HV-intent prediction and CAV-intent exchange to this performance. The trained policy also remains robust under the evaluated communication-delay and packet-loss ranges, and cross-scenario tests show complete traffic clearance across the tested settings, though safety margins narrow under compound unpredictable HV behavior.
+
+混合交通无信号交叉口的协同驾驶面临着不完善的车对万物 (V2X) 通信、无法直接传达的人类驾驶车辆 (HV) 意图以及独立生成的交叉口决策的潜在不兼容性的挑战。本文提出了状态意图感知图多智能体强化学习用于不完美 V2X 下的协作驾驶（SIGN-MAPPO），以通过三种协调机制应对这些挑战。每个符合决策资格的联网自动驾驶车辆 (CAV) 首先根据其自我状态和可用的对等状态记录重建接收器特定的流量图，共享图注意策略从中生成原始的 Stop/Go 意图，并通过预测的 HV 意图特征进行增强。然后，CAV 意图通过带时间戳的车辆对车辆 (V2V) 消息进行交换，并且本地冲突感知仲裁层将每个 CAV 的意图转换为安全的可执行操作，尽管对等信息可能不一致。在城市交通模拟（SUMO）的主要评估中，SIGN-MAPPO 的完成率为 97.53%，碰撞率为 0.10%，平均路口穿越时间为 35.28 秒。消融研究进一步证实了 HV 意图预测和 CAV 意图交换对此性能的互补贡献。经过训练的策略在评估的通信延迟和数据包丢失范围下也保持稳健，跨场景测试显示在测试设置中完全流量清除，尽管在复合不可预测的高压行为下安全裕度缩小。
+
+</details>
+
+---
+
+## 26. Agent-Canary-Mas: End-to-End Evaluation of Protocol Risk in Long-Horizon Multi-Agent Systems / Agent-Canary-Mas：长视野多代理系统中协议风险的端到端评估
+
+**Date**: 2026-10-11 | **arXiv**: [2610.15529v1](http://arxiv.org/abs/2610.15529v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.15529v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agent-to-agent protocols allow LLM agents to discover peers, exchange results, and coordinate tool use. A locally successful protocol attack, however, may be rejected by a later agent or propagated into a consequential task decision. Measuring local exploitability alone leaves this difference unresolved and provides limited evidence about which participant caused the final outcome.   We present Agent-Canary-Mas, an end-to-end evaluation system that follows protocol risk through long-horizon multi-agent tasks. It covers five risk classes and 13 subclasses across A2A, ANP, and BCS, with 975 matched malicious--benign task pairs in five business domains. A shared OpenClaw framework runs autonomous, tool-using agents under different underlying models while preserving the task and execution setup. Matched runs separate local protocol success from downstream consequences; retained evidence connects participant selection, message consumption, tool activity, and task-state changes. We further evaluate a protocol-context Guard that checks an object's authority at consequential handoffs.   Across three model conditions, local attack success is frequently at or above 90%, while consequence conversion ranges from 7.1\% to 100.0\%. Cross-agent evidence raises macro-averaged Audit-F1 from 29.7% to 95.5%. On Finance tasks, the Guard lowers average ASR from 86.1% to 53.8% and PTCR from 65.5% to 31.2%, with a measurable completion tradeoff. These results show that protocol risk depends on how agents use exchanged objects throughout the task, and that evaluating this path supports more informative risk assessment, attribution, and defense.
+
+代理到代理协议允许 LLM 代理发现对等点、交换结果并协调工具使用。然而，本地成功的协议攻击可能会被稍后的代理拒绝或传播到后续的任务决策中。仅衡量局部可利用性就无法解决这一差异，并且无法提供关于哪个参与者造成最终结果的有限证据。   我们提出了 Agent-Canary-Mas，这是一个端到端评估系统，通过长期多代理任务来跟踪协议风险。它涵盖了 A2A、ANP 和 BCS 的 5 个风险类别和 13 个子类别，在 5 个业务领域中有 975 个匹配的恶意-良性任务对。共享的 OpenClaw 框架在不同的底层模型下运行自主的、使用工具的代理，同时保留任务和执行设置。匹配运行将本地协议成功与下游后果分开；保留的证据将参与者选择、消息消费、工具活动和任务状态变化联系起来。我们进一步评估了一个协议上下文 Guard，它在随后的切换中检查对象的权限。   在三种模型条件下，本地攻击成功率通常达到或超过 90%，而结果转换范围为 7.1\% 到 100.0\%。跨代理证据将宏观平均 Audit-F1 从 29.7% 提高到 95.5%。在财务任务上，Guard 将平均 ASR 从 86.1% 降低到 53.8%，将 PTCR 从 65.5% 降低到 31.2%，并进行了可衡量的完成度权衡。这些结果表明，协议风险取决于代理在整个任务中如何使用交换对象，并且评估此路径支持提供更多信息的风险评估、归因和防御。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-12 (6 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-10-12
