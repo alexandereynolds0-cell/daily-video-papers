@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-23](papers/2026-10-23.md) - 8 papers
 - [2026-10-22](papers/2026-10-22.md) - 20 papers
 - [2026-10-21](papers/2026-10-21.md) - 1 papers
 - [2026-10-20](papers/2026-10-20.md) - 4 papers
@@ -172,6 +173,146 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-23 (8 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-10-23
+
+**Paper Count**: 8
+
+---
+
+## 1. DiffDreamer: Coupling World Models with Differentiable Simulation for Agile Quadrotor Control / DiffDreamer：将世界模型与可微分仿真相结合，实现敏捷四旋翼控制
+
+**Date**: 2026-10-22 | **arXiv**: [2610.31617v1](http://arxiv.org/abs/2610.31617v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.31617v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Tasks such as quadrotor dynamic-gate racing require agents to anticipate external motion while maintaining precise high-frequency control. World-model-based reinforcement learning provides a natural solution by learning latent dynamics for future imagination, yet it often entangles environmental evolution and the robot's own dynamics in a single learned rollout, where model bias can affect policy optimization efficiency. We propose DiffDreamer, a differentiable reinforcement learning framework that tightly couples a learned world model with differentiable simulation for actor optimization. In one optimization step, the learned world model propagates latent states that capture external dynamics and history-dependent features, while the differentiable simulator propagates the robot's explicit physical state. We further decompose the actor objective into a critic-driven pathway for non-differentiable task rewards and a simulator-driven pathway for differentiable motion rewards. Experiments on aggressive tracking and dynamic-gate racing show that DiffDreamer improves training convergence over the model-free, model-based, and differentiable-RL baselines, and final performance over these baselines and classical planning and control methods. Additional experiments assess reward decomposition and the odometry-conditioned relative-state representation through ablations. We also provide proof-of-concept real-world flight experiments for validation.
+
+四旋翼动态门赛车等任务要求智能体预测外部运动，同时保持精确的高频控制。基于世界模型的强化学习通过学习未来想象的潜在动态提供了一种自然的解决方案，但它经常将环境进化和机器人自身的动态纠缠在单个学习的推出中，其中模型偏差可能会影响策略优化效率。我们提出了 DiffDreamer，一种可微的强化学习框架，它将学习的世界模型与可微的模拟紧密结合起来，以实现参与者优化。在一个优化步骤中，学习的世界模型传播捕获外部动态和历史相关特征的潜在状态，而可微模拟器则传播机器人的显式物理状态。我们进一步将参与者目标分解为用于不可微任务奖励的评论家驱动路径和用于可微动作奖励的模拟器驱动路径。积极跟踪和动态门竞赛的实验表明，DiffDreamer 提高了无模型、基于模型和可微 RL 基线的训练收敛性，以及这些基线和经典规划和控制方法的最终性能。其他实验通过消融评估奖励分解和里程计条件的相对状态表示。我们还提供概念验证的真实飞行实验以进行验证。
+
+</details>
+
+---
+
+## 2. Skeleton-Grounded Latent Action Model for Robot World Models / 机器人世界模型的骨骼接地潜在动作模型
+
+**Date**: 2026-10-22 | **arXiv**: [2610.31474v1](http://arxiv.org/abs/2610.31474v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.31474v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robot world models simulate how environments evolve in response to robot actions. Latent action models enable learning dynamics from videos by encoding visual transitions as proxy actions. However, reconstruction-driven latent actions mix robot motion with object responses and other scene changes, complicating their correspondence with robot controls. We propose SkeLAM, a skeleton-guided latent action model for controllable robot world modeling. SkeLAM decomposes latent actions into a kinematic component grounded by robot skeleton supervision and a residual component retaining complementary visual dynamics. Cross-modal swap reconstruction encourages RGB-derived and skeleton-derived kinematic representations to be interchangeable during video reconstruction. The world model incorporates both components through separate conditioning pathways, while branch dropout reduces its dependence on future-derived residual information. A lightweight adapter maps robot actions to the kinematic space, and subsequent world-model fine-tuning adapts generation to these predicted conditions. At inference, the model generates future observations from the current observation and robot actions. On DROID, SkeLAM reduces end-effector ADE by 19.5% and LPIPS by 11.1% compared with DreamDojo. Motion probing supports kinematic specialization, while qualitative results demonstrate zero-shot human-to-robot motion transfer in generated rollouts. Policy evaluation shows agreement between predicted success rates and those measured in real robot executions.
+
+机器人世界模型模拟环境如何响应机器人动作而演变。潜在动作模型通过将视觉转换编码为代理动作，可以从视频中学习动态。然而，重建驱动的潜在动作将机器人运动与物体响应和其他场景变化混合在一起，使它们与机器人控制的对应变得复杂。我们提出了 SkeLAM，一种用于可控机器人世界建模的骨架引导潜在动作模型。 SkeLAM 将潜在动作分解为基于机器人骨架监督的运动学组件和保留互补视觉动力学的剩余组件。跨模态交换重建鼓励 RGB 派生和骨架派生的运动学表示在视频重建过程中互换。世界模型通过单独的调节路径合并了这两个组件，而分支丢失减少了其对未来派生的残差信息的依赖。轻量级适配器将机器人动作映射到运动学空间，随后的世界模型微调使生成适应这些预测条件。在推理时，模型根据当前观察和机器人动作生成未来观察。在 DROID 上，与 DreamDojo 相比，SkeLAM 将末端执行器 ADE 降低了 19.5%，将 LPIPS 降低了 11.1%。运动探测支持运动学专业化，而定性结果证明了生成的卷展中的零样本人机运动传输。策略评估显示预测的成功率与实际机器人执行中测量的成功率之间的一致性。
+
+</details>
+
+---
+
+## 3. Inside-JEPA: From Prediction to Relational Grounding in Latent World Models / Inside-JEPA：从预测到潜在世界模型中的关系基础
+
+**Date**: 2026-10-22 | **arXiv**: [2610.31194v1](http://arxiv.org/abs/2610.31194v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.31194v1)
+
+**Categories**: cs.LG, cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint-embedding predictive architectures (JEPAs) learn world models in latent space, enabling efficient planning but leaving their states opaque. We introduce Inside-JEPA, which places relational channels for ordered entity pairs inside the JEPA latent state and shows that an inverse-dynamics loss can ground these channels without relation labels when its head reads them, either alone or as part of the full state. On Something-Something V2, latent prediction alone performs no better than a random relation head, while inverse-dynamics supervision that recovers actions from channel changes improves relational AUROC by .065-.103 across ten settings with annotated boxes, by .081 on RH20T robot episodes with held-out tasks, and by .050-.061 across five relations using off-the-shelf detection and tracking. An inverse head on entity latents decodes actions more accurately but barely improves relational grounding; shuffled labels, two label-free objectives, and action labels on only 5% of the pairs also fail to ground the channels. Given an action, predicted relational changes approach the quality of observed future relations (AUROC .599 vs .621). For one-step relational goals, a supervised readout of the 16 channels ranks the correct action among the top five of 65 in 43% of cases, compared with 24% for prediction-only latents and 17% for a frequency prior.
+
+联合嵌入预测架构（JEPA）在潜在空间中学习世界模型，从而实现高效规划，但使其状态不透明。我们介绍了 Inside-JEPA，它将有序实体对的关系通道放置在 JEPA 潜在状态内，并表明，当其头部单独或作为完整状态的一部分读取这些通道时，逆动态损失可以在没有关系标签的情况下接地这些通道。在 Something-Something V2 上，单独的潜在预测的表现并不比随机关系头更好，而从通道变化中恢复动作的逆动态监督在带注释框的 10 个设置中将关系 AUROC 提高了 0.065-0.103，在带有保留任务的 RH20T 机器人情节中提高了 0.081，在使用现成检测和跟踪的五个关系中提高了 0.050-0.061。实体潜伏的逆向头可以更准确地解码动作，但几乎无法改善关系基础；打乱标签、两个无标签目标以及仅 5% 对的动作标签也无法使通道接地。给定一个动作，预测的关系变化接近观察到的未来关系的质量（AUROC .599 vs .621）。对于一步关系目标，16 个通道的监督读出在 43% 的情况下将正确操作排在 65 个通道中的前 5 名，而仅预测潜在变量的正确率为 24%，频率先验的正确操作为 17%。
+
+</details>
+
+---
+
+## 4. Dual Exam: Controlled Evaluation of Multimodal Agents and World Models / 双重考试：多模式代理和世界模型的受控评估
+
+**Date**: 2026-10-22 | **arXiv**: [2610.31066v1](http://arxiv.org/abs/2610.31066v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.31066v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Models (WMs) can support Multimodal Agents (MAs) through simulated experience, while Agent trajectories can inform World Model refinement. Evaluating this interaction requires separate evidence about action selection and state evolution. We introduce Dual Exam, which tests Agents under fixed environment response mechanisms and World Models under fixed action interventions across physical, digital, social, and scientific domains. The Agent track compares 10 configurations on 1,088 items in 15 reporting categories. The World Model track contains 400 cases across eight scenarios; 15 configurations have full coverage and one covers six scenarios. GPT 6 Astra leads the case-weighted Agent Index at 31.3, and GPT-Image-2 leads the full-coverage WM Overall at 21.7. These scores use different tasks and metrics and are not directly comparable. A 150-case pilot of one coupled pairing records zero task successes and motivates component-level diagnosis. Results reveal uneven task performance and failures to preserve task-relevant state. Their value for predicting coupled success or sustained reciprocal learning remains to be established.
+
+世界模型（WM）可以通过模拟经验支持多模式代理（MA），而代理轨迹可以为世界模型的细化提供信息。评估这种相互作用需要关于行动选择和状态演化的单独证据。我们引入了双重考试，它测试固定环境响应机制下的智能体和跨物理、数字、社会和科学领域的固定行动干预下的世界模型。代理跟踪比较 15 个报告类别中 1,088 个项目的 10 个配置。世界模型赛道包含 8 个场景的 400 个案例； 15种配置全覆盖，1种配置覆盖6种场景。 GPT 6 Astra 以 31.3 领先案例加权代理指数，GPT-Image-2 以 21.7 领先全覆盖 WM 总体指数。这些分数使用不同的任务和指标，不能直接比较。一对配对的 150 例试点记录了零任务成功并激发了组件级诊断。结果揭示了任务性能不均匀以及无法保持任务相关状态。它们对于预测耦合成功或持续互惠学习的价值仍有待确定。
+
+</details>
+
+---
+
+## 5. In-Context Learning World Models for Robot Dual-Arm Manipulation of Soft Garment with Partial Observations / 具有部分观察的机器人双臂操纵软服装的情境学习世界模型
+
+**Date**: 2026-10-22 | **arXiv**: [2610.30988v1](http://arxiv.org/abs/2610.30988v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.30988v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robust manipulation of soft objects, such as garments, is a critical skill for service and household robots to adopt, but remains challenging due to its high-dimensional state space, and material-dependent deformations. Humans address this challenge by using mental world models that "imagine" the shape and material properties from partial observations, which enables them to predict how actions affect future states. As such, embedding such world models in robots allows for better generalization in manipulating a wide variety of garments in the real world. However, learned world models typically require large amounts of real world data that is strenuous to collect, and a mechanism to infer latent properties that govern dynamics. We present a Soft-Object World Model that performs generative full-state estimation and action-conditioned dynamics prediction using a transformer backbone trained on large-scale simulated soft object interactions, with measures to mitigate the sim-to-real gap. By learning to infer latent shape and material cues through in-context learning over a variable-length partial point-cloud history, the model generalizes across robot embodiments, material parameters, garment types and shapes, and manipulation coordination modes without weight updates. The world model is then integrated with a Goal-Conditioned action planner for motion synthesis. We validate the approach in simulation and real world for bimanual garment folding, reporting improvements in reconstruction fidelity, prediction accuracy, and task success.
+
+对服装等软物体的鲁棒操纵是服务和家用机器人采用的一项关键技能，但由于其高维状态空间和依赖于材料的变形仍然具有挑战性。人类通过使用心理世界模型来应对这一挑战，该模型通过部分观察“想象”形状和材料属性，这使他们能够预测行为如何影响未来状态。因此，将这样的世界模型嵌入到机器人中可以更好地泛化在现实世界中操纵各种服装。然而，学习世界模型通常需要大量收集起来很费力的现实世界数据，以及推断控制动态的潜在属性的机制。我们提出了一种软对象世界模型，该模型使用经过大规模模拟软对象交互训练的变压器主干来执行生成全状态估计和动作条件动态预测，并采取措施缩小模拟与真实的差距。通过对可变长度的部分点云历史进行上下文学习来推断潜在形状和材料线索，该模型可以概括机器人实施例、材料参数、服装类型和形状以及操作协调模式，而无需权重更新。然后将世界模型与目标条件动作规划器集成以进行运动合成。我们在模拟和现实世界中验证了双手折叠服装的方法，报告了重建保真度、预测准确性和任务成功率方面的改进。
+
+</details>
+
+---
+
+## 6. An Introduction to World Models for Generalist Agents / 通才智能体世界模型简介
+
+**Date**: 2026-10-22 | **arXiv**: [2610.30789v1](http://arxiv.org/abs/2610.30789v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.30789v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models have recently emerged as a promising direction toward developing generalist agents capable of understanding, predicting, and interacting with diverse environments. However, despite growing interest, the concept of a world model remains loosely defined, encompassing approaches ranging from predictive dynamics models and learned simulators to models that jointly generate future observations and actions. This introductory paper aims to clarify the concept of world models and provide a unified perspective on their role in developing generalist agents. Starting from the partially observable Markov decision process (POMDP) framework, we connect world modeling to classical control, dynamical systems, signal processing, and reinforcement learning. We introduce different approaches to world modeling, emphasizing the knowledge they capture, their learning objectives, and how they support decision-making. We further explore the relationship between world modeling and policy learning, highlighting how these capabilities can be unified through conditional prediction without requiring separate models. Rather than offering an exhaustive survey of existing methods, this paper focuses on fundamental concepts, modeling principles, and connections, with the goal of providing an accessible and unified introduction to world models for generalist agents.
+
+世界模型最近成为开发能够理解、预测和与不同环境交互的多面手智能体的一个有前途的方向。然而，尽管人们的兴趣日益浓厚，世界模型的概念仍然是松散的定义，涵盖从预测动力学模型和学习模拟器到共同生成未来观察和行动的模型等方法。这篇介绍性论文旨在阐明世界模型的概念，并就其在开发通才智能体中的作用提供统一的视角。从部分可观察马尔可夫决策过程（POMDP）框架开始，我们将世界建模与经典控制、动力系统、信号处理和强化学习联系起来。我们介绍了不同的世界建模方法，强调他们捕获的知识、他们的学习目标以及他们如何支持决策。我们进一步探索世界建模和政策学习之间的关系，强调如何通过条件预测来统一这些能力，而不需要单独的模型。本文并未对现有方法进行详尽的调查，而是重点介绍基本概念、建模原理和联系，目的是为通才智能体提供易于理解且统一的世界模型介绍。
+
+</details>
+
+---
+
+## 7. Anticipating Social Consequences with Distributional World Models / 用分布式世界模型预测社会后果
+
+**Date**: 2026-10-22 | **arXiv**: [2610.30657v1](http://arxiv.org/abs/2610.30657v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.30657v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Social world models predict how interactions develop after an action, helping agents negotiate, cooperate and mediate. In these situations, one action can lead to several plausible futures, hence predicting only one future can overlook consequential alternatives, while exploring them through repeated simulations increases inference cost. We propose DSWM, a Distributional Social World Model that predicts alternative responses, their probabilities and immediate and final outcome values in one output per candidate action. We train a 4B model on repeated simulations using supervised fine-tuning and GRPO. At inference time, the actor uses these possible consequences to choose an action. Across three seen and two unseen environments, with interaction backbones absent from training collection, DSWM achieves the best average performance on 13 of 15 metrics. Ablations show that retaining multiple futures and their predicted probabilities improves outcomes in all five environments.
+
+社交世界模型预测行动后互动如何发展，帮助代理人进行谈判、合作和调解。在这些情况下，一项行动可能会导致几种可能的未来，因此仅预测一种未来可能会忽略相应的替代方案，而通过重复模拟探索它们会增加推理成本。我们提出 DSWM，一种分布式社会世界模型，它可以预测每个候选行动的一个输出中的替代响应、它们的概率以及立即和最终结果值。我们使用监督微调和 GRPO 进行重复模拟来训练 4B 模型。在推理时，参与者使用这些可能的后果来选择行动。在三个可见环境和两个不可见环境中，训练集合中缺少交互主干，DSWM 在 15 个指标中的 13 个指标上实现了最佳平均性能。消融表明，保留多个未来及其预测概率可以改善所有五种环境中的结果。
+
+</details>
+
+---
+
+## 8. From Single-Actor Environments to Multi-Actor Event Worlds: Can LLMs Be Event World Models? / 从单参与者环境到多参与者事件世界：LLM 可以成为事件世界模型吗？
+
+**Date**: 2026-10-21 | **arXiv**: [2610.30488v1](http://arxiv.org/abs/2610.30488v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.30488v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models help agents assess the consequences of their actions before acting. Many real systems, however, involve multiple actors who make their own decisions, can evolve even when the agent takes no action, and are only partially observed through event logs. We formalize these systems as event worlds and ask whether large language models can predict future observations from the log and the agent's proposed actions. We build complementary benchmarks from human Diplomacy games and real Polymarket trades. Our hierarchical framework compares prediction with and without other actors' actions, then tests multi-step rollouts, predictions for actions never taken, and usefulness to agents. Fine-tuning and more data improve prediction when all actors' recorded actions are given. With only the agent's action, models struggle when other actors strongly affect the outcome, and larger models and longer histories help little. This gap also limits multi-step prediction and agent decisions, with models overestimating plan success. Yet imagined experience and initialization from world models can still improve policy learning. Anticipating other actors' actions remains a central challenge for event world modeling.
+
+世界模型帮助主体在采取行动之前评估其行为的后果。然而，许多真实的系统涉及多个参与者，他们自己做出决定，即使代理不采取任何行动，也可以进化，并且只能通过事件日志进行部分观察。我们将这些系统形式化为事件世界，并询问大型语言模型是否可以根据日志和代理建议的操作来预测未来的观察结果。我们从人类外交游戏和真实的 Polymarket 交易中建立互补的基准。我们的分层框架将预测与其他参与者的操作进行比较，然后测试多步骤部署、对从未采取的操作的预测以及对代理的有用性。当给出所有参与者记录的动作时，微调和更多数据可以改善预测。当其他参与者强烈影响结果时，只有代理人的行动，模型就会陷入困境，而更大的模型和更长的历史则无济于事。这种差距还限制了多步骤预测和代理决策，模型高估了计划的成功。然而，想象的经验和世界模型的初始化仍然可以改善政策学习。预测其他参与者的行为仍然是事件世界建模的核心挑战。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-22 (20 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-10-22
