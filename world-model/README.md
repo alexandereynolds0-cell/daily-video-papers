@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-26](papers/2026-10-26.md) - 2 papers
 - [2026-10-23](papers/2026-10-23.md) - 8 papers
 - [2026-10-22](papers/2026-10-22.md) - 20 papers
 - [2026-10-21](papers/2026-10-21.md) - 1 papers
@@ -173,6 +174,50 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-26 (2 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-10-26
+
+**Paper Count**: 2
+
+---
+
+## 1. Adaptive World-Models for Anomaly Recognition (AWARE): A Framework for Robot Dynamics Prediction and Introspection / 异常识别的自适应世界模型 (AWARE)：机器人动力学预测和内省的框架
+
+**Date**: 2026-10-23 | **arXiv**: [2610.32742v1](http://arxiv.org/abs/2610.32742v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.32742v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Unrecognized anomalies in critical infrastructure can rapidly cascade into catastrophic physical or operational failures. Current anomaly detection approaches often rely on direct access to the monitored system by utilizing onboard sensors, such as motor encoders, to detect anomalous states. However, legacy hardware often lacks these sensors, or strict security protocols may prohibit access altogether. We therefore present AWARE, a world model framework that is capable of anomaly detection using only external camera monitoring via system dynamics estimation and state prediction. Evaluated across 240 real-world robotic crane trajectories, including payload collisions and motor degradations, AWARE demonstrates a 26% improvement in anomaly classification over our strongest baseline under noisy, camera-only state estimation. Furthermore, the inferred dynamics parameter can be decoded to identify the source of faults, localizing the degrading motor with 88% accuracy.
+
+关键基础设施中未被识别的异常可能会迅速引发灾难性的物理或操作故障。当前的异常检测方法通常依赖于利用机载传感器（例如电机编码器）直接访问受监控系统来检测异常状态。然而，传统硬件通常缺乏这些传感器，或者严格的安全协议可能完全禁止访问。因此，我们提出了 AWARE，这是一个世界模型框架，能够仅使用外部摄像头监控，通过系统动态估计和状态预测来进行异常检测。通过对 240 个现实世界的机器人起重机轨迹（包括有效负载碰撞和电机退化）进行评估，AWARE 表明，在嘈杂的仅摄像头状态估计下，异常分类比我们最强的基线提高了 26%。此外，可以对推断的动态参数进行解码，以识别故障源，以 88% 的准确度定位退化电机。
+
+</details>
+
+---
+
+## 2. HGWM: Hierarchical Graph-Guided World Model for Zero-Shot Object Navigation via Graph Matching / HGWM：通过图匹配实现零样本对象导航的分层图引导世界模型
+
+**Date**: 2026-10-23 | **arXiv**: [2610.32554v1](http://arxiv.org/abs/2610.32554v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.32554v1)
+
+**Categories**: cs.RO, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Zero-shot object navigation requires an embodied agent to choose where to search while retaining evidence from previous observations. HGWM couples an LLM-generated room-anchor prior with persistent spatial-semantic memory. A coarse stage assigns visual-semantic scores to candidate headings on a 0-10 scale; a fine stage measures symbolic compatibility between observed objects, room context, and the goal prior. Phase-dependent fusion combines these scores with an LLM direction recommendation before local action selection. On HM3D v0.1, the reported HGWM configuration achieves 62.6% success rate (SR) and 31.5% success weighted by path length (SPL), compared with 58.1% and 31.2% for WMNav. On MP3D, the corresponding values are 46.8% and 17.9%, compared with 45.4% and 17.2%. The results indicate higher success point estimates and modest path-efficiency gains. On HM3D v0.2, the full model obtains 74.4% SR and 31.9% SPL. Additional component ablations reduce SR by 0.9-2.3 percentage points and SPL by 0.6-1.5 points. These are author-reported aggregate measurements. The accompanying implementation repairs pass offline tests; episode-level rerun records are not available. Evaluation is confined to simulation.
+
+零样本对象导航需要一个实体代理来选择搜索位置，同时保留以前观察到的证据。 HGWM 将 LLM 生成的房间锚先验与持久空间语义记忆结合起来。粗略阶段按 0-10 等级为候选标题分配视觉语义分数；一个好的阶段衡量观察到的物体、房间环境和先验目标之间的符号兼容性。在选择本地行动之前，阶段相关融合将这些分数与法学硕士方向推荐相结合。在 HM3D v0.1 上，报告的 HGWM 配置实现了 62.6% 的成功率 (SR) 和按路径长度加权的 31.5% 的成功率 (SPL)，而 WMNav 的成功率分别为 58.1% 和 31.2%。在 MP3D 上，相应的值为 46.8% 和 17.9%，而 MP3D 上的相应值为 45.4% 和 17.2%。结果表明更高的成功点估计和适度的路径效率增益。在 HM3D v0.2 上，完整模型获得 74.4% SR 和 31.9% SPL。额外的组件消融会使 SR 降低 0.9-2.3 个百分点，SPL 降低 0.6-1.5 个百分点。这些是作者报告的汇总测量值。附带的实施修复通过离线测试；剧集级别的重播记录不可用。评估仅限于模拟。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-23 (8 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-10-23
