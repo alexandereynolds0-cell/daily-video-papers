@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-26](papers/2026-10-26.md) - 7 papers
 - [2026-10-23](papers/2026-10-23.md) - 43 papers
 - [2026-10-22](papers/2026-10-22.md) - 59 papers
 - [2026-10-21](papers/2026-10-21.md) - 17 papers
@@ -188,6 +189,134 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-26 (7 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-10-26
+
+**Paper Count**: 7
+
+---
+
+## 1. SceneBloom: Agentic Indoor Environment Generation with Realistic and Diverse Layouts for Embodied Learning / SceneBloom：具有现实和多样化布局的代理室内环境生成，用于体现学习
+
+**Date**: 2026-10-23 | **arXiv**: [2610.32978v1](http://arxiv.org/abs/2610.32978v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.32978v1)
+
+**Categories**: cs.CV, cs.AI, cs.RO
+
+**Code**: https://github.com/Tinaliu0123/scenebloom.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Training generalizable embodied agents requires realistic, varied, and simulation-ready indoor environments. Language-guided methods support semantic planning and object-level reasoning, but precise spatial grounding remains difficult. Visual generative models offer rich priors over plausible arrangements, yet their outputs require geometric reasoning to become physically valid 3D scenes. We introduce SceneBloom, an agentic framework that combines visual layout sampling with contract-guided 3D compilation. A hierarchical sampler uses diffusion priors to generate furniture arrangements within functional zones. A compiler then uses relations extracted from each proposal to guide geometric fitting and local pose correction. Across five room types, SceneBloom attains the highest visual quality and physical stability among the compared methods and is the only method with no detected mesh collisions and out-of-bounds objects. Its layouts are also closer to the distribution of real rooms than those of all compared baselines. Object navigation policies trained in these realistic scenes achieve a higher success rate in held-out real scans than those trained on an equal number of real training scans. Code is available at https://github.com/Tinaliu0123/scenebloom.
+
+训练可推广的具体代理需要真实、多样化且可模拟的室内环境。语言引导的方法支持语义规划和对象级推理，但精确的空间基础仍然很困难。视觉生成模型提供了丰富的合理安排先验，但其输出需要几何推理才能成为物理上有效的 3D 场景。我们引入了 SceneBloom，这是一个将视觉布局采样与合同引导的 3D 编译相结合的代理框架。分层采样器使用扩散先验来生成功能区域内的家具布置。然后，编译器使用从每个建议中提取的关系来指导几何拟合和局部姿态校正。在五种房间类型中，SceneBloom 在比较方法中获得了最高的视觉质量和物理稳定性，并且是唯一没有检测到网格碰撞和越界对象的方法。与所有比较基线相比，其布局也更接近真实房间的分布。在这些现实场景中训练的对象导航策略在保留的真实扫描中比在相同数量的真实训练扫描中训练的对象导航策略获得更高的成功率。代码可在 https://github.com/Tinaliu0123/scenebloom 获取。
+
+</details>
+
+---
+
+## 2. DexPort: A Hand-Held Skill Interface for Dexterous Hand Data Collection / DexPort：用于灵巧手数据采集的手持技能界面
+
+**Date**: 2026-10-23 | **arXiv**: [2610.32969v1](http://arxiv.org/abs/2610.32969v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.32969v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Collecting high-quality demonstrations remains a central bottleneck for learning dexterous manipulation. Teleoperation records executable robot actions, but it requires a complete robot setup and places the burden of coordinating many finger joints on the operator. Human demonstrations are easier to collect, but their motions must be estimated and retargeted to the robot, and they do not directly provide robot actions. In this paper, we introduce DexPort, a portable data-collection interface for high-DoF robot hands. It uses the same hand hardware for collection and deployment, avoiding a hand embodiment gap, and records both commanded joint targets and measured joint states. Our key observation is that a small set of skills can support a wide range of dexterous tasks. During collection, the operator moves the hand-held interface to specify the robot wrist motion and selects or adjusts skills that coordinate the finger motion. This removes the need to control each joint independently while retaining behaviors such as precise grasping and in-hand manipulation. We collect demonstrations across several real-world tasks and in unstructured environments without a robot arm. We then use behavior cloning to train visuomotor policies directly on the recorded wrist motions and hand commands, without skill labels. We evaluate across 4 tasks: pick-and-place with diverse objects, screwing with in-hand tool use, drawer stowage which requires simultaneous grasp and pulling, and a bimanual scanning task. We collect over 2,500 demonstrations with our portable device, in both laboratory and in-the-wild settings. Across our tasks, we see an improvement from 11% to 64% when using recorded robot commands instead of states, and an improvement from 36% to 78% for task success when using in-the-wild data.
+
+收集高质量的演示仍然是学习灵巧操作的主要瓶颈。远程操作记录可执行的机器人动作，但它需要完整的机器人设置，并且给操作员带来了协调许多手指关节的负担。人类演示更容易收集，但必须估计它们的动作并将其重新定位到机器人，并且它们不直接提供机器人动作。在本文中，我们介绍了 DexPort，一种用于高自由度机器人手的便携式数据采集接口。它使用相同的手部硬件进行收集和部署，避免了手部实施间隙，并记录命令的联合目标和测量的联合状态。我们的主要观察结果是，一小部分技能可以支持广泛的灵巧任务。在收集过程中，操作员移动手持界面来指定机器人手腕运动，并选择或调整协调手指运动的技能。这样就无需独立控制每个关节，同时保留精确抓取和手动操作等行为。我们收集了几个现实世界任务和没有机器人手臂的非结构化环境中的演示。然后，我们使用行为克隆直接根据记录的手腕运动和手部命令训练视觉运动策略，无需技能标签。我们评估了 4 项任务：拾取和放置不同的物体、使用手动工具拧紧、需要同时抓握和拉动的抽屉存放以及双手扫描任务。我们在实验室和野外环境中使用便携式设备收集了 2,500 多个演示。在我们的任务中，当使用记录的机器人命令而不是状态时，我们发现任务成功率从 11% 提高到 64%，而当使用野外数据时，任务成功率从 36% 提高到 78%。
+
+</details>
+
+---
+
+## 3. RynnUnify: Towards Unified Embodied Brain / RynnUnify：迈向统一的具身大脑
+
+**Date**: 2026-10-23 | **arXiv**: [2610.32965v1](http://arxiv.org/abs/2610.32965v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.32965v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce RynnUnify, a 16B unified embodied model that combines strong embodied understanding with long-horizon visual planning through interleaved video--language reasoning. With capabilities spanning spatial reasoning, physical prediction, and grounding, RynnUnify connects an understanding of the physical world with visual anticipation of how it evolves across successive subtasks. Building on these capabilities, we further develop an agentic extension through reinforcement learning to selectively use video predictions for reasoning about unobserved states and interaction outcomes. We also develop a world-action extension of the full RynnUnify model, translating its understanding and prediction capabilities into robot control. To evaluate these capabilities, we introduce Rynn-VP and Rynn-GEU for long-horizon visual planning and anticipatory reasoning. Experiments show that RynnUnify achieves the highest average embodied understanding score among the evaluated unified multimodal models and improves the Rynn-VP overall score by 9.75 points over Cosmos 3 Nano. Its agentic extension improves the Rynn-GEU average by 6.0 points over direct reasoning, while the world-action extension achieves 51.5\% success on 20 selected composite RoboCasa365 tasks and 46.7\% average success across three real-robot tasks. Together, these results establish RynnUnify as a shared foundation for embodied understanding, visual planning, and robot control, taking a step toward a unified embodied brain.
+
+我们介绍 RynnUnify，一个 16B 统一体现模型，通过交错视频语言推理将强大的体现理解与长视野视觉规划结合起来。 RynnUnify 具有涵盖空间推理、物理预测和基础的功能，将对物理世界的理解与对其在连续子任务中如何演变的视觉预测联系起来。基于这些功能，我们通过强化学习进一步开发代理扩展，以选择性地使用视频预测来推理未观察到的状态和交互结果。我们还开发了完整 RynnUnify 模型的世界动作扩展，将其理解和预测能力转化为机器人控制。为了评估这些能力，我们引入了 Rynn-VP 和 Rynn-GEU 来进行长期视觉规划和预期推理。实验表明，RynnUnify 在评估的统一多模态模型中实现了最高的平均体现理解得分，并且将 Rynn-VP 总体得分比 Cosmos 3 Nano 提高了 9.75 分。其代理扩展比直接推理将 Rynn-GEU 平均值提高了 6.0 个点，而世界动作扩展在 20 个选定的复合 RoboCasa365 任务上取得了 51.5% 的成功率，在三个真实机器人任务上取得了 46.7% 的平均成功率。总之，这些结果将 RynnUnify 确立为具身理解、视觉规划和机器人控制的共享基础，向统一的具身大脑迈出了一步。
+
+</details>
+
+---
+
+## 4. Semantic Representation for Agentic Self-Play in Automated Laboratories / 自动化实验室中代理自我游戏的语义表示
+
+**Date**: 2026-10-23 | **arXiv**: [2610.32755v1](http://arxiv.org/abs/2610.32755v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.32755v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Navigating complex, high-dimensional biological search spaces necessitates scalable physical and computational intelligence to explore beyond local optima through iterative self-play across ideation, experimentation, and automation. Translating experimental designs into reliable physical execution remains bottlenecked by static laboratory automation and unmodeled physical variability. To address this, we introduce VERified Infrastructure for Discovery Laboratories, or VERID, a foundational infrastructure designed to bridge the gap between the high-level reasoning of artificial intelligence (AI) agents and complex, error-prone physical realities of wet labs. VERID is a persistent, high-fidelity semantic digital twin of the laboratory workcell that provides four core services: queryable introspection for agentic reasoning, time-compressed simulation for protocol validation, comprehensive trace persistence for a complete scientific record, and a framework for safe execution.   We present three case studies using aqueous dye and deionized water mixtures to validate the optical and fluidic foundations of VERID. These studies demonstrate how VERID enables pre-emptive detection of critical errors in experimental protocols, stateful mid-run error recovery and post-hoc identification of subtle physical failures. The simulation functions as a discrete accounting engine, allowing agents to safely and inexpensively explore experimental designs in silico and refine experimental strategies through iterative self-play. VERID also captures structured multimodal experimental data for downstream analysis, knowledge mining and agent training. We argue that this semantic layer is an essential prerequisite for deploying autonomous agents in the biochemical and biomedical sciences, ensuring data integrity, operational safety, and paving the way for tackling previously intractable grand challenges in biology.
+
+在复杂、高维的生物搜索空间中导航需要可扩展的物理和计算智能，通过构思、实验和自动化的迭代自我游戏来探索超越局部最优的情况。将实验设计转化为可靠的物理执行仍然受到静态实验室自动化和未建模的物理可变性的瓶颈。为了解决这个问题，我们引入了发现实验室验证基础设施（VERID），这是一个基础设施，旨在弥合人工智能（AI）代理的高级推理与湿实验室复杂且容易出错的物理现实之间的差距。 VERID 是实验室工作单元的持久、高保真语义数字孪生，提供四项核心服务：用于代理推理的可查询内省、用于协议验证的时间压缩模拟、用于完整科学记录的全面跟踪持久性以及用于安全执行的框架。   我们提出了三个使用水性染料和去离子水混合物的案例研究来验证 VERID 的光学和流体基础。这些研究展示了 VERID 如何能够预先检测实验协议中的关键错误、状态运行中错误恢复以及细微物理故障的事后识别。模拟功能作为离散会计引擎，允许代理安全且廉价地探索计算机实验设计，并通过迭代自我游戏完善实验策略。 VERID 还捕获结构化多模式实验数据，用于下游分析、知识挖掘和代理培训。我们认为，这个语义层是在生物化学和生物医学科学中部署自主代理的重要先决条件，确保数据完整性、操作安全性，并为解决生物学领域以前棘手的重大挑战铺平道路。
+
+</details>
+
+---
+
+## 5. Ontology-Guided Knowledge Graph Construction from Structured Metadata and Climate Science Publications / 基于结构化元数据和气候科学出版物的本体引导知识图构建
+
+**Date**: 2026-10-23 | **arXiv**: [2610.32725v1](http://arxiv.org/abs/2610.32725v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.32725v1)
+
+**Categories**: cs.CL, cs.AI
+
+**Code**: https://github.com/aayushacharya/climatekg.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The rapid expansion of scientific literature far outpaces the speed of manual curation, creating a fundamental bottleneck in extracting structured knowledge from scientific texts. To address this, we introduce an agentic, ontology-guided framework for knowledge graph (KG) construction. Our framework utilizes specialized agents for document understanding, information extraction, ontology conformance, and entity linking. First, an LLM extracts factual knowledge in the form of triples with explicit textual evidence from research papers. Then the triplets undergo a multistage verification process to ground the triplets in the ontology. By enforcing schema constraints and requiring evidence in the form of text fragments, we ensure the data is both semantically consistent and traceable. In an agreement study over 1,000 extracted triplets, Gemini-2.5-flash achieves Cohen's $κ$ scores of 0.640--0.700 against three human annotators, matching the human--human agreement range of 0.616--0.689. We applied this framework to 2,000 scientific publications and construct a novel, ontology-grounded KG for climate science with 133,990 nodes and 755,308 relations; of the 23,327 triplets that the publications contribute after validation, 98.96\% are judged correct. The pipeline code and KG is publicly available https://github.com/aayushacharya/climatekg.
+
+科学文献的快速扩张远远超过了人工管理的速度，这为从科学文本中提取结构化知识造成了根本瓶颈。为了解决这个问题，我们引入了一种代理的、本体引导的知识图（KG）构建框架。我们的框架利用专门的代理来进行文档理解、信息提取、本体一致性和实体链接。首先，法学硕士以三元组的形式提取事实知识，并从研究论文中获取明确的文本证据。然后，三元组经历多阶段验证过程，以将三元组扎根于本体中。通过实施模式约束并要求文本片段形式的证据，我们确保数据在语义上一致且可追踪。在一项超过 1,000 个提取的三元组的一致性研究中，Gemini-2.5-flash 相对于三名人类注释者，达到了 Cohen 的 $κ$ 分数 0.640--0.700，与人类之间的一致性范围 0.616--0.689 相匹配。我们将该框架应用于 2,000 份科学出版物，并构建了一个新颖的、基于本体论的气候科学知识图谱，包含 133,990 个节点和 755,308 个关系；出版物在验证后提供的 23,327 个三元组中，有 98.96\% 被判定为正确。管道代码和 KG 是公开的 https://github.com/aayushacharya/climatekg。
+
+</details>
+
+---
+
+## 6. UAV-SwarmAgent: Scalable Multi-UAV Reconnaissance and Task Allocation via Code Generation and Vision-Language Reasoning / UAV-SwarmAgent：通过代码生成和视觉语言推理进行可扩展的多无人机侦察和任务分配
+
+**Date**: 2026-10-23 | **arXiv**: [2610.32559v1](http://arxiv.org/abs/2610.32559v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.32559v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Supervising a multi-UAV reconnaissance mission usually means plotting waypoints and watching every drone. We present UAV SwarmAgent, a hierarchical multi-agent system in which an operator states the mission in one natural-language sentence and a ground-station agent writes and executes code that turns it into per-UAV routes. The agent grounds inspection targets in an aerial map with a vision-language model, splits them among N UAVs by balancing route length, and dispatches worker agents that verify incidents with a compact onboard decision model. In simulation over 4 incident types and 3 foundation models, the swarm located the incident in 244 of 255 missions (95.7%). A paired scaling study with one to 5 UAVs shows that flight time follows an Amdahl-type law. The second UAV delivers half of the attainable saving and the speedup is bounded at 1.52x. We discuss what this predictability, and the false alarms we observed, imply for an operator who supervises the swarm, and outline the user study needed to test it.
+
+监督多无人机侦察任务通常意味着绘制航路点并监视每架无人机。我们提出了 UAV SwarmAgent，这是一种分层多代理系统，其中操作员用自然语言句子陈述任务，地面站代理编写并执行代码，将其转换为每个无人机的路线。该代理使用视觉语言模型将检查目标放置在航空地图上，通过平衡路线长度将其分配给 N 架无人机，并派遣工作代理使用紧凑的机载决策模型来验证事件。在对 4 种事件类型和 3 种基础模型的模拟中，集群在 255 次任务中的 244 次中发现了该事件（95.7%）。对 1 到 5 架无人机进行的配对研究表明，飞行时间遵循阿姆达尔定律。第二架无人机可节省一半的成本，并且加速比为 1.52 倍。我们讨论了这种可预测性以及我们观察到的误报对监督集群的操作员意味着什么，并概述了测试它所需的用户研究。
+
+</details>
+
+---
+
+## 7. When Agents Fail: Model or Harness--Who's to Blame? / 当特工失败时：榜样还是驾驭——谁该责怪？
+
+**Date**: 2026-10-23 | **arXiv**: [2610.32483v1](http://arxiv.org/abs/2610.32483v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.32483v1)
+
+**Categories**: cs.AI, cs.CL, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM agents combine models with execution harnesses, so agentic benchmark performance reflects their joint behavior. We argue that harnesses should therefore be evaluated through their interactions with underlying models. We develop a framework combining five complementary measures: (i) Valid Completion Rate (VCR), how reliably agents finish normally and deliver evaluable results, irrespective of task correctness; (ii) Model-Harness Fit, how well a harness supports task achievement through valid completion for a given model; (iii) Cross-Model Fit, a harness's overall suitability across evaluated models; (iv) Interaction Residuals, pairing-specific execution strengths and weaknesses hidden by component-level summaries; and (v) Token Load, the token demands of agent execution, including failed attempts. We evaluate four general-purpose harnesses (OpenCode, Codex CLI, Pi CLI, and DeepAgents) with four core models, plus two fixed native model-harness systems, on six benchmarks covering context management, tool use, long-context planning, multimodal interaction, and artifact handoff. Including native references and stress conditions, 111 evaluation settings yield 52,168 trajectories. Harness rankings vary across models and benchmarks; task performance and valid completion can favor different pairings, and similar task scores can accompany distinct execution profiles. OpenCode ranks first in cross-model performance, while DeepSeek V4 Flash Preview maintains consistently high Mean VCR across harnesses on the shared four-benchmark panel. These findings support evaluating model-harness interactions, training transferable harness-use capabilities in models, and harness designs adapted to the model and task.
+
+LLM 代理将模型与执行工具相结合，因此代理基准性能反映了它们的联合行为。因此，我们认为应该通过线束与底层模型的交互来评估线束。我们开发了一个结合了五项补充措施的框架：（i）有效完成率（VCR），即代理正常完成并交付可评估结果的可靠程度，无论任务正确性如何； (ii) 模型-线束拟合度，线束通过有效完成给定模型来支持任务实现的程度； (iii) 跨模型拟合度，即安全带跨评估模型的整体适用性； (iv) 交互残差、组件级摘要隐藏的特定配对执行优势和劣势； (v) 令牌负载，代理执行的令牌需求，包括失败的尝试。我们评估了具有四个核心模型的四个通用工具（OpenCode、Codex CLI、Pi CLI 和 DeepAgents），以及两个固定的本机模型工具系统，涉及上下文管理、工具使用、长上下文规划、多模式交互和工件切换的六个基准。包括本地参考和压力条件，111 种评估设置产生 52,168 条轨迹。线束排名因型号和基准而异；任务表现和有效完成可以有利于不同的配对，并且相似的任务分数可以伴随不同的执行配置文件。 OpenCode 在跨模型性能方面排名第一，而 DeepSeek V4 Flash Preview 在共享的四基准测试面板上跨线束保持一致的高平均 VCR。这些发现支持评估模型与线束的交互、训练模型中可转移的线束使用能力以及适应模型和任务的线束设计。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-23 (43 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-10-23
