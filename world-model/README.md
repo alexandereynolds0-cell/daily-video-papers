@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-27](papers/2026-10-27.md) - 6 papers
 - [2026-10-26](papers/2026-10-26.md) - 2 papers
 - [2026-10-23](papers/2026-10-23.md) - 8 papers
 - [2026-10-22](papers/2026-10-22.md) - 20 papers
@@ -174,6 +175,114 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-27 (6 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-10-27
+
+**Paper Count**: 6
+
+---
+
+## 1. Adapt for Planning, Not just Prediction: Optimistic Test-Time World Model Adaptation / 适应规划，而不仅仅是预测：乐观的测试时世界模型适应
+
+**Date**: 2026-10-26 | **arXiv**: [2610.35636v1](http://arxiv.org/abs/2610.35636v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.35636v1)
+
+**Categories**: cs.LG, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models are typically pre-trained offline and kept frozen at test time, so planning with them can degrade under distribution shift. Test-time adaptation (TTA) can mitigate this degradation by updating the model during deployment. Unlike pre-training on fixed data, TTA for planning is closed-loop: the planner uses model rollouts to select actions, and the resulting transitions drive the next update. This raises the question: which objective should guide TTA for planning? Under a prediction-only objective, the model is fit only to the outcomes of its own actions, so it can remain wrong about the actions that would reach the goal, and low prediction error need not translate into better planning. Inspired by reward-biased maximum likelihood from adaptive control, we introduce Optimistic Test-Time Adaptation (OpTTA). Its objective has two terms, the prediction loss on observed transitions and the planner's goal-reaching cost on its candidate rollouts, both minimized over the model parameters. The planning term biases adaptation toward models that are optimistic about reaching the goal, without any additional environment interaction. Across visual and environment shifts on manipulation, reaching and navigation tasks, OpTTA raises final planning success over the frozen model by 13.5 percentage points on average, compared with 6.9 for the prediction-only objective (AdaJEPA), when only the predictor is adapted. When the encoder is adapted as well, the gains are 13.5 and 7.5 points. These experiments span three JEPA world models with different encoders and training objectives and, for temporal straightening, both CEM and gradient-based planners. Our results suggest that test-time adaptation of world models for planning benefits from an optimistic, task-aware term in addition to the prediction loss.
+
+潜在世界模型通常是离线预训练的，并在测试时保持冻结状态，因此使用它们进行规划可能会在分布转移时降级。测试时适应 (TTA) 可以通过在部署期间更新模型来缓解这种退化。与固定数据的预训练不同，用于规划的 TTA 是闭环的：规划器使用模型部署来选择操作，产生的转换驱动下一次更新。这就提出了一个问题：哪个目标应该指导 TTA 进行规划？在仅预测目标下，模型仅适合其自身行动的结果，因此它对于实现目标的行动可能仍然是错误的，并且低预测误差不需要转化为更好的规划。受自适应控制的奖励偏差最大似然的启发，我们引入了乐观测试时间适应（OpTTA）。它的目标有两个项，即观察到的转换的预测损失和规划者在其候选推出中达到目标的成本，两者都在模型参数上最小化。规划术语偏向于对实现目标持乐观态度的模型，无需任何额外的环境交互。在操纵、到达和导航任务上的视觉和环境变化中，OpTTA 比冻结模型的最终规划成功率平均提高了 13.5 个百分点，而仅预测目标 (AdaJEPA) 仅调整预测器时的最终规划成功率为 6.9 个百分点。当编码器也进行调整时，增益分别为 13.5 点和 7.5 点。这些实验跨越三个 JEPA 世界模型，具有不同的编码器和训练目标，并且为了时间拉直，还包括 CEM 和基于梯度的规划器。我们的结果表明，除了预测损失之外，用于规划的世界模型的测试时适应还受益于乐观的、任务感知的术语。
+
+</details>
+
+---
+
+## 2. TimeWorld: Towards Action-Conditioned Multimodal World Models for Time Series Forecasting / TimeWorld：面向时间序列预测的动作条件多模态世界模型
+
+**Date**: 2026-10-26 | **arXiv**: [2610.34797v1](http://arxiv.org/abs/2610.34797v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.34797v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Time series forecasting supports decision-making in web applications such as online retail and network management, where planned actions can reshape future dynamics. World models provide a natural paradigm for predicting such action-dependent changes beyond extrapolating historical patterns. However, existing time series world models (TSWMs) typically rely on fixed, domain-specific covariate schemas that limit flexible intervention specification, while multimodal forecasters treat text primarily as passive predictive context. To investigate these gaps, we introduce TSWM-Bench, a cross-domain benchmark for multimodal TSWMs spanning seven real-world datasets, with textual interventions grounded in recorded action--outcome data. Our evaluation reveals that conventional multimodal forecasters underperform history-only time series foundation models (TSFMs) despite dataset-specific training, whereas simple text-prefix adaptations improve forecasting across all evaluated TSFM backbones. These findings suggest that pretrained TSFMs encode implicit world knowledge of temporal dynamics, offering a strong foundation for action-conditioned modeling beyond conventional multimodal fusion. Building on this insight, we propose TimeWorld, a plug-in framework that adapts pretrained TSFMs through explicit action-response modeling. Specifically, the Prototype-Guided Latent Modulation (PLM) module grounds textual actions in temporal dynamics by composing representative response prototypes to modulate future representations based on the action and historical patterns. The Action Contrastive Learning (ACL) component strengthens action-specific response modeling by contrasting these updates under alternative interventions sharing the same history, distinguishing action types while preserving relative intensity relationships.
+
+时间序列预测支持在线零售和网络管理等 Web 应用程序中的决策，其中计划的行动可以重塑未来的动态。世界模型提供了一个自然的范式，用于预测这种依赖于行动的变化，而不仅仅是推断历史模式。然而，现有的时间序列世界模型（TSWM）通常依赖于固定的、特定领域的协变量模式，这限制了灵活的干预规范，而多模态预测器主要将文本视为被动预测上下文。为了研究这些差距，我们引入了 TSWM-Bench，这是一个跨越七个现实世界数据集的多模式 TSWM 的跨域基准，其文本干预基于记录的行动结果数据。我们的评估表明，尽管进行了特定于数据集的训练，传统的多模态预测器的性能仍低于仅历史时间序列基础模型（TSFM），而简单的文本前缀适应可以​​改善所有评估的 TSFM 主干的预测。这些发现表明，预训练的 TSFM 编码了时间动态的隐式世界知识，为超越传统多模态融合的动作条件建模提供了坚实的基础。基于这一见解，我们提出了 TimeWorld，这是一个插件框架，可通过显式的动作响应建模来调整预训练的 TSFM。具体来说，原型引导潜在调制（PLM）模块通过组合代表性响应原型来根据动作和历史模式来调制未来表示，从而将文本动作置于时间动态中。行动对比学习 (ACL) 组件通过对比共享相同历史的替代干预措施下的这些更新来加强特定行动的响应模型，区分行动类型，同时保留相对强度关系。
+
+</details>
+
+---
+
+## 3. Video World Models Need Predictable Latents / 视频世界模型需要可预测的潜伏
+
+**Date**: 2026-10-26 | **arXiv**: [2610.34663v1](http://arxiv.org/abs/2610.34663v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.34663v1)
+
+**Categories**: cs.LG, cs.AI, cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video world models trained on large-scale robot data promise a safe and scalable approach for learning and evaluating policies that act in the physical world. However, they still struggle with long-horizon rollouts and out-of-distribution generalization, and they remain computationally demanding at inference time. Typically, video world models make predictions in the latent space of a reconstruction-trained autoencoder, which however is not directly optimized for dynamics modeling. On the other hand, world models designed for latent planning usually optimize latents to be predictable, but they forgo accurate prediction of observations in pixel space. In this paper, we show that it is possible to achieve the best of both worlds: a latent geometry optimized to make future prediction as simple as possible without sacrificing accurate prediction of future observations. More precisely, we find that temporal objectives for representation learning, paired with a past-conditioned decoder architecture, lead to consistent improvements in generative video world models at the same training budget. The gains include up to 5x cheaper inference, over 7x faster training, and 15-24% lower pixel and perceptual errors out of distribution and over long horizons. Our world models also agree more closely with real-world policy evaluation when using a vision-language model to judge task success from their pixel-space predictions. Overall, our study indicates that temporal predictability is an important design criterion for the latent space of video world models, and provides concrete guidance on how to incorporate it into the training of autoencoders.
+
+基于大规模机器人数据训练的视频世界模型为学习和评估物理世界中的政策提供了一种安全且可扩展的方法。然而，它们仍然在长期推广和分布外泛化方面遇到困难，并且在推理时仍然对计算要求很高。通常，视频世界模型在经过重建训练的自动编码器的潜在空间中进行预测，但该自动编码器并未直接针对动态建模进行优化。另一方面，为潜在规划设计的世界模型通常会优化潜在因素以使其可预测，但它们放弃了对像素空间中观测值的准确预测。在本文中，我们表明可以实现两全其美：优化潜在几何结构，使未来预测尽可能简单，而不牺牲对未来观测的准确预测。更准确地说，我们发现表示学习的时间目标与过去条件解码器架构相结合，可以在相同的训练预算下实现生成视频世界模型的持续改进。所带来的收益包括推理成本降低了 5 倍、训练速度提高了 7 倍以上、分布外和长期范围内的像素和感知错误降低了 15-24%。当使用视觉语言模型从像素空间预测来判断任务成功时，我们的世界模型也与现实世界的政策评估更加一致。总的来说，我们的研究表明时间可预测性是视频世界模型潜在空间的重要设计标准，并为如何将其纳入自动编码器的训练提供了具体指导。
+
+</details>
+
+---
+
+## 4. Dream to Assist: Intent-Conditioned World Models for Shared Vehicle Control / 梦想助力：共享车辆控制的意向条件世界模型
+
+**Date**: 2026-10-26 | **arXiv**: [2610.34650v1](http://arxiv.org/abs/2610.34650v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.34650v1)
+
+**Categories**: cs.RO, cs.HC, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Assistive agents in shared-control settings face a dual challenge: acting proactively to align with the human's intentions while remaining legible enough for the human to comprehend and fluently respond in real time. We present Dream2Assist, a model-based reinforcement learning framework for tightly-coupled shared decision making that addresses both sides of this challenge. Our approach extends a recurrent state-space world model with intent inference, enabling an assistive policy trained via fictitious co-play to anticipate and support discrete human objectives without overriding human agency. Beyond the computational framework, we describe the full deployment pipeline needed to translate a world-model-based policy into a safe, human-centered system in a resource-efficient way. Crucially, we address the sim-to-real-human gap via policy down-selection and reward restructuring within an iterative human-machine interface design. We validate the framework through three human-subjects studies and a preliminary on-vehicle deployment spanning two qualitatively distinct domains: high-speed racing (N=30) and urban driving with richer intent structure (N=10). Our results demonstrate that intent conditioning yields measurable improvements in torque alignment and collision rate. We surface key design insights and practices for deploying learning-based assistive agents in safety-critical, real-time human-robot teaming.
+
+共享控制环境中的辅助代理面临双重挑战：主动采取行动以符合人类的意图，同时保持足够清晰，以便人类能够理解并实时流畅地做出响应。我们推出了 Dream2Assist，这是一个基于模型的强化学习框架，用于紧密耦合的共享决策，可以解决这一挑战的双方。我们的方法通过意图推理扩展了循环状态空间世界模型，从而使通过虚构的共同游戏训练的辅助策略能够预测和支持离散的人类目标，而无需凌驾于人类代理之上。除了计算框架之外，我们还描述了以资源高效的方式将基于世界模型的策略转化为安全、以人为中心的系统所需的完整部署管道。至关重要的是，我们通过迭代人机界面设计中的政策下调和奖励重组来解决模拟与真人之间的差距。我们通过三项人类受试者研究和跨越两个性质不同的领域的初步车载部署来验证该框架：高速赛车（N = 30）和具有更丰富意图结构的城市驾驶（N = 10）。我们的结果表明，意图调节可以显着改善扭矩对准和碰撞率。我们提出了在安全关键的实时人机协作中部署基于学习的辅助代理的关键设计见解和实践。
+
+</details>
+
+---
+
+## 5. How Humans Learn Unfamiliar Worlds: A Think-Aloud Dataset on ARC-AGI-3 / 人类如何学习陌生的世界：ARC-AGI-3 上的有声思考数据集
+
+**Date**: 2026-10-25 | **arXiv**: [2610.34523v1](http://arxiv.org/abs/2610.34523v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.34523v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learning through exploration and using newly acquired knowledge to achieve goals are central capabilities of general intelligence. Understanding these capabilities requires tracing how learners build, use, and revise world models during interaction. We construct the first dataset that records how humans discover and use the mechanisms of novel environments, using ARC-AGI-3 as a testbed: 144 trajectories from 64 participants across 25 public games, each pairing time-synchronized actions with think-aloud audio, plus 250 trajectories from large language model (LLM) agents with and without harnesses on the same games. We annotate mechanism triggers and recognition, action purposes, and errors and recovery, linking changes in understanding to the observations and actions that support them. We analyze characteristics of human cognition and compare them with those of LLM agents. Both groups anticipate mechanisms and use familiar analogies. Qualitative representations are more common in successful human trajectories than in successful LLM trajectories (50.0% versus 14.3%). Humans more often explore unfamiliar situations without a concrete hypothesis, while hypothesis testing is common in both groups. We also trace how learners recover through belief revision, replanning, and execution correction. As LLMs with well-designed harnesses reach saturated performance on public ARC-AGI-3 games, our cognitive analyses motivate next-generation benchmarks that challenge familiar priors, require accumulated evidence and abstraction, and test planning through subgoals, experimentation, and recovery. Our dataset is available at [https://arc3-human-think-aloud.github.io/](https://arc3-human-think-aloud.github.io/).
+
+通过探索学习和利用新获得的知识来实现​​目标是通用智能的核心能力。了解这些能力需要追踪学习者在交互过程中如何构建、使用和修改世界模型。我们构建了第一个数据集，记录人类如何发现和使用新环境的机制，使用 ARC-AGI-3 作为测试平台：来自 25 个公共游戏的 64 位参与者的 144 个轨迹，每个轨迹都将时间同步动作与有声思考音频配对，加上来自同一游戏中带或不带安全带的大型语言模型 (LLM) 代理的 250 个轨迹。我们注释机制触发和识别、行动目的以及错误和恢复，将理解的变化与支持它们的观察和行动联系起来。我们分析人类认知的特征，并将其与法学硕士代理人的特征进行比较。两组都预测了机制并使用熟悉的类比。定性表征在成功的人类轨迹中比在成功的法学硕士轨迹中更常见（50.0% 比 14.3%）。人类更经常在没有具体假设的情况下探索不熟悉的情况，而假设检验在这两个群体中都很常见。我们还追踪学习者如何通过信念修正、重新计划和执行纠正来恢复。随着拥有精心设计的工具的法学硕士在公共 ARC-AGI-3 游戏中达到饱和性能，我们的认知分析激发了下一代基准测试，这些基准测试挑战熟悉的先验知识，需要积累的证据和抽象，以及通过子目标、实验和恢复进行测试规划。我们的数据集可在 [https://arc3- human-think-aloud.github.io/](https://arc3- human-think-aloud.github.io/) 获取。
+
+</details>
+
+---
+
+## 6. HumanoidNDM: Closing the Training-Deployment Gap of Motion Tracking via Humanoid Neural Dynamics Model / HumanoidNDM：通过人形神经动力学模型缩小运动跟踪的训练与部署差距
+
+**Date**: 2026-10-25 | **arXiv**: [2610.34126v1](http://arxiv.org/abs/2610.34126v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.34126v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Humanoid robots have recently achieved remarkable success in motion tracking. However, during real-world deployment, robots inevitably encounter dynamics gaps arising from either extra physical disturbances or inaccurate simulation modeling, resulting in a significant training-deployment gap. Therefore, effectively leveraging real-world data to fine-tune policies represents the crucial last mile for robust deployment. To bridge this gap, we propose HumanoidNDM, an online fine-tuning framework for humanoid motion tracking driven by a real-world-trained neural dynamics model. First, in the data collection stage, we introduce a low-frequency reference perturbation method with an adaptive intensity mechanism, balancing deployment feasibility and exploration efficiency. Second, for the model training stage, we train a robust history-based, proprioceptive neural dynamics model in Euclidean space by incorporating differentiable forward kinematics, eliminating the reliance on costly motion capture systems. Finally, in the policy fine-tuning stage, we directly fine-tune the policy via backpropagated model gradients, achieving high data efficiency. Through physical validation on the Unitree G1 robot, we demonstrate that HumanoidNDM enables rapid real-world adaptation to various perturbations, representing the first online, MoCap-free fine-tuning framework for humanoid tracking policies.
+
+人形机器人最近在运动跟踪方面取得了显着的成功。然而，在现实世界的部署过程中，机器人不可避免地会遇到由于额外的物理干扰或不准确的仿真建模而引起的动态差距，从而导致显着的训练部署差距。因此，有效利用现实世界的数据来微调策略是稳健部署的关键最后一英里。为了弥补这一差距，我们提出了 HumanoidNDM，这是一种由真实世界训练的神经动力学模型驱动的人形运动跟踪在线微调框架。首先，在数据收集阶段，我们引入了一种具有自适应强度机制的低频参考扰动方法，平衡了部署可行性和探索效率。其次，在模型训练阶段，我们通过结合可微分的正向运动学，在欧几里得空间中训练一个强大的基于历史的本体感受神经动力学模型，消除了对昂贵的运动捕捉系统的依赖。最后，在策略微调阶段，我们直接通过反向传播模型梯度来微调策略，实现了较高的数据效率。通过在 Unitree G1 机器人上进行物理验证，我们证明 HumanoidNDM 能够快速适应现实世界中的各种扰动，代表了第一个用于人形跟踪策略的在线、无 MoCap 微调框架。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-26 (2 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-10-26
