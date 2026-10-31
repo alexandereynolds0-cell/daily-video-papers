@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-31](papers/2026-10-31.md) - 7 papers
 - [2026-10-30](papers/2026-10-30.md) - 21 papers
 - [2026-10-27](papers/2026-10-27.md) - 6 papers
 - [2026-10-26](papers/2026-10-26.md) - 2 papers
@@ -176,6 +177,130 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-31 (7 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-10-31
+
+**Paper Count**: 7
+
+---
+
+## 1. world2vec: Mechanistic world models through latent dynamics learning / world2vec：通过潜在动力学学习的机械世界模型
+
+**Date**: 2026-10-29 | **arXiv**: [2610.40637v1](http://arxiv.org/abs/2610.40637v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.40637v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models can achieve strong control performance without faithfully capturing the dynamics of their environment, limiting their potential for mechanistic interpretability and scientific discovery. Here, we introduce world2vec to learn mechanistic world models without reward information directly from observations and actions. World2vec learns latent dynamics that faithfully reproduce the true system over long prediction horizons, with at least one order of magnitude fewer parameters than DreamerV3, TD-MPC2 and LeWM. This enables state of the art performance in controlling continuous environments from pixels and accurate system identification across a benchmark of 71 attractors, demonstrating how world models are amenable to scientific discovery.
+
+世界模型可以在不忠实捕捉环境动态的情况下实现强大的控制性能，从而限制了其机械解释和科学发现的潜力。在这里，我们引入 world2vec 来学习机械世界模型，而无需直接从观察和行动中获取奖励信息。 World2vec 学习潜在的动力学，可以在较长的预测范围内忠实地再现真实系统，其参数比 DreamerV3、TD-MPC2 和 LeWM 至少少一个数量级。这使得在通过像素控制连续环境和跨 71 个吸引子基准的准确系统识别方面实现最先进的性能，展示了世界模型如何服从于科学发现。
+
+</details>
+
+---
+
+## 2. Algebraic World Model: From Exploration to Proofs / 代数世界模型：从探索到证明
+
+**Date**: 2026-10-29 | **arXiv**: [2610.40503v1](http://arxiv.org/abs/2610.40503v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.40503v1)
+
+**Categories**: cs.AI, cs.LO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI has made remarkable progress in mathematics, solving challenging problems with machine-checkable proofs in Lean, yet typically relying on predefined mathematical definitions and formal specifications. This raises a natural question: can it reason rigorously about an unknown world? We introduce the Algebraic World Model (AWM), a framework that turns interaction with unfamiliar environments into explicit mathematical models supporting formal reasoning. AWM explores the environment and develops executable Python hypotheses, continually testing and revising them against observations. It then structures these hypotheses into typed objects and shared rules, simplifies their structure through category-theory-guided transformations, and formalizes the resulting model in Lean 4 to prove reachability and impossibility. AWM can formally prove that a goal is unreachable, even beyond explored trajectories. On two impossible game levels, it constructs closed, kernel-checked Lean proofs excluding every legal winning sequence in all six runs, while Claude Opus 5.5 and GPT-6 Astra, equipped with coding tools, produce none in twelve baseline runs. Four of AWM's six initial bounds are correct, compared with one for Opus 5.5 and none for GPT-6 Astra; given only feedback that a cheaper win exists, AWM revises its rules and constructs new proofs, reaching six of six correct bounds. Moreover, AWM produces interpretable mathematical models whose rules can be inspected and tested step by step. Across all 25 public ARC-AGI-3 games, these models enable Lean to replay the winning trajectories of all 183 levels and generalize beyond observed play, predicting unseen transitions and detecting changes in game mechanics. With Claude Opus 5, AWM clears all levels with a score of 99.9, while its certified winning trajectories use only 43% of the human baseline's actions.
+
+人工智能在数学方面取得了显着的进步，通过精益中的机器可检查证明解决了具有挑战性的问题，但通常依赖于预定义的数学定义和形式规范。这就提出了一个自然的问题：它能严格推理未知的世界吗？我们引入了代数世界模型（AWM），该框架将与陌生环境的交互转变为支持形式推理的显式数学模型。 AWM 探索环境并开发可执行的 Python 假设，根据观察结果不断测试和修改它们。然后，它将这些假设构建为类型化对象和共享规则，通过类别理论引导的转换简化其结构，并在 Lean 4 中形式化结果模型以证明可达性和不可能性。 AWM 可以正式证明目标是无法实现的，甚至超出了探索的轨迹。在两个不可能的游戏级别上，它构建了封闭的、经过内核检查的精益证明，排除了所有六次运行中的所有合法获胜序列，而配备编码工具的 Claude Opus 5.5 和 GPT-6 Astra 在十二次基线运行中没有产生任何结果。 AWM 的 6 个初始边界中有 4 个是正确的，而 Opus 5.5 的一个是正确的，GPT-6 Astra 的则没有一个；仅给出存在更便宜的胜利的反馈，AWM 修改其规则并构建新的证明，达到六个正确范围中的六个。此外，AWM 生成可解释的数学模型，其规则可以逐步检查和测试。在所有 25 个公开的 ARC-AGI-3 游戏中，这些模型使 Lean 能够重播所有 183 个关卡的获胜轨迹，并在观察到的游戏之外进行概括，预测看不见的转变并检测游戏机制的变化。凭借 Claude Opus 5，AWM 以 99.9 分的成绩通过了所有关卡，而其经过认证的获胜轨迹仅使用了人类基线动作的 43%。
+
+</details>
+
+---
+
+## 3. Continuous-Action World Models: Learning Cross-Embodiment Spatiotemporal Dynamics Priors / 连续动作世界模型：学习跨实体时空动力学先验
+
+**Date**: 2026-10-29 | **arXiv**: [2610.40401v1](http://arxiv.org/abs/2610.40401v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.40401v1)
+
+**Categories**: cs.RO, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce Continuous-Action World Models (CoAWM), a framework for learning cross-embodiment spatiotemporal dynamics priors that support robot action generation across embodiments and execution frequencies. At its core is a shared latent function space that captures the spatial and temporal structure of robot actions. We learn this space through two stages. First, function pretraining brings trajectories from different embodiments and sampling frequencies into a common representation, learning shared dynamics priors through action reconstruction and consistency across temporal sampling views. By accommodating heterogeneous robot trajectories, this stage broadens the range of data sources available for pretraining and facilitates scaling to larger and more diverse datasets. Second, we connect the pretrained function space to a world-model backbone, enabling observations, language instructions, and the current robot state to condition the prediction of a latent action function. A single decoder takes any query time and returns the corresponding end-effector action. By separating shared dynamics priors from task-conditioned action selection and temporal sampling, our approach provides a unified foundation for transferring robot experience across embodiments and control frequencies.
+
+我们引入了连续动作世界模型（CoAWM），这是一个用于学习跨实施例时空动态先验的框架，支持跨实施例和执行频率的机器人动作生成。其核心是一个共享的潜在功能空间，用于捕获机器人动作的空间和时间结构。我们通过两个阶段来学习这个空间。首先，函数预训练将来自不同实施例和采样频率的轨迹引入共同的表示中，通过动作重建和跨时间采样视图的一致性来学习共享的动态先验。通过适应异构机器人轨迹，该阶段扩大了可用于预训练的数据源范围，并有助于扩展到更大、更多样化的数据集。其次，我们将预训练的函数空间连接到世界模型主干，使观察、语言指令和当前机器人状态能够调节潜在动作函数的预测。单个解码器需要任何查询时间并返回相应的末端执行器操作。通过将共享动态先验与任务条件动作选择和时间采样分开，我们的方法为跨实施例和控制频率传递机器人经验提供了统一的基础。
+
+</details>
+
+---
+
+## 4. Cheap Retrieval and Observation Credit Assignment from One Quantity: The Value of Information / 廉价的检索和观察信用分配从一个数量：信息的价值
+
+**Date**: 2026-10-29 | **arXiv**: [2610.40030v1](http://arxiv.org/abs/2610.40030v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.40030v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Memory in reinforcement learning raises two problems. Attention finds the relevant item by scoring the whole store, which is costly for robots under latency and energy limits. When a retrieved memory pays off, credit for acquiring it must cross the whole sequence. We argue that both are governed by one quantity, the value of information, and propose to estimate it from archived rollouts with a learned world model. We obtain that, when read at the observation, it yields a provable lower bound on the optimal value of the acquiring action, which floors its TD target and attributes this floor to the observation that earned it. Read at the decision, it defines the optimal retrieval set. A pilot retrieval system, to be trained and improved with this signal, solves a memory task with reduced context.
+
+强化学习中的记忆提出了两个问题。注意力通过对整个商店进行评分来找到相关商品，这对于延迟和能量限制的机器人来说代价高昂。当检索到的记忆得到回报时，获得它的功劳必须贯穿整个序列。我们认为两者都受一个量（即信息的价值）的控制，并建议使用学习的世界模型从存档的展示中估计信息的价值。我们发现，当读取观察值时，它会产生获取操作最优值的可证明下限，该下限降低了 TD 目标，并将该下限归因于赢得该目标的观察值。读取决策时，它定义了最佳检索集。利用该信号训练和改进试点检索系统，解决上下文减少的记忆任务。
+
+</details>
+
+---
+
+## 5. GROME: GROunding Factorized MEmory into Video World Models / GROME：将分解内存融入视频世界模型
+
+**Date**: 2026-10-29 | **arXiv**: [2610.39812v1](http://arxiv.org/abs/2610.39812v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.39812v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon consistency is essential for video world models, yet it becomes difficult to maintain once observed content falls outside the context window. Existing memory mechanisms either retrieve history as implicit context, which remains constrained by context capacity and entangles static and dynamic information or consolidate history into explicit global representations, which struggle to model evolving dynamics and accumulate geometric errors. To overcome these limitations, we introduce \textbf{GROME}, a novel factorized memory framework that augments video world models for long-horizon coherence across both static scenes and dynamic entities. GROME operates via three synergistic components: 1)~\emph{Static-Dynamic Factorization} decouples historical evidence into static and dynamic components, preserving static scene geometry and dynamic entity states separately; 2)~\emph{Local Memory Retrieval} selects spatially aligned static history to eliminate geometric drift alongside the latest dynamic entity states to ensure temporal continuity; 3)~\emph{Training-Free Memory Injection} seamlessly grounds the factorized memory into video world models via their native conditioning pathways. Experiments on long-horizon revisit scenarios demonstrate that GROME substantially enhances scene persistence and dynamic entity fidelity over existing methods, all while preserving the visual quality and controllability of the frozen backbone without additional training. Beyond self-rollouts, GROME readily accommodates external observations as plug-and-play memory, unlocking flexible and controllable video continuation and scene exploration.
+
+长期一致性对于视频世界模型至关重要，但一旦观察到的内容超出上下文窗口，就很难维持。现有的记忆机制要么将历史作为隐式上下文检索，这仍然受到上下文容量的限制，并纠缠静态和动态信息，要么将历史合并为显式的全局表示，这很难对不断变化的动态进行建模并积累几何误差。为了克服这些限制，我们引入了 \textbf{GROME}，这是一种新颖的分解内存框架，它增强了视频世界模型，以实现静态场景和动态实体的长视野一致性。 GROME 通过三个协同组件进行操作：1)~\emph{静态-动态分解}将历史证据解耦为静态和动态组件，分别保留静态场景几何和动态实体状态； 2)~\emph{本地记忆检索}选择空间对齐的静态历史记录，以消除最新动态实体状态旁边的几何漂移，以确保时间连续性； 3)~\emph{免训练内存注入}通过原生调节路径将因子化内存无缝地融入视频世界模型中。长视野重访场景的实验表明，与现有方法相比，GROME 显着增强了场景持久性和动态实体保真度，同时保留了冻结主干的视觉质量和可控性，而无需额外训练。除了自行推出之外，GROME 还可以作为即插即用存储器轻松容纳外部观察，从而解锁灵活且可控的视频延续和场景探索。
+
+</details>
+
+---
+
+## 6. Assuring Learning-Enabled Cyber-Physical Systems with Foundation Models: A Neuro-Symbolic Agenda for Testing, Verification, and Runtime Assurance / 通过基础模型确保支持学习的网络物理系统：用于测试、验证和运行时保证的神经符号议程
+
+**Date**: 2026-10-29 | **arXiv**: [2610.39547v1](http://arxiv.org/abs/2610.39547v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.39547v1)
+
+**Categories**: cs.RO, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learning-enabled cyber-physical systems (CPS), including autonomous vehicles and UAVs, increasingly incorporate foundation models, yet fragmented assurance practices provide insufficient support for system-level guarantees. We argue that restoring engineering control across stochastic neural, symbolic, and physical boundaries requires a shift from model-centric evaluation to system-level assurance. We introduce the Foundation Model Assurance Stack, connecting three directions: (i) neuro-symbolic architectures that constrain foundation models through explicit symbolic world models, reasoning layers, and interfaces; (ii) semantically grounded, conformance-based testing that combines formal specifications and symbolic world models with foundation-model-assisted specification mining, scenario generation, and test synthesis; and (iii) compositional verification and runtime assurance that target formally tractable components and interfaces through modular contracts, equivalence checking, verified synthesis, uncertainty-aware reasoning, and runtime monitoring and enforcement. Symbolic abstractions establish assurance boundaries between stochastic learning and formal reasoning, connecting testing, verification, and runtime evidence across the system lifecycle. Foundation models serve as constrained assistants whose outputs are independently checked wherever correctness can be formally specified. We identify research challenges in specification engineering, abstraction fidelity, evidence composition, and lifecycle certification, and outline a staged agenda toward trustworthy, deployable, and certifiable learning-enabled CPS.
+
+支持学习的网络物理系统（CPS），包括自动驾驶汽车和无人机，越来越多地纳入基础模型，但分散的保证实践为系统级保证提供了不足的支持。我们认为，跨随机神经、符号和物理边界恢复工程控制需要从以模型为中心的评估转向系统级保证。我们引入了基础模型保证堆栈，连接三个方向：（i）通过显式符号世界模型、推理层和接口约束基础模型的神经符号架构； (ii) 基于语义、基于一致性的测试，将形式规范和符号世界模型与基础模型辅助的规范挖掘、场景生成和测试综合相结合； (iii) 成分验证和运行时保证，通过模块化契约、等价性检查、验证合成、不确定性感知推理以及运行时监控和执行，针对形式上可处理的组件和接口。符号抽象在随机学习和形式推理之间建立了保证边界，将整个系统生命周期的测试、验证和运行时证据连接起来。基础模型充当受约束的助手，其输出在可以正式指定正确性的地方进行独立检查。我们确定了规范工程、抽象保真度、证据构成和生命周期认证方面的研究挑战，并概述了实现可信赖、可部署和可认证的学习型 CPS 的分阶段议程。
+
+</details>
+
+---
+
+## 7. PRIME W0: Physical Priors from World Models for Embodied Manipulation / PRIME W0：来自体现操纵的世界模型的物理先验
+
+**Date**: 2026-10-29 | **arXiv**: [2610.39528v1](http://arxiv.org/abs/2610.39528v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.39528v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language-Action (VLA) models excel at instruction following, yet most remain feed-forward: they condition actions only on the current observation and discard both long-horizon temporal context and the hierarchical structure of VLM representations. We present PRIME W0, a hierarchical conditional flow-matching framework that closes this gap through three synergistic designs: (1)per-layer KV injection from a pretrained VLM into an Adaptive MoE action expert; (2)dynamics-aware conditioning via asynchronous world-model subgoal-image prediction and a DINOv2 historical-frame semantic bridge; and (3)Action Dynamic Manifold (ADM) flow matching with covariance-structured noise that respects robot kinematic coupling. PRIME W0 is trained in four stages---VLM pre-training, DAT/NTP visuomotor pre-training, DiT flow-matching decoder assembly with WM injection, and end-to-end SFT---and achieves state-of-the-art results on LIBERO and real-robot benchmarks, with systematic ablations validating each architectural component.
+
+视觉-语言-动作（VLA）模型擅长指令跟踪，但大多数仍然是前馈的：它们仅根据当前观察来调节动作，并丢弃长视野时间上下文和 VLM 表示的层次结构。我们提出了 PRIME W0，这是一个分层条件流匹配框架，它通过三种协同设计缩小了这一差距：（1）从预训练的 VLM 到自适应 MoE 动作专家的每层 KV 注入； (2) 通过异步世界模型子目标图像预测和 DINOv2 历史框架语义桥进行动态感知调节； (3)动作动态流形(ADM)流与协方差结构噪声匹配，尊重机器人运动学耦合。 PRIME W0 分四个阶段进行训练——VLM 预训练、DAT/NTP 视觉运动预训练、带有 WM 注入的 DiT 流匹配解码器组装以及端到端 SFT——并在 LIBERO 和真实机器人基准测试上取得了最先进的结果，并通过系统消融验证了每个架构组件。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-30 (21 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-10-30
