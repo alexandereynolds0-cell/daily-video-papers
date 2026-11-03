@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-03](papers/2026-11-03.md) - 15 papers
 - [2026-10-31](papers/2026-10-31.md) - 12 papers
 - [2026-10-30](papers/2026-10-30.md) - 21 papers
 - [2026-10-28](papers/2026-10-28.md) - 2 papers
@@ -177,6 +178,260 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-03 (15 papers)</b></summary>
+
+# arXiv Video Papers - 2026-11-03
+
+**Paper Count**: 15
+
+---
+
+## 1. Synthetic Realities: Evaluating Human Ability to Distinguish AIGenerated Videos from Real Footage / 合成现实：评估人类区分AIG生成视频与真实视频的能力
+
+**Date**: 2026-11-01 | **arXiv**: [2611.01990v1](http://arxiv.org/abs/2611.01990v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.01990v1)
+
+**Categories**: cs.CV, cs.HC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in generative AI have enabled multiple pathways for high-fidelity video synthesis: text-to-video, image-to-video animation, and video outpainting. Empirical side-by-side evaluations of how untrained viewers perceive and distinguish these outputs from real footage remain scarce. In this study, we systematically compare human detection accuracy across these three AI generation techniques within three thematic contexts: historical footage, film and media content, and natural environments. We constructed a balanced stimulus set comprising equal amounts of real and AI-generated videos (18 each). The AI clips were evenly distributed across the three generation methods using Google's Veo 3, Lightricks LTX Video, and Wan VACE. All videos were produced and standardized within the ComfyUI framework to ensure consistent quality and duration. 87 participants judged every clip in a binary forced-choice task ("real" vs. "AI-generated"). Participants correctly identified videos 60% of the time on average. Image-to-video clips were recognized most accurately (79%), followed by real footage (64%), outpainting (49%), and text-to-video (43%). Accuracy also varied by theme: film and historical scenes yielded higher detection rates than environmental clips, which were frequently mistaken for AI. Logistic regression confirmed significant effects of both technique and theme as well as their interaction (p < 0.001), indicating that detection success depends jointly on how the content was generated and what it depicts. Findings reveal a consistent bias toward assuming synthetic origins and highlight that perceptual realism in AI video is shaped more by context than by model type, underscoring the importance of media-literacy approaches and context-aware evaluation tools for navigating increasingly synthetic visual media.
+
+生成式人工智能的最新进展为高保真视频合成提供了多种途径：文本到视频、图像到视频动画和视频绘制。 对于未经训练的观众如何感知和区分这些输出与真实镜头的实证并行评估仍然很少。 在这项研究中，我们在三个主题背景下系统地比较了这三种人工智能生成技术的人类检测准确性：历史素材、电影和媒体内容以及自然环境。 我们构建了一个平衡的刺激集，其中包含等量的真实和人工智能生成的视频（每个18个）。 AI剪辑使用Google的Veo 3、Lightricks LTX Video和Wan VACE均匀分布在三代方法中。 所有视频都是在ComfyUI框架内制作和标准化的，以确保一致的质量和持续时间。87名参与者判断了二进制强制选择任务中的每个剪辑（ “真实”与“人工智能生成” ）。 参与者平均有60%的时间正确识别视频。 图像到视频片段的识别率最高（ 79% ） ，其次是真实镜头（ 64% ）、出画（ 49% ）和文本到视频（ 43% ）。 准确率也因主题而异：电影和历史场景的检测率高于环境剪辑，后者经常被误认为是人工智能。 Logistic回归证实了技术和主题及其相互作用的显着影响（ p < 0.001 ） ，表明检测成功与否取决于
+
+</details>
+
+---
+
+## 2. SurgStream: A Workflow-Anchored Proactive Streaming Framework and Benchmark for Real-Time Surgical Video Understanding / SurgStream ：基于工作流的主动流式处理框架和实时手术视频理解的基准
+
+**Date**: 2026-11-01 | **arXiv**: [2611.01982v1](http://arxiv.org/abs/2611.01982v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.01982v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Surgical video understanding is essential for intraoperative assistance such as workflow monitoring, instrument preparation and procedural documentation. Delivering such assistance in real time requires a model to jointly perceive the ongoing scene, remember past surgical events, and respond before clinically relevant moments pass. Existing approaches provide limited support for jointly retaining procedural evidence and deciding when to respond in streaming surgical video. In this work, we propose SurgStream, a workflow-anchored proactive streaming framework for real-time surgical video understanding. We first introduce Workflow-Anchored Memory (WAM) to record structured instrument-action-target observations and fold them into phase-level summaries, providing compact and queryable surgical memory. Deadline-aware Transition Learning (DTL) is then devised to supervise response states within clinical windows, enabling timely responses before procedural deadlines. We further introduce SurgStream-Bench, comprising 11.7K streaming interactions across various tasks covering real-time perception, backward memory queries, forward proactive QA, proactive alerts and caption memory. Experiments on SurgStream-Bench show gains over state-of-the-art methods, especially in memory and forward proactive QA. The source code will be available.
+
+手术视频理解对于术中协助至关重要，例如工作流程监控、仪器准备和程序文档。 实时提供此类帮助需要模型共同感知正在进行的场景，记住过去的手术事件，并在临床相关时刻过去之前做出反应。 现有的方法为共同保留手术证据和决定何时在流式传输手术视频中做出反应提供了有限的支持。 在这项工作中，我们提出了SurgStream ，这是一种工作流程锚定的主动流式传输框架，用于实时手术视频理解。 我们首先引入工作流锚定内存（ WAM ）来记录结构化的仪器-动作-目标观测，并将其折叠到阶段级总结中，从而提供紧凑且可查询的手术内存。 然后设计截止日期感知过渡学习（ DTL ） ，以监督临床窗口内的响应状态，从而在手术截止日期之前及时响应。 我们进一步介绍了SurgStream-Bench ，包括跨各种任务的11.7K流媒体交互，涵盖实时感知、反向内存查询、转发主动式QA、主动式警报和字幕内存。 在SurgStream-Bench上进行的实验表明，与最先进的方法相比， SurgStream-Bench获得了更多的收益，尤其是在内存和前瞻性主动QA 源代码将可用。
+
+</details>
+
+---
+
+## 3. SurgQ-VLM: Question-Conditioned Dual-Stream Compression and Answer-Type-Aware Reinforcement for Surgical Video Question Answering / SurgQ-VLM ：用于手术视频问答的问题条件双流压缩和答案类型感知强化
+
+**Date**: 2026-11-01 | **arXiv**: [2611.01913v1](http://arxiv.org/abs/2611.01913v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.01913v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/DhruvMakwana/SurgQ-VLM.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reasoning about surgical video -- which phase is underway, which instruments act, and when events occur -- underpins operative documentation, workflow analysis, and skill assessment. Yet surgical visual question answering is still largely built on single frames and closed labels that cannot express a duration, an ordering, or a count, and the video models that lift the frame limit typically compress every clip the same way regardless of the question, discarding the temporal evidence the answer needs. Worse, the answers are structurally heterogeneous, spanning five incompatible structures -- binary, classification, multi-label, counting, and sentence-temporal -- that no single training signal scores uniformly well. We propose SurgQ-VLM, a two-stage model for surgical video question answering. Stage 1 trains a question-conditioned dual-stream (slow/fast) compressor for a LoRA-adapted Qwen2.5-VL-7B: cross-attention conditions both streams on the question, and each clip's visual tokens shrink 49x from the raw ViT patches (11x vs. post-merge backbone tokens). Stage 2 post-trains with GRPO under an answer-type-aware reward that scores each question on the metric matching its answer structure (micro-F1 for label sets, normalised error for counts, a content-timing blend for temporal windows). On a sealed 21,840-question test split over Cholec80 and CholecT50, SurgQ-VLM reaches 0.779 keyword accuracy and a 10x BLEU-4 gain over zero-shot; GRPO adds 2.5 pp K-Acc (2.0 pp attributable to the answer-type-aware reward), concentrated in the structurally hard types, with answer format unchanged (ROUGE-L). Code is available at https://github.com/DhruvMakwana/SurgQ-VLM.
+
+推理手术视频-正在进行哪个阶段，哪些仪器起作用，以及何时发生事件-是手术文档、工作流程分析和技能评估的基础。 然而，手术视觉问答仍然主要建立在单帧和封闭标签上，这些标签无法表示持续时间、顺序或计数，并且提升帧限制的视频模型通常以相同的方式压缩每个剪辑，而不管问题是什么，从而丢弃了答案所需的时间证据。 更糟糕的是，答案在结构上是异构的，跨越五个不兼容的结构--二进制、分类、多标签、计数和句子-时间--没有单一的训练信号得分一致。 我们提出SurgQ-VLM ，这是一种用于手术视频问答的两阶段模型。 第1阶段为适应LoRA的Qwen2.5-VL-7B训练一个问题条件的双流（慢速/快速）压缩器：交叉注意条件问题上的两个流，每个剪辑的视觉令牌从原始ViT补丁中缩小49倍（ 11倍与合并后主干令牌）。 在答案类型感知奖励下对GRPO进行第2阶段后训练，该奖励在指标上对与其答案结构匹配的每个问题进行评分（标签集的micro-F1、计数的标准化误差、时间窗口的内容定时混合）。 在Cholec80和CholecT50的密封21,840个问题测试中， SurgQ-VLM达到了0.779个关键词的准确性和10倍的BLEU-4增益； GRPO增加了2.5 pp K-Acc （ 2.0 pp归因于
+
+</details>
+
+---
+
+## 4. Learning-to-Memorize: Dynamic Context Management for Long-Horizon Autoregressive Video Generation / 学习记忆：长视野自回归视频生成的动态上下文管理
+
+**Date**: 2026-11-01 | **arXiv**: [2611.01858v1](http://arxiv.org/abs/2611.01858v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.01858v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive video generation has achieved impressive results on short clips, yet generating long videos remains challenging due to error accumulation over extended horizons, where each predicted frame depends on potentially imperfect previous frames. Existing approaches typically rely on static context management strategies, such as sliding-window caches that discard early frames or fixed sink frames that permanently preserve initial content. These designs either lose critical long-range context or anchor generation to outdated information, which can lead to degraded fidelity, motion stagnation, and reduced diversity. In this paper, we propose Learning to Memorize (L2M), a learned context memory management framework that dynamically retains, evicts, and evolves historical frames according to predicted importance. The framework consists of an importance prediction router that estimates the relevance of each historical frame, degradation-aware training that improves robustness to noisy or corrupted context, and a dynamic memory initialization and evolution mechanism that updates long-term memory using exponential moving average (EMA) importance scores. This allows high-quality frames to replace stale anchors and enables memory to adapt naturally to scene evolution. Trained with a teacher-student distillation objective and sparsity regularization, L2M makes efficient use of a fixed KV-cache budget while preserving the most informative contextual information. Extensive experiments demonstrate that L2M improves long-horizon video generation quality and temporal consistency over existing baselines, providing a learned strategy for context memory management in long autoregressive video generation.
+
+自动回归视频生成在短片上取得了令人印象深刻的结果，但由于扩展视野的错误累积，生成长视频仍然具有挑战性，其中每个预测帧都依赖于潜在的不完美的先前帧。 现有方法通常依赖于静态上下文管理策略，例如丢弃早期帧的滑动窗口缓存或永久保留初始内容的固定接收帧。 这些设计要么失去了关键的远程上下文，要么将锚点生成到过时的信息中，这可能导致保真度下降、运动停滞和多样性降低。 在本文中，我们提出了学习记忆（ L2M ） ，这是一种学习的上下文记忆管理框架，可根据预测的重要性动态保留、驱逐和演化历史帧。 该框架包括一个重要性预测路由器，用于估计每个历史帧的相关性；降级感知训练，用于提高对噪声或损坏上下文的鲁棒性；动态内存初始化和演化机制，用于使用指数移动平均（ EMA ）重要性分数更新长期内存。 这使得高质量的帧能够取代陈旧的锚点，并使内存能够自然地适应场景演变。 经过师生蒸馏目标和稀疏正则化的培训， L2M有效利用了固定的KV缓存预算，同时保留了最丰富的上下文信息。广泛的
+
+</details>
+
+---
+
+## 5. RIFT: Residual-Informed Flow Transfer for One-Step Generative Video Compression / RIFT ：用于一步生成视频压缩的残差知情流传输
+
+**Date**: 2026-11-01 | **arXiv**: [2611.01791v1](http://arxiv.org/abs/2611.01791v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.01791v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in video generation have enabled generative video compression to reconstruct details lost during coding using pretrained spatiotemporal priors. However, a substantial gap remains between codec-induced degradation and the perturbation trajectories learned by flow-matching models. In this paper, we identify a compression-dependent directional mismatch that degradation-strength-based timestep calibration alone cannot resolve. Compressed latents remain strongly aligned across codec operating points, while their reconstruction residuals vary substantially in magnitude and direction. To bridge this gap, we propose RIFT, a Residual-Informed Flow Transfer framework for one-step generative video compression. At its core, RIFT introduces a Residual Geometry Inducer (RGI) that converts the pretrained flow prediction into a content-adaptive restoration update using decoder-visible codec cues. RGI integrates flow-timestep conditioning with a learned full-band residual-strength estimate and content-conditioned direction and gain modulation, aligning the orientation and magnitude of the update with the compression-dependent residual geometry. Extensive experiments on three public video compression benchmarks show that RIFT outperforms competing generative video compression methods. The code is publicly available on RIFT.
+
+视频生成的最新进展使生成视频压缩能够使用预训练的时空先验重建编码过程中丢失的细节。 然而，编解码器引起的退化与流匹配模型学习的扰动轨迹之间仍存在巨大差距。 在本文中，我们识别出仅基于降解强度的时间步长校准无法解决的压缩相关方向失配。 压缩潜伏期在编解码器操作点之间保持强烈对齐，而它们的重建残差在幅度和方向上差异很大。 为了弥合这一差距，我们提出了RIFT ，一种用于一步生成视频压缩的残差知情流传输框架。 RIFT的核心引入了残差几何诱导器（ RGI ） ，它使用解码器可见的编解码器线索将预训练的流量预测转换为内容自适应恢复更新。 RGI将流量-时间-步长调节与学习的全频段剩余强度估计以及内容调节方向和增益调制相结合，使更新的方向和幅度与依赖于压缩的残余几何形状保持一致。 在三个公共视频压缩基准上的广泛实验表明， RIFT的性能优于竞争的生成视频压缩方法。 该代码可在RIFT上公开获得。
+
+</details>
+
+---
+
+## 6. EgoMo3R: Joint Egocentric Motion and Scene Reconstruction / EgoMo3R ：联合自我中心运动和场景重建
+
+**Date**: 2026-11-01 | **arXiv**: [2611.01627v1](http://arxiv.org/abs/2611.01627v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.01627v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Understanding holistic 3D human motion and the surrounding environment from egocentric video is fundamental for applications in AR/VR and robotics. Although these tasks are inherently coupled, existing methods treat them separately. In particular, egocentric motion reconstruction methods typically assume access to metric, gravity-aligned camera trajectories from specialized inertial sensors. Recovering such trajectories from monocular egocentric video remains a significant challenge due to rapid head movements and motion blur. We present EgoMo3R, a joint optimization framework that simultaneously reconstructs 3D human motion and scene geometry from casual egocentric video. It leverages the robustness of low-level visuo-geometric primitives, including monocular depth, optical flow, and point tracks, integrated with a diffusion-based human motion prior via first-order optimization. We propose an alternating optimization scheme that establishes a synergistic feedback loop: scene reconstruction provides physical grounding and trajectory conditioning for the motion prior, while the motion prior regularizes the camera trajectory and anchors the scene in a metric, gravity-aligned world frame. We evaluate EgoMo3R on the highly dynamic sequences of the EgoExo4D and Nymeria datasets and show that it outperforms specialized baselines in both 3D scene reconstruction and egocentric motion estimation.
+
+从以自我为中心的视频中了解整体3D人体运动和周围环境是AR/VR和机器人技术应用的基础。 虽然这些任务本质上是耦合的，但现有方法将它们分开处理。 特别是，以自我为中心的运动重建方法通常假设可以从专门的惯性传感器访问公制、重力对准的相机轨迹。 由于头部快速运动和运动模糊，从单目自我中心视频中恢复这种轨迹仍然是一个重大挑战。 我们提出了EgoMo3R ，这是一个联合优化框架，可以从休闲的自我中心视频中同时重建3D人体运动和场景几何形状。 它利用了低级视觉几何图元的鲁棒性，包括单目深度、光流和点轨迹，通过一阶优化与先前基于扩散的人体运动集成。 我们提出了一种交替优化方案，该方案建立了一个协同反馈循环：场景重构为运动先验提供了物理接地和轨迹调节，而运动先验则使摄像机轨迹正则化，并将场景锚定在一个度量、重力对齐的世界框架中。 我们在EgoExo4D和Nymeria数据集的高度动态序列上评估了EgoMo3R ，并表明它在3D场景重建和自我中心运动估计方面都优于专业基线。
+
+</details>
+
+---
+
+## 7. Recoverability-Aware Evaluation of Diffusion Video Inpainting and Object Removal / 扩散视频修复和物体移除的可恢复性感知评估
+
+**Date**: 2026-11-01 | **arXiv**: [2611.01578v1](http://arxiv.org/abs/2611.01578v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.01578v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video inpainting for object removal is scored over the whole hole, although the background behind the object is visible in other frames of the shot for some hole pixels and in no frame for others. A whole-hole score therefore mixes copying with generation and cannot show which of the two a remover does well. To separate the two, we propose recoverability-stratified evaluation, in which a point tracker run on the clean video labels each hole pixel by whether and how far away it is observed, so that fidelity and temporal stability can be reported per stratum against a copy reference. To reuse the observed content, we also propose evidence-guided sampling (EGS), which blends tracked colors into the clean-latent prediction of a video diffusion remover without training. On DAVIS, the perceptual advantage of three diffusion removers over flow propagation shrinks where the content is visible a few frames away (LPIPS difference-in-differences +0.046 to +0.056 against E2FGVI-HQ), and real paired captures show the same pattern for two of them. Their DAVIS hole warping error is two to four times that of ProPainter, and copying along clean-video tracks lowers their recoverable LPIPS by a quarter to two fifths. EGS closes 43% and 56% of the gap to this copy reference on held-out DAVIS when its colors come from clean-video tracks. With colors tracked on the masked input, a pre-registered confirmation finds no gain on MiniMax-Remover and a loss on ROSE. Diffusion removers thus leave observed content unused on DAVIS, and training-free reuse does not yet hold with tracked evidence.
+
+用于去除对象的视频修复在整个孔中进行评分，尽管对于某些孔像素，对象后面的背景在镜头的其他帧中可见，而对于其他像素，则在无帧中可见。 因此，全孔分数将复制与生成混合在一起，无法显示两者中哪一个去除器做得很好。 为了将两者分开，我们提出了可恢复性分层评估，其中点跟踪器在干净的视频标签上运行，每个空穴像素是否被观察到以及观察到多远，以便可以根据复制参考报告每个层的保真度和时间稳定性。 为了重复使用观察到的内容，我们还提出了循证引导采样（ EGS ） ，它将跟踪的颜色混合到视频扩散去除器的最新预测中，而无需进行培训。 在DAVIS上，当内容在几帧外可见时，三个扩散去除器相对于流动传播的感知优势会缩小（ LPIPS差异-差异+0.046至+0.056相对于E2FGVI-HQ ） ，而真实配对捕获对其中两个显示相同的模式。 他们的DAVIS孔翘曲误差是ProPainter的两到四倍，沿着干净的视频轨道复制会使他们的可恢复LPIPS降低四分之一到五分之二。 当EGS的颜色来自干净的视频轨道时， EGS与保留的DAVIS的副本参考的差距分别缩小了43%和56%。 在遮罩输入上跟踪颜色的情况下，预先注册的确认不会发现MiniMax-Remover的增益和ROSE的损失。 因此，扩散去除剂会留下
+
+</details>
+
+---
+
+## 8. Spend the Bits Where the Tiny Objects Are: Rate-Utility Region Coding for Aerial Detection / 在微小物体所在的地方花费比特：用于空中检测的速率-效用区编码
+
+**Date**: 2026-11-01 | **arXiv**: [2611.01573v1](http://arxiv.org/abs/2611.01573v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.01573v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Bandwidth-limited aerial cameras must compress their images before a remote detector can find the many tiny objects in them. Threshold-based region-of-interest (ROI) coding sends only confidently detected regions, and because tiny objects provide limited visual evidence and often score low, it can discard the regions that contain them. We propose rate-utility region coding (RUO), which sends a region when its expected detection utility justifies its measured byte cost, choosing to drop it or to send it at low or high quality with one multiplier shared across images. RUO trains no model, uses a standard image codec and decodes in a few milliseconds. On all 1,610 VisDrone-DET test-dev images, RUO uses 42.4% fewer bits than a tuned threshold-based ROI coder, averaged over their shared tiny-object average precision (AP) range. RUO also needs fewer bits for tiny objects than the AV1 Image File Format (AVIF), High Efficiency Video Coding (HEVC) and three published learned codecs, and its advantage over threshold-based ROI coding persists when the sender and receiver use different detectors. For AP over all object sizes RUO needs 25.4% more bits than the tuned ROI coder, because its allocation drops large regions first at low rates, so it suits tasks that target tiny objects. We plan to release the code.
+
+带宽受限的空中摄像机必须先压缩图像，然后远程探测器才能发现其中的许多微小物体。 基于阈值的感兴趣区域（ ROI ）编码仅发送自信检测到的区域，并且由于微小物体提供的视觉证据有限且通常得分较低，因此它可以丢弃包含它们的区域。 我们提出速率效用区域编码（ RUO ） ，当其预期检测实用程序证明其测量的字节成本合理时，它会发送一个区域，选择丢弃它或以低质量或高质量发送它，并在图像之间共享一个乘数。 RUO不训练模型，使用标准图像编解码器，并在几毫秒内解码。 在所有1,610张VisDrone-DET测试开发图像上， RUO使用的位数比基于阈值的调谐ROI编码器少42.4% ，该编码器在其共享的微小对象平均精度(AP)范围内进行平均。 与AV1图像文件格式（ AVIF ）、高效视频编码（ HEVC ）和三个已发布的学习编解码器相比， RUO还需要更少的微小对象位，并且当发送方和接收方使用不同的检测器时，它相对于基于阈值的ROI编码的优势仍然存在。 对于所有对象大小的AP ， RUO需要比调谐的ROI编码器多25.4%的位，因为它的分配首先以低速率下降大区域，因此它适合针对微小对象的任务。 我们计划发布代码。
+
+</details>
+
+---
+
+## 9. MoPort: A View-Aware 2D Interface for Motion Language Models / MoPort ：运动语言模型的视觉感知2D界面
+
+**Date**: 2026-11-01 | **arXiv**: [2611.01541v1](http://arxiv.org/abs/2611.01541v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.01541v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Motion language models (MoLMs) encode 3D human motion as discrete tokens for language-based understanding. Deploying them on monocular video raises two problems. Pose detection yields 2D joint sequences, leaving a dimensional gap from the 3D motion used in training. Moreover, the 2D observation changes with the camera viewpoint, while the depth lost in projection makes the 2D pose ambiguous across viewpoints. We propose MoPort, a view-aware 2D interface that enables MoLMs to take 2D observations as input. We introduce Paired View Alignment (PVA), which gives two views of the same motion a shared 3D teacher target and directly constrains the consistency of their latents, so that 2D observations from different viewpoints are mapped to a consistent semantic representation. Camera-Modulated Encoding (CME) estimates the camera extrinsics from the 2D sequence and uses them to modulate encoding, providing the 2D latents with geometric information about the viewpoint. MoPort achieves R@1 of 0.5674 on HumanML3D and 0.3286 on KIT-ML, outperforming all evaluated baselines. On HumanML3D, its R@1 decreases only from 0.5763 on in-distribution viewpoints to 0.5585 on out-of-distribution viewpoints. We validate portability on three downstream MoLMs. Furthermore, on the real-world RGB video dataset Fit3D, MoPort achieves 80.36\% accuracy. Code will be released upon acceptance.
+
+运动语言模型（ MoLM ）将三维人体运动编码为基于语言的理解的离散令牌。 将它们部署在单目视频上会产生两个问题。 姿势检测产生2D关节序列，与训练中使用的3D运动留下维度间隙。 此外， 2D观测随着相机视点的变化而变化，而投影中丢失的深度使2D姿势在视点之间变得模糊。 我们提出了MoPort ，这是一种视觉感知的2D界面，使MoLM能够将2D观测值作为输入。 我们引入了成对视图对齐（ PVA ） ，它将同一运动的两个视图作为共享的3D教师目标，并直接限制其潜伏的一致性，从而将来自不同视点的2D观测映射到一致的语义表示。 相机调制编码（ CME ）从2D序列中估计相机的外在特性，并使用它们来调制编码，为2D潜伏提供有关视点的几何信息。 MoPort在HumanML3D上达到0.5674的R @ 1 ，在KIT-ML上达到0.3286 ，优于所有评估的基线。 在HumanML3D上，其R @ 1仅从分布内视点的0.5763下降到分布外视点的0.5585。 我们在三个下游MoLM上验证了可移植性。 此外，在真实世界的RGB视频数据集Fit3D上， MoPort实现了80.36\ %的准确率。 代码将在验收后发布。
+
+</details>
+
+---
+
+## 10. FOCUS: Closed-Loop Attention Feedback for Efficient Vision-Language Understanding / 焦点：闭环注意力反馈，提高视觉语言理解效率
+
+**Date**: 2026-11-01 | **arXiv**: [2611.01438v1](http://arxiv.org/abs/2611.01438v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.01438v1)
+
+**Categories**: cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Processing every video frame through Vision-Language Models (VLMs) adds significant inference cost and limits their ability to comprehend real-time video. Existing approaches either sub-sample frames uniformly, ignoring content and missing important events, or prune visual tokens inside the VLM to cut per-call cost while still invoking the model on every sampled frame. We introduce FOCUS, a training-free three-layer framework that reduces the number of invocations and steers each one towards what matters. Temporal gating measures inter-frame dissimilarity in the patch-embedding space of a smaller VLM from the same family, triggering burst captures only when the scene changes in a semantically meaningful way. Patch-level dissimilarity is then accumulated across the burst and fused with a top-down attention prior into a spatial focus map that encodes where motion and semantic relevance coincide. That map calibrates the VLM's value cache during generation, progressively amplifying vision tokens in task-relevant regions and attenuating off-target ones, without removing any token from the context. The loop closes after each response: text-to-vision cross-attention is extracted from the decoder and fed back as the prior for the next burst, letting the system converge on semantically important regions over successive observations. We evaluate FOCUS on the 500-video EgoSchema subset in streaming mode, with a single Qwen3-VL-8B backbone shared by every method. It reaches 74.8% accuracy using 25.4 VLM calls per clip, against 74.6% with 55 calls for uniform sampling and 74.2% with 55 calls for BOLT. On egocentric video captioning across four domains, it matches the best baseline's quality while issuing 57% fewer VLM invocations than uniform sampling.
+
+通过视觉语言模型（ VLM ）处理每个视频帧会增加大量推理成本，并限制其理解实时视频的能力。 现有的方法是统一子采样帧，忽略内容和缺少重要事件，或在VLM内修剪可视化令牌，以降低每次调用的成本，同时仍然在每个采样帧上调用模型。 我们引入了FOCUS ，这是一个无需培训的三层框架，可以减少调用次数，并将每个调用引导到重要的事情上。 时间门控测量来自同一系列的较小VLM的补丁嵌入空间中的帧间相似性，仅当场景以语义上有意义的方式变化时才触发突发捕获。 然后，在整个突发中积累补丁级相异性，并将其与自上而下的注意力融合到空间焦点图中，该空间焦点图编码运动和语义相关性重合的位置。 该映射在生成过程中校准VLM的值缓存，逐步放大任务相关区域中的VISION令牌并衰减脱靶区域，而不从上下文中删除任何令牌。 循环在每次响应后关闭：从解码器中提取文本到视觉的交叉注意力，并作为下一个突发的先验反馈，使系统在连续的观察中收敛于语义上重要的区域。 我们评估流媒体模式下500视频EgoSchema子集的重点，每种方法共享单个Qwen3-VL-8B主干。 达到74.8%
+
+</details>
+
+---
+
+## 11. IMPACT: Image-Conditioned Motion with Physics-Aware Collision and Trajectory Guidance for Video Generation / 影响：具有物理感知碰撞和轨迹引导的图像调节运动，用于视频生成
+
+**Date**: 2026-11-01 | **arXiv**: [2611.01372v1](http://arxiv.org/abs/2611.01372v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.01372v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visually realistic video generation does not guarantee physically consistent motion. Generated objects may exhibit implausible collision responses or rebounds without energy dissipation, while even physically valid motion predictions may not be faithfully realized during synthesis. We propose \textbf{IMPACT}, a physics-state-driven image-to-video framework that addresses these challenges by coupling explicit dynamics prediction with complementary sparse--dense physical guidance. A learnably calibrated Physics State Generator unifies continuous free-flight dynamics with discrete collision responses, linking impact timing, post-impact velocity, rebound attenuation, and eventual settling within a coherent physical-state sequence. To translate this evolution into effective generative constraints, IMPACT derives sparse trajectories and dense region-level motion priors from the same physical rollout. Sparse trajectories constrain global object displacement, while dense priors guide diffusion sampling to encourage coherent object-region motion and suppress unwanted background changes. Their shared physical basis coordinates global and local motion guidance to reduce prediction--generation mismatch. Experiments on 100 controlled sphere--plane collision scenes spanning different material combinations and visual environments demonstrate improved physical plausibility over representative general-purpose, physics-grounded, and motion-controllable baselines. The project repository is available at https://weiweiwiewei.github.io/impact
+
+视觉逼真的视频生成并不能保证运动的物理一致性。 生成的物体可能在没有能量耗散的情况下表现出不可信的碰撞响应或反弹，而即使是物理上有效的运动预测也可能无法在合成过程中忠实地实现。 我们提出了\ textbf {IMPACT} ，这是一个物理状态驱动的图像到视频框架，通过将显式动态预测与互补的稀疏密集物理引导相结合来解决这些挑战。 经过学习校准的物理状态生成器将连续自由飞行动力学与离散碰撞响应统一起来，将碰撞时机、碰撞后速度、反弹衰减和最终稳定在一个连贯的物理状态序列中。 为了将这种进化转化为有效的生成约束， IMPACT从相同的物理部署中导出稀疏的轨迹和密集的区域级运动先验。 稀疏轨迹限制全局对象位移，而密集先验引导扩散采样以鼓励相干对象区域运动并抑制不必要的背景变化。 他们的共享物理基础协调全局和局部运动引导，以减少预测-生成不匹配。 在跨越不同材料组合和视觉环境的100个受控球面-平面碰撞场景上的实验表明，与代表性的通用、物理接地和运动可控基线相比，物理合理性得到改善。 项目存储库是
+
+</details>
+
+---
+
+## 12. StreamClarify: Proactive Clarification for Grounded Streaming Video Question Answering / StreamClarify ：接地流视频问答的主动澄清
+
+**Date**: 2026-10-31 | **arXiv**: [2611.01263v1](http://arxiv.org/abs/2611.01263v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.01263v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Streaming video question answering (QA) requires real-time reasoning over continuous video streams under strict latency and active-context budgets. Current streaming vision-language models (VLMs) often give confident yet ungrounded answers when queries are ambiguous or have false premises, or when relevant visual evidence is no longer in the active context. Proactive clarification can help, but must satisfy the same latency and memory constraints. We present StreamClarify, a training-free framework for grounded streaming QA that combines a pre-answer uncertainty check with hierarchical memory. The check uses the entropy of a binary pre-answer judgment as a lightweight uncertainty score to decide whether to answer directly or request clarification. To support re-answering, a temporal-pyramid KV cache maintains a bounded active visual context, while a CPU-side semantic retrieval archive provides access to historical frames. We further construct StreamClarify-QA, a diagnostic benchmark of 1,837 QA pairs from StreamBench and OVO-Bench, spanning standard, referential ambiguity, and unanswerable scenarios. Across three VLM backbones, StreamClarify improves Macro accuracy by up to 8.2 points over backbone-matched baselines. At comparable trigger rates, entropy-based selection achieves more than 18 points higher precision than random selection in identifying initially incorrect answers. Under oracle user guidance, clarification improves Macro accuracy by up to 3.5 points. We also report a controlled, oracle-assisted Qwen3-VL simulation on Ambiguous QA with generated questions and referent-only user replies, where the entropy-gated condition improves accuracy by 8.3 points.
+
+流媒体视频问答（ QA ）需要在严格的延迟和活动上下文预算下对连续视频流进行实时推理。 当查询含糊不清或存在虚假前提，或者相关的视觉证据不再处于活动环境中时，当前的流媒体视觉语言模型（ VLM ）通常会给出自信但无根据的答案。 主动澄清可以提供帮助，但必须满足相同的延迟和内存限制。 我们提出了StreamClarify ，这是一个用于接地流式QA的无训练框架，它将预应答不确定性检查与分层内存相结合。 该检查使用二进制答案前判断的熵作为轻量级不确定性分数来决定是直接回答还是要求澄清。 为了支持重新应答，时间金字塔KV缓存保持有界的活动视觉上下文，而CPU侧语义检索存档提供对历史帧的访问。 我们进一步构建了StreamClarify-QA ，这是来自StreamBench和OVO-Bench的1,837个QA对的诊断基准，跨越标准、参考歧义和无法回答的场景。 在三个VLM骨干网中， StreamClarify将宏精度比骨干网匹配的基线提高了多达8.2个百分点。 在类似的触发率下，基于熵的选择在识别最初不正确的答案方面比随机选择精度高18分以上。 在Oracle用户的指导下，澄清将宏精度提高了3.5个百分点。我们还
+
+</details>
+
+---
+
+## 13. Leap-VLA: High-Rate Robot Control from a Low-Rate VLM Backbone / LEAP-VLA ：从低速率VLM骨干进行高速率机器人控制
+
+**Date**: 2026-10-31 | **arXiv**: [2611.01011v1](http://arxiv.org/abs/2611.01011v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.01011v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language-action (VLA) models re-encode the full observation through a multi-billion-parameter vision-language model (VLM) at every control step, even though scene semantics evolve at roughly 1 Hz while reactive control requires 20-50 Hz. We present a VLA that decouples the two: a VLM runs as a low-frequency semantic anchor whose cached context is reused across control steps, while a flow-matching action expert operates at high frequency, consuming the cached semantics with a fresh, low-latency visual stream from a compact encoder pretrained on robot video with masked reconstruction, optical flow, and depth. The measured age $τ$ of the cache conditions the expert through adaptive layer normalization. Reusing the cache makes the policy a function of its age, and training covers that function explicitly: cache ages sampled from real episode history, plus an age-ramped pixel corruption that erases the stale snapshot the way deployed staleness corrupts content. On the asynchronous deployment stack, the recipe closes most of the staleness gap: on LIBERO-Spatial, 61.4% to 95.5% at a 2 s semantic refresh (95.9% at 1 s, within 1.6 points of the frequency-matched anchor); averaged over the four LIBERO suites, the deployed policy holds 95.2% at a 1 s refresh and 94.5% at 2 s against a 96.3% matched anchor. A forward-only chunk-boundary correction (soft-nudge), an autograd-free reformulation of real-time-chunking guidance, carries per-control-step re-planning without loss (97.1%) at zero added latency. The same lens exposes a second defect: under an instruction-scene mismatch the policy keeps manipulating the scene, and a chain-of-thought verdict gate trained on zero-cost negative episodes freezes execution exactly on mismatched instructions without hurting feasible success.
+
+视觉语言行动（ VLA ）模型在每个控制步骤通过数十亿参数的视觉语言模型（ VLM ）重新编码完整的观察，即使场景语义在大约1赫兹处演变，而反应控制需要20-50赫兹。 我们提出了一种将两者解耦的VLA ： VLM作为低频语义锚点运行，其缓存的上下文在控制步骤中被重用，而流匹配动作专家则以高频操作，使用来自在机器人视频上预先训练的紧凑编码器的新鲜、低延迟的视觉流来消耗缓存的语义，该编码器具有屏蔽重建、光流和深度。 缓存的测量年龄$ τ $通过自适应层归一化为专家提供条件。 重复使用缓存使策略成为其年龄的函数，训练明确涵盖了该函数：从真实剧集历史记录中采样的缓存年龄，以及随着年龄增长的像素损坏，以部署的陈旧性损坏内容的方式擦除陈旧的快照。 在异步部署堆栈上，配方缩小了大部分失效差距：在LIBERO-Spatial上， 2秒语义刷新时为61.4%至95.5% （ 1秒时为95.9% ，频率匹配锚点1.6点内） ；在四个LIBERO套件中，部署的策略在1秒刷新时为95.2% ， 2秒时为94.5% ，而匹配锚点为96.3%。 仅前向区块边界校正（软推） ，实时区块化引导的自动重构，无损地进行每控制步重新规划
+
+</details>
+
+---
+
+## 14. What Helps Denoising Can Hurt Memory: Rethinking History in Long Video Generation / 帮助去噪会伤害记忆：在长视频生成中重新思考历史
+
+**Date**: 2026-10-31 | **arXiv**: [2611.00937v1](http://arxiv.org/abs/2611.00937v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.00937v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive video generators produce long videos block by block, using historical context to maintain temporal consistency. After denoising, a committing pass encodes each clean block into keys and values (KV) that later blocks read, and the same clean block can be encoded into different KV depending on the history it reads. We therefore study historical context not only as a condition for denoising but also as an input to committing. Older historical context that supports denoising can harm subsequent generation when read during committing. At fixed context size and temporal positions, older historical context lowers mean clip-to-clip Subject Consistency. Across 5 generator configurations supporting longer contexts, consistency rises, plateaus, and then declines as committing context expands. Motivated by these findings, we propose Commit Forcing, a training-free rule that organizes committing into a chain. During committing, each block reads only the preceding block's stored KV, so older historical context reaches new entries only through the chain. We apply this rule to 6 pretrained generators. On 60-second VBench, Commit Forcing improves Quality and Total on all 6 generators, by up to 1.27 Quality points and 1.10 Total points. Long-range consistency gains extend to 240-second videos. In a blinded comparison on 120-second LongLive videos, Commit Forcing achieves win rates of 83.5% for subject and scene consistency and 82.9% for overall preference against the base generator, excluding ties.
+
+自回归视频生成器逐块生成长视频，使用历史上下文来保持时间一致性。 去噪后，提交传递将每个干净的块编码为后来读取的键和值（ KV ） ，并且可以根据它读取的历史记录将同一个干净的块编码为不同的KV。 因此，我们研究历史背景，不仅作为去噪的条件，而且作为承诺的输入。 在提交过程中读取时，支持去噪的较旧历史上下文可能会损害后续生成。 在固定的上下文大小和时间位置，较旧的历史上下文意味着从剪辑到剪辑的受试者一致性。 跨越5个生成器配置，支持更长的上下文、一致性上升、停滞，然后随着提交上下文的扩展而下降。 在这些发现的激励下，我们提出了Commit Forcing ，这是一个将承诺组织成一个链的无培训规则。 在提交期间，每个块仅读取前一个块的存储KV ，因此旧的历史上下文仅通过链到达新条目。 我们将此规则应用于6台预训练发电机。 在60秒的VBench上， Commit Forcing将所有6台发电机的质量和总分提高了1.27质量分和1.10总分。 远程一致性提升可扩展到240秒的视频。 在对120秒LongLive视频的盲比较中， Commit Forcing在主题和场景一致性方面的获胜率为83.5% ，在整体偏好方面的获胜率为82.9%
+
+</details>
+
+---
+
+## 15. FilmTogether: Cinematic Video Generation from Low-Cost Inputs / FilmTogether ：通过低成本输入生成电影视频
+
+**Date**: 2026-10-31 | **arXiv**: [2611.00899v1](http://arxiv.org/abs/2611.00899v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.00899v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The widespread adoption of mobile devices has democratized video recording, but a stark aesthetic divide persists between casual, low-cost captures and high-cost cinematic productions. Bridging this gap requires upgrading heterogeneous production elements, such as lighting, specialized costumes, and materials, without altering the core layout, identity, and temporal motion of the original footage. However, this task is heavily bottlenecked by two important challenges: 1) Lacking a high-quality paired training data specifically designed to handle complex low-to-high appearance shifts. 2) Ignoring the capacity of current video editing models to perceive and enhance the multiple low-cost compositions. To address these issues, we present CineCraft-120K, a large-scale dataset of aligned low- and high-cost video pairs annotated with pair-aware editing prompts. CineCraft-120K features a diverse, high-resolution and high-cost Cinematic Crafting bank spanning decades of media production, meticulously taxonomized into 5 broad domains and 23 fine-grained sub-categories. It also provides element-level mapping between low- and high-cost counterparts, offering pair-aware rich textual prompts that precisely detail the required aesthetic transformations while anchoring structural layout. Architecturally, we propose a simple yet effective dual-memory feature adapter, where a text-memory expands semantic capacity for low2high appearance changes, and a hint memory supplies layer-wise visual feature corrections of high-cost element before context injection. Extensive experiments and ablation studies demonstrate the superiority of CineCraft-120K for low-to-high-cost video editing, alongside the effectiveness of our dual-memory adapter.
+
+移动设备的广泛采用使视频录制民主化，但在休闲、低成本拍摄和高成本电影制作之间存在着明显的美学鸿沟。 弥合这一差距需要升级异构制作元素，如照明、专业服装和材料，而不改变原始素材的核心布局、身份和时间运动。 然而，这项任务受到两个重要挑战的严重阻碍： 1 ）缺乏专门设计用于处理复杂低到高外观变化的高质量配对训练数据。 2 ）忽略当前视频编辑模型感知和增强多种低成本作品的能力。 为了解决这些问题，我们推出了CineCraft-120K ，这是一个由对齐的低成本和高成本视频对组成的大规模数据集，并带有配对感知编辑提示。 CineCraft-120K拥有跨越数十年媒体制作的多样化、高分辨率和高成本的Cinematic Crafting库，经过精心分类，分为5个广泛领域和23个细粒度子类别。 它还提供低成本和高成本之间的元素级映射，提供配对感知的丰富文本提示，在锚定结构布局时精确地详细说明所需的美学转换。 从架构上讲，我们提出了一种简单而有效的双内存功能适配器，其中文本内存扩展了低2高外观变化的语义容量，提示内存提供层次视觉
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-31 (12 papers)</b></summary>
 
 # arXiv Video Papers - 2026-10-31
