@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-05](papers/2026-11-05.md) - 19 papers
 - [2026-11-04](papers/2026-11-04.md) - 19 papers
 - [2026-11-03](papers/2026-11-03.md) - 15 papers
 - [2026-10-31](papers/2026-10-31.md) - 12 papers
@@ -179,6 +180,328 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-05 (19 papers)</b></summary>
+
+# arXiv Video Papers - 2026-11-05
+
+**Paper Count**: 19
+
+---
+
+## 1. PixelSpline: Continuous Space-Time Video Super-Resolution via Endpoint-Anchored Shared Pixel Trajectories / PixelSpline：通过端点锚定共享像素轨迹实现连续时空视频超分辨率
+
+**Date**: 2026-11-04 | **arXiv**: [2611.06870v1](http://arxiv.org/abs/2611.06870v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.06870v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing continuous space-time video super-resolution methods often infer motion from only two endpoint frames and model the two motion directions independently, making them vulnerable to ambiguous correspondence and inconsistent trajectories. We introduce a continuous STVSR framework that combines long-context encoding, continuous HR feature lifting, and an endpoint-anchored PixelSpline. Long-range observations provide more reliable endpoint representations, while continuous upsampling constructs detailed appearance features directly on the requested HR grid. PixelSpline explicitly models each pixel's motion as a single continuous trajectory shared by both endpoints. Using this trajectory, our method warps endpoint colors into a coarse intermediate frame and aligns the HR features for residual reconstruction. Experiments across spatial and temporal upsampling settings demonstrate that the proposed framework offers a favorable quality--efficiency trade-off.
+
+现有的连续时空视频超分辨率方法通常仅从两个端点帧推断运动并独立地对两个运动方向进行建模，这使得它们容易受到模糊对应和不一致轨迹的影响。我们引入了一个连续的 STVSR 框架，它结合了长上下文编码、连续 HR 特征提升和端点锚定的 PixelSpline。远程观察提供更可靠的端点表示，而连续上采样直接在请求的 HR 网格上构建详细的外观特征。 PixelSpline 将每个像素的运动显式建模为两个端点共享的单个连续轨迹。使用该轨迹，我们的方法将端点颜色扭曲为粗略的中间帧，并对齐 HR 特征以进行残差重建。跨空间和时间上采样设置的实验表明，所提出的框架提供了有利的质量-效率权衡。
+
+</details>
+
+---
+
+## 2. VA-TDM: A Unified View for Improving Few-Step Diffusion Models by Velocity Adversarial Distillation / VA-TDM：通过速度对抗蒸馏改进少步扩散模型的统一视图
+
+**Date**: 2026-11-04 | **arXiv**: [2611.06796v1](http://arxiv.org/abs/2611.06796v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.06796v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Few-step distillation offers efficient generation with diffusion and flow models, but preserving quality with only a few sampling steps remains challenging. Distribution-matching methods via score distillation provide a strong foundation, yet they rely on accurately tracking the student's changing distribution. At intermediate generation steps in few-step sampling, student-score estimation can be difficult, and commonly used estimators may describe a different distribution from the one used to update the student. Flow matching allows a more flexible approach to supervision through velocity fields constructed from the student's sampling process. Building on this perspective, we introduce Velocity Adversarial Distillation (VAD), which uses a learned critic to compare student and teacher fields and turn their disagreement into feedback for learning. VAD unifies score distillation, Fisher-based matching, and moment matching, also explaining existing heuristic MMD updates and delivering new training objectives. We further develop VA-TDM, which follows trajectory distribution matching: providing supervision for partial denoising along the student trajectory. Beyond this, VA-TDM combines transition-aware online velocity learning and dual-form VAD supervision across intermediate student transitions. Extensive results show that VA-TDM is powerful for learning few-step generators, achieving state-of-the-art four-step performance in both text-to-image and text-to-video generation across various backbones and scaling effectively to 33B MiniMax-H3. In particular, our VA-TDM-H3 notably outperforms the few-step Fast-H3 and is closer to the original many-step H3 according to human preference.
+
+少步蒸馏通过扩散和流动模型提供了高效的生成，但仅通过几个采样步骤来保持质量仍然具有挑战性。通过分数蒸馏的分布匹配方法提供了坚实的基础，但它们依赖于准确跟踪学生不断变化的分布。在少步采样的中间生成步骤中，学生分数估计可能很困难，并且常用的估计器可能描述与用于更新学生的分布不同的分布。流量匹配允许通过根据学生采样过程构建的速度场进行更灵活的监督。基于这个观点，我们引入了速度对抗蒸馏（VAD），它使用博学的批评家来比较学生和教师的领域，并将他们的分歧转化为学习反馈。 VAD 统一了分数蒸馏、基于 Fisher 的匹配和矩匹配，还解释了现有的启发式 MMD 更新并提供了新的训练目标。我们进一步开发了 VA-TDM，它遵循轨迹分布匹配：为沿学生轨迹的部分去噪提供监督。除此之外，VA-TDM 还结合了跨中级学生过渡的过渡感知在线速度学习和双形式 VAD 监督。大量结果表明，VA-TDM 对于学习少步生成器非常强大，可以在跨各种主干的文本到图像和文本到视频生成方面实现最先进的四步性能，并有效扩展到 33B MiniMax-H3。特别是，我们的 VA-TDM-H3 明显优于少步 Fast-H3，并且根据人类偏好更接近原始的多步 H3。
+
+</details>
+
+---
+
+## 3. Turns Matter: Advancing Streaming Video RL via Turn-Level Credit / Turns Matter：通过 Turn-Level Credit 推进流媒体视频强化学习
+
+**Date**: 2026-11-04 | **arXiv**: [2611.06728v1](http://arxiv.org/abs/2611.06728v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.06728v1)
+
+**Categories**: cs.CV, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Streaming video understanding requires models to repeatedly decide whether to respond or continue observing. Recently, Group Relative Policy Optimization (GRPO) has been applied to this setting, with existing approaches emphasizing reward design while retaining a single trajectory-level advantage across turns. Such shared credit can reinforce redundant replies after earlier successes and discourage useful follow-ups after earlier failures. We propose TurnWise, a turn-level GRPO framework that aligns learning with individual streaming decisions. TurnWise addresses the mismatch between trajectory-level feedback and turn-level interaction, promoting informative responses and reducing redundancy. Specifically, turn-level credit assignment uses silence-completed prefix scoring to construct group-relative advantages from each decision's remaining return, separating its learning signal from earlier rewards. Turn-mean policy optimization averages token losses within each turn and then across turns, giving response and waiting decisions equal weight regardless of output length. These complementary designs improve streaming policy learning without a learned critic or additional rollouts. Extensive experiments show our method outperforms prior RL approaches for streaming video understanding.
+
+流媒体视频理解需要模型反复决定是响应还是继续观察。最近，组相对策略优化（GRPO）已应用于此设置，现有方法强调奖励设计，同时保留跨回合的单一轨迹级优势。这种共享信用可能会强化早期成功后的冗余回复，并阻止早期失败后的有用后续行动。我们提出了 TurnWise，这是一个回合级 GRPO 框架，可以将学习与个人流决策结合起来。 TurnWise 解决了轨迹级反馈和转弯级交互之间的不匹配问题，促进信息响应并减少冗余。具体来说，回合级信用分配使用沉默完成的前缀评分来从每个决策的剩余回报中构建群体相对优势，将其学习信号与早期奖励分开。回合均值策略优化对每个回合内的令牌损失进行平均，然后在各个回合内平均损失，无论输出长度如何，都给予响应和等待决策相同的权重。这些互补的设计改进了流式策略学习，无需博学的批评家或额外的推出。大量实验表明，我们的方法在流视频理解方面优于之前的 RL 方法。
+
+</details>
+
+---
+
+## 4. Sekai: Incremental Event Memory for Generalized Reasoning Video Segmentation / Sekai：用于广义推理视频分割的增量事件记忆
+
+**Date**: 2026-11-04 | **arXiv**: [2611.06685v1](http://arxiv.org/abs/2611.06685v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.06685v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/zenastangbi/Sekai.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Online reasoning video segmentation (Online RVS) requires a model to segment query-referred objects as a video streams in, using only the frames observed so far. Existing formulations largely assume a fixed target set throughout the video, overlooking a fundamental property of streaming reasoning: as new events occur, the objects that satisfy a query may change over time. To address this, we propose a new task, Generalized Reasoning Video Segmentation (GRVS), where the target set depends on query-relevant events accumulated over the observed video history. As new evidence accumulates, the target set can evolve from empty to one or multiple objects, requiring a model to continuously maintain target validity while localizing the valid objects currently in view. To evaluate GRVS, we build Isekai, a diagnostic benchmark of 60 videos and 197 queries across 11 temporal query families, with 12,569 scoring points whose target sets are causally annotated over time. We further propose Sekai, an online framework with two complementary components: an Event Memory Reasoner (EMR) that maintains query-relevant events and evolving target states in structured memory, and a Memory-Grounded Decoder (MGD) that identifies valid targets from this memory and localizes them in the current frame. Experiments show that Sekai significantly outperforms existing online RVS methods, achieving 50.33 J&F and improving over the strongest baseline by 3.2 points. Code, example annotations, and evaluation scripts are available at https://github.com/zenastangbi/Sekai.
+
+在线推理视频分割（Online RVS）需要一个模型来将查询引用的对象分割为视频流，仅使用迄今为止观察到的帧。现有的公式在很大程度上假设整个视频都有一个固定的目标集，忽略了流推理的基本属性：当新事件发生时，满足查询的对象可能会随着时间的推移而改变。为了解决这个问题，我们提出了一项新任务，即广义推理视频分割（GRVS），其中目标集取决于在观察到的视频历史记录中积累的与查询相关的事件。随着新证据的积累，目标集可以从空对象演变为一个或多个对象，这就需要模型持续保持目标有效性，同时定位当前可见的有效对象。为了评估 GRVS，我们构建了 Isekai，这是一个包含 11 个时间查询系列的 60 个视频和 197 个查询的诊断基准，具有 12,569 个评分点，其目标集随着时间的推移进行了因果注释。我们进一步提出了 Sekai，一个具有两个互补组件的在线框架：一个事件内存推理器（EMR），用于在结构化内存中维护与查询相关的事件和不断变化的目标状态；以及一个基于内存的解码器（MGD），用于从该内存中识别有效目标并将其定位在当前帧中。实验表明，Sekai 显着优于现有的在线 RVS 方法，达到 50.33 J&F，比最强基线提高了 3.2 分。代码、示例注释和评估脚本可在 https://github.com/zenastangbi/Sekai 获取。
+
+</details>
+
+---
+
+## 5. EmoReward: Self-Evolving Reward Calibration for Emotional Video Generation RL / EmoReward：用于情感视频生成 RL 的自我进化奖励校准
+
+**Date**: 2026-11-04 | **arXiv**: [2611.06518v1](http://arxiv.org/abs/2611.06518v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.06518v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Group Relative Policy Optimization (GRPO) has advanced generative model post-training in verifiable domains such as code and mathematics, but evaluating video quality, especially emotional expression, often depends on subjective aesthetics and has no uniquely correct target. Existing approaches typically rely on fixed rewards for visual quality, motion quality, and text alignment that poorly capture emotional intent and can invite reward hacking, while RLHF is difficult to scale and subject to individual aesthetic differences that complicate the calibration of facial, body motion, and chromatic cues across narrative contexts. We introduce EmoReward, a new self-evolving training mechanism that distills evidence reliability from reward traces collected during an actual training run to adaptively guide multi-reward weight allocation in subsequent training by determining which emotional evidence to trust and how much to weight it. EmoReward first plans specific grounding cues from the emotional prompt to guide evaluation, then uses heterogeneous signal primitives to score the generated video during the act stage. Reflective Reward Gating calibrates their contributions through instance-level gates for phase, face confidence, conflict, and subtlety, then renormalizes weights over the active set to produce the sample's fused reward. RewardMemory then estimates each primitive's reliability from rollout scores and outcomes within each emotional regime in the finished training run, then fixes bounded multipliers that calibrate fusion weights in the next training run without updating reward models. Experiments on HunyuanVideo 1.5 show improvements across multiple RL algorithms and compare EmoReward with other agentic reward methods under SAGE-GRPO. Ablations and transfer experiments on SD 3.5 and FLUX further support adaptive reward calibration for visual generation.
+
+组相对策略优化（GRPO）在代码、数学等可验证领域拥有先进的生成模型后训练，但评估视频质量，尤其是情感表达，往往取决于主观审美，没有唯一正确的目标。现有的方法通常依赖于视觉质量、运动质量和文本对齐的固定奖励，这些奖励很难捕捉情感意图​​，并且可能会导致奖励黑客行为，而 RLHF 很难扩展，并且会受到个人审美差异的影响，这使得跨叙事上下文的面部、身体运动和色彩线索的校准变得复杂。我们引入了 EmoReward，这是一种新的自我进化训练机制，它从实际训练过程中收集的奖励痕迹中提取证据可靠性，通过确定信任哪些情感证据以及对其赋予多少权重，自适应地指导后续训练中的多奖励权重分配。 EmoReward 首先计划来自情感提示的特定基础线索来指导评估，然后使用异构信号原语对行动阶段生成的视频进行评分。反射奖励门控通过实例级门来校准其对阶段、面部置信度、冲突和微妙性的贡献，然后重新规范化活动集上的权重以产生样本的融合奖励。然后，RewardMemory 根据完成的训练运行中每个情绪状态内的推出分数和结果来估计每个原语的可靠性，然后修复有界乘数，在下一次训练运行中校准融合权重，而无需更新奖励模型。 HunyuanVideo 1.5 上的实验显示了多种 RL 算法的改进，并将 EmoReward 与 SAGE-GRPO 下的其他代理奖励方法进行了比较。 SD 3.5 和 FLUX 上的消融和转移实验进一步支持视觉生成的自适应奖励校准。
+
+</details>
+
+---
+
+## 6. NanoKV: High-Ratio KV Cache Compression for Autoregressive Video Generation / NanoKV：用于自回归视频生成的高比率 KV 缓存压缩
+
+**Date**: 2026-11-04 | **arXiv**: [2611.06377v1](http://arxiv.org/abs/2611.06377v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.06377v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive video models rely on historical key-value (KV) caches to preserve scene consistency over extended rollouts, making KV storage and repeated attention over history a growing memory and computational bottleneck. Aggressive compression can degrade generation quality, while reconstructing full-dimensional KV leaves attention computation largely unchanged. We introduce NanoKV, a frozen-backbone framework for generation-aware high-ratio KV compression. NanoKV exploits redundancy across tokens and attention heads by storing shared content in cluster centers and encoding joint head-channel residuals into low-bit coefficients. Crucially, NanoKV uses different fitting objectives for Keys and Values according to their distinct roles in attention: Key decoders are optimized to preserve downstream block outputs, whereas Value encoders and decoders are fitted for faithful reconstruction through the deployed quantization path. Building on the same compressed representation, the optional NanoKV-Fast variant reuses the stored coefficients for mixed-dimensional attention, reducing computation without modifying the video backbone. Across three autoregressive video backbones, NanoKV consistently improves the quality-storage trade-off. On HY-WorldPlay, NanoKV achieves $26.09\times$ effective KV compression, nearly twice that of KVTC, while improving PSNR by 1.0 dB. NanoKV-Fast retains $20.53\times$ effective compression and achieves an approximately $1.15\times$ end-to-end speedup over KVTC.
+
+自回归视频模型依靠历史键值 (KV) 缓存来在扩展部署中保持场景一致性，从而使 KV 存储和对历史的重复关注成为日益增长的内存和计算瓶颈。激进的压缩会降低生成质量，而重建全维 KV 会使注意力计算基本保持不变。我们引入 NanoKV，一种用于生成感知高比率 KV 压缩的冻结骨干框架。 NanoKV 通过在集群中心存储共享内容并将联合头通道残差编码为低位系数来利用令牌和注意力头之间的冗余。至关重要的是，NanoKV 根据键和值在注意力中的不同作用对键和值使用不同的拟合目标：键解码器经过优化以保留下游块输出，而值编码器和解码器则通过部署的量化路径进行忠实重建。基于相同的压缩表示，可选的 NanoKV-Fast 变体重复使用存储的系数进行混合维度注意力，从而在不修改视频主干的情况下减少计算。在三个自回归视频主干上，NanoKV 持续改善质量与存储的权衡。在 HY-WorldPlay 上，NanoKV 实现了 $26.09\times$ 的有效 KV 压缩，几乎是 KVTC 的两倍，同时将 PSNR 提高了 1.0 dB。 NanoKV-Fast 保留了 $20.53\times$ 的有效压缩率，并比 KVTC 实现了约 $1.15\times$ 的端到端加速。
+
+</details>
+
+---
+
+## 7. NextGAN: Towards Simple and Scalable GAN Training for Image and Video Generation / NextGAN：面向图像和视频生成的简单且可扩展的 GAN 训练
+
+**Date**: 2026-11-04 | **arXiv**: [2611.06270v1](http://arxiv.org/abs/2611.06270v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.06270v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/LINs-lab/NextGAN.git.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Adversarial training enables one- and few-step image and video generation, but conventional adversarial losses supervise critic values without directly specifying the gradients used to update the generator. We present NEXTGAN, which trains a scalar critic by regressing its input gradient onto displacements between independently paired reference and generated features at interpolated locations in frozen representation spaces. For a fixed generator, this regression is equivalent to an adversarial objective with a gradient-energy penalty, while the generator retains the standard potential-based GAN update. The same objective adapts pre-trained image and video generators with up to 14B parameters, without auxiliary losses, online teacher scores, or trajectories. On ImageNet $256 \times 256$, NEXTGAN achieves one-step FIDs of 2.87 with pixel-space JiT-B and 1.54 with latent-space DiT-XL/1; its adversarial form further reaches 1.36. For text-to-video generation, a single trained Wan2.1-1.3B model supports one-, two-, and four-step sampling, achieving the highest VBench total scores among the compared 1.3B methods at one and two steps. At two steps, NEXTGAN scores 83.13, exceeding rCM and AnyFlow by 1.25 and 0.47 points, respectively. Code is available at https://github.com/LINs-lab/NextGAN.git.
+
+对抗性训练可以实现一步或几步图像和视频生成，但传统的对抗性损失会监督临界值，而无需直接指定用于更新生成器的梯度。我们提出了 NEXTGAN，它通过将其输入梯度回归到独立配对参考和冻结表示空间中插值位置处生成特征之间的位移来训练标量批评家。对于固定生成器，这种回归相当于具有梯度能量惩罚的对抗性目标，而生成器保留了标准的基于势的 GAN 更新。相同的目标采用最多 14B 参数的预训练图像和视频生成器，没有辅助损失、在线教师分数或轨迹。在 ImageNet $256 × 256$ 上，NEXTGAN 使用像素空间 JiT-B 实现了 2.87 的单步 FID，使用潜在空间 DiT-XL/1 实现了 1.54 的单步 FID；其对抗形式进一步达到1.36。对于文本到视频的生成，单个经过训练的 Wan2.1-1.3B 模型支持一步、两步和四步采样，在一步和两步的比较 1.3B 方法中实现了最高的 VBench 总分。在两步中，NEXTGAN 得分为 83.13，分别超过 rCM 和 AnyFlow 1.25 和 0.47 分。代码可在 https://github.com/LINs-lab/NextGAN.git 获取。
+
+</details>
+
+---
+
+## 8. ReactWorld: Structuring Interaction Responses for Embodied Video Generation / ReactWorld：构建具体视频生成的交互响应
+
+**Date**: 2026-11-04 | **arXiv**: [2611.06120v1](http://arxiv.org/abs/2611.06120v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.06120v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Embodied video world models predict scene changes caused by robot actions, yet generated object responses may remain inconsistent with task intent and contact dynamics. Critical responses in embodied scenes often concentrate in local regions and specific time intervals. Inspired by chain-of-thought reasoning, we introduce ReactWorld, an embodied video generation model guided by structured interaction anticipation. In the generation backbone's feature space, an interaction response field predictor anticipates how the interaction will unfold, explicitly describing participant roles, future motion response intensity, and local motion changes. A response feedback adapter forms increments to object features from the difference between the object branch's outputs with predicted and zeroed local dynamics inputs. It also converts predicted displacements into positional biases for temporal attention. These two mechanisms guide object feature updates and information retrieval across frames, respectively. Through interaction anticipation and generative feedback, ReactWorld achieves an average score of 77.51 on RBench, outperforming PhysisForcing by 3.29 points with improvements in all nine categories. On EZS-Bench, it achieves a Domain score of 86.98 and an average score of 81.87.
+
+体现的视频世界模型预测由机器人动作引起的场景变化，但生成的对象响应可能与任务意图和接触动态不一致。具身场景中的批判性反应通常集中在局部区域和特定时间间隔。受思想链推理的启发，我们引入了 ReactWorld，一种由结构化交互预期引导的具体视频生成模型。在生成主干的特征空间中，交互响应场预测器预测交互将如何展开，明确描述参与者角色、未来运动响应强度和局部运动变化。响应反馈适配器根据对象分支的输出与预测的和归零的局部动态输入之间的差异形成对象特征的增量。它还将预测的位移转换为位置偏差以进行时间注意力。这两种机制分别指导跨帧的对象特征更新和信息检索。通过交互预期和生成反馈，ReactWorld 在 RBench 上的平均得分为 77.51，比 PhysisForcing 高出 3.29 分，在所有九个类别上都有所改进。在 EZS-Bench 上，它的领域得分为 86.98，平均得分为 81.87。
+
+</details>
+
+---
+
+## 9. SleuthVLM: Do We Really Need Audio-in-Video for Omni Video Understanding? / SleuthVLM：我们真的需要视频中的音频来理解全向视频吗？
+
+**Date**: 2026-11-04 | **arXiv**: [2611.06083v1](http://arxiv.org/abs/2611.06083v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.06083v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Omni models answer questions about videos by jointly processing sampled frames and audio in one turn, with progress driven largely by scaling model size and omni training data. We ask whether a model needs to hear the audio directly at all, and present SleuthVLM, an agent harness built on a VLM that never hears the audio directly: speech will be transcribed into text, and the VLM will sleuth the video on its own without any predefined workflow. On four omni benchmarks with videos up to 90 minutes, SleuthVLM achieves the best average accuracy: \textbf{75.0%}, 2.6 points above Gemini 3.8 Flash, and it also tops the Video-MME-v2 leaderboard with \textbf{77.8%}; with an open-source 27B VLM, it beats all open-source omni models. We draw three findings: SleuthVLM beats a model that glances; hearing is not the bottleneck, agentic ability is; omni understanding needs better agentic ability, not just more omni data for modality alignment. So we provide a simple but effective starting point for doing omni video understanding. Omni understanding needs better agents, not just bigger models that hear.
+
+Omni 模型通过联合处理采样帧和音频来回答有关视频的问题，进展主要由缩放模型大小和全方位训练数据驱动。我们询问模型是否需要直接听到音频，并提出了 SleuthVLM，这是一种基于 VLM 构建的代理工具，从不直接听到音频：语音将被转录为文本，VLM 将自行侦听视频，无需任何预定义的工作流程。在视频长达 90 分钟的四个全向基准测试中，SleuthVLM 实现了最佳平均准确度：\textbf{75.0%}，比 Gemini 3.8 Flash 高出 2.6 个点，并且还以 \textbf{77.8%} 在 Video-MME-v2 排行榜上名列前茅；凭借开源 27B VLM，它击败了所有开源全向型号。我们得出三个结论： SleuthVLM 击败了扫视模型；听力不是瓶颈，行动能力才是；全向理解需要更好的代理能力，而不仅仅是用于模态对齐的更多全向数据。因此，我们为进行全向视频理解提供了一个简单但有效的起点。全方位理解需要更好的智能体，而不仅仅是更大的能够听到声音的模型。
+
+</details>
+
+---
+
+## 10. Clips2Story: Training-Free Video Storyboarding and Editing Using Multimodal Retrieval-Embedded Generation / Clips2Story：使用多模态检索嵌入式生成进行免培训视频故事板和编辑
+
+**Date**: 2026-11-04 | **arXiv**: [2611.05992v1](http://arxiv.org/abs/2611.05992v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.05992v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video editors often work with large collections of fragmented footage and must select and organize relevant clips into a coherent story. However, many existing video editing and summarization methods assume a temporally ordered source video and aim to preserve its original narrative and temporal structure. In this paper, we introduce Clips2Story, a training-free, LLM-based pipeline that enables users to create keyword-specified short videos from a pool of video clips. Given a pool of clips and a user-specified keyword, we first extract text-based multimodal descriptors for each clip and retrieve the clips most relevant to the keyword. We then provide the textual descriptors of these candidate clips to an LLM, which selects and arranges them into an editable storyboard with connective narrations. Finally, we assemble the selected clips and retrieve accompanying visuals for the narrations to compose the output video. To evaluate the proposed pipeline, we construct a synthetic evaluation dataset from 100 long-form videos across five genres by segmenting each video into short clips using a scene-change detection model and shuffling the resulting clips to remove their temporal order. Through objective evaluation and qualitative examples, we demonstrate that Clips2Story can effectively retrieve keyword-relevant clips and compose coherent storyboards based on user-specified keywords. Human evaluation further shows that Clips2Story outperforms a strong baseline in terms of narrative coherence, keyword alignment, and overall realism.
+
+视频剪辑师经常处理大量零碎的镜头，必须选择相关剪辑并将其组织成一个连贯的故事。然而，许多现有的视频编辑和摘要方法假设源视频按时间顺序排列，并旨在保留其原始叙述和时间结构。在本文中，我们介绍了 Clips2Story，这是一种免培训、基于法学硕士的管道，使用户能够从视频剪辑池中创建指定关键字的短视频。给定剪辑池和用户指定的关键字，我们首先为每个剪辑提取基于文本的多模式描述符，并检索与关键字最相关的剪辑。然后，我们将这些候选剪辑的文本描述符提供给法学硕士，法学硕士选择并将它们排列成带有连接叙述的可编辑故事板。最后，我们组装选定的剪辑并检索伴随的视觉效果以进行旁白以组成输出视频。为了评估所提出的管道，我们通过使用场景变化检测模型将每个视频分割成短片并打乱生成的剪辑以消除其时间顺序，从 5 个流派的 100 个长视频构建了一个综合评估数据集。通过客观评估和定性示例，我们证明了 Clips2Story 可以有效地检索与关键字相关的剪辑，并根据用户指定的关键字组成连贯的故事板。人工评估进一步表明，Clips2Story 在叙事连贯性、关键词对齐和整体真实性方面优于强大的基线。
+
+</details>
+
+---
+
+## 11. PathoS2VD: From 2D Histopathology to Pseudo Z-Stack Representations / PathoS2VD：从 2D 组织病理学到伪 Z 堆栈表示
+
+**Date**: 2026-11-04 | **arXiv**: [2611.05974v1](http://arxiv.org/abs/2611.05974v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.05974v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/QuIIL/PathoS2VD.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+For decades, diagnostic pathology has relied on thin two-dimensional (2D) tissue sections, despite biological tissues exhibiting inherently three-dimensional (3D) morphological organization. Because a single section captures only one focal plane, important morphological cues along the z-axis are inevitably discarded, limiting tissue representation for both human interpretation and computational analysis. In this work, we propose a generative framework that learns z-axis morphological priors from pathology z-stack data, offering a cost-effective alternative to dedicated volumetric imaging, and transfers this knowledge to conventional single-plane histopathology. Specifically, an image-to-video (I2V) latent diffusion model (LDM) is trained to synthesize a pseudo z-stack from a single 2D image, capturing plausible morphological variations across adjacent focal planes rather than reconstructing physical tissue volumes. To enable deployment on large-scale clinical datasets without native z-stack acquisition, we further introduce a prior-preserving mixture fine-tuning strategy that adapts the model to new domains while retaining the learned z-axis morphological prior. Extensive experiments demonstrate that the synthesized pseudo z-stacks exhibit realistic cross-plane morphological continuity and consistently improve downstream prostate cancer classification compared with conventional 2D representations. Our results suggest that learning transferable z-axis priors from limited z-stack data provides a practical way to enrich routine pathology images with complementary morphological information. Code: https://github.com/QuIIL/PathoS2VD.
+
+几十年来，尽管生物组织表现出固有的三维（3D）形态组织，但诊断病理学仍然依赖于薄的二维（2D）组织切片。由于单个切片仅捕获一个焦平面，因此沿 z 轴的重要形态线索不可避免地被丢弃，从而限制了人类解释和计算分析的组织表示。在这项工作中，我们提出了一个生成框架，可以从病理学 z 堆栈数据中学习 z 轴形态学先验，为专用体积成像提供一种经济高效的替代方案，并将这些知识转移到传统的单平面组织病理学中。具体来说，图像到视频 (I2V) 潜在扩散模型 (LDM) 经过训练，可以从单个 2D 图像合成伪 z 堆栈，捕获相邻焦平面上的合理形态变化，而不是重建物理组织体积。为了能够在没有本地 z 堆栈采集的情况下部署在大规模临床数据集上，我们进一步引入了一种保留先验的混合微调策略，该策略使模型适应新的领域，同时保留学习到的 z 轴形态学先验。大量实验表明，与传统的 2D 表示相比，合成的伪 z 堆栈表现出真实的跨平面形态连续性，并持续改善下游前列腺癌分类。我们的结果表明，从有限的 z 堆栈数据中学习可转移的 z 轴先验提供了一种实用的方法，可以通过补充形态信息来丰富常规病理图像。代码：https://github.com/QuIIL/PathoS2VD。
+
+</details>
+
+---
+
+## 12. DecoupAttn: Decoupled Sparse Attention for Training-Free Acceleration of Video Diffusion / DecoupAttn：解耦稀疏注意力，实现视频传播的免训练加速
+
+**Date**: 2026-11-04 | **arXiv**: [2611.05917v1](http://arxiv.org/abs/2611.05917v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.05917v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Sparse attention accelerates few-step video diffusion transformers by computing a few key blocks exactly and compensating for the rest. However, existing sparse attention still faces key challenges, including identification overhead from finding critical blocks at every denoising step, suboptimal budget allocation that sets sparsity budgets uniformly or by local metrics, and cross-step error accumulation as reused masks or clusters go stale. Observing that the errors left on skipped blocks cancel each other once every key is compensated, we propose DecoupAttn, a new paradigm of decoupled sparse attention: semantic clusters compensate every key, and exact attention corrects their error on a few blocks fixed once offline by position. To support this paradigm, we introduce Distortion Budget, a rate-distortion objective for budget allocation that places exact computation across timesteps, layers, and heads where it removes the most distortion that compensation leaves in the final latent. Built on this budget, we further propose Reassign Cache, in which each step reassigns the drifting keys to cached centroids and refreshes compensation while the budgeted blocks stay fixed. Moreover, DecoupAttn is training-free: a few calibration clips compile one plan offline, and inference runs standard block-sparse kernels with one fused compensation kernel. Our code will be released after submission.
+
+稀疏注意力通过精确计算几个关键块并补偿其余块来加速少步视频扩散变换器。然而，现有的稀疏注意力仍然面临着关键挑战，包括在每个去噪步骤中查找关键块的识别开销、统一或按局部指标设置稀疏预算的次优预算分配，以及随着重用掩模或集群过时而导致的跨步骤错误累积。观察到一旦每个键都得到补偿，跳过的块上留下的错误就会相互抵消，我们提出了 DecoupAttn，一种解耦稀疏注意力的新范式：语义集群补偿每个键，而精确注意力则纠正在按位置离线固定的几个块上的错误。为了支持这种范式，我们引入了失真预算，这是一种用于预算分配的率失真目标，它可以跨时间步长、层和头进行精确计算，从而消除补偿在最终潜伏中留下的最大失真。在此预算的基础上，我们进一步提出重新分配缓存，其中每个步骤将漂移的键重新分配给缓存的质心并刷新补偿，同时预算块保持固定。此外，DecoupAttn 是免训练的：一些校准片段离线编译一个计划，推理运行带有一个融合补偿内核的标准块稀疏内核。我们的代码将在提交后发布。
+
+</details>
+
+---
+
+## 13. Chronos: Sequential Identity-Preserving Video Generation by Temporal Anchoring / Chronos：通过时间锚定生成顺序身份保留视频
+
+**Date**: 2026-11-04 | **arXiv**: [2611.05893v1](http://arxiv.org/abs/2611.05893v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.05893v1)
+
+**Categories**: cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Identity-preserving video generation aims to synthesize high-quality and visually realistic videos from textual and visual conditions while faithfully maintaining the subject's identity across diverse motions. Prior methods have extensively introduced reference-guided control signals and identity-aware conditioning to improve facial alignment from reference images. However, improving static identity alignment alone creates a fundamental tension between identity fidelity and temporal controllability, which frequently causes identity drift or motion suppression under large pose variations and multi-segment sequential actions. To address this, we propose Chronos, a framework that unifies single-segment facial identity preservation and multi-segment sequential action generation under a common temporal formulation. Specifically, Chronos integrates Semantic Prompt Anchoring to adaptively refine the user prompt, Visual Frame Anchoring to transform conditions into visually grounded keyframe anchors for visual guidance, and Metric-Guided Candidate Routing to select the highest-quality videos from heterogeneous generators via multi-dimensional evaluation. Extensive evaluations demonstrate the superiority of our approach, which achieved first place in both Track 1 and Track 2 of the ACM MM 2026 Identity-Preserving Video Generation Challenge, demonstrating its effectiveness across both facial identity preservation and sequential action generation settings.
+
+身份保留视频生成旨在从文本和视觉条件合成高质量和视觉逼真的视频，同时在不同的动作中忠实地保持主体的身份。先前的方法已广泛引入参考引导控制信号和身份感知调节，以改善参考图像的面部对准。然而，仅改善静态身份对齐就会在身份保真度和时间可控性之间产生根本性的紧张关系，这经常会导致大姿势变化和多段顺序动作下的身份漂移或运动抑制。为了解决这个问题，我们提出了 Chronos，这是一个框架，它将单段面部身份保存和多段顺序动作生成统一在一个共同的时间公式下。具体来说，Chronos 集成了语义提示锚定 (Semantic Prompt Anchoring) 来自适应地细化用户提示，集成了视觉帧锚定 (Visual Frame Anchoring) 来将条件转换为基于视觉的关键帧锚点以进行视觉引导，还集成了度量引导候选路由 (Metric-Guided Candidate Routing) 来通过多维评估从异构生成器中选择最高质量的视频。广泛的评估证明了我们的方法的优越性，该方法在 ACM MM 2026 身份保护视频生成挑战赛的第一场和第二场比赛中均获得第一名，展示了其在面部身份保留和顺序动作生成设置方面的有效性。
+
+</details>
+
+---
+
+## 14. DualCast: Dual-Image Conditioned Diffusion Transformers for Digital Human E-Commerce Video Generation / DualCast：用于数字人类电子商务视频生成的双图像调节扩散变压器
+
+**Date**: 2026-11-04 | **arXiv**: [2611.05825v1](http://arxiv.org/abs/2611.05825v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.05825v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Digital human e-commerce video generation requires preserving product appearance, human identity, and overall video style during dynamic demonstrations. Although recent models support multiple reference images, their general conditioning schemes do not explicitly distinguish the asymmetric roles of "what is presented" and "who presents it." Consequently, generated videos may favor a single reference, resulting in product distortion, identity drift, or single-reference collapse. To address this issue, we propose DualCast, a role-addressed dual-image conditioning framework for video generation. By explicitly modeling the distinct roles of product and human conditions, DualCast reduces role ambiguity and feature competition between references. First, a dual-spatiotemporal slot injection mechanism VAE-encodes the product and human images separately and places their latent features at the front and rear boundaries of the DiT sequence, enabling sequence-level condition separation and directed injection. Second, a mask-guided region-weighted loss strengthens supervision over product, face, and product-face overlap regions, improving generation fidelity in critical areas. Third, image condition dropout enables a single model to support dual-image, product-only, and human-only generation. In addition, we construct a curated dataset of 10K e-commerce videos for model training. Experimental results demonstrate the strong performance of DualCast.
+
+数字人体电商视频生成需要在动态演示时保留产品外观、人​​物身份和整体视频风格。尽管最近的模型支持多个参考图像，但它们的一般条件方案没有明确区分“呈现什么”和“呈现它的人”的不对称角色。因此，生成的视频可能偏向于单一参考，从而导致产品失真、身份漂移或单一参考崩溃。为了解决这个问题，我们提出了 DualCast，一种用于视频生成的角色寻址双图像调节框架。通过明确地模拟产品和人类条件的不同角色，DualCast 减少了角色模糊性和参考之间的特征竞争。首先，双时空槽注入机制VAE对产品图像和人体图像分别进行编码，并将其潜在特征放置在DiT序列的前后边界处，从而实现序列级条件分离和定向注入。其次，掩模引导的区域加权损失加强了对产品、面部和产品面部重叠区域的监督，提高了关键区域的生成保真度。第三，图像条件丢失使单个模型能够支持双图像、仅产品和仅人类的生成。此外，我们构建了 10K 电子商务视频的精选数据集用于模型训练。实验结果证明了DualCast的强大性能。
+
+</details>
+
+---
+
+## 15. Spatio-Temporal Multi-Order Interaction for Video Recognition / 用于视频识别的时空多阶交互
+
+**Date**: 2026-11-03 | **arXiv**: [2611.05633v1](http://arxiv.org/abs/2611.05633v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.05633v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Many temporal approaches for video recognition rely on explicit cross-channel aggregation projections, which have quadratic complexity in the number of channels, introducing significant computational overhead. In addition, the spatio-temporal representation used for video recognition is biased either toward local order interactions (for CNNs) or toward global order interactions (for transformers). Starting from the multi-order spatial representation of MogaNet, our method introduces two complementary contributions to tackle these problems. First, for the temporal modelling, we introduce parallel multi-order processing with depthwise-only convolutions and implicit gating-based aggregation, which is linear in the number of channels, inducing a considerable computational reduction. Second, we propose a dual interaction between spatial and temporal dimensions, which allows a better spatio-temporal representation without increasing the computational cost. By combining these two contributions, our proposed VideoMogaNet achieves performance on par with or better than state-of-the-art action recognition approaches across multiple video benchmarks (UCF101, HMDB51, Kinetics-400, Diving48), while considerably reducing the cost of the temporal branch.
+
+许多视频识别的时间方法依赖于显式的跨通道聚合投影，其在通道数量上具有二次复杂度，从而引入显着的计算开销。此外，用于视频识别的时空表示要么偏向局部顺序交互（对于 CNN），要么偏向全局顺序交互（对于 Transformer）。从 MogaNet 的多阶空间表示开始，我们的方法引入了两个互补的贡献来解决这些问题。首先，对于时间建模，我们引入了具有仅深度卷积和基于隐式门控聚合的并行多阶处理，这与通道数量呈线性关系，从而大大减少了计算量。其次，我们提出了空间和时间维度之间的双重相互作用，这允许更好的时空表示而不增加计算成本。通过结合这两个贡献，我们提出的 VideoMogaNet 在多个视频基准（UCF101、HMDB51、Kinetics-400、Diving48）上实现了与最先进的动作识别方法相当或更好的性能，同时大大降低了时间分支的成本。
+
+</details>
+
+---
+
+## 16. DreamX: Video Diffusion Model is a Universal Latent Action Learner / DreamX：视频扩散模型是一种通用的潜在动作学习器
+
+**Date**: 2026-11-03 | **arXiv**: [2611.05377v1](http://arxiv.org/abs/2611.05377v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.05377v1)
+
+**Categories**: cs.CV, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learning a universal action representation from video requires modeling dynamics that are consistent across different executions of the same action yet invariant to changes in embodiment and appearance. Existing latent action models infer actions from visual transitions, but their representations often entangle the underlying action with irrelevant visual variations, limiting transfer across embodiments. We introduce DreamX, which repurposes a pretrained video diffusion model as a universal latent action learner. Our approach extracts compact latent actions from the video model's rich spatiotemporal features, compressing each latent video frame by $\boldsymbol{300\times}$ ($\boldsymbol{1{,}200 \rightarrow 4}$ tokens). In addition, by leveraging the video model's generative prior, these latent actions capture action-relevant dynamics disentangled from visual appearance. The resulting latent space serves as a shared action interface across embodiments (human and robot), environments, and action parameterizations. On LARY-Bench, DreamX achieves state-of-the-art performance among latent action models. Moreover, actions encoded in one setting remain effective in another: the latent space supports any-to-any video transfer and zero-shot action transfer across diverse embodiments and environments. Furthermore, this shared interface also enables policy learning in a compact latent action space, reducing the computational cost of video-diffusion-based policies.
+
+从视频中学习通用动作表示需要对同一动作的不同执行之间保持一致的动态建模，但对于实施例和外观的变化保持不变。现有的潜在动作模型从视觉转换推断动作，但它们的表示经常将底层动作与不相关的视觉变化纠缠在一起，从而限制了跨实施例的转移。我们引入了 DreamX，它将预训练的视频扩散模型重新用作通用的潜在动作学习器。我们的方法从视频模型丰富的时空特征中提取紧凑的潜在动作，将每个潜在视频帧压缩$\boldsymbol{300\times}$（$\boldsymbol{1{,}200 \rightarrow 4}$ tokens）。此外，通过利用视频模型的生成先验，这些潜在动作捕获与视觉外观分离的与动作相关的动态。由此产生的潜在空间充当跨实施例（人类和机器人）、环境和动作参数化的共享动作接口。在 LARY-Bench 上，DreamX 在潜在动作模型中实现了最先进的性能。此外，在一种设置中编码的动作在另一种设置中仍然有效：潜在空间支持跨不同实施例和环境的任意到任意视频传输和零镜头动作传输。此外，这种共享接口还可以在紧凑的潜在动作空间中进行策略学习，从而降低基于视频扩散的策略的计算成本。
+
+</details>
+
+---
+
+## 17. GSCV++: Lightweight 3D Gaussian Splatting Sequence Compression via Standard Video Codecs / GSCV++：通过标准视频编解码器进行轻量级 3D 高斯泼溅序列压缩
+
+**Date**: 2026-11-03 | **arXiv**: [2611.05359v2](http://arxiv.org/abs/2611.05359v2) | **PDF**: [Link](http://arxiv.org/pdf/2611.05359v2)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper presents GSCV++, a lightweight pipeline for 3D {G}aussian {S}platting (GS) sequences {C}ompression with standard {V}ideo codecs. To meet the requirements of low-complexity and hardware compatibility from the industry, GSCV++ jointly improves preprocessing, 3D-to-2D mapping, and practical video compression configuration of GS compression. First, for preprocessing, energy-adaptive inter-frame spherical harmonic (SH) alternative current (AC) dimensionality reduction (EA-SHDR) is proposed to produces a compact and stable temporal SH AC feature space. It can reduce the data volume of following mapping and practical compression, as well as less complexity while eliminating redundant information. Second, for 3D-to-2D mapping, prior-based Inter-MiniPLAS (P-MiniPLAS) is designed to generate smooth 2D feature maps through prior-based weighting factor inference and small scale remapping. Compared with vanilla Parallel Linear Assignment Sorting (PLAS) and Morton scan, P-MiniPLAS ensures the generated 2D maps are more suitable for the video codec while maintaining a low level of computational complexity. Third, for practical compression, content-aware generalized compression (CA-GC) is developed to use a non-uniform bit-depth split for coordinate map generation, and a coding unit size selection is introduced for efficient compression complexity control, which fully exploits the performance of video codecs without involving normative changes. Experiments demonstrate that GSCV++ reports over 20\% in intra- and 60\% in inter-prediction rate-distortion gains compared with state-of-the-art (SOTA) methods. GSCV++ also achieves faster 2D map generation, encoding, and decoding than other SOTA methods using the same type of video codecs. Ablation studies verify the effectiveness and robustness of the proposed modules and provide insights for subsequent research.
+
+本文介绍了 GSCV++，这是一种使用标准 {V}ideo 编解码器进行 3D {G}aussian {S}platting (GS) 序列 {C} 压缩的轻量级管道。为了满足业界低复杂度和硬件兼容性的要求，GSCV++联合改进了GS压缩的预处理、3D到2D映射以及实用的视频压缩配置。首先，对于预处理，提出了能量自适应帧间球谐波（SH）交流（AC）降维（EA-SHDR）来产生紧凑且稳定的时间SH AC特征空间。它可以减少后续映射和实际压缩的数据量，在消除冗余信息的同时降低复杂度。其次，对于 3D 到 2D 映射，基于先验的 Inter-MiniPLAS (P-MiniPLAS) 旨在通过基于先验的权重因子推断和小规模重新映射来生成平滑的 2D 特征图。与普通的并行线性分配排序 (PLAS) 和 Morton 扫描相比，P-MiniPLAS 可确保生成的 2D 地图更适合视频编解码器，同时保持较低的计算复杂度。第三，对于实际压缩，开发了内容感知广义压缩（CA-GC）以使用非均匀位深分割来生成坐标图，并引入编码单元大小选择以进行有效的压缩复杂性控制，从而充分利用视频编解码器的性能而不涉及规范更改。实验表明，与最先进的 (SOTA) 方法相比，GSCV++ 的帧内预测率失真增益超过 20%，帧间预测率失真增益超过 60%。与使用相同类型视频编解码器的其他 SOTA 方法相比，GSCV++ 还实现了更快的 2D 地图生成、编码和解码。消融研究验证了所提出模块的有效性和稳健性，并为后续研究提供了见解。
+
+</details>
+
+---
+
+## 18. Diffusion Plug-in Priors for Self-Supervised Ultrasound Video Restoration / 用于自监督超声视频恢复的扩散插件先验
+
+**Date**: 2026-11-03 | **arXiv**: [2611.05206v2](http://arxiv.org/abs/2611.05206v2) | **PDF**: [Link](http://arxiv.org/pdf/2611.05206v2)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Ultrasound videos are limited by hardware-constrained spatial resolution and signal-dependent speckle, while paired low- and high-resolution acquisitions for supervised restoration are rarely available. We aim to jointly super-resolve and despeckle ultrasound videos without paired training data or network retraining. We propose UltraDiff, which uses a frozen pre-trained diffusion model (DM) as a plug-in prior and restores each frame by optimizing the latent seed of the DM sampler under a range-constrained maximum a posteriori formulation. We derive a speckle-aware data-fidelity term from a Rayleigh scale-family model and characterize its relative-residual and variance-adaptive weighting properties. We further introduce a stabilized fidelity that is bounded below and strictly convex in log intensity for positive observations in its unclamped form. A total-variation regularizer complements the DM prior, and a temporal seed update warm-starts each frame from the optimized seed of its predecessor. On EchoNet-LVH videos with simulated speckle and additive noise, UltraDiff with a natural-image prior improves PSNR by 1.24\,dB over the strongest baseline, and ultrasound-related priors improve it further. On real clinical echocardiography videos, UltraDiff reduces the mean absolute error of zero-shot ejection fraction (EF) prediction from 7.31 to 6.37 EF points relative to DUP, the strongest baseline. Combining a speckle-aware fidelity with frozen diffusion priors enables ground-truth-free ultrasound video restoration that benefits downstream measurement. UltraDiff needs neither paired data nor retraining and is not tied to a specific diffusion checkpoint. Code associated with this work will be made publicly available upon acceptance.
+
+超声视频受到硬件约束的空间分辨率和信号相关散斑的限制，而用于监督恢复的配对低分辨率和高分辨率采集很少可用。我们的目标是在无需配对训练数据或网络再训练的情况下联合超分辨率和去斑超声视频。我们提出了 UltraDiff，它使用冻结的预训练扩散模型（DM）作为先验插件，并通过在范围约束的最大后验公式下优化 DM 采样器的潜在种子来恢复每个帧。我们从瑞利尺度族模型中导出了散斑感知数据保真度项，并表征了其相对残差和方差自适应加权属性。我们进一步引入了一种稳定的保真度，该保真度在其未钳位形式的正观测中具有以下界限并且在对数强度上严格凸。总变化正则化器补充了 DM 先验，并且时间种子更新从其前身的优化种子热启动每个帧。在具有模拟散斑和附加噪声的 EchoNet-LVH 视频上，具有自然图像先验的 UltraDiff 将 PSNR 比最强基线提高了 1.24dB，而与超声相关的先验则进一步提高了它。在真实的临床超声心动图视频中，相对于最强基线 DUP，UltraDiff 将零射射血分数 (EF) 预测的平均绝对误差从 7.31 EF 点降低到 6.37 EF 点。将散斑感知保真度与冻结扩散先验相结合，可以实现无地面真实性的超声视频恢复，从而有利于下游测量。 UltraDiff 既不需要配对数据，也不需要重新训练，并且不依赖于特定的扩散检查点。与这项工作相关的代码将在接受后公开发布。
+
+</details>
+
+---
+
+## 19. FloMo: 3D Scene Flow as a World Action Model Intermediate for Learning from Human Video / FloMo：3D 场景流作为世界动作模型中间体，用于从人类视频中学习
+
+**Date**: 2026-11-03 | **arXiv**: [2611.05062v2](http://arxiv.org/abs/2611.05062v2) | **PDF**: [Link](http://arxiv.org/pdf/2611.05062v2)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pretrained video generation models distill internet-scale motion priors into robot policies, but full video is a redundant signal for action prediction. We argue that dense 3D motion is the medium through which video pretraining best transfers to robot actions, and that predicting motion rather than video affords better sample-efficiency for action prediction. FloMo is a 5B video-generation model fine-tuned to predict 3D scene-flow and action tokens. Rendering scene flow as RGB and encoding it into the same latent space as video enables a pretrained video generation backbone to efficiently adapt to predict 3D scene flow. Co-trained on action-free human video and action-labeled robot teleoperation data, our model benefits from human-video pretraining and generalizes to unseen objects, motion primitives, and tasks. Replacing motion prediction with a video prediction objective degrades out-of-distribution generalization, while adding a video prediction target alongside motion lowers policy success rather than improving it. When motion, video, and action are predicted jointly, action tokens attend far more to motion than to video, suggesting that predicting video wastes model capacity. Together, these results indicate that motion effectively mediates the transfer from video pretraining to action. More information can be found at flomo-wam.github.io.
+
+预训练的视频生成模型将互联网规模的运动先验提炼为机器人策略，但完整视频对于动作预测来说是冗余信号。我们认为，密集 3D 运动是视频预训练最好地转移到机器人动作的媒介，并且预测运动而不是视频可以为动作预测提供更好的样本效率。 FloMo 是一种经过微调的 5B 视频生成模型，可预测 3D 场景流和动作标记。将场景流渲染为 RGB 并将其编码到与视频相同的潜在空间中，使预训练的视频生成骨干能够有效地适应预测 3D 场景流。我们的模型在无动作的人类视频和带有动作标记的机器人远程操作数据上进行联合训练，受益于人类视频预训练，并推广到看不见的物体、运动基元和任务。用视频预测目标代替运动预测会降低分布外泛化能力，而在运动旁边添加视频预测目标会降低策略的成功率，而不是提高策略的成功率。当联合预测运动、视频和动作时，动作标记更多地关注运动而不是视频，这表明预测视频浪费了模型容量。总之，这些结果表明运动有效地介导了从视频预训练到动作的转换。更多信息请访问 flomo-wam.github.io。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-04 (19 papers)</b></summary>
 
 # arXiv Video Papers - 2026-11-04
