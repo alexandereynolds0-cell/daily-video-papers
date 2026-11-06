@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-06](papers/2026-11-06.md) - 14 papers
 - [2026-11-05](papers/2026-11-05.md) - 19 papers
 - [2026-11-04](papers/2026-11-04.md) - 19 papers
 - [2026-11-03](papers/2026-11-03.md) - 15 papers
@@ -180,6 +181,246 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-06 (14 papers)</b></summary>
+
+# arXiv Video Papers - 2026-11-06
+
+**Paper Count**: 14
+
+---
+
+## 1. EgoGeneralist: Unifying Egocentric Action-Video Tasks through Video-Native Modeling / EgoGeneralist ：通过视频原生建模统一以自我为中心的动作视频任务
+
+**Date**: 2026-11-05 | **arXiv**: [2611.08477v1](http://arxiv.org/abs/2611.08477v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.08477v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern video models possess strong visual priors, yet do not natively represent human action in metric 3D space. We present EgoGeneralist, which adapts pretrained video generators to unify action-conditioned egocentric video generation, pose estimation, and joint action-video generation. Our role-adaptive action renderer provides video-native representations for multidirectional action-video learning, making metric motion usable as both a spatial control signal and a recoverable generation target. Cross-stream action-video coupling establishes close correspondence between metric motion and visual dynamics through lightweight adaptation while preserving the pretrained visual prior. Together, these designs establish a generalist framework spanning five action-video tasks. Despite adaptation only on controlled laboratory recordings, EgoGeneralist generalizes to diverse unseen scenes and interactions with effective action control and visual quality, bridging pretrained visual knowledge and metric 3D human motion.
+
+现代视频模型具有很强的视觉先验性，但并不能原生地表示公制3D空间中的人为行为。 我们介绍EgoGeneralist ，它调整预先训练的视频生成器，以统一动作条件的自我中心视频生成、姿势估计和联合动作-视频生成。 我们的角色自适应动作渲染器为多方向动作视频学习提供视频原生表示，使度量运动既可用作空间控制信号，又可用作可恢复的生成目标。 交叉流动作-视频耦合通过轻量级自适应在公制运动和视觉动力学之间建立紧密的对应关系，同时保留预训练的视觉先验。 这些设计共同建立了一个涵盖五个动作视频任务的通才框架。 尽管仅适用于受控的实验室录音，但EgoGeneralist通过有效的动作控制和视觉质量概括了各种看不见的场景和互动，弥合了预先训练的视觉知识和度量3D人体运动。
+
+</details>
+
+---
+
+## 2. ManimCode: Learning Visual Self-Correction for Educational Animation / ManimCode ：学习教育动画的视觉自我校正
+
+**Date**: 2026-11-05 | **arXiv**: [2611.08294v1](http://arxiv.org/abs/2611.08294v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.08294v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Manim supports precise, programmatic video generation, but a successfully rendered educational animation can still have visual defects, missing explanations, or incorrect content. Rendering does not directly identify the code changes needed to correct these visual failures, so feedback-driven revision is needed. Existing agentic frameworks use iterative rendering and revision but typically rely on large models, often proprietary. Existing Manim datasets primarily contain final programs and often lack quality verification and the trajectories of feedback and revisions needed to learn this refinement process. We introduce ManimData and ManimCode, a data and training framework for feedback-driven educational animation generation. We construct ManimData through a render-guided pipeline that iteratively generates, executes, reviews, and revises Manim programs with retrieved API documentation. Its 24,034 render-verified, quality-filtered records preserve intermediate programs, execution errors, visual critiques, and corrective revisions. We use role-conditioned supervised fine-tuning on these trajectories to train ManimCode, a single 4B model, to write, review, and revise animation programs. To improve correction of errors that differ from those in the collected trajectories, we then train the Reviser with reinforcement learning on self-generated states, using rendering outcomes and reference-free quality feedback. ManimCode achieves 96.6% and 97.0% render success on ManimData-test and ManimBench, compared with 52.6% and 82.0% for the untrained 4B model under the same inference setup, while also improving video quality scores from 2.48 to 2.94 and from 3.00 to 3.44. Integrating ManimCode into two long-form educational video generation systems increases completed videos from 19/117 to 107/117 and from 53/239 to 239/239, alongside improvements in educational effectiveness and visual quality.
+
+Manim支持精确的程序化视频生成，但成功渲染的教育动画仍然可能存在视觉缺陷、缺少解释或不正确的内容。 渲染并不能直接识别纠正这些视觉故障所需的代码更改，因此需要反馈驱动的修订。 现有的代理框架使用迭代渲染和修订，但通常依赖于大型模型，通常是专有的。 现有的MANIM数据集主要包含最终程序，通常缺乏质量验证以及学习此改进过程所需的反馈和修订轨迹。 我们介绍了ManimData和ManimCode ，这是一个用于反馈驱动的教育动画生成的数据和培训框架。 我们通过渲染引导管道构建ManimData ，该管道使用检索到的API文档迭代生成、执行、审查和修改Manim程序。 其24,034条经渲染验证、质量过滤的记录保留了中间程序、执行错误、视觉批评和校正修订。 我们在这些轨迹上使用角色条件监督微调来训练ManimCode （单个4B模型）来编写、审查和修改动画程序。 为了更好地纠正与收集轨迹中的错误不同的错误，然后我们使用渲染结果和无参考质量反馈，使用自生状态的强化学习对审校进行培训。 ManimCode实现了96.6%和97.0%的渲染成功率
+
+</details>
+
+---
+
+## 3. Towards Practical 20 kbps Generative Video Compression via Adaptive Tokenization and Entropy Modeling / 通过自适应标记化和熵建模实现实用的20 kbps生成视频压缩
+
+**Date**: 2026-11-05 | **arXiv**: [2611.08099v1](http://arxiv.org/abs/2611.08099v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.08099v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video compression at ultra-low bitrates remains challenging due to the loss of perceptually important details under limited bit budgets. Recent generative video compression methods leverage pretrained video priors to improve perceptual quality and temporal coherence, but many follow a compress-then-generate paradigm, where generative priors are primarily exploited during reconstruction. Moreover, representations learned for generation and reconstruction are not inherently optimized for entropy coding.   In this work, we propose \method, which adapts pretrained video representations into compression-oriented representations while preserving their reconstruction capability. Specifically, we adapt the pretrained causal video VAE of MiniMax-H3 into a discrete video tokenizer and develop a small autoregressive entropy model that captures local and global token dependencies, with grouped prediction for parallel decoding. To further improve coding efficiency, we jointly optimize the tokenizer and entropy model using a differentiable rate surrogate, allowing rate gradients to adapt token assignments toward lower coding costs while preserving reconstruction quality. Experiments on UVG, MCL-JCV, and HEVC Class B demonstrate superior perceptual rate--distortion performance, achieving BD-LPIPS savings of 82.2\%--87.5\% and BD-DISTS savings of 78.3\%--85.0\% relative to GLC-Video.
+
+由于在有限的比特预算下失去了感知上重要的细节，超低比特率的视频压缩仍然具有挑战性。 最近的生成视频压缩方法利用预训练的视频先验来提高感知质量和时间一致性，但许多方法遵循压缩后生成的范式，其中生成先验主要在重建过程中利用。 此外，为生成和重建而学习的表征本身并未针对熵编码进行优化。   在这项工作中，我们提出了\方法，该方法将预训练的视频表示适应于面向压缩的表示，同时保持其重建能力。 具体而言，我们将MiniMax-H3的预训练因果视频VAE适配到离散视频标记器中，并开发了一个小的自回归熵模型，该模型捕获本地和全局令牌依赖关系，并对并行解码进行分组预测。 为了进一步提高编码效率，我们使用可微分速率代理来共同优化令牌生成器和熵模型，允许速率梯度在保持重建质量的同时使令牌分配适应更低的编码成本。 在UVG、MCL-JCV和HEVC Class B上进行的实验表明，与GLC-Video相比， BD-LPIPS节省了82.2\ % --87.5\ % ， BD-DISTS节省了78.3\ % --85.0\ %。
+
+</details>
+
+---
+
+## 4. Egocentric Action Recognition with Objects and Vision-Language Affordances / 使用物体和视觉语言进行以自我为中心的行动识别
+
+**Date**: 2026-11-05 | **arXiv**: [2611.07673v1](http://arxiv.org/abs/2611.07673v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.07673v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Action recognition, and more specifically egocentric action recognition, is a core task in computer vision, with applications such as monitoring the daily life activities of elderly people and task assistance. Recent methods rely on visual modalities such as RGB video or depth. However, in egocentric video, an action is largely defined by its objects, which these methods rarely model. We propose a method that combines a frozen SlowFast video expert with an attention-based object expert by late fusion. Each object is represented with its affordances, that is, what can be done with it, generated zero-shot by a vision-language model. Since datasets such as MECCANO annotate only the objects involved in each action, evaluating with these boxes tells the model which objects are active. We therefore train on annotated boxes and evaluate the method with detections from the official active-object detector, and with annotated boxes as an upper bound. Without affordances, our fusion reaches 68.4% Top-1 with annotated boxes but 49.0% with detections. About half of this drop comes from non-active detections. To remove them, the same vision-language model generates an interaction affordance that decides whether a hand is manipulating each detected object. On MECCANO, objects raise the Top-1 of the video expert from 44.9% to 49.0%, and the two affordances raise it to 49.9%, above SlowFast and object-aware RGB baselines. Code will be released upon acceptance.
+
+动作识别，更具体地说是以自我为中心的动作识别，是计算机视觉的核心任务，其应用包括监控老年人的日常生活活动和任务协助。 最近的方法依赖于视觉模态，例如RGB视频或深度。 然而，在以自我为中心的视频中，动作在很大程度上是由其对象定义的，这些方法很少对其进行建模。 我们提出了一种将冻结的SlowFast视频专家与基于注意力的对象专家通过后期融合相结合的方法。 每个对象都以其可实现性来表示，也就是说，可以用它做些什么，通过视觉语言模型生成零拍摄。 由于MECCANO等数据集仅注释每个操作中涉及的对象，因此使用这些框进行评估会告诉模型哪些对象处于活动状态。 因此，我们在带注释的框上进行训练，并使用官方活动对象检测器的检测来评估方法，并以带注释的框作为上限。 如果没有性能，我们的融合在带注释的框中达到了68.4%的前1名，但在检测中达到了49.0%。 大约一半的下降来自非活动检测。 为了消除它们，相同的视觉语言模型会生成一种交互方式，决定一只手是否在操纵每个检测到的对象。 在MECCANO上，物体将视频专家的前1名从44.9%提高到49.0% ，而两种支持将其提高到49.9% ，高于SlowFast和对象感知的RGB基线。 代码将在验收后发布。
+
+</details>
+
+---
+
+## 5. CoGenRec: A Unified Generative Framework for Complementary Vision Reconstruction / CoGenRec ：互补视觉重建的统一生成框架
+
+**Date**: 2026-11-05 | **arXiv**: [2611.07665v1](http://arxiv.org/abs/2611.07665v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.07665v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Capturing scenes with extreme motion and high dynamic range is fundamentally constrained by trade-offs among temporal resolution, spatial detail, signal-to-noise ratio, and dynamic range under practical bandwidth, power, and quantum-efficiency limits. Conventional frame-based cameras therefore suffer from temporal undersampling, exposure-induced motion blur, and sensor saturation. The Complementary Vision Sensor (CVS) addresses these limitations by decomposing visual information across two complementary pathways, a spatially dense, temporally sparse, long-exposure RGB pathway and a temporally dense, spatially sparse, short-exposure patiotemporal difference pathway. Their complementary measurements provide appearance, structural, and motion cues across a wide dynamic range that enable reconstruction beyond conventional imaging. We present CoGenRec, a complementarity-driven generative reconstruction framework that unifies video deblurring, high-temporal-resolution frame interpolation, and HDR fusion. CoGenRec encodes complementary measurements into multi-scale spatiotemporal features using exposure-aware appearance modeling and bidirectional temporal propagation. These features constrain a video diffusion model and are injected into the VAE decoder to recover fine structures lost during latent-space compression, combining the scene fidelity of physical measurements with the appearance recovery capabilities of learned video priors. On SportsSloMo-CVS, CoGenRec improves PSNR over the strongest general-purpose baseline by 4.40 dB for deblurring, 3.89 dB for frame interpolation, and 5.04 dB for HDR fusion, respectively. It also achieves strong perceptual quality on 129 unseen scenes captured with real CVS. These results establish a unified approach to advance high-quality reconstruction under challenging motion and illumination conditions. Project page: https://cogenrec.github.io/.
+
+在实际带宽、功率和量子效率限制下，捕捉极端运动和高动态范围的场景从根本上受到时间分辨率、空间细节、信噪比和动态范围之间权衡的限制。 因此，传统的基于帧的摄像机存在时间采样不足、曝光引起的运动模糊和传感器饱和等问题。 互补视觉传感器（ CVS ）通过在两个互补通路上分解视觉信息来解决这些局限性，这两个通路是空间密集、时间稀疏、长时间暴露的RGB通路和时间密集、空间稀疏、短时间暴露的Patiotemporal差异通路。 它们的互补测量在广泛的动态范围内提供外观、结构和运动线索，使重建超越传统成像。 我们提出了CoGenRec ，这是一个互补性驱动的生成式重建框架，统一了视频去模糊、高时间分辨率帧插值和HDR融合。 CoGenRec使用曝光感知外观建模和双向时间传播将互补测量编码为多尺度时空特征。 这些特征限制了视频扩散模型，并被注入到VAE解码器中，以恢复在潜在空间压缩过程中丢失的精细结构，将物理测量的场景保真度与学习视频先验的外观恢复能力相结合。 在SportsSloMo-CVS上， CoGenRec提高了PSNR
+
+</details>
+
+---
+
+## 6. Guidance Is a Field, Not a Scalar: Interval-Integrated Classifier-Free Guidance for One-Step Video Generation / 指导是一个字段，而不是一个标量：用于一步式视频生成的无间隔集成分类器指导
+
+**Date**: 2026-11-05 | **arXiv**: [2611.07566v1](http://arxiv.org/abs/2611.07566v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.07566v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/YMlinfeng/AGAVE.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+One-step generators built on MeanFlow synthesize a video in a single function evaluation, yet inherit a rigid treatment of classifier-free guidance (CFG): the guidance scale is frozen during training or, at best, exposed as a single scalar. This conflicts with mounting evidence that the optimal guidance is not a constant but a field that varies with the noise level, with spatial content, and, for video, with frame position. Every existing remedy presupposes a multi-step sampler along which guidance can be re-scheduled--an assumption one-step models violate by construction. We resolve this tension through a single observation: because the MeanFlow target is an integral over a noise interval, an arbitrary guidance field can be absorbed into the target itself and compiled into one evaluation. We formalize this as the interval-integrated CFG identity, prove that the compiled guidance carries no schedule-discretization error and can thus match or exceed any finite multi-step sampler, and instantiate it as AGAVE, which equips the average-velocity field with a learnable temporal schedule, a free motion-saliency spatial modulation, and a frame-position asymmetry. Adding fewer than ten scalars at zero inference cost, AGAVE surpasses all one-step baselines on VBench, UCF-101 and MSR-VTT while matching multi-step guided sampling. Project repository: https://github.com/YMlinfeng/AGAVE.
+
+基于MeanFlow构建的一步生成器在单一函数评估中合成视频，但继承了无分类器引导（ CFG ）的严格处理：引导量表在训练期间被冻结，或者充其量暴露为单个标量。 这与越来越多的证据相冲突，即最佳制导不是一个常数，而是一个随噪声水平、空间内容以及视频的帧位置而变化的场。 每个现有的补救措施都预先假定了一个多步骤采样器，可以通过该采样器重新安排指导-这一假设的一步模型违反了施工。 我们通过单个观察来解决这种张力：由于MeanFlow目标在噪声区间内是一个积分，因此可以将任意制导场吸收到目标本身中并编译成一个评估。 我们将其形式化为区间积分CFG恒等式，证明编译的引导没有调度-离散化误差，因此可以匹配或超过任何有限的多步采样器，并将其实例化为龙舌兰，其为平均速度场配备了可学习的时间调度、自由运动-咸度空间调制和帧位置非对称性。 以零推理成本添加少于10个标量， Agave超过了VBench、UCF-101和MSR-VTT上的所有一步式基线，同时匹配多步引导采样。 项目存储库： https://github.com/YMlinfeng/AGAVE。
+
+</details>
+
+---
+
+## 7. Training-Free Predictive Spatio-Temporal Token Pruning for Few-Step Autoregressive Video Diffusion / 针对几步自回归视频扩散的无训练预测时空令牌修剪
+
+**Date**: 2026-11-05 | **arXiv**: [2611.07551v1](http://arxiv.org/abs/2611.07551v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.07551v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Few-step autoregressive (AR) video diffusion models generate videos chunk by chunk and have made efficient video generation practical. However, further accelerating these models toward real-time generation remains challenging, as few-step distillation leaves little cross-step redundancy for existing training-free caching methods to exploit. We revisit this regime and identify two token-level redundancy patterns: cross-frame redundancy from static content shared across adjacent frames, and cross-step redundancy from tokens that converge early during denoising. Crucially, we find that early clean estimates along the model's own denoising trajectory provide an effective online signal for locating both patterns, requiring no retraining, auxiliary predictor, or reference video. Based on these findings, we propose PreSTP (Predictive Spatio-Temporal Token Pruning), a training-free framework that constructs a unified token-wise redundancy mask from cross-frame similarity and cross-step convergence. Tokens marked as redundant skip subsequent computation under a consistent last-computed-value restoration rule, and a content-adaptive mask reuse strategy further reduces dense probing cost. On 5-second generation, PreSTP achieves 1.52x-3.20x speedups and a better efficiency-fidelity trade-off than coarse-grained caching baselines such as TeaCache and FlowCache. On 30-second generation, it reaches up to 1.96x speedup while improving VBench-Long and suppressing long-horizon drift. Notably, it continues to reduce inference cost even in the extreme one-step regime, where cross-step redundancy vanishes entirely and coarse step-wise caching is no longer applicable.
+
+几步自回归（ AR ）视频扩散模型逐块生成视频，并实现了高效的视频生成。 然而，进一步加速这些模型以实时生成仍然具有挑战性，因为小步骤蒸馏为现有的无训练缓存方法留下了很少的跨步骤冗余可供利用。 我们重新审视了这一制度，并确定了两种令牌级冗余模式：跨相邻帧共享的静态内容的跨帧冗余，以及在去噪过程中早期收敛的令牌的跨步冗余。 至关重要的是，我们发现沿着模型自身去噪轨迹的早期干净估计为定位这两种模式提供了有效的在线信号，不需要再训练、辅助预测器或参考视频。 基于这些发现，我们提出了PreSTP （预测时空令牌修剪） ，这是一个无需训练的框架，它通过跨帧相似性和跨步收敛来构建统一的令牌冗余掩码。 标记为冗余的代币根据一致的最后计算值恢复规则跳过后续计算，内容自适应掩码重用策略进一步降低了密集探测成本。 在5秒内， PreSTP实现了1.52倍至3.20倍的加速，并且比粗粒度缓存基线（如TeaCache和FlowCache ）具有更好的效率-保真度权衡。 在30秒生成时，它达到高达1.96倍的加速，同时改进了VBench-Long并抑制了长距离漂移。值得注意的是，
+
+</details>
+
+---
+
+## 8. Kinematic Hypothesis Context: Embodiment-Conditioned Learned Video Coding for Bandwidth-Limited Robot Policy Uplinks / 运动假设语境：带宽受限机器人策略上行链路的实现条件学习视频编码
+
+**Date**: 2026-11-05 | **arXiv**: [2611.07411v1](http://arxiv.org/abs/2611.07411v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.07411v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robots increasingly run large vision-language-action policies on remote servers, making the camera uplink the bottleneck. Existing video codecs spend bits on content the receiver could predict: the robot's own motion. We introduce the kinematic hypothesis context, a zero-rate conditioning signal that both ends build from joint states, the robot model and the camera calibration. Ego-motion homographies, per-link robot reprojections, an end-effector plane and a background memory warp the previous reconstruction into hypotheses that condition a learned video codec. We prove that history-only and global-pose conditioning with a limited receptive field cannot access this information under large motion, and that coding gains become task gains at the policy's success cliff. On LIBERO, the context saves 23.9% bit rate over a capacity-matched history-conditioned codec and 40-56% over x264, x265 and SVT-AV1, and needs 23.2% fewer bits than DCVC-RT at equal policy action deviation; trained to lower rates, it matches DCVC-RT in PSNR. In closed loop at equal rate, OpenVLA-OFT success nearly doubles from 22.8% to 43.1% at 6 kbps (72.6% with lower-rate training, 23.6 points above DCVC-RT), pi_0.5 success rises from 55.5% to 77.4%, and the gain grows under packet loss. The context transfers across three codec hosts and to real robot data.
+
+机器人越来越多地在远程服务器上运行大型视觉语言操作策略，这使得摄像头成为瓶颈。 现有的视频编解码器在接收器可以预测的内容上花费比特：机器人自己的运动。 我们引入了运动假设上下文，即两端从关节状态、机器人模型和摄像机校准中构建的零速率调节信号。 自我运动同源性、每链接机器人再投影、末端执行器平面和背景记忆将先前的重建扭曲成假设，从而为学习的视频编解码器提供条件。 我们证明了具有有限接受场的仅历史和全局位置条件反射不能在大动作下访问这些信息，并且编码增益在策略的成功悬崖上成为任务增益。 在LIBERO上，上下文在容量匹配的历史条件编解码器上节省了23.9%的比特率，在x264、x265和SVT-AV1上节省了40-56%的比特率，并且在相同的策略操作偏差下，需要比DCVC-RT少23.2%的比特；经过训练以降低速率，它与PSNR中的DCVC-RT匹配。 在相同速率的闭环中， OpenVLA-OFT的成功率几乎翻了一番，从22.8%到43.1% ，速率为6 kbps （低速率训练为72.6% ，比DCVC-RT高23.6分） ， pi_0.5的成功率从55.5%上升到77.4% ，并且在数据包丢失下增益增长。 上下文在三个编解码器主机之间传输，并传输到真实的机器人数据。
+
+</details>
+
+---
+
+## 9. Where Do Reported Long-Video QA Gains Come From? A Controlled Audit of Frame Selection, Evidence Injection, and Expert Routing / 报告的长视频QA收益从何而来？对帧选择、证据注入和专家路由的受控审计
+
+**Date**: 2026-11-05 | **arXiv**: [2611.07329v1](http://arxiv.org/abs/2611.07329v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.07329v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/mikeslin-ir/long-video-qa-audit.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-video question answering is usually studied as frame selection: which few frames should a vision-language model see? We introduce VideoRouteAudit, a controlled audit that separates this choice from two alternatives, injecting non-visual evidence and routing to another answering model. It holds the backbone, frame budget, decoding, prompt and grader fixed while varying one decision at a time. On the full Video-MME long bucket (n=900, K=8), no tested selector significantly improves over uniform sampling. The largest selection-only estimate is +1.9 pt (95% CI [-1.2,+5.0]) and our cascade is +1.2 pt [-1.7,+4.1]; all are equivalent to uniform within +/-5 pt. The same contrasts are unstable at the n=200 subset scale commonly used: three of four are up to 3.8x larger, one reverses sign, and resampled 200-item subsets reverse the full-bucket effect's sign in 35.8% of draws. The audit also corrects our own first results. The anomaly-domain "+ASR" arms injected no text, so the pooled +4.7 pt gain was selection plus a development prefix. With transcripts, ASR lowers XD-Violence accuracy by 10.0 pt when appended after the question and not at all when placed before it, and lowers UCF-Crime by 13.0 pt either way; on Video-MME, placing it first adds about 4 pt (7 on Qwen2-VL) to uniform sampling and to the cascade alike (post hoc, unadjusted). Swapping the answering model gives the largest contrast (+15.1 pt on MUSIC-AVQA, +33.3 pt on its worst type), but the same audio-visual expert with its soundtrack silenced keeps 92% of the gain (69% with a mismatched soundtrack), so the contrast is mostly a model swap. Code, per-item predictions and scripts that recompute every statistic are available at https://github.com/mikeslin-ir/long-video-qa-audit.
+
+长视频问答通常被研究为帧选择：视觉语言模型应该看到哪几帧？ 我们引入了VideoRouteAudit ，这是一种受控审计，将此选项与两种替代方案分开，即注入非视觉证据并路由到另一个应答模型。 它保持主干、帧预算、解码、提示和分级器固定，同时一次改变一个决策。 在完整的Video-MME长桶（ n = 900 ， K = 8 ）上，没有经过测试的选择器比均匀采样显着改善。 仅限选择的最大估计值为+1.9 pt （ 95 ％ CI [-1.2 ， +5.0] ） ，我们的级联为+1.2 pt [-1.7 ， +4.1] ；所有这些均等于+/-5 pt内的均匀性。 在常用的n = 200子集尺度下，相同的对比度是不稳定的：四个子集中的三个最大3.8倍，一个反转符号，并且在35.8 ％的抽签中重新采样200个项目子集反转全桶效应的符号。 审计还纠正了我们自己的第一个结果。 异常域“+ ASR”臂没有注入文本，因此合并的+4.7 pt增益是选择加上开发前缀。 对于成绩单， ASR在问题之后附加时将XD-Violence准确度降低10.0 pt ，而在问题之前放置时根本不会降低，并且无论哪种方式都将UCF-Crime降低13.0 pt ；在Video-MME上，首先放置它会增加约4 pt （ Qwen2-VL上为7 pt ）的均匀采样和级联（事后，未调整）。 更换应答模型可获得最大的对比度（ MUSIC-AVQA为+15.1 pt ，其最差类型为+33.3 pt ） ，但视听专家相同
+
+</details>
+
+---
+
+## 10. ArtiVidRM: Verifiable Artifact-as-Rubric Reward Modeling for Explicit Quality Articulation in Video Generation / ArtiVidRM ：视频生成中显式质量衔接的可验证伪像即润滑奖励建模
+
+**Date**: 2026-11-05 | **arXiv**: [2611.07301v1](http://arxiv.org/abs/2611.07301v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.07301v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning has become an effective approach for improving video generation, but its success depends heavily on reliable reward models. Existing methods either map videos directly to opaque scalar scores or generate free-form rationales that are not explicitly optimized as the basis of the final judgment. We propose ArtiVidRM, a verifiable, artifact-as-rubrics video reward model that follows an observe-then-score paradigm. It first identifies visible generation artifacts and organizes them into a structured artifact list, then uses these artifacts as explicit rubrics for quality assessment. This intermediate representation grounds each score in concrete video-level evidence, making the reward more interpretable and informative for optimization. We further introduce a multi-reward reinforcement learning strategy to jointly optimize artifact prediction and quality assessment. The reward decomposes into complementary objectives that evaluate artifact prediction quality, including semantic coverage and prediction efficiency, together with a pairwise preference objective that supervises quality ranking through score differences. By jointly optimizing the intermediate artifact representation and the downstream preference prediction, the model learns to produce informative artifact lists while improving the accuracy of video quality assessment. Experiments show that ArtiVidRM achieves state-of-the-art performance on video preference benchmarks, provides effective signals for video diffusion optimization, and enables artifact-guided refinement of closed-source video generators.
+
+强化学习已成为改善视频生成的有效方法，但其成功在很大程度上取决于可靠的奖励模型。 现有的方法要么将视频直接映射到不透明的标量分数，要么生成未明确优化的自由形式理由作为最终判断的基础。 我们提出了ArtiVidRM ，这是一种可验证的人工制品即垃圾视频奖励模型，遵循观察-评分范式。 它首先识别可见生成工件并将其组织成结构化工件列表，然后将这些工件用作质量评估的显式规则。 这种中间表示将每个分数基于具体的视频级证据，使奖励更具可解释性和信息性，以进行优化。 我们进一步引入多重奖励强化学习策略，共同优化伪影预测和质量评估。 奖励分解为评估伪影预测质量的互补目标，包括语义覆盖和预测效率，以及通过分数差异监督质量排名的成对偏好目标。 通过联合优化中间伪影表示和下游偏好预测，该模型学习生成信息丰富的伪影列表，同时提高视频质量评估的准确性。 实验表明， ArtiVidRM在视频偏好基准上实现了最先进的性能，提供了有效的信号
+
+</details>
+
+---
+
+## 11. Householder Motion Embedding: Noise Modulation for Motion-Controllable Video Generation / 住户运动嵌入：用于运动可控视频生成的噪声调制
+
+**Date**: 2026-11-05 | **arXiv**: [2611.07294v1](http://arxiv.org/abs/2611.07294v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.07294v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion models for video generation have achieved remarkable success, yet precise motion control under explicit user guidance remains challenging. Recent noise-warping methods introduce temporal correlations by warping the noise according to the user-provided motion signal. However, standard spatial warping generally disrupts the noise's i.i.d. Gaussian structure, requiring distribution correction, such as Jacobian-based correction, but at a substantial computational overhead. We propose Householder Motion Embedding (HME), which encodes the motion signal into the noise through a sequence of Householder reflections that together form an orthogonal transformation applied to each location's channel vector. HME exactly preserves the spatial Gaussian structure within each frame while introducing cross-frame correlations that promote temporally consistent video. HME is agnostic to the network architecture and integrates directly into standard video diffusion fine-tuning pipelines. Experiments on different scenarios show that HME matches or outperforms the state of the art, while achieving a 2.7x speedup over noise warping. These results demonstrate that channel-space Householder transformations offer a principled and efficient alternative to noise warping for motion-controllable video generation.
+
+视频生成的扩散模型取得了显着的成功，但在明确的用户指导下，精确的运动控制仍然具有挑战性。 最近的噪声翘曲方法通过根据用户提供的运动信号翘曲噪声来引入时间相关性。 然而，标准的空间翘曲通常会破坏噪声的i.i.d.高斯结构，需要分布校正，例如基于雅可比的校正，但需要大量的计算开销。 我们提出了Householder Motion Embedding （ HME ） ，它通过Householder反射序列将运动信号编码为噪声，这些反射一起形成应用于每个位置的信道矢量的正交变换。 HME精确地保留了每个帧内的空间高斯结构，同时引入了促进时间一致性视频的跨帧相关性。 HME与网络架构无关，并直接集成到标准视频扩散微调管道中。 在不同场景下的实验表明， HME与现有技术相匹配或优于现有技术，同时实现了噪声翘曲2.7倍的加速。 这些结果表明，信道空间Householder变换为运动可控视频生成提供了一种有原则且有效的噪声翘曲替代方案。
+
+</details>
+
+---
+
+## 12. Perceptual Distortion for Overfitted Video Coding: Sliced Matching in Space, Error Alignment in Time / 过拟合视频编码的感知失真：空间切片匹配、时间误差对齐
+
+**Date**: 2026-11-04 | **arXiv**: [2611.07148v1](http://arxiv.org/abs/2611.07148v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.07148v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent works in neural video coding have increasingly been trading off perceptual quality against reconstruction fidelity at a fixed bitrate. Wasserstein Distortion (WD) offers a principled approach to balancing these objectives by relaxing spatial correspondences in feature matching, enabling lightweight overfitted image codecs to compete with computationally intensive generative decoders. Extending vanilla WD to video, however, presents two challenges: its independent Gaussian approximation limits the expressiveness of feature distribution matching, while unconstrained texture resampling across frames introduces temporal inconsistencies. We address these challenges by distinguishing between the correspondences that can be relaxed and those that must be preserved. Spatially, we introduce a local sliced Wasserstein distortion (SWD) that matches empirical feature distributions through one-dimensional optimal transport, capturing cross-channel dependencies without enforcing exact spatial alignment. Temporally, we employ a novel flow residual that constrains coding errors along motion trajectories, preserving temporal consistency without imposing additional reconstruction fidelity constraints. Evaluated on UVG and HEVC Class B with the overfitted codec COOL-CHIC, our framework achieves BD-rate reductions of 9.2% in DISTS and 3.0% in LPIPS relative to frame-wise WD, averaged over test sequences, while lowering tOF by 10.2% at matched rate.
+
+最近在神经视频编码方面的工作越来越多地以固定的比特率将感知质量与重建保真度进行权衡。 Wasserstein失真（ WD ）通过放宽特征匹配中的空间对应关系，提供了一种平衡这些目标的原则方法，使轻量级过拟合图像编解码器能够与计算密集型生成解码器竞争。 然而，将vanilla WD扩展到视频存在两个挑战：其独立的高斯近似限制了特征分布匹配的表现力，而跨帧的无约束纹理重采样引入了时间不一致性。 我们通过区分可以放松的对应关系和必须保留的对应关系来应对这些挑战。 在空间上，我们引入了局部切片Wasserstein畸变（ SWD ） ，该畸变通过一维最优传输匹配经验特征分布，在不执行精确空间对齐的情况下捕获跨通道依赖性。 在时间上，我们采用了一种新颖的流残差，它限制了沿运动轨迹的编码误差，保持了时间一致性，而不会施加额外的重构保真度约束。 使用过度拟合的编解码器COOL-CHIC对UVG和HEVC B类进行评估，我们的框架实现了相对于帧式WD的BD率降低9.2 ％和LPIPS降低3.0 ％ ，平均测试序列，同时以匹配的速率降低10.2 ％的TOF。
+
+</details>
+
+---
+
+## 13. TraCE: Trajectory-Aware Concepts for Explainable Video Understanding / TraCE ：可解释视频理解的轨迹感知概念
+
+**Date**: 2026-11-04 | **arXiv**: [2611.07009v1](http://arxiv.org/abs/2611.07009v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.07009v1)
+
+**Categories**: cs.CV
+
+**Project**: https://leewooil.github.io/TraCE_project_page/.  <details><summary><b>Abstract / 摘要</b></summary>
+
+Video understanding models often rely on motion, yet their explanations can obscure which motion sources support a prediction. We identify motion-source under-specification as a limitation of existing video XAI: region-centric explanations can be source-ambiguous, while motion vocabularies restricted to single-person pose sequences are source-incomplete. We propose TraCE (Trajectory-Aware Concepts for Explainable Video Understanding), a concept-based framework that discovers source-flexible motion concepts by clustering optical-flow trajectories from training videos. These concepts represent dynamic evidence from people, objects, and interactions, while object and scene concepts account for static context. The resulting typed trajectory/object/scene interface supports class prediction for action recognition and question-conditioned concept matching for video question answering (VQA). We evaluate TraCE across five random seeds on six benchmarks: NTU RGB+D Mutual, Chiral SSv2, UCF-101, KTH, TOMATO, and STAR. Relative to non-interpretable baselines, TraCE maintains competitive task performance, with an average accuracy drop of 1.0 points for action recognition and a nominal gain of 0.4 points for VQA. Motion perturbation and concept-removal tests provide complementary evidence of directional semantic alignment and decision faithfulness, while sample-level interventions illustrate targeted model debugging. Our project page is available at https://leewooil.github.io/TraCE_project_page/.
+
+视频理解模型通常依赖于运动，但它们的解释可能会模糊哪些运动源支持预测。 我们认为运动源不足是现有视频XAI的局限性：以区域为中心的解释可能是源模糊的，而仅限于单人姿势序列的运动词汇表是源不完整的。 我们提出了TraCE （ Trajectory-Aware Concepts for Explainable Video Understanding ） ，这是一个基于概念的框架，通过从培训视频中聚类光流轨迹来发现源灵活的运动概念。 这些概念代表来自人物、对象和交互的动态证据，而对象和场景概念则代表静态上下文。 生成的类型化轨迹/对象/场景界面支持用于动作识别的类预测和用于视频问答（ VQA ）的问题条件概念匹配。 我们在六个基准上评估了五个随机种子的TraCE ： NTU RGB + D Mutual、手性SSv2、UCF-101、KTH、番茄和STAR。 相对于不可解释的基线， TraCE保持了有竞争力的任务绩效，动作识别的平均准确度下降了1.0分， VQA的标称增益为0.4分。 运动扰动和概念去除测试提供了方向语义对齐和决策忠实性的补充证据，而样本级干预说明了有针对性的模型调试。 我们的项目页面位于
+
+</details>
+
+---
+
+## 14. Synthesizing Dexterous Robot Demonstrations from Human Videos via Virtual Try-On / 通过虚拟试用从人类视频合成灵巧机器人演示
+
+**Date**: 2026-11-03 | **arXiv**: [2611.05163v3](http://arxiv.org/abs/2611.05163v3) | **PDF**: [Link](http://arxiv.org/pdf/2611.05163v3)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robot foundation models have shown remarkable performance in robot control, yet adapting them to a new task still relies heavily on teleoperated demonstrations. Egocentric human videos offer a scalable substitute, but overlaying rendered robots on human videos or retargeting human poses into robot actions leaves significant visual or action gaps for high-DoF robot embodiments. To address this limitation, we propose RoboTryOn, which treats human-to-robot translation as virtual try-on: try-on keeps the person and swaps the garment, RoboTryOn keeps the demonstrated motion and swaps the human for the robot. Specifically, RoboTryOn converts a human video into a video of the target robot specified by a reference image, while preserving the original task, objects, and background. To maintain visual consistency, we translate selected keyframes autoregressively and use them to guide video synthesis with motion conditioned on the human hand skeleton. Additionally, we use an inverse dynamics model (IDM) that incorporates depth features to infer action labels from synthesized videos for policy learning. Our experiments across multiple humanoid embodiments show that policies trained with our synthetic data improve the average success rate on novel tasks, including challenging bimanual manipulation, from 2% to 60%, without any real robot demonstration of those tasks. Moreover, training with our synthetic data matches the performance of policies trained solely on teleoperated demonstrations at approximately a third of the collection cost, demonstrating the cost efficiency of our approach.
+
+机器人基础模型在机器人控制方面表现出色，但使它们适应新任务仍然在很大程度上依赖于远程操作的演示。 以自我为中心的人类视频提供了可扩展的替代品，但将渲染的机器人叠加在人类视频上或将人类姿势重新定位到机器人动作中，为高自由度机器人实施例留下了巨大的视觉或动作差距。 为了解决这一限制，我们提出了RoboTryOn ，它将人机翻译视为虚拟试穿：试穿保留人并交换衣服， RoboTryOn保留演示的运动并将人换成机器人。 具体而言， RoboTryOn将人体视频转换为参考图像指定的目标机器人的视频，同时保留原始任务、对象和背景。 为了保持视觉一致性，我们自我回归地翻译选定的关键帧，并使用它们来指导以人手骨骼为条件的运动视频合成。 此外，我们使用包含深度特征的逆动态模型（ IDM ）从合成视频中推断动作标签，以进行策略学习。 我们对多个人形实施例的实验表明，使用我们的合成数据训练的策略可以将新任务的平均成功率从2 ％提高到60 ％ ，包括具有挑战性的双手动操作，而无需任何真正的机器人演示这些任务。 此外，使用我们的合成数据进行的培训与仅针对远程操作进行培训的政策的性能相匹配
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-05 (19 papers)</b></summary>
 
 # arXiv Video Papers - 2026-11-05
