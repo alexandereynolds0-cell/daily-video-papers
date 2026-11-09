@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-09](papers/2026-11-09.md) - 7 papers
 - [2026-11-06](papers/2026-11-06.md) - 32 papers
 - [2026-11-05](papers/2026-11-05.md) - 13 papers
 - [2026-11-04](papers/2026-11-04.md) - 53 papers
@@ -196,6 +197,130 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-09 (7 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-11-09
+
+**Paper Count**: 7
+
+---
+
+## 1. Agentic AI for Healthcare Claim Denial Analysis: A Policy-Grounded Framework for Privacy Preservation / 用于医疗保健索赔拒绝分析的代理人工智能：基于政策的隐私保护框架
+
+**Date**: 2026-11-06 | **arXiv**: [2611.09423v1](http://arxiv.org/abs/2611.09423v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.09423v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In the healthcare sector, claim denials impose significant financial and administrative burdens, emphasizing the need for automated and trustworthy decision-support systems. This paper proposes a modular Agentic Artificial Intelligence (AI) framework for healthcare claim denial analysis, integrating specialized agents for denial risk prediction, risk factor identification, diagnosis-procedure-medication code relationship analysis, and counterfactual analysis. The framework integrates predictive analytics, graph-based learning, a Hybrid Contextual Retrieval-Augmented Generation (RAG) pipeline grounded in healthcare policy documents, and a dedicated HIPAA Compliance Agent to support privacy protection. Evaluated on a synthetic healthcare claims dataset, the framework achieved 98% traceability of reported numerical findings, validated 214 of 216 policy citations, and removed all 280 identified sensitive identifiers without modifying the underlying analysis. These findings pave the way for further research into Agentic AI as a framework for explainable, policy-aware, and privacy-preserving healthcare claim denial management.
+
+在医疗保健领域，索赔被拒绝带来了巨大的财务和行政负担，强调了对自动化和值得信赖的决策支持系统的需求。本文提出了一种用于医疗保健索赔拒绝分析的模块化代理人工智能（AI）框架，集成了用于拒绝风险预测、风险因素识别、诊断-程序-药物代码关系分析和反事实分析的专用代理。该框架集成了预测分析、基于图形的学习、基于医疗保健政策文档的混合上下文检索增强生成 (RAG) 管道以及支持隐私保护的专用 HIPAA 合规代理。在综合医疗保健索赔数据集上进行评估后，该框架实现了报告的数值结果 98% 的可追溯性，验证了 216 个政策引用中的 214 个，并删除了所有 280 个已识别的敏感标识符，而无需修改基础分析。这些发现为进一步研究 Agentic AI 作为可解释、政策感知和保护隐私的医疗保健索赔拒绝管理框架铺平了道路。
+
+</details>
+
+---
+
+## 2. Typed-Centrality Grounding for Agentic GraphRAG: A Symbolic Approach for Agentic Reasoning / 代理 GraphRAG 的类型中心性基础：代理推理的符号方法
+
+**Date**: 2026-11-06 | **arXiv**: [2611.09414v1](http://arxiv.org/abs/2611.09414v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.09414v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Knowledge Graphs (KGs) and Large Language Models (LLMs) represent two approaches for knowledge representation and reasoning over heterogeneous data. Recent research has explored their integration through Graph Retrieval-Augmented Generation (GraphRAG) systems, which use KGs to provide structured context to LLMs. However, existing GraphRAG approaches treat KGs as homogeneous graphs and rely on textual similarity between the input prompt and the context, rather than using it as a source of deterministic knowledge.   This work proposes an agent-based GraphRAG system that introduces a symbolic layer to integrate deterministic reasoning alongside text similarities. This approach is based on the definition of typed centralities for KGs, where centrality measures are computed separately for each specific KG's class. This information is used to construct a symbolic representation that is provided to the LLM as a deterministic source. The proposed system was mathematically validated and evaluated on a real-world POLE (Person, Object, Location, Event) dataset, comparing reasoning and information retrieval with and without the symbolic layer. The results indicate that the our approach leads to responses that are more consistent with the context, improving the generated outputs.
+
+知识图（KG）和大型语言模型（LLM）代表了异构数据知识表示和推理的两种方法。最近的研究通过图检索增强生成（GraphRAG）系统探索了它们的集成，该系统使用知识图谱为法学硕士提供结构化上下文。然而，现有的 GraphRAG 方法将 KG 视为同构图，并依赖于输入提示和上下文之间的文本相似性，而不是将其用作确定性知识的来源。   这项工作提出了一种基于代理的 GraphRAG 系统，该系统引入了符号层来将确定性推理与文本相似性集成在一起。这种方法基于知识图谱类型中心性的定义，其中中心性度量是针对每个特定知识图谱类别单独计算的。该信息用于构建符号表示，并将其作为确定性来源提供给法学硕士。所提出的系统在现实世界的 POLE（人、物体、位置、事件）数据集上进行了数学验证和评估，比较了有无符号层的推理和信息检索。结果表明，我们的方法会产生与上下文更加一致的响应，从而改善生成的输出。
+
+</details>
+
+---
+
+## 3. SmartBloch-Agent: An Agentic Framework for Automated MRI Sequence Design and Optimization / SmartBloch-Agent：自动化 MRI 序列设计和优化的代理框架
+
+**Date**: 2026-11-06 | **arXiv**: [2611.09413v1](http://arxiv.org/abs/2611.09413v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.09413v1)
+
+**Categories**: physics.med-ph, cs.AI, eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Magnetic resonance imaging (MRI) pulse sequences organize radiofrequency excitation, gradient encoding, and signal acquisition, determining magnetization evolution and image formation. Sequence research requires translating imaging objectives into executable protocols meeting physical and acquisition constraints, refined via physical simulation, signal reconstruction, and scientific evaluation. Sequence construction, physical verification, parameter search, and assessment involve many tools and manual decisions, limiting automation from objective to verifiable sequence. We develop SmartBloch-Agent, an integrated framework for automated MRI sequence design and optimization. Given objectives and scientific constraints in natural language, an AI agent interprets goals, plans tasks, orchestrates tools, and makes feedback-informed decisions, drawing on a construction module and optimizers for structural design and parameter search. Our GPU-accelerated SmartBloch engine supplies physical computation for both stages, so the framework configures, per sequence and objective, event validation, Full-Bloch magnetization evolution, signal acquisition, image reconstruction, and scientific evaluation, and closes the loop without external MRI simulators. Results return to the agent to guide sequence revision, parameter optimization, and candidate selection, and the design files carry simulation, reconstruction, and evaluation evidence, forming an output package for a real-scanner workflow. Experiments show the framework automatically designs and optimizes MRI sequences for varied objectives and constraints, refines candidates with physical feedback, and improves several parameter-estimation metrics and downstream quantitative reconstruction. SmartBloch-Agent unifies objectives, design, physical execution, and evaluation into a continuous workflow for end-to-end automation of MRI sequence research.
+
+磁共振成像 (MRI) 脉冲序列组织射频激励、梯度编码和信号采集，确定磁化演化和图像形成。序列研究需要将成像目标转化为满足物理和采集约束的可执行协议，并通过物理模拟、信号重建和科学评估进行完善。序列构建、物理验证、参数搜索和评估涉及许多工具和手动决策，限制了从客观序列到可验证序列的自动化。我们开发了 SmartBloch-Agent，这是一个用于自动化 MRI 序列设计和优化的集成框架。给定自然语言的目标和科学约束，人工智能代理可以解释目标、计划任务、编排工具并做出基于反馈的决策，利用构建模块和优化器进行结构设计和参数搜索。我们的 GPU 加速的 SmartBloch 引擎为两个阶段提供物理计算，因此该框架可以按序列和目标配置事件验证、Full-Bloch 磁化演化、信号采集、图像重建和科学评估，并在无需外部 MRI 模拟器的情况下关闭循环。结果返回给代理以指导序列修改、参数优化和候选选择，设计文件携带模拟、重建和评估证据，形成真实扫描仪工作流程的输出包。实验表明，该框架可以针对不同的目标和约束自动设计和优化 MRI 序列，通过物理反馈完善候选序列，并改进多个参数估计指标和下游定量重建。 SmartBloch-Agent 将目标、设计、物理执行和评估统一到连续的工作流程中，以实现 MRI 序列研究的端到端自动化。
+
+</details>
+
+---
+
+## 4. ROAM: Retrieval-Augmented Optimization for Feasible Multi-Day Itinerary Planning / ROAM：可行的多日行程规划的检索增强优化
+
+**Date**: 2026-11-06 | **arXiv**: [2611.09407v1](http://arxiv.org/abs/2611.09407v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.09407v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) can draft plausible travel itineraries, but the plans they produce are frequently infeasible: attractions are grouped into days without regard for geography, opening hours are ignored, and a single generation pass cannot reliably organize a multi-day trip. We present ROAM, a retrieval-augmented agentic framework for spontaneous multi-day itinerary planning that couples semantic preference retrieval with explicit spatiotemporal optimization. ROAM embeds the natural-language request, retrieves a compact candidate set from a curated point-of-interest (POI) database, partitions candidates into day groups through maximal-clique analysis and K-means, orders each day with a quality-biased simulated-annealing TSP solver, and repairs hard opening-hour violations with greedy exchange. A spatiotemporal retrieval layer injects weather forecasts, real road distances and POI operating hours into the prompt, after which the LLM renders a structured, map-ready itinerary; an interactive ReAct-style replanning agent then supports natural-language edits while re-checking feasibility. Across four Chinese cities and 510 POIs, ROAM produces 27.5 POIs per three-day plan versus 19.3 for a bare LLM and 17.0 for a retrieval-only baseline (+42% and +62%), while reducing route dispersion from 2,101 to 677 (3.1x). Ablations show that spatial optimization is the dominant driver of route efficiency and that hard time-window repair prevents roughly 30% of attractions from violating operating hours.
+
+大型语言模型（LLM）可以起草看似合理的旅行路线，但他们制定的计划往往是不可行的：景点被分组为天而不考虑地理位置，开放时间被忽略，单代通行证无法可靠地组织多日旅行。我们提出了 ROAM，一种用于自发多日行程规划的检索增强代理框架，它将语义偏好检索与显式时空优化结合起来。 ROAM 嵌入自然语言请求，从精心策划的兴趣点 (POI) 数据库中检索紧凑的候选集，通过最大集团分析和 K 均值将候选者划分为日组，使用质量偏向的模拟退火 TSP 求解器每天进行订购，并通过贪婪交换修复严重的开放时间违规行为。时空检索层将天气预报、真实道路距离和 POI 运营时间注入到提示中，之后法学硕士会呈现结构化的、可用于地图的行程；然后，交互式 ReAct 风格的重新规划代理支持自然语言编辑，同时重新检查可行性。 ROAM 在中国四个城市和 510 个 POI 中每三天计划生成 27.5 个 POI，而纯法学硕士为 19.3 个，仅检索基线为 17.0 个（+42% 和 +62%），同时将路线分散度从 2,101 个减少到 677 个（3.1 倍）。消融显示，空间优化是路线效率的主要驱动力，硬时间窗口修复可防止大约 30% 的景点违反营业时间。
+
+</details>
+
+---
+
+## 5. Travel Cost Calibration for Multi-Agent Target Assignment and Pathfinding / 多智能体目标分配和寻路的旅行成本校准
+
+**Date**: 2026-11-06 | **arXiv**: [2611.09396v1](http://arxiv.org/abs/2611.09396v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.09396v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Target assignment and pathfinding (TAPF) is an appealing extension of classical multi-agent pathfinding (MAPF): each agent has a set of targets, and the planner must both assign a target to each agent and plan collision-free paths for them. A trivial approach is to compute an assignment that minimizes the total single-agent shortest-path distance over agent--target pairs, and then solve the resulting MAPF instance. However, this approach falls short because the shortest-path distance remains a proxy that ignores interference among agents. Assigning targets based on the costs agents actually pay, which depend on how every other agent is assigned and routed, would yield a better final outcome. To this end, we propose an iterative TAPF method that improves target assignments by calibrating travel cost estimates from fast, suboptimal MAPF feedback. Experiments show that our method produces solutions close to optimal on small instances and outperforms existing planners in solution quality on larger ones.
+
+目标分配和寻路（TAPF）是经典多智能体寻路（MAPF）的一个有吸引力的扩展：每个智能体都有一组目标，规划器必须为每个智能体分配一个目标并为它们规划无碰撞路径。一种简单的方法是计算一个分配，以最小化代理-目标对上的总单代理最短路径距离，然后求解生成的 MAPF 实例。然而，这种方法存在不足，因为最短路径距离仍然是忽略代理之间干扰的代理。根据代理实际支付的成本来分配目标，这取决于其他代理的分配和路由方式，将产生更好的最终结果。为此，我们提出了一种迭代 TAPF 方法，该方法通过根据快速、次优的 MAPF 反馈校准旅行成本估计来改进目标分配。实验表明，我们的方法在小型实例上产生接近最优的解决方案，并且在大型实例上的解决方案质量优于现有规划器。
+
+</details>
+
+---
+
+## 6. Enabling Privacy-Preserving Natural Language Access to Industrial Smart Meter Data / 支持以保护隐私的自然语言访问工业智能电表数据
+
+**Date**: 2026-11-06 | **arXiv**: [2611.09372v1](http://arxiv.org/abs/2611.09372v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.09372v1)
+
+**Categories**: cs.AI, cs.CL, cs.DB, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Energy management officers and grid operators increasingly rely on smart meter data for anomaly detection, performance monitoring, and strategic decision-making. However, extracting actionable insights from large-scale, heterogeneous telemetry databases requires advanced SQL and data engineering expertise, creating a critical bottleneck for non-technical personnel. Furthermore, the strict data privacy regulations and security constraints inherent to critical energy infrastructure often prohibit the routing of sensitive consumer data through cloud-based Large Language Models (LLMs). To address these challenges, we present OpenMeter, a schema-agnostic Multi-Agent System (MAS) designed to translate natural language queries into executable code and human-readable insights. This architecture lowers the technical barrier for day-to-day utility operations by empowering non-expert personnel to interact with complex databases through intuitive natural language dialogue, transforming raw telemetry into a highly valuable tool for routine grid workflows and strategic decisions. Multi-scenario ablation studies over this environment demonstrate that full multi-agent orchestration shows its largest observed accuracy gains on resource-constrained local hardware (+6.1 pp EX-R over the strongest single-agent configuration); at frontier scale, individual components retain value but should be enabled selectively, indicating that the cost of full orchestration is justified specifically where privacy demands local execution.
+
+能源管理官员和电网运营商越来越依赖智能电表数据来进行异常检测、性能监控和战略决策。然而，从大规模异构遥测数据库中提取可操作的见解需要先进的 SQL 和数据工程专业知识，这为非技术人员造成了关键瓶颈。此外，关键能源基础设施固有的严格数据隐私法规和安全限制通常禁止通过基于云的大型语言模型 (LLM) 路由敏感的消费者数据。为了应对这些挑战，我们推出了 OpenMeter，这是一种与模式无关的多代理系统 (MAS)，旨在将自然语言查询转换为可执行代码和人类可读的见解。该架构使非专家人员能够通过直观的自然语言对话与复杂的数据库进行交互，从而将原始遥测数据转变为用于日常电网工作流程和战略决策的非常有价值的工具，从而降低了日常公用事业运营的技术障碍。在此环境下的多场景消融研究表明，完整的多代理编排在资源受限的本地硬件上显示出最大的观察到的准确度增益（比最强的单代理配置+6.1 pp EX-R）；在前沿规模上，各个组件保留价值，但应有选择地启用，这表明在隐私需要本地执行的情况下，完整编排的成本是合理的。
+
+</details>
+
+---
+
+## 7. SafeOrchestrate: Runtime Checked Intent-Driven Orchestration for Cyber-Physical Systems / SafeOrchestrate：网络物理系统的运行时检查意图驱动编排
+
+**Date**: 2026-11-06 | **arXiv**: [2611.09364v1](http://arxiv.org/abs/2611.09364v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.09364v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern cyber physical systems (CPS) integrate heterogeneous sensors, actuators, controllers, and services, composed at runtime rather than at design time. Orchestrating such systems through natural language (NL) is attractive, but unconstrained large language model (LLM) tool use is risky because actions must respect device capabilities, runtime state, and safety constraints. We present Safe Orchestrate, a reference architecture for runtime checked, intent driven CPS orchestration. Given an NL intent, it derives atomic goals, generates a runtime checkable specification for each, grounds the specifications to device affordances, and verifies every candidate action against runtime state and safety constraints before execution. In a Web of Things (WoT) instantiation, the architecture produces Linear Temporal Logic (LTL) style specifications from the NL intent, grounds them to Thing Description (TD) affordances exposed through the Model Context Protocol (MCP), and checks candidate actions against satisfiability modulo theories (SMT) backed guardrails. We evaluate this instantiation on simulated smart home, greenhouse, and industrial automation tasks against a direct LLM to MCP baseline. Safe Orchestrate maintains 100% required action accuracy on every task and 100% MCP Execution Similarity (MCP ES) on all but one, where MCP ES is 92%. By contrast, the baseline degrades on multi device, event triggered, and ordered tasks, with MCP ES falling to 13%. These results suggest that combining LLM based specification generation with role aware grounding and runtime constraint checking improves reliability for open CPS orchestration without enriched TD annotations or planning domain expertise.
+
+现代网络物理系统（CPS）集成了异构传感器、执行器、控制器和服务，这些在运行时而不是在设计时组成。通过自然语言 (NL) 编排此类系统很有吸引力，但不受约束的大型语言模型 (LLM) 工具的使用存在风险，因为操作必须尊重设备功能、运行时状态和安全约束。我们推出了 Safe Orchestrate，这是一种用于运行时检查、意图驱动的 CPS 编排的参考架构。给定 NL 意图，它会导出原子目标，为每个目标生成运行时可检查的规范，将规范基于设备可供性，并在执行前根据运行时状态和安全约束验证每个候选操作。在物联网 (WoT) 实例化中，该架构根据 NL 意图生成线性时态逻辑 (LTL) 样式规范，将其基于通过模型上下文协议 (MCP) 公开的事物描述 (TD) 可供性，并根据可满足性模理论 (SMT) 支持的护栏检查候选操作。我们根据 LLM 到 MCP 的直接基线评估模拟智能家居、温室和工业自动化任务的实例化。 Safe Orchestrate 在每项任务上都保持 100% 所需的操作准确性，并在除一项任务之外的所有任务上保持 100% MCP 执行相似性 (MCP ES)，其中 MCP ES 为 92%。相比之下，多设备、事件触发和有序任务的基线会下降，MCP ES 下降至 13%。这些结果表明，将基于 LLM 的规范生成与角色感知基础和运行时约束检查相结合，可以提高开放 CPS 编排的可靠性，而无需丰富 TD 注释或规划领域专业知识。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-06 (32 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-11-06
