@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-11](papers/2026-11-11.md) - 15 papers
 - [2026-11-06](papers/2026-11-06.md) - 14 papers
 - [2026-11-05](papers/2026-11-05.md) - 19 papers
 - [2026-11-04](papers/2026-11-04.md) - 19 papers
@@ -181,6 +182,260 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-11 (15 papers)</b></summary>
+
+# arXiv Video Papers - 2026-11-11
+
+**Paper Count**: 15
+
+---
+
+## 1. Few-Step Streaming Video Generation via Condition Shifting / 通过条件转换生成几步流式视频
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14033v1](http://arxiv.org/abs/2611.14033v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14033v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Few-step sampling reduces the cost of streaming video generation. Distribution Matching Distillation (DMD) supervises few-step generators with a separate fake-score network, which adds training memory and computation and must track the evolving generator. We extend APEX to streaming video by using condition shifting to estimate the velocity field of the generated distribution within the generator. The original text condition selects generation, while a shifted condition selects fake estimation using the same parameters. This removes the independent fake network while retaining S2-Avatar's frozen reference teacher, Self-Replay Forcing, and perceptual regularization. We evaluate APEX on 180-second videos using three backbone evaluations per block and a one-step spatial Refiner, with a 70-case human study and a 320-case StreamAV-Bench comparison. Compared with S2-Avatar, APEX achieves higher video instruction fulfillment on the Progressive track (3.856 versus 3.831) and higher visual aesthetics across both tracks (0.641898 versus 0.632606). Human raters favor APEX most strongly on instruction following, with +30.0% net preference, followed by consistency and video quality at +4.3% each. Motion quality favors S2-Avatar, audiovisual synchronization is predominantly tied, and usability is unchanged. Separate measurements under matched training settings show 4.4% lower peak allocated GPU memory per GPU and 9.2% shorter mean iteration time than DMD.
+
+分步采样降低了流媒体视频生成的成本。 分配匹配蒸馏（ DMD ）通过单独的假分数网络监督少步生成器，这增加了训练内存和计算，并且必须跟踪不断发展的生成器。 我们通过使用条件移位来估计生成器内生成的分布的速度场，从而将APEX扩展到流媒体视频。 原始文本条件选择生成，而移位条件使用相同的参数选择虚假估计。 这消除了独立的虚假网络，同时保留了S2-Avatar冻结的参考老师、自我重播强制和感知正则化。 我们使用每个块的三个骨干评估和一个一步空间精简器对180秒视频的APEX进行评估，其中包括70例人体研究和320例StreamAV-Bench比较。 与S2-Avatar相比， APEX在Progressive轨道上实现了更高的视频指令实现率（ 3.856对3.831 ） ，在两个轨道上都实现了更高的视觉美学（ 0.641898对0.632606 ）。 人类评分者最青睐APEX ，其净偏好为+30.0% ，其次是一致性和视频质量，各为+4.3%。 运动质量有利于S2-Avatar ，视听同步占主导地位，可用性不变。 匹配训练设置下的单独测量显示，每个GPU的峰值分配GPU内存比DMD低4.4% ，平均迭代时间缩短9.2%。
+
+</details>
+
+---
+
+## 2. EVAThink: Evidence Sufficiency-Guided Training for Adaptive Thinking in Video Understanding / EVAThink ：视频理解中适应性思维的证据充分性指导培训
+
+**Date**: 2026-11-10 | **arXiv**: [2611.13907v1](http://arxiv.org/abs/2611.13907v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.13907v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/ChangtiWu/EVAThink
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Under a fixed frame budget, video understanding with vision-language models (VLMs) depends on whether the sampled frames provide sufficient evidence for the question. Sufficient frame evidence supports direct answering, whereas less informative observations may benefit from reasoning that connects the available cues. We introduce EVAThink, which enhances video understanding through evidence sufficiency-guided training for adaptive thinking. First, Recoverable Evidence Gap Mining constructs evidence-dense and evidence-sparse video views that share the same question and answer under an identical frame budget. It retains pairs where sparse views yield lower direct-answer accuracy than dense views but benefit from explicit reasoning, providing supervision for response-mode selection. Second, Evidence-Guided Two-Stage Reinforcement Learning uses stage-specific rewards to guide training with evidence-based mode preferences and then refine response efficiency, while first-token advantage regularization mitigates mode collapse. Trained on only 6.7K curated samples, EVAThink consistently improves upon the base model across video understanding benchmarks under both 32- and 64-frame budgets, while outperforming strong baselines on average. The code, model, and datasets are available at \href{https://github.com/ChangtiWu/EVAThink}{EVAThink}.
+
+在固定的帧预算下，视觉语言模型（ VLM ）的视频理解取决于采样帧是否为该问题提供了足够的证据。 足够的框架证据支持直接回答，而信息量较少的观察可能受益于连接可用线索的推理。 我们引入了EVAThink ，它通过适应性思维的证据充分性指导培训来增强视频理解。 首先，可恢复证据差距挖掘构建证据密集和证据稀疏的视频视图，在相同的框架预算下共享相同的问题和答案。 它保留了稀疏视图比密集视图产生更低的直接应答准确性的对，但受益于显式推理，为响应模式选择提供监督。 其次，循证引导两阶段强化学习使用特定阶段的奖励来引导具有基于证据的模式偏好的训练，然后细化响应效率，而第一代币优势正则化减轻了模式崩溃。 EVAThink仅在6.7K精选样本上进行培训，在32帧和64帧预算的视频理解基准上不断改进基础模型，同时平均优于强劲的基线。 代码、模型和数据集可在\ href {https://github.com/ChangtiWu/EVAThink} {EVAThink}上找到。
+
+</details>
+
+---
+
+## 3. When to Start Denoising? Adaptive Denoising Entry for Generative Video Compression / 何时开始降噪？用于生成视频压缩的自适应去噪条目
+
+**Date**: 2026-11-10 | **arXiv**: [2611.13620v1](http://arxiv.org/abs/2611.13620v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.13620v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative video compression offers a promising solution for compressing and reconstructing videos under extremely low bitrate constraints, among which the diffusion-based solutions still achieve the best performance by providing the powerful generative latent prior. However, their effectiveness critically depends on when the compressed latent is introduced into the diffusion process, which directly governs the trade-off between reconstruction fidelity and perceptual realism. To address this limitation, we identify denoising start-timestep selection as a key factor governing this trade-off and formulate it as a geometric optimization problem. Based on this formulation, we propose a novel adaptive diffusion entry method for generative video compression (ADE-GVC), the first timestep-aware generative video compression framework, featuring a lightweight predictor that estimates an adaptive denoising start point from the compressed latent. A temporal adapter further extracts compression-aware conditions and injects them into a pretrained video diffusion model, enabling the reconstruction of videos with both high fidelity and realism. More importantly, we observe a strong quantitative relationship between the predicted timesteps and the distortion between the original and compressed latents, providing empirical support for our optimization formulation. Extensive experiments demonstrate that ADE-GVC achieves the state-of-the-art performance on perceptual metrics and substantially improves reconstruction realism over existing generative video compression methods. Notably, our ADE-GVC achieves an average bitrate savings of 40.99\% (on DISTS) and 95.24\% (on PSNR) compared to the latest open-source baseline GLC-Video.
+
+生成视频压缩为在极低比特率约束下压缩和重建视频提供了一个有希望的解决方案，其中基于扩散的解决方案仍然通过提供强大的生成潜在先验来实现最佳性能。 然而，它们的有效性关键取决于何时将压缩潜伏引入扩散过程，这直接决定了重建保真度和感知现实主义之间的权衡。 为了解决这一局限性，我们将去噪开始时间步长选择作为控制这种权衡的关键因素，并将其表述为几何优化问题。 基于该公式，我们提出了一种用于生成视频压缩的新型自适应扩散进入方法（ ADE-GVC ） ，这是第一个感知时间步长的生成视频压缩框架，具有轻量级预测器，可从压缩潜伏估计自适应去噪起点。 时间适配器进一步提取压缩感知条件并将其注入到预训练的视频扩散模型中，从而能够以高保真度和逼真的方式重建视频。 更重要的是，我们观察到预测时间步长与原始潜势和压缩潜势之间的失真之间存在很强的定量关系，为我们的优化公式提供了经验支持。 广泛的实验表明， ADE-GVC在感知指标上实现了最先进的性能，
+
+</details>
+
+---
+
+## 4. PhyRubric: Rubric-Grounded Diagnostic Evaluation of Physical Commonsense in Text-to-Video Generation / PhyRubric ：基于细则的文本到视频生成物理常识诊断评估
+
+**Date**: 2026-11-10 | **arXiv**: [2611.13576v1](http://arxiv.org/abs/2611.13576v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.13576v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As text-to-video (T2V) models are increasingly positioned as world simulators, it is essential to evaluate whether their videos conform to physical commonsense. However, existing benchmarks rely on annotators who rate each video with a single score based on intuition, yielding ratings that are subjective and do not tell which physical principle is violated. We introduce PhyRubric, a rubric-grounded diagnostic framework for evaluating physical commonsense in T2V generation. For each caption, PhyRubric constructs a caption-specific rubric before any video is seen, decomposing the caption into semantic and physical items, and derives scores from item-level verdicts grounded in timestamped evidence. We instantiate this framework as PhyRubric-Bench, which spans 34 categories across five physical domains, and scale it up to PhyRubric-Train with 3,788 videos, on which we fine-tune the open-source PhyRubric-Judge. Empirical results across ten T2V models show that physical commonsense remains far from solved, and that PhyRubric-Judge correlates more closely with human judgments than existing open-source judges while matching the frontier proprietary Gemini 4 Argon. Further analysis provides actionable insights for T2V models.
+
+随着文本到视频（ T2V ）模型越来越多地被定位为世界模拟器，评估其视频是否符合物理常识至关重要。 然而，现有的基准依赖于注释者，他们根据直觉对每个视频进行单一评分，得出的主观评分并不能说明违反了哪个物理原理。 我们推出了PhyRubric ，这是一种基于细则的诊断框架，用于评估T2V发电中的物理常识。 对于每个标题， PhyRubric在观看任何视频之前构建一个特定于标题的标题，将标题分解为语义和物理项目，并根据基于时间戳证据的项目级判断得出分数。 我们将此框架实例化为PhyRubric-Bench ，它跨越五个物理领域的34个类别，并通过3,788个视频将其扩展到PhyRubric-Train ，在此基础上我们对开源PhyRubric-Judge进行了微调。 十个T2V模型的实证结果表明，物理常识仍远未解决， PhyRubric-Judge与人类判断的关系比现有的开源法官更紧密，同时与前沿专有的Gemini 4 Argon相匹配。 进一步的分析为T2V模型提供了可操作的见解。
+
+</details>
+
+---
+
+## 5. Dark Matters: VAE-Aware HDR Encoding for SDR-to-HDR Video Reconstruction / Dark Matters ：用于SDR到HDR视频重建的VAE感知HDR编码
+
+**Date**: 2026-11-10 | **arXiv**: [2611.13504v1](http://arxiv.org/abs/2611.13504v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.13504v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+SDR-to-HDR reconstruction is an ill-posed problem in which clipped highlights, crushed shadows, and quantization artifacts must be recovered while preserving the original content. Latent diffusion models provide powerful generative priors for restoring missing detail, but their effectiveness is constrained by how HDR signals pass through the pretrained VAE. We find that common log-like encodings suppress low-luminance chromatic differences before generation, producing a dark-side collapse in the frozen-VAE latent. We introduce EquivFlow, a compact, invertible exposure-equivariant encoding that maps exposure changes to additive shifts while retaining a scale-independent chromatic component, without modifying the VAE. Encoding-level tests across pretrained image and video VAEs show that its exposure structure and deep-dark chroma transport persist across the tested hosts. Integrated into SDR-to-HDR video diffusion, EquivFlow delivers consistent chromatic-fidelity gains across the tested settings while retaining competitive reconstruction fidelity.
+
+SDR到HDR的重建是一个不恰当的问题，在保留原始内容的同时，必须恢复剪切的高光、压碎的阴影和量化伪影。 潜在扩散模型为恢复缺失的细节提供了强大的生成先验，但其有效性受到HDR信号通过预训练VAE方式的限制。 我们发现，常见的类对数编码在生成前抑制了低亮度色差，从而在冷冻VAE潜伏期中产生了黑暗面崩溃。 我们引入了EquivFlow ，这是一种紧凑的可逆曝光等变编码，在不修改VAE的情况下，将曝光变化映射到加性偏移，同时保留了与尺度无关的色彩分量。 对预训练图像和视频VAE进行的编码级测试表明，其曝光结构和深暗色度传输在测试主机上仍然存在。 EquivFlow集成到SDR到HDR的视频扩散中，在整个测试设置中提供一致的色彩保真度增益，同时保持有竞争力的重建保真度。
+
+</details>
+
+---
+
+## 6. ABRR: Transforming Temporal Sentence Grounding with Wasserstein-Adaptive Refinement and Precision Ranking / ABRR ：使用Wasserstein-Adaptive Refinement和Precision Ranking转换时间句子接地
+
+**Date**: 2026-11-09 | **arXiv**: [2611.13310v1](http://arxiv.org/abs/2611.13310v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.13310v1)
+
+**Categories**: cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Temporal Sentence Grounding (TSG) aims to localize temporal segments in untrimmed videos that correspond to natural language queries, a critical task for video understanding with applications in video retrieval, summarization, and human-computer interaction. Despite significant progress driven by transformer-based models, existing TSG methods suffer from two key limitations: quantization errors due to temporal downsampling, which misalign segment boundaries, and suboptimal ranking of predictions based on semantic matching rather than localization precision. To address these challenges, we propose the Adaptive Boundary Refinement and Ranking (ABRR) framework, a novel, model-agnostic post-processing approach that enhances the performance of any TSG model without retraining. ABRR integrates three innovative components: (1) Temporal Distribution Smoothing, which mitigates noise in predicted score distributions using Gaussian kernel convolution; (2) Boundary Refinement via Optimal Transport, which leverages the 2-Wasserstein distance and Sinkhorn iterations to align coarse segment boundaries with true temporal moments, grounded in Monge-Kantorovich optimal transport theory; and (3) Quality-Driven Re-Ranking, which reorders predictions using a composite score balancing localization precision and semantic relevance. By correcting quantization errors and prioritizing accurately localized segments, ABRR achieves substantial improvements over state-of-the-art TSG models. Extensive experiments on benchmark datasets, including Charades-STA, ActivityNet Captions, and QVHighlights, demonstrate consistent gains at stringent IoU thresholds (e.g., IoU=0.7), alongside enhanced ranking performance. The framework's computational efficiency and compatibility with existing models make it a versatile and impactful solution for real-world TSG applications.
+
+时间句子接地（ TSG ）旨在定位对应于自然语言查询的未修剪视频中的时间片段，这是视频检索、摘要和人机交互应用中视频理解的关键任务。 尽管在基于变压器的模型的推动下取得了重大进展，但现有的TSG方法存在两个关键局限性：由于时间下采样（未对齐段边界）导致的量化误差，以及基于语义匹配而非定位精度的次优预测排名。 为了应对这些挑战，我们提出了自适应边界细化和排名（ ABRR ）框架，这是一种新颖的、与模型无关的后处理方法，可以在不进行再培训的情况下增强任何TSG模型的性能。 ABRR集成了三个创新组件： （ 1 ）时间分布平滑，使用高斯核卷积减轻预测分数分布中的噪声； （ 2 ）通过最优传输进行边界细化，利用2-Wasserstein距离和Sinkhorn迭代，以Monge-Kantorovich最优传输理论为基础，将粗略的段边界与真实的时间矩对齐； （ 3 ）质量驱动的重新排序，使用复合分数平衡定位精度和语义相关性来重新排序预测。 ABRR通过纠正量化误差和确定精确定位的区段优先级，实现了与最先进的TSG模型相比的实质性改进。
+
+</details>
+
+---
+
+## 7. Adaptive Residual Quantization for Memory-Efficient Temporal Action Segmentation / 用于内存高效时间动作分段的自适应剩余量化
+
+**Date**: 2026-11-09 | **arXiv**: [2611.13262v1](http://arxiv.org/abs/2611.13262v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.13262v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Temporal action segmentation (TAS) is commonly trained on large banks of pre-extracted frame features, but storing and replaying those features becomes a practical bottleneck for long-form video, especially in incremental TAS where past-task data must remain available to mitigate catastrophic forgetting. Recent TAS replay and condensation methods reduce this burden, but they rely on dense frame-wise annotations and allocate storage through fixed segment-level structures, limiting their flexibility for long procedural videos whose frame complexity varies substantially over time. We introduce Adaptive Residual-Quantized Variational AutoEncoder (ARQ-VAE), a compact and label-free memory representation for TAS features that learns a discrete residual quantization of frame-level video features and then adaptively truncates the residual chain on a per-frame basis, retaining only the residual prefix that best reconstructs each frame feature. This yields a practical compact feature memory that does not depend on frame-wise labels and can therefore support multiple TAS settings with the same stored representation, while a lightweight fine-tuning stage further improves reconstruction quality for the truncated codes that are actually retained. Across standard TAS benchmarks, ARQ-VAE achieves a substantially improved storage-performance trade-off over prior replay and condensation baselines. On Breakfast, our final representation reduces training-set storage from 28 GB for the original I3D feature bank to 10 MB while retaining strong downstream segmentation performance; with ASFormer, it achieves 71.5 Edit and 51.2 F1@50 in the supervised setting. We further show that the same label-free memory remains effective for incremental and unsupervised TAS. We position ARQ-VAE as a practical memory representation for TAS and a promising direction for broader dataset condensation applications.
+
+时间动作分割（ TAS ）通常在大量预先提取的帧特征上进行训练，但存储和重播这些特征成为长视频的实际瓶颈，特别是在过去任务数据必须保持可用以减轻灾难性遗忘的增量TAS中。 最近的TAS重放和压缩方法减轻了这种负担，但它们依赖于密集的帧注释，并通过固定的段级结构分配存储，限制了它们对帧复杂度随时间变化的长过程视频的灵活性。 我们引入了自适应残差量化变分自动编码器（ ARQ-VAE ） ，这是一种针对TAS特征的紧凑且无标签的内存表示，它学习帧级视频特征的离散残差量化，然后在每帧的基础上自适应地截断残差链，仅保留最能重建每个帧特征的残差前缀。 这产生了一个实用的紧凑型特征存储器，不依赖于按帧标签，因此可以支持具有相同存储表示的多个TAS设置，而轻量级微调阶段进一步提高了实际保留的截断代码的重建质量。 在标准的TAS基准测试中， ARQ-VAE与之前的重播和冷凝基准相比，实现了显著改善的存储性能权衡。 在早餐时，我们的最终表示将原始的训练集存储空间从28 GB减少到
+
+</details>
+
+---
+
+## 8. Before Words, Beyond Speech: Evaluating Nonverbal Social Reasoning in Early Childhood / 在言语之前，超越言语：评估儿童早期的非语言社会推理
+
+**Date**: 2026-11-09 | **arXiv**: [2611.13213v1](http://arxiv.org/abs/2611.13213v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.13213v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+**Project**: https://laubravo.github.io/nest_website/.  <details><summary><b>Abstract / 摘要</b></summary>
+
+Children's earliest years are a period of intense social learning, during which meaning is built through gaze, gesture, and physical contact. Yet, this critical aspect of social interaction remains under-evaluated in multimodal video understanding, as existing benchmarks prioritize the conversation-driven interactions of adults. We address this gap with \bench ($\textbf{N}$aturalistic $\textbf{E}$arly-childhood $\textbf{S}$ocial in$\textbf{T}$eractions), the first child-centric benchmark for nonverbal social reasoning. \bench comprises \totalvids manually annotated clips ($\sim$12s) curated for diversity across naturalistic settings, cultural contexts, and developmental stages. Beyond a lack of data, targeted model improvement in this domain is hindered by coarse evaluation schemas that conflate basic perception with higher-order reasoning. To resolve this, \bench introduces a compositional schema that builds atomic interaction cues into progressive levels of social reasoning: contextual, behavioral, interpersonal, and open-ended descriptions. Extensive analysis of state-of-the-art Vision-Language Models (VLMs) reveals a stark performance collapse: despite strong contextual recognition, models exhibit substantial gaps in decoding precise behavioral and interpersonal cues. We trace these failures to specific biases, including poor consequence grounding and temporal sensitivity. Finally, we ground \bench in real-world applications by evaluating VLMs using domain adaptation strategies. Ultimately, \bench provides a rigorous testbed for advancing socially grounded artificial intelligence in early childhood. Project page: https://laubravo.github.io/nest_website/.
+
+儿童早期是强烈的社交学习时期，在此期间，通过凝视、手势和身体接触来建立意义。 然而，社交互动的这一关键方面在多模态视频理解中仍未得到充分评估，因为现有的基准优先考虑成年人的对话驱动互动。 我们使用\ bench （ $\ textbf {N} $ aturalistic $\ textbf {E} $ arly-childhood $\ textbf {S} $ ocial in $\ textbf {T} $ eractions ）来解决这一差距，这是第一个以儿童为中心的非语言社会推理基准。\ bench包括\ totalvids手动注释的剪辑（ $\ sim $ 12s ） ，针对自然环境、文化背景和发展阶段的多样性进行策划。 除了缺乏数据之外，该领域的靶向模型改进还受到将基本感知与高阶推理混为一谈的粗糙评估模式的阻碍。 为了解决这个问题，\ bench引入了一种组合模式，将原子交互线索构建到渐进的社会推理层次中：上下文、行为、人际关系和开放式描述。 对最先进的视觉语言模型（ VLM ）的广泛分析揭示了一个明显的性能崩溃：尽管上下文识别能力很强，但模型在解码精确的行为和人际关系线索方面表现出巨大的差距。 我们将这些失败归因于特定的偏见，包括不良的后果接地和时间敏感性。 最后，我们通过使用域适应来评估VLM ，从而在现实世界的应用中打下基础。
+
+</details>
+
+---
+
+## 9. Plant Orbiter: 3D Plant Reconstruction and Generation with Video Diffusion Orbit Cameras and 3D Gaussian Splatting / 植物轨道器：利用视频扩散轨道摄像机和3D高斯斑点重建和生成3D植物
+
+**Date**: 2026-11-09 | **arXiv**: [2611.12739v1](http://arxiv.org/abs/2611.12739v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.12739v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern digital phenotyping pipelines require the precise measurement of a range of 3D morphological plant traits. The accurate, high throughput acquisition of these traits helps breeders and researchers accelerate the development of new varieties, techniques and products. Recent advances in 3D technologies have enabled a rapid transition from 2D to 3D pipelines, but high throughput acquisition of digital 3D twins of plants remains a significant challenge due to complex morphology, thin structures and occlusions. In this paper we present Plant Orbiter, a new approach to generating 3D plants that leverages recent advances in video diffusion to produce high quality 3D Gaussian Splats of plants from a single image. We show that our method more accurately recreates plant morphology than other state-of-the-art methods, achieving the highest 3D F-score against all baselines, while being more practical for high throughput pipelines due to easier alignment and reduced cost of camera placement. Combined with a 2D diffusion model, we show that our method also achieves state-of-the-art results in the generation of 3D plant models from a text prompt.
+
+现代数字表型管线需要精确测量一系列三维形态学植物性状。 这些性状的准确、高通量采集有助于育种者和研究人员加速新品种、技术和产品的开发。 3D技术的最新进展已经实现了从2D到3D流水线的快速过渡，但由于形态复杂、结构薄和堵塞，植物数字3D孪生的高吞吐量采集仍然是一个重大挑战。 在本文中，我们介绍了Plant Orbiter ，这是一种生成3D植物的新方法，它利用视频扩散的最新进展，从单幅图像中生成高质量的植物3D高斯斑点。 我们表明，我们的方法比其他最先进的方法更准确地重建植物形态，相对于所有基线实现最高的3D F评分，同时由于更容易对齐和降低相机放置成本，对于高吞吐量管道更实用。 结合2D扩散模型，我们表明我们的方法在从文本提示生成3D植物模型方面也取得了最先进的结果。
+
+</details>
+
+---
+
+## 10. PhysOPSD: Code as Privilege for Physically Plausible Video Generation / PhysOPSD ：代码作为物理上合理的视频生成的特权
+
+**Date**: 2026-11-09 | **arXiv**: [2611.12411v1](http://arxiv.org/abs/2611.12411v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.12411v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While modern video generative models achieve remarkable visual fidelity, they remain noticeably brittle when generating physically plausible dynamics and complex interactions. Targeted post-training is crucial, yet supervised fine-tuning suffers from offline state mismatch, and reinforcement learning is hindered by sparse, ill-defined physical reward functions. On-Policy (Self-)Distillation (OPSD) reconciles on-policy rollouts with dense corrective feedback, shifting the core challenge to designing effective privileged context. However, conventional modalities fall short: text prompts are inherently declarative, whereas real reference videos heavily entangle physical laws with visual appearance without parametric control. To this end, we propose PhysOPSD, introducing executable code as privileged physical context for video generation. Unlike static visual observations, executable code instantiates an editable physical world with intrinsic abstraction and controllability. Powered by PhysOPSD-Engine, we translate real-world physical scenarios into verifiable simulation programs. PhysOPSD then incorporates (i) dual-level physical privilege to bridge the information gap via an intermediate bottleneck, alongside (ii) controlled physical variations under shared rollout noise to expose causal dynamic shifts. Extensive experiments demonstrate that PhysOPSD substantially improves physical plausibility across diverse backbones, outperforming SFT and RL baselines with only $3$K samples, while preserving general video generation quality.
+
+虽然现代视频生成模型实现了显着的视觉保真度，但在生成物理上合理的动态和复杂交互时，它们仍然非常脆弱。 有针对性的后训练至关重要，但有监督的微调存在离线状态不匹配的问题，强化学习受到稀疏、定义不清的物理奖励函数的阻碍。 按策略（自我）蒸馏（ OPSD ）将按策略推出与密集的纠正反馈相协调，将核心挑战转移到设计有效的特权上下文上。 然而，传统模式存在不足：文本提示本质上是陈述性的，而真实的参考视频则在没有参数控制的情况下将物理定律与视觉外观严重纠缠在一起。 为此，我们提出了PhysOPSD ，引入可执行代码作为视频生成的特权物理上下文。 与静态视觉观察不同，可执行代码实例化了一个具有内在抽象和可控性的可编辑物理世界。 在PhysOPSD-Engine的支持下，我们将真实世界的物理场景转化为可验证的模拟程序。 然后， PhysOPSD结合了（ i ）双层物理特权，通过中间瓶颈弥合信息差距，以及（ ii ）在共享部署噪声下的受控物理变化，以暴露因果动态变化。 广泛的实验表明， PhysOPSD大大提高了不同骨干的物理合理性，仅以$ 3 $ K优于SFT和RL基线
+
+</details>
+
+---
+
+## 11. Compass 1: Towards Open-World and Persistent Embodied Navigation from Monocular RGB Videos / 指南针1 ：从单目RGB视频走向开放世界和持久的体验式导航
+
+**Date**: 2026-11-09 | **arXiv**: [2611.12087v1](http://arxiv.org/abs/2611.12087v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.12087v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Embodied navigation requires agents to achieve persistent spatial awareness and long-horizon execution stability in open-world environments. However, existing navigation architectures struggle to sustain both capabilities, remaining effective only over a handful of recent frames. We present Compass 1, the first embodied navigation foundation model to unify language understanding and video generation while enabling memory backtracking through nearly 2mins of visual history. Without altering the underlying architecture, we introduce History Representation, which integrates sparse visual keyframes with an explicit History Representation Map to preserve long-term spatiotemporal context. To effectively leverage this history, we further introduce History Utilization, a structured VQA supervision protocol comprising three categories: task-stage grounding, exploration consistency, and spatiotemporal target retrieval, enabling map-grounded reasoning and stable persistent long-horizon navigation. To fuel this system, we establish a complete annotation pipeline for monocular RGB videos and open-source a massive dataset featuring over 500 hours of high-quality real-world interactions and over 2,000 hours of annotated web videos. Trained mainly on the distribution of 1m height camera, Compass 1 generalizes seamlessly across diverse embodiments and scenarios, ranging from indoor environments to pedestrian-dense streets, spanning wheeled robot at 0.35m, quadruped dog at 0.5m, humanoid at 0.85m, and aerial drone at 1.5m. Compass 1achieves a dominant overall success rate of 79.4% across open-world evaluations, compared to 17.8% for the strongest baseline. It demonstrates exceptional zero-shot execution exceeding 90% on foundational tasks, a 250% boost in exploration, and an unparalleled leap from 0% to 58% in challenging persistent history backtracking.
+
+具体化导航要求智能体在开放世界环境中实现持久的空间感知和长视野执行稳定性。 然而，现有的导航架构难以维持这两种功能，只能在最近的几个帧中保持有效。 我们推出了Compass 1 ，这是第一个统一语言理解和视频生成的具体化导航基础模型，同时通过近2分钟的视觉历史实现内存回溯。 在不改变底层架构的情况下，我们引入了历史表示，它将稀疏的视觉关键帧与显式的历史表示映射集成在一起，以保留长期的时空上下文。 为了有效利用这一历史，我们进一步引入了历史利用，这是一种结构化的VQA监督协议，包括三个类别：任务阶段接地、探索一致性和时空目标检索，实现了地图接地推理和稳定的持久长距离导航。 为了推动这个系统，我们为单目RGB视频建立了一个完整的注释管道，并开源了一个庞大的数据集，其中包含超过500小时的高质量真实世界互动和超过2,000小时的注释网络视频。 指南针1主要接受1米高摄像头分布的培训，在不同的实施例和场景中无缝地概括，从室内环境到行人密集的街道，跨越0.35米的轮式机器人， 0.5米的四足狗，
+
+</details>
+
+---
+
+## 12. MPEG-Diffusion: Mixed-Resolution Video Generation / MPEG扩散：混合分辨率视频生成
+
+**Date**: 2026-11-09 | **arXiv**: [2611.12069v1](http://arxiv.org/abs/2611.12069v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.12069v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video diffusion transformers (DiTs) generate realistic videos, but their heavy computational cost limits broader real-world applications. Mixed-resolution generation reduces this cost by generating the visually important region at high resolution (HR) and the rest at low resolution (LR), yet existing methods suffer a severe quality drop on videos and require knowing the HR region in advance. We show that these failures are not inherent to mixed resolution, and propose $\textbf{MPEG-Diffusion}$ to address their three root causes: (1) dual-resolution attention to mitigate the curse of mixed resolution, where each query reads the K/V of its own resolution, (2) a mixed-resolution decoder to blend the HR and LR latents before decoding and resolve distortion, and (3) a self-selected HR region using the DiT's knowledge to find the visually important region without requiring it in advance. Processing only $30\%$ of full-resolution tokens, MPEG-Diffusion speeds up denoising by $4.8\times$ on Wan2.1 14B ($3.8\times$ on 1.3B), outperforming prior methods on nearly every metric. In the user study, we demonstrate the high quality of MPEG-Diffusion, with raters preferring it over prior mixed-resolution methods in over $90\%$ of pairs and rating it close to full resolution.
+
+视频扩散变压器（ DiT ）生成逼真的视频，但其沉重的计算成本限制了更广泛的现实应用。 混合分辨率生成通过以高分辨率（ HR ）生成视觉上重要的区域和以低分辨率（ LR ）生成其余部分来降低成本，但现有方法的视频质量严重下降，需要提前了解HR区域。 我们证明这些故障并不是混合分辨率所固有的，并提出$\ textbf {MPEG-Diffusion} $来解决它们的三个根本原因： （ 1 ）双重分辨率关注，以减轻混合分辨率的诅咒，其中每个查询读取其自身分辨率的K/V ， （ 2 ）混合分辨率解码器，以在解码和解决失真之前混合HR和LR潜伏期，以及（ 3 ）使用DiT的知识自行选择HR区域，以找到视觉上重要的区域，而无需提前要求。 MPEG-Diffusion仅处理$ 30\ % $的全分辨率令牌，在Wan2.1 14B上将去噪速度加快$ 4.8\倍$ （在1.3B上加快$ 3.8\倍$ ） ，几乎在每个指标上都优于以前的方法。 在用户研究中，我们展示了MPEG-Diffusion的高质量，评分者更喜欢它，而不是先前的混合分辨率方法，配对超过$ 90\ % $ ，并将其评为接近全分辨率。
+
+</details>
+
+---
+
+## 13. Watching Itself Watch: Self-Auditing Visual Reliance for Video Reasoning / 观看自己观看：视频推理的自我审核视觉依赖
+
+**Date**: 2026-11-09 | **arXiv**: [2611.11949v1](http://arxiv.org/abs/2611.11949v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.11949v1)
+
+**Categories**: cs.CV, cs.LG
+
+**Project**: https://vision.cs.utexas.edu/projects/VIOS/  <details><summary><b>Abstract / 摘要</b></summary>
+
+Video reasoning hinges on a small number of visually decisive tokens embedded in otherwise largely language-driven chains of thought. Yet prevailing post-training methods such as GRPO overlook this structure, assigning coarse trajectory-level rewards while requiring multiple rollouts and often costly external judges. We introduce Visually-Aware On-Policy Self-Distillation (VIOS), a post-training framework that identifies where a model under-utilizes visual evidence and concentrates learning at those positions. Our key insight is that a model can audit its own visual reliance: the divergence between its next-token distributions with and without the video reveals how strongly each prediction depends on the visual input. Measuring this reliance for both a student and an answer-privileged teacher exposes a per-token reliance gap, identifying positions where the teacher exploits visual evidence that the student overlooks. VIOS translates this signal into dense, targeted supervision through three complementary components: an exponential moving average (EMA) teacher that co-evolves with the student, a contrastive objective that encourages predictions to depend on the video, and a reliance-gap gate that focuses learning on visually under-utilized tokens. Crucially, VIOS requires only a single on-policy rollout from a single model, without external rewards, judges, or larger teachers. Across 12 benchmarks spanning general, temporal, spatial, knowledge-intensive, and long-video understanding, VIOS consistently improves three model backbones and outperforms contemporary video-reasoning systems, while training in over 9x fewer steps, 60x fewer FLOPs, and 111x fewer generated tokens. Project page: https://vision.cs.utexas.edu/projects/VIOS/
+
+视频推理取决于少量嵌入在语言驱动的思维链中的视觉决定性标记。 然而， GRPO等流行的培训后方法忽略了这种结构，分配粗略的轨迹级奖励，同时需要多次推出，并且通常需要昂贵的外部评委。 我们引入了视觉感知策略自我蒸馏（ VIOS ） ，这是一个训练后框架，用于识别模型在哪些方面未充分利用视觉证据，并将学习集中在这些位置。 我们的关键见解是，模型可以审核其自身的视觉依赖性：有视频和无视频的下一代币分布之间的差异揭示了每个预测在多大程度上取决于视觉输入。 衡量学生和回答特权教师的这种依赖性暴露了每个代币的依赖性差距，确定了教师利用学生忽视的视觉证据的位置。 VIOS通过三个互补的组成部分将这一信号转化为密集的、有针对性的监督：与学生共同进化的指数移动平均线（ EMA ）教师，鼓励预测依赖于视频的对比目标，以及将学习重点放在视觉未充分利用的代币上的依赖差距门。 至关重要的是， VIOS只需要从单一模型中推出单一策略，而无需外部奖励、评委或较大的教师。 跨越12个基准，涵盖一般、时间、空间、知识密集型和长视频
+
+</details>
+
+---
+
+## 14. Beyond Head Importance: Collective Computation in Video Transformers / 超越头部的重要性：视频变压器中的集体计算
+
+**Date**: 2026-11-09 | **arXiv**: [2611.11875v1](http://arxiv.org/abs/2611.11875v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.11875v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Attention heads in video Transformers vary greatly in functional importance. Understanding their contributions requires examining not only which heads are important, but also how they participate in collective computation within the network. We study this collective computation from two perspectives: the downstream use of head outputs and the composition of interactions across layers. Ablation analyses of four video Transformers show that high-importance heads identified on a single task also support other video understanding tasks and help preserve the representational structure that distinguishes different videos. Representational responses to head ablation correlate weakly with head importance after the attention module, but more strongly after the MLP in the same block. Adapting this downstream processing through MLP-only fine-tuning further improves the use of lower-importance head outputs. Meanwhile, through composition across layers, sets of heads with shorter spatiotemporal attention distances support stronger perturbation responses at distant tokens than sets with longer distances. Their joint ablation causes even greater performance loss than ablating equally sized sets of high-importance heads, revealing collective contributions not fully captured by individual importance rankings. These findings highlight collective computation as a key perspective for understanding attention head function: functional contributions depend on both how head outputs are used downstream and how local interactions compose across layers.
+
+视频变压器中的注意头在功能重要性方面差异很大。 了解他们的贡献不仅需要检查哪些负责人是重要的，还需要检查他们如何参与网络内的集体计算。 我们从两个角度研究这种集体计算：头部输出的下游使用和跨层交互的组成。 对四个视频变压器的消融分析表明，在单个任务上识别的高重要性头部也支持其他视频理解任务，并有助于保留区分不同视频的代表性结构。 在注意力模块之后，头部消融的表征性反应与头部重要性相关性较弱，但在同一块中的MLP之后相关性更强。 通过仅MLP微调来适应这种下游处理，进一步改善了低重要性磁头输出的使用。 同时，通过跨层组合，具有较短时空注意距离的头部集合比具有较长距离的头部集合在远距离标记处支持更强的扰动响应。 他们的关节消融比消融同样大小的高重要性头部造成更大的性能损失，揭示了个人重要性排名没有完全捕捉到的集体贡献。 这些研究结果强调集体计算是理解注意力头部功能的关键视角：功能贡献取决于头部输出的使用方式
+
+</details>
+
+---
+
+## 15. ForeAct: Geometry-Guided Action Learning from World Representations / ForeAct ：从世界表征中学习几何引导的行动
+
+**Date**: 2026-11-08 | **arXiv**: [2611.11500v1](http://arxiv.org/abs/2611.11500v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.11500v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robotic manipulation requires representations that capture both scene geometry and its evolution during interaction. Existing approaches have largely treated these two aspects separately. World action models capture such dynamics by coupling action prediction with future video generation, but their reliance on iterative diffusion or rectified-flow inference leads to high computational cost, while their representations lack explicit spatial structure. Explicitly modeling scene geometry typically requires auxiliary modules that increase both parameter count and computational cost. Conversely, geometry-centric policies primarily recover observed spatial structure and often lack explicit supervision for anticipating future geometric changes during interaction. To address these limitations, we introduce ForeAct, which repurposes a pretrained video world model as a single-pass representation backbone for low-latency control. ForeAct directly processes the clean latent of the current observation in one forward pass, eliminating future-frame synthesis and iterative denoising while retaining the backbone's pretrained spatiotemporal priors. Rather than introducing a separate geometry backbone, ForeAct uses learnable tokens supervised by next-frame relative depth to shape the shared video representation through bidirectional self-attention. This compact interface turns the spatial knowledge already encoded in the backbone into a future-aware representation for action generation, with little parameter overhead. The lightweight geometry readout is used only during training and removed at deployment, enabling low-latency, geometry-aware control without depth input or an external geometry backbone. Without additional large-scale pretraining, ForeAct achieves 96.6% average success on LIBERO, 63.5% on SimplerEnv-Bridge, and a 74.4% success rate across 90 real-world rollouts.
+
+机器人操作需要捕捉场景几何形状及其在交互过程中的演变的表示。 现有的方法在很大程度上将这两个方面分开处理。 世界动作模型通过将动作预测与未来视频生成耦合来捕捉这种动态，但它们对迭代扩散或整流推理的依赖导致计算成本高，而它们的表示缺乏明确的空间结构。 显式建模场景几何通常需要辅助模块，从而增加参数计数和计算成本。 相反，以几何为中心的政策主要恢复观察到的空间结构，并且通常缺乏对交互过程中预测未来几何变化的明确监督。 为了解决这些局限性，我们引入了ForeAct ，它将预训练的视频世界模型重新用作低延迟控制的单通道表示主干。 ForeAct一次性直接处理当前观测的干净潜伏期，消除了未来帧合成和迭代去噪，同时保留了骨干的预训练时空先验。 ForeAct没有引入单独的几何主干，而是使用由下一帧相对深度监督的可学习令牌，通过双向自我注意来塑造共享视频表示。 这个紧凑的界面将已经在骨干网中编码的空间知识转化为行动生成的未来感知表示，
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-06 (14 papers)</b></summary>
 
 # arXiv Video Papers - 2026-11-06
