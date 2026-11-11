@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-11](papers/2026-11-11.md) - 22 papers
 - [2026-11-06](papers/2026-11-06.md) - 13 papers
 - [2026-11-04](papers/2026-11-04.md) - 21 papers
 - [2026-11-03](papers/2026-11-03.md) - 12 papers
@@ -180,6 +181,372 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-11 (22 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-11-11
+
+**Paper Count**: 22
+
+---
+
+## 1. LaST0.5: A Generalist World Action Model with Interaction-Centric Latent Reasoning / LaST0.5 ：以交互为中心的潜在推理的通才世界行动模型
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14048v1](http://arxiv.org/abs/2611.14048v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14048v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) have recently emerged as a promising paradigm for robotic manipulation, endowing policies with strong capabilities for modeling temporal and physical dynamics. Existing WAMs, encompassing both video-first action prediction and joint video-action modeling, directly transfer global physical representations from world models to action generation. However, global scene representations may underemphasize local robot-object interactions, creating a mismatch between representations optimized for world evolution and those required for manipulation. To bridge this gap, we propose LaST0.5, a novel WAM that introduces an interaction-centric physical representation between world modeling and action generation. Specifically, LaST0.5 learns a compact interaction-centric latent space under the supervision of visual interaction cues between the robot and the environment. This reasoning space is instantiated as a latent expert that bridges the world expert and the action expert within a Mixture-of-Transformers architecture. Furthermore, LaST0.5 performs adaptive world-to-action transfer by jointly predicting future representations and progress values, using progress consistency to adjust action execution and trigger future resampling. Finally, we pretrain LaST0.5 on a large-scale robotic data corpus comprising over 14k hours of data, establishing interaction-centric physical reasoning as a scalable and effective paradigm. LaST0.5 achieves 99.5% on LIBERO, surpasses the previous state of the art on ten evaluated RLBench tasks, and demonstrates robust long-horizon execution and precise dexterous manipulation in real-world experiments.
+
+世界行动模型（ WAM ）最近已经成为机器人操纵的一个有前途的范例，赋予政策以强大的时间和物理动力学建模能力。 现有的WAM ，包括视频优先动作预测和联合视频动作建模，直接将全局物理表示从世界模型转移到动作生成。 然而，全局场景表示可能未充分强调局部机器人-对象交互，从而在针对世界演化优化的表示和操纵所需的表示之间产生不匹配。 为了弥合这一差距，我们提出了LaST0.5 ，这是一种新颖的WAM ，在世界建模和动作生成之间引入了以交互为中心的物理表示。 具体来说， LaST0.5在机器人和环境之间的视觉交互线索的监督下，学习一个紧凑的以交互为中心的潜伏空间。 这个推理空间被实例化为潜在的专家，在Mixture-of-Transformers架构中连接世界专家和行动专家。 此外， LaST0.5通过联合预测未来的表示和进度值来执行自适应的世界到行动转移，使用进度一致性来调整动作执行并触发未来的重新采样。 最后，我们在包含超过14k小时数据的大规模机器人数据语料库上预训练LaST0.5 ，将以交互为中心的物理推理建立为一个可扩展且有效的范例。 LaST0.5在LIBERO上达到99.5% ，超过
+
+</details>
+
+---
+
+## 2. Few-Shot Residual Adaptation of Pretrained Latent World Models / 预训练潜在世界模型的少量残差适应
+
+**Date**: 2026-11-10 | **arXiv**: [2611.13592v1](http://arxiv.org/abs/2611.13592v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.13592v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pretrained latent world models can support visual planning and control, but their predictions may fail when physical dynamics change at deployment. We study whether such models can adapt from only a few interactions without modifying their pretrained weights or identifying the changed physical parameters. We introduce a few-shot residual adaptation approach that learns self-supervised corrections from latent prediction errors. The corrections are applied both inside the latent predictor and directly to its predicted latent state, while the pretrained world model remains frozen. We evaluate the approach in simulation and on a real robot under center-of-mass and friction shifts. These changes reduce the success of the frozen model to near zero. Using three interaction episodes for adaptation, our dual-site approach recovers 90\% success under the center-of-mass shift and 100\% under the modified friction on the real robot. Ablations show that correcting both locations outperforms single-site adaptation. Our diagnostics further suggest that much of the learned correction reduces a general prediction mismatch, while successful control also depends on shift-specific information captured during adaptation.
+
+预训练的潜在世界模型可以支持视觉规划和控制，但当部署时物理动态发生变化时，它们的预测可能会失败。 我们研究这些模型是否能够在不修改其预训练权重或识别变化的物理参数的情况下仅从少数相互作用中适应。 我们引入了一种少量残差自适应方法，该方法从潜在的预测误差中学习自监督校正。 校正既应用于潜在预测器内部，又直接应用于其预测的潜伏状态，而预训练的世界模型仍处于冻结状态。 我们在模拟和真实机器人上评估质量中心和摩擦位移下的方法。 这些变化将冻结模型的成功率降低到接近零。 使用三个交互情节进行适应，我们的双站点方法在质量中心偏移下恢复90 ％的成功，在真实机器人的修改摩擦下恢复100 ％的成功。 消融表明，校正两个位置优于单个位置的适应性。 我们的诊断进一步表明，大部分学习校正减少了一般预测不匹配，而成功的控制也取决于适应期间捕获的班次特定信息。
+
+</details>
+
+---
+
+## 3. GEMOR-GS: Global Extrinsic-calibration-refined Mapping and Online Relocalization for 3D Gaussian-Splatting SLAM / GEMOR-GS ： 3D高斯光斑SLAM的全球外部校准改进映射和在线重新定位
+
+**Date**: 2026-11-10 | **arXiv**: [2611.13528v1](http://arxiv.org/abs/2611.13528v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.13528v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Photorealistic and metrically consistent world representations are a primary requirement for LiDAR--inertial--visual SLAM systems that serve robots over continuous operation. 3D Gaussian splatting makes such representations attainable by supplying an explicit, renderable, and queryable scene model. We present GEMOR-GS (Global Extrinsic-calibration-refined Mapping and Online Relocalization for 3D Gaussian-Splatting SLAM) to make the Gaussian map geometrically accurate, globally refined, and re-enterable, providing a better appearance for robot perception and decision-making. To improve the 3DGS map, the LiDAR--camera extrinsic is first estimated offline by direct-method alignment over dedicated calibration segments and reused by all following online and offline processes. Under the calibrated geometry, keyframe poses and Gaussian parameters are refined alternately under a gated differentiable-rendering and LiDAR--projection objective. The final global reconstruction is then rebuilt from the refined keyframe schema with all online constraints lifted. For the robot SLAM lifecycle, the method recovers the pose from the 3DGS map after tracking loss through an XFeat bypass map, RANSAC-PnP coarse localization, and Gaussian RGB-D warp refinement. Experiments on one self-collected and five public sequences quantify each element: the offline reconstruction wins all paired keyframes against the online map by 14.3--19.9 dB, improves PSNR by approximately 9 dB over Gaussian-LIC2, and achieves 86--100% held-out relocalization success tied to extrinsic quality. The results show that GEMOR-GS improves the geometric accuracy, appearance fidelity, and re-enterability of the 3DGS map, serving as a dependable robot world model for SLAM and downstream tasks.
+
+逼真和度量一致的世界表示是激光雷达（惯性）视觉SLAM系统的主要要求，该系统为机器人提供连续操作服务。 3D高斯拼接通过提供显式、可渲染和可查询的场景模型来实现此类表示。 我们提出了GEMOR-GS （ Global Extrrinsic-calibration-refined Mapping and Online Relocalization for 3D Gaussian-Splatting SLAM ） ，使高斯地图具有几何准确性、全局优化和可重新输入性，为机器人感知和决策提供更好的外观。 为了改进3DGS地图，首先通过专用校准段的直接方法对齐离线估计LiDAR相机外部，然后由所有在线和离线流程重复使用。 在校准的几何形状下，关键帧姿态和高斯参数在门控可微分渲染和激光雷达投影物镜下交替细化。 然后，在取消所有在线约束的情况下，从改进的关键帧架构重建最终的全局重建。 对于机器人SLAM生命周期，该方法通过XFeat旁路映射、RANSAC-PnP粗定位和高斯RGB-D经纱细化，在跟踪损失后从3DGS映射中恢复姿态。 在一个自采集和五个公共序列上的实验量化了每个元素：离线重建使所有配对的关键帧相对于在线地图获胜14.3--19.9 dB ，使PSNR比Gaussian-LIC2提高约9 dB ，并且
+
+</details>
+
+---
+
+## 4. ProTEUS: A mutation-resolved world model for closed-loop protein evolution / ProTEUS ：闭环蛋白进化的突变解析世界模型
+
+**Date**: 2026-11-09 | **arXiv**: [2611.13348v1](http://arxiv.org/abs/2611.13348v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.13348v1)
+
+**Categories**: q-bio.BM, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Protein engineering requires navigating rugged fitness landscapes, where small sequence changes can produce large functional differences, but experimental screening can only sample a small fraction of sequence space. Thus, a central challenge is to efficiently traverse the large combinatorial space of mutations in silico. We introduce ProTEUS, a mutation-resolved world model for closed-loop protein evolution. Pretrained on deep mutational scanning assays, ProTEUS learns a joint representation of sequence, evolutionary, and structural information using MutationFormer, a mutation-biased attention architecture. Variants are represented as states in this joint latent space, and mutations define actions whose functional consequences are predicted. To support exploration of many mutants, we developed a fast, physics-constrained all-atom predictor that utilizes explicit geometric constraint enforcement to achieve >10 fold increase in speed than AlphaFold3 with guaranteed physical validity. Lastly, ProTEUS refines its prediction and understanding of protein activity through closed loop experimental feedback to guide evolution toward a desired phenotype. ProTEUS surpasses established models in both zero-shot and supervised fine-tuning mutation prediction tasks. We experimentally demonstrate its utility in two closed-loop multi-objective engineering campaigns on aldehyde dehydrogenase and levansucrase, yielding variants with >10 fold higher activity than wild type. ProTEUS provides a world-model framework that connects virtual evaluation of mutational outcomes with experimental learning for efficient protein evolution.
+
+蛋白质工程需要在崎岖的健身景观中导航，其中小的序列变化会产生很大的功能差异，但实验筛选只能对一小部分序列空间进行采样。 因此，一个核心挑战是有效地穿越电脑中突变的大组合空间。 我们介绍了ProTEUS ，这是一种用于闭环蛋白质进化的突变解析世界模型。 经过深度突变扫描测定的预训练， ProTEUS使用MutationFormer （一种基于突变的注意力架构）学习序列、进化和结构信息的联合表示。 变体在这个关节潜伏空间中被表示为状态，突变定义了其功能后果被预测的动作。 为了支持对许多突变体的探索，我们开发了一种快速的、受物理约束的全原子预测器，该预测器利用显式几何约束强制实现比AlphaFold3提高> 10倍的速度，并具有有保证的物理有效性。 最后， ProTEUS通过闭环实验反馈来完善其对蛋白质活性的预测和理解，以指导向所需表型的进化。 ProTEUS在零点和监督微调突变预测任务中都超越了已建立的模型。 我们通过实验证明了其在醛脱氢酶和左旋蔗糖酶的两个闭环多目标工程活动中的实用性，产生了活性比野生型高> 10倍的变体。ProTEUS提供了
+
+</details>
+
+---
+
+## 5. Incorporating World Models in Decision Making for Next Best View Selection in Active Sensing / 将世界模型整合到决策中，以获得主动感知中的下一个最佳视图选择
+
+**Date**: 2026-11-09 | **arXiv**: [2611.13229v1](http://arxiv.org/abs/2611.13229v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.13229v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Efficient robotic 3D reconstruction requires selecting views that contribute new surface measurements with few physical captures. Pretrained world models can guide this choice, but a predicted surface may not produce valid depth measurements under the operating conditions of the deployed sensor. We present a deployment adaptation methodology for next-best-view selection that learns a sensor-return adapter from limited local calibration data while keeping the pretrained predictor fixed. The adapter estimates measurement dropout over each predicted surface, allowing the selection method to favor views likely to fill gaps in the measured reconstruction. In a real-robot experiment with a structured-light sensor, the adapted method achieves higher measured surface coverage with 60% fewer captures than nominal selection. The adapted method recovers a surface region that the nominal method repeatedly targets but fails to measure. These results suggest that robots can reuse pretrained predictive models while adapting their decisions to local operating conditions in data-scarce environments.
+
+高效的机器人3D重建需要选择视图，这些视图只需很少的物理捕获即可提供新的表面测量。 预训练的世界模型可以指导这种选择，但在部署的传感器的工作条件下，预测表面可能无法产生有效的深度测量。 我们提出了一种用于下一个最佳视图选择的部署自适应方法，该方法从有限的本地校准数据中学习传感器返回适配器，同时保持预训练预测器的固定。 适配器估计每个预测表面上的测量落差，允许选择方法偏好可能填补测量重建中空白的视图。 在使用结构光传感器的实际机器人实验中，改进后的方法实现了更高的测量表面覆盖率，捕获量比标称选择少60%。 适应方法恢复标称方法反复瞄准但无法测量的表面区域。 这些结果表明，机器人可以重用预先训练的预测模型，同时使其决策适应数据稀缺环境中的本地操作条件。
+
+</details>
+
+---
+
+## 6. Ground Reaction Force-Aware Model Predictive Control for Underactuated Upright Physical Assistance / 用于欠驱动直立物理辅助的地面反作用力感知模型预测控制
+
+**Date**: 2026-11-09 | **arXiv**: [2611.13204v1](http://arxiv.org/abs/2611.13204v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.13204v1)
+
+**Categories**: cs.RO, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Many rehabilitation robots execute prescribed motions using reactive tracking controllers that do not explicitly incorporate the user's instantaneous human-ground interaction. This paper presents Ground Reaction Force-Aware Model Predictive Control (GRF-MPC), a framework for upright physical assistance. By integrating live GRF and center of pressure (CoP) measurements directly into a human centroidal dynamics model, GRF-MPC formulates a real-time quadratic program (QP) that optimizes assistive forces and moments over a receding horizon. We deployed GRF-MPC on the Robotic Upright Stand Trainer (RobUST) in an underactuated 4-cable configuration and evaluated it against a fully actuated 8-cable Cartesian impedance baseline in nearly 300 trials across six healthy participants. Across tasks spanning impulsive perturbations, lunge trajectories, and voluntary limits of stability, GRF-MPC reduced peak planar center-of-mass (CoM) error by 19.6% during perturbations, lowered trajectory tracking error by 24.1%, required 28.7% less net mechanical work, and permitted a 45.9% greater normalized voluntary excursion area. The underlying QP solves in under 1 ms, comfortably enabling 100 Hz replanning and demonstrating that incorporating live human-ground interaction into predictive control yields stronger, more transparent physical assistance with half the actuators.
+
+许多康复机器人使用反应式跟踪控制器执行规定的运动，这些控制器没有明确结合用户的瞬时人地交互。 本文提出了地面反应力感知模型预测控制（ GRF-MPC ） ，这是一个用于直立物理辅助的框架。 通过将实时GRF和压力中心（ CoP ）测量直接集成到人体质心动力学模型中， GRF-MPC制定了实时二次程序（ QP ） ，优化了后退地平线上的辅助力和力矩。 我们在机器人直立式训练器（ RobUST ）上以欠驱动4缆配置部署了GRF-MPC ，并在六名健康参与者的近300项试验中对照全驱动8缆笛卡尔阻抗基线对其进行了评估。 在跨越冲动扰动、冲刺轨迹和自愿稳定限制的任务中， GRF-MPC将扰动期间的平面质量中心（ CoM ）峰值误差降低了19.6% ，将轨迹跟踪误差降低了24.1% ，所需的净机械工作减少了28.7% ，并允许了45.9%的自愿归一化偏移面积。 底层QP在1毫秒内解决了问题，舒适地实现了100 Hz的重新规划，并证明将实时人地交互纳入预测控制可以通过一半的执行器产生更强大、更透明的物理辅助。
+
+</details>
+
+---
+
+## 7. Audited Gradients, Anchored Policies: Model-Based Reinforcement Learning for Efficient Flow Control / 经审核的梯度，锚定策略：基于模型的强化学习，实现高效的流量控制
+
+**Date**: 2026-11-09 | **arXiv**: [2611.13203v1](http://arxiv.org/abs/2611.13203v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.13203v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Feedback controllers for flows are expensive to design, since each candidate must be evaluated with a high-fidelity solver. Differentiable surrogates reduce that cost, but they also introduce a failure mode that prediction error cannot detect. Policy optimization uses the derivative of the objective with respect to the action, which we call the action gradient and which can be computed either through the surrogate or through the high-fidelity solver. Optimization through the surrogate uses only its action gradient, and a surrogate can follow the flow trajectory closely while misestimating this derivative. The surrogate action gradient is compared against a central finite-difference estimate from the high-fidelity solver on held-out states, under acceptance criteria fixed before the comparison, and we call that comparison an audit. A low-dimensional feedback law is then fitted to the surrogate action gradient when the surrogate passes the audit, and to the solver estimate when it does not. This law initializes a neural policy, and a quadratic penalty holds the policy near it during optimization. The proposed approach is validated on four test cases. The resulting controllers outperform or match a model-free baseline, while using 3 to 156 times fewer high-fidelity solver interactions across the four test cases. One surrogate predicts the objective at correlation 0.9996 but its action gradient at only 0.459, so prediction accuracy does not identify a usable surrogate. Another surrogate, whose action gradient agrees with the solver estimate at correlation 0.996, makes the objective 0.52% worse when the policy is optimized through it without the anchor penalty, so an accurate gradient alone does not provide a working controller. Finally, a surrogate that passes the audit at one fixed action fails it around the actions the deployed controller applies, so a pass is local.
+
+由于必须使用高保真求解器对每个候选人进行评估，因此设计流程的反馈控制器非常昂贵。 可微代理降低了成本，但它们也引入了预测误差无法检测的故障模式。 策略优化使用目标关于动作的导数，我们称之为动作梯度，可以通过代理或通过高保真求解器计算。 通过代理优化仅使用其动作梯度，代理可以密切跟踪流动轨迹，同时误估此导数。 在比较前确定的验收标准下，将代理动作梯度与高保真求解器在保持状态下的中心有限差分估计值进行比较，我们称之为审计。 然后，当代理通过审核时，将低维反馈定律拟合到代理动作梯度，当代理通过审核时，将低维反馈定律拟合到求解器估计值。 该定律初始化了神经策略，在优化过程中，二次罚将策略保持在其附近。 所提出的方法在四个测试用例上进行了验证。 由此产生的控制器优于或匹配无模型基线，同时在四个测试用例中使用的高保真求解器交互减少3至156倍。 一位代理人预测目标的相关性为0.9996 ，但其动作梯度仅为0.459 ，因此预测准确性无法识别可用的替代品。另一位
+
+</details>
+
+---
+
+## 8. Building World Models from Intrinsic Motivation / 从内在动机建立世界模型
+
+**Date**: 2026-11-09 | **arXiv**: [2611.13113v1](http://arxiv.org/abs/2611.13113v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.13113v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In the absence of extrinsic rewards or task supervision, human behavior is guided by intrinsic motivation---neural signals that drive curiosity, creativity, play, and other essential facets of intelligence. Intrinsic motivation plays an important developmental role in building robust world models that enable generalization and adaptation. Yet existing studies leave open how a broad range of intrinsic motivations interacts with world-model representation learning to support downstream control. This limits our understanding of which intrinsically collected experiences build reusable models. To address these gaps, we integrate 24 intrinsic objectives, including established methods and explicit variants spanning curiosity, entropy, and competency, into a common model-based reinforcement learning framework. We evaluate the world models they build through zero-shot, few-shot, and multi-task control in locomotion, manipulation, and open-ended gaming environments, using three representation-learning strategies: observation reconstruction, latent prediction, and redundancy reduction. Curiosity-driven exploration with observation reconstruction yields the strongest aggregate family profile, although the best individual pairing depends on the experiment. In compositional vision-based tasks, intrinsic motivation derived from both episodic and lifelong novelty---providing a complementary memory to the world model's generic recurrent state---achieves the best zero-shot transfer and few-shot adaptation. These findings motivate designing intrinsic motivation and representation learning jointly. Our results demonstrate world models as a powerful tool for measuring the quality of intrinsically motivated experience, and positions intrinsic motivation as a key ingredient for building world models autonomously.
+
+在没有外在奖励或任务监督的情况下，人类的行为受到内在动机的引导--内在动机是驱动好奇心、创造力、游戏和其他智力基本方面的神经信号。 内在动机在构建强大的世界模型以实现泛化和适应方面发挥着重要的发展作用。 然而，现有的研究揭示了广泛的内在动机如何与世界模型表示学习相互作用，以支持下游控制。 这限制了我们对哪些本质上收集的体验构建可重用模型的理解。 为了解决这些差距，我们将24个内在目标（包括既定方法和跨越好奇心、熵和能力的显式变体）整合到一个通用的基于模型的强化学习框架中。 我们使用三种表示学习策略（观察重建、潜在预测和冗余减少） ，通过在运动、操纵和开放式游戏环境中的零拍摄、少拍摄和多任务控制来评估他们构建的世界模型。 好奇心驱动的探索与观察重建产生了最强的总家族概况，尽管最佳的个体配对取决于实验。 在基于组合视觉的任务中，来自情节和终身新颖性的内在动机--为世界模型的一般循环状态提供补充记忆--实现了最佳的零点转移和
+
+</details>
+
+---
+
+## 9. DreamLander: A 6-DOF World Model based Reinforcement Learning Planetary Lander / DreamLander ：基于6自由度世界模型的强化学习行星着陆器
+
+**Date**: 2026-11-09 | **arXiv**: [2611.12824v1](http://arxiv.org/abs/2611.12824v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.12824v1)
+
+**Categories**: cs.RO, math.OC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Soft powered descent landings are becoming evermore important in the field of space exploration and scientific advancement, because of their ability to deliver mission critical payloads, both highly accurately and safely. The high efficiency restriction on planetary landings due to the severely limited fuel supply results in the need for optimal guidance trajectories and control. Model based reinforcement learning is proving to be an important tool in simplifying the highly complex process of generating optimal guidance trajectories and control. In this work, we present DreamLander, a state of the art model based reinforcement learning algorithm based on DreamerV3, to generate optimal guidance and control for a realistic 6 degree of freedom entry descent landing problem. The model based approach creates a sample efficient and highly generalizable model that can be applied to a variety of scenarios whilst maintaining a high degree of accuracy, landing within 2 meters of the designated landing zone, and with velocity norm less than 0.3 meters per second. DreamLander makes use of state sensor observations, making progress toward End-to-End solutions of the Entry Descent Landing problem.
+
+软动力下降着陆在太空探索和科学进步领域变得越来越重要，因为它们能够高度准确和安全地提供任务关键有效载荷。 由于燃料供应严重受限，对行星着陆的高效限制导致需要最佳制导轨迹和控制。 基于模型的强化学习被证明是简化生成最佳制导轨迹和控制的高度复杂的过程的重要工具。 在这项工作中，我们提出了基于DreamerV3的基于最先进模型的强化学习算法DreamLander ，为现实的6自由度入口下降着陆问题生成最佳引导和控制。 基于模型的方法创建了一个样本高效且高度可推广的模型，可以应用于各种场景，同时保持高精度，在指定着陆区2米以内着陆，速度范数小于每秒0.3米。 DreamLander利用状态传感器观测，朝着入口下降着陆问题的端到端解决方案迈进。
+
+</details>
+
+---
+
+## 10. $Σ$-LeWM: Learning World Models via S-Information for Robot Control / $ Σ $ -LeWM ：通过S-机器人控制信息学习世界模型
+
+**Date**: 2026-11-09 | **arXiv**: [2611.12732v1](http://arxiv.org/abs/2611.12732v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.12732v1)
+
+**Categories**: cs.LG, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models have increasingly been applied as a model-based control method for robotics tasks such as manipulation and locomotion. While early world model architectures relied on decoders to prevent mode collapse and learn a predictable latent space, recent works on world models, such as Joint Embedding Predictive Architecture or LeWorldModel, increasingly aim to learn embeddings without a grounding decoder, utilising only a latent forward dynamics predictor and a stabilising entropy term. In this paper, we set out to demonstrate that the further introduction of two additional latent losses to LeWorldModel, a backward dynamics predictor and an inverse dynamics action predictor, enforces further structure on the latent embedding, leading to further gains in both performance and planning efficiency. These are critical properties for improving the applicability of such methods to real-time model-based control of real-world robots. We demonstrate these gains on standard world model benchmarks and two simulated robot manipulation tasks.
+
+世界模型越来越多地被用作机器人任务（如操纵和运动）的基于模型的控制方法。 虽然早期世界模型架构依靠解码器来防止模式崩溃并学习可预测的潜在空间，但最近关于世界模型的工作，如联合嵌入预测架构或LeWorldModel ，越来越多地旨在在没有接地解码器的情况下学习嵌入，仅利用潜伏前向动态预测器和稳定熵项。 在本文中，我们着手证明进一步向LeWorldModel引入两个额外的潜在损失，一个反向动力学预测器和一个反向动力学动作预测器，在潜在嵌入上执行进一步的结构，从而进一步提高性能和规划效率。 这些是提高这些方法对现实世界机器人的实时基于模型的控制的适用性的关键属性。 我们在标准世界模型基准和两个模拟机器人操作任务上展示了这些收益。
+
+</details>
+
+---
+
+## 11. Library of Hands: Fix the Hands, Not the World Model / 手的库：修复手，而不是世界模型
+
+**Date**: 2026-11-09 | **arXiv**: [2611.12678v1](http://arxiv.org/abs/2611.12678v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.12678v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A world model predicts how a scene changes after an action, and a planner uses it to search for actions that reach a goal. If the camera moves or the controller changes, the same command moves the robot differently: when its commands are turned by 90 degrees, a frozen planner with the LeWM world model that succeeds in 77.5% of episodes succeeds in only 7.8%. Current fixes retrain the model, need training data, or forget a set-up when it returns. We propose Library of Hands (LoH), a training-free method that keeps the world model frozen and corrects only the map from commands to applied actions, which we call the hand. LoH reads the hand through the frozen model, with no extra sensor: it finds the action that best explains the change between two camera images (a reading). It stores every hand it identifies, so a returning set-up is recognised rather than re-learnt. In closed-loop tests, LoH more than doubles success on three simulated tasks, from 28.6% to 62.3%, and loses only 0.6 percentage points when nothing changes. It also works, unchanged, with two other world models and on two of three models pretrained on real robot data, and its gain grows with the quality of its readings.
+
+世界模型预测场景在操作后如何变化，规划人员使用它来搜索达到目标的操作。 如果相机移动或控制器发生变化，相同的命令会以不同的方式移动机器人：当其命令旋转90度时，具有LeWM世界模型的冷冻规划器在77.5%的剧集中仅成功了7.8%。 当前的修复重新训练模型，需要训练数据，或者在返回时忘记设置。 我们提出了手部库（ LoH ） ，这是一种无需训练的方法，可以保持世界模型的冻结，并仅纠正从命令到应用操作的映射，我们称之为手。 LoH通过冻结模型读取手部，没有额外的传感器：它找到最能解释两个相机图像之间变化的动作（读数）。 它存储它识别的每一只手，因此返回的设置被识别而不是重新学习。 在闭环测试中， LoH在三项模拟任务上的成功率翻了一番以上，从28.6%增加到62.3% ，并且在不发生任何变化时仅损失0.6个百分点。 它还可以与另外两个世界模型以及在真实机器人数据上预先训练的三个模型中的两个模型一起使用，并且其增益随着读数的质量而增长。
+
+</details>
+
+---
+
+## 12. WanderBench: Can World Models Explore Dynamic Worlds from Video? / WanderBench ：世界模型可以从视频中探索动态世界吗？
+
+**Date**: 2026-11-09 | **arXiv**: [2611.12557v1](http://arxiv.org/abs/2611.12557v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.12557v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video world models conditioned on an input video make it possible to explore real, recorded dynamic scenes, enabling re-shooting of footage, free-viewpoint replay, and real-to-sim environments for embodied agents. Such uses require the generated rollout to stay faithful to the recorded world, yet existing benchmarks start from a single image or a text prompt, and video-conditioned generation is evaluated mainly on perceptual quality and camera following. These evaluations do not directly assess whether exploration preserves subject identity, event progression, and scene consistency upon revisiting a location. We introduce WanderBench, a benchmark for exploring dynamic worlds from video. It comprises 745 single-shot source videos of real and AI-generated content in three difficulty tiers (3-25 s), paired with camera routes given as keyboard actions, and evaluates six dimensions with 24 human-validated sub-metrics. Benchmarking eight models, we find that as clips grow longer, models keep the static scene and visual quality but lose camera control and the source dynamics, and that none keeps revisited places consistent. We further propose WanderLand, a training-free framework that conditions each frame of a frozen model on the same-instant source and, on revisits, on its own earlier static content. WanderLand improves five models on every dimension, by up to 8.3 points in source-dynamics fidelity.
+
+以输入视频为条件的视频世界模型可以探索真实的、录制的动态场景，为具体的代理人提供镜头、自由视点重播和真实到模拟环境的重新拍摄。 这种使用要求生成的推出保持忠实于记录的世界，但现有的基准从单个图像或文本提示开始，并且主要根据感知质量和相机跟踪来评估视频条件生成。 这些评估不会直接评估探索在重新访问位置时是否保留了受试者的身份、事件进展和场景一致性。 我们介绍了WanderBench ，这是从视频中探索动态世界的基准。 它包括三个难度级别（ 3-25秒）的745个真实和人工智能生成内容的单镜头源视频，与作为键盘操作给出的相机路由配对，并使用24个人工验证的子指标评估六个维度。 对比八个模型，我们发现随着剪辑的增长，模型会保持静态场景和视觉质量，但会失去相机控制和源动态，并且没有一个会保持重新访问位置的一致性。 我们进一步提出了WanderLand ，这是一个无需训练的框架，可以在同一即时源上调节冻结模型的每个帧，并在重新访问时调节其早期的静态内容。 WanderLand在每个维度上改进了五个模型，源动力学保真度高达8.3点。
+
+</details>
+
+---
+
+## 13. Hierarchical Multi-Channel Tip-Over Prediction via Isolated Temporal Models for Planetary Rover Safety / 通过用于行星漫游车安全的孤立时间模型进行分层多通道翻转预测
+
+**Date**: 2026-11-09 | **arXiv**: [2611.12261v1](http://arxiv.org/abs/2611.12261v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.12261v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reliable tip-over prevention is critical for planetary rovers operating in unstructured environments where communication delays prevent real-time human intervention. Existing learning-based approaches typically optimize a single prediction objective, limiting their ability to capture both gradual instability evolution and abrupt terrain disturbances. This work presents a hierarchical multi-channel tip-over prediction framework based on isolated temporal learning. A multi-horizon Temporal Convolutional Network (TCN) learns progressive instability patterns from inertial measurements, while a Gated Recurrent Unit (GRU)-based forward dynamics model predicts nominal rover motion and detects unexpected dynamic deviations through prediction residuals. These complementary signals are integrated through decision-level fusion and priority-based arbitration to generate graded safety actions, including early warning and emergency braking. The proposed system is deployed as an Orocos Real-Time Toolkit (RTT)-based safety component within the Rock robotics framework, operating at 100 Hz on a planetary rover software stack. Experiments on Inertial Measurement Unit (IMU) samples collected across heterogeneous terrains demonstrate 97.58% event prediction coverage with a 1.82s median lead time, outperforming individual prediction channels. The results validate that isolated temporal models combined through hierarchical decision fusion provide a robust solution for real-time rover safety in uncertain terrain.
+
+可靠的翻倒预防对于在非结构化环境中运行的行星漫游车至关重要，在这种环境中，通信延迟会阻止实时人为干预。 现有的基于学习的方法通常优化单个预测目标，限制了它们捕捉渐进不稳定演变和突然地形扰动的能力。 本文提出了一种基于孤立时间学习的分层多通道翻转预测框架。 多视野时间卷积网络（ TCN ）从惯性测量中学习渐进不稳定模式，而基于门控递归单元（ GRU ）的前向动力学模型预测标称漫游车运动并通过预测残差检测意外的动态偏差。 这些互补信号通过决策级融合和基于优先级的仲裁进行集成，以生成分级的安全措施，包括预警和紧急制动。 拟议的系统作为Rock机器人框架内基于Orocos实时工具包（ RTT ）的安全组件部署，在行星漫游车软件堆栈上以100 Hz的频率运行。 在不均匀地形上采集的惯性测量单元（ IMU ）样本上的实验表明，事件预测覆盖率为97.58 ％ ，中位提前期为1.82秒，优于单个预测通道。 结果证明，通过分层决策融合组合的孤立时间模型为
+
+</details>
+
+---
+
+## 14. ShopMind: A Mental World Model for Personalized and Realistic E-commerce User Simulation / ShopMind ：个性化和逼真的电子商务用户模拟的心理世界模型
+
+**Date**: 2026-11-09 | **arXiv**: [2611.11897v1](http://arxiv.org/abs/2611.11897v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.11897v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models are widely used in e-commerce user simulation, providing a foundation for understanding users and predicting human decisions. However, existing simulators still struggle to achieve both personalization and behavioral realism. Most methods predict the next action directly from interaction histories and the current context, without accounting for the evolving mental world that underlies user behavior. Theory of Mind suggests that behavior is driven by mental states, including beliefs, uncertainties, and intentions. Users may interpret the same information in distinct ways, leading to divergent behaviors, while an individual's mental state evolves through interaction and shapes subsequent actions. Ignoring this process prevents simulators from faithfully capturing individual differences and realistic behavior patterns, and undermines its effectiveness in downstream applications. To address this, we propose ShopMind, a Mental World Model for e-commerce user simulation that captures how consumers interpret shopping information and how their mental states evolve, better reflecting individual users and real-world behavior patterns. We further use behavior-mental state pairs synthesized by ShopMind to train a Mental State Reconstruction (MSR) model, which infers consumers' latent mental states from observable behavior. Experiments show that ShopMind improves personalization by 18.0% and behavioral realism by 19.6% over the strongest alternatives. Moreover, MSR improves performance on consumption value measurement and CTR prediction, showing the utility of ShopMind for understanding and predicting real user behavior.
+
+大型语言模型在电子商务用户模拟中被广泛使用，为理解用户和预测人类决策提供了基础。 然而，现有的模拟器仍然难以实现个性化和行为现实主义。 大多数方法直接从交互历史和当前上下文中预测下一个动作，而不考虑用户行为背后不断变化的心理世界。 心智理论认为，行为是由心理状态驱动的，包括信念、不确定性和意图。 用户可能会以不同的方式解释相同的信息，从而导致不同的行为，而个体的心理状态则会通过互动进化并塑造后续行动。 忽略此过程会阻止模拟器忠实地捕捉个体差异和逼真的行为模式，并破坏其在下游应用中的有效性。 为了解决这个问题，我们提出了ShopMind ，这是一种用于电子商务用户模拟的心理世界模型，可以捕捉消费者如何解释购物信息以及他们的心理状态如何演变，从而更好地反映个人用户和现实世界的行为模式。 我们进一步使用ShopMind合成的行为-精神状态对来训练心理状态重建（ MSR ）模型，该模型从可观察到的行为中推断出消费者的潜在心理状态。 实验表明，与最强的替代方案相比， ShopMind将个性化提高了18.0% ，将行为逼真度提高了19.6%。此外，
+
+</details>
+
+---
+
+## 15. How Many Candidates Does a One-Step World Model Need? A Random-Codebook Account of Nearest-of-m Training on Frozen DINO Tokens / 一步法世界模型需要多少候选人？关于冷冻恐龙代币的最近培训的随机代码簿帐户
+
+**Date**: 2026-11-09 | **arXiv**: [2611.11887v1](http://arxiv.org/abs/2611.11887v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.11887v1)
+
+**Categories**: cs.LG, cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+One-step stochastic world models avoid the mode averaging of deterministic feature predictors without the tens of network evaluations per step that diffusion and flow matching require. The simplest such objective is nearest-of-m matching (conditional implicit maximum likelihood estimation, IMLE): draw m candidate futures and pull only the one closest to the observed outcome. Recent work conjectures that a small m suffices for feature-space world models and that a strictly proper energy score should replace the hard minimum. We test both claims with one-step world models on frozen DINOv2/v3 patch tokens, using benchmarks whose futures can be enumerated. Under mode-like uncertainty, nearest-of-m with m=16 covers the enumerated futures better than 50-step flow matching (at about 1/30 of its latency), one-step flow generators and an energy-score generator at matched parameter counts, and its rollouts stay on the token manifold where flow rollouts drift. One quantity governs the choice of m: the nearest-of-m objective is the expected distortion of a random codebook of m draws from the generator. This view yields three predictions, recorded before the corresponding runs: (i) memorization of the realized outcome in contexts that never repeat, whose strength is governed by the codebook's miss distortion I(m) rather than its miss probability, and which an energy-score generator does not escape by raising m; (ii) a flattening of mode probabilities with m, matching a known optimum within 0.01; and (iii) under-dispersion on continuous high-dimensional outcomes, which bounds the method on real robot video. Per-step matching on self-rollouts cuts long-horizon error by a third on a stochastic Push-T variant; an ablation separates its manifold and coverage benefits. Planning success does not improve despite accurate risk estimates, a negative result we report with its diagnosis.
+
+一步随机世界模型避免了确定性特征预测器的模式平均，而没有扩散和流量匹配所需的每步数十次网络评估。 最简单的此类目标是最接近m的匹配（条件隐式最大似然估计， IMLE ） ：绘制m个候选期货，并仅拉出最接近观察结果的期货。 最近的工作推测，对于特征空间世界模型来说，一个小的m就足够了，一个严格适当的能量分数应该取代硬极小值。 我们使用可以枚举期货的基准，在冻结的DINOv2/v3补丁代币上使用一步式世界模型测试这两个声明。 在类似模式的不确定性下，最接近m = 16的m比50步流量匹配（约为其延迟的1/30 ）、一步流量生成器和匹配参数计数的能量分数生成器更好地覆盖了枚举的期货，其推出留在流量推出漂移的代币歧管上。 一个量决定了m的选择：最接近m的目标是从生成器提取的m的随机码本的预期失真。 此视图产生三个预测，在相应的运行之前记录： （ i ）在从不重复的情况下记忆已实现的结果，其强度受码本的失真I （ m ）而不是其失真概率的影响，并且能量分数生成器不会通过提高m逃逸； （ ii ）模式概率与m的扁平化，匹配已知的最佳值
+
+</details>
+
+---
+
+## 16. Action Representation for Spatial Generalization in Robot World Models / 机器人世界模型中空间泛化的动作表示
+
+**Date**: 2026-11-09 | **arXiv**: [2611.11869v1](http://arxiv.org/abs/2611.11869v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.11869v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Spatial generalization in robot world models depends on whether action representations capture the physical relationships that remain valid across changing spatial configurations. Yet different coordinates can describe the same interaction, whereas similar motions can produce different outcomes when local physical conditions change. How these distinctions affect learned prediction remains insufficiently understood. This study evaluates matched action representations defined in world, object, and surface coordinate frames using a controlled robotic peeling benchmark. Global pose and contact relocation experiments reveal a cost associated with limited training data when equivalent interactions receive different spatial descriptions. Removing information about peel thickness creates an irreducible ambiguity because identical predictive inputs can correspond to different material removal outcomes. Coordinates defined relative to the surface improve consequence prediction and counterfactual action selection under accurate local observations, but learned predictors remain vulnerable to uncertainty in the coordinate frame. Joint centering of the surface and tool removes sensitivity to translation of their common origin, whereas incorrect contact geometry and actual execution deviations introduce different failure mechanisms. These results show that effective spatial generalization depends on preserving the relationships between actions and states that determine physical consequences, rather than simply minimizing coordinate variation. This perspective provides a principled basis for designing robot world models that reuse physical knowledge across spatial configurations while retaining the distinctions essential to prediction and planning.
+
+机器人世界模型中的空间泛化取决于动作表示是否捕捉到在不断变化的空间配置中仍然有效的物理关系。 然而，不同的坐标可以描述相同的相互作用，而当局部物理条件发生变化时，类似的运动可以产生不同的结果。 这些区别如何影响学习预测仍未得到充分理解。 本研究使用受控机器人剥离基准评估世界、物体和表面坐标框架中定义的匹配动作表示。 全局姿势和联系人重新定位实验显示，当等效交互接收不同的空间描述时，与有限的训练数据相关的成本。 去除有关剥离厚度的信息会产生不可简化的模糊性，因为相同的预测输入可能对应于不同的材料去除结果。 相对于表面定义的坐标改善了准确的局部观测下的结果预测和反事实行为选择，但学习的预测器仍然容易受到坐标系中不确定性的影响。 表面和工具的关节定心消除了对其共同原点的平移的敏感性，而不正确的接触几何形状和实际执行偏差引入了不同的失效机制。 这些结果表明，有效的空间泛化取决于保持动作和状态之间的关系，这些关系决定了物理
+
+</details>
+
+---
+
+## 17. Planners Exploit Deterministic Error: Dithered Low-Bit World Models / 规划者利用确定性错误：抖动低位世界模型
+
+**Date**: 2026-11-09 | **arXiv**: [2611.11780v1](http://arxiv.org/abs/2611.11780v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.11780v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Sampling-based planners such as MPPI and CEM query a learned world model thousands of times per control step, so low-bit world models are an obvious way to make model-based control cheaper on a robot. With round-to-nearest activation quantization and no calibration, we find that planning can collapse, by up to 100 points of success, while the world model's latent one-step prediction error stays no larger than that of a stochastic rounding scheme that plans well. At the same bit width, what decides the outcome is not the size of the rounding error but whether it persists across planner iterations and is shared across candidates. Round-to-nearest leaves an error that persists, and an iterating planner drifts toward the candidates that this error favors; in TD-MPC2, holding the same dither fixed within a step or an episode brings the drift back. Dither shared by all candidates and redrawn at every iteration removes most of the damage at the same bit width and without training: at least half of it in all 19 affected Meta-World cells (task $\times$ bit width) of TD-MPC2 (median 95%), in 4 of 5 DINO-WM cells, and in all 8 affected tasks of a 317M-parameter multi-task TD-MPC2. Captured as CUDA graphs on an Ampere GPU, a W8A4 integer TD-MPC2 world model runs its planning rollouts 1.9-3.3$\times$ and the whole planning step 1.3-1.5$\times$ faster than FP32, though not faster than BF16 with pre-converted weights; shared dither adds at most 2.3% latency. In TD-MPC2, block-scaled NVFP4 removes most of the damage and MXFP4 part of it, which ties the failure to coarse grids with a shared scale. Hypotheses, thresholds and analysis code were fixed before the data that test them, and the hypotheses that failed are reported.
+
+基于采样的规划器，如MPPI和CEM ，每个控制步骤查询学习世界模型数千次，因此低位世界模型是使基于模型的控制在机器人上更便宜的明显方法。 通过从四舍五入到最近的激活量化而不进行校准，我们发现规划可以崩溃多达100个成功点，而世界模型的潜在一步预测误差不会大于规划良好的随机舍入方案。 在相同的位宽度下，决定结果的不是舍入误差的大小，而是它是否在计划器迭代中持续存在，并且是否在候选人之间共享。 从四舍五入到最近的错误会持续存在，迭代规划器会向此错误有利的候选项漂移；在TD-MPC2中，在步骤或情节中固定相同的抖动会使漂移恢复。 所有候选者共享并在每次迭代时重新绘制的抖动可以在同一比特宽度下消除大部分损坏，并且无需训练：在所有19个受影响的TD-MPC2元世界单元（任务$\ times $比特宽度） （中位数为95 ％ ）中，在5个DINO-WM单元中的4个中，以及在317M参数多任务TD-MPC2的所有8个受影响任务中，至少有一半的损坏。 在Ampere GPU上捕获为CUDA图形， W8A4整数TD-MPC2世界模型运行其规划推出1.9-3.3 $\ times $ ，整个规划步骤比FP32快1.3-1.5 $\ times $ ，但不比预先转换权重的BF16快；共享抖动最多增加2.3%的延迟。 在TD-MPC2中，块缩放NVFP4
+
+</details>
+
+---
+
+## 18. SurgTAP-3D: A Large-Scale Cross-Surgery Video Dataset with Contact-Aware 3D Motion Tracking / SurgTAP-3D ：具有接触感知3D运动跟踪的大规模交叉手术视频数据集
+
+**Date**: 2026-11-08 | **arXiv**: [2611.11697v1](http://arxiv.org/abs/2611.11697v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.11697v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Understanding 3D scene dynamics in minimally invasive surgery (MIS) is a fundamental step toward physically intelligent and autonomous surgical systems. However, existing public datasets offer limited scalability and diversity in real-world clinical scenarios. Moreover, annotations typically focus on either tissue or instruments alone, overlooking tool-tissue interactions. This gap limits applications such as augmented reality guidance and autonomous surgery driven by vision-language-action (VLA) models or world models, which demand large-scale, high-quality 3D supervision. In this work, we construct SurgTAP-3D, a large-scale in-vivo pseudo-3D surgical motion tracking dataset and benchmark, comprising 520K frames, 4,549 action clips, and 1.4M 2D/3D point trajectories from diverse robotic and manual procedures under unified action categories. To make annotation scalable, we design a unified framework for surgical 3D point tracking that converts uncalibrated monocular surgical videos into structured 4D annotations through contact-region prompting, active-tool segmentation, dynamic bundle adjustment, and global 4D refinement. This pipeline adapts foundation priors to surgical videos and produces temporally consistent trajectories, pseudo-scale geometry, camera poses, and instrument masks. The dataset captures realistic challenges inherent to surgical environments, including occlusions, smoke, bleeding, and rapid instrument motion. We establish a comprehensive benchmark on SurgPose, SurgT, and STIR, covering both instrument and tissue tracking. We demonstrate instrument displacement estimation, deformable surface reconstruction, and foundation-model fine-tuning. Extensive experiments and analysis demonstrate the effectiveness of our dataset and annotation framework for 3D surgical point tracking, reconstruction, and surgical action understanding. Homepage: https://wrld.github.io/surgtap-3d/
+
+了解微创手术(MIS)中的3D场景动态是迈向物理智能和自主手术系统的基本步骤。 然而，现有的公共数据集在真实世界的临床场景中提供了有限的可扩展性和多样性。 此外，注释通常只关注组织或器械，忽略了工具-组织相互作用。 这种差距限制了增强现实引导和由视觉-语言-动作（ VLA ）模型或世界模型驱动的自主手术等应用，这些应用需要大规模、高质量的3D监督。 在这项工作中，我们构建了SurgTAP-3D ，这是一个大规模的体内伪3D手术运动跟踪数据集和基准，包括520K帧、4,549个动作剪辑和140万个2D/3D点轨迹，这些轨迹来自统一动作类别下的各种机器人和手动程序。 为了使注释可扩展，我们设计了一个统一的外科3D点跟踪框架，通过接触区域提示、活动工具分割、动态捆绑调整和全局4D细化，将未校准的单眼外科视频转换为结构化的4D注释。 该管道使基础先验适应手术视频，并产生时间一致的轨迹、伪比例几何形状、相机姿势和仪器面罩。 该数据集捕获了手术环境固有的现实挑战，包括阻塞、烟雾、出血和快速仪器运动。 我们建立了一个全面的基准
+
+</details>
+
+---
+
+## 19. ScanDreamer: A Map-Grounded World Model for Quadrotor Navigation / ScanDreamer ：基于地图的四旋翼导航世界模型
+
+**Date**: 2026-11-08 | **arXiv**: [2611.11605v1](http://arxiv.org/abs/2611.11605v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.11605v1)
+
+**Categories**: cs.RO
+
+**Code**: https://github.com/WANGSHUAIzzzz/ScanDreamer.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Quadrotors inspecting buildings and tunnels must navigate unknown clutter with a forward-facing depth camera whose limited field of view constrains scene understanding and collision-avoiding navigation. Recent world-model agents learn navigation through imagined experience (e.g., AirDreamer), but remain data-intensive and often lack explicit geometric memory and awareness of what the camera can observe. We propose ScanDreamer, a map-grounded world model that constructs an online 2D scan-memory map from depth images and vehicle pose. Our world model, actor, and critic are conditioned on this map, which also defines a geodesic progress reward. Moreover, a forward-cone penalty discourages horizontal motion outside the camera's viewing direction. During imagination, ScanDreamer propagates the quadrotor pose over a frozen map and derives progress and wall-contact signals from the mapped geometry. We train ScanDreamer for 0.8 million environment steps (5.5 h on one GPU) and evaluate it in NVIDIA Isaac Sim over 1560 episodes spanning unseen layouts and parameter ranges. Across three seeds (mean $\pm$ SD), ScanDreamer achieves 96.3 $\pm$ 0.3% success with 3.6 $\pm$ 0.3% collision, compared with 59.6 $\pm$ 3.0% success and 28.8 $\pm$ 2.8% collision for AirDreamer at the same online-interaction budget. Removing the forward-cone penalty increases collisions to 9.9 $\pm$ 3.1%. These results show that combining explicit map memory, map-grounded imagination, and perception-aware motion substantially improves navigation performance and data efficiency. The source code is available at https://github.com/WANGSHUAIzzzz/ScanDreamer.
+
+检查建筑物和隧道的四旋翼飞行器必须使用面向前方的深度摄像机在未知杂波中导航，该摄像机的视野有限，限制了对场景的理解和避免碰撞的导航。 最近的世界模型代理通过想象的体验（例如AirDreamer ）学习导航，但仍然是数据密集型的，并且通常缺乏明确的几何记忆和对相机可以观察到的内容的认识。 我们提出了ScanDreamer ，这是一个基于地图的世界模型，可根据深度图像和车辆姿势构建在线2D扫描记忆地图。 我们的世界模型、演员和评论家都以这张地图为条件，它也定义了大地测量进度奖励。 此外，前锥罚款不鼓励在相机观看方向之外的水平运动。 在想象期间， ScanDreamer在冻结的地图上传播四旋翼姿态，并从映射的几何图形中导出进度和墙壁接触信号。 我们对ScanDreamer进行了80万个环境步骤（在一个GPU上运行5.5小时）的训练，并在NVIDIA Isaac Sim中对其进行评估，涵盖1560个情节，涵盖看不见的布局和参数范围。 在三个种子（平均$\ pm $ SD ）中， ScanDreamer在3.6 $\ pm $ 0.3%的碰撞中取得了96.3 $\ pm $ 0.3%的成功，相比之下，在相同的在线互动预算下， AirDreamer的成功率为59.6 $\ pm $ 3.0% ，碰撞率为28.8 $\ pm $ 2.8%。 取消前锥罚款将碰撞增加到9.9 $\ pm $ 3.1%。 这些结果表明，结合显式地图记忆、地图接地想象力和感知感知运动
+
+</details>
+
+---
+
+## 20. K-PWM: Control-Oriented Structured Bilinear World Models under Partial Observation / K-PWM ：部分观测下的面向控制的结构化双线性世界模型
+
+**Date**: 2026-11-08 | **arXiv**: [2611.11521v1](http://arxiv.org/abs/2611.11521v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.11521v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG, eess.SY, math.DS
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models learn internal simulators of environment dynamics for prediction, planning, and control, yet learning them from limited, noisy, and partial observations remains challenging. While much progress has focused on pixel-based observations, many physical systems instead provide vector-valued measurements that reveal only part of the underlying state. We introduce K-PWM, a probabilistic world model for prediction and control under partial observation. K-PWM couples Koopman-bilinear latent dynamics with a nonlinear observation decoder and performs probabilistic latent-state inference through the learned model via extended Kalman filtering and smoothing, without a separately trained inference network. Its bilinear structure enables exact propagation of the maintained Gaussian belief through the latent transition and efficient rollouts for uncertainty-aware model predictive path integral (MPPI) control. For training K-PWM, we present a generalized expectation conditional maximization (GECM) procedure with closed-form updates for the generators, noise covariances, and latent prior, complemented by gradient-based decoder learning. A Koopman-consistent initialization selects the latent dimension from data and initializes the action-dependent dynamics. With limited training data, K-PWM achieves lower long-horizon prediction error than the evaluated baselines on partially observed Gymnasium MuJoCo systems, while substantially reducing training time relative to the strongest prediction baseline. On high-dimensional MuJoCo Menagerie robots, it achieves competitive tracking accuracy with low per-step computation times, demonstrating potential for real-time deployment. These results support structured probabilistic dynamics as a data- and compute-efficient approach to world modeling and control under partial observation.
+
+世界模型学习环境动态的内部模拟器进行预测、规划和控制，但从有限、嘈杂和部分观测中学习它们仍然具有挑战性。 虽然许多进展都集中在基于像素的观测上，但许多物理系统提供的矢量值测量只能揭示部分潜在状态。 我们引入K-PWM ，这是一种用于局部观测下的预测和控制的概率世界模型。 K-PWM将Koopman双线性潜伏动力学与非线性观测解码器耦合，并通过学习模型通过扩展卡尔曼滤波和平滑来执行概率潜伏状态推理，而无需单独训练的推理网络。 其双线性结构能够通过潜在过渡和有效推出不确定性感知模型预测路径积分（ MPPI ）控制来精确传播维持的高斯信念。 对于训练K-PWM ，我们提出了一种广义期望条件最大化（ GECM ）过程，该过程具有生成器、噪声协方差和潜在先验的闭式更新，并辅以基于梯度的解码器学习。 Koopman一致性初始化从数据中选择潜在维度并初始化动作相关动态。 在有限的训练数据下， K-PWM在部分观测到的Gymnasium MuJoCo系统上实现了比评估基线更低的长期预测误差，同时相对于最强的
+
+</details>
+
+---
+
+## 21. Breaking survivorship bias in driving world models / 打破驾驶世界车型的生存偏见
+
+**Date**: 2026-11-08 | **arXiv**: [2611.11516v1](http://arxiv.org/abs/2611.11516v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.11516v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models allow autonomous vehicles to imagine the consequences of candidate actions before execution, but their reliability depends on the futures represented in their training data. We identify a survivorship bias in driving world models: because the futures recorded in prevailing driving datasets almost always end safely, existing models often imagine benign outcomes even when a collision is imminent. We introduce a neutral world model (NWM) that learns both routine and safety-critical futures from a mixture of routine driving and real accident videos with a bounding-box-guided objective. The NWM more faithfully anticipates imminent collisions, while maintaining a low false collision rate and competitive generation quality in routine driving. We further use the model as an imagination engine for decision-making. Given multiple ego trajectories, the NWM predicts the future associated with each candidate, and a reward function evaluates these imagined outcomes before selecting an action. On challenging NAVSIM scenarios, this procedure selects the better trajectory more reliably than the baseline world model. Zero-shot experiments with real-world pedestrian dummy crossing data collected using an autonomous research vehicle further demonstrate transfer to unseen sensor observations. These results show that correcting survivorship bias enables world models to more faithfully reason about futures and support safety-critical decision-making in autonomous driving.
+
+世界模型允许自动驾驶汽车在执行之前想象候选操作的后果，但其可靠性取决于其训练数据中表示的未来。 我们在驾驶世界模型时发现了一种幸存者偏见：由于主流驾驶数据集中记录的未来几乎总是安全结束，因此即使碰撞迫在眉睫，现有模型也往往会想象出良性结果。 我们引入了一个中性世界模型（ NWM ） ，该模型从常规驾驶和真实事故视频的混合中学习常规和安全关键型未来，并具有边界框引导的目标。 NWM更忠实地预测即将发生的碰撞，同时在日常驾驶中保持低误碰撞率和有竞争力的发电质量。 我们进一步将该模型用作决策的想象力引擎。 给定多个自我轨迹， NWM预测与每个候选人相关的未来，奖励函数在选择行动之前评估这些想象的结果。 在具有挑战性的NAVSIM场景中，此过程比基线世界模型更可靠地选择更好的轨迹。 使用自主研究车辆收集的真实世界行人虚拟穿越数据的零拍实验进一步演示了转移到看不见的传感器观测。 这些结果表明，纠正幸存者偏见使世界模型能够更准确地推理未来，并支持自动驾驶中的安全关键决策。
+
+</details>
+
+---
+
+## 22. ForeAct: Geometry-Guided Action Learning from World Representations / ForeAct ：从世界表征中学习几何引导的行动
+
+**Date**: 2026-11-08 | **arXiv**: [2611.11500v1](http://arxiv.org/abs/2611.11500v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.11500v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robotic manipulation requires representations that capture both scene geometry and its evolution during interaction. Existing approaches have largely treated these two aspects separately. World action models capture such dynamics by coupling action prediction with future video generation, but their reliance on iterative diffusion or rectified-flow inference leads to high computational cost, while their representations lack explicit spatial structure. Explicitly modeling scene geometry typically requires auxiliary modules that increase both parameter count and computational cost. Conversely, geometry-centric policies primarily recover observed spatial structure and often lack explicit supervision for anticipating future geometric changes during interaction. To address these limitations, we introduce ForeAct, which repurposes a pretrained video world model as a single-pass representation backbone for low-latency control. ForeAct directly processes the clean latent of the current observation in one forward pass, eliminating future-frame synthesis and iterative denoising while retaining the backbone's pretrained spatiotemporal priors. Rather than introducing a separate geometry backbone, ForeAct uses learnable tokens supervised by next-frame relative depth to shape the shared video representation through bidirectional self-attention. This compact interface turns the spatial knowledge already encoded in the backbone into a future-aware representation for action generation, with little parameter overhead. The lightweight geometry readout is used only during training and removed at deployment, enabling low-latency, geometry-aware control without depth input or an external geometry backbone. Without additional large-scale pretraining, ForeAct achieves 96.6% average success on LIBERO, 63.5% on SimplerEnv-Bridge, and a 74.4% success rate across 90 real-world rollouts.
+
+机器人操作需要捕捉场景几何形状及其在交互过程中的演变的表示。 现有的方法在很大程度上将这两个方面分开处理。 世界动作模型通过将动作预测与未来视频生成耦合来捕捉这种动态，但它们对迭代扩散或整流推理的依赖导致计算成本高，而它们的表示缺乏明确的空间结构。 显式建模场景几何通常需要辅助模块，从而增加参数计数和计算成本。 相反，以几何为中心的政策主要恢复观察到的空间结构，并且通常缺乏对交互过程中预测未来几何变化的明确监督。 为了解决这些局限性，我们引入了ForeAct ，它将预训练的视频世界模型重新用作低延迟控制的单通道表示主干。 ForeAct一次性直接处理当前观测的干净潜伏期，消除了未来帧合成和迭代去噪，同时保留了骨干的预训练时空先验。 ForeAct没有引入单独的几何主干，而是使用由下一帧相对深度监督的可学习令牌，通过双向自我注意来塑造共享视频表示。 这个紧凑的界面将已经在骨干网中编码的空间知识转化为行动生成的未来感知表示，
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-06 (13 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-11-06
