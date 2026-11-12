@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-12](papers/2026-11-12.md) - 8 papers
 - [2026-11-11](papers/2026-11-11.md) - 22 papers
 - [2026-11-06](papers/2026-11-06.md) - 13 papers
 - [2026-11-04](papers/2026-11-04.md) - 21 papers
@@ -181,6 +182,148 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-12 (8 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-11-12
+
+**Paper Count**: 8
+
+---
+
+## 1. Evaluating LLM-Generated World Models for Neuro-Symbolic Reasoning / 评估 LLM 生成的世界模型用于神经符号推理
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14419v1](http://arxiv.org/abs/2611.14419v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14419v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Formal world models can support planning, verification, and safety reasoning, but constructing them from open-ended natural-language situations is difficult, particularly in multi-agent settings where several formalizations may be plausible. We study whether five LLMs can generate such world models as partially observable stochastic games and whether mechanical validity is sufficient to establish that the resulting model faithfully represents the intended decision problem. We introduce a benchmark of 44 scenarios spanning game, situational, and cultural settings and evaluate generated world models along three dimensions: mechanical validity, reference-relative structural agreement, and semantic criteria. Across three empirical tracks, we analyze 410 first-pass generations. In the reference-backed game track, 134/135 generated world models pass a strict mechanical audit, yet mean permutation-invariant structural F1 is only 0.366, with just 28/134 mechanically valid models exactly matching the authored reference. In the cultural track, explicitly naming the country changes the generated structural representation for most LLMs while producing only small changes in automated semantic scores. These results show that executability is a necessary but insufficient criterion for LLM-generated world models: models that are mechanically valid can still differ substantially in the structure used by downstream neuro-symbolic reasoning and planning.
+
+形式化世界模型可以支持规划、验证和安全推理，但要从开放式的自然语言情境中构建这些模型非常困难，特别是在多智能体环境中，可能存在多种合理的形式化方式。我们研究了五个大语言模型（LLM）是否能够生成诸如部分可观测随机博弈等世界模型，以及机械有效性是否足以证明所生成的模型能够忠实地反映预期的决策问题。我们引入了一个包含44个场景的基准，这些场景涵盖游戏、情境和文化背景，并从三个维度对生成的世界模型进行评估：机械有效性、与参考相关的结构一致性以及语义标准。在三个实证轨道中，我们分析了410个首次生成的结果。在有参考依据的游戏轨道中，134/135个生成的世界模型通过了严格的机械审核，但平均置换不变结构F1仅为0.366，只有28/134个机械有效的模型与作者提供的参考完全匹配。在文化轨道中，明确指出国家名称会改变大多数LLM生成的结构表示，而对自动化语义得分的影响则很小。这些结果表明，可执行性是LLM生成的世界模型的必要条件，但并非充分条件：在机械上有效的模型在下游神经符号推理和规划所使用的结构方面仍可能存在显著差异。
+
+</details>
+
+---
+
+## 2. An Energy-Based Perspective on Machine Learning / 基于能量的机器学习视角
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14383v1](http://arxiv.org/abs/2611.14383v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14383v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Energy-based models (EBMs) define a distribution through a scalar energy, $p_θ(x)\propto\exp(-E_θ(x))$, and are usually presented as one model family among many. This tutorial has a broader goal: beyond introducing EBMs, it uses them as a single lens that connects the different aspects of machine learning. Any EBM is specified by three choices, the energy, which determines what the model represents; the inference procedure, which samples from or optimizes the energy; and the learning method, which fits the energy to data. We first develop these components, including sampling, variational inference, and learning by maximum likelihood, noise contrastive estimation, pseudolikelihood, score matching, and adversarial training, and show that the learning methods share one contrastive structure. We then show that discriminative models, generative models such as GANs, normalizing flows, diffusion and autoregressive models, representation learning methods such as contrastive learning, word2vec, BERT, denoising auto-encoders, and diffusion representations, reinforcement learning with EBM policies and world models, inverse reinforcement learning, and planning, as well as inference-time computation with verifiers, are all EBMs that differ in these three choices, mostly in how they handle the partition function and sampling. This view explains existing methods, organizes them into a common framework, and suggests new algorithms by replacing one component while keeping the others, with composition of energies as a principled way to combine learned models at inference time.
+
+基于能量的模型（EBM）通过标量能量 $p_θ(x)\propto\exp(-E_θ(x))$ 来定义一个分布，通常被视为众多模型家族中的一个。本教程的目标更为广泛：除了介绍EBM之外，它还将EBM作为一个单一的视角，将机器学习的各个方面联系起来。任何EBM都由三个选择来指定：能量，它决定了模型所代表的内容；推理过程，它从能量中采样或优化能量；以及学习方法，它将能量拟合到数据。我们首先阐述这些组成部分，包括采样、变分推断以及通过最大似然、噪声对比估计、伪似然、得分匹配和对抗性训练进行的学习，并说明这些学习方法具有一种共同的对比结构。接下来，我们将展示判别模型、生成模型（如GAN、归一化流、扩散模型和自回归模型）、表示学习方法（如对比学习、word2vec、BERT、去噪自编码器和扩散表示）、采用EBM策略和世界模型的强化学习、逆强化学习和规划，以及使用验证器的推理时计算，都是EBM，它们在这三个选择上存在差异，主要体现在它们如何处理配分函数和采样方面。这种观点解释了现有的方法，将其归纳到一个共同的框架中，并通过替换一个组件而保留其他组件来提出新的算法，其中
+
+</details>
+
+---
+
+## 3. Uncertainty-Aware Hybrid Offline Reinforcement Learning with Online Action Selection Enabled by Sparse Gaussian-Process Critics / 基于稀疏高斯过程批评器的具有在线行动选择的不确定性感知混合离线强化学习
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14374v1](http://arxiv.org/abs/2611.14374v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14374v1)
+
+**Categories**: cs.LG, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Start-ups and grade changes remain largely operator-driven, while developing and maintaining dynamic models for model-based control requires substantial engineering effort. Hybrid Offline Learning and Online Optimisation (HOFLON) uses one-step offline reinforcement learning to select actions from historical transition data. In its original implementation, the online objective combines the predicted return from a tree-ensemble critic with an adversarial-autoencoder (AAE) penalty for unfamiliar state-action pairs. We examine the effect of this penalty and replace the critic and AAE with a sparse variational Gaussian-process (sGP) critic. Actions maximise $μ- κσ$, an uncertainty-adjusted estimate of the return from one action followed by the historical operating practice. On the HOFLON polymerisation-reactor benchmark, removing the AAE from HOFLON led to 4 failed start-ups in 15 runs over five critics. At its published weight, the variation in the AAE penalty is four orders of magnitude smaller than the variation in the tree-ensemble critic. Nevertheless, it changes actions when the predicted returns of competing candidates are nearly equal, and paired runs with and without the penalty diverged from the first move. With a Matérn-5/2 sGP critic, $κ= 0$ led to failure in 13 of 15 runs, whereas with $κ= 3$ none of 15 runs (five critics, three noise realisations) failed. The median and lowest returns were 13,464 and 13,398 (HOFLON: 13,393 and 12,411). A squared-exponential sGP critic with learned inducing inputs needed $κ\geq 3$ to remain within the empirical data support in steady state, and then settled with a temperature offset of 2.0 K.
+
+开机和品级变更仍主要由操作员驱动，而开发和维护用于基于模型的控制的动态模型则需要大量工程工作。混合离线学习和在线优化（HOFLON）使用一步离线强化学习，从历史转移数据中选择动作。在其最初的实现中，在线目标将来自树集成评判器的预测回报与针对不熟悉的状态-动作对的对抗性自动编码器 (AAE) 惩罚相结合。我们研究了这种惩罚的影响，并用稀疏变分高斯过程（sGP）评判器取代了评判器和AAE。动作使$μ- κσ$最大化，这是对一个动作的回报的估计值，该估计值经过不确定性调整，并遵循历史操作实践。在HOFLON聚合反应器基准上，从HOFLON中移除AAE导致在五位评判者的15次运行中出现了4次启动失败。在其公布的权重下，AAE惩罚的变化比树集成评判器的变化小四个数量级。尽管如此，当竞争候选者的预测回报几乎相等时，它会改变行动，并且有惩罚和无惩罚的成对运行从第一步就开始分歧。使用Matérn-5/2 sGP评论家时，$κ= 0$导致15次运行中有13次失败，而使用$κ= 3$时，15次运行（5个评论家，3次噪声实现）中没有一次失败。中位数和最低回报分别为 13,464 和 13,398（HOFLON：13,393 和 12,411）。平方指数
+
+</details>
+
+---
+
+## 4. Gaussian Process-Augmented Model Predictive Contouring Control for 6-DoF Trajectory Tracking with a Holonomic AUV / 用于全能性AUV 6-DoF轨迹跟踪的高斯过程增强型模型预测轮廓控制
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14373v1](http://arxiv.org/abs/2611.14373v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14373v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Small, holonomic Autonomous Underwater Vehicles (AUVs) enable close-range inspection of underwater structures from arbitrary viewpoints, requiring accurate position and attitude tracking under state and input constraints. Model Predictive Contouring Control (MPCC) naturally handles these requirements, but relies on an accurate dynamics model, which is difficult to obtain underwater. In this paper, we present a nonlinear MPCC in all six Degrees of Freedom (DoF) for a holonomic AUV and alleviate the inaccuracies in the dynamics by augmenting the nominal model employed with residual dynamics learned via Gaussian Process (GP) regression. The learned residual is embedded in the optimal control problem through a zero-order robust optimization scheme, which keeps the controller real-time capable at 25 Hz. A simulation ablation shows that residual selection is essential when designing the controller, and simulation and in-water experiments with the Multimodality, Observing, Low-cost, Agile (MOLA) AUV validate the resulting controllers against a nominal MPCC and a field proven Proportional-Integral-Derivative (PID) controller.
+
+小型全能自主式水下航行器（AUV）能够从任意视角对水下结构进行近距离检查，这需要在状态和输入约束条件下实现精确的位置和姿态跟踪。模型预测轮廓控制 (MPCC) 自然能够满足这些要求，但它依赖于一个准确的动力学模型，而该模型在水下难以获得。本文针对全能 AUV 提出了一个全六自由度 (DoF) 的非线性 MPCC，并通过使用通过高斯过程 (GP) 回归学习到的残差动力学来增强所采用的标称模型，从而减轻动力学中的不准确性。通过零阶鲁棒优化方案，将所学习的残差嵌入到最优控制问题中，从而使控制器能够以 25 Hz 的频率实时运行。模拟消融表明，在设计控制器时，残差选择至关重要。使用多模态、观测、低成本、敏捷 (MOLA) AUV 进行的模拟和水下实验，将所得控制器与标称 MPCC 和经过现场验证的比例-积分-微分 (PID) 控制器进行了比较验证。
+
+</details>
+
+---
+
+## 5. From Video Frames to Robot Meta-Frames: A Unified Latent Interface for World Action Models / 从视频帧到机器人元帧：用于世界动作模型的统一潜在接口
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14365v1](http://arxiv.org/abs/2611.14365v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14365v1)
+
+**Categories**: cs.CV, cs.RO
+
+**Code**: https://github.com/showlab/MetaWAM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pretrained video diffusion models (VDMs) offer a powerful foundation for World Action Models (WAMs), which jointly predict robot actions and future observations. Building such models requires injecting low-dimensional robot signals (e.g. proprioception, actions, and values) into a latent space shaped by natural videos, and a key design choice is the interface through which these signals enter: existing schemes treat it as a formatting detail, spending a separate latent frame on each signal or bolting on dedicated encoders and decoders. We argue that signal injection is instead a distribution-alignment problem: how well a representation matches the prior of the pretrained VDMs during denoising. Using the relative reconstruction error of a frozen VDM denoiser as a probe, we find that conventional spatial encodings sit far off this prior, whereas frequency-domain packing yields latents that the denoiser corrects far less. Motivated by this diagnostic result, we propose MetaWAM, which folds all robot signals into a single unified meta-frame: each signal is assigned to a disjoint frequency-domain channel band and lifted to the spatial latent by an inverse DCT, yielding a decodable interface aligned with the pretrained VDM prior without any added module or architectural change. A fixed band layout together with slot-aware routing lets the same meta-frame support policy, world-model, and value prediction over a shared set of robot variables. On RoboCasa, MetaWAM reaches 68.9% success while collapsing the per-signal frames into one and cutting inference latency by 39%, and attains 85.0% success on three real-world Franka tasks. Code and models are available at https://github.com/showlab/MetaWAM
+
+预训练的视频扩散模型（VDM）为世界动作模型（WAM）提供了强大的基础，WAM可联合预测机器人的动作和未来的观测结果。构建此类模型需要将低维机器人信号（例如本体感受、动作和值）注入由自然视频塑造的潜在空间，一个关键的设计选择是这些信号进入的接口：现有方案将其视为格式化细节，为每个信号使用一个单独的潜在帧，或附加专用编码器和解码器。我们认为，信号注入实际上是一个分布对齐问题：在去噪过程中，表示与预训练VDM的先验匹配的程度如何。我们使用冻结VDM去噪器的相对重建误差作为探针，发现传统的空间编码与该先验相去甚远，而频域打包产生的潜在变量经去噪器校正的程度要小得多。受这一诊断结果的启发，我们提出了MetaWAM，它将所有机器人信号折叠到一个统一的元帧中：每个信号被分配到一个不相交的频域信道频带，并通过逆DCT提升到空间潜在空间，从而产生一个与预训练VDM先验对齐的可解码接口，而无需任何额外的模块或架构变更。固定频带布局与槽位感知路由相结合，使同一个元帧能够在一组共享的机器人变量上支持策略、世界模型和价值预测。在RoboCasa上，MetaWAM达到了68.9%
+
+</details>
+
+---
+
+## 6. Elastic-WAM: Adaptive Spatiotemporal Imagination for Efficient Robot Control / Elastic-WAM：用于高效机器人控制的自适应时空想象
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14257v1](http://arxiv.org/abs/2611.14257v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14257v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World-Action Models improve robot control by predicting future visual dynamics, but iterative video denoising incurs substantial inference overhead. Recent approaches reduce this cost through partial future denoising, yet typically rely on fixed refinement budgets. Our empirical observations reveal that preferred refinement depths vary across tasks and states, while different future regions exhibit varying relevance to action generation. Motivated by these findings, we propose Elastic-WAM, which adaptively allocates world refinement computation across temporal denoising time and spatial future space. A unified spatiotemporal refinement demand field governs when to stop world refinement, how far to advance each denoising step, and which regions to refresh. We parameterize this field with a shared temporal basis and spatial amplitudes, and learn it through a three-stage action-grounded supervised procedure. At inference, the learned field guides recurrent sparse world refinement to improve task success while reducing inference overhead. Evaluations across diverse simulation benchmarks and real-world long-horizon manipulation demonstrate state-of-the-art control performance with reduced inference latency.
+
+世界-动作模型通过预测未来的视觉动态来改善机器人控制，但迭代式视频去噪会带来大量推理开销。近期的方法通过对未来进行部分去噪来降低这一成本，但通常依赖于固定的精化预算。我们的实证观察表明，首选的精化深度因任务和状态而异，而不同的未来区域与动作生成的相关性也各不相同。受这些发现的启发，我们提出了Elastic-WAM，它可以在时间去噪时间和空间未来空间之间自适应地分配世界精化计算。一个统一的时空精化需求场决定何时停止世界精化、每个去噪步骤推进多远以及哪些区域需要刷新。我们使用共享的时间基和空间振幅对该场进行参数化，并通过三阶段的基于动作的监督程序对其进行学习。在推理阶段，所学习的场指导循环稀疏世界精化，以提高任务成功率，同时降低推理开销。跨多种模拟基准和现实世界长时域操纵的评估表明，该方法具有最先进的控制性能，且推理延迟更低。
+
+</details>
+
+---
+
+## 7. Personalized Affective Perception via Continual Learning in Human-Agent Negotiation / 通过人机谈判中的持续学习实现个性化情感感知
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14247v1](http://arxiv.org/abs/2611.14247v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14247v1)
+
+**Categories**: cs.AI, cs.HC, cs.LG, cs.MA, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Self-interested intelligent agents that negotiate with humans should interpret nonverbal expressions and adapt their behavior accordingly. However, generic facial-affect models degrade across individuals and contexts, creating a generalization gap. We introduce an affect-adaptive negotiation strategy that incorporates Continual Learning with Imagination for Facial Expression Recognition (CLIFER) to personalize valence-arousal perception in real time. Differential feedback converts changes in valence-arousal direction and intensity into adjustments of the agent's target utility. An asynchronous architecture updates CLIFER in the background during live interaction. In a counterbalanced within-subject study in which 66 participants negotiated with a humanoid robot, the CL-enabled agent achieved significantly higher individual utility and elicited higher participant concession rates than the FaceChannel baseline. The CL condition yielded significantly higher mean arousal estimates, alongside a broader output range. Participant utility and Nash distance did not change significantly between conditions. These outcomes support the practical value of coupling continual affective personalization with differential feedback for real-time negotiation.
+
+与人类进行谈判的自利智能体应能解读非言语表达，并相应地调整自身行为。然而，通用面部情感模型在不同个体和情境中表现不佳，从而造成了泛化差距。我们提出了一种情感自适应谈判策略，该策略结合了基于想象力的面部表情识别持续学习（CLIFER），以实时个性化效价-唤醒感知。差异反馈将效价-唤醒方向和强度的变化转换为对智能体目标效用的调整。异步架构在实时互动期间在后台更新CLIFER。在一项被试内平衡研究中，66名参与者与人形机器人进行谈判，启用CL的智能体实现了显著更高的个体效用，并比FaceChannel基线获得了更高的参与者让步率。CL条件下的平均唤醒度估计值显著更高，且输出范围更宽。在不同条件下，参与者效用和纳什距离没有显著变化。这些结果印证了将持续的情感个性化与差异性反馈相结合，用于实时谈判的实用价值。
+
+</details>
+
+---
+
+## 8. Koopman Model-Based Reinforcement Learning / 基于 Koopman 模型的强化学习
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14186v1](http://arxiv.org/abs/2611.14186v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14186v1)
+
+**Categories**: cs.RO, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We propose a Koopman model-based reinforcement learning (K-MBRL) algorithm for controlling nonlinear robotic systems with unknown dynamics. The K-MBRL learns a control policy by minimizing an approximate policy objective that combines the analytical immediate cost with an estimate of the future cost evaluated at the one-step predicted state. To this end, we develop a stochastic Koopman operator-based learning method to approximate the unknown nonlinear dynamics in a linear representation, while a critic function estimates the remaining future cost. This formulation offers two key advantages. First, the linear Koopman dynamics simplify the model-dependent policy gradient computation to a constant matrix product, enabling computationally efficient policy improvement. Second, one-step model propagation mitigates the accumulation of prediction errors associated with long-horizon rollouts while retaining long-term cost information through the critic. The learned policy enables real-time control through feedforward evaluation without online optimization. We establish policy learning convergence guarantees under standard stochastic approximation assumptions. Simulations on HalfCheetah and quadruped four-legged locomotion tasks demonstrate strong sample efficiency and improved performance compared with classical model-free and model-based reinforcement learning baselines. A pendulum swing-up task is used to assess policy gradient approximation accuracy and conduct ablation studies on the learning mechanism and key hyperparameters. The proposed K-MBRL is further validated on a physical quadruped robot performing a challenging sequence of maneuvers: rising to an upright posture supported by two rounded rear feet, maintaining balance during bipedal walking, and safely returning to the ground, as shown in Fig.1.
+
+我们提出了一种基于Koopman模型的强化学习（K-MBRL）算法，用于控制具有未知动态的非线性机器人系统。K-MBRL 通过最小化近似策略目标来学习控制策略，该近似策略目标将分析性即时成本与在一步预测状态下评估的未来成本估计相结合。为此，我们开发了一种基于随机Koopman算子的学习方法，以线性表示形式逼近未知的非线性动力学，同时由一个评判函数估计剩余的未来成本。这种建模方式具有两个主要优势。首先，线性Koopman动力学将依赖于模型的策略梯度计算简化为常数矩阵乘积，从而实现计算效率高的策略改进。其次，单步模型传播可减轻与长期滚动相关的预测误差的累积，同时通过评判函数保留长期成本信息。所学习的策略通过前馈评估实现实时控制，无需在线优化。我们在标准随机逼近假设下建立了策略学习收敛性保证。与经典的无模型和基于模型的强化学习基准相比，HalfCheetah和四足动物四足行走任务的模拟显示出强大的样本效率和更高的性能。使用摆锤摆起任务来评估策略梯度近似的准确性，并进行消融研究。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-11 (22 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-11-11
