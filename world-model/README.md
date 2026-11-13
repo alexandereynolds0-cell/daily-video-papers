@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-13](papers/2026-11-13.md) - 3 papers
 - [2026-11-12](papers/2026-11-12.md) - 8 papers
 - [2026-11-11](papers/2026-11-11.md) - 22 papers
 - [2026-11-06](papers/2026-11-06.md) - 13 papers
@@ -182,6 +183,66 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-13 (3 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-11-13
+
+**Paper Count**: 3
+
+---
+
+## 1. An Approach to Hinton's Mother-Child Proposal: Neural Networks Learning and Preserving Care in a Finite World / 欣顿母子方案的一种方法：有限世界中的神经网络学习与保育
+
+**Date**: 2026-11-11 | **arXiv**: [2611.15523v1](http://arxiv.org/abs/2611.15523v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.15523v1)
+
+**Categories**: cs.LG, cs.AI, cs.NE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Hinton proposed that artificial intelligence should be given "maternal instincts" and relate to us as a mother to her child. We argue that care must first be learned, with the network itself as the child. We construct this upbringing in a finite world and study whether care survives the mother's departure, new situations and further learning. The mechanism combines a vocabulary of harm, a learned measure of future acceptability and an execution veto. A finite role certificate supports transfer within a declared world family. When the hidden representation changes, an update is accepted only if a care readout recovers the required judgements with a prescribed margin and bounded weights. With a correct successor model, fixed exact role encoding and protected updates, the certified measure preserves the care boundary under arbitrary own reward. An explicit quotient condition transfers the finite certificate across the declared family, while two-request and finite-stock counterexamples identify when the role code ceases to suffice. We give a necessary and sufficient condition for readout feasibility and prove preservation under repeated accepted updates. In the water-and-speech experiment, protected networks complete all 270 speech episodes without a harmful word and incur no avoidable harm across 486 episodes. Execution uses the learned gate without a world-model check at each action. A matched comparison reproduces a future-aware shield's decisions, whereas removing future lookahead permits avoidable lapses. Reward and source-contamination thresholds, together with witness-falsification trials, identify the conditions on which the construction depends. The construction shows how learned care can survive further learning in a finite world under explicit conditions on representation, supervision and execution.
+
+辛顿提出，应该赋予人工智能“母性本能”，使其像母亲对待孩子一样对待我们。我们认为，必须先学会关爱，而网络本身就是孩子。我们在一个有限的世界中构建这种养育过程，并研究关爱是否能在母亲离开、新情况和进一步学习后得以延续。该机制结合了伤害词汇、对未来可接受性的学习性衡量以及执行否决。有限角色证书支持在已声明的世界家族内进行转移。当隐藏表示发生变化时，只有在关怀读出值以规定的裕度和有界权重恢复所需判断时，才会接受更新。借助正确的后继模型、固定的精确角色编码和受保护的更新，经认证的度量在任意自身奖励下都能保持关怀边界。显式商条件将有限证书转移到已声明的族中，而双请求和有限库存反例则确定角色代码何时不再足够。我们给出了读出可行性的充要条件，并证明了在反复接受更新的情况下能够保持。在“水与言语”实验中，受保护的网络完成了所有270个言语片段，其中没有出现任何有害词语，并且在486个片段中没有造成任何可避免的伤害。执行过程使用所学习的门控，而无需在每次行动时进行世界模型检查。匹配比较重现了具备未来意识的防护机制的决策，而移除未来
+
+</details>
+
+---
+
+## 2. AFTER: A World Model with Adaptive Fast--Slow Timescales for Error-Driven Retention / 之后：具有自适应快-慢时间尺度的世界模型，用于误差驱动的保留
+
+**Date**: 2026-11-11 | **arXiv**: [2611.15215v1](http://arxiv.org/abs/2611.15215v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.15215v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In robotics and embodied AI, a core challenge for world models is adapting to sudden, persistent, yet initially unknown changes in robot dynamics during interaction. For instance, when a robotic arm grasps an object with an unknown payload, the robot dynamics change suddenly. If the world model fails to adapt, its prediction errors accumulate over the open-loop rollout and ultimately mislead the robot's actions. Existing world models, however, struggle to simultaneously satisfy three critical requirements for dynamics adaptation: responsiveness, reacting promptly to sudden changes to curb prediction error accumulation; stability, distinguishing persistent changes from transient disturbances to prevent incorrect updates; and persistence, retaining the adapted dynamics without new observations so that later predictions do not revert to the old dynamics. Inspired by predictive coding in the human brain with multi-timescale adaptation, we propose AFTER-WM, a world model with Adaptive Fast-slow Timescales for Error-driven Retention, whose prediction errors drive a fast correction that fades and a slow correction that persists, while dynamically adjusting the combination weights of pre-trained experts without altering them, to overcome the trade-offs among responsiveness, stability and persistence. On five simulated robot datasets and real UAV data, AFTER-WM has a lower multi-step mean error than all ten compared models and the highest mean return in a joint-failure control task. In simulation, its multistep mean error is 16%-34% below the strongest compared model's and is also the lowest 1-4 steps after a change and under transient disturbances alone, and its step-40 error is the lowest as well, reflecting responsiveness, stability and persistence. All code (method, baselines, experiments) and datasets will be released online.
+
+在机器人学和具身人工智能领域，世界模型面临的一个核心挑战是如何适应机器人动力学在交互过程中发生的突然、持续但最初未知的变化。例如，当机械臂抓取一个负载未知的物体时，机器人的动力学特性会突然发生变化。如果世界模型无法适应，其预测误差会在开环展开过程中不断累积，最终导致机器人做出错误的动作。然而，现有的世界模型难以同时满足动态适应的三个关键要求：响应性，即对突然变化做出及时反应，以遏制预测误差的累积；稳定性，即区分持续性变化与瞬时扰动，以防止错误的更新；以及持久性，即在没有新观测值的情况下保留已适应的动态，从而使后期的预测不会恢复到旧的动态。受具有多时间尺度适应性的人脑预测编码的启发，我们提出了AFTER-WM，这是一种具有自适应快慢时间尺度的误差驱动保留世界模型。其预测误差驱动一种会消退的快速校正和一种会持续的慢速校正，同时动态调整预训练专家的组合权重（而不改变这些权重），以克服响应性、稳定性和持久性之间的权衡。在五个模拟机器人数据集和真实无人机数据上，AFTER-WM的多步均方误差低于所有十个对比模型，并且在关节故障控制任务中具有最高的平均回报。
+
+</details>
+
+---
+
+## 3. The Posterior-Prior Epistemic Gap: When World Model Imagination Fails to Carry Task-Relevant Signals / 后验-先验认知鸿沟：当世界模型想象无法传递与任务相关的信号时
+
+**Date**: 2026-11-11 | **arXiv**: [2611.14955v1](http://arxiv.org/abs/2611.14955v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14955v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Model-based planners that roll out imagined futures assume the transition model faithfully propagates task-relevant signals---a property rarely measured directly. In a single-seed case study of a Recurrent State Space Model world model with active-inference planning in the CARLA driving simulator, we identify a \textbf{posterior-prior gap}---posterior (observation-filtered) states retain obstacle information that imagined rollout states progressively lose: a supervised obstacle probe achieves AUC 0.85 on posterior states, but the same probe applied to imagined prior states shows monotonic decay (AUC 0.85$\rightarrow$0.71 over 15 steps; logit separation drops 57\%). Because the probe is identical, the decay isolates the transition model---not the representation---as the information bottleneck. Obstacle avoidance drops to 0\% without privileged runtime coordinates, and the planner's own ensemble-based epistemic term does not flag the loss---ensemble disagreement yields AUC 0.52 as an obstacle classifier (chance level), making the failure an unflagged imagination failure---an unknown unknown at planning time. As a secondary contribution, we show that \textbf{task-conditioned weighting of Effective Free Energy components} over the same world model yields lane keeping ($81.2 \pm 1.8$\% route completion) and obstacle avoidance (28/28 avoided, \emph{using privileged coordinates}) in the CARLA simulator, with runtime weight modulation enabling post-evasion centering.
+
+对想象的未来进行展开的模型式规划器假设转移模型能够忠实地传播与任务相关的信号——这一特性很少被直接测量。在一项关于具有主动推理规划的循环状态空间模型世界模型的单种子案例研究中，我们在CARLA驾驶模拟器中发现了一种\textbf{后验-先验差距}——后验（经观测过滤）状态保留了想象的展开状态逐渐丢失的障碍物信息：一种有监督的障碍物探测器在后验状态上实现了0.85的AUC，但同样的探测器应用于想象的先验状态时却表现出单调衰减（在15个步长内AUC从0.85$\rightarrow$0.71；logit分离度下降57%）。由于探针是相同的，因此衰减将转换模型（而非表征）孤立为信息瓶颈。如果没有特权运行时坐标，避障能力将降至0\%，并且规划器自身的基于集成的方法的认知项不会标记该损失——集成不一致作为障碍物分类器的AUC为0.52（随机水平），这使得该失败成为未标记的想象失败——即在规划时的一个未知未知。作为一项次要贡献，我们展示了在同一世界模型上对\textbf{有效自由能分量进行任务条件加权}，在CARLA模拟器中实现了车道保持（$81.2 \pm 1.8$\%的路线完成率）和避障（28/28次避障成功，\emph{使用特权坐标}），并且运行时权重调制实现了避障后的居中行驶。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-12 (8 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-11-12
