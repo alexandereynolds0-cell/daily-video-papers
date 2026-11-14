@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-14](papers/2026-11-14.md) - 3 papers
 - [2026-11-13](papers/2026-11-13.md) - 3 papers
 - [2026-11-12](papers/2026-11-12.md) - 8 papers
 - [2026-11-11](papers/2026-11-11.md) - 22 papers
@@ -183,6 +184,66 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-14 (3 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-11-14
+
+**Paper Count**: 3
+
+---
+
+## 1. InertiaMPDD: Multimodal Personalized Depression Detection via Emotional Inertia-Inspired Dynamics Modeling / InertiaMPDD：通过情绪惰性启发式动力学建模实现多模态个性化抑郁症检测
+
+**Date**: 2026-11-12 | **arXiv**: [2611.16647v1](http://arxiv.org/abs/2611.16647v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.16647v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal depression screening estimates risk from speech, visual behavior and language. Current methods mainly predict labels, with limited evidence of departures from a non-depressed reference. Recording-level supervision also leaves fine-grained emotional dynamics unannotated. Motivated by emotional inertia, the persistence of affect, InertiaMPDD learns healthy next-state patterns using a world-model-inspired latent predictor. Using pretrained multimodal representations, it predicts from observed history and context. Reference deviation, residual decay rate and a Jacobian spectral descriptor form reference-derived emotional dynamics descriptors, evaluated as candidate proxy biomarkers for standalone screening and personalized decision correction. Across five cohorts from four datasets, fusion reaches 98.41% F1 on D-Vlog and 84.98% on LMVD. Standalone descriptors outperform fixed additive fusion on MPDD but discriminate weakly on AVEC2014. These findings distinguish reference informativeness from fusion benefit and reveal context-dependent utility.
+
+多模态抑郁症筛查通过言语、视觉行为和语言来评估风险。当前的方法主要预测标签，对于偏离非抑郁对照组的证据有限。记录层面的监督也无法对精细的情绪动态进行标注。InertiaMPDD受情绪惯性（即情绪的持续性）的启发，使用一种受世界模型启发的潜在预测器来学习健康的下一状态模式。它使用预训练的多模态表示，根据观察到的历史和上下文进行预测。参考偏差、残余衰减率和雅可比谱描述符共同构成源自参考的情绪动态描述符，被评估为用于独立筛查和个性化决策校正的候选替代生物标志物。在来自四个数据集的五个队列中，融合在D-Vlog上达到了98.41%的F1值，在LMVD上达到了84.98%的F1值。在MPDD上，独立描述符的性能优于固定加性融合，但在AVEC2014上的区分能力较弱。这些发现将参考信息量与融合益处区分开来，并揭示了依赖于情境的实用性。
+
+</details>
+
+---
+
+## 2. PhysCapBench: A Cross-Domain Benchmark for Physically Grounded Video Captioning / PhysCapBench：一种用于物理性视频字幕的跨领域基准
+
+**Date**: 2026-11-12 | **arXiv**: [2611.16424v1](http://arxiv.org/abs/2611.16424v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.16424v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Physical AI aims to learn transferable physical knowledge from real-world experience to understand, predict, and act in the physical world. Internet videos and embodied demonstrations provide complementary observations of motion, interaction, and state evolution. A foundational data challenge is to measure and preserve this physical information as training supervision. In video-language pretraining, captions express observed processes in language, yet a semantically correct description can omit the interactions and transitions that define those processes. Rich physical experience in video does not automatically translate into sufficient language supervision. This gap calls for a yardstick to assess annotation quality, compare captioning strategies, and guide training-data refinement. Motivated by our data construction for world-model pretraining, we introduce PhysCapBench, to our knowledge the first unified physical-caption benchmark spanning all three domains: third-person scenes, egocentric manipulation, and handheld-gripper demonstrations. It provides human-verified annotations for 1,500 video sequences and evaluates accuracy and coverage through seven physical dimensions. We examine downstream utility through video reconstruction and manipulation-policy fine-tuning. Physical captions reduce reconstruction LPIPS by 8.6-9.5% on third-person videos and 26.9-30.9% on egocentric videos relative to metadata captions. Training-instruction enrichment improves both PhysCapBench scores and policy success, including a 7.5-percentage-point gain for pi0.5 on a RoboTwin 2.0 subtask. PhysCapBench makes the physical content of language supervision inspectable and comparable, providing a cross-domain basis for its evaluation and improvement.
+
+物理人工智能旨在从现实世界的经验中学习可迁移的物理知识，以便理解、预测和在物理世界中采取行动。互联网视频和具身演示提供了对运动、交互和状态演变的互补性观察。一个基本的数据挑战是如何将这些物理信息进行测量和保留，以用作训练监督。在视频-语言预训练中，字幕用语言表达所观察到的过程，但语义正确的描述可能会省略定义这些过程的相互作用和转换。视频中丰富的物理体验并不会自动转化为充分的语言监督。这一差距要求制定一个标准，用于评估标注质量、比较字幕策略并指导训练数据的优化。在世界模型预训练的数据构建的启发下，我们推出了PhysCapBench。据我们所知，这是首个统一的物理字幕基准，涵盖所有三个领域：第三人称场景、以自我为中心的操纵以及手持夹持器演示。它为1500个视频序列提供了经人工核验的标注，并通过七个物理维度评估准确性和覆盖范围。我们通过视频重建和操作策略微调来检验下游效用。与元数据字幕相比，物理字幕在第三人称视频中的重建LPIPS降低了8.6%-9.5%，在以自我为中心的视频中降低了26.9%-30.9%。训练指令的丰富性提高了 PhysCapBench 和
+
+</details>
+
+---
+
+## 3. Latent Imagination for Parameterized Action Spaces / 参数化动作空间的潜在想象
+
+**Date**: 2026-11-11 | **arXiv**: [2611.15744v1](http://arxiv.org/abs/2611.15744v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.15744v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Parameterized-action MDPs (PAMDPs) ask an agent to choose a discrete action together with continuous parameters whose meaning depends on that choice. Model-free PAMDP methods act fast but need many interactions; model-based methods are sample-efficient but plan at every decision, which makes them slow to act. We introduce HyLI (Hybrid Latent Imagination), a model-based agent that learns a hybrid policy entirely in the latent imagination of a world model and acts with a single forward pass. To address learning problems that the PAMDP structure creates, HyLI adds counterfactual mode evaluation, which gives every discrete action a learning signal at every imagined state, and success-window replay, which keeps rare successes in training. On seven standard PAMDP benchmarks, HyLI is within one published standard deviation of, or above, the published score of the strongest model-free baseline in our comparison on all 7 tasks, reaches 90% of that score with 2.4x fewer environment steps than that baseline (5.0x when its reward-free pre-training is counted), and decides 67x faster than the model-based planner DLPA at its published planner settings. It is the only method in our comparison that is both more sample-efficient than that baseline and fast enough for real-time control.
+
+参数化动作MDP（PAMDP）要求智能体选择一个离散动作，以及一些连续参数，这些参数的含义取决于该选择。无模型PAMDP方法行动迅速，但需要大量交互；基于模型的方法样本效率高，但在每次决策时都需要规划，因此行动缓慢。我们推出了HyLI（混合潜在想象），这是一种基于模型的智能体，它完全在世界模型的潜在想象中学习混合策略，并通过一次前向传播来采取行动。为了解决PAMDP结构带来的学习问题，HyLI增加了反事实模式评估，该评估在每个想象状态下为每个离散动作提供一个学习信号，并增加了成功窗口回放，该回放将罕见的成功保留在训练中。在七个标准PAMDP基准上，HyLI在所有7项任务的比较中，其得分与最强的无模型基准的已发布得分之差不超过一个已发布的标准差，或高于该得分；HyLI比该基准少2.4倍的环境步数（如果计入其无奖励预训练，则少5.0倍）即可达到该得分的90%；HyLI的决策速度比基于模型的规划器DLPA在其已发布的规划器设置下快67倍。在我们比较的方法中，它是唯一一种既比基线模型更具样本效率，又足够快以实现实时控制的方法。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-13 (3 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-11-13
