@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-14](papers/2026-11-14.md) - 12 papers
 - [2026-11-13](papers/2026-11-13.md) - 14 papers
 - [2026-11-12](papers/2026-11-12.md) - 3 papers
 - [2026-11-11](papers/2026-11-11.md) - 15 papers
@@ -184,6 +185,210 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-14 (12 papers)</b></summary>
+
+# arXiv Video Papers - 2026-11-14
+
+**Paper Count**: 12
+
+---
+
+## 1. Back to Pixels: Lifting Latent Video Diffusion into Pixel Space / 回归像素：将潜在视频扩散提升至像素空间
+
+**Date**: 2026-11-12 | **arXiv**: [2611.17336v1](http://arxiv.org/abs/2611.17336v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.17336v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Frontier video generation models work in a VAE latent space that compresses video in both space and time. This compression made training tractable, but now limits high-resolution, controllable, and interactive generation -- doubling resolution quadruples token count, conditions apply to groups of frames rather than individual ones, and each response must wait for the rest of its multi-frame block. We present PixVid, a simple yet effective method that lifts a pretrained latent video model to directly generate every frame in pixel space. PixVid keeps the diffusion transformer and replaces the VAE decoder with a convolutional head that renders its outputs into pixels. We find that predicting clean video rather than velocity, together with a larger noise shift, is key to quality. Finetuned from Wan2.1-14B, PixVid is competitive with the latent baseline within $\sim 1.3$M training clips. Working framewise in pixels, it generates at $2\times$ higher resolution with the same per-frame token count, keeps depth-conditioned video editing aligned under fast motion, and responds to each action at the next frame. Project page: https://chenshuo20.github.io/PixVid/
+
+前沿视频生成模型在 VAE 潜在空间中工作，该空间在空间和时间上对视频进行压缩。这种压缩使训练变得可行，但现在限制了高分辨率、可控和交互式生成——分辨率翻倍会使令牌数增加四倍，条件适用于一组帧而非单个帧，并且每个响应都必须等待其多帧块的其余部分。我们推出了 PixVid，这是一种简单而有效的方法，它将预训练的潜在视频模型提升到可以直接在像素空间中生成每一帧。PixVid 保留了扩散变换器，并将 VAE 解码器替换为卷积头，后者将其输出渲染为像素。我们发现，预测干净的视频而非速度，再加上更大的噪声偏移，是实现高品质的关键。PixVid 在 Wan2.1-14B 的基础上进行了微调，在 $\sim 1.3$M 的训练片段范围内，与潜在基线具有竞争力。它以像素为单位逐帧工作，在每帧的标记数相同的情况下，生成的分辨率提高了 $2\times$，在快速运动下保持深度条件视频编辑的一致性，并在下一帧对每个动作做出响应。项目页面： https://chenshuo20.github.io/PixVid/
+
+</details>
+
+---
+
+## 2. K2V: Generative Keyframing For Physically Plausible Video Generation / K2V：用于生成物理上可信视频的生成式关键帧技术
+
+**Date**: 2026-11-12 | **arXiv**: [2611.17324v1](http://arxiv.org/abs/2611.17324v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.17324v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video diffusion models are able to generate samples with high-quality appearance and textural qualities. However, content produced by these methods is known to exhibit significant physical errors. This is because, in a classical video generation setting, all physical reasoning must take place simultaneously and exclusively within the diffusion process.We propose to resolve these issues by redistributing the task of physical reasoning onto a language model-backed keyframe generation module, which allows for explicit reasoning in language, and fine-grained control over the appearance of the video at important moments in the video. We then condition a video generation model with these keyframes, reducing the role of the diffusion model to the simpler task of interpolating between physically-correct intermediate states, rather than inferring an entire sequence with diffusion. Results demonstrate that our approach significantly outperforms existing approaches, achieving state-of-the-art performance on the Physics-IQ Verified benchmark and PhyGenBench.
+
+视频扩散模型能够生成具有高品质外观和纹理特质的样本。然而，众所周知，通过这些方法生成的内容会出现明显的物理错误。这是因为，在传统的视频生成设置中，所有物理推理都必须同时且仅在扩散过程中进行。我们提出，通过将物理推理任务重新分配到一个由语言模型支持的关键帧生成模块来解决这些问题，该模块允许使用语言进行显式推理，并对视频中重要时刻的视频外观进行精细控制。然后，我们使用这些关键帧对视频生成模型进行条件化处理，将扩散模型的作用降级为在物理上正确的中间状态之间进行插值的更简单任务，而不是通过扩散来推断整个序列。结果表明，我们的方法显著优于现有方法，在 Physics-IQ Verified 基准和 PhyGenBench 上取得了最先进的性能。
+
+</details>
+
+---
+
+## 3. Spatial Foundry: A Multimodal Dataset for Spatial Intelligence / Spatial Foundry：用于空间智能的多模态数据集
+
+**Date**: 2026-11-12 | **arXiv**: [2611.17318v1](http://arxiv.org/abs/2611.17318v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.17318v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Spatial intelligence requires connecting visual observations to the geometry, objects, and persistent state of an environment. Images alone leave these relationships implicit, while disconnected annotations make it difficult to study appearance, camera motion, and scene changes under a common reference. We introduce Spatial Foundry, a collection of 5,280 furnished residential 3D scene configurations with editable assets and aligned visual, geometric, and temporal data. Its modalities include floor plans, perspective and panoramic RGB, metric depth, point clouds, meshes, instance-level 3D bounding boxes, and camera trajectories paired with video. Shared scene coordinates link observations across views and time; editable source scenes enable additional camera paths and controlled object changes. We describe the data representation and construction workflow, and discuss applications in floor-plan-conditioned 3D generation, geometric reconstruction, instance-level perception, camera-conditioned video generation, shared world modeling, and scene editing. Controlled camera and scene variations support spatial perception and world-model research. The public project page provides videos and an interactive colored point-cloud preview.
+
+空间智能需要将视觉观察与环境的几何形状、物体和持久状态联系起来。仅有图像无法显式呈现这些关系，而相互脱节的标注则使人们难以在共同的参照系下研究外观、摄像机运动和场景变化。我们推出了Spatial Foundry，这是一个包含5280个带家具的住宅3D场景配置的集合，具有可编辑的资产以及对齐的视觉、几何和时间数据。其模态包括平面图、透视图和全景RGB、度量深度、点云、网格、实例级3D包围盒以及与视频配对的摄像机轨迹。共享场景坐标将不同视图和时间点的观测结果联系起来；可编辑的源场景支持额外的摄像机路径和受控的对象变化。我们介绍了数据表示和构建工作流程，并讨论了在平面图条件下的 3D 生成、几何重建、实例级感知、摄像头条件下的视频生成、共享世界建模和场景编辑等方面的应用。受控的摄像机和场景变化有助于空间感知和世界模型研究。公开项目页面提供视频和交互式彩色点云预览。
+
+</details>
+
+---
+
+## 4. Consistent Video-to-Video Translation via Explicit Correspondences / 通过显式对应实现一致的视频到视频翻译
+
+**Date**: 2026-11-12 | **arXiv**: [2611.17298v1](http://arxiv.org/abs/2611.17298v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.17298v1)
+
+**Categories**: cs.CV, cs.AI, cs.GR, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Interactive video-to-video applications require real-time generation while maintaining long-range temporal consistency. However, recent methods achieve speed by restricting attention to a fixed-length causal window. This limits long-range consistency whenever relevant history falls outside the context window. To address this limitation, we introduce vid2vid-long, a correspondence-based approach grounded in a simple observation. Video-to-video translation provides an explicit cross-frame reference: the regions that match in the input video should match in the output video too. Concretely, we compute patch-level correspondences in the input, guiding retrieval of previously generated outputs in the corresponding regions, and condition the model on these patches through correspondence cross-attention. Our experiments demonstrate that vid2vid-long consistently improves long-range temporal consistency across recent video models while preserving generation quality and real-time performance.
+
+交互式视频到视频应用需要在保持长期时间一致性的同时实现实时生成。然而，近期的方法通过将注意力限制在固定长度的因果窗口上来实现速度。每当相关历史记录超出上下文窗口时，这都会限制长程一致性。为了解决这一局限性，我们引入了 vid2vid-long，这是一种基于对应关系的方法，其基础是一个简单的观察结果。视频到视频的转换提供了一种明确的跨帧参考：在输入视频中匹配的区域在输出视频中也应匹配。具体而言，我们在输入中计算补片级别的对应关系，指导检索相应区域中先前生成的输出，并通过对应关系交叉注意力使模型以这些补片为条件。我们的实验表明，vid2vid-long 在保持生成质量和实时性能的同时，始终能够改善近期视频模型中的长程时间一致性。
+
+</details>
+
+---
+
+## 5. Report of the 8th LSVOS Challenge: Mobile Unified Multimodal Understanding / 第 8 届 LSVOS 挑战赛报告：移动统一多模态理解
+
+**Date**: 2026-11-12 | **arXiv**: [2611.16925v1](http://arxiv.org/abs/2611.16925v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.16925v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This report summarizes the Mobile Unified Multimodal Understanding (MUMU) track of the 8th Large-scale Video Object Segmentation (LSVOS) Challenge, held in conjunction with ECCV 2026. MUMU asks for a single unified model that jointly performs multi-concept image tagging over quality, scene, and event vocabularies, open-vocabulary object detection, and concise image captioning, within a budget of 0.5B parameters and 8 GB of peak inference memory. Submissions are ranked by a weighted task score scaled by an efficiency factor. We describe the tasks, rules, and evaluation protocol, report the final results, and review the methods of the top three teams. All three leading solutions build on the compact Florence-2-base model, but extend it in different ways: lightweight tagging heads with cross-task inference refinement, a shared low-rank adapter trained on coverage-aware multi-source data with task-dependent decoding, and a training-free pipeline that maps captions to tags and applies detection test-time augmentation. The results show that a compact prompt-based vision-language model can serve all three outputs when supervision, decoding, and cross-task cues are designed for each task, while open-vocabulary detection on novel categories remains the main bottleneck.
+
+本报告总结了与 ECCV 2026 一同举办的第 8 届大规模视频对象分割（LSVOS）挑战赛的移动统一多模态理解（MUMU）赛道。MUMU 要求提供一个单一的统一模型，该模型在 0.50 亿个参数和 8 GB 的峰值推理内存的预算范围内，共同执行基于质量、场景和事件词汇的多概念图像标记、开放词汇对象检测和简洁的图像字幕生成。提交作品按加权任务得分排名，该得分乘以效率系数进行缩放。我们介绍了任务、规则和评估方案，报告了最终结果，并评述了前三名参赛队伍的方法。所有三个领先的解决方案都建立在紧凑的 Florence-2-base 模型之上，但以不同的方式对其进行了扩展：具有跨任务推理优化的轻量级标记头；在具有任务相关解码的覆盖感知多源数据上训练的共享低秩适配器；以及将字幕映射到标签并应用检测测试时增强的无训练管道。结果表明，当为每个任务设计监督、解码和跨任务提示时，紧凑的基于提示的视觉-语言模型可以提供所有三种输出，而对新类别进行开放词汇检测仍然是主要瓶颈。
+
+</details>
+
+---
+
+## 6. TokenStream: Multi-Subject Personalized Video Generation with Token-wise LoRA and Guided Attention / TokenStream：使用基于Token的LoRA和引导式注意力机制生成多主体个性化视频
+
+**Date**: 2026-11-12 | **arXiv**: [2611.16897v1](http://arxiv.org/abs/2611.16897v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.16897v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce TokenStream, an optimization-based framework that composes independently learned subject identities in text-to-video generation without a reference-video training dataset or joint optimization of each new subject combination. Learning from a single reference image makes subject appearance difficult to separate from static-image bias, while merging independently trained adapters can mix identities. Token-wise LoRA (ToRA) restricts low-rank updates to the cross-attention value projections of subject-associated text tokens, providing a separate adaptation path for each subject. A T2V-guided stream copies queries and keys from the frozen base model during early denoising to reuse its layout and motion priors while retaining personalized values. We also introduce Multi-DB, a 30-subject, 122-prompt benchmark with appearance-free prompts and varied interactions. On Multi-DB at 1.3B, TokenStream improves identity preservation from 0.422 for DreamBooth to 0.467 and textual alignment from 0.652 to 0.688.
+
+我们推出了 TokenStream，这是一个基于优化的框架，能够在文本生成视频的过程中组合独立学习的人物身份，而无需参考视频训练数据集或对每个新的人物组合进行联合优化。从单个参考图像中学习，使得主体外观难以与静态图像偏差区分开来，而合并独立训练的适配器则可能导致身份混淆。基于Token的LoRA（ToRA）将低秩更新限制在与主体相关的文本Token的交叉注意力值投影上，为每个主体提供独立的适配路径。T2V 引导流在早期去噪过程中从冻结的基础模型中复制查询和键，以重用其布局和运动先验，同时保留个性化值。我们还推出了 Multi-DB，这是一个包含 30 个主体、122 个提示的基准，具有不含外观的提示和多样的互动。在 13 亿参数的 Multi-DB 上，TokenStream 将身份保留率从 DreamBooth 的 0.422 提高到 0.467，将文本对齐率从 0.652 提高到 0.688。
+
+</details>
+
+---
+
+## 7. PhysLoop: Harnessing LLMs' Physics Awareness for Self-Improving Video Generation Models / PhysLoop：利用大语言模型的物理意识来改进视频生成模型
+
+**Date**: 2026-11-12 | **arXiv**: [2611.16748v1](http://arxiv.org/abs/2611.16748v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.16748v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation models produce visually realistic videos but still struggle with physical dynamics and causal consistency. Learning from generated videos requires fine-grained physical supervision, yet reliable quality judgments, correction pairs, and controlled variations are difficult to obtain. Large language models (LLMs) possess physical knowledge, but struggle to reliably guide video generation models in producing their training videos. We present PhysLoop, a unified harness designed to support physically grounded self-improvement in video generation models. The harness guides and constrains LLMs throughout video generation, selection, and correction, distilling their physical knowledge into physically consistent videos. The framework supports controllable training-data construction and inference-time video repair. By identifying and correcting failures, PhysLoop marks a key milestone toward recursive self-improvement (RSI) in video generation models with limited human intervention. We release 100K videos spanning diverse, realistic indoor and outdoor scenes, along with generation tools and two evaluation datasets: PhysLoop-Gen and PhysLoop-Repair. We evaluate controllable generation and localized repair on these datasets, respectively, and assess physical behavior on the external Physics-IQ Verified benchmark.
+
+视频生成模型可以生成视觉上逼真的视频，但在物理动态和因果一致性方面仍存在困难。从生成的视频中学习需要细粒度的物理监督，但可靠的质量判断、校正对和受控变体却难以获得。大型语言模型（LLM）具备物理知识，但在可靠地指导视频生成模型制作其训练视频方面存在困难。我们推出了PhysLoop，这是一个统一的工具，旨在支持视频生成模型在物理基础上的自我改进。该框架在整个视频生成、选择和校正过程中对大语言模型（LLM）进行引导和约束，将其物理知识提炼为物理上一致的视频。该框架支持可控的训练数据构建和推理时视频修复。通过识别和纠正错误，PhysLoop 在视频生成模型中实现了在有限的人为干预下进行递归自我改进 (RSI)，从而迈出了关键一步。我们发布了 10 万个视频，涵盖多样化的逼真室内和室外场景，并附有生成工具和两个评估数据集：PhysLoop-Gen 和 PhysLoop-Repair。我们分别在这些数据集上评估了可控生成和局部修复，并在外部的Physics-IQ Verified基准上评估了物理行为。
+
+</details>
+
+---
+
+## 8. UniSpark: Exploring Hybrid Attention for Multimodal Understanding and Generation / UniSpark：探索用于多模态理解和生成的混合注意力机制
+
+**Date**: 2026-11-12 | **arXiv**: [2611.16517v1](http://arxiv.org/abs/2611.16517v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.16517v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present UniSpark-9B, a unified multimodal model that investigates hybrid attention for visual understanding and generation. Built on a Mixture-of-Transformer-Experts backbone with approximately 9B parameters in each branch, UniSpark combines full attention for explicit token interactions with GatedDeltaNet linear attention for compact context propagation. Autoregressive text prediction and visual flow matching jointly support visual question answering, text-to-image generation, instruction-guided editing, and interleaved text-image prediction. In interleaved generation, noisy visual targets are isolated from subsequent predictions, while clean visual representations provide context for later outputs. A blockwise protocol enforces this distinction through attention masks in full-attention layers and recurrent-state retention rules in linear-attention layers. The selected training sources contain 159.7M generation samples, 213.4M understanding samples, and 624.8K interleaved sequences. A four-stage curriculum jointly trains multimodal understanding and visual generation, refining answer accuracy and instruction following while extending image synthesis to 2K. UniSpark scores 2470.3 on MME-S and 0.83 on GenEval. Qualitative examples further illustrate its capabilities in interleaved image generation, video synthesis, and video editing. Together, these results demonstrate that hybrid attention provides an effective backbone for unified multimodal understanding and generation.
+
+我们推出了 UniSpark-9B，这是一种统一的多模态模型，旨在研究用于视觉理解和生成的混合注意力机制。UniSpark 基于混合 Transformer 专家主干构建，每个分支约有 90 亿个参数，将用于显式 token 交互的完全注意力与用于紧凑上下文传播的 GatedDeltaNet 线性注意力相结合。自回归文本预测和视觉流匹配共同支持视觉问答、文本到图像生成、指令引导的编辑以及交错的文本-图像预测。在交织生成中，有噪声的视觉目标与后续预测隔离开来，而干净的视觉表征则为后续输出提供上下文。一种分块协议通过全注意力层中的注意力掩码和线性注意力层中的循环状态保留规则来强制实施这种区分。所选的训练源包含 1.597 亿个生成样本、2.134 亿个理解样本和 62.48 万个交织序列。四阶段课程共同训练多模态理解和视觉生成，提高答案准确性和指令遵循能力，同时将图像合成扩展至 2K。UniSpark 在 MME-S 上的得分为 2470.3，在 GenEval 上的得分为 0.83。定性示例进一步说明了其在交错图像生成、视频合成和视频编辑方面的能力。这些结果共同表明，混合注意力为统一的多模态理解和生成提供了一个有效的骨干。
+
+</details>
+
+---
+
+## 9. PiLLVD: A Real-World Low-Light Video Dataset for Dynamic Scenes Captured with Off-the-Shelf Cameras / PiLLVD：使用商用摄像头拍摄的动态场景真实低光视频数据集
+
+**Date**: 2026-11-12 | **arXiv**: [2611.16515v1](http://arxiv.org/abs/2611.16515v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.16515v1)
+
+**Categories**: cs.CV, eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Low-light image and video enhancement has received increasing attention in recent years. However, most existing enhancement methods are developed and evaluated on still images, while progress in low-light video enhancement remains limited by the lack of real-world paired video datasets. Acquiring paired low-light and normal-light video sequences is challenging because it requires spatially and temporally aligned captures while avoiding motion blur, exposure mismatch, and correspondence errors in dynamic scenes. To address this gap, we introduce PiLLVD, the Pi-based Low-Light Video Dataset, a paired low-light video dataset captured using an accessible Raspberry Pi-based multi-camera system with off-the-shelf cameras. PiLLVD provides paired low-light and aligned normal-light reference sequences for dynamic indoor and outdoor scenes, including diverse human and object motion under varying illumination conditions. Unlike existing datasets that are often image-based, static, synthetic, or limited to simple motion patterns, PiLLVD focuses on motion-rich scenes where frame-to-frame stability and motion-related artefacts are important for evaluation. In addition to presenting the dataset and acquisition pipeline, we benchmark representative pre-trained low-light video enhancement methods on PiLLVD under a zero-shot setting. The results show that existing methods do not generalise uniformly across the proposed sequences, highlighting the challenges posed by the proposed dataset and its value for both benchmarking existing methods and supporting the development of future low-light video enhancement algorithms.
+
+近年来，低光图像和视频增强技术越来越受到关注。然而，大多数现有的增强方法都是在静态图像上开发和评估的，而低光视频增强的进展仍然受到缺乏真实世界的成对视频数据集的限制。获取成对的低光和正常光视频序列具有挑战性，因为这需要空间和时间上对齐的拍摄，同时还要避免动态场景中的运动模糊、曝光不匹配和对应关系误差。为了弥补这一缺憾，我们推出了 PiLLVD，即基于 Pi 的低光视频数据集。该成对低光视频数据集使用基于 Raspberry Pi 的易用型多摄像头系统，并采用市售摄像头进行采集。PiLLVD 为动态室内和室外场景提供了成对的低光和对齐的正常光参考序列，包括在不同照明条件下的各种人和物体运动。与现有数据集（通常基于图像、静态、合成或仅限于简单的运动模式）不同，PiLLVD 侧重于运动丰富的场景，在这些场景中，帧间稳定性以及与运动相关的伪影对于评估至关重要。除了介绍数据集和采集流程外，我们还在零样本设置下，对 PiLLVD 上具有代表性的预训练低光视频增强方法进行了基准测试。结果表明，现有方法在所提出的序列中并不能统一地实现泛化，这凸显了所提出的数据集带来的挑战，以及
+
+</details>
+
+---
+
+## 10. PhysCapBench: A Cross-Domain Benchmark for Physically Grounded Video Captioning / PhysCapBench：用于物理基础视频字幕的跨域基准
+
+**Date**: 2026-11-12 | **arXiv**: [2611.16424v1](http://arxiv.org/abs/2611.16424v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.16424v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Physical AI aims to learn transferable physical knowledge from real-world experience to understand, predict, and act in the physical world. Internet videos and embodied demonstrations provide complementary observations of motion, interaction, and state evolution. A foundational data challenge is to measure and preserve this physical information as training supervision. In video-language pretraining, captions express observed processes in language, yet a semantically correct description can omit the interactions and transitions that define those processes. Rich physical experience in video does not automatically translate into sufficient language supervision. This gap calls for a yardstick to assess annotation quality, compare captioning strategies, and guide training-data refinement. Motivated by our data construction for world-model pretraining, we introduce PhysCapBench, to our knowledge the first unified physical-caption benchmark spanning all three domains: third-person scenes, egocentric manipulation, and handheld-gripper demonstrations. It provides human-verified annotations for 1,500 video sequences and evaluates accuracy and coverage through seven physical dimensions. We examine downstream utility through video reconstruction and manipulation-policy fine-tuning. Physical captions reduce reconstruction LPIPS by 8.6-9.5% on third-person videos and 26.9-30.9% on egocentric videos relative to metadata captions. Training-instruction enrichment improves both PhysCapBench scores and policy success, including a 7.5-percentage-point gain for pi0.5 on a RoboTwin 2.0 subtask. PhysCapBench makes the physical content of language supervision inspectable and comparable, providing a cross-domain basis for its evaluation and improvement.
+
+物理人工智能旨在从现实世界的经验中学习可迁移的物理知识，以便理解、预测和在物理世界中采取行动。互联网视频和具身演示提供了对运动、交互和状态演变的互补性观察。一个基本的数据挑战是如何将这些物理信息进行测量和保存，以用于训练监督。在视频-语言预训练中，字幕用语言表达所观察到的过程，但即使描述在语义上是正确的，也可能省略了界定这些过程的相互作用和转换。视频中丰富的物理体验并不会自动转化为充分的语言监督。这一差距需要一个衡量标准来评估标注质量、比较字幕策略并指导训练数据的优化。在世界模型预训练的数据构建工作的启发下，我们推出了PhysCapBench。据我们所知，这是首个统一的物理字幕基准，涵盖所有三个领域：第三人称场景、以自我为中心的操纵以及手持夹持器演示。它为1,500个视频序列提供了经人工核验的标注，并通过七个物理维度评估准确性和覆盖范围。我们通过视频重建和操作策略微调来检验下游效用。与元数据字幕相比，物理字幕将第三人称视频的重建LPIPS降低了8.6%-9.5%，将以自我为中心的视频的重建LPIPS降低了26.9%-30.9%。训练指令的丰富性提高了 PhysCapBench 和
+
+</details>
+
+---
+
+## 11. VBot Exo2Ego Policy: Lightweight Data Collection and Exocentric-to-Egocentric Video Generation / VBot Exo2Ego 策略：轻量级数据收集和从外中心到自我中心的视频生成
+
+**Date**: 2026-11-12 | **arXiv**: [2611.16417v1](http://arxiv.org/abs/2611.16417v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.16417v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present VBot Exo2Ego Policy, a video generation model that turns third-person videos into first-person observations of a selected actor, offering a practical way to expand first-person operation data from abundant real-world footage. To support this goal, we introduce a lightweight data collection pipeline and mobile app that support first-person recording, third-person recording, and synchronized capture of both views. This setup combines accessible single-view collection with paired RGB and camera geometry for learning cross-view correspondence. Building on a pretrained video diffusion transformer, our model incorporates geometric guidance and auxiliary supervision from semantic masks and hand keypoints to facilitate optimization and improve the fidelity of hand-object interactions. Camera geometry is injected stochastically during training and gradually removed, allowing inference without target-camera calibration. To accommodate the diversity of Internet videos, we combine source-video perception and reasoning, optional actor references, and multi-shot adaptation to identify the intended actor and follow an operation across camera cuts. The collection system and generation model provide a foundation for expanding first-person operation data across tasks, scenes, and participants.
+
+我们推出了VBot Exo2Ego Policy，这是一种视频生成模型，可将第三人称视频转换为对选定角色的第一人称观察，从而提供一种实用方法，从丰富的现实世界影像中扩展第一人称操作数据。为了实现这一目标，我们推出了一个轻量级数据采集管道和移动应用程序，支持第一人称录制、第三人称录制以及两种视角的同步采集。该设置将易于获取的单视角采集与成对的RGB和相机几何信息相结合，以学习跨视角对应关系。我们的模型基于预训练的视频扩散变压器，结合了来自语义掩码和手部关键点的几何引导和辅助监督，以促进优化并提高手部与物体之间交互的逼真度。在训练过程中，相机几何信息以随机方式注入，并逐渐移除，从而实现无需目标相机校准的推理。为了适应互联网视频的多样性，我们将源视频感知与推理、可选的参与者参考以及多镜头适配相结合，以识别目标参与者，并在镜头切换之间跟踪操作。采集系统和生成模型为跨任务、场景和参与者扩展第一人称操作数据奠定了基础。
+
+</details>
+
+---
+
+## 12. WorldDraft: If Code Builds the World, Can Video Models Just Render It? / WorldDraft：如果代码构建了世界，那么视频模型是否就能将其渲染出来？
+
+**Date**: 2026-11-12 | **arXiv**: [2611.16217v1](http://arxiv.org/abs/2611.16217v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.16217v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal coding agents decouple 4D world construction from visual generation, repurposing video models from world generators toward generative renderers. This division of labor raises a fundamental question: if code builds the world, can video models just render it? A reliable generative renderer hinges on two complementary criteria: (i) world preservation, retaining prescribed 4D kinematics and camera paths; and (ii) visual realization, persistently binding text-specified target attributes over time. To evaluate this capability, we introduce WorldDraft, a benchmark of $432$ strictly paired test cases across $48$ executable 4D world families spanning six dynamic challenge categories. Under a $3 \times 3$ factorial design, WorldDraft orthogonally crosses draft granularity (abstract proxy to previs) and appearance alignment (neutral to conflicting) under identical dynamics. Extensive evaluations across $12$ representative models reveal that: (I) world preservation and visual realization remain in stark operational tension; (II) richer draft scaffolding anchors structure but paradoxically impairs appearance fidelity; and (III) conflicting source cues trigger severe source leakage (up to $64\%$), exposing fragile cross-modal disentanglement. To mitigate these bottlenecks, we propose WorldDraft-Primer, a plug-and-play visual prompting strategy that consistently improves both objectives across frozen video renderers. Together, WorldDraft and WorldDraft-Primer lay a foundation for bridging programmatic 4D simulation with video generation, advancing physically grounded generative rendering.
+
+多模态编码代理将4D世界构建与视觉生成解耦，将视频模型从世界生成器转变为生成式渲染器。这种分工提出了一个基本问题：如果代码构建了世界，那么视频模型是否只需渲染它即可？可靠的生成式渲染器取决于两个相辅相成的标准：(i) 世界保持，即保留规定的4D运动学和摄像机路径；(ii) 视觉实现，即随着时间的推移持续绑定文本指定的“目标”属性。为了评估这一能力，我们推出了WorldDraft，这是一个由$432$个严格配对的测试用例组成的基准，涵盖$48$个可执行的4D世界族，跨越六个动态挑战类别。在$3 \times 3$的析因设计下，WorldDraft在相同的动态下，将草稿粒度（从抽象代理到预视）与外观一致性（从中性到冲突）正交交叉。对$12$个具有代表性的模型进行的广泛评估表明：（I）世界保持和视觉实现之间仍然存在明显的运作上的矛盾；（II）更丰富的草稿脚手架固然可以稳固结构，但却自相矛盾地损害了外观保真度；（III）冲突的源提示会引发严重的源泄漏（高达$64\%$），暴露出脆弱的跨模态解耦。为了缓解这些瓶颈，我们提出了 WorldDraft-Primer，这是一种即插即用的视觉提示策略，能够在冻结的视频渲染器中持续改善这两个目标。WorldDraft 和 WorldDraft-Primer 一起奠定了基础
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-13 (14 papers)</b></summary>
 
 # arXiv Video Papers - 2026-11-13
