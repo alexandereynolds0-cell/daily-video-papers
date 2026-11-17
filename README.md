@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-17](papers/2026-11-17.md) - 8 papers
 - [2026-11-14](papers/2026-11-14.md) - 12 papers
 - [2026-11-13](papers/2026-11-13.md) - 14 papers
 - [2026-11-12](papers/2026-11-12.md) - 3 papers
@@ -185,6 +186,146 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-17 (8 papers)</b></summary>
+
+# arXiv Video Papers - 2026-11-17
+
+**Paper Count**: 8
+
+---
+
+## 1. QASK-Edit: Adaptive Sparse Attention Across Queries and Key Sources for Efficient Video Editing / QASK-Edit：跨查询和键源的自适应稀疏注意力，用于高效视频编辑
+
+**Date**: 2026-11-16 | **arXiv**: [2611.20704v1](http://arxiv.org/abs/2611.20704v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.20704v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion Transformers (DiTs) have achieved strong performance in generation based video editing, but suffer from high inference latency due to the long token sequences formed by conditioning inputs and generated videos. Although training-free sparse attention reduces this cost, existing methods typically apply a fixed retention ratio or a single threshold shared across all tokens. In this work, we view video editing as conditional generation and identify a key insight: attention demand varies significantly both across different key sources (e.g., source videos, reference images, audio, text, and generated videos) and across queries within each source. Motivated by this, we propose QASK-Edit (Query-Adaptive Sparsity over Key Sources for Video Editing), a training-free sparse attention framework that allocates computation independently for each query and key source. Specifically, for each query, QASK-Edit considers both the attention mass and approximation risk of each block. It then evaluates candidate routing thresholds against each key source's risk budget, choosing exact computation or approximations to dynamically adjust sparsity for each query. Extensive experiments on three video editing models demonstrate that QASK-Edit achieves up to $1.46\times$ end-to-end speedup over dense attention pipeline while preserving both editing quality and unedited region fidelity. Furthermore, QASK-Edit generalizes directly to Reference-to-Video generation, delivering up to $1.36\times$ speedup while maintaining generation quality.
+
+扩散变压器（DiT）在基于生成的视频编辑方面取得了出色的表现，但由于条件输入和生成视频形成了较长的标记序列，因此存在较高的推理延迟。虽然免训练的稀疏注意力机制降低了这一成本，但现有方法通常采用固定的保留率或所有标记共享的单一阈值。在本文中，我们将视频编辑视为有条件生成，并确定了一个关键见解：注意力需求在不同的关键源（例如，源视频、参考图像、音频、文本和生成视频）之间以及每个源内的查询之间都存在显著差异。受此启发，我们提出了 QASK-Edit（用于视频编辑的关键源查询自适应稀疏性），这是一个免训练的稀疏注意力框架，可为每个查询和关键源独立分配计算资源。具体而言，对于每个查询，QASK-Edit 都会考虑每个块的注意力权重和近似风险。然后，它根据每个关键源的风险预算评估候选路由阈值，选择精确计算或近似计算，以动态调整每个查询的稀疏性。在三种视频编辑模型上进行的广泛实验表明，与密集注意力管道相比，QASK-Edit 的端到端速度提升高达 $1.46\times$，同时还能保持编辑质量和未编辑区域的保真度。此外，QASK-Edit 可直接推广到“参考图像生成视频”任务，速度提升最高可达 $1.36\times$。
+
+</details>
+
+---
+
+## 2. VIVID: A Visual Harness for Agentic Video Editing / VIVID：用于自主视频编辑的视觉工具
+
+**Date**: 2026-11-16 | **arXiv**: [2611.20688v1](http://arxiv.org/abs/2611.20688v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.20688v1)
+
+**Categories**: cs.AI, cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video editing requires agents to make editing decisions grounded in audiovisual observations and precise temporal localization, and to evaluate their effects in rendered outputs. General-purpose coding agents possess strong comprehension, reasoning, and code execution capabilities, while media interaction and evidence management mechanisms tailored to video tasks can further unlock their editing potential. We introduce VIVID, a visual harness that supports multiple native coding agents in video post-production without additional model training. VIVID provides tools for on-demand video inspection, audio analysis, and transcription, and preserves observations alongside their corresponding media versions and temporal coordinates. Agents can actively retrieve these observations as they reason, perform edits using their native coding and shell tools, and inspect rendered outputs to guide subsequent revisions. On AgenticVBench, comprising 100 tasks across Assembly, Repair, Sequencing, and Repurpose, Codex with VIVID achieves an average score of 58.6%, an improvement of 20.2 percentage points over native Codex. The same harness also integrates with Claude Code and OpenCode, achieving average scores of 55.1% and 37.1%, respectively, both substantially exceeding their native baselines. These results highlight VIVID's potential as a reusable visual harness for extending the capabilities of general-purpose coding agents to video editing.
+
+视频编辑要求代理基于视听观察和精确的时间定位做出编辑决策，并评估这些决策在渲染输出中的效果。通用编码代理具备强大的理解、推理和代码执行能力，而专为视频任务量身定制的媒体交互和证据管理机制则可以进一步释放其编辑潜力。我们推出了 VIVID，这是一种可视化工具，无需额外模型训练即可支持多个原生编码代理在视频后期制作中工作。VIVID 提供用于按需视频检查、音频分析和转录的工具，并保留观察结果及其对应的媒体版本和时间坐标。在推理过程中，代理可以主动检索这些观察结果，使用其原生编码和shell工具进行编辑，并检查渲染后的输出，以指导后续的修订。在 AgenticVBench 上，共有 100 项任务，涵盖剪辑、修复、排序和重新用途，使用 VIVID 的 Codex 取得了 58.6% 的平均得分，比原生 Codex 提高了 20.2 个百分点。该测试框架还与 Claude Code 和 OpenCode 集成，分别取得了 55.1% 和 37.1% 的平均得分，均显著高于其原生基线。这些结果凸显了 VIVID 作为一种可重复使用的可视化框架的潜力，该框架可将通用编码代理的功能扩展到视频编辑领域。
+
+</details>
+
+---
+
+## 3. Event-Guided Stereo Video Super-Resolution / 事件引导的立体视频超分辨率
+
+**Date**: 2026-11-16 | **arXiv**: [2611.20629v1](http://arxiv.org/abs/2611.20629v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.20629v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Stereo Video Super-Resolution (SVSR) aims to reconstruct high-resolution stereo videos by exploiting temporal cues across consecutive frames and complementary spatial cues between stereo views. However, existing methods struggle to recover high-frequency texture details under rapid motion and complex illumination, compromising reconstruction quality and stereo consistency. Event cameras provide valuable motion and texture cues with high temporal resolution and wide dynamic range, yet their potential for SVSR remains underexplored. To bridge this gap, we present the first investigation of event-guided SVSR and propose a novel framework. Specifically, we develop an Event-Guided Texture Enhancement (EGTE) module that combines bidirectional temporal feature propagation with event-guided texture refinement to restore high-frequency details in complex motion regions. Subsequently, we introduce a Cross-View Texture Interaction (CVTI) module to model cross-view spatial correspondences and aggregate cross-view complementary texture information. With this design, our method effectively integrates event-driven motion and texture information, inter-frame temporal dependencies, and cross-view spatial relationships to recover motion-affected details and maintain stereo consistency. Extensive experiments on both real-world and synthetic datasets demonstrate that our method consistently outperforms existing super-resolution methods in reconstruction quality and stereo consistency. Project Page: https://wzlwlm13.github.io/EvSVSR
+
+立体视频超分辨率（SVSR）旨在通过利用连续帧之间的时间线索以及立体视图之间的互补空间线索，重建高分辨率立体视频。然而，在快速运动和复杂光照条件下，现有方法难以恢复高频纹理细节，从而影响重建质量和立体一致性。事件相机以高时间分辨率和宽动态范围提供有价值的运动和纹理线索，但其在 SVSR 方面的潜力仍未得到充分探索。为了弥补这一缺憾，我们首次对事件引导的 SVSR 进行了研究，并提出了一种新颖的框架。具体而言，我们开发了一个事件引导的纹理增强（EGTE）模块，该模块将双向时间特征传播与事件引导的纹理细化相结合，以恢复复杂运动区域中的高频细节。随后，我们引入了跨视图纹理交互 (CVTI) 模块，用于建模跨视图空间对应关系，并聚合跨视图互补纹理信息。通过这种设计，我们的方法有效地整合了事件驱动的运动和纹理信息、帧间时间依赖性以及跨视图空间关系，从而恢复受运动影响的细节并保持立体一致性。对真实世界数据集和合成数据集进行的广泛实验表明，在重建质量和立体一致性方面，我们的方法始终优于现有的超分辨率方法。项目
+
+</details>
+
+---
+
+## 4. Learning a Task-Adaptive Low-Dimensional Semantic Space for Improved Visual Classification / 学习任务自适应低维语义空间以改进视觉分类
+
+**Date**: 2026-11-16 | **arXiv**: [2611.20553v1](http://arxiv.org/abs/2611.20553v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.20553v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Semantic visual classification commonly aligns visual embeddings with semantic spaces induced by pretrained text encoders. However, such spaces are typically high-dimensional, weakly aligned with visual feature geometry, and insufficiently discriminative for downstream classification tasks. We propose TaSS, a framework for learning a task-adaptive low-dimensional semantic space that preserves semantic structure while explicitly optimizing class separability. TaSS is constructed through a parameterized geometry transformation of pretrained text embeddings that enlarges inter-class margins via distance reshaping and improves intra-class compactness through prototype-preserving semantic constraints. The resulting semantic space maintains meaningful semantic relationships while producing a discriminative geometry tailored for classification. Frozen visual encoder features are subsequently aligned to TaSS using a lightweight MLP, enabling improved discriminative learning without fine-tuning pretrained backbones. We further provide theoretical analysis showing that TaSS preserves semantic consistency while enforcing enhanced inter-class separation and controlled intra-class variance. Extensive experiments on skeleton-based human action recognition, video classification, and image classification benchmarks demonstrate consistent improvements over existing semantic alignment approaches, with gains exceeding 3 percentage points on average and up to 8.5 points on challenging datasets.
+
+语义视觉分类通常将视觉嵌入与预训练文本编码器诱导的语义空间进行对齐。然而，此类空间通常是高维的，与视觉特征几何的对齐程度较低，并且对于下游分类任务的区分性不足。我们提出了TaSS，这是一个用于学习任务自适应低维语义空间的框架，该框架在保留语义结构的同时，明确优化了类别可分性。TaSS 通过对预训练文本嵌入进行参数化几何变换来构建，该变换通过距离重塑来扩大类别间裕度，并通过保持原型的语义约束来提高类别内紧凑性。由此产生的语义空间在保持有意义的语义关系的同时，还形成了专为分类而定制的判别性几何结构。随后，使用轻量级 MLP 将冻结的视觉编码器特征与 TaSS 对齐，从而在不微调预训练骨干网络的情况下实现更好的判别性学习。我们进一步提供了理论分析，表明TaSS在保持语义一致性的同时，实现了更强的类间分离和受控的类内方差。针对基于骨架的人体动作识别、视频分类和图像分类基准进行了大量实验，结果表明，与现有的语义对齐方法相比，TaSS 在性能上始终有提升，平均提升幅度超过 3 个百分点，在具有挑战性的数据集上最高可达 8.5 个百分点。
+
+</details>
+
+---
+
+## 5. BlockAlign: Preference Optimization for Trajectory-Distilled Video Generation / BlockAlign：用于轨迹蒸馏视频生成的偏好优化
+
+**Date**: 2026-11-16 | **arXiv**: [2611.20351v1](http://arxiv.org/abs/2611.20351v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.20351v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Directly aligning trajectory-distilled video generators slashes rollout costs and optimizes the deployed few-step model without teacher fine-tuning or re-distillation. However, conventional flow-matching preference objectives assume single-head local velocity supervision, mismatching the finite-interval, block-average transition interface of trajectory-distilled generators such as Parallel Decoding Distillation (PDD) and Parametric Trajectory Distillation (PTD). Naively supervising only the primary initial-subinterval velocity sub-head rather than the fused block-average velocity at block starts (DirectAlign) induces a severe training--inference mismatch that degrades quality below the unaligned baseline. We introduce BlockAlign, an interface-consistent preference optimization framework that constructs states at valid block boundaries, queries the fused block-level velocity predictor, and supervises span-normalized transition residuals-seamlessly supporting DPO-, NFT-, and rollout-style objectives while preserving the native few-step sampler. We further build a unified post-training pipeline integrating offline pairs, reward-free semi-online continuations, and online rollouts with hierarchical preference selection and objective-aware block scheduling. Experiments on multi-reference video generation across MiniMax-H3 Ref2VA and an in-house model RefVid-V4 show that BlockAlign consistently outperforms unaligned distilled models and DirectAlign in structural plausibility, reference consistency, and visual quality. Notably, our approach unlocks PDD's 5x few-step rollout speedup for 3x faster end-to-end online training, achieving statistically significant human preference gains over PDD baselines (54.0% vs. 33.3% wins/losses, or 61.8% non-tie win rate on RefVid-V4; 51.3% vs. 34.7%, or 59.7% non-tie win rate on MiniMax-H3) and up to an 82.7% win rate against DirectAlign.
+
+直接对齐轨迹蒸馏视频生成器可大幅降低部署成本，并优化已部署的少步模型，无需教师微调或重新蒸馏。然而，传统的流匹配偏好目标假设的是单头局部速度监督，这与并行解码蒸馏（PDD）和参数化轨迹蒸馏（PTD）等轨迹蒸馏生成器的有限区间、块平均过渡接口不匹配。如果只简单地监督主要初始子区间速度子头，而不监督块起始处的融合块平均速度（DirectAlign），就会导致严重的训练-推理不匹配，使质量降至未对齐基线以下。我们推出了BlockAlign，这是一个接口一致的偏好优化框架，它在有效的块边界处构建状态，查询融合的块级速度预测器，并监督跨度归一化的过渡残差——无缝支持DPO、NFT和 rollout 风格的目标，同时保留原生少步采样器。我们进一步构建了一个统一的后训练管道，将离线对、无奖励半在线延续和在线 rollout 集成在一起，并采用分层偏好选择和目标感知块调度。在 MiniMax-H3 Ref2VA 和内部模型 RefVid-V4 上进行的多参考视频生成实验表明，在结构合理性方面，BlockAlign 一贯优于未对齐的蒸馏模型和 DirectAlign，
+
+</details>
+
+---
+
+## 6. PoCoAttn: Position-Content Collaborative Sparse Attention for Fast and High-Fidelity Video Generation / PoCoAttn：用于快速和高保真视频生成的“位置-内容”协同稀疏注意力机制
+
+**Date**: 2026-11-15 | **arXiv**: [2611.20307v1](http://arxiv.org/abs/2611.20307v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.20307v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video diffusion transformers rely on 3D full attention over tens of thousands of spatiotemporal tokens, and its quadratic cost dominates inference latency. Sparse attention reduces this cost, but existing methods face a dilemma: static methods apply predefined masks and cannot capture input-dependent attention, whereas dynamic methods reconstruct the sparse mask repeatedly, paying online to rediscover positional structure that is largely stable across inputs. To this end, we propose PoCoAttn, a training-free sparse attention framework that separates input-stable from input-dependent attention and resolves the former offline and the latter online. PoCoAttn features: (1) A relative-offset analysis of 3D query-key pairs, which shows that video attention decomposes into an input-stable positional prior that carries most of the attention mass and a small content-dependent residual. (2) A position-content collaborative sparse attention mechanism, which retrieves positional keys from offline-calibrated tables, selects content keys online with a head-adaptive ratio between the two sources, and compensates for the discarded keys to approximate full attention. (3) A step-adaptive budget allocation algorithm, which models how early-step sparse attention errors are amplified along the denoising trajectory and derives the optimal sparsity budget per step. Extensive experiments across four video diffusion models and three tasks show that PoCoAttn consistently achieves a better speed-fidelity Pareto frontier than state-of-the-art (SOTA) methods, improving PSNR by 1.9 to 5.0 dB over baselines and delivering up to 4.1$\times$ attention and 2.0$\times$ denoising speedups over dense FlashAttention-3 attention.
+
+视频扩散变压器依赖于对数万个时空标记的 3D 全局注意力，其二次成本是影响推理延迟的主要因素。稀疏注意力降低了这一成本，但现有方法面临着一个困境：静态方法应用预定义的掩码，无法捕捉与输入相关的注意力，而动态方法则反复重建稀疏掩码，在线付出代价来重新发现跨输入基本稳定的位置结构。为此，我们提出了 PoCoAttn，这是一个无需训练的稀疏注意力框架，它将输入稳定的注意力与输入相关的注意力区分开来，并分别在离线和在线情况下解决这两种注意力。PoCoAttn 的特点：（1）对 3D 查询-键对进行相对偏移分析，该分析表明，视频注意力分解为一个输入稳定的位置先验（承载了大部分注意力权重）和一个较小的内容相关残差。(2) 位置-内容协同稀疏注意力机制，该机制从离线校准的表中检索位置键，在线选择内容键，并在两个来源之间采用头自适应比率，并补偿被丢弃的键，以近似于全注意力。(3) 一种步长自适应预算分配算法，该算法对早期步长稀疏注意力误差如何沿去噪轨迹放大进行建模，并推导出每个步长的最优稀疏性预算。在四种视频扩散模型和三项任务上进行的广泛实验表明，PoCoAttn 一贯能够实现更好的
+
+</details>
+
+---
+
+## 7. The Flip Test: Video World Models Fail to Learn the World State / 翻转测试：视频世界模型无法学习世界状态
+
+**Date**: 2026-11-15 | **arXiv**: [2611.19822v1](http://arxiv.org/abs/2611.19822v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.19822v1)
+
+**Categories**: cs.CV, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video world models promise to predict the future of a scene from its present. Do current models keep this promise? We probe this question counterfactually. When a small change to the present flips the future, such as a box resting a few millimeters before or past a table edge, a model that tracks the state of the world must flip its prediction too. We build FlipTest, a three-level hierarchy of increasingly strict tests over 1,680 initial frames from 10 simulated and 15 real-world tasks. At the base, visual minimal pairs, two nearly identical frames whose true futures differ, test whether predictions change across the boundary; matched controls go further and test whether they change only where the future does; and dense sweeps, the strictest level, locate exactly where they change. All 11 video world models we evaluate fall short. The best averages 18.3% pair accuracy over real and simulated scenes, below the 25% of random guessing. Models flip as often on steps that leave the future unchanged as on steps that change it, and their response stays flat across the sweeps. On the same frames, a vision-language model is selective and traces a near S-shaped curve near the boundary, and a coding agent that measures the image comes close to the true boundary. This implies that the deciding information is in the frame, and video models just miss it. We therefore urge the community to rethink world modeling as pure video prediction. Next-frame prediction must do more than draw plausible pixels; it must also identify the causal states that control future dynamics.
+
+视频世界模型有望根据场景的当前状态预测其未来。当前的模型是否兑现了这一承诺？我们以反事实的方式来探究这个问题。当对当前状态的微小改变导致未来发生翻转时（例如，一个盒子停在桌子边缘前或后几毫米处），跟踪世界状态的模型也必须相应地翻转其预测。我们构建了FlipTest，这是一个由三级组成的层次结构，对来自10项模拟任务和15项现实世界任务的1680个初始帧进行越来越严格的测试。在最底层，视觉最小对（两个几乎相同的帧，但其真实未来有所不同）用于测试预测是否在边界处发生变化；匹配对照组更进一步，测试预测是否仅在未来发生变化的地方发生变化；而密集扫描（最严格的级别）则能精确定位预测发生变化的位置。我们评估的所有11个视频世界模型均未达到预期。在真实场景和模拟场景中，表现最佳的模型平均对组准确率为18.3%，低于随机猜测的25%。在使未来保持不变的步骤中，模型的翻转频率与在使未来发生变化的步骤中一样频繁，并且在所有扫描中，其响应都保持平稳。在相同的帧上，视觉-语言模型具有选择性，并在边界附近勾勒出一条近乎S形的曲线；而测量图像的编码代理则接近真实边界。这表明决定性信息就在帧中，而视频模型恰恰错过了这些信息。因此，我们敦促研究界重新思考将世界建模视为纯粹的视频预测的做法。下一帧预测必须不仅仅是画出
+
+</details>
+
+---
+
+## 8. EndoComparer: Comparative Surgical Video Question Answering with Pseudo-Siamese Visual Adaptation and Perceive-then-Compare Reasoning / EndoComparer：采用伪孪生视觉适应和先感知后比较推理的比较性外科手术视频问答
+
+**Date**: 2026-11-14 | **arXiv**: [2611.19578v1](http://arxiv.org/abs/2611.19578v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.19578v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Purpose: Surgical training benefits from explicit comparison between cases: in patient condition, in technique and in skill proficiency. Surgical vision-language models (VLMs) offer a promising and flexible interface for this purpose. Yet current VLMs typically see one video at a time, and they often fall short when asked to compare videos. Methods: We propose EndoComparer, a VLM for comparative surgical video question answering with two components. (a) A Pseudo-Siamese Visual LoRA (PSVL) gives each video slot its own low-rank adapter over a shared frozen vision encoder, separating the two videos in the visual pathway at the cost of a single encoder pass. (b) A Perceive-then-Compare chain of thought (PtC-CoT) trains the model to first state what each video shows, then derive the answer from these statements. We further curate EndoDiffVQA, a benchmark of nearly 11K multiple-choice questions on video-pair over cholecystectomy and gastric bypass procedures, covering anatomy, tool, action and skill. Results: EndoComparer outperforms strong generalist and surgical VLMs on detecting and specifying difference between videos. Ablations show that two proposed components contribute complimentarily, and the model remains more robust under a video-swap control that exposes confusion between the two videos. Conclusion: Providing a dedicated visual reasoning path through PSVL and PtC-CoT makes cross-case comparison of surgical videos more robust for VLMs. EndoDiffVQA and EndoComparer provide a benchmark and a strong baseline for this task. Project page: https://camma-public.github.io/endocomparer
+
+目的：外科培训可以从病例之间的明确比较中受益：在患者病情、技术和技能熟练度方面。外科视觉-语言模型（VLM）为此目的提供了一个前景广阔且灵活的接口。然而，当前的VLM通常一次只看一个视频，当被要求比较视频时，它们往往力有不逮。方法：我们提出了EndoComparer，这是一种用于比较性外科手术视频问答的VLM，由两个组件构成。(a) 伪孪生视觉LoRA (PSVL) 为每个视频槽提供一个在共享的冻结视觉编码器上的专用低秩适配器，以一次编码器通过的代价，在视觉通路中将两个视频分开。(b) “先感知后比较”思维链 (PtC-CoT) 训练模型首先陈述每个视频所展示的内容，然后从这些陈述中推导出答案。我们进一步整理了EndoDiffVQA，这是一个包含近1.1万个关于胆囊切除术和胃旁路术视频对的多项选择题的基准，涵盖解剖结构、器械、操作和技能。结果：在检测和指出视频之间的差异方面，EndoComparer的表现优于强大的通用型和外科VLM。消融实验表明，两个提出的组件具有互补作用，并且在暴露两段视频之间混淆的视频交换控制下，该模型仍然更加稳健。结论：通过 PSVL 和 PtC-CoT 提供专门的视觉推理路径，使 VLM 在跨病例比较手术视频方面更加稳健。EndoDiffVQA 和 EndoComparer
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-14 (12 papers)</b></summary>
 
 # arXiv Video Papers - 2026-11-14
