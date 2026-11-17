@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-17](papers/2026-11-17.md) - 8 papers
 - [2026-11-14](papers/2026-11-14.md) - 28 papers
 - [2026-11-13](papers/2026-11-13.md) - 12 papers
 - [2026-11-12](papers/2026-11-12.md) - 8 papers
@@ -201,6 +202,146 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-17 (8 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-11-17
+
+**Paper Count**: 8
+
+---
+
+## 1. Learning and Verifying Progress: Closed-Loop Agentic Planning with Progress-Enhanced Execution for Long-Horizon Vision-Language Navigation / 学习与验证进度：用于长程视觉-语言导航的闭环自主体规划与进度增强执行
+
+**Date**: 2026-11-16 | **arXiv**: [2611.20676v1](http://arxiv.org/abs/2611.20676v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.20676v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon vision-language navigation (VLN) requires agents to track instruction progress and recover from local errors before they propagate across subtasks. However, executors trained on expert trajectories encounter policy-induced state shifts during deployment, and their stop signals do not reliably indicate subtask completion. We introduce Learning and Verifying Progress for VLN (LeaP-VLN), an agentic VLN system that couples progress-aware execution with independent progress verification through plan--execute--verify--recover cycles. LeaP-VLN leverages progress both explicitly, through a progress verifier that verifies subtask completion before the agent advances and triggers dual-phase recovery upon route deviation, and implicitly, by co-training the executor on progress reasoning and action prediction to enhance the executor's progress awareness and corrective control. To adapt the executor to this closed-loop interface, we propose a two-stage progress-enhanced curriculum: behavior cloning on expert demonstrations, followed by joint training on demonstrations, expert action corrections, and progress-reasoning supervision. Policy-generated trajectories expose the executor to both intra-subtask drift and inter-subtask state shifts, aligning training with the deviations encountered during closed-loop execution. Extensive experiments on R2R-CE and RxR-CE demonstrate state-of-the-art success rates among monocular methods trained without additional navigation datasets, while real-world experiments further validate the effectiveness of LeaP-VLN in long-horizon navigation.
+
+长程视觉-语言导航（VLN）要求智能体跟踪指令进度，并在局部错误传播到多个子任务之前从这些错误中恢复。然而，在专家轨迹上训练的执行器在部署过程中会遇到策略引起的状态转变，其停止信号并不能可靠地指示子任务的完成。我们推出了用于视觉-语言导航（VLN）的进度学习与验证（LeaP-VLN），这是一个智能体VLN系统，通过“规划-执行-验证-恢复”循环，将进度感知型执行与独立的进度验证相结合。LeaP-VLN 通过两种方式利用进度：一种是显式方式，即通过进度验证器在智能体前进之前验证子任务的完成情况，并在出现路线偏差时触发双阶段恢复；另一种是隐式方式，即通过在进度推理和动作预测方面对执行器进行协同训练，以增强执行器的进度意识和纠正控制能力。为了使执行器适应这种闭环接口，我们提出了一种两阶段的进度增强课程：首先是对专家示范进行行为克隆，然后是对示范、专家动作校正和进度推理监督进行联合训练。策略生成的轨迹使执行器面临子任务内漂移和子任务间状态转移，从而使训练与闭环执行过程中遇到的偏差相一致。在R2R-CE和RxR-CE上进行的广泛实验表明，在未借助额外导航数据集进行训练的单目方法中，该方法取得了最先进的成功率。
+
+</details>
+
+---
+
+## 2. TrainExplorer: Autonomous LLM Post-Training via Plan-and-Decouple Exploration / TrainExplorer：通过“规划与解耦”探索实现自主 LLM 训练后优化
+
+**Date**: 2026-11-16 | **arXiv**: [2611.20430v1](http://arxiv.org/abs/2611.20430v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.20430v1)
+
+**Categories**: cs.LG, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM-based agents can automate model post-training, accelerating progress toward recursive self-improvement. Despite their promise, existing approaches remain under-explored and face two main challenges: (1) strategy lock-in that limits exploration beyond the initial strategy; and (2) coupled execution that obscures the effects of individual modifications. To address these challanges, we propose TrainExplorer, a multi-agent framework for autonomous post-training, that incorporates strategy planning and execution decoupling, to achieve broaden strategy exploration. First, strategy planning draws on scientific literature to construct a candidate search space of training strategies. Then, decoupled execution enables single-component interventions and attribution to guide strategy exploration. Extensive experiments on PostTrainBench demonstrate that TrainExplorer achieves a weighted aggregate score of 39.02, outperforming Claude Code using the same LLM by 7.32 and surpassing GPT-5.6 Sol-powered Codex, which scores 36.23. Code will be available.
+
+基于大语言模型（LLM）的代理可以实现模型后训练的自动化，从而加速递归自我改进的进程。尽管现有方法前景光明，但仍未得到充分探索，并面临两大主要挑战：(1) 策略锁定，限制了对初始策略之外的探索；(2) 执行耦合，掩盖了单个修改的效果。为了应对这些挑战，我们提出了 TrainExplorer，这是一个用于自主式后训练的多智能体框架，它结合了策略规划和执行解耦，以实现更广泛的策略探索。首先，策略规划借鉴科学文献，构建训练策略的候选搜索空间。然后，解耦执行使单组件干预和归因能够指导策略探索。在PostTrainBench上进行的广泛实验表明，TrainExplorer的加权总分为39.02，比使用相同LLM的Claude Code高出7.32分，并超过了GPT-5.6 Sol-powered Codex（得分为36.23分）。代码即将发布。
+
+</details>
+
+---
+
+## 3. Ontology-Compiled Control Barrier Functions for Heterogeneous Robot Teams / 用于异构机器人团队的本体编译控制屏障函数
+
+**Date**: 2026-11-15 | **arXiv**: [2611.20306v1](http://arxiv.org/abs/2611.20306v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.20306v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Safety filters for heterogeneous robot teams fail because of missing constraints, overestimated braking capabilities and conflicts between individually satisfiable constraints. We present OntoCBF, which compiles a domain ontology with a class taxonomy, typed relations, safety axioms and a dynamics profile per robot class into a control barrier function filter with one quadratic program per agent. Description-logic entailment supplies the constraints of any team online, including those that follow from chains of relations and from classes defined by what a robot carries, so the existing safety axioms cover new robot classes, payload classes and combinations. We prove that a subclass may reuse the braking capability of its parent whenever it can produce every velocity of the parent, a property separate from subsumption. For box-bounded double integrators this property is also necessary, and every loss of safety then begins with a conflict. Once three robots interact, the safe set of pairwise barriers contains states from which a collision is unavoidable, and such states persist in larger teams under any fixed capability reduction. In a simulated warehouse where humans ignore the robots, a filter written for the design classes violates safety in 89-100 % of the episodes with unseen classes. In all scenarios, including one with 32 robots, OntoCBF violates safety in 20-70 % of the episodes, each time after a conflict, with a median deepest intrusion of 10-17 % of the keep-out distance. A multi-agent PPO policy trained with the filter in the loop lowers the rate of infeasible quadratic programs, nearly all of them conflicts, by 18-41 %.
+
+异构机器人团队的安全滤波器之所以失效，是因为缺少约束条件、高估了制动能力以及存在单独可满足的约束条件之间的冲突。我们提出了OntoCBF，它将包含类分类法、类型化关系、安全公理和每个机器人类动态配置文件的领域本体编译成一个控制屏障函数滤波器，每个智能体对应一个二次规划。描述逻辑蕴含提供了任何团队的在线约束，包括那些由关系链以及由机器人所携带的物品定义的类别所产生的约束，因此，现有的安全公理涵盖了新的机器人类别、有效载荷类别和组合。我们证明，只要子类能够产生父类的所有速度，它就可以重复使用父类的制动能力，这是一个与 subsumption（ subsumption 是指一个类是另一个类的子类）无关的属性。对于盒约束双积分器，这一属性也是必要的，并且每次安全丧失都始于冲突。一旦有三台机器人相互作用，成对屏障的安全集就包含不可避免发生碰撞的状态，在任何固定的能力降低情况下，此类状态在规模更大的团队中都会持续存在。在一个人类忽视机器人的模拟仓库中，为设计类别编写的滤波器在 89-100% 包含未见类别的场景中违反了安全性。在所有场景中（包括一个有32台机器人的场景），OntoCBF在20%-70%的情景中违反了安全性，每次都在发生冲突后违反安全性，最深侵入中位数为禁入区域的10%-17%。
+
+</details>
+
+---
+
+## 4. DAPPT: Domain-Aware Policies from Procedural Trajectories for Sim-to-Real Dexterous Tool Use / DAPPT：基于过程轨迹的域感知策略，用于从模拟到现实的灵巧工具使用
+
+**Date**: 2026-11-15 | **arXiv**: [2611.20202v1](http://arxiv.org/abs/2611.20202v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.20202v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Sim-to-real RL has achieved impressive results in dexterous manipulation but remains limited to tasks with accurate rigid-body simulation. However, these methods cannot be applied to skills that involve deformable and particles, with which the simulation speed will become too slow for large-scale RL learning. We present DAPPT, a sim-to-real framework for end-to-end dexterous tool-use manipulation skills, e.g., sand scooping, play-dough rod-rolling, without simulating non-rigid materials. Our method learns a domain-aware RL policy by tracking procedural trajectories parameterized by domain parameters, and distills it into an end-to-end domain-aware sensorimotor policy. Furthermore, explicit domain represen-tation enables fast selection of domain parameters that can maximize downstream task performance. We evaluate DAPPT end-to-end on six dexterous manipulation tasks, including sand scooping, play-dough rod-rolling, sand scraping, mouse-wheel scrolling, dispenser pressing, and spray triggering. Our method achieves 1.5-3.8x in task metrics through the best domain parameter and transfers zero-shot to the real world.
+
+从模拟到现实的强化学习（RL）在灵巧操作方面取得了令人瞩目的成果，但仍仅限于具有精确刚体仿真的任务。然而，这些方法无法应用于涉及可变形物体和粒子的技能，在这种情况下，模拟速度将变得太慢，不适合大规模的强化学习。我们提出了DAPPT，这是一个用于端到端灵巧工具使用操纵技能（例如，铲沙、用棍子滚动橡皮泥）的模拟到现实框架，无需模拟非刚性材料。我们的方法通过跟踪由域参数参数化的过程轨迹来学习一种域感知型RL策略，并将其提炼为一种端到端的域感知型感觉运动策略。此外，显式域表示能够快速选择可以使下游任务性能最大化的域参数。我们在六项灵巧操作任务上对DAPPT进行了端到端评估，这些任务包括铲沙、用擀面棍擀橡皮泥、刮沙、滚动鼠标滚轮、按压分配器和触发喷雾。我们的方法通过最佳域参数在任务指标上实现了1.5-3.8倍的提升，并实现了零样本迁移到现实世界。
+
+</details>
+
+---
+
+## 5. Infrastructure-Based Multi-Agent Reinforcement Learning with Attention for Highway Ramp Merging / 基于基础设施的带注意力机制的多智能体强化学习，用于高速公路匝道汇入
+
+**Date**: 2026-11-15 | **arXiv**: [2611.20078v1](http://arxiv.org/abs/2611.20078v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.20078v1)
+
+**Categories**: cs.LG, cs.MA, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+On-ramp merging is a typical safety and throughput problem on highways. Without proper coordination, human drivers and self-interested autonomous vehicles may make risky manoeuvres and cause accidents or congestion. With recent advances in connected autonomous vehicles (CAVs) and multi-agent reinforcement learning (MARL), vehicles can be trained to coordinate for safe and efficient merging. However, in dense traffic, forming an effective observation of the traffic state is challenging. For example, observing only the neighbouring vehicles may lead to locally optimal decisions, while observing the entire traffic can introduce much irrelevant information. In this paper, we propose a transformer-based MARL vehicle control model to address these problems. A roadside infrastructure controller receives the states of all CAVs via vehicle-to-infrastructure (V2I) communication and sends control commands back to them. An attention-based observation encoder is designed where each vehicle can filter the relevant vehicle information from the global traffic state. The proposed model is evaluated in SUMO against three baselines: a model that observes only the neighbouring vehicles, a model that encodes the global traffic information, and the rule-based SUMO model. The results show that our model achieves the highest traffic flow, safety and smoothness. Furthermore, in a four-hour simulation with dynamic traffic demand, our model successfully avoids traffic jams, while other baseline models fail at high traffic flow. We also show that our model remains effective when human-driven vehicles are present. We further show that our model, trained in ideal communication conditions, can still remain collision-free and maintain throughput under realistic V2I communication errors. Finally, we visualise the relevance weights that an ego vehicle assigns to other vehicles in multiple traffic situations.
+
+匝道汇入是高速公路上的一个典型安全和通行能力问题。如果没有适当的协调，人类驾驶员和以自身利益为重的自动驾驶车辆可能会做出危险的操控动作，从而导致事故或拥堵。随着联网自动驾驶汽车（CAV）和多智能体强化学习（MARL）的最新进展，可以对车辆进行训练，使其能够协调配合，以实现安全高效的汇入。然而，在交通拥堵的情况下，要对交通状况进行有效的观察具有挑战性。例如，只观察邻近的车辆可能会导致做出局部最优的决策，而观察整个交通状况则可能会引入大量不相关的信息。本文提出了一种基于Transformer的MARL车辆控制模型来解决这些问题。路侧基础设施控制器通过车路 (V2I) 通信接收所有 CAV 的状态，并将控制指令发回给它们。设计了一种基于注意力的观测编码器，每辆车辆都可以从全局交通状态中筛选出相关的车辆信息。在 SUMO 中，将所提出的模型与三种基准模型进行比较评估：仅观察邻近车辆的模型、对全局交通信息进行编码的模型以及基于规则的 SUMO 模型。结果表明，我们的模型实现了最高的交通流量、安全性和平稳性。此外，在具有动态交通需求的四小时模拟中，我们的模型成功避免了交通拥堵，而其他基准模型
+
+</details>
+
+---
+
+## 6. AgenticJevNav: Agentic Object Search and Navigation via Event-Driven Verification / AgenticJevNav：通过事件驱动型验证进行智能体对象搜索和导航
+
+**Date**: 2026-11-15 | **arXiv**: [2611.19912v1](http://arxiv.org/abs/2611.19912v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.19912v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic navigation must maintain goals and adapt actions from incomplete evidence despite execution failures and delayed inference. We present AgenticJevNav, which links goal-directed planning, evidence memory, event-triggered verification, and bounded execution. The Agent plans from RGB, odometry, memory, and feedback, retaining goal ownership while authorizing a bounded action set. Jev reviews structured evidence after blocked/failed execution or two consecutive low-progress segments. Version, freshness, and once-only checks govern decision application. A single executor and independent RGB reflex constrain motion. Goal revisions revoke obsolete requests and actions before replanning. Across six simulated task families, AgenticJevNav achieves 73.33% SR over 60 trials, 21.67 percentage points above the next-best Agent-only aggregate control under differing historical protocols. A real-world GENISOM L1 quadruped deployment achieves 70.0% success over 30 trials, including bounded search reporting. Together, the simulation and physical-robot results demonstrate the effectiveness of the proposed architecture, while remaining failures highlight opportunities to improve grounding, approach planning, and runtime.
+
+尽管存在执行失败和推理延迟的情况，但智能体导航必须保持目标不变，并根据不完整的证据调整行动。我们推出了AgenticJevNav，它将目标导向型规划、证据记忆、事件触发型验证和有界执行联系起来。Agent 根据 RGB、里程计、记忆和反馈进行规划，在保留目标所有权的同时授权一个有界动作集。在执行被阻止/失败或连续两个进度较低的片段后，Jev会审查结构化证据。版本、新鲜度和一次性检查决定了决策的适用。单个执行器和独立的RGB反射约束运动。目标修订会在重新规划之前撤销过时的请求和操作。在六个模拟任务族中，AgenticJevNav在60次试验中实现了73.33%的SR，比在不同历史协议下排名第二的仅使用智能体的聚合控制高出21.67个百分点。在现实世界中，GENISOM L1 四足机器人的部署在 30 次试验中取得了 70.0% 的成功率，其中包括有界搜索报告。模拟和实体机器人结果共同证明了所提出架构的有效性，而剩余的失败则凸显了改进接地、方法规划和运行时的机会。
+
+</details>
+
+---
+
+## 7. Interactive Structured Environment Scaling for Large Language Model Agentic Reasoning / 用于大型语言模型智能体推理的交互式结构化环境扩展
+
+**Date**: 2026-11-15 | **arXiv**: [2611.19871v1](http://arxiv.org/abs/2611.19871v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.19871v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning via environmental interaction is a cornerstone post-training paradigm for evolving large language models into autonomous agents capable of multi-turn tool use and exploration. Because the environment defines what the policy observes and how actions are verified, its structure directly bounds the capabilities an agent can acquire. Yet existing structured and retrieval environments rely on upstream pre-filtering---extracting a compact subgraph around the gold answer or retrieving fixed passages before the policy acts. We show that such pre-filtering introduces a fundamental measurement confound: because per-question subgraphs enclose ground-truth paths, they compress the candidate space by orders of magnitude and leak answer locations via local topology, allowing a question-blind degree heuristic to surface gold answers far above chance. To restore path selection, candidate pruning, and optimal stopping as genuine policy decisions, we propose RISE (Interactive Structured Environment), which transitions structured reinforcement learning from static subgraphs to full-scale interactive databases along two coupled axes. First, Decision-Space Scaling exposes the unpruned knowledge graph via a five-stage graph-agnostic typed intent adapter under a bounded call budget and a multiplicative grounding reward gate. Second, Learning-Frontier Scaling overcomes within-group variance collapse under group-normalized objectives by uniting model-independent structural tier progression with a self-evolving competence-frontier bandit. Across nineteen benchmarks and three model backbones, RISE substantially advances in-domain and unseen-schema knowledge-graph reasoning, transfers zero-shot to open-domain passage retrieval, and significantly enhances out-of-domain mathematical and logical deduction.
+
+通过环境交互进行的强化学习是一种重要的后训练范式，可将大型语言模型演化为能够进行多轮工具使用和探索的自主智能体。由于环境决定了策略所观察的内容以及如何验证行动，因此环境的结构直接限制了智能体能够获得的能力。然而，现有的结构化和检索环境依赖于上游预过滤——在策略采取行动之前，提取围绕标准答案的紧凑子图，或检索固定的段落。我们表明，这种预过滤引入了一种基本的测量混淆因素：由于每个问题的子图都包含真实路径，因此它们将候选空间压缩了几个数量级，并通过局部拓扑泄漏答案位置，从而使不考虑问题的度量启发式方法能够以远高于随机水平的概率找到正确答案。为了使路径选择、候选剪枝和最优停止真正成为策略决策，我们提出了RISE（交互式结构化环境），它沿着两条耦合的轴线，将结构化强化学习从静态子图过渡到全规模交互式数据库。首先，决策空间扩展通过一个五阶段的图无关类型化意图适配器，在有限的调用预算和乘性锚定奖励门控的约束下，将未剪枝的知识图谱暴露出来。其次，学习前沿扩展通过将模型无关的结构性……结合起来，克服了在组归一化目标下组内方差坍缩的问题。
+
+</details>
+
+---
+
+## 8. Cooperative Transport of Unknown Objects by Distributed Effort Regulation in Multi-agent Systems / 多智能体系统中通过分布式用力调节实现未知物体协同搬运
+
+**Date**: 2026-11-15 | **arXiv**: [2611.19731v1](http://arxiv.org/abs/2611.19731v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.19731v1)
+
+**Categories**: cs.RO, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A distributed multi-robot object transportation strategy is proposed for objects of unknown shape, size, geometry, mass and mass distribution without any prior knowledge about the object or number of robots involved in the transportation process. Robots follow the boundary of the object and dynamically determine viable pushing points. A novel object-model-free heading-error-driven pushing effort regulation method is proposed to promote goal-directed object motion; robots regulate their pushing effort using individual and collective heading errors. Robots dynamically relocate around the object boundary if a pushing point is lost or the required pushing effort exceeds its capability to correct its heading. The proposed method is validated using simple and complex shapes with convex and non-convex boundary regions and dynamically changing weight distribution of objects. Detailed analysis on the effects of robot distribution and initial object pose on the transportation performance in terms of required time and path efficiency is also presented. Scalability analysis revealed that object transportation time is dependent on the number of pushing surfaces available which in turn depends on the object size, shape, and set inter-robot safety distance. The proposed system yielded highly efficient object paths with consistent elapsed transport times over several trials robust to external disturbances such as non-uniform friction between contacting surfaces and robot wheel slip.
+
+本文提出了一种分布式多机器人物体运输策略，适用于形状、尺寸、几何形状、质量和质量分布未知的物体，且无需事先了解物体或参与运输过程的机器人数量。机器人沿着物体的边界移动，并动态确定可行的推力点。提出了一种新颖的无物体模型、由航向误差驱动的推力调节方法，以促进目标导向的物体运动；机器人利用个体和集体的航向误差来调节其推力。如果推力点丢失或所需的推力超过其校正航向的能力，机器人会在物体边界周围动态地重新定位。所提出的方法通过具有凸形和非凸形边界区域的简单和复杂形状以及物体重量分布的动态变化得到验证。本文还详细分析了机器人分布和物体初始姿态对运输性能的影响，具体体现在所需时间和路径效率方面。可扩展性分析表明，物体运输时间取决于可用推力的表面数量，而这又取决于物体的大小、形状以及设定的机器人间安全距离。所提出的系统在多次试验中产生了高效的物体路径，且运输用时一致，对接触面之间不均匀的摩擦力和机器人车轮打滑等外部扰动具有鲁棒性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-14 (28 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-11-14
