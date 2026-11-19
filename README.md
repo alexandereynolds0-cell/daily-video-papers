@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-19](papers/2026-11-19.md) - 21 papers
 - [2026-11-18](papers/2026-11-18.md) - 25 papers
 - [2026-11-17](papers/2026-11-17.md) - 8 papers
 - [2026-11-14](papers/2026-11-14.md) - 12 papers
@@ -187,6 +188,362 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-19 (21 papers)</b></summary>
+
+# arXiv Video Papers - 2026-11-19
+
+**Paper Count**: 21
+
+---
+
+## 1. Cap-and-Track: Optimizing LLM Inference Request Dispatch Across Shifting Capacity / Cap-and-Track：优化跨转移容量的 LLM 推理请求调度
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24891v1](http://arxiv.org/abs/2611.24891v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24891v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A fixed dispatch rate for LLM inference becomes stale as serving fleets resize and request sizes change. Generative output length is unknown at admission, and shared provider pools can lose capacity. We present Cap-and-Track, a design for asynchronous inference across provider capacity and internal GPUs. Meta's traffic shaper implements Cap-and-Track for post and live-video understanding. Refusals signal the backend's current admission ceiling. Durable priority queues hold excess work outside execution, including refused requests for retry. Cap is a fail-fast admission check at the saturated resource that refuses work before a long wait. Using only those refusals, the Track dispatcher probes upward and backs off. It follows the ceiling without output-length prediction or a fleet-level rate to retune. In a concurrent same-traffic production A/B, the shaper ran per-replica Cap plus Track. It served a classifier on 43% fewer H100s than its queued, fixed-rate precursor, though lower-priority work waited longer at backfill peaks. In steady-capacity real-engine replay, Track ran within 1% of the goodput of a fixed rate tuned above measured capacity, with about a quarter of that rate's refusal share. The shaper carries more than 300 million online requests and hundreds of terabytes of media a day. During a backfill, it handled 1.1 billion requests in its busiest 24 hours. Lessons include keeping queues inside inference engines just long enough to fill batches, steering dispatch by capacity refusals alone, keeping dispatch stateful, and sizing fleets by how long low-priority work can wait.
+
+随着服务队列的规模调整和请求大小的变化，LLM 推理的固定调度率会变得过时。生成输出长度在入场时未知，并且共享提供者池可能会损失容量。我们推出了 Cap-and-Track，这是一种跨提供商容量和内部 GPU 进行异步推理的设计。 Meta 的流量整形器实现了用于后期和实时视频理解的 Cap-and-Track。拒绝表明后端当前的准入上限。持久优先级队列保留执行之外的多余工作，包括拒绝的重试请求。 Cap 是对饱和资源的快速失败准入检查，在长时间等待之前拒绝工作。仅使用这些拒绝，轨道调度员就会向上探测并后退。它遵循上限，无需输出长度预测或舰队级别的重新调整率。在并发的相同流量生产 A/B 中，整形器运行每个副本 Cap 加 Track。与排队的固定速率前体相比，它为分类器提供的 H100 数量减少了 43%，尽管较低优先级的工作在回填高峰时等待的时间更长。在稳定容量的真实引擎重放中，Track 的运行速度在高于测量容量的固定速率的吞吐量的 1% 范围内，大约为该速率的拒绝份额的四分之一。 Shaper 每天承载超过 3 亿个在线请求和数百 TB 的媒体。在回填期间，它在最繁忙的 24 小时内处理了 11 亿个请求。经验教训包括将推理引擎内的队列保持足够长以填充批次、仅通过容量拒绝来引导调度、保持调度状态以及根据低优先级工作可以等待的时间来调整队列大小。
+
+</details>
+
+---
+
+## 2. WorldRuler: Interactive World Modeling under Configurable Rules / WorldRuler：可配置规则下的交互式世界建模
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24869v1](http://arxiv.org/abs/2611.24869v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24869v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Rules govern how player actions change interactive worlds. Different rules create distinct gameplay experiences within similar scenes and action spaces. For customizable gameplay, generative world models must follow user-defined rules beyond real-world behaviors. However, realizing user-defined rules presents two challenges: Rule-State Persistence and Rule-to-Visual Realization. The former requires preserving rule definitions, dependencies, and world states across saving and loading, so that restored worlds follow the established rules. The latter requires accurately realizing rule-induced changes on designated objects and attributes, particularly when affected objects are unseen. In this paper, we propose WorldRuler, which organizes rule definitions, dependencies, and object states in an executable 3D rule graph and connects rule execution, video generation, and perceptual feedback in a closed loop. The graph supports joint saving and restoration of rules and world states, while dynamic object binding grounds rule-specified entities in visual instances and uses stored states to constrain generation from their first appearance. We further introduce object attribute state replacement and counterfactual reconstruction training, enabling accurate attribute control and compatible appearance and motion changes while limiting interference with unrelated content. We develop an automated data collection and annotation pipeline using GTA-V and Habitat to construct RuleVerse, a dataset of rule-driven interactions with detailed state and event annotations, including cases where rules take effect before affected objects become visible. Extensive experiments demonstrate the effectiveness of WorldRuler in preserving rule-state consistency across saving and loading and accurately realizing rule outcomes on designated objects and attributes.
+
+规则控制着玩家的行为如何改变互动世界。不同的规则在相似的场景和动作空间中创造出不同的游戏体验。对于可定制的游戏玩法，生成世界模型必须遵循用户定义的超出现实世界行为的规则。然而，实现用户定义的规则面临两个挑战：规则状态持久性和规则到视觉实现。前者需要在保存和加载过程中保留规则定义、依赖关系和世界状态，以便恢复的世界遵循既定规则。后者需要准确地实现规则引起的指定对象和属性的变化，特别是当受影响的对象不可见时。在本文中，我们提出了 WorldRuler，它将规则定义、依赖关系和对象状态组织在可执行的 3D 规则图中，并将规则执行、视频生成和感知反馈连接在一个闭环中。该图支持规则和世界状态的联合保存和恢复，而动态对象绑定将规则指定的实体置于视觉实例中，并使用存储的状态来约束从其第一次出现开始的生成。我们进一步引入对象属性状态替换和反事实重建训练，实现精确的属性控制和兼容的外观和运动变化，同时限制对不相关内容的干扰。我们使用 GTA-V 和 Habitat 开发自动化数据收集和注释管道来构建 RuleVerse，这是一个具有详细状态和事件注释的规则驱动交互数据集，包括规则在受影响对象可见之前生效的情况。大量实验证明了 WorldRuler 在保存和加载过程中保持规则状态一致性以及在指定对象和属性上准确实现规则结果方面的有效性。
+
+</details>
+
+---
+
+## 3. A$^3$Bench: Compositional Reasoning over Aggressive Interactions in Videos / A$^3$Bench：视频中攻击性交互的组合推理
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24762v1](http://arxiv.org/abs/2611.24762v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24762v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/austincbaker/A3Bench.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent Multimodal Large Language Models (MLLMs) have achieved strong performance on general video understanding benchmarks, yet their ability to reason about participant roles in aggressive interactions remains largely unexplored. Existing violence and crime datasets primarily evaluate whether aggression occurs, without testing whether models can identify who performed the action, who received it, and how participants are related within the scene. To address this gap, we introduce A$^3$Bench, a benchmark to study aggressive action and association in videos. The benchmark evaluates whether models can jointly recognize aggressive actions, distinguish aggressors from victims and bystanders, and correctly bind actions to participants under challenging distractor settings. We benchmark 17 multimodal models and find that they struggle substantially on fine-grained aggressive-scene understanding. Performance degrades consistently as reasoning complexity increases, with models frequently confusing aggressors with victims or bystanders, revealing a systematic failure in role-action association rather than coarse aggression recognition alone. We further observe that increasing model scale or generic reasoning models experience limited improvement. Finally, we explore a simple role-graph prompting strategy that encourages structured reasoning over participant interactions, leading to improvements in compositional reasoning. Our findings highlight that reliable aggressive-scene understanding remains a major challenge for current MLLMs and motivate future research on role-aware video reasoning beyond coarse violence detection. Code and dataset: https://github.com/austincbaker/A3Bench.
+
+最近的多模态大型语言模型（MLLM）在一般视频理解基准上取得了出色的性能，但它们在积极交互中推理参与者角色的能力在很大程度上仍未得到探索。现有的暴力和犯罪数据集主要评估是否发生攻击行为，而没有测试模型是否可以识别谁执行了该动作、谁接受了该动作以及参与者在场景中的关系。为了解决这一差距，我们引入了 A$^3$Bench，这是一个研究视频中攻击性动作和关联的基准。该基准评估模型是否可以共同识别攻击性行为，区分攻击者与受害者和旁观者，并在具有挑战性的干扰设置下将行为正确地绑定到参与者。我们对 17 个多模态模型进行了基准测试，发现它们在细粒度的攻击场景理解方面表现不佳。随着推理复杂性的增加，性能持续下降，模型经常将攻击者与受害者或旁观者混淆，揭示了角色-动作关联的系统性失败，而不仅仅是粗略的攻击识别。我们进一步观察到，增加模型规模或通用推理模型的改进有限。最后，我们探索了一种简单的角色图提示策略，该策略鼓励对参与者交互进行结构化推理，从而改进组合推理。我们的研究结果强调，可靠的攻击场景理解仍然是当前 MLLM 的主要挑战，并激励未来对角色感知视频推理的研究，超越粗略的暴力检测。代码和数据集：https://github.com/austincbaker/A3Bench。
+
+</details>
+
+---
+
+## 4. HandWorldBench: A Unified Benchmark for Hand-Centric World Models / HandWorldBench：以手为中心的世界模型的统一基准
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24731v1](http://arxiv.org/abs/2611.24731v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24731v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in world models are opening new possibilities for fine-grained embodied tasks, with hand-object interaction offering a particularly demanding setting. Modeling these interactions involves capturing how hand actions change objects and how the resulting states persist over time. Yet systematic evaluation tailored to these hand-centric capabilities remains underdeveloped. To address this gap, we introduce HandWorldBench, a unified benchmark that systematically evaluates hand-centric world models across human hands, simulated dexterous hands, and real dexterous hands along six dimensions: visual quality, hand fidelity, appearance consistency, instruction following, physical consistency, and temporal coherence. To construct the benchmark, we develop a data curation pipeline that extracts hand-object interaction clips and screens them for quality, yielding 20,500 high-quality egocentric clips from over 600 hours of footage. We then manually select 500 clips covering seven task families for evaluation. Benchmarking eleven models under a unified protocol reveals that stronger hand-pose control does not consistently translate into coherent object-state evolution and persistence or robust cross-embodiment performance, with several specialized hand-control models underperforming general-purpose text/image-to-video generators on dexterous-hand tasks.
+
+世界模型的最新进展为细粒度的具体任务开辟了新的可能性，手部物体交互提供了特别苛刻的环境。对这些交互进行建模涉及捕获手部动作如何改变对象以及结果状态如何随着时间的推移持续存在。然而，针对这些以手为中心的能力量身定制的系统评估仍然不发达。为了解决这一差距，我们引入了 HandWorldBench，这是一个统一的基准，它从六个维度系统地评估以手为中心的世界模型，包括人手、模拟灵巧手和真实灵巧手：视觉质量、手部保真度、外观一致性、指令遵循、物理一致性和时间一致性。为了构建基准，我们开发了一个数据管理管道，可以提取手部物体交互剪辑并筛选它们的质量，从 600 多个小时的镜头中生成 20,500 个高质量的以自我为中心的剪辑。然后，我们手动选择涵盖七个任务系列的 500 个剪辑进行评估。对统一协议下的 11 个模型进行基准测试表明，更强的手部姿势控制并不能始终转化为连贯的对象状态演化和持久性或强大的跨实施例性能，一些专门的手部控制模型在灵巧手任务上的表现不如通用文本/图像到视频生成器。
+
+</details>
+
+---
+
+## 5. Every Query Routes Itself: Accelerating Video Diffusion Transformers with Per-Query Routed Sparse Attention / 每个查询都会自行路由：通过每个查询路由稀疏注意力来加速视频扩散变压器
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24479v1](http://arxiv.org/abs/2611.24479v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24479v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Self-attention over long token sequences dominates the inference cost of video diffusion transformers. Clustering-based sparse attention clusters both queries and keys and lets all queries in a cluster share one selection of key clusters. We show that this sharing limits accuracy: with key clusters and density fixed, attention grows more accurate as the query clusters are refined, and is most accurate when each query selects on its own, which needs no query clustering at all. We therefore propose Per-Query Routed Sparse Attention (PQRS), a training-free method that clusters only keys, lets each query select its own key clusters, and compensates for the unselected ones with their centroids. Per-query selections leave no query tile with a shared key list, so PQRS traverses key clusters instead of queries, buckets queries with identical selections into dense tasks, and merges their partial results in one pass under a fixed softmax offset carried from the previous denoising step. On four text-to-video and image-to-video models from the Wan and HunyuanVideo families, PQRS is the fastest of all the sparse attention methods we evaluate and the closest to the dense output, reaching $28.9$ dB PSNR on Wan2.1-T2V and $35.4$ dB on HunyuanVideo at $1.66$--$2.10\times$ end-to-end speedup.
+
+对长令牌序列的自注意力在视频扩散变压器的推理成本中占主导地位。基于集群的稀疏注意力对查询和键进行集群，并让集群中的所有查询共享一个选择的键集群。我们表明，这种共享限制了准确性：在关键簇和密度固定的情况下，随着查询簇的细化，注意力会变得更加准确，并且当每个查询单独选择时最准确，这根本不需要查询聚类。因此，我们提出了每查询路由稀疏注意力（PQRS），这是一种仅对键进行聚类的免训练方法，让每个查询选择自己的键簇，并用其质心补偿未选择的簇。每个查询的选择不会留下带有共享键列表的查询图块，因此 PQRS 遍历关键簇而不是查询，将具有相同选择的查询存储到密集任务中，并在一次传递中将其部分结果合并到前一个去噪步骤所携带的固定 softmax 偏移下。在 Wan 和 HunyuanVideo 系列的四个文本到视频和图像到视频模型上，PQRS 是我们评估的所有稀疏注意力方法中最快的，也是最接近密集输出的，在 Wan2.1-T2V 上达到 $28.9$ dB PSNR，在 HunyuanVideo 上达到 $35.4$ dB，端到端加速率为 $1.66$--$2.10\times$。
+
+</details>
+
+---
+
+## 6. Probing Physics in Motion Diffusion Models Against Their Own Estimate / 根据他们自己的估计探索运动扩散模型中的物理现象
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24423v1](http://arxiv.org/abs/2611.24423v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24423v1)
+
+**Categories**: cs.LG, cs.CV, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent studies report that video diffusion models "know more than they show": physical properties decode better from their activations than from their inputs or outputs. But a diffusion model computes its clean-sample estimate from those same activations, so such a comparison measures how easily a readout extracts the information. Whether the model hides anything is a separate question. We set out to find hidden physical knowledge in kinematic text-to-motion diffusion models, where the physics of every intermediate estimate can be computed exactly, and recorded every layer along the sampling trajectories of MDM (two checkpoints) and MotionDiffuse. Against the usual baselines the layers do look ahead of the model's own estimate on balance and flight. With every readout tuned the same way, the estimate closes the gap: for balance and flight, adding a layer gains at most 0.01, a size that a positive control shows we would detect. The fall rate of jumps is the one clear exception. Early in denoising, MDM's layers add about 0.08 in $R^2$ (up to 0.11 in a refit) that the estimate does not yet show, and the gain fades as sampling proceeds; on MotionDiffuse it is small and not robust. The estimate also flags floating samples without training, but aborting them saves under a tenth of the compute. In a video model, plausibility that linear probes miss in Wan 2.1's clean latent becomes readable after one fixed nonlinearity.
+
+最近的研究报告称，视频扩散模型“知道的比它们显示的更多”：从它们的激活中解码物理属性比从它们的输入或输出中解码得更好。但是扩散模型根据这些相同的激活来计算其干净样本估计，因此这种比较可以衡量读数提取信息的难易程度。模型是否隐藏任何东西是一个单独的问题。我们着手寻找运动学文本到运动扩散模型中隐藏的物理知识，其中每个中间估计的物理原理都可以精确计算，并记录沿 MDM（两个检查点）和 MotionDiffuse 采样轨迹的每一层。与通常的基线相比，这些层确实领先于模型自己对平衡和飞行的估计。通过以相同方式调整每个读数，估计值缩小了差距：对于平衡和飞行，添加一层增益最多为 0.01，正控制显示我们将检测到的大小。跳跃的下落率是一个明显的例外。在去噪的早期，MDM 的层在 $R^2$ 中添加了大约 0.08（在改装中最高为 0.11），而估计尚未显示，并且随着采样的进行，增益会逐渐减弱；在 MotionDiffuse 上它很小而且不健壮。该估计还标记了未经训练的浮动样本，但中止它们可以节省十分之一的计算量。在视频模型中，线性探针在 Wan 2.1 的干净潜伏中错过的合理性在一个固定的非线性之后变得可读。
+
+</details>
+
+---
+
+## 7. PhysResponse: Probing the Physics of Video Generation with Controlled Interventions / PhysResponse：通过受控干预探索视频生成的物理原理
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24419v1](http://arxiv.org/abs/2611.24419v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24419v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation models are increasingly viewed as world simulators, which requires not only plausible motion but dynamics that respond correctly to specified physical parameters. Existing models, datasets and benchmarks, however, largely target physical plausibility, leaving this physical parameter responsiveness insufficiently explored. We introduce PhysResponse, a benchmark that measures it at two levels: scene-conditioned simulator inversion recovers the effective gravity, friction and initial speed of generated motion, and event evaluation tests outcomes near and across critical transitions. Evaluating ten image-to-video models, we find that even the lowest parameter errors exceed those of physically correct videos by over an order of magnitude, that models rarely reproduce both outcomes of a transition pair, and that the two levels expose complementary failures that visual metrics such as PSNR miss. To supply the missing training signal, we construct 72,000 simulated videos of 20 multi-object interaction types with controlled parameters; fine-tuning on them lowers parameter errors, even on held-out interaction types, and transfers to real videos and an external physics benchmark. Continued training with a numerical encoder further lowers all three errors on held-out types. PhysResponse provides a foundation for world simulators that follow physical conditions, not just appearances.
+
+视频生成模型越来越被视为世界模拟器，它不仅需要合理的运动，还需要能够正确响应指定物理参数的动力学。然而，现有的模型、数据集和基准主要针对物理合理性，导致对物理参数响应性的探索不够充分。我们引入了 PhysResponse，这是一个在两个层面上进行测量的基准：场景条件模拟器反演可恢复生成运动的有效重力、摩擦力和初始速度，事件评估测试关键转变附近和关键转变之间的结果。通过评估十个图像到视频模型，我们发现即使是最低的参数误差也超过了物理上正确的视频的一个数量级以上，该模型很少能够重现过渡对的两个结果，并且这两个级别暴露了 PSNR 等视觉指标所遗漏的互补故障。为了提供缺失的训练信号，我们构建了 72,000 个具有受控参数的 20 种多对象交互类型的模拟视频；对它们进行微调可以降低参数错误，即使是在保留的交互类型上也是如此，并传输到真实视频和外部物理基准。使用数字编码器进行持续训练可进一步降低保留类型的所有三个错误。 PhysResponse 为遵循物理条件而不仅仅是外观的世界模拟器提供了基础。
+
+</details>
+
+---
+
+## 8. AnchorUp: Anchoring Feature Upsampling on a Classical Interpolation / AnchorUp：在经典插值上锚定特征上采样
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24296v1](http://arxiv.org/abs/2611.24296v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24296v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/KotaroHorikawa/AnchorUp.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision foundation models produce semantically strong features on a coarse patch grid, and dense prediction needs them at pixel resolution. Existing learned upsamplers close that gap by regressing the high-resolution feature map from the low-resolution one, typically through cross-attention driven by the input image. We observe that most of what they regress needs no learning: plain bilinear interpolation already reproduces the smooth regions of the target, and recent benchmarks even report bilinear and bicubic on par with several learned upsamplers. The rest is mostly edges and fine details, which suggests that these learned upsamplers spend much of their capacity re-computing the smooth content that classical interpolation provides. We therefore introduce AnchorUp, which stops predicting the high-resolution feature map and predicts only its correction from the interpolation. It keeps a parameter-free classical upsampler as an anchor, obtains a second prediction from a small guidance network, and blends the two through a single learnable scalar gate. Because the anchor supplies the smooth content, the guidance network only has to correct what remains. An analysis of the learned correction confirms that it concentrates on edges and fine details, and so the network can be small: AnchorUp uses 167,425 parameters, a quarter of the budget of the strongest baseline, NAF, and runs at 64% of its latency. Trained once on DINOv3 with only the first of NAF's two training stages, and evaluated on that backbone plus six held-out ones, it is already on par with NAF trained through both stages on Pascal VOC and Cityscapes. Our method surpasses it on DAVIS-2017 video object segmentation; the gain holds on every backbone and is larger in contour accuracy F. Code is available at https://github.com/KotaroHorikawa/AnchorUp.
+
+视觉基础模型在粗斑块网格上产生语义上强的特征，而密集预测需要它们以像素分辨率。现有的学习上采样器通过将高分辨率特征图与低分辨率特征图进行回归来缩小这一差距，通常是通过输入图像驱动的交叉注意力。我们观察到，它们回归的大部分内容不需要学习：简单的双线性插值已经再现了目标的平滑区域，并且最近的基准测试甚至报告了与几个学习的上采样器相当的双线性和双三次。其余的主要是边缘和精细细节，这表明这些学习的上采样器花费了大量的能力来重新计算经典插值提供的平滑内容。因此，我们引入了 AnchorUp，它停止预测高分辨率特征图，只预测插值的校正。它将无参数的经典上采样器作为锚点，从小型引导网络获得第二个预测，并通过单个可学习标量门将两者混合。由于主播提供了流畅的内容，因此引导网络只需纠正剩余的内容即可。对学习校正的分析证实，它集中于边缘和精细细节，因此网络可以很小：AnchorUp 使用 167,425 个参数，是最强基线 NAF 预算的四分之一，并以 64% 的延迟运行。仅使用 NAF 两个训练阶段中的第一个阶段在 DINOv3 上进行了一次训练，并在该主干网和六个保留阶段上进行了评估，它已经与在 Pascal VOC 和 Cityscapes 上经过两个阶段训练的 NAF 相当。我们的方法在 DAVIS-2017 视频对象分割上超越了它；每个主干上的增益都保持不变，并且轮廓精度 F 更大。代码可在 https://github.com/KotaroHorikawa/AnchorUp 上找到。
+
+</details>
+
+---
+
+## 9. Semantic Guidance for Joint Infrared-Visible Video Fusion and Frame Interpolation / 联合红外-可见光视频融合和帧插值的语义指导
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24277v1](http://arxiv.org/abs/2611.24277v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24277v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/XylonXu01/SAFI.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Infrared and visible video fusion at high frame rates requires recovering missing observations when camera rates differ or fall below the desired output rate. Cascading interpolation and fusion can accumulate errors and cause brightness fluctuations. Motion and occlusion further complicate content selection, particularly when missing visible frames also remove direct semantic guidance. We propose SAFI, which uses semantics at the target time to guide joint interpolation and fusion. When the visible frame rate exceeds the infrared rate, available visible frames provide semantic context directly. At times without visible observations, motion guides local matching, and propagation recovers semantics from neighboring frames. Semantic context complements aligned image features at the target time, while matching confidence helps select reliable infrared and visible information. Reconstruction and fusion share source selection within each scale, allowing supervision on missing frames to guide fusion. To preserve visible appearance and reduce flicker, we bound thermal enhancement and penalize brightness inconsistencies across frames while accounting for changes in thermal contrast. Experiments on three datasets show improved visual quality with less computation than cascaded baselines and consistent temporal gains when input rates differ. SAFI maintains strong downstream tracking performance despite missing frames. The code is available at https://github.com/XylonXu01/SAFI.
+
+当相机速率不同或低于所需的输出速率时，高帧速率的红外和可见视频融合需要恢复丢失的观测结果。级联插值和融合会累积误差并导致亮度波动。运动和遮挡进一步使内容选择复杂化，特别是当丢失可见帧也会消除直接语义指导时。我们提出SAFI，它使用目标时间的语义来指导联合插值和融合。当可见帧速率超过红外速率时，可用的可见帧直接提供语义上下文。有时没有可见的观察，运动引导局部匹配，传播从相邻帧恢复语义。语义上下文补充了目标时间对齐的图像特征，而匹配置信度有助于选择可靠的红外和可见光信息。重建和融合在每个尺度内共享源选择，允许对丢失的帧进行监督以指导融合。为了保持可见外观并减少闪烁，我们限制热增强并惩罚跨帧的亮度不一致，同时考虑热对比度的变化。对三个数据集的实验表明，与级联基线相比，计算量更少，视觉质量得到改善，并且输入速率不同时时间增益保持一致。尽管丢失了帧，SAFI 仍保持强大的下游跟踪性能。该代码可在 https://github.com/XylonXu01/SAFI 获取。
+
+</details>
+
+---
+
+## 10. Look Closer, Look Back, or Wait for Agentic Streaming Video Understanding / 仔细观察、回顾或等待代理流视频理解
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24267v1](http://arxiv.org/abs/2611.24267v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24267v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Streaming video models must answer questions about a live video under strict memory and latency limits. Feeding only the latest few frames keeps present perception sharp, whereas adding past frames dilutes attention on the current scene and triggers hallucinations. Recent cascade methods retrieve past frames when uncertain, but they still fail when current frames are blurry or when decisive future clues have not appeared yet. We introduce ActiveForager, a streaming video agent that maintains a clean short working window and gathers extra evidence only on demand. For each query, the agent either answers directly, zooms into high-resolution recent frames, recalls past events from memory, or waits for upcoming frames. When recalling history, a shared-weight sub-agent verifies candidate clips in isolation and returns a compact evidence summary. A stream-decoupled attention mask then keeps historical evidence from interfering with present visual tokens. We train this policy using counterfactual information gain, which rewards a tool call only when the gathered evidence makes the true answer more likely and prevents tool collapse across all actions. Across Qwen2.5-VL-7B and Qwen3-VL-8B on OVO-Bench, ActiveForager improves real-time perception, historical recall, and proactive response at once, lifting overall accuracy on Qwen3-VL-8B from 47.6% to 65.9%. It also doubles zero-shot accuracy on the multi-hop Video-Holmes benchmark while adding minimal visual tokens per query.
+
+流视频模型必须在严格的内存和延迟限制下回答有关实时视频的问题。仅输入最新的几帧可以保持当前的感知敏锐，而添加过去的帧会削弱对当前场景的注意力并引发幻觉。最近的级联方法在不确定时检索过去的帧，但当当前帧模糊或决定性的未来线索尚未出现时，它们仍然会失败。我们引入了 ActiveForager，这是一种流视频代理，它保持干净的短工作窗口并仅根据需要收集额外的证据。对于每个查询，代理要么直接回答，要么放大高分辨率的最近帧，从内存中回忆过去的事件，要么等待即将到来的帧。当回顾历史时，共享权重子代理会单独验证候选剪辑并返回紧凑的证据摘要。然后，流解耦的注意力掩模可以防止历史证据干扰当前的视觉标记。我们使用反事实信息增益来训练该策略，只有当收集到的证据使真实答案更有可能出现并防止工具在所有操作中崩溃时，该策略才会奖励工具调用。在 OVO-Bench 上的 Qwen2.5-VL-7B 和 Qwen3-VL-8B 中，ActiveForager 立即改善了实时感知、历史回忆和主动响应，将 Qwen3-VL-8B 的整体准确率从 47.6% 提高到 65.9%。它还使多跳 Video-Holmes 基准上的零镜头精度提高了一倍，同时为每个查询添加了最少的视觉标记。
+
+</details>
+
+---
+
+## 11. Spark-H3: Adaptive Block Sparse Attention for Video Diffusion Models / Spark-H3：视频扩散模型的自适应块稀疏注意力
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24256v1](http://arxiv.org/abs/2611.24256v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24256v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long video sequences make attention a substantial cost in video diffusion models. Block sparse attention (BSA) reduces this cost by computing selected blocks exactly while compressing the remaining blocks. However, fixed token grouping can place tokens with dissimilar attention preferences in the same group, while uniform key averaging can underestimate the attention mass of compressed blocks. We introduce Spark-Attn, a training-free BSA method comprising Spark-Reblock and Spark-Reweight. Spark-Reblock recursively groups tokens by attention preference while preserving regular block shapes for efficient GPU execution. Spark-Reweight uses the global mean query as an anchor to construct attention-weighted key-value representations and logit biases for the compressed blocks, calibrating their attention mass. We instantiate Spark-Attn in MiniMax-H3 as Spark-H3. At 10% exact-block density, Spark-H3 delivers a 2.49$\times$ DiT speedup and reaches 24.81 dB PSNR against the corresponding dense outputs on MiniMax-H3 (20 denoising steps, 345 frames, 1344$\times$768). Increasing the density to 20% further improves PSNR to 26.76 dB while still achieving a 2.26$\times$ DiT speedup. These results demonstrate that Spark-H3 achieves a state-of-the-art quality-efficiency trade-off for training-free BSA on video diffusion models.
+
+长视频序列使得注意力成为视频传播模型中的巨大成本。块稀疏注意力（BSA）通过精确计算所选块同时压缩剩余块来降低这种成本。然而，固定的令牌分组可以将具有不同注意力偏好的令牌放置在同一组中，而统一的密钥平均可以低估压缩块的注意力质量。我们介绍 Spark-Attn，一种免训练的 BSA 方法，包括 Spark-Reblock 和 Spark-Reweight。 Spark-Reblock 根据注意力偏好递归地对令牌进行分组，同时保留规则的块形状以实现高效的 GPU 执行。 Spark-Reweight 使用全局均值查询作为锚点来构建压缩块的注意力加权键值表示和 logit 偏差，从而校准其注意力质量。我们将 MiniMax-H3 中的 Spark-Attn 实例化为 Spark-H3。在 10% 精确块密度下，Spark-H3 提供 2.49$\times$ DiT 加速，并与 MiniMax-H3 上相应的密集输出相比达到 24.81 dB PSNR（20 个降噪步骤，345 帧，1344$\times$768）。将密度增加到 20% 进一步将 PSNR 提高到 26.76 dB，同时仍然实现 2.26$\times$ DiT 加速。这些结果表明，Spark-H3 在视频扩散模型上实现了最先进的质量效率权衡，无需训练 BSA。
+
+</details>
+
+---
+
+## 12. VideoACE: Benchmarking Agentic Video Understanding through High-Frame-Rate Actions / VideoACE：通过高帧率动作对代理视频理解进行基准测试
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24184v1](http://arxiv.org/abs/2611.24184v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24184v1)
+
+**Categories**: cs.CV, cs.AI, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic video understanding requires models to actively interact with video environments to gather evidence and form judgments. Evaluating this capability therefore requires assessing whether models can translate opportunities for interaction into better understanding. We introduce VideoACE, a benchmark for assessing video understanding under conditions that support sustained interaction. We focus on high-frame-rate action videos, where rapid, subtle changes make targeted observation especially valuable. The benchmark comprises 1,000 multiple-choice questions spanning six categories of fine-grained action understanding, accompanied by temporal evidence annotations and user hints screened for answer leakage. Its evaluation environment combines video inspection tools with a user simulator, allowing models to adjust temporal coverage, sampling density, and spatial detail, and to revisit evidence and revise their judgments under simulated user feedback. We evaluate single-pass observation, autonomous tool use, and tool use combined with user feedback to examine how effectively models exploit these opportunities. Evaluation of five models reveals distinct patterns in how they acquire evidence and respond to opportunities for further interaction. These findings establish VideoACE as a testbed for examining agentic video understanding beyond performance under a fixed observation setting.
+
+代理视频理解需要模型主动与视频环境交互以收集证据并形成判断。因此，评估这种能力需要评估模型是否可以将交互机会转化为更好的理解。我们引入了 VideoACE，这是一个在支持持续交互的条件下评估视频理解的基准。我们专注于高帧率动作视频，其中快速、微妙的变化使得有针对性的观察特别有价值。该基准包括 1,000 个多项选择题，涵盖六类细粒度动作理解，并附有时间证据注释和针对答案泄漏进行筛选的用户提示。其评估环境将视频检查工具与用户模拟器相结合，允许模型调整时间覆盖范围、采样密度和空间细节，并根据模拟用户反馈重新审视证据并修改其判断。我们评估单遍观察、自主工具使用以及与用户反馈相结合的工具使用，以检查模型如何有效地利用这些机会。对五个模型的评估揭示了它们如何获取证据并对进一步互动的机会做出反应的不同模式。这些发现将 VideoACE 确立为一个测试平台，用于检查固定观察设置下超出性能的代理视频理解。
+
+</details>
+
+---
+
+## 13. EVF-Bench: A Comprehensive Benchmark for E-commerce Visual Effects in Video Generation / EVF-Bench：视频生成中电子商务视觉效果的综合基准
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24116v1](http://arxiv.org/abs/2611.24116v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24116v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+E-commerce visual effects (EVF) are dynamic, product-centered visual presentations in e-commerce videos, often accompanied by promotional text. They play an important role in attracting viewer attention and conveying product information. However, general measures of visual quality and text relevance alone do not establish whether generated videos preserve product appearance, maintain readable text, and produce coherent, contextually appropriate effects. To address this issue, we introduce EVF-Bench, a dedicated benchmark spanning six evaluation dimensions: visual quality and text relevance as general dimensions, and motion, product consistency, text stability, and creative rationality as EVF-specific dimensions. To complement the benchmark and support task-aligned research and model adaptation, we further construct EVF-32K, a dataset of over 32000 curated image-text-video triples tailored to e-commerce scenarios. Using this suite, we systematically evaluate representative video generation models and their domain-adapted variants. The results reveal complementary strengths, with no evaluated configuration leading all six dimensions. Together, EVF-Bench and EVF-32K provide a task-oriented evaluation framework and a supporting data resource for e-commerce video generation.
+
+电子商务视觉效果 (EVF) 是电子商务视频中以产品为中心的动态视觉呈现，通常伴有促销文字。它们在吸引观众注意力和传达产品信息方面发挥着重要作用。然而，仅对视觉质量和文本相关性进行一般测量并不能确定生成的视频是否保留产品外观、保持可读文本并产生连贯、上下文适当的效果。为了解决这个问题，我们引入了 EVF-Bench，这是一个涵盖六个评估维度的专用基准：视觉质量和文本相关性作为一般维度，运动、产品一致性、文本稳定性和创意合理性作为 EVF 特定维度。为了补充基准并支持任务相关的研究和模型适应，我们进一步构建了 EVF-32K，这是一个针对电子商务场景定制的超过 32000 个精心策划的图像-文本-视频三元组的数据集。使用该套件，我们系统地评估了代表性视频生成模型及其适应领域的变体。结果揭示了互补的优势，没有评估的配置领先所有六个维度。 EVF-Bench 和 EVF-32K 共同为电子商务视频生成提供面向任务的评估框架和支持数据资源。
+
+</details>
+
+---
+
+## 14. APS: Adaptive Partitioning-Based Frame Selection for Long Video Understanding / APS：用于长视频理解的基于自适应分区的帧选择
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24079v1](http://arxiv.org/abs/2611.24079v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24079v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in large vision-language models (LVLMs) have significantly improved video understanding capabilities, yet processing long videos remains challenging due to the substantial computational cost of extensive visual inputs. Frame selection offers an efficient alternative, but many existing region-based methods rely on fixed or predefined temporal partitions, which may result in suboptimal temporal regions, compromising subsequent budget allocation and frame selection. In this work, we propose Adaptive Partitioning-Based Frame Selection (APS), a training-free framework that adapts temporal partitions to local variations in query-frame relevance. Specifically, APS formulates temporal partitioning as a complexity-regularized fitting problem, jointly optimizing partition boundaries and local models through dynamic programming. The resulting adaptive temporal partitions guide frame budget allocation based on query relevance and temporal extent, enabling informative frame selection under limited visual budgets. Extensive experiments on Video-MME, MLVU, and LongVideoBench demonstrate that APS consistently improves performance across diverse LVLM backbones, achieving the highest average gains over uniform sampling among competing methods. Further analyses validate the effectiveness of adaptive partitioning and demonstrate its generalizability across model scales, similarity encoders, and advanced LVLMs.
+
+大型视觉语言模型（LVLM）的最新进展显着提高了视频理解能力，但由于大量视觉输入的大量计算成本，处理长视频仍然具有挑战性。帧选择提供了一种有效的替代方案，但许多现有的基于区域的方法依赖于固定或预定义的时间分区，这可能会导致次优的时间区域，从而损害后续的预算分配和帧选择。在这项工作中，我们提出了基于自适应分区的帧选择（APS），这是一种无需训练的框架，可以使时间分区适应查询帧相关性的局部变化。具体来说，APS 将时间分区制定为复杂性正则化拟合问题，通过动态规划联合优化分区边界和局部模型。由此产生的自适应时间分区根据查询相关性和时间范围指导帧预算分配，从而在有限的视觉预算下实现信息丰富的帧选择。在 Video-MME、MLVU 和 LongVideoBench 上进行的大量实验表明，APS 能够持续提高不同 LVLM 主干网的性能，在竞争方法中实现比均匀采样最高的平均增益。进一步的分析验证了自适应分区的有效性，并证明了其在模型尺度、相似性编码器和高级 LVLM 中的通用性。
+
+</details>
+
+---
+
+## 15. Semantic-aware Contrasting with Explicitly Disentangled Representations for AI-Generated Video Detection / 用于人工智能生成视频检测的语义感知对比与显式解开表示
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24038v1](http://arxiv.org/abs/2611.24038v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24038v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The rapid proliferation of AI-generated videos (AIGVs) has raised critical concerns about content authenticity. Existing benchmarks suffer from a fundamental limitation: real and fake videos are often collected or generated from different semantic distributions. As a result, detectors may rely on spurious correlations involving objects, scenes, or actions rather than intrinsic artifacts introduced by generative models. To this end, we introduce SAVGE, a large-scale semantically aligned AIGV detection dataset comprising 2,369,822 videos, including 424,115 real videos and 1,945,707 generated videos. SAVGE organizes samples into real-fake semantic groups by using captions paired with real videos as prompts for text-to-video generation, thereby providing both group-level correspondence and textual semantic anchors. Based on SAVGE, we further propose Explicit Disentangling and Semantic-aware Contrasting (EDSC), a model-agnostic training framework for learning artifact-focused representations with reduced semantic interference. EDSC first extracts and aligns visual semantic features with textual representations, and then explicitly suppresses semantic information in the artifact branch while contrasting real and fake samples within each semantic group. By integrating caption-guided semantic supervision with intra-group contrastive learning in a two-phase optimization strategy, EDSC encourages detectors to capture generation-related cues under matched semantic conditions. Extensive experiments on SAVGE and GenVideo demonstrate that EDSC improves most evaluated backbone-metric combinations, enhances robustness under challenging evaluation settings, and strengthens cross-dataset generalization. These results highlight the importance of semantic alignment in AIGV detection and validate explicit semantic-artifact disentanglement as an effective strategy for robust detector learning.
+
+人工智能生成视频 (AIGV) 的快速扩散引发了人们对内容真实性的严重担忧。现有的基准测试存在一个根本性的限制：真实和虚假的视频通常是从不同的语义分布中收集或生成的。因此，检测器可能依赖于涉及对象、场景或动作的虚假相关性，而不是生成模型引入的内在伪影。为此，我们引入了 SAVGE，这是一个大规模语义对齐的 AIGV 检测数据集，包含 2,369,822 个视频，其中包括 424,115 个真实视频和 1,945,707 个生成视频。 SAVGE 通过使用与真实视频配对的字幕作为文本到视频生成的提示，将样本组织成真假语义组，从而提供组级对应和文本语义锚。基于 SAVGE，我们进一步提出了显式解缠结和语义感知对比（EDSC），这是一种与模型无关的训练框架，用于学习以工件为中心的表示，并减少语义干扰。 EDSC 首先提取视觉语义特征并将其与文本表示对齐，然后显式抑制工件分支中的语义信息，同时对比每个语义组内的真实和虚假样本。通过在两阶段优化策略中将字幕引导的语义监督与组内对比学习相结合，EDSC 鼓励检测器在匹配的语义条件下捕获与生成相关的线索。 SAVGE 和 GenVideo 上的大量实验表明，EDSC 改进了大多数评估的骨干指标组合，增强了具有挑战性的评估设置下的鲁棒性，并增强了跨数据集泛化。这些结果强调了语义对齐在 AIGV 检测中的重要性，并验证了显式语义伪像解开作为稳健检测器学习的有效策略。
+
+</details>
+
+---
+
+## 16. FlyVQA: Seeing Video Frame Interpolation Quality through Fly Eyes / FlyVQA：通过蝇眼查看视频帧插值质量
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24012v1](http://arxiv.org/abs/2611.24012v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24012v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The ultimate ambition of visual quality assessment is to reproduce the neural computations of human vision and thereby achieve full alignment with human perception. However, the immense complexity of human visual circuitry makes this goal difficult to realize. Recently released fly visual connectomes provide a tractable biological starting point. Despite differences between fly and human vision, the fly's well-characterized motion pathways motivate us to investigate their potential for assessing the perceptual impact of temporal distortions. In this paper, we use a shared, frozen fly visual circuit to perform full-reference quality assessment of frame-interpolated videos, whose artifacts can disrupt temporal consistency. Specifically, compound-eye sampling maps reference and distorted sequences into the circuit, while a connectome-aware readout quantifies discrepancies in cell-type-specific activity and excitatory--inhibitory synaptic dynamics. Reference-guided temporal pooling and a lightweight regression head integrate these differences into a quality score. Experiments across multiple interpolation methods demonstrate better agreement with human ratings than CNN, RNN, and Transformer baselines with comparable parameters, supporting a biologically grounded approach to perceptual quality modeling.
+
+视觉质量评估的最终目标是重现人类视觉的神经计算，从而实现与人类感知的完全一致。然而，人类视觉电路的巨大复杂性使得这一目标难以实现。最近发布的果蝇视觉连接组提供了一个易于处理的生物学起点。尽管苍蝇和人类视觉之间存在差异，但苍蝇的特征明确的运动路径激励我们研究它们评估时间扭曲的感知影响的潜力。在本文中，我们使用共享的冻结苍蝇视觉电路对帧插值视频进行全参考质量评估，其伪影可能会破坏时间一致性。具体来说，复眼采样将参考序列和扭曲序列映射到电路中，而连接体感知读数则量化细胞类型特异性活动和兴奋性-抑制性突触动力学的差异。参考引导的时间池和轻量级回归头将这些差异整合到质量得分中。多种插值方法的实验表明，与具有可比参数的 CNN、RNN 和 Transformer 基线相比，与人类评分的一致性更好，支持基于生物学的感知质量建模方法。
+
+</details>
+
+---
+
+## 17. WaveView: The Novel View Is in the Noise / WaveView：噪音中的新颖视角
+
+**Date**: 2026-11-18 | **arXiv**: [2611.23994v1](http://arxiv.org/abs/2611.23994v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.23994v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative novel view synthesis (NVS) employs a diffusion model to render a static or dynamic scene from a target camera view. Explicit warp methods complete a reprojection of the source with video diffusion models, and implicit methods encode the camera parameters or 3D cues. Both add inference overhead, and the generated layout often drifts from the ground truth. We present WaveView, which injects the warped source into the phase of the initial noise of a pretrained generator. The Dual-Tree Complex Wavelet Packet Transform (DT-CWPT) allows local and anisotropic phase injection. The generator is thus constrained less in disoccluded regions and along the epipolar line. WaveView keeps the architecture and adds negligible overhead. On the DL3DV benchmark, it outperforms all baselines in every overlap bin. In the hardest bin, it gains 0.84 dB PSNR on the covisible region over MetaView, which shares its generator, while running 2.1 times faster. For dynamic NVS, fine-tuning AnyView with the same noise raises its zero-shot PSNR on AnyViewBench from 11.58 to 12.35 dB.
+
+生成式新颖视图合成 (NVS) 采用扩散模型从目标摄像机视图渲染静态或动态场景。显式扭曲方法使用视频扩散模型完成源的重新投影，隐式方法对相机参数或 3D 线索进行编码。两者都会增加推理开销，并且生成的布局通常会偏离真实情况。我们提出了 WaveView，它将扭曲的源注入到预训练生成器的初始噪声相位中。双树复小波包变换 (DT-CWPT) 允许局部和各向异性相位注入。因此，发生器在未遮挡区域和沿极线的约束较少。 WaveView 保留了架构并增加了可以忽略不计的开销。在 DL3DV 基准测试中，它优于每个重叠箱中的所有基线。在最难的 bin 中，与共享其生成器的 MetaView 相比，它在可见区域上获得了 0.84 dB PSNR，同时运行速度提高了 2.1 倍。对于动态 NVS，使用相同的噪声对 AnyView 进行微调可将其在 AnyViewBench 上的零样本 PSNR 从 11.58 dB 提高到 12.35 dB。
+
+</details>
+
+---
+
+## 18. SimplePro: A Simple Baseline for Proactive Video Understanding / SimplePro：主动视频理解的简单基准
+
+**Date**: 2026-11-18 | **arXiv**: [2611.23954v1](http://arxiv.org/abs/2611.23954v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.23954v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Proactive video understanding requires vision-language models (VLMs) to decide not only what to answer as a video unfolds, but also when newly arrived evidence warrants a response and when to remain silent. Although modern VLMs excel at offline long-video understanding, they struggle in proactive streaming settings, leading prior work to introduce task-specific reinforcement learning or auxiliary triggering modules. We find that explicit reporting rules and structured streaming context substantially improve a frozen VLM's proactive response performance. We exploit this observation to build SIMPLEPRO, a training-free baseline for proactive video understanding. At each decision step, the model combines recent high-resolution frames, bounded historical observations, and prior answer records to determine whether new information warrants a response and, when needed, generate a concise answer. The system then filters consecutive duplicate answers while retaining the raw outputs as context for subsequent decisions. Without any parameter updates or auxiliary triggers, SIMPLEPRO with a 4B backbone consistently outperforms specialized proactive systems across OVO-Bench, StreamingBench-PO, and ProactiveVideoQA. SIMPLEPRO shows overall performance gains as backbone size increases from 2B to 32B. We hope this simple yet effective method will serve as a strong baseline for proactive video understanding, and we will release our code and inference pipeline to support future research.
+
+主动视频理解需要视觉语言模型 (VLM) 不仅决定在视频展开时回答什么，还决定何时新到达的证据需要做出回应以及何时保持沉默。尽管现代 VLM 擅长离线长视频理解，但它们在主动流媒体设置中表现不佳，导致之前的工作引入了特定于任务的强化学习或辅助触发模块。我们发现，明确的报告规则和结构化流上下文可以显着提高冻结的 VLM 的主动响应性能。我们利用这一观察结果构建了 SIMPLEPRO，这是一个用于主动视频理解的免训练基线。在每个决策步骤中，该模型都会结合最近的高分辨率帧、有限的历史观察结果和先前的答案记录，以确定新信息是否需要做出响应，并在需要时生成简洁的答案。然后，系统过滤连续的重复答案，同时保留原始输出作为后续决策的上下文。无需任何参数更新或辅助触发器，具有 4B 主干的 SIMPLEPRO 在 OVO-Bench、StreamingBench-PO 和 ProactiveVideoQA 方面始终优于专用主动系统。随着主干大小从 2B 增加到 32B，SIMPLEPRO 显示了整体性能的提升。我们希望这种简单而有效的方法能够成为主动视频理解的强大基线，并且我们将发布我们的代码和推理管道以支持未来的研究。
+
+</details>
+
+---
+
+## 19. EVA-RSI: Recursive Self-Improvement of Video Evaluators for Judging Temporal Quality / EVA-RSI：用于判断时间质量的视频评估器的递归自我改进
+
+**Date**: 2026-11-18 | **arXiv**: [2611.23890v1](http://arxiv.org/abs/2611.23890v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.23890v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video evaluators play an important role in video generation, yet they miss motion defects, limiting the quality of generated videos. Recursive self-improvement (RSI) has made strong progress in mathematics and coding, where explicit verifiers provide reliable feedback on a single goal. Video evaluation poses two difficulties for RSI: it has no verifier, and it must judge many dimensions at once, such as physics, smoothness and dynamics, where a gain on one can cost another. We introduce EVA-RSI, a multi-agent framework for exploring RSI under these two constraints. We build a fixed proxy exam with construction-defined targets by applying controlled changes to videos, such as temporal reversal and frame dropping. These edits supply supervision without human annotation. A small set of human-labeled real videos anchors the exam to human judgment. Each dimension has an LLM agent that proposes improvements. A leader agent coordinates the proposals, and a Nash bargaining rule selects updates that balance progress across dimensions. Humans design the exam, review candidate changes and revise the curriculum between stages. Starting from Qwen3-VL-8B, EVA-RSI improves motion evaluation, with the largest gain on smoothness, and the gains carry over to defect types never seen during the run. On the dynamics subsets of public benchmarks, our evaluator achieves the highest observed scores among 21 tested models. As an RL reward, it increases generated motion and earns human preference. A data-selection pipeline incorporating it also increases motion.
+
+视频评估器在视频生成中发挥着重要作用，但他们会忽略运动缺陷，从而限制了生成视频的质量。递归自我改进（RSI）在数学和编码方面取得了长足的进步，其中显式验证器为单个目标提供了可靠的反馈。视频评估给 RSI 带来了两个困难：它没有验证器，并且必须同时判断多个维度，例如物理、平滑度和动态，其中一个维度的收益可能会导致另一个维度的损失。我们引入了 EVA-RSI，一个用于在这两个约束下探索 RSI 的多智能体框架。我们通过对视频应用受控更改（例如时间反转和丢帧）来构建具有构造定义目标的固定代理考试。这些编辑无需人工注释即可提供监督。一小部分带有人类标签的真实视频将考试锚定为人类判断。每个维度都有一个 LLM 代理提出改进建议。领导者代理协调提案，纳什讨价还价规则选择平衡跨维度进展的更新。人类设计考试、审查考生的变化并在各个阶段之间修改课程。从 Qwen3-VL-8B 开始，EVA-RSI 改进了运动评估，在平滑度方面获得了最大的增益，并且增益会延续到运行期间从未见过的缺陷类型。在公共基准的动态子集上，我们的评估器在 21 个测试模型中获得了最高的观察分数。作为强化学习奖励，它可以增加生成的运动并赢得人类的偏好。包含它的数据选择管道也增加了运动。
+
+</details>
+
+---
+
+## 20. NullTok: empirical-null token selection for training-free long video understanding / NullTok：用于免训练长视频理解的经验空标记选择
+
+**Date**: 2026-11-18 | **arXiv**: [2611.23881v1](http://arxiv.org/abs/2611.23881v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.23881v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/potato-kitty/NullTok.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long video understanding remains a daunting challenge for existing multimodal large language models (MLLMs), mainly due to the large number of visual tokens accumulated in long videos. Currently, frame selection and token selection are two main paradigms for addressing this issue, both aiming to select relevant visual information to form a compact input for MLLMs. A natural approach combines these two paradigms by selecting frames before pruning tokens, but noisy frame-level relevance estimates can cause irreversible evidence loss. In this paper, we study this problem from the perspective of assessing the spatiotemporal distribution of query-specific evidence and propose a novel and training-free approach termed NULLTOK. For every patch across all frames, we construct an empirical-null distribution from 64 group-matched irrelevant control queries, capturing the scores expected in the absence of target-specific evidence. Target affinities are calibrated against these same-position references into right-tail Monte Carlo p-values, which are discrete super-uniform under a conditional exchangeability assumption. Calibrated screening and a high-recall semantic guard produce candidate tokens for deterministic visual deduplication and joint spatiotemporal budget allocation. To validate NullTok, we apply it to two representative MLLMs and conduct extensive experiments on a set of video benchmarks. The experimental results demonstrate its effectiveness under a bounded visual token budget. For example, it achieves 65.81% and 68.85% on Video-MME using frozen LLaVA-Video-7B and Qwen3-VL-8B backbones, respectively, at a cap of 64 full-frame equivalents (FFE), without subtitles or audio. These results outperform all evaluated baselines on Video-MME under the same budget for both backbones. Code is available at https://github.com/potato-kitty/NullTok.
+
+对于现有的多模态大语言模型（MLLM）来说，长视频理解仍然是一个艰巨的挑战，这主要是由于长视频中积累了大量的视觉标记。目前，框架选择和令牌选择是解决这个问题的两个主要范例，两者都旨在选择相关的视觉信息以形成 MLLM 的紧凑输入。一种自然的方法是通过在修剪标记之前选择帧来结合这两种范式，但是嘈杂的帧级相关性估计可能会导致不可逆的证据丢失。在本文中，我们从评估特定查询证据的时空分布的角度研究这个问题，并提出了一种新颖的、免训练的方法，称为 NULLTOK。对于所有帧中的每个补丁，我们从 64 个组匹配的不相关控制查询构建了一个经验零分布，捕获在缺乏特定目标证据的情况下预期的分数。目标亲和力根据这些相同位置参考校准为右尾蒙特卡罗 p 值，这些 p 值在条件可交换性假设下是离散的超均匀的。校准筛选和高召回率语义防护产生用于确定性视觉重复数据删除和联合时空预算分配的候选标记。为了验证 NullTok，我们将其应用于两个代表性的 MLLM，并在一组视频基准上进行了广泛的实验。实验结果证明了其在有限视觉令牌预算下的有效性。例如，它使用冻结的 LLaVA-Video-7B 和 Qwen3-VL-8B 主干网在 Video-MME 上分别实现了 65.81% 和 68.85%，上限为 64 个全帧等效值 (FFE)，没有字幕或音频。在两个主干网的预算相同的情况下，这些结果优于所有在 Video-MME 上评估的基线。代码可在 https://github.com/potato-kitty/NullTok 获取。
+
+</details>
+
+---
+
+## 21. PhysDial: Adapting Pretrained Video Models for PDE Simulation under Changing Physical Conditions / PhysDial：在不断变化的物理条件下采用预训练视频模型进行偏微分方程模拟
+
+**Date**: 2026-11-17 | **arXiv**: [2611.23498v1](http://arxiv.org/abs/2611.23498v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.23498v1)
+
+**Categories**: physics.flu-dyn, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Simulating how physical systems respond to changing conditions is central to control, design, and scenario studies. To our knowledge, prior PDE foundation models have not been trained or evaluated on changes within trajectories. Our counterfactual test measures how far predictions move toward a changed solver branch from the same state. Models trained on fixed conditions follow changes only partly. A PDE foundation model given a condition input after pretraining barely responds. PhysDial adapts a pretrained video diffusion transformer to eight two-dimensional PDE families. Coefficients enter with the noise level, condition fields as reference frames, and equation text as a prompt. In Kolmogorov flow, switches within trajectories account for about 5% of the training samples. At matched compute, they halve the error after a change in forcing wavenumber or amplitude. A few trajectories at new amplitudes more than halve extrapolation error. Without physics pretraining, PhysDial matches or exceeds PDE foundation models under training conditions on two turbulent flows. At step 64 on the Kolmogorov test split, PhysDial has 1.07 times the solver's small-scale energy and Walrus 7.1 times. Our experiments suggest that a learned simulator uses a condition only as far as its training data make that condition necessary for prediction. Learning from trajectories that diverge under intervention can help scientific simulators predict what would happen if a system's forcing or parameters changed.
+
+模拟物理系统如何响应不断变化的条件是控制、设计和场景研究的核心。据我们所知，先前的偏微分方程基础模型尚未针对轨迹内的变化进行训练或评估。我们的反事实测试衡量预测从同一状态转向更改的求解器分支的程度。在固定条件下训练的模型仅部分遵循变化。预训练后给定条件输入的偏微分方程基础模型几乎没有响应。 PhysDial 将预训练的视频扩散变换器应用于八个二维 PDE 系列。系数以噪声水平、条件字段作为参考系、方程文本作为提示输入。在柯尔莫哥洛夫流中，轨迹内的切换约占训练样本的 5%。在匹配计算中，它们在强制波数或振幅变化后将误差减半。新振幅下的一些轨迹使外推误差减少了一半以上。在没有物理预训练的情况下，PhysDial 在两种湍流的训练条件下可以匹配或超过 PDE 基础模型。在 Kolmogorov 测试分割的第 64 步，PhysDial 的小规模能量是求解器的 1.07 倍，Walrus 的小规模能量是 7.1 倍。我们的实验表明，学习模拟器仅在其训练数据使该条件成为预测所必需的情况下才使用该条件。从干预下偏离的轨迹中学习可以帮助科学模拟器预测如果系统的强迫或参数发生变化会发生什么。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-18 (25 papers)</b></summary>
 
 # arXiv Video Papers - 2026-11-18
