@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-23](papers/2026-11-23.md) - 6 papers
 - [2026-11-20](papers/2026-11-20.md) - 30 papers
 - [2026-11-19](papers/2026-11-19.md) - 9 papers
 - [2026-11-18](papers/2026-11-18.md) - 24 papers
@@ -188,6 +189,116 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-23 (6 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-11-23
+
+**Paper Count**: 6
+
+---
+
+## 1. Non-penetrating World Models / 非穿透式世界模型
+
+**Date**: 2026-11-20 | **arXiv**: [2611.27963v1](http://arxiv.org/abs/2611.27963v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.27963v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We study a new problem of preventing object penetration in interactive video world models. To understand how existing models handle this, we introduce NoPeBench, a benchmark that evaluates how world models respond to physical obstacles. Our evaluation reveals that none of the open-source models can reliably prevent such failures. Surprisingly, however, these models already encode the information needed to predict such violations. We find that the hidden states of diffusion transformers (DiTs) can predict whether a candidate action will penetrate an obstacle. Building on this, we introduce NoPeWorld, a lightweight framework that detects and prevents penetration. Specifically, we train a small prediction head on top of a frozen DiT's hidden states to read out if a candidate action is safe or not. Unsafe actions are then replaced with safe ones that best preserve the original intent. Despite its simplicity, NoPeWorld substantially reduces the physical violation rate, averaged over six video world models, from 74% to 16%. Remarkably, our method shows zero-shot generalization to open-domain imagery, third-person viewpoints, and moving obstacles. We publicly release our code, the NoPeBench benchmark, and model weights. Project Page: https://nopeworld.github.io .
+
+我们研究了一个新问题，即如何在交互式视频世界模型中防止物体穿透。为了了解现有模型如何处理这一问题，我们推出了 NoPeBench，这是一个用于评估世界模型如何应对物理障碍的基准。我们的评估表明，所有开源模型都无法可靠地防止此类失效。然而，令人惊讶的是，这些模型已经编码了预测此类穿透所需的信息。我们发现，扩散变换器（DiT）的隐藏状态可以预测候选动作是否会穿透障碍物。在此基础上，我们推出了NoPeWorld，这是一个用于检测和防止穿透的轻量级框架。具体而言，我们在冻结的DiT的隐藏状态之上训练一个小型的预测头，以读出候选动作是否安全。然后，将不安全动作替换为最能保留原意的安全动作。尽管NoPeWorld非常简单，但它将物理违规率（在六个视频世界模型中取平均值）从74%大幅降低至16%。值得注意的是，我们的方法对开放域图像、第三人称视角和移动障碍物表现出零样本泛化能力。我们公开发布了我们的代码、NoPeBench 基准和模型权重。项目页面： https://nopeworld.github.io 。
+
+</details>
+
+---
+
+## 2. What Must a Model Tell a Planner? Outcome Interfaces for Risk-Aware Planning After Robot Damage / 模型必须向规划者传达哪些信息？机器人损坏后用于风险感知规划的结果接口
+
+**Date**: 2026-11-20 | **arXiv**: [2611.27939v1](http://arxiv.org/abs/2611.27939v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.27939v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+When a robot is damaged, it must decide which routes it can still afford, and the amount of risk it may accept can change from one mission to the next. We argue that whether a learned model helps such a robot depends on its decision interface, that is, on what the model hands to the planner. A decision policy tells the planner what to do, whereas an outcome model, a kind of world model, predicts the consequences of each route. We study simulated Unitree Go2 quadrupeds and H1 humanoids with weakened motors, added payloads, or reduced foot friction. We compare four interfaces. The first is a decision policy, and the second is the same policy trained with fixed penalties for infeasible routes. The third is an outcome model that predicts the feasibility and travel time of each route. The fourth, which we call a capability contract, is an outcome model that predicts the chance of success and the travel time of the robot on each terrain and composes them along a route. All share the same collected experience, matched tuning and risk calibration, and an uncertainty guard. Two comparatively low-risk probes let the capability contract rank hazardous terrains about as well as four new trials on every hazard. At a calibrated 5% limit on selecting empirically infeasible routes, outcome models cut declined missions from about 32% to 7-8% on Go2 and from 57% to 35-36% on H1 compared with the plain policy. Fixed penalties narrow this gap, but the best penalty changes with the risk target. Predicting outcomes lets the planner preserve missions by changing routes as risk requirements tighten.
+
+当机器人受损时，它必须决定自己还能走哪些路线，并且它可能接受的风险程度可能会因任务而异。我们认为，学习型模型能否帮助此类机器人取决于其决策接口，即模型向规划器提供的内容。决策策略告诉规划器该做什么，而结果模型（一种世界模型）则预测每条路径的后果。我们研究了模拟的Unitree Go2四足机器人和H1人形机器人，这些机器人的电机性能减弱、增加了负载或脚部摩擦力降低。我们比较了四种接口。第一个是决策策略，第二个是相同的策略，但针对不可行的路线进行了固定惩罚的训练。第三个是结果模型，用于预测每条路径的可行性和行进时间。第四种是我们称之为“能力合约”的结果模型，它预测机器人每种地形上的成功几率和行进时间，并将它们沿一条路线组合起来。所有接口都共享相同的收集经验、匹配的调优和风险校准，以及不确定性防护。两次相对低风险的探测使能力合约对危险地形的排名效果与针对每种危险进行四次新试验的效果大致相当。在选择经验上不可行的路线时，将限值校准为5%，与普通策略相比，结果模型将Go2上被拒绝的任务从约32%降至7-8%，将H1上被拒绝的任务从57%降至35-36%。固定惩罚缩小了这一差距，但最佳惩罚会随着风险目标而变化。
+
+</details>
+
+---
+
+## 3. Interactive Semi-Parametric On-Track Learning for Vehicle Dynamics in Autonomous Racing / 用于自动驾驶赛车车辆动力学的交互式半参数在线学习
+
+**Date**: 2026-11-20 | **arXiv**: [2611.27932v1](http://arxiv.org/abs/2611.27932v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.27932v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous racing requires an accurate vehicle dynamics model near the limits of handling, yet a mismatch between the nominal and actual dynamics inevitably remains. To reduce this mismatch, existing methods learn from on-track data, i.e., data collected while the vehicle drives on the track under racing conditions, by adapting the physical parameters of the nominal model or by learning a residual that captures the remaining mismatch. However, these on-track learning methods typically handle either the physical parameters or the residual separately, which restricts their ability to resolve the mismatch. To address this limitation, we propose an interactive semi-parametric learning framework that learns both the physical parameters and the residual under a single shared prediction-error objective. Since updating one changes the learning target of the other, they are recursively updated in turn, each guided by the other's latest update. Each update is then accepted only if it does not increase the shared objective, so that the objective is guaranteed to be non-increasing and convergent over the recursion. Numerical simulations and hardware experiments show that the proposed framework outperforms the baselines. Compared with the nominal model, it reduces the one-step prediction errors of lateral velocity and yaw rate by 90.0% and 81.6% in simulation and by 54.0% and 59.4% on hardware.
+
+自动驾驶赛车需要一个在操控极限附近都准确的车辆动力学模型，但名义动力学与实际动力学之间不可避免地存在不匹配。为了减少这种不匹配，现有方法通过调整标称模型的物理参数或通过学习捕捉剩余不匹配的残差，从赛道数据（即车辆在赛车条件下在赛道上行驶时收集的数据）中进行学习。然而，这些赛道学习方法通常是分别处理物理参数或残差，这限制了它们解决不匹配问题的能力。为了解决这一局限性，我们提出了一种交互式半参数学习框架，该框架在一个共享的预测误差目标下同时学习物理参数和残差。由于更新其中一个会改变另一个的学习目标，因此它们会轮流递归更新，每个都以另一个的最新更新为指导。然后，只有在不增加共享目标的情况下，才会接受每次更新，从而确保目标在递归过程中不增加且收敛。数值模拟和硬件实验表明，所提出的框架优于基准。与标称模型相比，该框架在仿真中将横向速度和横摆角速度的一步预测误差分别降低了 90.0% 和 81.6%，在硬件上分别降低了 54.0% 和 59.4%。
+
+</details>
+
+---
+
+## 4. Beyond Visual Fidelity: Comparing Categorical and Continuous World Models / 超越视觉保真度：比较类别型和连续型世界模型
+
+**Date**: 2026-11-20 | **arXiv**: [2611.27870v1](http://arxiv.org/abs/2611.27870v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.27870v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual world models can now generate compelling interactive worlds, but visual realism does not guarantee faithful dynamics. We systematically compare how categorical and continuous prediction shape learned dynamics under both next-token and iterative whole-frame generation. These choices are often bundled in approaches such as autoregressive token models and whole-frame flow matching. We design controlled 2D and 3D environments and evaluate dynamics validity, calibration, and visual quality. In 2D with lossless visual encoding, categorical models achieve higher rollout validity with less training compute, particularly for stochastic entities. Among categorical models, greedy decoding produces the highest rollout validity, while sampling from a next-token model yields the best-calibrated stochastic predictions. Failures in continuous models, such as disappearing game characters, echo those seen in more complex environments. Here, known dynamics let us measure their impact. In 3D, categorical models also achieve stronger long-horizon performance with less training compute. Even models with lossy tokenization remain competitive on semantic accuracy and FVD, despite lower next-frame RGB accuracy. Together, these findings make a strong case for categorical prediction as a compute-efficient route to learning world dynamics.
+
+视觉世界模型现在可以生成引人入胜的互动世界，但视觉真实性并不能保证忠实的动态性。我们系统地比较了在下一个token生成和迭代式全帧生成这两种情况下，离散型和连续型预测如何塑造所学习的动态。这些选择通常捆绑在自回归标记模型和全帧流匹配等方法中。我们设计了受控的2D和3D环境，并评估了动态有效性、校准和视觉质量。在采用无损视觉编码的2D环境中，分类模型能够以更少的训练计算量实现更高的展开有效性，对于随机实体而言尤其如此。在分类模型中，贪婪解码产生的 rollout 有效性最高，而从下一个token模型中采样则可得到校准效果最佳的随机预测。连续模型中的失败（例如游戏角色消失）与在更复杂环境中看到的失败如出一辙。在这里，已知的动态性使我们能够衡量它们的影响。在3D环境中，类别模型也能以更少的训练计算量实现更强的长程性能。即使是采用有损分词的模型，尽管下一帧RGB准确度较低，但在语义准确度和FVD方面仍具有竞争力。这些发现共同有力地证明了类别预测是一种计算效率高的学习世界动态的途径。
+
+</details>
+
+---
+
+## 5. Trust What Repeats: Capped World-Model Policy Gradients for Humanoid Motion Tracking / 相信重复的事物：用于人形机器人运动跟踪的受限世界模型策略梯度
+
+**Date**: 2026-11-20 | **arXiv**: [2611.27648v1](http://arxiv.org/abs/2611.27648v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.27648v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Training a humanoid motion tracker by backpropagating imagined returns through a learned world model is fast, because the model gives a first-order policy gradient. We ask how much of that gradient holds in the simulator. On a tracker for the Unitree G1, the $0.5\%$ of imagined rollouts with the largest gradients carry $22\%$ of the summed gradient norm, yet neither a second rollout from the same state nor the simulator confirms them. When the actions are moved along the model's gradient, the simulator returns 94% of the predicted change in return where the gradient norm is below the batch median, 48% between 3 and 10 times the median, and 1% above 30 times; the part of a gradient that either check confirms stops growing at a few times the median. We therefore cap each rollout's action-gradient norm at 10 times the batch median, draw imagination starts in proportion to their predicted gradient norm so that the cap removes less, and reset episodes where the world model and critic predict the lowest return. Trained on 223 hours of motion and tested on 353 motions that no actor performed in training, the method raises the normalized return of SuperMimic, the baseline it builds on, from 0.953 to 0.967 and the lowest $1\%$ of test clips from 0.65 to 0.76, halves the test clips that fall persistently, from 15--18 to 7--10, and reaches the baseline's final return in 40% of the baseline's iterations and half its training time. On LAFAN1, trained and evaluated on the same clips as prior work, it reaches 0.935 against 0.906.
+
+通过学习到的世界模型反向传播想象的收益来训练人形机器人运动跟踪器速度很快，因为该模型提供了—阶策略梯度。我们想知道模拟器中该梯度有多少是成立的。在Unitree G1的跟踪器上，具有最大梯度的$0.5\%$的想象 rollout 承载了梯度范数总和的$22\%$，但从同一状态的第二次 rollout 或模拟器都无法证实这一点。当动作沿着模型的梯度移动时，在梯度范数低于批次中位数时，模拟器返回的收益变化为预测值的94%；在梯度范数介于中位数的3至10倍之间时，返回的收益变化为预测值的48%；在梯度范数超过中位数的30倍时，返回的收益变化为预测值的1%。经任一检验确认的梯度部分在达到中位数的几倍后即停止增长。因此，我们将每个rollout的动作梯度范数上限设定为批次中位数的10倍，以其预测的梯度范数成比例地抽取想象开始，从而使上限移除的部分更少，并重置世界模型和评判网络预测回报最低的片段。该方法基于223小时的动作进行训练，并对353个在训练中未由任何演员执行的动作进行测试，将SuperMimic（其所基于的基线）的归一化回报从0.953提高到0.967，将测试片段中最低的$1\%$从0.65提高到0.76，将持续跌倒的测试片段数量减半，从15–18个降至7–10个，并在基线迭代次数的40%和基线训练时间的一半内达到基线的最终回报。在LAFAN1上，使用与
+
+</details>
+
+---
+
+## 6. SOAR: Training-Free Rank-Consistent Rollout Compression for Latent World Model Planning / SOAR：用于潜在世界模型规划的无训练秩一致性展开压缩
+
+**Date**: 2026-11-20 | **arXiv**: [2611.27639v1](http://arxiv.org/abs/2611.27639v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.27639v1)
+
+**Categories**: cs.RO, cs.CV
+
+**Code**: https://github.com/starrywiki/SOAR.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models plan by rolling out hundreds of candidate action sequences through a transformer predictor, so a single decision can take tens of seconds. Existing accelerations prune spatial tokens as in vision-language models, yet a sampling-based planner uses predicted costs only to rank candidates, so a rollout can be compressed freely as long as the ranking survives. We propose SOAR, a training-free method that adapts rollout compression to each planning decision. At every decision, SOAR probes a few candidates under several token budgets and keeps the smallest budget that preserves their ranking, so it compresses as far as the current decision allows, without task labels. A closed-loop study of more than 80,000 episodes fixes the rest of the rollout: the first step, which alone reads a real observation, stays exact, and the context frame is cached rather than recomputed. On seven navigation and manipulation tasks with frozen checkpoints, SOAR matches dense-level planning success at 2.3x speedup and retains 98% at 2.5x. Our code is available at https://github.com/starrywiki/SOAR.
+
+潜在世界模型通过Transformer预测器展开数百个候选动作序列来进行规划，因此单个决策可能需要数十秒的时间。现有的加速方法像视觉-语言模型那样修剪空间标记，但基于采样的规划器仅使用预测成本来对候选方案进行排序，因此只要排序得以保留，就可以随意压缩展开过程。我们提出了SOAR，这是一种无需训练的方法，可将展开压缩应用于每个规划决策。在每次决策时，SOAR 都会在几个token预算下探测几个候选方案，并保留能够维持其排名的最小预算，因此它会在当前决策允许的范围内尽可能地进行压缩，且无需任务标签。一项对超过80,000个情节的闭环研究确定了展开的其余部分：第一步（仅读取一个真实观测值）保持精确，并且上下文帧被缓存而非重新计算。在七项具有冻结检查点的导航和操纵任务中，SOAR 在 2.3 倍加速下达到了密集级规划的成功率，并在 2.5 倍加速下保持了 98% 的成功率。我们的代码可在https://github.com/starrywiki/SOAR上查阅。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-20 (30 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-11-20
