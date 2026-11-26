@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-26](papers/2026-11-26.md) - 33 papers
 - [2026-11-25](papers/2026-11-25.md) - 28 papers
 - [2026-11-24](papers/2026-11-24.md) - 27 papers
 - [2026-11-20](papers/2026-11-20.md) - 34 papers
@@ -191,6 +192,550 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-26 (33 papers)</b></summary>
+
+# arXiv Video Papers - 2026-11-26
+
+**Paper Count**: 33
+
+---
+
+## 1. AnyCam: Anything Can Represent Camera for Video Generation / AnyCam：任何物体都可以充当摄像头生成视频
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34944v1](http://arxiv.org/abs/2611.34944v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34944v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Camera-controlled video generation re-renders a video along a target camera trajectory, yet moving the camera around an object, the most natural way to change the viewpoint of an object-centric scene, remains difficult. Existing methods condition either on camera parameters, which are scale-ambiguous in monocular video, or on explicit geometry such as warped point clouds or depth, which breaks down under large viewpoint changes. We present AnyCam, a method that represents the camera with an anchor object in the scene: we reconstruct it in 3D and render it along the target trajectory, a camera signal that is scale-aware, view-complete and easy to specify relative to the object. A video diffusion model transfers the content and dynamics of the source video to the new viewpoint. Its H-Concat layout aligns source and target frames in time, so the model can be distilled into AnyCam-AR, a streaming few-step generator for on-the-fly camera control. Both models are trained on paired videos with pixel-aligned anchor renderings from multi-camera videos and static-scene captures. Experiments on diverse datasets and trajectories show that AnyCam performs favorably against camera-controlled video generation and 3D reconstruction methods in camera control and visual quality.
+
+摄像头控制的视频生成技术可以沿目标摄像头轨迹重新渲染视频，但要将摄像头围绕物体移动，即以最自然的方式改变以物体为中心的场景的视角，仍然很困难。现有方法要么依赖于相机参数（在单目视频中存在尺度模糊性），要么依赖于显式几何信息（如变形点云或深度），而后者在视点发生较大变化时会失效。我们推出了AnyCam，这是一种用场景中的锚定对象来表示摄像机的方法：我们将其在三维空间中重建，并沿目标轨迹进行渲染，得到一个具有尺度感知、视角完整且易于相对于对象进行指定的摄像机信号。视频扩散模型将源视频的内容和动态转移到新的视点。其 H-Concat 布局在时间上对齐源帧和目标帧，因此该模型可以提炼为 AnyCam-AR，这是一个用于即时摄像头控制的流式少步生成器。这两个模型均使用成对视频进行训练，这些视频包含来自多摄像头视频和静态场景捕捉的像素对齐锚点渲染。在各种数据集和轨迹上进行的实验表明，在摄像机控制和视觉质量方面，AnyCam的性能优于摄像机控制的视频生成和3D重建方法。
+
+</details>
+
+---
+
+## 2. Tracking Any Point with Agentic Visual Reasoning / 利用智能体视觉推理跟踪任意点
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34943v1](http://arxiv.org/abs/2611.34943v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34943v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A general-purpose Vision-Language Model (VLM) has surpassed expert vision models in many domains such as object detection and video recognition. However, point correspondence is known to be challenging for VLMs since it goes beyond object-level recognition: it requires pixel-level localization of the same physical surface point across observations, even when appearance changes or the point disappears and later reappears. In this paper, we introduce AgenTAP, a VLM-based agent that directly predicts point coordinates and visibility and actively reasons over videos. Starting from its own estimate, the agent autonomously chooses what to inspect and uses the resulting evidence to verify point identity and refine its predictions. With GPT-6 Astra, it surpasses expert vision models in both point localization and visibility prediction, without correspondence-specific fine-tuning. We further use AgenTAP to re-identify physical points after disappearance and reconnect fragmented tracks, constructing EgoTAP-4D, a dataset of 3D point trajectories in long real-world egocentric videos. On sampled reappearing points, its predictions approach human agreement, and adding EgoTAP-4D to D4RT training improves average 3D tracking performance.
+
+通用视觉-语言模型（VLM）在物体检测和视频识别等许多领域已经超越了专家级视觉模型。然而，众所周知，点对应对于VLM来说具有挑战性，因为它超出了对象级识别的范畴：它要求在不同观测中对同一物理表面点进行像素级定位，即使外观发生变化或该点消失后再重新出现。本文介绍了 AgenTAP，这是一种基于 VLM 的智能体，能够直接预测点坐标和可见性，并对视频进行主动推理。该智能体从自身的估计出发，自主选择要检查的内容，并利用由此获得的证据来验证点的身份，从而优化其预测。借助GPT-6 Astra，它在点定位和可见性预测方面均优于专家级视觉模型，且无需针对对应关系进行专门的微调。我们进一步使用 AgenTAP 在物理点消失后重新识别这些点，并重新连接零散的轨迹，从而构建了 EgoTAP-4D，这是一个包含长篇现实世界自我中心视频中 3D 点轨迹的数据集。在采样的再次出现点上，其预测结果接近人类的一致性，将 EgoTAP-4D 添加到 D4RT 训练中可以提高平均 3D 跟踪性能。
+
+</details>
+
+---
+
+## 3. Improving and Expanding Video Editing Capabilities Without Videos / 无需视频即可改进和扩展视频编辑功能
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34941v1](http://arxiv.org/abs/2611.34941v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34941v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Image editing models can follow a wide range of instructions, but video editing models still lag behind, limited in part by the difficulty of collecting paired source and edited videos. Is it possible to transfer advanced image editing capabilities to video editors without new paired videos? We introduce Image-to-Video Transfer (I2VT), which improves pretrained video editors and expands them to new editing tasks using an image editor. It enables efficient post-training with no architectural changes and no new videos, using only individual images. Our key idea is to let the video editor role-play as an image editor: it edits an image as a one-frame video, with the image editor guiding the video editor's predictions at each denoising step. Although the video editor sees only single images during training, at test time it applies the improved and expanded capabilities to whole video clips while preserving temporal consistency. To push the boundaries of video editing, we introduce OpenVE++, an extension of OpenVE-Bench that adds four new editing tasks useful for video production, including action changes, expression changes, body movements, and scene relighting. Our experiments across three different video editors show that I2VT improves existing editing capabilities and expands them to new tasks, and our models achieve state-of-the-art (SOTA) performance on both OpenVE-Bench and OpenVE++.
+
+图像编辑模型可以遵循各种各样的指令，但视频编辑模型仍然落后，部分原因是收集成对的源视频和编辑后视频存在困难。是否有可能在没有新的成对视频的情况下，将先进的图像编辑功能迁移到视频编辑器中？我们推出了图像到视频迁移（I2VT），它能够改进预训练的视频编辑器，并使用图像编辑器将其扩展到新的编辑任务。它仅使用单个图像，即可实现高效的后训练，无需进行架构更改，也无需使用新视频。我们的核心理念是让视频编辑器扮演图像编辑器的角色：它将图像编辑为单帧视频，由图像编辑器在每个去噪步骤中指导视频编辑器的预测。虽然视频编辑器在训练过程中只看到单张图像，但在测试时，它会将改进和扩展后的功能应用于整个视频片段，同时保持时间一致性。为了突破视频编辑的界限，我们推出了 OpenVE++，这是 OpenVE-Bench 的一个扩展，增加了四项对视频制作有用的新编辑任务，包括动作变化、表情变化、身体动作和场景补光。我们在三种不同的视频编辑器上进行的实验表明，I2VT 提升了现有的编辑能力，并将其扩展到新的任务中，我们的模型在 OpenVE-Bench 和 OpenVE++ 上均实现了最先进（SOTA）的性能。
+
+</details>
+
+---
+
+## 4. LuxAvatar: Real-Time Relightable Head Avatars via Causal Neural Shading of 3D Intrinsic Proxies / LuxAvatar：通过 3D 内在代理的因果神经着色实现实时可重光照头部头像
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34940v1](http://arxiv.org/abs/2611.34940v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34940v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present LuxAvatar, a feed-forward framework for real-time head avatar animation and relighting from a single portrait. To achieve both 3D controllability and complex facial light transport, we factorize avatar synthesis into an animatable 3D intrinsic Gaussian proxy and a causal autoregressive neural shader. This proxy disentangles canonical geometry and reflectance attributes, rapidly rasterizing deformed Gaussians into view- and motion-consistent PBR buffers. Conditioned on these buffers, our neural shader formulates forward rendering as a conditional video diffusion process, bypassing explicit PBR computation to synthesize realistic shading effects under target illumination. We achieve real-time streaming through heterogeneous distillation from a pretrained multi-step bidirectional relighting teacher to a two-step causal autoregressive neural shader, inheriting broad synthetic lighting priors while minimizing conditioning and decoding latency. To further specialize these priors to human heads, we construct a hybrid relighting dataset for domain-specific fine-tuning, capturing authentic facial dynamics and physically grounded light transport. Extensive experiments show that our framework enables 3D-controllable, real-time portrait animation and relighting, outperforming state-of-the-art methods in visual fidelity, motion control, and lighting accuracy.
+
+我们推出了LuxAvatar，这是一个前馈框架，用于从单张肖像中实现实时头部头像动画和重新光照。为了同时实现3D可控性和复杂的面部光线传输，我们将头像合成分解为一个可动画化的3D固有高斯代理和一个因果自回归神经着色器。该代理将规范几何体和反射率属性解耦，将变形的高斯快速光栅化为视图和运动一致的PBR缓冲区。在这些缓冲区的条件下，我们的神经着色器将前向渲染建模为一种条件视频扩散过程，绕过显式的PBR计算，从而在目标光照下合成逼真的着色效果。我们通过从预训练的多步双向重光照教师模型到两步因果自回归神经着色器的异构蒸馏，实现了实时流式传输，既继承了广泛的合成光照先验知识，又最大限度地减少了条件化和解码延迟。为了使这些先验知识进一步专注于人头，我们构建了一个混合重光照数据集，用于特定领域的微调，以捕捉真实的面部动态和基于物理的光线传输。大量实验表明，我们的框架能够实现 3D 可控的实时肖像动画和重新光照，在视觉保真度、运动控制和光照准确性方面优于最先进的方法。
+
+</details>
+
+---
+
+## 5. LiveVAE: Causal Window Attention Makes Efficient Streaming Video VAE / LiveVAE：因果窗口注意力机制实现高效流媒体视频 VAE
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34912v1](http://arxiv.org/abs/2611.34912v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34912v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While video diffusion models have grown faster and increasingly streamable, the video VAE remains a primary latency bottleneck across interactive generation and editing pipelines. Existing VAEs and their acceleration methods rely mainly on heavy convolutions or full frame attention, and most focus only on decoding, leaving encoding costly for streaming conditional generation and editing. This raises a natural question: Do video VAE encoding and decoding actually require such global spatiotemporal modeling? By analyzing the effective receptive fields of pretrained video VAEs, we find that both encoding and decoding a patch rely almost entirely on its spatial and temporal neighbors. To exploit this strong locality, we introduce LiveVAE, a streaming encoder and decoder built on causal window attention, which cuts per frame compute while keeping the temporal KV cache bounded for streaming. Decoupled encoder/decoder distillation followed by joint finetuning preserves the pretrained latent space, making LiveVAE a drop-in replacement for the original VAE. On MiniMax-H3, LiveVAE achieves 5.2-6.2x faster encoding and 3.0-3.3x faster decoding than the official VAE with higher PSNR. Paired with our dedicated inference infrastructure, LiveVAE pushes the speedup to 13.4x with almost no quality loss. Code and models will be released.
+
+虽然视频扩散模型发展得更快，并且越来越适合流式传输，但视频 VAE 仍然是交互式生成和编辑管道中的主要延迟瓶颈。现有的 VAE 及其加速方法主要依赖于繁重的卷积或全帧注意力机制，并且大多数只关注解码，导致编码在流式条件生成和编辑方面成本高昂。这自然引出一个问题：视频 VAE 的编码和解码是否真的需要这种全局时空建模？通过分析预训练视频 VAE 的有效感受野，我们发现，对一个补片的编码和解码几乎完全依赖于其空间和时间邻域。为了利用这种强局部性，我们推出了 LiveVAE，这是一种基于因果窗口注意力的流式编码器和解码器，它在减少每帧计算量的同时，还能将流式传输的时间 KV 缓存保持在一定范围内。解耦的编码器/解码器蒸馏，随后进行联合微调，从而保留预训练的潜在空间，使 LiveVAE 成为原始 VAE 的直接替代品。在 MiniMax-H3 上，与官方 VAE 相比，LiveVAE 的编码速度提高了 5.2-6.2 倍，解码速度提高了 3.0-3.3 倍，且 PSNR 更高。配合我们的专用推理基础设施，LiveVAE 将速度提升至 13.4 倍，且几乎没有质量损失。代码和模型将发布。
+
+</details>
+
+---
+
+## 6. Agentic LongLive: Asynchronous Agentic Memory for Long Video Generation / Agentic LongLive：用于生成长视频的异步智能体记忆
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34907v1](http://arxiv.org/abs/2611.34907v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34907v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Real-time autoregressive video generators stream minutes of video and accept new prompts on the fly, but struggle to keep people, objects, and places consistent over a long interactive story. Agent systems provide such memory for offline multi-shot generation, yet they read the whole script in advance, plan each shot before generating it, and regenerate failed shots, which a live stream does not allow. We present Agentic LongLive, an asynchronous agentic memory for long video generation. A memory agent on separate GPUs reads only the prompts revealed so far, never the generated video, and keeps a text state and evolving images for every person, object, and scene. From this entity memory it composes a global image and a per-shot memory image, which an auxiliary GPU prefills into the generator's attention sink before the next shot starts, and writes entity cards for the prompts that name them, so the video never waits for memory and video errors are not written back. A small language model, trained with reinforcement learning and an image reward calibrated using downstream video outcomes, decides what to remember before the next prompt is known. On LongStory-Online, a new benchmark of 25 stories (857 shots) revealed one shot at a time, Agentic LongLive improves persistent-state accuracy of LongLive-2.0, its base generator, by 26.3 points, protagonist identity by 44.9, and revisited-place consistency by 40.4, at about 1% extra generation time on H100. The full system streams faster than real time on one 8xB200 node with the generator in BF16 (34.3 FPS), keeps image quality stable over 14-minute stories, and improves identity on two MiniMax-H3 generators, one of which, LongLive-H3, also runs in real time with it. To our knowledge, it is the first real-time video generator with text and image memory kept by an LLM agent.
+
+实时自回归视频生成器可以流式传输数分钟的视频，并可即时接受新的提示，但难以在一段漫长的互动式故事中保持人物、物体和地点的一致性。代理系统为离线多镜头生成提供此类记忆，但它们会提前读取整个脚本，在生成每个镜头之前进行规划，并重新生成失败的镜头，而直播不允许这样做。我们推出了 Agentic LongLive，这是一种用于生成长视频的异步代理记忆。位于独立 GPU 上的记忆体代理仅读取迄今为止已显示的提示，绝不读取生成的视频，并为每个人物、物体和场景保留文本状态和不断演变的图像。它从这种实体记忆中合成一张全局图像和一张每个镜头的记忆图像，辅助 GPU 在下一个镜头开始之前将这些图像预填充到生成器的注意力汇中，并为命名它们的提示写入实体卡片，因此视频永远不会等待记忆，视频错误也不会被写回。一个小型语言模型通过强化学习和使用下游视频结果校准的图像奖励进行训练，在下一个提示已知之前决定要记住什么。在 LongStory-Online 上，这是一个由 25 个故事（857 个镜头）组成的新基准，每次只显示一个镜头。Agentic LongLive 将其基础生成器 LongLive-2.0 的持久状态准确性提高了 26.3 分，主角身份提高了 44.9 分，重访地点的一致性提高了 40.4 分，而在 H100 上仅增加了约 1% 的生成时间。整个系统以流式方式运行
+
+</details>
+
+---
+
+## 7. ProbFaS: Probabilistic Video Frame Selection for MLLMs via Multi-Fidelity Calibration / ProbFaS：通过多保真度校准实现MLLM的概率性视频帧选择
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34903v1](http://arxiv.org/abs/2611.34903v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34903v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Processing long videos with multimodal large language models (MLLMs) is prohibitively expensive, making informative frame selection essential for accurate video understanding. The default uniform sampling often misses task-relevant keyframes, while recent training-free selectors instead pick frames by how well each one matches the question under an image-text alignment (ITA) score. However, we show that ITA signals correspond poorly with the MLLM's true needs: their rankings correlate weakly with downstream accuracy and are even negatively correlated on over 40% of questions, whereas the MLLM's internal yes/no judgment yields a much stronger signal. We present ProbFaS, a training- and label-free probabilistic pipeline that fuses both signals for key frame selection. ProbFaS treats dense ITA scores as cheap, biased measurements and sparse MLLM judgments as accurate, costly ones, unifying them via co-kriging, a multi-fidelity Gaussian process, to calibrate relevance across all frames. A temporal determinantal point process then selects frames capturing relevance peaks while preserving temporal coverage. Across Video-MME, MLVU and LongVideoBench, ProbFaS is the most accurate among fourteen state-of-the-art training-free selectors and uniform sampling in 13 of 15 settings (8-128 frames), outperforming the strongest baseline by up to 3.1 percentage points. On MLVU and LongVideoBench, 32 ProbFaS frames match or surpass the top baseline at 128 frames and uniform sampling with up to 768 frames.
+
+使用多模态大语言模型（MLLM）处理长视频的成本高得令人望而却步，因此，要准确理解视频，就必须进行有信息量的帧选择。默认的均匀采样往往会遗漏与任务相关的关键帧，而最近的无训练选择器则会根据每个帧在图像-文本对齐（ITA）得分下与问题的匹配程度来选择帧。然而，我们表明，ITA信号与MLLM的真正需求并不匹配：它们的排名与下游准确性相关性较弱，在超过40%的问题上甚至呈负相关，而MLLM的内部“是/否”判断则能提供更强的信号。我们推出了 ProbFaS，这是一个无需训练和标签的概率性管道，它融合了两种信号，用于关键帧选择。ProbFaS 将密集型 ITA 分数视为廉价、有偏见的度量，将稀疏型 MLLM 判断视为准确、成本高昂的度量，并通过协同克里金法（一种多保真度高斯过程）将两者统一起来，以校准所有帧的相关性。然后，一个时间行列式点过程选择能够捕捉相关性峰值的帧，同时保留时间覆盖范围。在 Video-MME、MLVU 和 LongVideoBench 上，ProbFaS 在 15 个设置（8-128 帧）中的 13 个设置中，在 14 个最先进的无训练选择器和均匀采样中准确性最高，比最强的基线高出最多 3.1 个百分点。在 MLVU 和 LongVideoBench 上，32 个 ProbFaS 帧与 128 个帧的最佳基线和均匀采样持平或优于其，最多可达
+
+</details>
+
+---
+
+## 8. Focus Only on What's Important: Training-Free Focus Maps for Frozen Vision Transformers in Long-Video Object Segmentation / 只关注重要内容：用于长视频目标分割的冻结视觉Transformer免训练焦点图
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34863v1](http://arxiv.org/abs/2611.34863v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34863v1)
+
+**Categories**: cs.CV, cs.LG
+
+**Code**: https://github.com/boletoms/focused-cv
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision transformers are strong but costly image encoders for video object segmentation. Training-free token merging cuts compute uniformly across the frame, including on tracked objects. We give a frozen DINOv3 ViT inside a trained Cutie head a training-free focus map: full resolution where the segmenter expects its objects and coarser merging elsewhere. Protecting only the previous frame's mask works on short clips but fails on long videos, where fast motion pushes targets outside the margin and into background merging, locking in loss. Our policy instead takes the union of velocity-shifted and block-matched masks, runs a camera-compensated surprise check, delegates uncertain regions to the compared merger, and falls back to it when all objects are lost. On long videos (LVOS V2 valid, pre-specified protocol, three ViT-S seeds), it beats ALGM 0.98 by +2.76 J&F (95% object CI [+1.22,+4.44]; video-cluster [+0.99,+4.52]) at 16% fewer counted encoder FLOPs (0.385 vs. 0.459), sitting 1.0 J&F point below the dense-encoder baseline; at ViT-B the gain over ALGM 0.95 is +3.89 [+2.03,+5.87]. On DAVIS 2017 val it stays within -0.19 J&F of the dense encoder at ViT-S (-0.12 at ViT-B). Controls qualify the result: protecting only the previous mask under ALGM matches or exceeds accuracy at higher FLOPs (0.486), so expectation and surprise mainly reduce counted encoder compute. Practically, lower counted encoder compute did not reduce startup-inclusive mean Cutie step time on a 12-video LVOS sample (3%-8% lower in steady state; an equally engineered ALGM is faster at ViT-S and ViT-B). Section 5.2 separately examines a Cutie permanent-memory schedule and its latency and memory trade-offs. Code: https://github.com/boletoms/focused-cv
+
+视觉变换器是用于视频对象分割的强大但成本高昂的图像编码器。免训练的标记合并在整个帧上（包括在被跟踪的对象上）均匀地减少计算量。我们在经过训练的Cutie头部内提供一个冻结的DINOv3 ViT，并为其提供一个免训练的焦点图：在分割器预期其对象的位置采用全分辨率，而在其他位置采用更粗粒度的合并。仅保护上一帧的掩码在短视频中有效，但在长视频中则无效，因为快速运动会将目标推到边缘之外，并使其进入背景合并，从而锁定损失。我们的策略则是采用速度位移掩码和块匹配掩码的并集，执行一次经过相机补偿的惊喜检查，将不确定的区域委派给比较合并器，并在所有对象丢失时回退到该合并器。在长视频（LVOS V2 验证集，预先指定的协议，三个 ViT-S 种子）上，它比 ALGM 0.98 的 J&F 高出 +2.76（95% 对象置信区间 [+1.22,+4.44]；视频聚类 [+0.99,+4.52]），且计入的编码器 FLOPs 减少了 16%（0.385 vs. 0.459），比密集编码器基线低 1.0 个 J&F 分；在 ViT-B 上，比 ALGM 0.95 的提升为 +3.89 [+2.03,+5.87]。在 DAVIS 2017 验证集上，它与 ViT-S 的密集编码器相比，J&F 分数相差不超过 -0.19（ViT-B 上为 -0.12）。对照组对结果进行了限定：在 ALGM 下仅保护上一帧掩码的准确率与较高 FLOPs（0.486）相当或更高，因此预期和惊喜主要能减少计入的编码器计算量。实际上，在12个视频的测试中，较低的计数编码器计算量并未缩短包括启动时间的平均Cutie步长。
+
+</details>
+
+---
+
+## 9. Solve Vision with Code: Coding Agents Are Stronger Visual Reasoners Than Video Models / 用代码解决视觉问题：编码代理比视频模型更擅长视觉推理
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34813v1](http://arxiv.org/abs/2611.34813v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34813v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation models are increasingly evaluated as visual reasoners: given a first frame and a natural-language prompt, can the model produce the video in which the specified task is carried out? The paradigm is considered advantageous because the reasoning is native to the visual medium, unfolding directly in the frames rather than through language or code. Whether this native route is in fact the more reliable path to visual reasoning has not been tested against a symbolic alternative under the same conditions. We therefore pose the same tasks, with identical inputs, output specification and evaluator, to both media: rather than denoising pixels, a coding agent writes a program that renders the answer video, which an unmodified rule-based evaluator scores. On VBVR-Pro-Bench (Xu et al., 2026), a 500-instance suite spanning five cognitive categories with symbolic ground truth, the agent receives the same first frame and prompt as the video model, with no access to ground truth, metadata or generation models, and one attempt per instance. Three closed-model agents (Codex with gpt-6-astra, Claude Code with Fable 5.1 and Gemini CLI with Gemini 3.1 Pro) score 0.923, 0.894 and 0.893, each more than 0.22 above the strongest video model. Among 23 runnable open-weight models, the best, GLM-5, reaches 0.572, above all video models except the RL-trained one. Together, we show that for tasks whose solutions can be computed from a first frame and a prompt, program synthesis is currently a substantially more reliable route to visual reasoning than video generation. We further distinguish depictive programs, which navigate the image to recover a transferable scheme, from propositional programs, which operate on hard-coded values, revealing how visual reasoning unfolds in agent-written programs and what it implies for its nature of reasoning in general.
+
+视频生成模型正日益被视为视觉推理器：给定第一帧和自然语言提示，模型能否生成执行指定任务的视频？这种范式被认为具有优势，因为推理是视觉媒介的固有属性，直接在帧中展开，而不是通过语言或代码展开。这种原生途径是否实际上是更可靠的视觉推理路径，尚未在相同条件下与符号替代方案进行过比较测试。因此，我们向两种媒介提出了相同的任务，并提供了相同的输入、输出规范和评估器：编码智能体不是对像素进行去噪，而是编写一个程序来渲染答案视频，然后由一个未修改的基于规则的评估器对该视频进行评分。在 VBVR-Pro-Bench（Xu 等人，2026）上，这是一个包含 500 个实例的套件，涵盖五个认知类别，具有符号性真实标签。代理接收与视频模型相同的首帧和提示，但无法访问真实标签、元数据或生成模型，并且每个实例仅有一次尝试机会。三个闭源模型代理（使用 gpt-6-astra 的 Codex、使用 Fable 5.1 的 Claude Code 和使用 Gemini 3.1 Pro 的 Gemini CLI）的得分分别为 0.923、0.894 和 0.893，每个都比最强的视频模型高出 0.22 以上。在 23 个可运行的开放权重模型中，表现最好的 GLM-5 得分为 0.572，高于除经过强化学习训练的模型之外的所有视频模型。总的来说，我们表明，对于其解决方案可以从第一帧和提示中计算出的任务，程序合成是
+
+</details>
+
+---
+
+## 10. WorldInteract: Controllable Streaming Video Generation for Multi-Material Interactions / WorldInteract：用于多材料交互的可控流式视频生成
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34730v1](http://arxiv.org/abs/2611.34730v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34730v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video world models aim to create interactive physical worlds that capture how diverse materials move and interact. Yet material-dependent dynamics remain underexplored in controllable video generation, limiting reliable control in scenes with different materials. We present WorldInteract, a streaming video generation framework that decomposes cross-material interaction into material-dependent behavior generation and contact response computation. External pushes and contact impulses are expressed through a shared velocity-increment interface, allowing material behaviors learned from interaction-free videos to be reused in interacting scenes. A physics controller predicts contacts and computes velocity increments from estimated masses and restitution coefficients, while a causal generator executes these increments using learned material behaviors. This separation enables cross-material interaction without supervised contact videos spanning diverse material pairings and contact configurations. We train the generator on 30k simulated interaction-free videos spanning 22 material classes and introduce Material-Aware RL, using verifiable physical rewards to refine material behavior and control execution. WorldInteract substantially outperforms state-of-the-art methods on Physics-IQ and delivers more reliable push control on real-world images.
+
+视频世界模型旨在创建交互式物理世界，捕捉各种材料的运动和相互作用方式。然而，在可控视频生成中，依赖于材料的动力学仍未得到充分探索，这限制了对包含不同材料的场景进行可靠控制的能力。我们推出了WorldInteract，这是一个流式视频生成框架，它将跨材料的相互作用分解为依赖于材料的行为生成和接触响应计算。外部推力和接触冲击力通过一个共享的速度增量接口来表达，从而使从无交互视频中学习到的材料行为能够在交互场景中得到复用。物理控制器根据估计的质量和恢复系数预测接触并计算速度增量，而因果生成器则利用所学习的材料行为来执行这些增量。这种分离实现了跨材料的相互作用，而无需使用涵盖各种材料配对和接触配置的监督式接触视频。我们在3万个模拟的无交互视频上训练生成器，这些视频涵盖22个材料类别，并引入了材料感知型强化学习（Material-Aware RL），使用可验证的物理奖励来优化材料行为和控制执行。在Physics-IQ上，WorldInteract的性能显著优于最先进的方法，并在真实世界的图像上实现了更可靠的推力控制。
+
+</details>
+
+---
+
+## 11. Neural Rendering Compiler: Generative Video Models as Programmable Renderers / 神经渲染编译器：作为可编程渲染器的生成式视频模型
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34680v1](http://arxiv.org/abs/2611.34680v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34680v1)
+
+**Categories**: cs.CV, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative video models are becoming powerful renderers, yet lack the predictable control interfaces of conventional systems such as HTML/CSS engines or Blender. Their capabilities emerge implicitly from training, making it difficult to determine what they can reliably execute. We present Neural Rendering Compiler (NeurCo), which automatically probes frozen video models to construct model-specific capability manuals describing which semantic requirements they can reliably satisfy. NeurCo represents user intent in a model-agnostic intermediate representation of objects, constraints, events, and cameras, then compiles it into model-specific execution strategies. Reliable requirements remain unchanged, while unreliable ones are selectively rewritten or compiled into alternative execution strategies. We introduce VComBench, a benchmark of 380 compositional, multi-requirement tasks spanning text-to-video, image-to-video, and reference-to-video generation. NeurCo improves requirement satisfaction from 46.8% to 52.3% on Wan and from 66.5% to 69.3% on Minimax H3, and achieves further gains when combined with prompt enhancers, including on Seedance 2.5. Our analysis reveals model-specific differences in control capabilities and trade-offs between controllability and photorealism, highlighting capability-guided compilation as a promising approach to programmable generative video rendering.
+
+生成式视频模型正成为功能强大的渲染器，但却缺乏传统系统（如HTML/CSS引擎或Blender）的可预测控制界面。它们的能力在训练过程中隐性地显现出来，因此很难确定它们能够可靠地执行哪些操作。我们推出了神经渲染编译器（NeurCo），该编译器自动探测冻结的视频模型，以构建特定于模型的能力手册，其中描述了这些模型能够可靠地满足哪些语义要求。NeurCo 以一种与模型无关的中间表示形式来表示用户意图，该中间表示形式包含对象、约束、事件和摄像头，然后将其编译成特定于模型的执行策略。可靠的要求保持不变，而不可靠的要求则被有选择地重写或编译成替代的执行策略。我们推出了 VComBench，这是一个包含 380 个组合式、多要求任务的基准，涵盖文生视频、图生视频和参考图生视频。NeurCo 将 Wan 的要求满足度从 46.8% 提高到 52.3%，将 Minimax H3 的要求满足度从 66.5% 提高到 69.3%，并且在与提示增强器（包括 Seedance 2.5）相结合时实现了进一步的提升。我们的分析揭示了控制能力方面因模型而异的差异，以及可控性与逼真度之间的权衡，突出了以能力为导向的编译是一种有前景的可编程生成式视频渲染方法。
+
+</details>
+
+---
+
+## 12. Beyond Pose Control: Anatomically Consistent Ultrasound Video Generation / 超越姿态控制：解剖学一致的超声视频生成
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34622v1](http://arxiv.org/abs/2611.34622v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34622v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Camera-controlled video generation anticipates how a scene appears from new viewpoints by relying on a prior learned implicitly from large-scale data. Ultrasound poses the same problem, with the probe pose as the viewpoint, but under opposite conditions: anatomy offers an explicit prior that every sonographer relies on, whereas tracked scans are too scarce to learn it implicitly. As a result, pose control alone is not enough, and pose-conditioned ultrasound generators produce implausible anatomy in unscanned regions and inconsistent anatomy on revisits. We go beyond pose control and give the generator the two kinds of knowledge that make up a sonographer's mental model. An anatomical prior, built from a population of subjects, guides generation where nothing has been scanned, and is refined online by every generated chunk towards the scanned subject. A 3D latent memory, designed around the cross-sectional physics of ultrasound, compounds the generated slices into a volume of the patient and reslices it at new poses, keeping revisited anatomy consistent. The fine-grained memory enters the generator at the input, while the coarse anatomy prior guides the layout across transformer blocks. Experiments on thyroid, kidney, and lumbar spine show improved visual fidelity, pose following, and anatomical consistency over pose-conditioned and memory-augmented baselines.
+
+摄像头控制的视频生成依靠从大规模数据中隐式学习的先验知识，预测场景从新视角呈现出的样子。超声也存在同样的问题，其中探头姿态作为视点，但条件相反：解剖结构提供了一个明确的先验知识，每个超声医师都依赖于此，而跟踪扫描则太少，无法隐式学习。因此，仅靠姿态控制是不够的，姿态条件超声生成器在未扫描区域会产生不合情理的解剖结构，在再次扫描时会产生不一致的解剖结构。我们超越了姿态控制，为生成器提供了构成超声医师心理模型的两种知识。由受检者群体构建的解剖学先验知识，在未扫描区域指导生成，并随着每个生成片段的生成而在线优化，以贴近受检者。一种围绕超声横截面物理学设计的3D潜在记忆，将生成的切片组合成患者的体积，并在新的姿态下重新切片，从而使再次成像的解剖结构保持一致。精细的记忆在输入端进入生成器，而粗略的解剖先验则指导跨Transformer块的布局。对甲状腺、肾脏和腰椎的实验表明，与姿态条件和记忆增强的基线相比，视觉保真度、姿态跟随和解剖一致性均有所提高。
+
+</details>
+
+---
+
+## 13. Recalling the Past to Answer the Present: Context-Aware Multi-Evidence Reasoning for Streaming Video Question Answering / 回溯过去以解答当下：面向流媒体视频问答的上下文感知多证据推理
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34545v1](http://arxiv.org/abs/2611.34545v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34545v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language models (VLMs) have achieved remarkable progress in video understanding, yet existing video question answering (VQA) benchmarks mainly evaluate models in offline settings. Real-world streaming scenarios instead require models to answer context-dependent queries by retrieving and reasoning over evidence distributed across the video history. We introduce StreamRecall, a benchmark for context-aware Multi evidence reasoning in streaming video QA. StreamRecall requires models to retrieve, associate, and reason over temporally scattered evidence to answer queries at the appropriate moment. It contains 4,983 questions over 462 videos, with context-aligned query times and fine-grained temporal evidence annotations. We further propose the Evidence Utilization Cascade to diagnose model reasoning through evidence localization, grounding, chain completion, and answer derivation. To enable efficient long-term streaming reasoning, we present EviStream, a training-free causal visual memory mechanism that preserves reasoning-critical evidence under a fixed KV budget. Experiments reveal substantial gaps between current VLMs and realistic streaming requirements, establishing StreamRecall as a foundation for developing evidence-aware streaming video intelligence.
+
+视觉-语言模型（VLM）在视频理解方面取得了显著进展，但现有的视频问答（VQA）基准主要是在离线环境下评估模型。相反，在现实世界的流媒体场景中，模型需要通过检索和推理分布在视频历史中的证据来回答依赖于上下文的查询。我们推出了StreamRecall，这是一个用于流媒体视频问答中情境感知多证据推理的基准。StreamRecall 要求模型检索、关联和推理时间上分散的证据，以便在适当的时刻回答问题。它包含 462 个视频中的 4,983 个问题，具有与上下文对齐的查询时间和细粒度的时间证据标注。我们进一步提出了证据利用级联（Evidence Utilization Cascade），通过证据定位、证据锚定、链条补全和答案推导来诊断模型推理。为了实现高效的长期流式推理，我们提出了EviStream，这是一种无需训练的因果视觉记忆机制，能够在固定的KV预算下保留对推理至关重要的证据。实验表明，当前VLM与实际流式处理要求之间存在显著差距，因此StreamRecall成为开发证据感知流式视频智能的基础。
+
+</details>
+
+---
+
+## 14. HAS: Hierarchical Adaptive Frame Sampling for Video Understanding / HAS：用于视频理解的分层自适应帧采样
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34544v1](http://arxiv.org/abs/2611.34544v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34544v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Due to context-length constraints, most MLLMs cannot process full-length videos and therefore rely on sampling a subset of frames as input. However, existing sampling methods, ranging from uniform sampling to relevance-based selection, are often driven by a single sampling principle and thus struggle to accommodate the heterogeneous evidential requirements of different queries: some demand a holistic understanding of how the video unfolds over time, while others hinge on fine-grained events within a short temporal window. To address this limitation, we propose \textbf{Hierarchical Adaptive Frame Sampling (HAS)}, a two-stage frame sampling framework. In the first stage, \emph{Backbone Frame Construction}, we apply a Determinantal Point Process (DPP) to sample frames that are both query-relevant and non-redundant. These selected frames capture key moments across the video and form the backbone of the sampling set, providing a foundation for subsequent enrichment. In the second stage, \emph{Adaptive Contextual Enrichment}, we analyze the temporal distribution of the backbone frames to infer the query's requirements and adaptively allocate the remaining frame budget between Local and Global Context. The Local Context enriches the backbone with fine-grained temporal dynamics and short-range causal relations, whereas the Global Context connects temporally isolated evidence and provides a holistic view of the entire video to support global understanding. Through such a hierarchical two-stage process, HAS effectively addresses diverse query requirements. Incorporated into three leading MLLMs, it demonstrates consistently superior performance across the Video-MME, LongVideoBench, and MLVU benchmarks.
+
+由于上下文长度的限制，大多数MLLM无法处理完整长度的视频，因此只能依靠对帧的子集进行采样作为输入。然而，从均匀采样到基于相关性的选择，现有的采样方法往往由单一的采样原则驱动，因此难以满足不同查询的异质证据要求：有些查询需要全面了解视频随时间推移的展开情况，而另一些查询则取决于短时间窗口内的精细事件。为了解决这一局限性，我们提出了\textbf{分层自适应帧采样（HAS）}，这是一个两阶段帧采样框架。在第一阶段，即\emph{主干帧构建}，我们应用行列式点过程（DPP）来采样既与查询相关又非冗余的帧。这些选定的帧捕捉了视频中的关键时刻，构成了采样集的骨干，为后续的丰富提供了基础。在第二阶段，即\emph{自适应上下文丰富}阶段，我们分析主干帧的时间分布，以推断查询的要求，并将剩余的帧预算自适应地分配给局部上下文和全局上下文。局部上下文通过精细的时间动态和短程因果关系来丰富主干，而全局上下文则将时间上孤立的证据联系起来，并提供整个视频的整体视图，以支持全局理解。通过这样一个分层结构
+
+</details>
+
+---
+
+## 15. PURA: Video Token Pruning via Unified Spatiotemporal Redundancy Assessment / PURA：通过统一时空冗余评估进行视频令牌剪枝
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34521v1](http://arxiv.org/abs/2611.34521v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34521v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video large language models incur substantial inference costs from long visual token sequences. Existing video token compression methods mitigate these costs by exploiting spatial redundancy within frames and temporal redundancy across frames. However, many approaches impose predefined processing orders or fixed allocation ratios for spatial and temporal compression, limiting their ability to adapt to the varying balance of spatiotemporal redundancy across videos. To address this limitation, we propose PURA, a training-free method that prunes visual tokens through unified spatiotemporal redundancy assessment. For each token, PURA constructs spatial and temporal reference candidates and selects the reference with the lowest representation error across the two dimensions. The representation error is combined with token importance to determine each token's removal cost. To avoid the time overhead of removing the lowest-cost token one by one, we introduce Coordinated Pruning, which iteratively groups mutually compatible low-cost removals into batches for simultaneous execution and updates the pruning state after each batch until the target budget is reached. Extensive experiments on three video large language models and five video understanding benchmarks demonstrate that PURA achieves a favorable trade-off between task performance and inference efficiency.
+
+视频大语言模型因长视觉标记序列而产生高昂的推理成本。现有的视频标记压缩方法通过利用帧内的空间冗余和帧间的时间冗余来降低这些成本。然而，许多方法对空间和时间压缩施加预定义的处理顺序或固定的分配比例，从而限制了它们适应不同视频之间时空冗余的动态平衡的能力。为了解决这一局限性，我们提出了 PURA，这是一种无需训练的方法，通过统一的时空冗余评估来剪枝视觉标记。对于每个token，PURA 构建空间和时间参考候选，并选择在这两个维度上具有最低表示误差的参考。表示误差与标记的重要性相结合，以确定每个标记的移除成本。为了避免逐个移除成本最低的标记所带来的时间开销，我们引入了协调剪枝（Coordinated Pruning）。该方法将相互兼容的低成本移除操作迭代地分组为批次，以便同时执行，并在每个批次完成后更新剪枝状态，直至达到目标预算。对三个视频大语言模型和五个视频理解基准进行了大量实验，结果表明，PURA 在任务性能和推理效率之间实现了良好的权衡。
+
+</details>
+
+---
+
+## 16. SceneDesigner++: A Unified 9-DoF Pose Control Framework for T2I and T2V Generation / SceneDesigner++：用于 T2I 和 T2V 生成的统一 9-DoF 姿态控制框架
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34461v1](http://arxiv.org/abs/2611.34461v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34461v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Precise 9-DoF pose control is essential for visual content generation, enabling users to specify object location, size, and orientation in 3D space. However, existing methods typically focus on either text-to-image (T2I) or text-to-video (T2V) generation, with limitations in pose controllability and temporal coherence. We present SceneDesigner++, a unified framework for 9-DoF pose control across both T2I and T2V generation. We construct ObjectPose9D++, a dataset containing high-quality images and videos with accurate pose annotations. Trained on ObjectPose9D++, SceneDesigner++ combines absolute and relative pose encoding strategies to decouple frame-wise spatial grounding from inter-frame motion modeling. Specifically, absolute pose encoding leverages CNOCS map sequences to provide explicit, frame-wise 9-DoF pose guidance. Meanwhile, our relative pose encoding, termed VPRoPE, incorporates relative pose information into rotary position embeddings to explicitly model inter-frame pose transitions, thereby promoting temporally coherent object motion. A learnable orthogonal transformation is further introduced for each attention head, allowing different heads to capture complementary geometric relationships while preserving input feature norms to promote training stability. We further adopt a two-stage training strategy to learn the absolute and relative pose encoding mechanisms separately. Benefiting from this lightweight and decoupled design, SceneDesigner++ also supports integration with an independently trained camera-control module, enabling separate or joint control over object and camera motion. Finally, we introduce T2IVPoseEval, a benchmark for evaluating diverse object poses and motion patterns in both T2I and T2V tasks. Extensive experiments demonstrate that SceneDesigner++ consistently outperforms same-backbone baselines in pose fidelity and motion quality.
+
+精确的 9-DoF 姿态控制对于视觉内容生成至关重要，它使用户能够在 3D 空间中指定对象的位置、大小和方向。然而，现有方法通常侧重于文生图 (T2I) 或文生视频 (T2V) 生成，在姿态可控性和时间一致性方面存在局限性。我们推出了 SceneDesigner++，这是一个在 T2I 和 T2V 生成中实现 9-DoF 姿态控制的统一框架。我们构建了 ObjectPose9D++，这是一个包含高质量图像和视频以及准确姿态标注的数据集。SceneDesigner++ 在 ObjectPose9D++ 上进行训练，结合了绝对姿态编码和相对姿态编码策略，将逐帧空间定位与帧间运动建模解耦。具体而言，绝对姿态编码利用 CNOCS 映射序列提供显式的逐帧 9-DoF 姿态引导。与此同时，我们的相对姿态编码（称为 VPRoPE）将相对姿态信息纳入旋转位置嵌入，以显式建模帧间姿态转换，从而促进时间上连贯的对象运动。我们还为每个注意力头引入了一种可学习的正交变换，使不同的注意力头能够捕捉互补的几何关系，同时保留输入特征范数，以提高训练稳定性。我们进一步采用两阶段训练策略，分别学习绝对姿态编码机制和相对姿态编码机制。得益于这种轻量级且解耦的设计，SceneDesigner++ 还支持
+
+</details>
+
+---
+
+## 17. ProxyGenBench: Benchmarking Proxy-Guided Video Generation / ProxyGenBench：代理引导式视频生成的基准测试
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34457v1](http://arxiv.org/abs/2611.34457v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34457v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent video generators produce realistic videos, yet controlling how scenes unfold remains challenging. Structural proxies, such as animated 3D blockouts, guide generation by specifying scene layout, motion, camera behavior, and event order. However, these coarse inputs leave details unspecified and may contain artifacts that should not be reproduced. Successful proxy-guided generation must therefore Preserve intended structure, Complete missing content and correct proxy artifacts, and Bind text, image, and audio conditions to the right entities and events. We introduce ProxyGenBench to study these interacting requirements, with 312 evaluation cases from 60 scenes across three scene tasks and controlled variations in proxy fidelity, text detail, and multimodal inputs. We evaluate five video generators using verified, case-specific checklists. Experiments show that proxies improve spatiotemporal control, but greater proxy detail can coincide with poorer completion, while strong structural adherence does not ensure correct binding.
+
+近期的视频生成器能够生成逼真的视频，但控制场景的展开方式仍然是一项挑战。结构性代理（如动画 3D 粗模）通过指定场景布局、运动、摄像机行为和事件顺序来引导生成。然而，这些粗略的输入没有具体说明细节，并且可能包含不应被再现的瑕疵。因此，成功的代理引导生成必须保留预期结构、补全缺失内容并纠正代理瑕疵，以及将文本、图像和音频条件与正确的实体和事件绑定。我们推出了 ProxyGenBench 来研究这些相互作用的要求，其中包含来自 60 个场景的 312 个评估案例，涵盖三个场景任务，以及代理保真度、文本细节和多模态输入的受控变体。我们使用经过验证的、针对具体案例的清单对五款视频生成器进行了评估。实验表明，代理可以改善时空控制，但代理细节越多，完成度可能越低，而严格的结构遵循性也无法确保正确的绑定。
+
+</details>
+
+---
+
+## 18. StateWeaver: Multi-Agent Coordination of Story-State Transitions for Long-Horizon Video Generation / StateWeaver：用于长时域视频生成的故事情境转换多智能体协调
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34290v1](http://arxiv.org/abs/2611.34290v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34290v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern video foundation models generate high-quality short clips, but preserving long-video consistency and correctly depicting event-driven state changes remain challenging. Existing agentic workflows face these challenges because continual planning and repair accumulate context, while reference updates remain limited. We introduce StateWeaver, which combines Active States and Hierarchical Collaboration to connect review-driven visual reference updates with cross-shot state inheritance. Active States translate state discrepancies identified during review into concrete visual asset requirements that guide reference construction, validation, and regeneration, preserving identity and already-correct content while repairing target attributes. Confirmed generation results are linked to the corresponding asset states, story time, and reference versions for verification and reuse by subsequent shots. Hierarchical Collaboration isolates execution contexts by task, clip, and repair round, and uses hierarchical memory to organize this process across multiple sets. Across multiple benchmarks, StateWeaver outperforms existing methods and produces long videos with sustained cross-shot consistency under predefined and autonomously planned storyboards.
+
+现代视频基础模型可以生成高质量的短片，但保持长视频的一致性以及正确描绘事件驱动的状态变化仍然是一项挑战。现有代理工作流程面临这些挑战，因为持续的规划和修复会积累上下文，而参考更新仍然有限。我们推出了 StateWeaver，它将“活动状态”与“分层协作”相结合，将评审驱动的视觉参考更新与跨镜头状态继承联系起来。“活动状态”将审核过程中发现的状态差异转化为具体的视觉资产要求，这些要求指导参考的构建、验证和再生，在修复目标属性的同时保留身份和已正确的内容。已确认的生成结果与相应的资产状态、故事情节时间和参考版本相关联，以便后续镜头进行验证和重复使用。分层协作按任务、片段和修复轮次隔离执行上下文，并使用分层记忆来组织跨多个集的这一过程。在多个基准测试中，StateWeaver的表现优于现有方法，能够在预先定义和自主规划的分镜脚本下生成具有持续跨镜头一致性的长视频。
+
+</details>
+
+---
+
+## 19. Rehearse in 3D, Render in 2D: Physically Consistent and Editable Robot World Models / 3D排练，2D渲染：物理一致且可编辑的机器人世界模型
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34288v1](http://arxiv.org/abs/2611.34288v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34288v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Embodied world models aim to predict future interactions that are both visually realistic and physically consistent. Yet explicit 3D motion prediction alone does not guarantee that object structure and contact relationships are preserved. Beyond motion prediction, 3D representations provide an explicit state space for imposing structural and physical constraints. Building on this insight, we introduce RehearsalWorld, an editable robot world model driven by 3D Interaction Rehearsal (3DIR). Given an initial RGB-D observation and robot actions, Interaction-Consistent Rehearsal (ICR) uses a pretrained 3D point-flow model as a motion prior. It refines the predicted trajectories through response-aware object grouping, persistent grasp memory, and contact structure refiner, preserving scene stability, object structure, and grasp attachments. Rehearsal-Aligned Video Generation (RAVG) then uses geometric projections of the rehearsal as temporal conditioning. We fine-tune a video generator on projection-video pairs to synthesize realistic interaction videos. Thanks to the decoupling of physical response from visual synthesis, RehearsalWorld also supports independent editing of material properties and camera viewpoints. Compared with PointWorld on real DROID grasping sequences, RehearsalWorld reduces gripper-relative offset by approximately 79% to 84% across deformable, articulated, and rigid objects and lowers reference motion error. For video prediction, it achieves a PSNR of 23.92 dB and an FVD of 149.
+
+具身世界模型旨在预测既在视觉上逼真又在物理上一致的未来交互。然而，仅靠显式的3D运动预测并不能保证物体结构和接触关系得到保留。除了运动预测之外，3D表示还提供了一个显式状态空间，用于施加结构和物理约束。基于这一见解，我们推出了RehearsalWorld，这是一个由3D交互演练（3DIR）驱动的可编辑机器人世界模型。在给定初始RGB-D观测和机器人动作的情况下，交互一致性演练（ICR）使用预训练的3D点流模型作为运动先验。它通过响应感知的物体分组、持久抓取记忆和接触结构优化器来优化预测轨迹，从而保持场景稳定性、物体结构和抓取附着。然后，排练对齐视频生成（RAVG）使用排练的几何投影作为时间条件。我们在投影-视频对上对视频生成器进行微调，以合成逼真的交互视频。由于将物理响应与视觉合成解耦，RehearsalWorld 还支持对材料属性和摄像机视点进行独立编辑。与 PointWorld 在真实 DROID 抓取序列上的表现相比，RehearsalWorld 在可变形物体、铰接物体和刚性物体上将夹持器相对偏移量降低了约 79% 至 84%，并降低了参考运动误差。在视频预测方面，它实现了 23.92 的 PSNR。
+
+</details>
+
+---
+
+## 20. TORE: Token-Wise Taylor Order Selection via Decomposed Residual Error Estimation for Diffusion Acceleration / TORE：通过分解残差误差估计进行基于token的Taylor阶数选择以加速扩散
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34261v1](http://arxiv.org/abs/2611.34261v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34261v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion models excel at image and video generation, but iterative denoising incurs substantial inference latency. Recent token-adaptive acceleration methods select Taylor prediction orders for the full-model residual using shallow-layer proxy scores. However, candidate orders are evaluated on these proxy features but used to predict the full-model residual, creating a proxy--target mismatch: the proxy-preferred order may not minimize residual prediction error. To address this mismatch, we propose \textbf{TORE} (\textbf{T}aylor \textbf{O}rder selection via \textbf{R}esidual \textbf{E}rror estimation), which selects token-wise Taylor orders based on estimated prediction errors for the full-model residual. Yet direct error evaluation requires future ground-truth residuals, which are unavailable during order selection. TORE therefore estimates prediction error by analyzing how errors arise in Taylor extrapolation. Specifically, it decomposes prediction error into truncation error and finite-difference derivative error, then estimates both contributions from cached residuals to preselect token-wise orders for upcoming skip steps. Extensive experiments show that TORE achieves $4.31\times$ speedup on FLUX.1-dev and $4.18\times$ on Wan2.1 while maintaining high generation quality and fidelity.
+
+扩散模型在图像和视频生成方面表现出色，但迭代去噪会带来显著的推理延迟。最近的令牌自适应加速方法使用浅层代理分数，为全模型残差选择泰勒预测阶数。然而，候选阶数是在这些代理特征上进行评估的，但却被用于预测完整模型的残差，从而造成代理与目标的不匹配：代理偏好的阶数可能无法使残差预测误差最小化。为了解决这种不匹配问题，我们提出了\textbf{TORE}（通过\textbf{R}esidual \textbf{E}rror estimation（残差误差估计）进行\textbf{T}aylor \textbf{O}rder selection（泰勒阶数选择）），该方法根据全模型残差的估计预测误差来选择逐标记的泰勒阶数。然而，直接误差评估需要未来的真实残差，而在阶数选择过程中无法获得这些残差。因此，TORE 通过分析泰勒外推中误差的产生方式来估计预测误差。具体而言，它将预测误差分解为截断误差和有限差分导数误差，然后估算缓存残差对这两者的贡献，以便为即将到来的跳跃步骤预先选择基于token的阶数。大量实验表明，TORE 在 FLUX.1-dev 上实现了 $4.31\times$ 的加速，在 Wan2.1 上实现了 $4.18\times$ 的加速，同时保持了较高的生成质量和保真度。
+
+</details>
+
+---
+
+## 21. VibeVideoAgent: Closing the Perceptual Loop for Code-Driven Video Generation / VibeVideoAgent：闭合代码驱动的视频生成的感知环路
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34237v1](http://arxiv.org/abs/2611.34237v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34237v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Code-driven video generation asks a coding agent to write and run rendering programs. This gives exact control over typography, data visualizations, synchronized audio, and multi-shot scenes, and it leaves an editable project behind. A program that exits cleanly can still render overlapping labels, a camera aimed away from its subject, broken object interactions, or narration that drifts out of sync, and none of these raise a runtime error. Feeding rendered frames and audio back into the coding session bloats its long-horizon context, while critiquing only the finished full-resolution render turns early design mistakes into costly rewrites. We introduce VibeVideoAgent, a training-free framework that lets coding agents inspect their drafts throughout production. Multimodal perception runs in short-lived contexts kept apart from the coder and returns compact, grounded Findings. Seven primitives operate on a unified multi-clock representation of assets and drafts: they explore media from coarse to fine, verify quoted requirements with evidence from every required modality, compare a draft with a reference or an earlier revision on separate clocks, and measure stream signals locally. A lightweight staged protocol has the agent test its riskiest decision on a minimal preview first. On all 239 VibeVideoBench tasks, with matched agent runtimes and a fixed perception model, VibeVideoAgent improves holistic audiovisual quality (L3) for Claude Opus 5.5 (4.03 -> 4.43, while L2 rubric compliance rises from 98.87% to 99.35%), GPT-6 Astra (4.03 -> 4.27), and Claude Sonnet 5.5 (3.97 -> 4.10), with the largest gains in audio-visual synchronization (up to +0.56). Controlled ablations show that each component contributes, and trajectory audits show that the granularity of code edits governs the trade-off between rubric adherence and perceptual quality.
+
+代码驱动的视频生成需要编码代理编写并运行渲染程序。这样可以精确控制排版、数据可视化、同步音频和多镜头场景，并留下一个可编辑的项目。即使程序能够正常退出，也仍可能出现标签重叠、摄像头未对准拍摄对象、对象交互中断或旁白不同步等情况，但这些情况都不会引发运行时错误。将渲染的帧和音频反馈回编码会话会使它的长视野上下文变得臃肿，而仅对完成的全分辨率渲染进行评判则会将早期设计错误变成代价高昂的重写工作。我们推出了 VibeVideoAgent，这是一个无需训练的框架，让编码代理在整个制作过程中检查其草稿。多模态感知在与编码器分离的短时上下文中运行，并返回简洁、有依据的“发现”。七个基元在资产和草稿的统一多时钟表示上运行：它们从粗粒度到细粒度地探索媒体，使用来自每个所需模态的证据验证引用的要求，在独立时钟上将草稿与参考或早期修订版进行比较，并对流信号进行本地测量。一种轻量级的分阶段协议让代理首先在最小的预览上测试其风险最高的决策。在所有 239 个 VibeVideoBench 任务中，在匹配的代理运行时间和固定的感知模型下，VibeVideoAgent 提高了 Claude Opus 5.5 的整体视听质量（L3）（4.03 -> 4.43），而 L2 评分标准
+
+</details>
+
+---
+
+## 22. Loop4D: Embodied World Modeling with 4D VAEs and Looped Diffusion Transformers / Loop4D：使用 4D VAE 和循环扩散变换器进行具身世界建模
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34199v1](http://arxiv.org/abs/2611.34199v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34199v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Predicting the outcomes of robotic manipulation requires modeling both visual appearance and evolving 3D geometry. This poses two challenges: video compression can obscure fine-grained robot motion, while jointly predicting RGB and geometry demands sufficient generative capacity. We introduce Loop4D, a framework that addresses these challenges through motion-preserving 4D representations and recurrent generative refinement. Our 4D VAE encodes RGB and pointmap sequences into compact spatiotemporal latents while preserving motion details and geometric structure. Our RGB VAE combines geometry-guided supervision with predictive reconstruction to reduce compression-induced motion artifacts. Our geometry VAE uses lightweight adapters to adapt pretrained RGB representations while preserving their priors. Building on these representations, our Dual-Stream Looped Diffusion Transformer maintains separate appearance and geometry streams with shared Transformer weights and cross-modal connections. By reusing Transformer blocks across loops, we increase effective depth without replicating backbone parameters, enabling models with fewer parameters to improve joint RGB-geometry prediction through additional computation. Experiments demonstrate high-quality 4D generation and validate Loop4D in simulated robotic manipulation tasks.
+
+预测机器人操作的结果需要对视觉外观和不断变化的3D几何形状进行建模。这带来了两个挑战：视频压缩可能会掩盖机器人精细的运动，而同时预测RGB和几何形状则需要具备足够的生成能力。我们推出了Loop4D，这是一个通过保留运动的4D表示和循环生成式精化来应对这些挑战的框架。我们的4D VAE将RGB和点图序列编码为紧凑的时空潜在变量，同时保留运动细节和几何结构。我们的 RGB VAE 将几何引导的监督与预测性重建相结合，以减少压缩引起的运动伪影。我们的几何VAE使用轻量级适配器来适配预训练的RGB表示，同时保留其先验信息。在这些表示的基础上，我们的双流循环扩散Transformer（Dual-Stream Looped Diffusion Transformer）通过共享Transformer权重和跨模态连接，将外观流和几何流分开处理。通过在多个循环中重复使用Transformer块，我们增加了有效深度，而无需复制主干参数，从而使参数更少的模型能够通过额外的计算来改善RGB-几何联合预测。实验展示了高质量的4D生成，并在模拟机器人操作任务中验证了Loop4D。
+
+</details>
+
+---
+
+## 23. Non-Linear Motion from Two Frames: Cubic Hermite Trajectories for Video Frame Interpolation / 两帧之间的非线性运动：用于视频帧插值的三次埃尔米特曲线
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34143v1](http://arxiv.org/abs/2611.34143v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34143v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Two-frame video frame interpolation commonly resamples endpoint optical flow by the query time, which selects a constant-velocity straight-line path even though the same endpoint displacement is compatible with many intermediate trajectories. We present HermiteVFI, which replaces independent query-time motion prediction with one explicit continuous trajectory per pixel. The measured endpoint displacement fixes the two trajectory positions, while two latent endpoint derivatives learned from the frame pair control the interior path. A cubic Hermite curve is the minimum-degree polynomial that can independently satisfy these two position and two derivative boundary quantities. Its residual form contains linear motion exactly, structurally preserves the measured displacement endpoints for any network output, and has coefficients that are predicted once per frame pair and evaluated in closed form at arbitrary t. We further show that one interior query time gives a rank-deficient constraint on the two free trajectory coefficients, whereas any two distinct interior times are full rank at the representation level, motivating multi-time supervision. Appearance-derived directional cues help infer the latent derivatives that endpoint displacement alone cannot identify. On X4K1000FPS, SNU-FILM, and Vimeo90K-Septuplet, the largest gains occur for difficult non-uniform motion and high interpolation ratios. The amortization applies to trajectory-coefficient prediction; downstream reversal, refinement, and synthesis remain query dependent.
+
+双帧视频帧插值通常会根据查询时间对端点光流进行重采样，这会选择一条等速直线路径，即使相同的端点位移与许多中间轨迹兼容。我们提出了HermiteVFI，它用每个像素的一个显式连续轨迹取代了独立的查询时间运动预测。测得的端点位移固定了两个轨迹位置，而从帧对中学习到的两个潜在端点导数则控制了内部路径。三次埃尔米特曲线是能够独立满足这两个位置和两个导数边界量的最低次多项式。其残差形式精确地包含线性运动，在结构上保留了任何网络输出的测量位移端点，并且具有每对帧预测一次并在任意t以闭合形式求值的系数。我们进一步表明，一个内部查询时间对两个自由轨迹系数施加秩亏约束，而任何两个不同的内部时间在表示层面上都是满秩的，从而促使进行多时间监督。外观导出的方向性线索有助于推断仅靠端点位移无法识别的潜在导数。在X4K1000FPS、SNU-FILM和Vimeo90K-Septuplet上，最大的增益出现在困难的非均匀运动和高插值比率的情况下。摊销适用于轨迹系数预测；下游反转，
+
+</details>
+
+---
+
+## 24. WorldPhy: Benchmarking Fine-Grained Physical Plausibility of World Models in Robotics / WorldPhy：对机器人世界模型的精细物理合理性进行基准测试
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34130v1](http://arxiv.org/abs/2611.34130v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34130v1)
+
+**Categories**: cs.RO, cs.AI
+
+**Code**: https://github.com/chuziyuan139/
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models are increasingly used in robotics to improve the performance of embodied models. Compared with general-purpose video generation, robotics places more stringent requirements on world models. Generated videos must satisfy fine-grained physical constraints on robot motion and object interactions. However, existing world model benchmarks can overlook robotics specific physical details and struggle to assess them accurately. To address this problem, we introduce WorldPhy, a world model benchmark for accurate, fine-grained evaluation of physical plausibility in robotics. Our benchmark contains 300 tasks, each consisting of an initial-frame image and a task instruction, covering diverse robotics scenes, task categories, viewpoints, and robot configurations. We further collect over 12K high-quality human annotations, and use them to train WorldPhyReward to accurately provide scores and reasons across six fine-grained physical dimensions and an instruction-following dimension. Comparisons with general VLMs and existing reward models show that WorldPhyReward better aligns with human ratings. We system- atically evaluate 13 frontier open and closed-source world models. The results reveal that current world models struggle to consistently maintain fine-grained physical plausibility across different robotics scenarios. Our code is available at https://github.com/chuziyuan139/ WorldPhy.
+
+世界模型在机器人学中得到越来越广泛的应用，以提高具身模型的性能。与通用视频生成相比，机器人技术对世界模型的要求更加严格。生成的视频必须满足对机器人运动和物体交互的精细物理约束。然而，现有的世界模型基准可能会忽视机器人特有的物理细节，并且难以对其进行准确评估。为了解决这个问题，我们推出了 WorldPhy，这是一个世界模型基准，用于对机器人学中的物理合理性进行准确、细致的评估。我们的基准包含 300 个任务，每个任务都由一个初始帧图像和一个任务指令组成，涵盖了各种机器人场景、任务类别、视角和机器人配置。我们进一步收集了超过 1.2 万条高质量的人工标注，并使用这些标注来训练 WorldPhyReward，以便在六个精细的物理维度和一个遵循指令的维度上准确地提供评分和理由。与通用VLM和现有奖励模型的比较表明，WorldPhyReward与人类评分的吻合度更高。我们系统性地评估了 13 个前沿的开源和闭源世界模型。结果表明，当前的世界模型在不同机器人场景中难以始终保持精细的物理合理性。我们的代码可在 https://github.com/chuziyuan139/ WorldPhy 获取。
+
+</details>
+
+---
+
+## 25. SPARC: Geometry-Guided Attention Pruning for Long-Horizon Camera-Controlled Video Generation / SPARC：用于长时域摄像头控制视频生成的几何引导式注意力剪枝
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34064v1](http://arxiv.org/abs/2611.34064v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34064v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present SPARC, a geometry-guided attention pruning framework that turns the native self-attention of pretrained video diffusion transformers into a unified mechanism for camera control and persistent scene memory. Our key insight is that attention connectivity can simultaneously serve as geometric conditioning for camera control and spatial addressing for historical memory retrieval. Motivated by the asymmetric contextual requirements of reconstructing observed content and synthesizing novel regions, SPARC restricts observed tokens to geometrically corresponding historical tokens and local spatiotemporal context, while preserving dense attention for unobserved regions. Correspondence-aware attention biasing and order-invariant historical positioning further enable stable retrieval across long temporal gaps. Without introducing additional learnable control or memory modules, SPARC achieves precise camera adherence and faithful scene revisitation while substantially reducing attention computation. Extensive experiments demonstrate the effectiveness of aggressive attention pruning in improving camera adherence, revisit consistency, and visual fidelity, with an inference speedup of over 50x when combined with four-step distillation. Project page is available at https://zju3dv.github.io/SPARC.
+
+我们推出了 SPARC，这是一个几何引导的注意力剪枝框架，它将预训练视频扩散变换器的原生自注意力转化为一种统一的机制，用于摄像头控制和持久场景记忆。我们的关键见解是，注意力连通性可以同时充当相机控制的几何条件和历史记忆检索的空间寻址。受重建观测内容和合成新区域的非对称上下文要求驱动，SPARC 将观测标记限制在几何上对应的历史标记和局部时空上下文中，同时保留对未观测区域的密集注意力。对应感知注意力偏置和顺序不变的历史定位进一步实现了跨越长时间间隔的稳定检索。SPARC 无需引入额外的可学习控制或记忆模块，即可实现精确的摄像头跟随和忠实的场景重访，同时显著减少注意力计算。大量实验表明，激进的注意力剪枝在提高摄像头遵循性、重访一致性和视觉保真度方面非常有效，当与四步蒸馏相结合时，推理速度可提升 50 倍以上。项目页面见 https://zju3dv.github.io/SPARC。
+
+</details>
+
+---
+
+## 26. Understanding Diffusion Acceleration: Methods, Trade-Offs, and Open Questions / 了解扩散加速：方法、权衡和未决问题
+
+**Date**: 2026-11-25 | **arXiv**: [2611.34056v1](http://arxiv.org/abs/2611.34056v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.34056v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion and flow-based generative models support high-quality image, audio, and video synthesis. Sampling can require dozens to hundreds of denoiser evaluations, with each pass becoming more expensive as resolution, video length, or model size increases. This cost affects latency and energy use in interactive and edge applications. We examine four approaches to accelerating inference: distillation, consistency training, sampling methods, and denoiser design. We express training objectives, transition maps, and numerical updates in a common notation to compare changes to the learning target, the sampling trajectory, and the work performed within each denoiser pass. Published image and video benchmarks illustrate the quality--cost trade-offs of one- and few-step generation, the interaction between solvers and timestep schedules, the effect of feature caching, and the difference between first-frame latency and sustained streaming throughput. We close with open problems in visual-native architectures and post-compression distillation, solver-aware few-step training, and semantic trajectory alignment with factorized distribution matching.
+
+扩散和基于流的生成模型支持高质量的图像、音频和视频合成。采样可能需要数十次至数百次去噪器评估，随着分辨率、视频时长或模型规模的增加，每次迭代的成本都会变得更高。这种成本会影响交互式和边缘应用中的延迟和能耗。我们研究了四种加速推理的方法：蒸馏、一致性训练、采样方法和去噪器设计。我们使用一种通用符号来表示训练目标、转换映射和数值更新，以便比较学习目标、采样轨迹以及在每次去噪器迭代中执行的工作的变化。已发布的图像和视频基准说明了一步和几步生成在质量与成本之间的权衡、求解器与时间步调度之间的相互作用、特征缓存的影响，以及第一帧延迟与持续流式传输吞吐量之间的差异。最后，我们讨论了视觉原生架构和压缩后蒸馏、求解器感知的少步训练，以及通过分解分布匹配实现的语义轨迹对齐等未决问题。
+
+</details>
+
+---
+
+## 27. X-World: Transferring Video Priors to Cross-Embodiment Robot Control / X-World：将视频先验知识转移到跨具身机器人控制
+
+**Date**: 2026-11-25 | **arXiv**: [2611.33914v1](http://arxiv.org/abs/2611.33914v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.33914v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Language-instructed manipulation requires robust closedloop policies, yet action-labeled robot trajectories are costly and limited in coverage. Human and robot videos provide complementary spatiotemporal priors for crossembodiment control. We propose X-World, which adapts pretrained video diffusion to variable views. A Q-Former compresses hidden states into tokens for a shared flowmatching expert that predicts action chunks. Datasetspecific projections map native states and actions. We adapt the backbone on large-scale robot and human videos, freeze it for action-only pretraining of the Q-Former and action expert, then post-train on the target platform. At inference, X-World responds at 20 Hz and overlaps updates with execution via asynchronous real-time chunking. X-World performs strongly on LIBERO and under zero-shot shifts on LIBERO-Plus. On hardware, it averages 81.7% success across six bimanual tasks on the side-mounted dual-arm UR5e, one of three real-robot configurations presented.
+
+语言指导的操作需要稳健的闭环策略，但带动作标签的机器人轨迹成本高昂，且覆盖范围有限。人类和机器人的视频为跨具身控制提供了互补的时空先验信息。我们提出了X-World，它将预训练的视频扩散模型适配到不同的视角。Q-Former将隐藏状态压缩成标记，供共享的流匹配专家使用，该专家负责预测动作片段。特定于数据集的投影将原生状态和动作映射起来。我们在大规模的机器人和人类视频上对主干网络进行适配，将其冻结以对Q-Former和动作专家进行仅动作预训练，然后在目标平台上进行后训练。在推理阶段，X-World 以 20 Hz 的频率做出响应，并通过异步实时分块将更新与执行重叠。X-World 在 LIBERO 上表现出色，在 LIBERO-Plus 上的零样本迁移下表现出色。在硬件方面，在所展示的三种真实机器人配置之一的侧装双臂UR5e上，在六项双手任务中，其平均成功率为81.7%。
+
+</details>
+
+---
+
+## 28. DeltaRAE: Derivative Tokenization for Long Video Generation / DeltaRAE：用于生成长视频的衍生标记化
+
+**Date**: 2026-11-25 | **arXiv**: [2611.33886v1](http://arxiv.org/abs/2611.33886v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.33886v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent video generators are trained on clips of a few seconds, and much of this limit lies in their tokenizers, which spend as many tokens on a static frame as on a moving one and need future frames that do not exist during generation. We introduce DeltaRAE, a causal representation autoencoder for video. Its derivative tokenization encodes periodic anchor frames in full and all remaining frames with a few tokens each, and its causal encoder and decoder read a frozen pretrained image encoder. On UCF-101 and Kinetics-600, a standard diffusion transformer trained on DeltaRAE latents is competitive with state-of-the-art video tokenizers. DeltaRAE halves the tokenizer GFLOPs on 16-frame clips relative to keeping the same number of patch tokens for every frame, and it represents a minute of video with 18.8x fewer tokens. The tokenizer trains end to end on one-minute videos, and in video prediction a generator on its latents produces a full minute of video. The same generator collapses within 15 seconds in most videos when the tokenizer has the same token budget but no pretrained encoder.
+
+潜在视频生成器是在几秒钟的片段上进行训练的，这种限制在很大程度上源于其分词器，分词器在静态帧上消耗的token与在动态帧上消耗的token一样多，并且需要生成过程中尚不存在的未来帧。我们推出了 DeltaRAE，这是一种用于视频的因果表示自编码器。其导数分词将周期性锚帧完整编码，并将所有剩余帧分别编码为几个分词，其因果编码器和解码器读取一个冻结的预训练图像编码器。在 UCF-101 和 Kinetics-600 上，使用 DeltaRAE 潜在变量训练的标准扩散变压器与最先进的视频分词器具有相当的竞争力。与为每个帧保留相同数量的补片标记相比，DeltaRAE 将 16 帧片段上的标记器 GFLOPs 减少了一半，并且它用少 18.8 倍的标记来表示一分钟的视频。分词器对一分钟的视频进行端到端训练，在视频预测中，其潜在变量上的生成器会生成一整分钟的视频。当分词器具有相同的token预算但没有预训练的编码器时，在大多数视频中，相同的生成器会在15秒内崩溃。
+
+</details>
+
+---
+
+## 29. OmniMeld: Enhancing Audio-Visual Understanding via Multi-Teacher On-Policy Distillation / OmniMeld：通过多教师策略内蒸馏增强视听理解
+
+**Date**: 2026-11-25 | **arXiv**: [2611.33861v1](http://arxiv.org/abs/2611.33861v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.33861v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Audio-visual understanding requires perceptual grounding, temporal understanding, and semantic inference. Multi-teacher distillation can consolidate these capabilities, but direct probability matching does not explicitly capture teacher prediction changes across audio-visual conditions. We introduce OmniMeld, a multi-teacher on-policy distillation method that integrates domain expertise through modality-response-guided distribution matching. We train four teachers covering grounding and correspondence, temporal dynamics and event structure, causal and inferential reasoning, and contextual and holistic understanding. Each sample is routed to its corresponding teacher for supervision conditioned on student-generated answer prefixes. We derive transport costs from teacher prediction changes over shared candidate tokens across audio-visual conditions, using optimal transport to match student predictions to those of the teacher under complete audio-visual input. We also construct OmniMeld-20K for domain-specialized teacher training. The dataset spans four capability domains, with responses structured into evidence, reasoning, and answer sections and verified through consistency checks and media-based review. Experiments on audio-visual and general video understanding benchmarks demonstrate competitive teacher performance among similarly sized open-source models. The student improves over its base model across all evaluated benchmarks and surpasses the teachers' base model on several benchmarks.
+
+视听理解需要感知基础、时间理解和语义推理。多教师蒸馏可以整合这些能力，但直接概率匹配并不能明确捕捉教师预测在不同视听条件下的变化。我们推出了OmniMeld，这是一种多教师策略内蒸馏方法，通过模态-响应引导的分布匹配来整合领域专业知识。我们训练了四位教师，分别负责语境锚定和对应、时间动态和事件结构、因果推理和演绎推理，以及语境理解和整体理解。每个样本都会被路由到其对应的教师，由其根据学生生成的答案前缀进行监督。我们从教师在不同视听条件下对共享候选标记的预测变化中推导出传输成本，使用最优传输将学生的预测与教师在完整视听输入下的预测相匹配。我们还构建了OmniMeld-20K，用于领域专门化教师训练。该数据集涵盖四个能力领域，回答被划分为证据、推理和答案部分，并通过一致性检查和基于媒体的审核进行验证。在视听和通用视频理解基准上的实验表明，在规模相近的开源模型中，教师模型的表现具有竞争力。在所有评估的基准测试中，学生模型均优于其基础模型，并在……方面优于教师的基础模型。
+
+</details>
+
+---
+
+## 30. DriftWAM: Faster World-Action Models via Action-Aware Video Drifting / DriftWAM：通过动作感知视频漂移实现更快的世界-动作模型
+
+**Date**: 2026-11-25 | **arXiv**: [2611.33797v1](http://arxiv.org/abs/2611.33797v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.33797v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World-action models (WAMs) unify future video prediction and action generation for robotic control, but their reliance on iterative denoising incurs substantial inference costs. Distilling these models into few-step generators offers a promising route to efficient deployment, yet maintaining task performance under aggressive step reduction remains challenging. Existing methods rely on point-wise trajectory consistency distillation, which pursues high visual fidelity while leaving downstream action information unexploited in optimizing video generation, and also lacks explicit distribution-level alignment. To address this, we propose DriftWAM, a few-step WAM distillation framework that incorporates the actions induced by predicted videos into video learning. Specifically, DriftWAM integrates action-aware video drifting, which performs video distribution matching through a joint visual--action similarity kernel to steer sample evolution under the guidance of these induced actions, with action-guided video regularization, which leverages the compatible teacher--student matches identified by the joint kernel to backpropagate action-level gradients directly into the video generator. Evaluations on the RoboTwin 2.0 and LIBERO benchmarks, as well as in real-world robotic manipulation tasks, show that DriftWAM consistently outperforms prior consistency distillation methods across few-step settings at the same inference speed.
+
+世界-动作模型（WAM）将未来视频预测和用于机器人控制的动作生成统一起来，但它们对迭代去噪的依赖带来了高昂的推理成本。将这些模型蒸馏为少步生成器为高效部署提供了一条有希望的途径，但如何在大幅减少步数的同时保持任务性能仍然是一项挑战。现有方法依赖于逐点轨迹一致性蒸馏，这种方法在优化视频生成时追求高视觉保真度，但未利用下游动作信息，并且也缺乏显式的分布级对齐。为了解决这个问题，我们提出了DriftWAM，这是一个少步WAM蒸馏框架，将预测视频诱发的动作纳入视频学习中。具体而言，DriftWAM集成了动作感知的视频漂移和动作引导的视频正则化。视频漂移通过联合视觉-动作相似性核执行视频分布匹配，以在这些诱导动作的引导下引导样本演化；动作引导的视频正则化则利用联合核识别出的兼容的师生匹配，将动作层面的梯度直接反向传播到视频生成器中。在RoboTwin 2.0和LIBERO基准以及真实世界的机器人操作任务中进行的评估表明，在相同的推理速度下，DriftWAM在少步设置中始终优于先前的一致性蒸馏方法。
+
+</details>
+
+---
+
+## 31. ScanAR: Parallel Row-Scan Decoding for Efficient Image Generation in Unified Autoregressive Models / ScanAR：用于统一自回归模型中高效图像生成的并行行扫描解码
+
+**Date**: 2026-11-25 | **arXiv**: [2611.33761v1](http://arxiv.org/abs/2611.33761v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.33761v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Unified multimodal autoregressive (AR) models represent text and images in one token sequence and generate all modalities with a shared next-token prediction head. Their image generation, however, decodes an $H\times W$ visual grid token by token in raster order, which takes $HW$ sequential steps and dominates inference time. Existing acceleration methods for visual AR generation either change the tokenizer, the prediction head, or the model interface, or keep the model but cannot reach high parallelism without losing quality, so they do not carry over to unified AR models. We propose ScanAR, a row-scan parallel decoding method that only redefines the predecessors of visual tokens. The first visual row is generated from left to right as usual, and each later row is generated in a single parallel step, with every token predicted from the vertically aligned token of the previous row. Nonvisual tokens keep the standard autoregressive rule. ScanAR reduces the visual decoding depth from $HW$ to $H+W$ without changing the backbone, vocabulary, or output head and without adding parameters, and it supports both training from scratch and lightweight post-training. On Emu3.5-Image-34B, ScanAR post-training reaches a GenEval score of 82.36, the best among post-training acceleration methods trained on the same data, and generates $512\times512$ images $13.8\times$ faster than raster decoding under the same inference setting. On ImageNet, ScanAR trained from scratch has the highest throughput at every model size with FID comparable to raster LlamaGen. On the 34B Xiaomi-Robotics-U0 model, ScanAR preserves the overall quality of embodied scene generation, interleaved image-text generation, and video generation.
+
+统一的多模态自回归（AR）模型将文本和图像表示为一个标记序列，并使用一个共享的下一个标记预测头生成所有模态。然而，它们的图像生成过程会按光栅顺序逐个解码 $H\times W$ 的视觉网格标记，这需要 $HW$ 个顺序步骤，并占据了大部分推理时间。现有的视觉AR生成加速方法要么改变分词器、预测头或模型接口，要么保留模型，但在不损失质量的情况下无法实现高并行度，因此无法应用于统一的AR模型。我们提出了ScanAR，这是一种行扫描并行解码方法，仅重新定义视觉标记的前驱。第一行视觉行像往常一样从左到右生成，之后的每一行都在一个并行步骤中生成，每个标记都根据上一行垂直对齐的标记进行预测。非视觉标记遵循标准的自回归规则。ScanAR 将视觉解码深度从 $HW$ 降低至 $H+W$，且无需更改主干、词汇表或输出头，也无需添加参数，同时支持从头开始训练和轻量级后训练。在 Emu3.5-Image-34B 上，ScanAR 经过后训练达到了 82.36 的 GenEval 分数，这是在相同数据上训练的后训练加速方法中最好的分数，并且在相同的推理设置下，生成 $512\times512$ 图像的速度比光栅解码快 $13.8\times$。在 ImageNet 上，从头开始训练的 ScanAR 具有最高的
+
+</details>
+
+---
+
+## 32. Fine-Grained Ego-Vehicle Action Recognition from Driving Video / 从驾驶视频中进行精细的自车行为识别
+
+**Date**: 2026-11-25 | **arXiv**: [2611.33654v1](http://arxiv.org/abs/2611.33654v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.33654v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Fine-grained ego-vehicle action recognition turns large-scale driving video into structured, searchable driving scenarios, providing a foundation for discovering critical maneuvers and systematically developing and evaluating autonomous driving models. However, large-scale driving videos often lack explicit ego-action labels, and existing datasets vary in action definitions, annotation granularity, and available supervision. We introduce EgoManeuver, a unified benchmark of 16 lateral and 6 longitudinal actions constructed from seven public driving datasets. Our multi-source labeling system leverages existing annotations and complementary evidence available in each source dataset, including vehicle signals, ego poses, HD-map topology, and captions, to assign labels under a unified fine-grained action taxonomy. We further standardize temporal action boundaries across datasets and validate the resulting labels through kinematic consistency checks and targeted human review. The resulting benchmark contains 86.6K segments spanning 190.8 h across 26 countries and provides a long-tail-aware evaluation protocol. We also introduce DenseEgo, a video-based baseline that combines spatially aware representations with dense per-step action supervision. On the EgoManeuver, DenseEgo achieves 82.7 lateral and 83.5 longitudinal mAP, outperforming the strongest existing video model by 1.5 and 5.0 points, respectively. Finally, we demonstrate one way to integrate DenseEgo with a language-model agent for retrieving driving videos that match user-specified actions and scenarios. All code, datasets, and model weights will be publicly released.
+
+细粒度本车行为识别可将大规模驾驶视频转化为结构化、可搜索的驾驶场景，为发现关键操作以及系统性地开发和评估自动驾驶模型奠定基础。然而，大规模驾驶视频通常缺乏明确的主车行为标签，现有数据集在行为定义、标注粒度和可用监督方面存在差异。我们推出了EgoManeuver，这是一个由七个公开驾驶数据集构建的统一基准，包含16种横向动作和6种纵向动作。我们的多源标注系统利用每个源数据集中现有的标注和补充证据（包括车辆信号、本车姿态、高清地图拓扑和字幕），根据统一的细粒度动作分类法来分配标签。我们进一步标准化了跨数据集的时间性动作边界，并通过运动学一致性检查和有针对性的人工审核来验证所得标签。由此产生的基准包含 8.66 万个片段，总时长 190.8 小时，覆盖 26 个国家/地区，并提供了一种长尾感知评估协议。我们还推出了DenseEgo，这是一个基于视频的基准模型，将空间感知表示与密集的逐步动作监督相结合。在EgoManeuver上，DenseEgo实现了82.7的横向mAP和83.5的纵向mAP，分别比现有的最强视频模型高出1.5和5.0个百分点。最后，我们展示了一种将DenseEgo与语言模型相结合的方法。
+
+</details>
+
+---
+
+## 33. G0.7: Scaling Up a Fast World Action Model with Long Context / G0.7：使用长上下文扩展快速世界行动模型
+
+**Date**: 2026-11-24 | **arXiv**: [2611.31822v2](http://arxiv.org/abs/2611.31822v2) | **PDF**: [Link](http://arxiv.org/pdf/2611.31822v2)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World action models (WAMs) adapt pretrained video generators for robot control by jointly predicting future camera frames and actions, transferring physical priors learned from video into manipulation policies. However, generating future frames before every action makes test-time inference too slow for closed-loop control, while most existing policies remain restricted to short observation histories. Building on Fast-WAM, which showed that video prediction shapes policy representations during training so that future frame synthesis can be skipped at deployment, we present G0.7, a generalist world action model scaled along two axes: extending the context window from a single observation to up to five minutes of history, and scaling pretraining to a large-scale corpus of robot teleoperation and human egocentric (ego) video. Across public simulation suites and real-robot deployments, direct action decoding (Fast mode) matches imagine-then-act (IDM) inference from the same checkpoint while running in 60 ms per 16-step action chunk on a single RTX 5090 (7.6x faster than IDM) and supporting pause-free real-time chunking. Performance scales consistently with pretraining data, with human ego video driving the largest gains in out-of-distribution generalization: G0.7 achieves a 70.8 mean score across five simulation benchmark suites, 48% and 54% zero-shot pick-and-place success on Galaxea R1 Pro and R1 Lite, 96.7% in-distribution and 93.3% out-of-distribution success on video-conditioned in-context learning tasks, and 86.9% mean task progress across seven real-world post-training tasks including multi-minute box folding, drink preparation, and product bagging. Project page: https://www.galaxea-ai.com/model-g07.html
+
+World action models (WAMs) adapt pretrained video generators for robot control by jointly predicting future camera frames and actions, transferring physical priors learned from video into manipulation policies. However, generating future frames before every action makes test-time inference too slow for closed-loop control, while most existing policies remain restricted to short observation histories. Building on Fast-WAM, which showed that video prediction shapes policy representations during training so that future frame synthesis can be skipped at deployment, we present G0.7, a generalist world action model scaled along two axes: extending the context window from a single observation to up to five minutes of history, and scaling pretraining to a large-scale corpus of robot teleoperation and human egocentric (ego) video. Across public simulation suites and real-robot deployments, direct action decoding (Fast mode) matches imagine-then-act (IDM) inference from the same checkpoint while running in 60 ms per 16-step action chunk on a single RTX 5090 (7.6x faster than IDM) and supporting pause-free real-time chunking. Performance scales consistently with pretraining data, with human ego video driving the largest gains in out-of-distribution generalization: G0.7 achieves a 70.8 mean score across five simulation benchmark suites, 48% and 54% zero-shot pick-and-place success on Galaxea R1 Pro and R1 Lite, 96.7% in-distribution and 93.3% out-of-distribution success on video-conditioned in-context learning tasks, and 86.9% mean task progress across seven real-world post-training tasks including multi-minute box folding, drink preparation, and product bagging. Project page: https://www.galaxea-ai.com/model-g07.html
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-25 (28 papers)</b></summary>
 
 # arXiv Video Papers - 2026-11-25
